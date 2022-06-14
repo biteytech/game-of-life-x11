@@ -16,7 +16,7 @@ public class RenderJavaFX implements Render {
 	private final GraphicsContext gc;
 
 	RenderJavaFX(Stage primaryStage) {
-		// initialize JavaFX window
+		// JavaFX window stuff
 		Group root = new Group();
 		Canvas canvas = new Canvas(WIDTH_PX, HEIGHT_PX);
 		root.getChildren().add(canvas);
@@ -31,12 +31,6 @@ public class RenderJavaFX implements Render {
 	}
 
 	@Override
-	public void fillCell(boolean state, int x, int y) {
-		gc.setFill(state ? Color.BLACK : Color.WHITE);
-		gc.fillRect(x, y, CELL_PX, CELL_PX);
-	}
-
-	@Override
 	public void drawGrid() {
 
 		gc.setStroke(Color.LIGHTGRAY);
@@ -46,5 +40,11 @@ public class RenderJavaFX implements Render {
 
 		for (int y = CELL_PX; y < HEIGHT_PX; y += CELL_PX + 1)
 			gc.strokeLine(0, y + 0.5, WIDTH_PX, y + 0.5);
+	}
+
+	@Override
+	public void fillCell(boolean state, int x, int y) {
+		gc.setFill(state ? Color.BLACK : Color.WHITE);
+		gc.fillRect(x, y, CELL_PX, CELL_PX);
 	}
 }

@@ -1,8 +1,8 @@
 package tech.bitey.golpanama;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 class GameOfLife implements Runnable {
 
@@ -25,19 +25,18 @@ class GameOfLife implements Runnable {
 		if (args.length != 1)
 			throw new IllegalArgumentException("expecting pattern name as the only argument");
 
-		Path pattern = Paths.get("patterns", args[0] + ".txt");
-		if (!Files.exists(pattern))
-			throw new IllegalArgumentException("pattern file does not exist: " + pattern);
-
 		// initialize state from pattern file
-		int y = HEIGHT_CELLS / 2;
-		for (String line : Files.lines(pattern).toList()) {
-			char[] c = line.toCharArray();
-			int x = WIDTH_CELLS / 2;
-			for (int i = 0; i < c.length; i++, x++)
-				if (c[i] == '*')
-					state[y][x] = true;
-			y++;
+		try (InputStream is = GameOfLife.class.getResourceAsStream("patterns/" + args[0] + ".txt");
+				BufferedReader in = new BufferedReader(new InputStreamReader(is));) {
+
+			int y = HEIGHT_CELLS / 2;
+			for (String line; (line = in.readLine()) != null; y++) {
+				char[] c = line.toCharArray();
+				int x = WIDTH_CELLS / 2;
+				for (int i = 0; i < c.length; i++, x++)
+					if (c[i] == '*')
+						state[y][x] = true;
+			}
 		}
 
 		render.drawGrid();
