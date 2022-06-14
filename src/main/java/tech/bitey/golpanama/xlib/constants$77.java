@@ -9,12 +9,62 @@ import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
 class constants$77 {
 
-    static final MemorySegment XNFilterEvents$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("filterEvents");
-    static final MemorySegment XNPreeditStartCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditStartCallback");
-    static final MemorySegment XNPreeditDoneCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditDoneCallback");
-    static final MemorySegment XNPreeditDrawCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditDrawCallback");
-    static final MemorySegment XNPreeditCaretCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditCaretCallback");
-    static final MemorySegment XNPreeditStateNotifyCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditStateNotifyCallback");
+    static final FunctionDescriptor XGetWMClientMachine$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetWMClientMachine$MH = RuntimeHelper.downcallHandle(
+        "XGetWMClientMachine",
+        constants$77.XGetWMClientMachine$FUNC, false
+    );
+    static final FunctionDescriptor XGetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetWMHints$MH = RuntimeHelper.downcallHandle(
+        "XGetWMHints",
+        constants$77.XGetWMHints$FUNC, false
+    );
+    static final FunctionDescriptor XGetWMIconName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetWMIconName$MH = RuntimeHelper.downcallHandle(
+        "XGetWMIconName",
+        constants$77.XGetWMIconName$FUNC, false
+    );
+    static final FunctionDescriptor XGetWMName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetWMName$MH = RuntimeHelper.downcallHandle(
+        "XGetWMName",
+        constants$77.XGetWMName$FUNC, false
+    );
+    static final FunctionDescriptor XGetWMNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetWMNormalHints$MH = RuntimeHelper.downcallHandle(
+        "XGetWMNormalHints",
+        constants$77.XGetWMNormalHints$FUNC, false
+    );
+    static final FunctionDescriptor XGetWMSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetWMSizeHints$MH = RuntimeHelper.downcallHandle(
+        "XGetWMSizeHints",
+        constants$77.XGetWMSizeHints$FUNC, false
+    );
 }
 
 

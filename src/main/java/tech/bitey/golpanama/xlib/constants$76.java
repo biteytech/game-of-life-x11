@@ -9,12 +9,66 @@ import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
 class constants$76 {
 
-    static final MemorySegment XNInputStyle$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("inputStyle");
-    static final MemorySegment XNFocusWindow$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("focusWindow");
-    static final MemorySegment XNResourceName$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resourceName");
-    static final MemorySegment XNResourceClass$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resourceClass");
-    static final MemorySegment XNGeometryCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("geometryCallback");
-    static final MemorySegment XNDestroyCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("destroyCallback");
+    static final FunctionDescriptor XGetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetNormalHints$MH = RuntimeHelper.downcallHandle(
+        "XGetNormalHints",
+        constants$76.XGetNormalHints$FUNC, false
+    );
+    static final FunctionDescriptor XGetRGBColormaps$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetRGBColormaps$MH = RuntimeHelper.downcallHandle(
+        "XGetRGBColormaps",
+        constants$76.XGetRGBColormaps$FUNC, false
+    );
+    static final FunctionDescriptor XGetSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetSizeHints$MH = RuntimeHelper.downcallHandle(
+        "XGetSizeHints",
+        constants$76.XGetSizeHints$FUNC, false
+    );
+    static final FunctionDescriptor XGetStandardColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetStandardColormap$MH = RuntimeHelper.downcallHandle(
+        "XGetStandardColormap",
+        constants$76.XGetStandardColormap$FUNC, false
+    );
+    static final FunctionDescriptor XGetTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetTextProperty$MH = RuntimeHelper.downcallHandle(
+        "XGetTextProperty",
+        constants$76.XGetTextProperty$FUNC, false
+    );
+    static final FunctionDescriptor XGetVisualInfo$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetVisualInfo$MH = RuntimeHelper.downcallHandle(
+        "XGetVisualInfo",
+        constants$76.XGetVisualInfo$FUNC, false
+    );
 }
 
 

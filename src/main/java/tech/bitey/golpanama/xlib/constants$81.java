@@ -9,12 +9,72 @@ import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
 class constants$81 {
 
-    static final MemorySegment XNVisiblePosition$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("visiblePosition");
-    static final MemorySegment XNR6PreeditCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("r6PreeditCallback");
-    static final MemorySegment XNStringConversionCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stringConversionCallback");
-    static final MemorySegment XNStringConversion$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stringConversion");
-    static final MemorySegment XNResetState$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resetState");
-    static final MemorySegment XNHotKey$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("hotKey");
+    static final FunctionDescriptor XSetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMHints$MH = RuntimeHelper.downcallHandle(
+        "XSetWMHints",
+        constants$81.XSetWMHints$FUNC, false
+    );
+    static final FunctionDescriptor XSetWMIconName$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMIconName$MH = RuntimeHelper.downcallHandle(
+        "XSetWMIconName",
+        constants$81.XSetWMIconName$FUNC, false
+    );
+    static final FunctionDescriptor XSetWMName$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMName$MH = RuntimeHelper.downcallHandle(
+        "XSetWMName",
+        constants$81.XSetWMName$FUNC, false
+    );
+    static final FunctionDescriptor XSetWMNormalHints$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMNormalHints$MH = RuntimeHelper.downcallHandle(
+        "XSetWMNormalHints",
+        constants$81.XSetWMNormalHints$FUNC, false
+    );
+    static final FunctionDescriptor XSetWMProperties$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMProperties$MH = RuntimeHelper.downcallHandle(
+        "XSetWMProperties",
+        constants$81.XSetWMProperties$FUNC, false
+    );
+    static final FunctionDescriptor XmbSetWMProperties$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XmbSetWMProperties$MH = RuntimeHelper.downcallHandle(
+        "XmbSetWMProperties",
+        constants$81.XmbSetWMProperties$FUNC, false
+    );
 }
 
 

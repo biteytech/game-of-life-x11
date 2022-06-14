@@ -9,12 +9,43 @@ import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
 class constants$74 {
 
-    static final MemorySegment XNQueryOrientation$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryOrientation");
-    static final MemorySegment XNBaseFontName$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("baseFontName");
-    static final MemorySegment XNOMAutomatic$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("omAutomatic");
-    static final MemorySegment XNMissingCharSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("missingCharSet");
-    static final MemorySegment XNDefaultString$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("defaultString");
-    static final MemorySegment XNOrientation$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("orientation");
+    static final FunctionDescriptor XAllocStandardColormap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XAllocStandardColormap$MH = RuntimeHelper.downcallHandle(
+        "XAllocStandardColormap",
+        constants$74.XAllocStandardColormap$FUNC, false
+    );
+    static final FunctionDescriptor XAllocWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XAllocWMHints$MH = RuntimeHelper.downcallHandle(
+        "XAllocWMHints",
+        constants$74.XAllocWMHints$FUNC, false
+    );
+    static final FunctionDescriptor XClipBox$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XClipBox$MH = RuntimeHelper.downcallHandle(
+        "XClipBox",
+        constants$74.XClipBox$FUNC, false
+    );
+    static final FunctionDescriptor XCreateRegion$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XCreateRegion$MH = RuntimeHelper.downcallHandle(
+        "XCreateRegion",
+        constants$74.XCreateRegion$FUNC, false
+    );
+    static final FunctionDescriptor XDefaultString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XDefaultString$MH = RuntimeHelper.downcallHandle(
+        "XDefaultString",
+        constants$74.XDefaultString$FUNC, false
+    );
+    static final FunctionDescriptor XDeleteContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XDeleteContext$MH = RuntimeHelper.downcallHandle(
+        "XDeleteContext",
+        constants$74.XDeleteContext$FUNC, false
+    );
 }
 
 

@@ -9,12 +9,64 @@ import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
 class constants$79 {
 
-    static final MemorySegment XNAreaNeeded$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("areaNeeded");
-    static final MemorySegment XNSpotLocation$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("spotLocation");
-    static final MemorySegment XNColormap$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("colorMap");
-    static final MemorySegment XNStdColormap$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stdColorMap");
-    static final MemorySegment XNForeground$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("foreground");
-    static final MemorySegment XNBackground$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("background");
+    static final FunctionDescriptor XPointInRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XPointInRegion$MH = RuntimeHelper.downcallHandle(
+        "XPointInRegion",
+        constants$79.XPointInRegion$FUNC, false
+    );
+    static final FunctionDescriptor XPolygonRegion$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XPolygonRegion$MH = RuntimeHelper.downcallHandle(
+        "XPolygonRegion",
+        constants$79.XPolygonRegion$FUNC, false
+    );
+    static final FunctionDescriptor XRectInRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XRectInRegion$MH = RuntimeHelper.downcallHandle(
+        "XRectInRegion",
+        constants$79.XRectInRegion$FUNC, false
+    );
+    static final FunctionDescriptor XSaveContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSaveContext$MH = RuntimeHelper.downcallHandle(
+        "XSaveContext",
+        constants$79.XSaveContext$FUNC, false
+    );
+    static final FunctionDescriptor XSetClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetClassHint$MH = RuntimeHelper.downcallHandle(
+        "XSetClassHint",
+        constants$79.XSetClassHint$FUNC, false
+    );
+    static final FunctionDescriptor XSetIconSizes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetIconSizes$MH = RuntimeHelper.downcallHandle(
+        "XSetIconSizes",
+        constants$79.XSetIconSizes$FUNC, false
+    );
 }
 
 

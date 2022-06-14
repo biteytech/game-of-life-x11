@@ -28,7 +28,6 @@ import jdk.incubator.foreign.SegmentAllocator;
 import tech.bitey.golpanama.xlib.XColor;
 import tech.bitey.golpanama.xlib.XEvent;
 import tech.bitey.golpanama.xlib.Xlib_h;
-import tech.bitey.golpanama.xutil.Xutil_h;
 
 public class RenderX11 implements Render {
 
@@ -53,7 +52,7 @@ public class RenderX11 implements Render {
 		try (var scope = ResourceScope.newConfinedScope()) {
 			MemoryAddress gameOfLife = SegmentAllocator.implicitAllocator().allocateUtf8String("Game of Life")
 					.address();
-			Xutil_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
+			Xlib_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
 		}
 
 		Xlib_h.XSelectInput(display, win, Xlib_h.ExposureMask());

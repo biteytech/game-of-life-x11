@@ -33,9 +33,21 @@ class constants$73 {
         "XFreeEventData",
         constants$73.XFreeEventData$FUNC, false
     );
-    static final MemorySegment __FD_ZERO_STOS$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stosq");
-    static final MemoryAddress NULL$ADDR = MemoryAddress.ofLong(0L);
-    static final MemorySegment XNRequiredCharSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("requiredCharSet");
+    static final FunctionDescriptor XAllocClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XAllocClassHint$MH = RuntimeHelper.downcallHandle(
+        "XAllocClassHint",
+        constants$73.XAllocClassHint$FUNC, false
+    );
+    static final FunctionDescriptor XAllocIconSize$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XAllocIconSize$MH = RuntimeHelper.downcallHandle(
+        "XAllocIconSize",
+        constants$73.XAllocIconSize$FUNC, false
+    );
+    static final FunctionDescriptor XAllocSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XAllocSizeHints$MH = RuntimeHelper.downcallHandle(
+        "XAllocSizeHints",
+        constants$73.XAllocSizeHints$FUNC, false
+    );
 }
 
 

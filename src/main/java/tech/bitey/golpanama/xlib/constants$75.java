@@ -9,12 +9,57 @@ import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
 class constants$75 {
 
-    static final MemorySegment XNDirectionalDependentDrawing$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("directionalDependentDrawing");
-    static final MemorySegment XNContextualDrawing$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("contextualDrawing");
-    static final MemorySegment XNFontInfo$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("fontInfo");
-    static final MemorySegment XNVaNestedList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("XNVaNestedList");
-    static final MemorySegment XNQueryInputStyle$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryInputStyle");
-    static final MemorySegment XNClientWindow$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("clientWindow");
+    static final FunctionDescriptor XDestroyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDestroyRegion$MH = RuntimeHelper.downcallHandle(
+        "XDestroyRegion",
+        constants$75.XDestroyRegion$FUNC, false
+    );
+    static final FunctionDescriptor XEmptyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XEmptyRegion$MH = RuntimeHelper.downcallHandle(
+        "XEmptyRegion",
+        constants$75.XEmptyRegion$FUNC, false
+    );
+    static final FunctionDescriptor XEqualRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XEqualRegion$MH = RuntimeHelper.downcallHandle(
+        "XEqualRegion",
+        constants$75.XEqualRegion$FUNC, false
+    );
+    static final FunctionDescriptor XFindContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XFindContext$MH = RuntimeHelper.downcallHandle(
+        "XFindContext",
+        constants$75.XFindContext$FUNC, false
+    );
+    static final FunctionDescriptor XGetClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetClassHint$MH = RuntimeHelper.downcallHandle(
+        "XGetClassHint",
+        constants$75.XGetClassHint$FUNC, false
+    );
+    static final FunctionDescriptor XGetIconSizes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetIconSizes$MH = RuntimeHelper.downcallHandle(
+        "XGetIconSizes",
+        constants$75.XGetIconSizes$FUNC, false
+    );
 }
 
 

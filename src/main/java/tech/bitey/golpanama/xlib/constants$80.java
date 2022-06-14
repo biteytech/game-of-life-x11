@@ -9,12 +9,69 @@ import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
 class constants$80 {
 
-    static final MemorySegment XNBackgroundPixmap$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("backgroundPixmap");
-    static final MemorySegment XNFontSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("fontSet");
-    static final MemorySegment XNLineSpace$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("lineSpace");
-    static final MemorySegment XNCursor$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("cursor");
-    static final MemorySegment XNQueryIMValuesList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryIMValuesList");
-    static final MemorySegment XNQueryICValuesList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryICValuesList");
+    static final FunctionDescriptor XSetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetNormalHints$MH = RuntimeHelper.downcallHandle(
+        "XSetNormalHints",
+        constants$80.XSetNormalHints$FUNC, false
+    );
+    static final FunctionDescriptor XSetRGBColormaps$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetRGBColormaps$MH = RuntimeHelper.downcallHandle(
+        "XSetRGBColormaps",
+        constants$80.XSetRGBColormaps$FUNC, false
+    );
+    static final FunctionDescriptor XSetSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetSizeHints$MH = RuntimeHelper.downcallHandle(
+        "XSetSizeHints",
+        constants$80.XSetSizeHints$FUNC, false
+    );
+    static final FunctionDescriptor XSetStandardProperties$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetStandardProperties$MH = RuntimeHelper.downcallHandle(
+        "XSetStandardProperties",
+        constants$80.XSetStandardProperties$FUNC, false
+    );
+    static final FunctionDescriptor XSetTextProperty$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetTextProperty$MH = RuntimeHelper.downcallHandle(
+        "XSetTextProperty",
+        constants$80.XSetTextProperty$FUNC, false
+    );
+    static final FunctionDescriptor XSetWMClientMachine$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMClientMachine$MH = RuntimeHelper.downcallHandle(
+        "XSetWMClientMachine",
+        constants$80.XSetWMClientMachine$FUNC, false
+    );
 }
 
 

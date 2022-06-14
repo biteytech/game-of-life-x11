@@ -7,7 +7,7 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import jdk.incubator.foreign.*;
 import static jdk.incubator.foreign.ValueLayout.*;
-public class Xlib_h extends Xlib_h_1 {
+public class Xlib_h extends Xlib_h_3 {
 
     /* package-private */ Xlib_h() {}
     public static OfByte C_CHAR = Constants$root.C_CHAR$LAYOUT;
@@ -1005,5266 +1005,2018 @@ public class Xlib_h extends Xlib_h_1 {
     public static int XLookupBoth() {
         return (int)4L;
     }
-    public static OfShort __int16_t = Constants$root.C_SHORT$LAYOUT;
-    public static OfInt __int32_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong __int64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfShort __int_least16_t = Constants$root.C_SHORT$LAYOUT;
-    public static OfInt __int_least32_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong __int_least64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __quad_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __intmax_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __off_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __off64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt __pid_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong __clock_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __time_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt __daddr_t = Constants$root.C_INT$LAYOUT;
-    public static OfInt __key_t = Constants$root.C_INT$LAYOUT;
-    public static OfInt __clockid_t = Constants$root.C_INT$LAYOUT;
-    public static OfAddress __timer_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfLong __blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __blkcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __fsword_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __syscall_slong_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __loff_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfAddress __caddr_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfLong __intptr_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt __sig_atomic_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong quad_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong loff_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong off_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt pid_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt daddr_t = Constants$root.C_INT$LAYOUT;
-    public static OfAddress caddr_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfInt key_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong clock_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt clockid_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong time_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfAddress timer_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfShort int16_t = Constants$root.C_SHORT$LAYOUT;
-    public static OfInt int32_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong int64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong register_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static MethodHandle __bswap_16$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__bswap_16$MH,"__bswap_16");
-    }
-    public static short __bswap_16 ( short __bsx) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__bswap_16$MH, "__bswap_16");
-        try {
-            return (short)mh$.invokeExact(__bsx);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __bswap_32$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__bswap_32$MH,"__bswap_32");
-    }
-    public static int __bswap_32 ( int __bsx) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__bswap_32$MH, "__bswap_32");
-        try {
-            return (int)mh$.invokeExact(__bsx);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __bswap_64$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__bswap_64$MH,"__bswap_64");
-    }
-    public static long __bswap_64 ( long __bsx) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__bswap_64$MH, "__bswap_64");
-        try {
-            return (long)mh$.invokeExact(__bsx);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __uint16_identity$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__uint16_identity$MH,"__uint16_identity");
-    }
-    public static short __uint16_identity ( short __x) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__uint16_identity$MH, "__uint16_identity");
-        try {
-            return (short)mh$.invokeExact(__x);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __uint32_identity$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__uint32_identity$MH,"__uint32_identity");
-    }
-    public static int __uint32_identity ( int __x) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__uint32_identity$MH, "__uint32_identity");
-        try {
-            return (int)mh$.invokeExact(__x);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __uint64_identity$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__uint64_identity$MH,"__uint64_identity");
-    }
-    public static long __uint64_identity ( long __x) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__uint64_identity$MH, "__uint64_identity");
-        try {
-            return (long)mh$.invokeExact(__x);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static OfLong suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
-    public static MethodHandle select$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.select$MH,"select");
-    }
-    public static int select ( int __nfds,  Addressable __readfds,  Addressable __writefds,  Addressable __exceptfds,  Addressable __timeout) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$1.select$MH, "select");
-        try {
-            return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle pselect$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.pselect$MH,"pselect");
-    }
-    public static int pselect ( int __nfds,  Addressable __readfds,  Addressable __writefds,  Addressable __exceptfds,  Addressable __timeout,  Addressable __sigmask) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$1.pselect$MH, "pselect");
-        try {
-            return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout, __sigmask);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static OfLong blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt pthread_once_t = Constants$root.C_INT$LAYOUT;
-    public static OfInt pthread_spinlock_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong ptrdiff_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt wchar_t = Constants$root.C_INT$LAYOUT;
-    public static MethodHandle _Xmblen$MH() {
-        return RuntimeHelper.requireNonNull(constants$1._Xmblen$MH,"_Xmblen");
-    }
-    public static int _Xmblen ( Addressable str,  int len) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$1._Xmblen$MH, "_Xmblen");
-        try {
-            return (int)mh$.invokeExact(str, len);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static OfAddress XPointer = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress GC = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress _XPrivDisplay = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XOM = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XOC = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XFontSet = Constants$root.C_POINTER$LAYOUT;
-    public static int XOMOrientation_LTR_TTB() {
-        return (int)0L;
-    }
-    public static int XOMOrientation_RTL_TTB() {
-        return (int)1L;
-    }
-    public static int XOMOrientation_TTB_LTR() {
-        return (int)2L;
-    }
-    public static int XOMOrientation_TTB_RTL() {
-        return (int)3L;
-    }
-    public static int XOMOrientation_Context() {
-        return (int)4L;
-    }
-    public static OfAddress XIM = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XIC = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XVaNestedList = Constants$root.C_POINTER$LAYOUT;
-    public static int XIMForwardChar() {
-        return (int)0L;
-    }
-    public static int XIMBackwardChar() {
-        return (int)1L;
-    }
-    public static int XIMForwardWord() {
-        return (int)2L;
-    }
-    public static int XIMBackwardWord() {
-        return (int)3L;
-    }
-    public static int XIMCaretUp() {
-        return (int)4L;
-    }
-    public static int XIMCaretDown() {
-        return (int)5L;
-    }
-    public static int XIMNextLine() {
-        return (int)6L;
-    }
-    public static int XIMPreviousLine() {
-        return (int)7L;
-    }
-    public static int XIMLineStart() {
-        return (int)8L;
-    }
-    public static int XIMLineEnd() {
-        return (int)9L;
-    }
-    public static int XIMAbsolutePosition() {
-        return (int)10L;
-    }
-    public static int XIMDontChange() {
-        return (int)11L;
-    }
-    public static int XIMIsInvisible() {
-        return (int)0L;
-    }
-    public static int XIMIsPrimary() {
-        return (int)1L;
-    }
-    public static int XIMIsSecondary() {
-        return (int)2L;
-    }
-    public static int XIMTextType() {
-        return (int)0L;
-    }
-    public static int XIMBitmapType() {
-        return (int)1L;
-    }
-    public static MemoryLayout _Xdebug$LAYOUT() {
-        return constants$2._Xdebug$LAYOUT;
-    }
-    public static VarHandle _Xdebug$VH() {
-        return constants$2._Xdebug$VH;
-    }
-    public static MemorySegment _Xdebug$SEGMENT() {
-        return RuntimeHelper.requireNonNull(constants$2._Xdebug$SEGMENT,"_Xdebug");
-    }
-    public static int _Xdebug$get() {
-        return (int) constants$2._Xdebug$VH.get(RuntimeHelper.requireNonNull(constants$2._Xdebug$SEGMENT, "_Xdebug"));
-    }
-    public static void _Xdebug$set( int x) {
-        constants$2._Xdebug$VH.set(RuntimeHelper.requireNonNull(constants$2._Xdebug$SEGMENT, "_Xdebug"), x);
-    }
-    public static MethodHandle XLoadQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XLoadQueryFont$MH,"XLoadQueryFont");
-    }
-    public static MemoryAddress XLoadQueryFont ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$2.XLoadQueryFont$MH, "XLoadQueryFont");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XQueryFont$MH,"XQueryFont");
-    }
-    public static MemoryAddress XQueryFont ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$2.XQueryFont$MH, "XQueryFont");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetMotionEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XGetMotionEvents$MH,"XGetMotionEvents");
-    }
-    public static MemoryAddress XGetMotionEvents ( Addressable x0,  long x1,  long x2,  long x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XGetMotionEvents$MH, "XGetMotionEvents");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDeleteModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XDeleteModifiermapEntry$MH,"XDeleteModifiermapEntry");
-    }
-    public static MemoryAddress XDeleteModifiermapEntry ( Addressable x0,  byte x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XDeleteModifiermapEntry$MH, "XDeleteModifiermapEntry");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetModifierMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XGetModifierMapping$MH,"XGetModifierMapping");
-    }
-    public static MemoryAddress XGetModifierMapping ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XGetModifierMapping$MH, "XGetModifierMapping");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInsertModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XInsertModifiermapEntry$MH,"XInsertModifiermapEntry");
-    }
-    public static MemoryAddress XInsertModifiermapEntry ( Addressable x0,  byte x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XInsertModifiermapEntry$MH, "XInsertModifiermapEntry");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XNewModifiermap$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XNewModifiermap$MH,"XNewModifiermap");
-    }
-    public static MemoryAddress XNewModifiermap ( int x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XNewModifiermap$MH, "XNewModifiermap");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XCreateImage$MH,"XCreateImage");
-    }
-    public static MemoryAddress XCreateImage ( Addressable x0,  Addressable x1,  int x2,  int x3,  int x4,  Addressable x5,  int x6,  int x7,  int x8,  int x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XCreateImage$MH, "XCreateImage");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInitImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XInitImage$MH,"XInitImage");
-    }
-    public static int XInitImage ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XInitImage$MH, "XInitImage");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XGetImage$MH,"XGetImage");
-    }
-    public static MemoryAddress XGetImage ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XGetImage$MH, "XGetImage");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetSubImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XGetSubImage$MH,"XGetSubImage");
-    }
-    public static MemoryAddress XGetSubImage ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  int x7,  Addressable x8,  int x9,  int x10) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XGetSubImage$MH, "XGetSubImage");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XOpenDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XOpenDisplay$MH,"XOpenDisplay");
-    }
-    public static MemoryAddress XOpenDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XOpenDisplay$MH, "XOpenDisplay");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XrmInitialize$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XrmInitialize$MH,"XrmInitialize");
-    }
-    public static void XrmInitialize () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XrmInitialize$MH, "XrmInitialize");
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFetchBytes$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XFetchBytes$MH,"XFetchBytes");
-    }
-    public static MemoryAddress XFetchBytes ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XFetchBytes$MH, "XFetchBytes");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFetchBuffer$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XFetchBuffer$MH,"XFetchBuffer");
-    }
-    public static MemoryAddress XFetchBuffer ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XFetchBuffer$MH, "XFetchBuffer");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetAtomName$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XGetAtomName$MH,"XGetAtomName");
-    }
-    public static MemoryAddress XGetAtomName ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XGetAtomName$MH, "XGetAtomName");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetAtomNames$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XGetAtomNames$MH,"XGetAtomNames");
-    }
-    public static int XGetAtomNames ( Addressable x0,  Addressable x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XGetAtomNames$MH, "XGetAtomNames");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetDefault$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XGetDefault$MH,"XGetDefault");
-    }
-    public static MemoryAddress XGetDefault ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XGetDefault$MH, "XGetDefault");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayName$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XDisplayName$MH,"XDisplayName");
-    }
-    public static MemoryAddress XDisplayName ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XDisplayName$MH, "XDisplayName");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XKeysymToString$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XKeysymToString$MH,"XKeysymToString");
-    }
-    public static MemoryAddress XKeysymToString ( long x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XKeysymToString$MH, "XKeysymToString");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSynchronize$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XSynchronize$MH,"XSynchronize");
-    }
-    public static MemoryAddress XSynchronize ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XSynchronize$MH, "XSynchronize");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetAfterFunction$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XSetAfterFunction$MH,"XSetAfterFunction");
-    }
-    public static MemoryAddress XSetAfterFunction ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XSetAfterFunction$MH, "XSetAfterFunction");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInternAtom$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XInternAtom$MH,"XInternAtom");
-    }
-    public static long XInternAtom ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XInternAtom$MH, "XInternAtom");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInternAtoms$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XInternAtoms$MH,"XInternAtoms");
-    }
-    public static int XInternAtoms ( Addressable x0,  Addressable x1,  int x2,  int x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XInternAtoms$MH, "XInternAtoms");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCopyColormapAndFree$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCopyColormapAndFree$MH,"XCopyColormapAndFree");
-    }
-    public static long XCopyColormapAndFree ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCopyColormapAndFree$MH, "XCopyColormapAndFree");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreateColormap$MH,"XCreateColormap");
-    }
-    public static long XCreateColormap ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreateColormap$MH, "XCreateColormap");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreatePixmapCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreatePixmapCursor$MH,"XCreatePixmapCursor");
-    }
-    public static long XCreatePixmapCursor ( Addressable x0,  long x1,  long x2,  Addressable x3,  Addressable x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreatePixmapCursor$MH, "XCreatePixmapCursor");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateGlyphCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreateGlyphCursor$MH,"XCreateGlyphCursor");
-    }
-    public static long XCreateGlyphCursor ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreateGlyphCursor$MH, "XCreateGlyphCursor");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateFontCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreateFontCursor$MH,"XCreateFontCursor");
-    }
-    public static long XCreateFontCursor ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreateFontCursor$MH, "XCreateFontCursor");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLoadFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XLoadFont$MH,"XLoadFont");
-    }
-    public static long XLoadFont ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XLoadFont$MH, "XLoadFont");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreateGC$MH,"XCreateGC");
-    }
-    public static MemoryAddress XCreateGC ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreateGC$MH, "XCreateGC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGContextFromGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XGContextFromGC$MH,"XGContextFromGC");
-    }
-    public static long XGContextFromGC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XGContextFromGC$MH, "XGContextFromGC");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFlushGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XFlushGC$MH,"XFlushGC");
-    }
-    public static void XFlushGC ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XFlushGC$MH, "XFlushGC");
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreatePixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreatePixmap$MH,"XCreatePixmap");
-    }
-    public static long XCreatePixmap ( Addressable x0,  long x1,  int x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreatePixmap$MH, "XCreatePixmap");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateBitmapFromData$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreateBitmapFromData$MH,"XCreateBitmapFromData");
-    }
-    public static long XCreateBitmapFromData ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreateBitmapFromData$MH, "XCreateBitmapFromData");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreatePixmapFromBitmapData$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreatePixmapFromBitmapData$MH,"XCreatePixmapFromBitmapData");
-    }
-    public static long XCreatePixmapFromBitmapData ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  long x5,  long x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreatePixmapFromBitmapData$MH, "XCreatePixmapFromBitmapData");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateSimpleWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XCreateSimpleWindow$MH,"XCreateSimpleWindow");
-    }
-    public static long XCreateSimpleWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6,  long x7,  long x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XCreateSimpleWindow$MH, "XCreateSimpleWindow");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetSelectionOwner$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XGetSelectionOwner$MH,"XGetSelectionOwner");
-    }
-    public static long XGetSelectionOwner ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XGetSelectionOwner$MH, "XGetSelectionOwner");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XCreateWindow$MH,"XCreateWindow");
-    }
-    public static long XCreateWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8,  Addressable x9,  long x10,  Addressable x11) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XCreateWindow$MH, "XCreateWindow");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListInstalledColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XListInstalledColormaps$MH,"XListInstalledColormaps");
-    }
-    public static MemoryAddress XListInstalledColormaps ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XListInstalledColormaps$MH, "XListInstalledColormaps");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListFonts$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XListFonts$MH,"XListFonts");
-    }
-    public static MemoryAddress XListFonts ( Addressable x0,  Addressable x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XListFonts$MH, "XListFonts");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListFontsWithInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XListFontsWithInfo$MH,"XListFontsWithInfo");
-    }
-    public static MemoryAddress XListFontsWithInfo ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XListFontsWithInfo$MH, "XListFontsWithInfo");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XGetFontPath$MH,"XGetFontPath");
-    }
-    public static MemoryAddress XGetFontPath ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XGetFontPath$MH, "XGetFontPath");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListExtensions$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XListExtensions$MH,"XListExtensions");
-    }
-    public static MemoryAddress XListExtensions ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XListExtensions$MH, "XListExtensions");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XListProperties$MH,"XListProperties");
-    }
-    public static MemoryAddress XListProperties ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XListProperties$MH, "XListProperties");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XListHosts$MH,"XListHosts");
-    }
-    public static MemoryAddress XListHosts ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XListHosts$MH, "XListHosts");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XKeycodeToKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XKeycodeToKeysym$MH,"XKeycodeToKeysym");
-    }
-    public static long XKeycodeToKeysym ( Addressable x0,  byte x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XKeycodeToKeysym$MH, "XKeycodeToKeysym");
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLookupKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XLookupKeysym$MH,"XLookupKeysym");
-    }
-    public static long XLookupKeysym ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XLookupKeysym$MH, "XLookupKeysym");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XGetKeyboardMapping$MH,"XGetKeyboardMapping");
-    }
-    public static MemoryAddress XGetKeyboardMapping ( Addressable x0,  byte x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XGetKeyboardMapping$MH, "XGetKeyboardMapping");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStringToKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XStringToKeysym$MH,"XStringToKeysym");
-    }
-    public static long XStringToKeysym ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XStringToKeysym$MH, "XStringToKeysym");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMaxRequestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XMaxRequestSize$MH,"XMaxRequestSize");
-    }
-    public static long XMaxRequestSize ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XMaxRequestSize$MH, "XMaxRequestSize");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XExtendedMaxRequestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XExtendedMaxRequestSize$MH,"XExtendedMaxRequestSize");
-    }
-    public static long XExtendedMaxRequestSize ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XExtendedMaxRequestSize$MH, "XExtendedMaxRequestSize");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XResourceManagerString$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XResourceManagerString$MH,"XResourceManagerString");
-    }
-    public static MemoryAddress XResourceManagerString ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XResourceManagerString$MH, "XResourceManagerString");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XScreenResourceString$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XScreenResourceString$MH,"XScreenResourceString");
-    }
-    public static MemoryAddress XScreenResourceString ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XScreenResourceString$MH, "XScreenResourceString");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayMotionBufferSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XDisplayMotionBufferSize$MH,"XDisplayMotionBufferSize");
-    }
-    public static long XDisplayMotionBufferSize ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XDisplayMotionBufferSize$MH, "XDisplayMotionBufferSize");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XVisualIDFromVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XVisualIDFromVisual$MH,"XVisualIDFromVisual");
-    }
-    public static long XVisualIDFromVisual ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XVisualIDFromVisual$MH, "XVisualIDFromVisual");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInitThreads$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XInitThreads$MH,"XInitThreads");
-    }
-    public static int XInitThreads () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XInitThreads$MH, "XInitThreads");
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLockDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XLockDisplay$MH,"XLockDisplay");
-    }
-    public static void XLockDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XLockDisplay$MH, "XLockDisplay");
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnlockDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XUnlockDisplay$MH,"XUnlockDisplay");
-    }
-    public static void XUnlockDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XUnlockDisplay$MH, "XUnlockDisplay");
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInitExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XInitExtension$MH,"XInitExtension");
-    }
-    public static MemoryAddress XInitExtension ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XInitExtension$MH, "XInitExtension");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XAddExtension$MH,"XAddExtension");
-    }
-    public static MemoryAddress XAddExtension ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XAddExtension$MH, "XAddExtension");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFindOnExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XFindOnExtensionList$MH,"XFindOnExtensionList");
-    }
-    public static MemoryAddress XFindOnExtensionList ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XFindOnExtensionList$MH, "XFindOnExtensionList");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEHeadOfExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XEHeadOfExtensionList$MH,"XEHeadOfExtensionList");
-    }
-    public static MemoryAddress XEHeadOfExtensionList ( MemorySegment x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XEHeadOfExtensionList$MH, "XEHeadOfExtensionList");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRootWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XRootWindow$MH,"XRootWindow");
-    }
-    public static long XRootWindow ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XRootWindow$MH, "XRootWindow");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultRootWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XDefaultRootWindow$MH,"XDefaultRootWindow");
-    }
-    public static long XDefaultRootWindow ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XDefaultRootWindow$MH, "XDefaultRootWindow");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRootWindowOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XRootWindowOfScreen$MH,"XRootWindowOfScreen");
-    }
-    public static long XRootWindowOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XRootWindowOfScreen$MH, "XRootWindowOfScreen");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultVisual$MH,"XDefaultVisual");
-    }
-    public static MemoryAddress XDefaultVisual ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultVisual$MH, "XDefaultVisual");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultVisualOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultVisualOfScreen$MH,"XDefaultVisualOfScreen");
-    }
-    public static MemoryAddress XDefaultVisualOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultVisualOfScreen$MH, "XDefaultVisualOfScreen");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultGC$MH,"XDefaultGC");
-    }
-    public static MemoryAddress XDefaultGC ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultGC$MH, "XDefaultGC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultGCOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultGCOfScreen$MH,"XDefaultGCOfScreen");
-    }
-    public static MemoryAddress XDefaultGCOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultGCOfScreen$MH, "XDefaultGCOfScreen");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBlackPixel$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XBlackPixel$MH,"XBlackPixel");
-    }
-    public static long XBlackPixel ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XBlackPixel$MH, "XBlackPixel");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWhitePixel$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XWhitePixel$MH,"XWhitePixel");
-    }
-    public static long XWhitePixel ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XWhitePixel$MH, "XWhitePixel");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XAllPlanes$MH,"XAllPlanes");
-    }
-    public static long XAllPlanes () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XAllPlanes$MH, "XAllPlanes");
-        try {
-            return (long)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBlackPixelOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XBlackPixelOfScreen$MH,"XBlackPixelOfScreen");
-    }
-    public static long XBlackPixelOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XBlackPixelOfScreen$MH, "XBlackPixelOfScreen");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWhitePixelOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XWhitePixelOfScreen$MH,"XWhitePixelOfScreen");
-    }
-    public static long XWhitePixelOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XWhitePixelOfScreen$MH, "XWhitePixelOfScreen");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XNextRequest$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XNextRequest$MH,"XNextRequest");
-    }
-    public static long XNextRequest ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XNextRequest$MH, "XNextRequest");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLastKnownRequestProcessed$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XLastKnownRequestProcessed$MH,"XLastKnownRequestProcessed");
-    }
-    public static long XLastKnownRequestProcessed ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XLastKnownRequestProcessed$MH, "XLastKnownRequestProcessed");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XServerVendor$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XServerVendor$MH,"XServerVendor");
-    }
-    public static MemoryAddress XServerVendor ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XServerVendor$MH, "XServerVendor");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayString$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDisplayString$MH,"XDisplayString");
-    }
-    public static MemoryAddress XDisplayString ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDisplayString$MH, "XDisplayString");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDefaultColormap$MH,"XDefaultColormap");
-    }
-    public static long XDefaultColormap ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDefaultColormap$MH, "XDefaultColormap");
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultColormapOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDefaultColormapOfScreen$MH,"XDefaultColormapOfScreen");
-    }
-    public static long XDefaultColormapOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDefaultColormapOfScreen$MH, "XDefaultColormapOfScreen");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDisplayOfScreen$MH,"XDisplayOfScreen");
-    }
-    public static MemoryAddress XDisplayOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDisplayOfScreen$MH, "XDisplayOfScreen");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XScreenOfDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XScreenOfDisplay$MH,"XScreenOfDisplay");
-    }
-    public static MemoryAddress XScreenOfDisplay ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XScreenOfDisplay$MH, "XScreenOfDisplay");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultScreenOfDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDefaultScreenOfDisplay$MH,"XDefaultScreenOfDisplay");
-    }
-    public static MemoryAddress XDefaultScreenOfDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDefaultScreenOfDisplay$MH, "XDefaultScreenOfDisplay");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEventMaskOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.XEventMaskOfScreen$MH,"XEventMaskOfScreen");
-    }
-    public static long XEventMaskOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$17.XEventMaskOfScreen$MH, "XEventMaskOfScreen");
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XScreenNumberOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.XScreenNumberOfScreen$MH,"XScreenNumberOfScreen");
-    }
-    public static int XScreenNumberOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$17.XScreenNumberOfScreen$MH, "XScreenNumberOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetErrorHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.XSetErrorHandler$MH,"XSetErrorHandler");
-    }
-    public static MemoryAddress XSetErrorHandler ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$17.XSetErrorHandler$MH, "XSetErrorHandler");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetIOErrorHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XSetIOErrorHandler$MH,"XSetIOErrorHandler");
-    }
-    public static MemoryAddress XSetIOErrorHandler ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XSetIOErrorHandler$MH, "XSetIOErrorHandler");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListPixmapFormats$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XListPixmapFormats$MH,"XListPixmapFormats");
-    }
-    public static MemoryAddress XListPixmapFormats ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XListPixmapFormats$MH, "XListPixmapFormats");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListDepths$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XListDepths$MH,"XListDepths");
-    }
-    public static MemoryAddress XListDepths ( Addressable x0,  int x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XListDepths$MH, "XListDepths");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XReconfigureWMWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XReconfigureWMWindow$MH,"XReconfigureWMWindow");
-    }
-    public static int XReconfigureWMWindow ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XReconfigureWMWindow$MH, "XReconfigureWMWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWMProtocols$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XGetWMProtocols$MH,"XGetWMProtocols");
-    }
-    public static int XGetWMProtocols ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XGetWMProtocols$MH, "XGetWMProtocols");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWMProtocols$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XSetWMProtocols$MH,"XSetWMProtocols");
-    }
-    public static int XSetWMProtocols ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XSetWMProtocols$MH, "XSetWMProtocols");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XIconifyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XIconifyWindow$MH,"XIconifyWindow");
-    }
-    public static int XIconifyWindow ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XIconifyWindow$MH, "XIconifyWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWithdrawWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XWithdrawWindow$MH,"XWithdrawWindow");
-    }
-    public static int XWithdrawWindow ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XWithdrawWindow$MH, "XWithdrawWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetCommand$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XGetCommand$MH,"XGetCommand");
-    }
-    public static int XGetCommand ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XGetCommand$MH, "XGetCommand");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWMColormapWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XGetWMColormapWindows$MH,"XGetWMColormapWindows");
-    }
-    public static int XGetWMColormapWindows ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XGetWMColormapWindows$MH, "XGetWMColormapWindows");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWMColormapWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XSetWMColormapWindows$MH,"XSetWMColormapWindows");
-    }
-    public static int XSetWMColormapWindows ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XSetWMColormapWindows$MH, "XSetWMColormapWindows");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XFreeStringList$MH,"XFreeStringList");
-    }
-    public static void XFreeStringList ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XFreeStringList$MH, "XFreeStringList");
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetTransientForHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XSetTransientForHint$MH,"XSetTransientForHint");
-    }
-    public static int XSetTransientForHint ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XSetTransientForHint$MH, "XSetTransientForHint");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XActivateScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XActivateScreenSaver$MH,"XActivateScreenSaver");
-    }
-    public static int XActivateScreenSaver ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XActivateScreenSaver$MH, "XActivateScreenSaver");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddHost$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAddHost$MH,"XAddHost");
-    }
-    public static int XAddHost ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XAddHost$MH, "XAddHost");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAddHosts$MH,"XAddHosts");
-    }
-    public static int XAddHosts ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XAddHosts$MH, "XAddHosts");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddToExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAddToExtensionList$MH,"XAddToExtensionList");
-    }
-    public static int XAddToExtensionList ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XAddToExtensionList$MH, "XAddToExtensionList");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddToSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAddToSaveSet$MH,"XAddToSaveSet");
-    }
-    public static int XAddToSaveSet ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAddToSaveSet$MH, "XAddToSaveSet");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllocColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocColor$MH,"XAllocColor");
-    }
-    public static int XAllocColor ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocColor$MH, "XAllocColor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllocColorCells$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocColorCells$MH,"XAllocColorCells");
-    }
-    public static int XAllocColorCells ( Addressable x0,  long x1,  int x2,  Addressable x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocColorCells$MH, "XAllocColorCells");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllocColorPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocColorPlanes$MH,"XAllocColorPlanes");
-    }
-    public static int XAllocColorPlanes ( Addressable x0,  long x1,  int x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  Addressable x8,  Addressable x9,  Addressable x10) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocColorPlanes$MH, "XAllocColorPlanes");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllocNamedColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocNamedColor$MH,"XAllocNamedColor");
-    }
-    public static int XAllocNamedColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocNamedColor$MH, "XAllocNamedColor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllowEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllowEvents$MH,"XAllowEvents");
-    }
-    public static int XAllowEvents ( Addressable x0,  int x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllowEvents$MH, "XAllowEvents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAutoRepeatOff$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOff$MH,"XAutoRepeatOff");
-    }
-    public static int XAutoRepeatOff ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOff$MH, "XAutoRepeatOff");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAutoRepeatOn$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOn$MH,"XAutoRepeatOn");
-    }
-    public static int XAutoRepeatOn ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOn$MH, "XAutoRepeatOn");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBell$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBell$MH,"XBell");
-    }
-    public static int XBell ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBell$MH, "XBell");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBitmapBitOrder$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBitmapBitOrder$MH,"XBitmapBitOrder");
-    }
-    public static int XBitmapBitOrder ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBitmapBitOrder$MH, "XBitmapBitOrder");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBitmapPad$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBitmapPad$MH,"XBitmapPad");
-    }
-    public static int XBitmapPad ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBitmapPad$MH, "XBitmapPad");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBitmapUnit$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBitmapUnit$MH,"XBitmapUnit");
-    }
-    public static int XBitmapUnit ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBitmapUnit$MH, "XBitmapUnit");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCellsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XCellsOfScreen$MH,"XCellsOfScreen");
-    }
-    public static int XCellsOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XCellsOfScreen$MH, "XCellsOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeActivePointerGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeActivePointerGrab$MH,"XChangeActivePointerGrab");
-    }
-    public static int XChangeActivePointerGrab ( Addressable x0,  int x1,  long x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeActivePointerGrab$MH, "XChangeActivePointerGrab");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeGC$MH,"XChangeGC");
-    }
-    public static int XChangeGC ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeGC$MH, "XChangeGC");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeKeyboardControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardControl$MH,"XChangeKeyboardControl");
-    }
-    public static int XChangeKeyboardControl ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardControl$MH, "XChangeKeyboardControl");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardMapping$MH,"XChangeKeyboardMapping");
-    }
-    public static int XChangeKeyboardMapping ( Addressable x0,  int x1,  int x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardMapping$MH, "XChangeKeyboardMapping");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangePointerControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangePointerControl$MH,"XChangePointerControl");
-    }
-    public static int XChangePointerControl ( Addressable x0,  int x1,  int x2,  int x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangePointerControl$MH, "XChangePointerControl");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XChangeProperty$MH,"XChangeProperty");
-    }
-    public static int XChangeProperty ( Addressable x0,  long x1,  long x2,  long x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XChangeProperty$MH, "XChangeProperty");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XChangeSaveSet$MH,"XChangeSaveSet");
-    }
-    public static int XChangeSaveSet ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XChangeSaveSet$MH, "XChangeSaveSet");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeWindowAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XChangeWindowAttributes$MH,"XChangeWindowAttributes");
-    }
-    public static int XChangeWindowAttributes ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XChangeWindowAttributes$MH, "XChangeWindowAttributes");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCheckIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XCheckIfEvent$MH,"XCheckIfEvent");
-    }
-    public static int XCheckIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XCheckIfEvent$MH, "XCheckIfEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCheckMaskEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckMaskEvent$MH,"XCheckMaskEvent");
-    }
-    public static int XCheckMaskEvent ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckMaskEvent$MH, "XCheckMaskEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCheckTypedEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckTypedEvent$MH,"XCheckTypedEvent");
-    }
-    public static int XCheckTypedEvent ( Addressable x0,  int x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckTypedEvent$MH, "XCheckTypedEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCheckTypedWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckTypedWindowEvent$MH,"XCheckTypedWindowEvent");
-    }
-    public static int XCheckTypedWindowEvent ( Addressable x0,  long x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckTypedWindowEvent$MH, "XCheckTypedWindowEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCheckWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckWindowEvent$MH,"XCheckWindowEvent");
-    }
-    public static int XCheckWindowEvent ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckWindowEvent$MH, "XCheckWindowEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCirculateSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindows$MH,"XCirculateSubwindows");
-    }
-    public static int XCirculateSubwindows ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindows$MH, "XCirculateSubwindows");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCirculateSubwindowsDown$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsDown$MH,"XCirculateSubwindowsDown");
-    }
-    public static int XCirculateSubwindowsDown ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsDown$MH, "XCirculateSubwindowsDown");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCirculateSubwindowsUp$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XCirculateSubwindowsUp$MH,"XCirculateSubwindowsUp");
-    }
-    public static int XCirculateSubwindowsUp ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XCirculateSubwindowsUp$MH, "XCirculateSubwindowsUp");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XClearArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XClearArea$MH,"XClearArea");
-    }
-    public static int XClearArea ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XClearArea$MH, "XClearArea");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XClearWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XClearWindow$MH,"XClearWindow");
-    }
-    public static int XClearWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XClearWindow$MH, "XClearWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCloseDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XCloseDisplay$MH,"XCloseDisplay");
-    }
-    public static int XCloseDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XCloseDisplay$MH, "XCloseDisplay");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XConfigureWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XConfigureWindow$MH,"XConfigureWindow");
-    }
-    public static int XConfigureWindow ( Addressable x0,  long x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XConfigureWindow$MH, "XConfigureWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XConnectionNumber$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XConnectionNumber$MH,"XConnectionNumber");
-    }
-    public static int XConnectionNumber ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XConnectionNumber$MH, "XConnectionNumber");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XConvertSelection$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XConvertSelection$MH,"XConvertSelection");
-    }
-    public static int XConvertSelection ( Addressable x0,  long x1,  long x2,  long x3,  long x4,  long x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XConvertSelection$MH, "XConvertSelection");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCopyArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XCopyArea$MH,"XCopyArea");
-    }
-    public static int XCopyArea ( Addressable x0,  long x1,  long x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XCopyArea$MH, "XCopyArea");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCopyGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XCopyGC$MH,"XCopyGC");
-    }
-    public static int XCopyGC ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XCopyGC$MH, "XCopyGC");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCopyPlane$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XCopyPlane$MH,"XCopyPlane");
-    }
-    public static int XCopyPlane ( Addressable x0,  long x1,  long x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9,  long x10) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XCopyPlane$MH, "XCopyPlane");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultDepth$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XDefaultDepth$MH,"XDefaultDepth");
-    }
-    public static int XDefaultDepth ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XDefaultDepth$MH, "XDefaultDepth");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultDepthOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XDefaultDepthOfScreen$MH,"XDefaultDepthOfScreen");
-    }
-    public static int XDefaultDepthOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XDefaultDepthOfScreen$MH, "XDefaultDepthOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDefaultScreen$MH,"XDefaultScreen");
-    }
-    public static int XDefaultScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDefaultScreen$MH, "XDefaultScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefineCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDefineCursor$MH,"XDefineCursor");
-    }
-    public static int XDefineCursor ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDefineCursor$MH, "XDefineCursor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDeleteProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDeleteProperty$MH,"XDeleteProperty");
-    }
-    public static int XDeleteProperty ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDeleteProperty$MH, "XDeleteProperty");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDestroyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDestroyWindow$MH,"XDestroyWindow");
-    }
-    public static int XDestroyWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDestroyWindow$MH, "XDestroyWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDestroySubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDestroySubwindows$MH,"XDestroySubwindows");
-    }
-    public static int XDestroySubwindows ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDestroySubwindows$MH, "XDestroySubwindows");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDoesBackingStore$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDoesBackingStore$MH,"XDoesBackingStore");
-    }
-    public static int XDoesBackingStore ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDoesBackingStore$MH, "XDoesBackingStore");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDoesSaveUnders$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDoesSaveUnders$MH,"XDoesSaveUnders");
-    }
-    public static int XDoesSaveUnders ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDoesSaveUnders$MH, "XDoesSaveUnders");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisableAccessControl$MH,"XDisableAccessControl");
-    }
-    public static int XDisableAccessControl ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisableAccessControl$MH, "XDisableAccessControl");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayCells$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayCells$MH,"XDisplayCells");
-    }
-    public static int XDisplayCells ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayCells$MH, "XDisplayCells");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayHeight$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayHeight$MH,"XDisplayHeight");
-    }
-    public static int XDisplayHeight ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayHeight$MH, "XDisplayHeight");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayHeightMM$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayHeightMM$MH,"XDisplayHeightMM");
-    }
-    public static int XDisplayHeightMM ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayHeightMM$MH, "XDisplayHeightMM");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayKeycodes$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayKeycodes$MH,"XDisplayKeycodes");
-    }
-    public static int XDisplayKeycodes ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayKeycodes$MH, "XDisplayKeycodes");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDisplayPlanes$MH,"XDisplayPlanes");
-    }
-    public static int XDisplayPlanes ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDisplayPlanes$MH, "XDisplayPlanes");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDisplayWidth$MH,"XDisplayWidth");
-    }
-    public static int XDisplayWidth ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDisplayWidth$MH, "XDisplayWidth");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayWidthMM$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDisplayWidthMM$MH,"XDisplayWidthMM");
-    }
-    public static int XDisplayWidthMM ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDisplayWidthMM$MH, "XDisplayWidthMM");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawArc$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawArc$MH,"XDrawArc");
-    }
-    public static int XDrawArc ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDrawArc$MH, "XDrawArc");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawArcs$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawArcs$MH,"XDrawArcs");
-    }
-    public static int XDrawArcs ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDrawArcs$MH, "XDrawArcs");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawImageString$MH,"XDrawImageString");
-    }
-    public static int XDrawImageString ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDrawImageString$MH, "XDrawImageString");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawImageString16$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawImageString16$MH,"XDrawImageString16");
-    }
-    public static int XDrawImageString16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawImageString16$MH, "XDrawImageString16");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawLine$MH,"XDrawLine");
-    }
-    public static int XDrawLine ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawLine$MH, "XDrawLine");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawLines$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawLines$MH,"XDrawLines");
-    }
-    public static int XDrawLines ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawLines$MH, "XDrawLines");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawPoint$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawPoint$MH,"XDrawPoint");
-    }
-    public static int XDrawPoint ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawPoint$MH, "XDrawPoint");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawPoints$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawPoints$MH,"XDrawPoints");
-    }
-    public static int XDrawPoints ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawPoints$MH, "XDrawPoints");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawRectangle$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawRectangle$MH,"XDrawRectangle");
-    }
-    public static int XDrawRectangle ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawRectangle$MH, "XDrawRectangle");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawRectangles$MH,"XDrawRectangles");
-    }
-    public static int XDrawRectangles ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawRectangles$MH, "XDrawRectangles");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawSegments$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawSegments$MH,"XDrawSegments");
-    }
-    public static int XDrawSegments ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawSegments$MH, "XDrawSegments");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawString$MH,"XDrawString");
-    }
-    public static int XDrawString ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawString$MH, "XDrawString");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawString16$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawString16$MH,"XDrawString16");
-    }
-    public static int XDrawString16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawString16$MH, "XDrawString16");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawText$MH,"XDrawText");
-    }
-    public static int XDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawText$MH, "XDrawText");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawText16$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawText16$MH,"XDrawText16");
-    }
-    public static int XDrawText16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawText16$MH, "XDrawText16");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEnableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XEnableAccessControl$MH,"XEnableAccessControl");
-    }
-    public static int XEnableAccessControl ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XEnableAccessControl$MH, "XEnableAccessControl");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEventsQueued$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XEventsQueued$MH,"XEventsQueued");
-    }
-    public static int XEventsQueued ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XEventsQueued$MH, "XEventsQueued");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFetchName$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFetchName$MH,"XFetchName");
-    }
-    public static int XFetchName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFetchName$MH, "XFetchName");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFillArc$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillArc$MH,"XFillArc");
-    }
-    public static int XFillArc ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFillArc$MH, "XFillArc");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFillArcs$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillArcs$MH,"XFillArcs");
-    }
-    public static int XFillArcs ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFillArcs$MH, "XFillArcs");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFillPolygon$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillPolygon$MH,"XFillPolygon");
-    }
-    public static int XFillPolygon ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFillPolygon$MH, "XFillPolygon");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFillRectangle$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFillRectangle$MH,"XFillRectangle");
-    }
-    public static int XFillRectangle ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFillRectangle$MH, "XFillRectangle");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFillRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFillRectangles$MH,"XFillRectangles");
-    }
-    public static int XFillRectangles ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFillRectangles$MH, "XFillRectangles");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFlush$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFlush$MH,"XFlush");
-    }
-    public static int XFlush ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFlush$MH, "XFlush");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XForceScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XForceScreenSaver$MH,"XForceScreenSaver");
-    }
-    public static int XForceScreenSaver ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XForceScreenSaver$MH, "XForceScreenSaver");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFree$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFree$MH,"XFree");
-    }
-    public static int XFree ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFree$MH, "XFree");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFreeColormap$MH,"XFreeColormap");
-    }
-    public static int XFreeColormap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFreeColormap$MH, "XFreeColormap");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeColors$MH,"XFreeColors");
-    }
-    public static int XFreeColors ( Addressable x0,  long x1,  Addressable x2,  int x3,  long x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeColors$MH, "XFreeColors");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeCursor$MH,"XFreeCursor");
-    }
-    public static int XFreeCursor ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeCursor$MH, "XFreeCursor");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeExtensionList$MH,"XFreeExtensionList");
-    }
-    public static int XFreeExtensionList ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeExtensionList$MH, "XFreeExtensionList");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeFont$MH,"XFreeFont");
-    }
-    public static int XFreeFont ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeFont$MH, "XFreeFont");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFontInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeFontInfo$MH,"XFreeFontInfo");
-    }
-    public static int XFreeFontInfo ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeFontInfo$MH, "XFreeFontInfo");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFontNames$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeFontNames$MH,"XFreeFontNames");
-    }
-    public static int XFreeFontNames ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeFontNames$MH, "XFreeFontNames");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreeFontPath$MH,"XFreeFontPath");
-    }
-    public static int XFreeFontPath ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreeFontPath$MH, "XFreeFontPath");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreeGC$MH,"XFreeGC");
-    }
-    public static int XFreeGC ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreeGC$MH, "XFreeGC");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeModifiermap$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreeModifiermap$MH,"XFreeModifiermap");
-    }
-    public static int XFreeModifiermap ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreeModifiermap$MH, "XFreeModifiermap");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreePixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreePixmap$MH,"XFreePixmap");
-    }
-    public static int XFreePixmap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreePixmap$MH, "XFreePixmap");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XGeometry$MH,"XGeometry");
-    }
-    public static int XGeometry ( Addressable x0,  int x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  Addressable x9,  Addressable x10,  Addressable x11,  Addressable x12) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XGeometry$MH, "XGeometry");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetErrorDatabaseText$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XGetErrorDatabaseText$MH,"XGetErrorDatabaseText");
-    }
-    public static int XGetErrorDatabaseText ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XGetErrorDatabaseText$MH, "XGetErrorDatabaseText");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetErrorText$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetErrorText$MH,"XGetErrorText");
-    }
-    public static int XGetErrorText ( Addressable x0,  int x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetErrorText$MH, "XGetErrorText");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetFontProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetFontProperty$MH,"XGetFontProperty");
-    }
-    public static int XGetFontProperty ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetFontProperty$MH, "XGetFontProperty");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetGCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetGCValues$MH,"XGetGCValues");
-    }
-    public static int XGetGCValues ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetGCValues$MH, "XGetGCValues");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetGeometry$MH,"XGetGeometry");
-    }
-    public static int XGetGeometry ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetGeometry$MH, "XGetGeometry");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetIconName$MH,"XGetIconName");
-    }
-    public static int XGetIconName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetIconName$MH, "XGetIconName");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetInputFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetInputFocus$MH,"XGetInputFocus");
-    }
-    public static int XGetInputFocus ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetInputFocus$MH, "XGetInputFocus");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetKeyboardControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetKeyboardControl$MH,"XGetKeyboardControl");
-    }
-    public static int XGetKeyboardControl ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetKeyboardControl$MH, "XGetKeyboardControl");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetPointerControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetPointerControl$MH,"XGetPointerControl");
-    }
-    public static int XGetPointerControl ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetPointerControl$MH, "XGetPointerControl");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetPointerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetPointerMapping$MH,"XGetPointerMapping");
-    }
-    public static int XGetPointerMapping ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetPointerMapping$MH, "XGetPointerMapping");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetScreenSaver$MH,"XGetScreenSaver");
-    }
-    public static int XGetScreenSaver ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetScreenSaver$MH, "XGetScreenSaver");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetTransientForHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetTransientForHint$MH,"XGetTransientForHint");
-    }
-    public static int XGetTransientForHint ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetTransientForHint$MH, "XGetTransientForHint");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWindowProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetWindowProperty$MH,"XGetWindowProperty");
-    }
-    public static int XGetWindowProperty ( Addressable x0,  long x1,  long x2,  long x3,  long x4,  int x5,  long x6,  Addressable x7,  Addressable x8,  Addressable x9,  Addressable x10,  Addressable x11) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetWindowProperty$MH, "XGetWindowProperty");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWindowAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGetWindowAttributes$MH,"XGetWindowAttributes");
-    }
-    public static int XGetWindowAttributes ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGetWindowAttributes$MH, "XGetWindowAttributes");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGrabButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabButton$MH,"XGrabButton");
-    }
-    public static int XGrabButton ( Addressable x0,  int x1,  int x2,  long x3,  int x4,  int x5,  int x6,  int x7,  long x8,  long x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabButton$MH, "XGrabButton");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGrabKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabKey$MH,"XGrabKey");
-    }
-    public static int XGrabKey ( Addressable x0,  int x1,  int x2,  long x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabKey$MH, "XGrabKey");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGrabKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabKeyboard$MH,"XGrabKeyboard");
-    }
-    public static int XGrabKeyboard ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  long x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabKeyboard$MH, "XGrabKeyboard");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGrabPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabPointer$MH,"XGrabPointer");
-    }
-    public static int XGrabPointer ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  long x7,  long x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabPointer$MH, "XGrabPointer");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGrabServer$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabServer$MH,"XGrabServer");
-    }
-    public static int XGrabServer ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabServer$MH, "XGrabServer");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XHeightMMOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XHeightMMOfScreen$MH,"XHeightMMOfScreen");
-    }
-    public static int XHeightMMOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XHeightMMOfScreen$MH, "XHeightMMOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XHeightOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XHeightOfScreen$MH,"XHeightOfScreen");
-    }
-    public static int XHeightOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XHeightOfScreen$MH, "XHeightOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XIfEvent$MH,"XIfEvent");
-    }
-    public static int XIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XIfEvent$MH, "XIfEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XImageByteOrder$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XImageByteOrder$MH,"XImageByteOrder");
-    }
-    public static int XImageByteOrder ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XImageByteOrder$MH, "XImageByteOrder");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInstallColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XInstallColormap$MH,"XInstallColormap");
-    }
-    public static int XInstallColormap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XInstallColormap$MH, "XInstallColormap");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XKeysymToKeycode$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XKeysymToKeycode$MH,"XKeysymToKeycode");
-    }
-    public static byte XKeysymToKeycode ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XKeysymToKeycode$MH, "XKeysymToKeycode");
-        try {
-            return (byte)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XKillClient$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XKillClient$MH,"XKillClient");
-    }
-    public static int XKillClient ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XKillClient$MH, "XKillClient");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLookupColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XLookupColor$MH,"XLookupColor");
-    }
-    public static int XLookupColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XLookupColor$MH, "XLookupColor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLowerWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XLowerWindow$MH,"XLowerWindow");
-    }
-    public static int XLowerWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XLowerWindow$MH, "XLowerWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMapRaised$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XMapRaised$MH,"XMapRaised");
-    }
-    public static int XMapRaised ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XMapRaised$MH, "XMapRaised");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMapSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMapSubwindows$MH,"XMapSubwindows");
-    }
-    public static int XMapSubwindows ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMapSubwindows$MH, "XMapSubwindows");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMapWindow$MH,"XMapWindow");
-    }
-    public static int XMapWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMapWindow$MH, "XMapWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMaskEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMaskEvent$MH,"XMaskEvent");
-    }
-    public static int XMaskEvent ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMaskEvent$MH, "XMaskEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMaxCmapsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMaxCmapsOfScreen$MH,"XMaxCmapsOfScreen");
-    }
-    public static int XMaxCmapsOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMaxCmapsOfScreen$MH, "XMaxCmapsOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMinCmapsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMinCmapsOfScreen$MH,"XMinCmapsOfScreen");
-    }
-    public static int XMinCmapsOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMinCmapsOfScreen$MH, "XMinCmapsOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMoveResizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMoveResizeWindow$MH,"XMoveResizeWindow");
-    }
-    public static int XMoveResizeWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMoveResizeWindow$MH, "XMoveResizeWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMoveWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XMoveWindow$MH,"XMoveWindow");
-    }
-    public static int XMoveWindow ( Addressable x0,  long x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XMoveWindow$MH, "XMoveWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XNextEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XNextEvent$MH,"XNextEvent");
-    }
-    public static int XNextEvent ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XNextEvent$MH, "XNextEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XNoOp$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XNoOp$MH,"XNoOp");
-    }
-    public static int XNoOp ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XNoOp$MH, "XNoOp");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XParseColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XParseColor$MH,"XParseColor");
-    }
-    public static int XParseColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XParseColor$MH, "XParseColor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XParseGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XParseGeometry$MH,"XParseGeometry");
-    }
-    public static int XParseGeometry ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XParseGeometry$MH, "XParseGeometry");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPeekEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XPeekEvent$MH,"XPeekEvent");
-    }
-    public static int XPeekEvent ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XPeekEvent$MH, "XPeekEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPeekIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XPeekIfEvent$MH,"XPeekIfEvent");
-    }
-    public static int XPeekIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XPeekIfEvent$MH, "XPeekIfEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPending$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XPending$MH,"XPending");
-    }
-    public static int XPending ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XPending$MH, "XPending");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPlanesOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XPlanesOfScreen$MH,"XPlanesOfScreen");
-    }
-    public static int XPlanesOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XPlanesOfScreen$MH, "XPlanesOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XProtocolRevision$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XProtocolRevision$MH,"XProtocolRevision");
-    }
-    public static int XProtocolRevision ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XProtocolRevision$MH, "XProtocolRevision");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XProtocolVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XProtocolVersion$MH,"XProtocolVersion");
-    }
-    public static int XProtocolVersion ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XProtocolVersion$MH, "XProtocolVersion");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPutBackEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XPutBackEvent$MH,"XPutBackEvent");
-    }
-    public static int XPutBackEvent ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XPutBackEvent$MH, "XPutBackEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPutImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XPutImage$MH,"XPutImage");
-    }
-    public static int XPutImage ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XPutImage$MH, "XPutImage");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQLength$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQLength$MH,"XQLength");
-    }
-    public static int XQLength ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XQLength$MH, "XQLength");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryBestCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQueryBestCursor$MH,"XQueryBestCursor");
-    }
-    public static int XQueryBestCursor ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XQueryBestCursor$MH, "XQueryBestCursor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryBestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQueryBestSize$MH,"XQueryBestSize");
-    }
-    public static int XQueryBestSize ( Addressable x0,  int x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XQueryBestSize$MH, "XQueryBestSize");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryBestStipple$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryBestStipple$MH,"XQueryBestStipple");
-    }
-    public static int XQueryBestStipple ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryBestStipple$MH, "XQueryBestStipple");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryBestTile$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryBestTile$MH,"XQueryBestTile");
-    }
-    public static int XQueryBestTile ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryBestTile$MH, "XQueryBestTile");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryColor$MH,"XQueryColor");
-    }
-    public static int XQueryColor ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryColor$MH, "XQueryColor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryColors$MH,"XQueryColors");
-    }
-    public static int XQueryColors ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryColors$MH, "XQueryColors");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryExtension$MH,"XQueryExtension");
-    }
-    public static int XQueryExtension ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryExtension$MH, "XQueryExtension");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryKeymap$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryKeymap$MH,"XQueryKeymap");
-    }
-    public static int XQueryKeymap ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryKeymap$MH, "XQueryKeymap");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryPointer$MH,"XQueryPointer");
-    }
-    public static int XQueryPointer ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryPointer$MH, "XQueryPointer");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents$MH,"XQueryTextExtents");
-    }
-    public static int XQueryTextExtents ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents$MH, "XQueryTextExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryTextExtents16$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents16$MH,"XQueryTextExtents16");
-    }
-    public static int XQueryTextExtents16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents16$MH, "XQueryTextExtents16");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryTree$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryTree$MH,"XQueryTree");
-    }
-    public static int XQueryTree ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryTree$MH, "XQueryTree");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRaiseWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XRaiseWindow$MH,"XRaiseWindow");
-    }
-    public static int XRaiseWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XRaiseWindow$MH, "XRaiseWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XReadBitmapFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XReadBitmapFile$MH,"XReadBitmapFile");
-    }
-    public static int XReadBitmapFile ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XReadBitmapFile$MH, "XReadBitmapFile");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XReadBitmapFileData$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XReadBitmapFileData$MH,"XReadBitmapFileData");
-    }
-    public static int XReadBitmapFileData ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XReadBitmapFileData$MH, "XReadBitmapFileData");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRebindKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRebindKeysym$MH,"XRebindKeysym");
-    }
-    public static int XRebindKeysym ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRebindKeysym$MH, "XRebindKeysym");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRecolorCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRecolorCursor$MH,"XRecolorCursor");
-    }
-    public static int XRecolorCursor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRecolorCursor$MH, "XRecolorCursor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRefreshKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRefreshKeyboardMapping$MH,"XRefreshKeyboardMapping");
-    }
-    public static int XRefreshKeyboardMapping ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRefreshKeyboardMapping$MH, "XRefreshKeyboardMapping");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRemoveFromSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRemoveFromSaveSet$MH,"XRemoveFromSaveSet");
-    }
-    public static int XRemoveFromSaveSet ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRemoveFromSaveSet$MH, "XRemoveFromSaveSet");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRemoveHost$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRemoveHost$MH,"XRemoveHost");
-    }
-    public static int XRemoveHost ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRemoveHost$MH, "XRemoveHost");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRemoveHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XRemoveHosts$MH,"XRemoveHosts");
-    }
-    public static int XRemoveHosts ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XRemoveHosts$MH, "XRemoveHosts");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XReparentWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XReparentWindow$MH,"XReparentWindow");
-    }
-    public static int XReparentWindow ( Addressable x0,  long x1,  long x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XReparentWindow$MH, "XReparentWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XResetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XResetScreenSaver$MH,"XResetScreenSaver");
-    }
-    public static int XResetScreenSaver ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XResetScreenSaver$MH, "XResetScreenSaver");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XResizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XResizeWindow$MH,"XResizeWindow");
-    }
-    public static int XResizeWindow ( Addressable x0,  long x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XResizeWindow$MH, "XResizeWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRestackWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XRestackWindows$MH,"XRestackWindows");
-    }
-    public static int XRestackWindows ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XRestackWindows$MH, "XRestackWindows");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRotateBuffers$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XRotateBuffers$MH,"XRotateBuffers");
-    }
-    public static int XRotateBuffers ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XRotateBuffers$MH, "XRotateBuffers");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRotateWindowProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XRotateWindowProperties$MH,"XRotateWindowProperties");
-    }
-    public static int XRotateWindowProperties ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XRotateWindowProperties$MH, "XRotateWindowProperties");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XScreenCount$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XScreenCount$MH,"XScreenCount");
-    }
-    public static int XScreenCount ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XScreenCount$MH, "XScreenCount");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSelectInput$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSelectInput$MH,"XSelectInput");
-    }
-    public static int XSelectInput ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSelectInput$MH, "XSelectInput");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSendEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSendEvent$MH,"XSendEvent");
-    }
-    public static int XSendEvent ( Addressable x0,  long x1,  int x2,  long x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSendEvent$MH, "XSendEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSetAccessControl$MH,"XSetAccessControl");
-    }
-    public static int XSetAccessControl ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSetAccessControl$MH, "XSetAccessControl");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetArcMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSetArcMode$MH,"XSetArcMode");
-    }
-    public static int XSetArcMode ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSetArcMode$MH, "XSetArcMode");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetBackground$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetBackground$MH,"XSetBackground");
-    }
-    public static int XSetBackground ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetBackground$MH, "XSetBackground");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetClipMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetClipMask$MH,"XSetClipMask");
-    }
-    public static int XSetClipMask ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetClipMask$MH, "XSetClipMask");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetClipOrigin$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetClipOrigin$MH,"XSetClipOrigin");
-    }
-    public static int XSetClipOrigin ( Addressable x0,  Addressable x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetClipOrigin$MH, "XSetClipOrigin");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetClipRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetClipRectangles$MH,"XSetClipRectangles");
-    }
-    public static int XSetClipRectangles ( Addressable x0,  Addressable x1,  int x2,  int x3,  Addressable x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetClipRectangles$MH, "XSetClipRectangles");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetCloseDownMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetCloseDownMode$MH,"XSetCloseDownMode");
-    }
-    public static int XSetCloseDownMode ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetCloseDownMode$MH, "XSetCloseDownMode");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetCommand$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetCommand$MH,"XSetCommand");
-    }
-    public static int XSetCommand ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetCommand$MH, "XSetCommand");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetDashes$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetDashes$MH,"XSetDashes");
-    }
-    public static int XSetDashes ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetDashes$MH, "XSetDashes");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetFillRule$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFillRule$MH,"XSetFillRule");
-    }
-    public static int XSetFillRule ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFillRule$MH, "XSetFillRule");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetFillStyle$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFillStyle$MH,"XSetFillStyle");
-    }
-    public static int XSetFillStyle ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFillStyle$MH, "XSetFillStyle");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFont$MH,"XSetFont");
-    }
-    public static int XSetFont ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFont$MH, "XSetFont");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFontPath$MH,"XSetFontPath");
-    }
-    public static int XSetFontPath ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFontPath$MH, "XSetFontPath");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetForeground$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetForeground$MH,"XSetForeground");
-    }
-    public static int XSetForeground ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetForeground$MH, "XSetForeground");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetFunction$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetFunction$MH,"XSetFunction");
-    }
-    public static int XSetFunction ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetFunction$MH, "XSetFunction");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetGraphicsExposures$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetGraphicsExposures$MH,"XSetGraphicsExposures");
-    }
-    public static int XSetGraphicsExposures ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetGraphicsExposures$MH, "XSetGraphicsExposures");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetIconName$MH,"XSetIconName");
-    }
-    public static int XSetIconName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetIconName$MH, "XSetIconName");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetInputFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetInputFocus$MH,"XSetInputFocus");
-    }
-    public static int XSetInputFocus ( Addressable x0,  long x1,  int x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetInputFocus$MH, "XSetInputFocus");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetLineAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetLineAttributes$MH,"XSetLineAttributes");
-    }
-    public static int XSetLineAttributes ( Addressable x0,  Addressable x1,  int x2,  int x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetLineAttributes$MH, "XSetLineAttributes");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetModifierMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetModifierMapping$MH,"XSetModifierMapping");
-    }
-    public static int XSetModifierMapping ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetModifierMapping$MH, "XSetModifierMapping");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetPlaneMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetPlaneMask$MH,"XSetPlaneMask");
-    }
-    public static int XSetPlaneMask ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetPlaneMask$MH, "XSetPlaneMask");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetPointerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetPointerMapping$MH,"XSetPointerMapping");
-    }
-    public static int XSetPointerMapping ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetPointerMapping$MH, "XSetPointerMapping");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetScreenSaver$MH,"XSetScreenSaver");
-    }
-    public static int XSetScreenSaver ( Addressable x0,  int x1,  int x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetScreenSaver$MH, "XSetScreenSaver");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetSelectionOwner$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetSelectionOwner$MH,"XSetSelectionOwner");
-    }
-    public static int XSetSelectionOwner ( Addressable x0,  long x1,  long x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetSelectionOwner$MH, "XSetSelectionOwner");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetState$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetState$MH,"XSetState");
-    }
-    public static int XSetState ( Addressable x0,  Addressable x1,  long x2,  long x3,  int x4,  long x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetState$MH, "XSetState");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetStipple$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetStipple$MH,"XSetStipple");
-    }
-    public static int XSetStipple ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetStipple$MH, "XSetStipple");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetSubwindowMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetSubwindowMode$MH,"XSetSubwindowMode");
-    }
-    public static int XSetSubwindowMode ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetSubwindowMode$MH, "XSetSubwindowMode");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetTSOrigin$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetTSOrigin$MH,"XSetTSOrigin");
-    }
-    public static int XSetTSOrigin ( Addressable x0,  Addressable x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetTSOrigin$MH, "XSetTSOrigin");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetTile$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetTile$MH,"XSetTile");
-    }
-    public static int XSetTile ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetTile$MH, "XSetTile");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowBackground$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackground$MH,"XSetWindowBackground");
-    }
-    public static int XSetWindowBackground ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetWindowBackground$MH, "XSetWindowBackground");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowBackgroundPixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackgroundPixmap$MH,"XSetWindowBackgroundPixmap");
-    }
-    public static int XSetWindowBackgroundPixmap ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetWindowBackgroundPixmap$MH, "XSetWindowBackgroundPixmap");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowBorder$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorder$MH,"XSetWindowBorder");
-    }
-    public static int XSetWindowBorder ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetWindowBorder$MH, "XSetWindowBorder");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowBorderPixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderPixmap$MH,"XSetWindowBorderPixmap");
-    }
-    public static int XSetWindowBorderPixmap ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderPixmap$MH, "XSetWindowBorderPixmap");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowBorderWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderWidth$MH,"XSetWindowBorderWidth");
-    }
-    public static int XSetWindowBorderWidth ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderWidth$MH, "XSetWindowBorderWidth");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XSetWindowColormap$MH,"XSetWindowColormap");
-    }
-    public static int XSetWindowColormap ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XSetWindowColormap$MH, "XSetWindowColormap");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreBuffer$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreBuffer$MH,"XStoreBuffer");
-    }
-    public static int XStoreBuffer ( Addressable x0,  Addressable x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XStoreBuffer$MH, "XStoreBuffer");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreBytes$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreBytes$MH,"XStoreBytes");
-    }
-    public static int XStoreBytes ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XStoreBytes$MH, "XStoreBytes");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreColor$MH,"XStoreColor");
-    }
-    public static int XStoreColor ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XStoreColor$MH, "XStoreColor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XStoreColors$MH,"XStoreColors");
-    }
-    public static int XStoreColors ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XStoreColors$MH, "XStoreColors");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreName$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XStoreName$MH,"XStoreName");
-    }
-    public static int XStoreName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XStoreName$MH, "XStoreName");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreNamedColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XStoreNamedColor$MH,"XStoreNamedColor");
-    }
-    public static int XStoreNamedColor ( Addressable x0,  long x1,  Addressable x2,  long x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XStoreNamedColor$MH, "XStoreNamedColor");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSync$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XSync$MH,"XSync");
-    }
-    public static int XSync ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XSync$MH, "XSync");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XTextExtents$MH,"XTextExtents");
-    }
-    public static int XTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XTextExtents$MH, "XTextExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XTextExtents16$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XTextExtents16$MH,"XTextExtents16");
-    }
-    public static int XTextExtents16 ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XTextExtents16$MH, "XTextExtents16");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XTextWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XTextWidth$MH,"XTextWidth");
-    }
-    public static int XTextWidth ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XTextWidth$MH, "XTextWidth");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XTextWidth16$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XTextWidth16$MH,"XTextWidth16");
-    }
-    public static int XTextWidth16 ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XTextWidth16$MH, "XTextWidth16");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XTranslateCoordinates$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XTranslateCoordinates$MH,"XTranslateCoordinates");
-    }
-    public static int XTranslateCoordinates ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XTranslateCoordinates$MH, "XTranslateCoordinates");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUndefineCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUndefineCursor$MH,"XUndefineCursor");
-    }
-    public static int XUndefineCursor ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XUndefineCursor$MH, "XUndefineCursor");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUngrabButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUngrabButton$MH,"XUngrabButton");
-    }
-    public static int XUngrabButton ( Addressable x0,  int x1,  int x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XUngrabButton$MH, "XUngrabButton");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUngrabKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUngrabKey$MH,"XUngrabKey");
-    }
-    public static int XUngrabKey ( Addressable x0,  int x1,  int x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XUngrabKey$MH, "XUngrabKey");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUngrabKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUngrabKeyboard$MH,"XUngrabKeyboard");
-    }
-    public static int XUngrabKeyboard ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUngrabKeyboard$MH, "XUngrabKeyboard");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUngrabPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUngrabPointer$MH,"XUngrabPointer");
-    }
-    public static int XUngrabPointer ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUngrabPointer$MH, "XUngrabPointer");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUngrabServer$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUngrabServer$MH,"XUngrabServer");
-    }
-    public static int XUngrabServer ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUngrabServer$MH, "XUngrabServer");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUninstallColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUninstallColormap$MH,"XUninstallColormap");
-    }
-    public static int XUninstallColormap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUninstallColormap$MH, "XUninstallColormap");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnloadFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUnloadFont$MH,"XUnloadFont");
-    }
-    public static int XUnloadFont ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUnloadFont$MH, "XUnloadFont");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnmapSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUnmapSubwindows$MH,"XUnmapSubwindows");
-    }
-    public static int XUnmapSubwindows ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUnmapSubwindows$MH, "XUnmapSubwindows");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnmapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XUnmapWindow$MH,"XUnmapWindow");
-    }
-    public static int XUnmapWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XUnmapWindow$MH, "XUnmapWindow");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XVendorRelease$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XVendorRelease$MH,"XVendorRelease");
-    }
-    public static int XVendorRelease ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XVendorRelease$MH, "XVendorRelease");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWarpPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWarpPointer$MH,"XWarpPointer");
-    }
-    public static int XWarpPointer ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWarpPointer$MH, "XWarpPointer");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWidthMMOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWidthMMOfScreen$MH,"XWidthMMOfScreen");
-    }
-    public static int XWidthMMOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWidthMMOfScreen$MH, "XWidthMMOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWidthOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWidthOfScreen$MH,"XWidthOfScreen");
-    }
-    public static int XWidthOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWidthOfScreen$MH, "XWidthOfScreen");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWindowEvent$MH,"XWindowEvent");
-    }
-    public static int XWindowEvent ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWindowEvent$MH, "XWindowEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWriteBitmapFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XWriteBitmapFile$MH,"XWriteBitmapFile");
-    }
-    public static int XWriteBitmapFile ( Addressable x0,  Addressable x1,  long x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XWriteBitmapFile$MH, "XWriteBitmapFile");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSupportsLocale$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XSupportsLocale$MH,"XSupportsLocale");
-    }
-    public static int XSupportsLocale () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XSupportsLocale$MH, "XSupportsLocale");
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetLocaleModifiers$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XSetLocaleModifiers$MH,"XSetLocaleModifiers");
-    }
-    public static MemoryAddress XSetLocaleModifiers ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XSetLocaleModifiers$MH, "XSetLocaleModifiers");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XOpenOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XOpenOM$MH,"XOpenOM");
-    }
-    public static MemoryAddress XOpenOM ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XOpenOM$MH, "XOpenOM");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCloseOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XCloseOM$MH,"XCloseOM");
-    }
-    public static int XCloseOM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XCloseOM$MH, "XCloseOM");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetOMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XSetOMValues$MH,"XSetOMValues");
-    }
-    public static MemoryAddress XSetOMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XSetOMValues$MH, "XSetOMValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetOMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XGetOMValues$MH,"XGetOMValues");
-    }
-    public static MemoryAddress XGetOMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XGetOMValues$MH, "XGetOMValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayOfOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XDisplayOfOM$MH,"XDisplayOfOM");
-    }
-    public static MemoryAddress XDisplayOfOM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XDisplayOfOM$MH, "XDisplayOfOM");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLocaleOfOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XLocaleOfOM$MH,"XLocaleOfOM");
-    }
-    public static MemoryAddress XLocaleOfOM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XLocaleOfOM$MH, "XLocaleOfOM");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XCreateOC$MH,"XCreateOC");
-    }
-    public static MemoryAddress XCreateOC ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XCreateOC$MH, "XCreateOC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDestroyOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XDestroyOC$MH,"XDestroyOC");
-    }
-    public static void XDestroyOC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XDestroyOC$MH, "XDestroyOC");
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XOMOfOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XOMOfOC$MH,"XOMOfOC");
-    }
-    public static MemoryAddress XOMOfOC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XOMOfOC$MH, "XOMOfOC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XSetOCValues$MH,"XSetOCValues");
-    }
-    public static MemoryAddress XSetOCValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XSetOCValues$MH, "XSetOCValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XGetOCValues$MH,"XGetOCValues");
-    }
-    public static MemoryAddress XGetOCValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XGetOCValues$MH, "XGetOCValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XCreateFontSet$MH,"XCreateFontSet");
-    }
-    public static MemoryAddress XCreateFontSet ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XCreateFontSet$MH, "XCreateFontSet");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XFreeFontSet$MH,"XFreeFontSet");
-    }
-    public static void XFreeFontSet ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XFreeFontSet$MH, "XFreeFontSet");
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFontsOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XFontsOfFontSet$MH,"XFontsOfFontSet");
-    }
-    public static int XFontsOfFontSet ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XFontsOfFontSet$MH, "XFontsOfFontSet");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBaseFontNameListOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XBaseFontNameListOfFontSet$MH,"XBaseFontNameListOfFontSet");
-    }
-    public static MemoryAddress XBaseFontNameListOfFontSet ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XBaseFontNameListOfFontSet$MH, "XBaseFontNameListOfFontSet");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLocaleOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XLocaleOfFontSet$MH,"XLocaleOfFontSet");
-    }
-    public static MemoryAddress XLocaleOfFontSet ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XLocaleOfFontSet$MH, "XLocaleOfFontSet");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XContextDependentDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XContextDependentDrawing$MH,"XContextDependentDrawing");
-    }
-    public static int XContextDependentDrawing ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XContextDependentDrawing$MH, "XContextDependentDrawing");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDirectionalDependentDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XDirectionalDependentDrawing$MH,"XDirectionalDependentDrawing");
-    }
-    public static int XDirectionalDependentDrawing ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XDirectionalDependentDrawing$MH, "XDirectionalDependentDrawing");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XContextualDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XContextualDrawing$MH,"XContextualDrawing");
-    }
-    public static int XContextualDrawing ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XContextualDrawing$MH, "XContextualDrawing");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XExtentsOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XExtentsOfFontSet$MH,"XExtentsOfFontSet");
-    }
-    public static MemoryAddress XExtentsOfFontSet ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XExtentsOfFontSet$MH, "XExtentsOfFontSet");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbTextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XmbTextEscapement$MH,"XmbTextEscapement");
-    }
-    public static int XmbTextEscapement ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XmbTextEscapement$MH, "XmbTextEscapement");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcTextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XwcTextEscapement$MH,"XwcTextEscapement");
-    }
-    public static int XwcTextEscapement ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XwcTextEscapement$MH, "XwcTextEscapement");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8TextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.Xutf8TextEscapement$MH,"Xutf8TextEscapement");
-    }
-    public static int Xutf8TextEscapement ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.Xutf8TextEscapement$MH, "Xutf8TextEscapement");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XmbTextExtents$MH,"XmbTextExtents");
-    }
-    public static int XmbTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XmbTextExtents$MH, "XmbTextExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XwcTextExtents$MH,"XwcTextExtents");
-    }
-    public static int XwcTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XwcTextExtents$MH, "XwcTextExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8TextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.Xutf8TextExtents$MH,"Xutf8TextExtents");
-    }
-    public static int Xutf8TextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.Xutf8TextExtents$MH, "Xutf8TextExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbTextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XmbTextPerCharExtents$MH,"XmbTextPerCharExtents");
-    }
-    public static int XmbTextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XmbTextPerCharExtents$MH, "XmbTextPerCharExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcTextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XwcTextPerCharExtents$MH,"XwcTextPerCharExtents");
-    }
-    public static int XwcTextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XwcTextPerCharExtents$MH, "XwcTextPerCharExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8TextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.Xutf8TextPerCharExtents$MH,"Xutf8TextPerCharExtents");
-    }
-    public static int Xutf8TextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.Xutf8TextPerCharExtents$MH, "Xutf8TextPerCharExtents");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XmbDrawText$MH,"XmbDrawText");
-    }
-    public static void XmbDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XmbDrawText$MH, "XmbDrawText");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XwcDrawText$MH,"XwcDrawText");
-    }
-    public static void XwcDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XwcDrawText$MH, "XwcDrawText");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8DrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.Xutf8DrawText$MH,"Xutf8DrawText");
-    }
-    public static void Xutf8DrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.Xutf8DrawText$MH, "Xutf8DrawText");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XmbDrawString$MH,"XmbDrawString");
-    }
-    public static void XmbDrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XmbDrawString$MH, "XmbDrawString");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XwcDrawString$MH,"XwcDrawString");
-    }
-    public static void XwcDrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XwcDrawString$MH, "XwcDrawString");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8DrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.Xutf8DrawString$MH,"Xutf8DrawString");
-    }
-    public static void Xutf8DrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.Xutf8DrawString$MH, "Xutf8DrawString");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XmbDrawImageString$MH,"XmbDrawImageString");
-    }
-    public static void XmbDrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XmbDrawImageString$MH, "XmbDrawImageString");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XwcDrawImageString$MH,"XwcDrawImageString");
-    }
-    public static void XwcDrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XwcDrawImageString$MH, "XwcDrawImageString");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8DrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.Xutf8DrawImageString$MH,"Xutf8DrawImageString");
-    }
-    public static void Xutf8DrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.Xutf8DrawImageString$MH, "Xutf8DrawImageString");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XOpenIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XOpenIM$MH,"XOpenIM");
-    }
-    public static MemoryAddress XOpenIM ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XOpenIM$MH, "XOpenIM");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCloseIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XCloseIM$MH,"XCloseIM");
-    }
-    public static int XCloseIM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XCloseIM$MH, "XCloseIM");
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetIMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XGetIMValues$MH,"XGetIMValues");
-    }
-    public static MemoryAddress XGetIMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XGetIMValues$MH, "XGetIMValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetIMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XSetIMValues$MH,"XSetIMValues");
-    }
-    public static MemoryAddress XSetIMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XSetIMValues$MH, "XSetIMValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayOfIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XDisplayOfIM$MH,"XDisplayOfIM");
-    }
-    public static MemoryAddress XDisplayOfIM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XDisplayOfIM$MH, "XDisplayOfIM");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLocaleOfIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XLocaleOfIM$MH,"XLocaleOfIM");
-    }
-    public static MemoryAddress XLocaleOfIM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XLocaleOfIM$MH, "XLocaleOfIM");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XCreateIC$MH,"XCreateIC");
-    }
-    public static MemoryAddress XCreateIC ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XCreateIC$MH, "XCreateIC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDestroyIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XDestroyIC$MH,"XDestroyIC");
-    }
-    public static void XDestroyIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XDestroyIC$MH, "XDestroyIC");
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetICFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XSetICFocus$MH,"XSetICFocus");
-    }
-    public static void XSetICFocus ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XSetICFocus$MH, "XSetICFocus");
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnsetICFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XUnsetICFocus$MH,"XUnsetICFocus");
-    }
-    public static void XUnsetICFocus ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XUnsetICFocus$MH, "XUnsetICFocus");
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XwcResetIC$MH,"XwcResetIC");
-    }
-    public static MemoryAddress XwcResetIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XwcResetIC$MH, "XwcResetIC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XmbResetIC$MH,"XmbResetIC");
-    }
-    public static MemoryAddress XmbResetIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XmbResetIC$MH, "XmbResetIC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8ResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.Xutf8ResetIC$MH,"Xutf8ResetIC");
-    }
-    public static MemoryAddress Xutf8ResetIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.Xutf8ResetIC$MH, "Xutf8ResetIC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XSetICValues$MH,"XSetICValues");
-    }
-    public static MemoryAddress XSetICValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XSetICValues$MH, "XSetICValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XGetICValues$MH,"XGetICValues");
-    }
-    public static MemoryAddress XGetICValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XGetICValues$MH, "XGetICValues");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XIMOfIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XIMOfIC$MH,"XIMOfIC");
-    }
-    public static MemoryAddress XIMOfIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XIMOfIC$MH, "XIMOfIC");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFilterEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XFilterEvent$MH,"XFilterEvent");
-    }
-    public static int XFilterEvent ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XFilterEvent$MH, "XFilterEvent");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XmbLookupString$MH,"XmbLookupString");
-    }
-    public static int XmbLookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XmbLookupString$MH, "XmbLookupString");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XwcLookupString$MH,"XwcLookupString");
-    }
-    public static int XwcLookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XwcLookupString$MH, "XwcLookupString");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8LookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.Xutf8LookupString$MH,"Xutf8LookupString");
-    }
-    public static int Xutf8LookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.Xutf8LookupString$MH, "Xutf8LookupString");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XVaCreateNestedList$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XVaCreateNestedList$MH,"XVaCreateNestedList");
-    }
-    public static MemoryAddress XVaCreateNestedList ( int x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.XVaCreateNestedList$MH, "XVaCreateNestedList");
-        try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRegisterIMInstantiateCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XRegisterIMInstantiateCallback$MH,"XRegisterIMInstantiateCallback");
-    }
-    public static int XRegisterIMInstantiateCallback ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.XRegisterIMInstantiateCallback$MH, "XRegisterIMInstantiateCallback");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnregisterIMInstantiateCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XUnregisterIMInstantiateCallback$MH,"XUnregisterIMInstantiateCallback");
-    }
-    public static int XUnregisterIMInstantiateCallback ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.XUnregisterIMInstantiateCallback$MH, "XUnregisterIMInstantiateCallback");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInternalConnectionNumbers$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XInternalConnectionNumbers$MH,"XInternalConnectionNumbers");
-    }
-    public static int XInternalConnectionNumbers ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XInternalConnectionNumbers$MH, "XInternalConnectionNumbers");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XProcessInternalConnection$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XProcessInternalConnection$MH,"XProcessInternalConnection");
-    }
-    public static void XProcessInternalConnection ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XProcessInternalConnection$MH, "XProcessInternalConnection");
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddConnectionWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XAddConnectionWatch$MH,"XAddConnectionWatch");
-    }
-    public static int XAddConnectionWatch ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XAddConnectionWatch$MH, "XAddConnectionWatch");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRemoveConnectionWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XRemoveConnectionWatch$MH,"XRemoveConnectionWatch");
-    }
-    public static void XRemoveConnectionWatch ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XRemoveConnectionWatch$MH, "XRemoveConnectionWatch");
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetAuthorization$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XSetAuthorization$MH,"XSetAuthorization");
-    }
-    public static void XSetAuthorization ( Addressable x0,  int x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XSetAuthorization$MH, "XSetAuthorization");
-        try {
-            mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle _Xmbtowc$MH() {
-        return RuntimeHelper.requireNonNull(constants$72._Xmbtowc$MH,"_Xmbtowc");
-    }
-    public static int _Xmbtowc ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72._Xmbtowc$MH, "_Xmbtowc");
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle _Xwctomb$MH() {
-        return RuntimeHelper.requireNonNull(constants$73._Xwctomb$MH,"_Xwctomb");
-    }
-    public static int _Xwctomb ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73._Xwctomb$MH, "_Xwctomb");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetEventData$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XGetEventData$MH,"XGetEventData");
-    }
-    public static int XGetEventData ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73.XGetEventData$MH, "XGetEventData");
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeEventData$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XFreeEventData$MH,"XFreeEventData");
-    }
-    public static void XFreeEventData ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73.XFreeEventData$MH, "XFreeEventData");
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static long _POSIX_C_SOURCE() {
-        return 200809L;
-    }
-    public static long __STDC_ISO_10646__() {
-        return 201706L;
-    }
-    public static int __TIMESIZE() {
-        return (int)64L;
-    }
-    public static int __BYTE_ORDER() {
-        return (int)1234L;
-    }
-    public static int __FLOAT_WORD_ORDER() {
-        return (int)1234L;
-    }
-    public static int LITTLE_ENDIAN() {
-        return (int)1234L;
-    }
-    public static int BIG_ENDIAN() {
-        return (int)4321L;
-    }
-    public static int PDP_ENDIAN() {
-        return (int)3412L;
-    }
-    public static int BYTE_ORDER() {
-        return (int)1234L;
-    }
-    public static MemorySegment __FD_ZERO_STOS() {
-        return constants$73.__FD_ZERO_STOS$SEGMENT;
-    }
-    public static long _SIGSET_NWORDS() {
-        return 16L;
-    }
-    public static int __NFDBITS() {
-        return (int)64L;
-    }
-    public static int FD_SETSIZE() {
-        return (int)1024L;
-    }
-    public static int NFDBITS() {
-        return (int)64L;
-    }
-    public static int __PTHREAD_RWLOCK_ELISION_EXTRA() {
-        return (int)0L;
-    }
-    public static long None() {
-        return 0L;
-    }
-    public static long ParentRelative() {
-        return 1L;
-    }
-    public static long CopyFromParent() {
-        return 0L;
-    }
-    public static long PointerWindow() {
-        return 0L;
-    }
-    public static long InputFocus() {
-        return 1L;
-    }
-    public static long PointerRoot() {
-        return 1L;
-    }
-    public static long AnyPropertyType() {
-        return 0L;
-    }
-    public static long AnyKey() {
-        return 0L;
-    }
-    public static long AnyButton() {
-        return 0L;
-    }
-    public static long AllTemporary() {
-        return 0L;
-    }
-    public static long CurrentTime() {
-        return 0L;
-    }
-    public static long NoSymbol() {
-        return 0L;
-    }
-    public static long NoEventMask() {
-        return 0L;
-    }
-    public static long KeyPressMask() {
-        return 1L;
-    }
-    public static long KeyReleaseMask() {
-        return 2L;
-    }
-    public static long ButtonPressMask() {
-        return 4L;
-    }
-    public static long ButtonReleaseMask() {
-        return 8L;
-    }
-    public static long EnterWindowMask() {
-        return 16L;
-    }
-    public static long LeaveWindowMask() {
-        return 32L;
-    }
-    public static long PointerMotionMask() {
-        return 64L;
-    }
-    public static long PointerMotionHintMask() {
-        return 128L;
-    }
-    public static long Button1MotionMask() {
-        return 256L;
-    }
-    public static long Button2MotionMask() {
-        return 512L;
-    }
-    public static long Button3MotionMask() {
-        return 1024L;
-    }
-    public static long Button4MotionMask() {
-        return 2048L;
-    }
-    public static long Button5MotionMask() {
-        return 4096L;
-    }
-    public static long ButtonMotionMask() {
-        return 8192L;
-    }
-    public static long KeymapStateMask() {
-        return 16384L;
-    }
-    public static long ExposureMask() {
-        return 32768L;
-    }
-    public static long VisibilityChangeMask() {
-        return 65536L;
-    }
-    public static long StructureNotifyMask() {
-        return 131072L;
-    }
-    public static long ResizeRedirectMask() {
-        return 262144L;
-    }
-    public static long SubstructureNotifyMask() {
-        return 524288L;
-    }
-    public static long SubstructureRedirectMask() {
-        return 1048576L;
-    }
-    public static long FocusChangeMask() {
-        return 2097152L;
-    }
-    public static long PropertyChangeMask() {
-        return 4194304L;
-    }
-    public static long ColormapChangeMask() {
-        return 8388608L;
-    }
-    public static long OwnerGrabButtonMask() {
-        return 16777216L;
-    }
-    public static int ShiftMask() {
-        return (int)1L;
-    }
-    public static int LockMask() {
-        return (int)2L;
-    }
-    public static int ControlMask() {
-        return (int)4L;
-    }
-    public static int Mod1Mask() {
-        return (int)8L;
-    }
-    public static int Mod2Mask() {
-        return (int)16L;
-    }
-    public static int Mod3Mask() {
+    public static int XK_VoidSymbol() {
+        return (int)16777215L;
+    }
+    public static int XK_BackSpace() {
+        return (int)65288L;
+    }
+    public static int XK_Tab() {
+        return (int)65289L;
+    }
+    public static int XK_Linefeed() {
+        return (int)65290L;
+    }
+    public static int XK_Clear() {
+        return (int)65291L;
+    }
+    public static int XK_Return() {
+        return (int)65293L;
+    }
+    public static int XK_Pause() {
+        return (int)65299L;
+    }
+    public static int XK_Scroll_Lock() {
+        return (int)65300L;
+    }
+    public static int XK_Sys_Req() {
+        return (int)65301L;
+    }
+    public static int XK_Escape() {
+        return (int)65307L;
+    }
+    public static int XK_Delete() {
+        return (int)65535L;
+    }
+    public static int XK_Multi_key() {
+        return (int)65312L;
+    }
+    public static int XK_Codeinput() {
+        return (int)65335L;
+    }
+    public static int XK_SingleCandidate() {
+        return (int)65340L;
+    }
+    public static int XK_MultipleCandidate() {
+        return (int)65341L;
+    }
+    public static int XK_PreviousCandidate() {
+        return (int)65342L;
+    }
+    public static int XK_Kanji() {
+        return (int)65313L;
+    }
+    public static int XK_Muhenkan() {
+        return (int)65314L;
+    }
+    public static int XK_Henkan_Mode() {
+        return (int)65315L;
+    }
+    public static int XK_Henkan() {
+        return (int)65315L;
+    }
+    public static int XK_Romaji() {
+        return (int)65316L;
+    }
+    public static int XK_Hiragana() {
+        return (int)65317L;
+    }
+    public static int XK_Katakana() {
+        return (int)65318L;
+    }
+    public static int XK_Hiragana_Katakana() {
+        return (int)65319L;
+    }
+    public static int XK_Zenkaku() {
+        return (int)65320L;
+    }
+    public static int XK_Hankaku() {
+        return (int)65321L;
+    }
+    public static int XK_Zenkaku_Hankaku() {
+        return (int)65322L;
+    }
+    public static int XK_Touroku() {
+        return (int)65323L;
+    }
+    public static int XK_Massyo() {
+        return (int)65324L;
+    }
+    public static int XK_Kana_Lock() {
+        return (int)65325L;
+    }
+    public static int XK_Kana_Shift() {
+        return (int)65326L;
+    }
+    public static int XK_Eisu_Shift() {
+        return (int)65327L;
+    }
+    public static int XK_Eisu_toggle() {
+        return (int)65328L;
+    }
+    public static int XK_Kanji_Bangou() {
+        return (int)65335L;
+    }
+    public static int XK_Zen_Koho() {
+        return (int)65341L;
+    }
+    public static int XK_Mae_Koho() {
+        return (int)65342L;
+    }
+    public static int XK_Home() {
+        return (int)65360L;
+    }
+    public static int XK_Left() {
+        return (int)65361L;
+    }
+    public static int XK_Up() {
+        return (int)65362L;
+    }
+    public static int XK_Right() {
+        return (int)65363L;
+    }
+    public static int XK_Down() {
+        return (int)65364L;
+    }
+    public static int XK_Prior() {
+        return (int)65365L;
+    }
+    public static int XK_Page_Up() {
+        return (int)65365L;
+    }
+    public static int XK_Next() {
+        return (int)65366L;
+    }
+    public static int XK_Page_Down() {
+        return (int)65366L;
+    }
+    public static int XK_End() {
+        return (int)65367L;
+    }
+    public static int XK_Begin() {
+        return (int)65368L;
+    }
+    public static int XK_Select() {
+        return (int)65376L;
+    }
+    public static int XK_Print() {
+        return (int)65377L;
+    }
+    public static int XK_Execute() {
+        return (int)65378L;
+    }
+    public static int XK_Insert() {
+        return (int)65379L;
+    }
+    public static int XK_Undo() {
+        return (int)65381L;
+    }
+    public static int XK_Redo() {
+        return (int)65382L;
+    }
+    public static int XK_Menu() {
+        return (int)65383L;
+    }
+    public static int XK_Find() {
+        return (int)65384L;
+    }
+    public static int XK_Cancel() {
+        return (int)65385L;
+    }
+    public static int XK_Help() {
+        return (int)65386L;
+    }
+    public static int XK_Break() {
+        return (int)65387L;
+    }
+    public static int XK_Mode_switch() {
+        return (int)65406L;
+    }
+    public static int XK_script_switch() {
+        return (int)65406L;
+    }
+    public static int XK_Num_Lock() {
+        return (int)65407L;
+    }
+    public static int XK_KP_Space() {
+        return (int)65408L;
+    }
+    public static int XK_KP_Tab() {
+        return (int)65417L;
+    }
+    public static int XK_KP_Enter() {
+        return (int)65421L;
+    }
+    public static int XK_KP_F1() {
+        return (int)65425L;
+    }
+    public static int XK_KP_F2() {
+        return (int)65426L;
+    }
+    public static int XK_KP_F3() {
+        return (int)65427L;
+    }
+    public static int XK_KP_F4() {
+        return (int)65428L;
+    }
+    public static int XK_KP_Home() {
+        return (int)65429L;
+    }
+    public static int XK_KP_Left() {
+        return (int)65430L;
+    }
+    public static int XK_KP_Up() {
+        return (int)65431L;
+    }
+    public static int XK_KP_Right() {
+        return (int)65432L;
+    }
+    public static int XK_KP_Down() {
+        return (int)65433L;
+    }
+    public static int XK_KP_Prior() {
+        return (int)65434L;
+    }
+    public static int XK_KP_Page_Up() {
+        return (int)65434L;
+    }
+    public static int XK_KP_Next() {
+        return (int)65435L;
+    }
+    public static int XK_KP_Page_Down() {
+        return (int)65435L;
+    }
+    public static int XK_KP_End() {
+        return (int)65436L;
+    }
+    public static int XK_KP_Begin() {
+        return (int)65437L;
+    }
+    public static int XK_KP_Insert() {
+        return (int)65438L;
+    }
+    public static int XK_KP_Delete() {
+        return (int)65439L;
+    }
+    public static int XK_KP_Equal() {
+        return (int)65469L;
+    }
+    public static int XK_KP_Multiply() {
+        return (int)65450L;
+    }
+    public static int XK_KP_Add() {
+        return (int)65451L;
+    }
+    public static int XK_KP_Separator() {
+        return (int)65452L;
+    }
+    public static int XK_KP_Subtract() {
+        return (int)65453L;
+    }
+    public static int XK_KP_Decimal() {
+        return (int)65454L;
+    }
+    public static int XK_KP_Divide() {
+        return (int)65455L;
+    }
+    public static int XK_KP_0() {
+        return (int)65456L;
+    }
+    public static int XK_KP_1() {
+        return (int)65457L;
+    }
+    public static int XK_KP_2() {
+        return (int)65458L;
+    }
+    public static int XK_KP_3() {
+        return (int)65459L;
+    }
+    public static int XK_KP_4() {
+        return (int)65460L;
+    }
+    public static int XK_KP_5() {
+        return (int)65461L;
+    }
+    public static int XK_KP_6() {
+        return (int)65462L;
+    }
+    public static int XK_KP_7() {
+        return (int)65463L;
+    }
+    public static int XK_KP_8() {
+        return (int)65464L;
+    }
+    public static int XK_KP_9() {
+        return (int)65465L;
+    }
+    public static int XK_F1() {
+        return (int)65470L;
+    }
+    public static int XK_F2() {
+        return (int)65471L;
+    }
+    public static int XK_F3() {
+        return (int)65472L;
+    }
+    public static int XK_F4() {
+        return (int)65473L;
+    }
+    public static int XK_F5() {
+        return (int)65474L;
+    }
+    public static int XK_F6() {
+        return (int)65475L;
+    }
+    public static int XK_F7() {
+        return (int)65476L;
+    }
+    public static int XK_F8() {
+        return (int)65477L;
+    }
+    public static int XK_F9() {
+        return (int)65478L;
+    }
+    public static int XK_F10() {
+        return (int)65479L;
+    }
+    public static int XK_F11() {
+        return (int)65480L;
+    }
+    public static int XK_L1() {
+        return (int)65480L;
+    }
+    public static int XK_F12() {
+        return (int)65481L;
+    }
+    public static int XK_L2() {
+        return (int)65481L;
+    }
+    public static int XK_F13() {
+        return (int)65482L;
+    }
+    public static int XK_L3() {
+        return (int)65482L;
+    }
+    public static int XK_F14() {
+        return (int)65483L;
+    }
+    public static int XK_L4() {
+        return (int)65483L;
+    }
+    public static int XK_F15() {
+        return (int)65484L;
+    }
+    public static int XK_L5() {
+        return (int)65484L;
+    }
+    public static int XK_F16() {
+        return (int)65485L;
+    }
+    public static int XK_L6() {
+        return (int)65485L;
+    }
+    public static int XK_F17() {
+        return (int)65486L;
+    }
+    public static int XK_L7() {
+        return (int)65486L;
+    }
+    public static int XK_F18() {
+        return (int)65487L;
+    }
+    public static int XK_L8() {
+        return (int)65487L;
+    }
+    public static int XK_F19() {
+        return (int)65488L;
+    }
+    public static int XK_L9() {
+        return (int)65488L;
+    }
+    public static int XK_F20() {
+        return (int)65489L;
+    }
+    public static int XK_L10() {
+        return (int)65489L;
+    }
+    public static int XK_F21() {
+        return (int)65490L;
+    }
+    public static int XK_R1() {
+        return (int)65490L;
+    }
+    public static int XK_F22() {
+        return (int)65491L;
+    }
+    public static int XK_R2() {
+        return (int)65491L;
+    }
+    public static int XK_F23() {
+        return (int)65492L;
+    }
+    public static int XK_R3() {
+        return (int)65492L;
+    }
+    public static int XK_F24() {
+        return (int)65493L;
+    }
+    public static int XK_R4() {
+        return (int)65493L;
+    }
+    public static int XK_F25() {
+        return (int)65494L;
+    }
+    public static int XK_R5() {
+        return (int)65494L;
+    }
+    public static int XK_F26() {
+        return (int)65495L;
+    }
+    public static int XK_R6() {
+        return (int)65495L;
+    }
+    public static int XK_F27() {
+        return (int)65496L;
+    }
+    public static int XK_R7() {
+        return (int)65496L;
+    }
+    public static int XK_F28() {
+        return (int)65497L;
+    }
+    public static int XK_R8() {
+        return (int)65497L;
+    }
+    public static int XK_F29() {
+        return (int)65498L;
+    }
+    public static int XK_R9() {
+        return (int)65498L;
+    }
+    public static int XK_F30() {
+        return (int)65499L;
+    }
+    public static int XK_R10() {
+        return (int)65499L;
+    }
+    public static int XK_F31() {
+        return (int)65500L;
+    }
+    public static int XK_R11() {
+        return (int)65500L;
+    }
+    public static int XK_F32() {
+        return (int)65501L;
+    }
+    public static int XK_R12() {
+        return (int)65501L;
+    }
+    public static int XK_F33() {
+        return (int)65502L;
+    }
+    public static int XK_R13() {
+        return (int)65502L;
+    }
+    public static int XK_F34() {
+        return (int)65503L;
+    }
+    public static int XK_R14() {
+        return (int)65503L;
+    }
+    public static int XK_F35() {
+        return (int)65504L;
+    }
+    public static int XK_R15() {
+        return (int)65504L;
+    }
+    public static int XK_Shift_L() {
+        return (int)65505L;
+    }
+    public static int XK_Shift_R() {
+        return (int)65506L;
+    }
+    public static int XK_Control_L() {
+        return (int)65507L;
+    }
+    public static int XK_Control_R() {
+        return (int)65508L;
+    }
+    public static int XK_Caps_Lock() {
+        return (int)65509L;
+    }
+    public static int XK_Shift_Lock() {
+        return (int)65510L;
+    }
+    public static int XK_Meta_L() {
+        return (int)65511L;
+    }
+    public static int XK_Meta_R() {
+        return (int)65512L;
+    }
+    public static int XK_Alt_L() {
+        return (int)65513L;
+    }
+    public static int XK_Alt_R() {
+        return (int)65514L;
+    }
+    public static int XK_Super_L() {
+        return (int)65515L;
+    }
+    public static int XK_Super_R() {
+        return (int)65516L;
+    }
+    public static int XK_Hyper_L() {
+        return (int)65517L;
+    }
+    public static int XK_Hyper_R() {
+        return (int)65518L;
+    }
+    public static int XK_ISO_Lock() {
+        return (int)65025L;
+    }
+    public static int XK_ISO_Level2_Latch() {
+        return (int)65026L;
+    }
+    public static int XK_ISO_Level3_Shift() {
+        return (int)65027L;
+    }
+    public static int XK_ISO_Level3_Latch() {
+        return (int)65028L;
+    }
+    public static int XK_ISO_Level3_Lock() {
+        return (int)65029L;
+    }
+    public static int XK_ISO_Level5_Shift() {
+        return (int)65041L;
+    }
+    public static int XK_ISO_Level5_Latch() {
+        return (int)65042L;
+    }
+    public static int XK_ISO_Level5_Lock() {
+        return (int)65043L;
+    }
+    public static int XK_ISO_Group_Shift() {
+        return (int)65406L;
+    }
+    public static int XK_ISO_Group_Latch() {
+        return (int)65030L;
+    }
+    public static int XK_ISO_Group_Lock() {
+        return (int)65031L;
+    }
+    public static int XK_ISO_Next_Group() {
+        return (int)65032L;
+    }
+    public static int XK_ISO_Next_Group_Lock() {
+        return (int)65033L;
+    }
+    public static int XK_ISO_Prev_Group() {
+        return (int)65034L;
+    }
+    public static int XK_ISO_Prev_Group_Lock() {
+        return (int)65035L;
+    }
+    public static int XK_ISO_First_Group() {
+        return (int)65036L;
+    }
+    public static int XK_ISO_First_Group_Lock() {
+        return (int)65037L;
+    }
+    public static int XK_ISO_Last_Group() {
+        return (int)65038L;
+    }
+    public static int XK_ISO_Last_Group_Lock() {
+        return (int)65039L;
+    }
+    public static int XK_ISO_Left_Tab() {
+        return (int)65056L;
+    }
+    public static int XK_ISO_Move_Line_Up() {
+        return (int)65057L;
+    }
+    public static int XK_ISO_Move_Line_Down() {
+        return (int)65058L;
+    }
+    public static int XK_ISO_Partial_Line_Up() {
+        return (int)65059L;
+    }
+    public static int XK_ISO_Partial_Line_Down() {
+        return (int)65060L;
+    }
+    public static int XK_ISO_Partial_Space_Left() {
+        return (int)65061L;
+    }
+    public static int XK_ISO_Partial_Space_Right() {
+        return (int)65062L;
+    }
+    public static int XK_ISO_Set_Margin_Left() {
+        return (int)65063L;
+    }
+    public static int XK_ISO_Set_Margin_Right() {
+        return (int)65064L;
+    }
+    public static int XK_ISO_Release_Margin_Left() {
+        return (int)65065L;
+    }
+    public static int XK_ISO_Release_Margin_Right() {
+        return (int)65066L;
+    }
+    public static int XK_ISO_Release_Both_Margins() {
+        return (int)65067L;
+    }
+    public static int XK_ISO_Fast_Cursor_Left() {
+        return (int)65068L;
+    }
+    public static int XK_ISO_Fast_Cursor_Right() {
+        return (int)65069L;
+    }
+    public static int XK_ISO_Fast_Cursor_Up() {
+        return (int)65070L;
+    }
+    public static int XK_ISO_Fast_Cursor_Down() {
+        return (int)65071L;
+    }
+    public static int XK_ISO_Continuous_Underline() {
+        return (int)65072L;
+    }
+    public static int XK_ISO_Discontinuous_Underline() {
+        return (int)65073L;
+    }
+    public static int XK_ISO_Emphasize() {
+        return (int)65074L;
+    }
+    public static int XK_ISO_Center_Object() {
+        return (int)65075L;
+    }
+    public static int XK_ISO_Enter() {
+        return (int)65076L;
+    }
+    public static int XK_dead_grave() {
+        return (int)65104L;
+    }
+    public static int XK_dead_acute() {
+        return (int)65105L;
+    }
+    public static int XK_dead_circumflex() {
+        return (int)65106L;
+    }
+    public static int XK_dead_tilde() {
+        return (int)65107L;
+    }
+    public static int XK_dead_perispomeni() {
+        return (int)65107L;
+    }
+    public static int XK_dead_macron() {
+        return (int)65108L;
+    }
+    public static int XK_dead_breve() {
+        return (int)65109L;
+    }
+    public static int XK_dead_abovedot() {
+        return (int)65110L;
+    }
+    public static int XK_dead_diaeresis() {
+        return (int)65111L;
+    }
+    public static int XK_dead_abovering() {
+        return (int)65112L;
+    }
+    public static int XK_dead_doubleacute() {
+        return (int)65113L;
+    }
+    public static int XK_dead_caron() {
+        return (int)65114L;
+    }
+    public static int XK_dead_cedilla() {
+        return (int)65115L;
+    }
+    public static int XK_dead_ogonek() {
+        return (int)65116L;
+    }
+    public static int XK_dead_iota() {
+        return (int)65117L;
+    }
+    public static int XK_dead_voiced_sound() {
+        return (int)65118L;
+    }
+    public static int XK_dead_semivoiced_sound() {
+        return (int)65119L;
+    }
+    public static int XK_dead_belowdot() {
+        return (int)65120L;
+    }
+    public static int XK_dead_hook() {
+        return (int)65121L;
+    }
+    public static int XK_dead_horn() {
+        return (int)65122L;
+    }
+    public static int XK_dead_stroke() {
+        return (int)65123L;
+    }
+    public static int XK_dead_abovecomma() {
+        return (int)65124L;
+    }
+    public static int XK_dead_psili() {
+        return (int)65124L;
+    }
+    public static int XK_dead_abovereversedcomma() {
+        return (int)65125L;
+    }
+    public static int XK_dead_dasia() {
+        return (int)65125L;
+    }
+    public static int XK_dead_doublegrave() {
+        return (int)65126L;
+    }
+    public static int XK_dead_belowring() {
+        return (int)65127L;
+    }
+    public static int XK_dead_belowmacron() {
+        return (int)65128L;
+    }
+    public static int XK_dead_belowcircumflex() {
+        return (int)65129L;
+    }
+    public static int XK_dead_belowtilde() {
+        return (int)65130L;
+    }
+    public static int XK_dead_belowbreve() {
+        return (int)65131L;
+    }
+    public static int XK_dead_belowdiaeresis() {
+        return (int)65132L;
+    }
+    public static int XK_dead_invertedbreve() {
+        return (int)65133L;
+    }
+    public static int XK_dead_belowcomma() {
+        return (int)65134L;
+    }
+    public static int XK_dead_currency() {
+        return (int)65135L;
+    }
+    public static int XK_dead_lowline() {
+        return (int)65168L;
+    }
+    public static int XK_dead_aboveverticalline() {
+        return (int)65169L;
+    }
+    public static int XK_dead_belowverticalline() {
+        return (int)65170L;
+    }
+    public static int XK_dead_longsolidusoverlay() {
+        return (int)65171L;
+    }
+    public static int XK_dead_a() {
+        return (int)65152L;
+    }
+    public static int XK_dead_A() {
+        return (int)65153L;
+    }
+    public static int XK_dead_e() {
+        return (int)65154L;
+    }
+    public static int XK_dead_E() {
+        return (int)65155L;
+    }
+    public static int XK_dead_i() {
+        return (int)65156L;
+    }
+    public static int XK_dead_I() {
+        return (int)65157L;
+    }
+    public static int XK_dead_o() {
+        return (int)65158L;
+    }
+    public static int XK_dead_O() {
+        return (int)65159L;
+    }
+    public static int XK_dead_u() {
+        return (int)65160L;
+    }
+    public static int XK_dead_U() {
+        return (int)65161L;
+    }
+    public static int XK_dead_small_schwa() {
+        return (int)65162L;
+    }
+    public static int XK_dead_capital_schwa() {
+        return (int)65163L;
+    }
+    public static int XK_dead_greek() {
+        return (int)65164L;
+    }
+    public static int XK_First_Virtual_Screen() {
+        return (int)65232L;
+    }
+    public static int XK_Prev_Virtual_Screen() {
+        return (int)65233L;
+    }
+    public static int XK_Next_Virtual_Screen() {
+        return (int)65234L;
+    }
+    public static int XK_Last_Virtual_Screen() {
+        return (int)65236L;
+    }
+    public static int XK_Terminate_Server() {
+        return (int)65237L;
+    }
+    public static int XK_AccessX_Enable() {
+        return (int)65136L;
+    }
+    public static int XK_AccessX_Feedback_Enable() {
+        return (int)65137L;
+    }
+    public static int XK_RepeatKeys_Enable() {
+        return (int)65138L;
+    }
+    public static int XK_SlowKeys_Enable() {
+        return (int)65139L;
+    }
+    public static int XK_BounceKeys_Enable() {
+        return (int)65140L;
+    }
+    public static int XK_StickyKeys_Enable() {
+        return (int)65141L;
+    }
+    public static int XK_MouseKeys_Enable() {
+        return (int)65142L;
+    }
+    public static int XK_MouseKeys_Accel_Enable() {
+        return (int)65143L;
+    }
+    public static int XK_Overlay1_Enable() {
+        return (int)65144L;
+    }
+    public static int XK_Overlay2_Enable() {
+        return (int)65145L;
+    }
+    public static int XK_AudibleBell_Enable() {
+        return (int)65146L;
+    }
+    public static int XK_Pointer_Left() {
+        return (int)65248L;
+    }
+    public static int XK_Pointer_Right() {
+        return (int)65249L;
+    }
+    public static int XK_Pointer_Up() {
+        return (int)65250L;
+    }
+    public static int XK_Pointer_Down() {
+        return (int)65251L;
+    }
+    public static int XK_Pointer_UpLeft() {
+        return (int)65252L;
+    }
+    public static int XK_Pointer_UpRight() {
+        return (int)65253L;
+    }
+    public static int XK_Pointer_DownLeft() {
+        return (int)65254L;
+    }
+    public static int XK_Pointer_DownRight() {
+        return (int)65255L;
+    }
+    public static int XK_Pointer_Button_Dflt() {
+        return (int)65256L;
+    }
+    public static int XK_Pointer_Button1() {
+        return (int)65257L;
+    }
+    public static int XK_Pointer_Button2() {
+        return (int)65258L;
+    }
+    public static int XK_Pointer_Button3() {
+        return (int)65259L;
+    }
+    public static int XK_Pointer_Button4() {
+        return (int)65260L;
+    }
+    public static int XK_Pointer_Button5() {
+        return (int)65261L;
+    }
+    public static int XK_Pointer_DblClick_Dflt() {
+        return (int)65262L;
+    }
+    public static int XK_Pointer_DblClick1() {
+        return (int)65263L;
+    }
+    public static int XK_Pointer_DblClick2() {
+        return (int)65264L;
+    }
+    public static int XK_Pointer_DblClick3() {
+        return (int)65265L;
+    }
+    public static int XK_Pointer_DblClick4() {
+        return (int)65266L;
+    }
+    public static int XK_Pointer_DblClick5() {
+        return (int)65267L;
+    }
+    public static int XK_Pointer_Drag_Dflt() {
+        return (int)65268L;
+    }
+    public static int XK_Pointer_Drag1() {
+        return (int)65269L;
+    }
+    public static int XK_Pointer_Drag2() {
+        return (int)65270L;
+    }
+    public static int XK_Pointer_Drag3() {
+        return (int)65271L;
+    }
+    public static int XK_Pointer_Drag4() {
+        return (int)65272L;
+    }
+    public static int XK_Pointer_Drag5() {
+        return (int)65277L;
+    }
+    public static int XK_Pointer_EnableKeys() {
+        return (int)65273L;
+    }
+    public static int XK_Pointer_Accelerate() {
+        return (int)65274L;
+    }
+    public static int XK_Pointer_DfltBtnNext() {
+        return (int)65275L;
+    }
+    public static int XK_Pointer_DfltBtnPrev() {
+        return (int)65276L;
+    }
+    public static int XK_ch() {
+        return (int)65184L;
+    }
+    public static int XK_Ch() {
+        return (int)65185L;
+    }
+    public static int XK_CH() {
+        return (int)65186L;
+    }
+    public static int XK_c_h() {
+        return (int)65187L;
+    }
+    public static int XK_C_h() {
+        return (int)65188L;
+    }
+    public static int XK_C_H() {
+        return (int)65189L;
+    }
+    public static int XK_space() {
         return (int)32L;
     }
-    public static int Mod4Mask() {
+    public static int XK_exclam() {
+        return (int)33L;
+    }
+    public static int XK_quotedbl() {
+        return (int)34L;
+    }
+    public static int XK_numbersign() {
+        return (int)35L;
+    }
+    public static int XK_dollar() {
+        return (int)36L;
+    }
+    public static int XK_percent() {
+        return (int)37L;
+    }
+    public static int XK_ampersand() {
+        return (int)38L;
+    }
+    public static int XK_apostrophe() {
+        return (int)39L;
+    }
+    public static int XK_quoteright() {
+        return (int)39L;
+    }
+    public static int XK_parenleft() {
+        return (int)40L;
+    }
+    public static int XK_parenright() {
+        return (int)41L;
+    }
+    public static int XK_asterisk() {
+        return (int)42L;
+    }
+    public static int XK_plus() {
+        return (int)43L;
+    }
+    public static int XK_comma() {
+        return (int)44L;
+    }
+    public static int XK_minus() {
+        return (int)45L;
+    }
+    public static int XK_period() {
+        return (int)46L;
+    }
+    public static int XK_slash() {
+        return (int)47L;
+    }
+    public static int XK_0() {
+        return (int)48L;
+    }
+    public static int XK_1() {
+        return (int)49L;
+    }
+    public static int XK_2() {
+        return (int)50L;
+    }
+    public static int XK_3() {
+        return (int)51L;
+    }
+    public static int XK_4() {
+        return (int)52L;
+    }
+    public static int XK_5() {
+        return (int)53L;
+    }
+    public static int XK_6() {
+        return (int)54L;
+    }
+    public static int XK_7() {
+        return (int)55L;
+    }
+    public static int XK_8() {
+        return (int)56L;
+    }
+    public static int XK_9() {
+        return (int)57L;
+    }
+    public static int XK_colon() {
+        return (int)58L;
+    }
+    public static int XK_semicolon() {
+        return (int)59L;
+    }
+    public static int XK_less() {
+        return (int)60L;
+    }
+    public static int XK_equal() {
+        return (int)61L;
+    }
+    public static int XK_greater() {
+        return (int)62L;
+    }
+    public static int XK_question() {
+        return (int)63L;
+    }
+    public static int XK_at() {
         return (int)64L;
     }
-    public static int Mod5Mask() {
-        return (int)128L;
+    public static int XK_A() {
+        return (int)65L;
     }
-    public static int Button1Mask() {
-        return (int)256L;
+    public static int XK_B() {
+        return (int)66L;
     }
-    public static int Button2Mask() {
-        return (int)512L;
+    public static int XK_C() {
+        return (int)67L;
     }
-    public static int Button3Mask() {
-        return (int)1024L;
+    public static int XK_D() {
+        return (int)68L;
     }
-    public static int Button4Mask() {
-        return (int)2048L;
+    public static int XK_E() {
+        return (int)69L;
     }
-    public static int Button5Mask() {
-        return (int)4096L;
+    public static int XK_F() {
+        return (int)70L;
     }
-    public static int AnyModifier() {
-        return (int)32768L;
+    public static int XK_G() {
+        return (int)71L;
     }
-    public static int RevertToNone() {
-        return (int)0L;
+    public static int XK_H() {
+        return (int)72L;
     }
-    public static int RevertToPointerRoot() {
-        return (int)1L;
+    public static int XK_I() {
+        return (int)73L;
     }
-    public static long CWBackPixmap() {
-        return 1L;
+    public static int XK_J() {
+        return (int)74L;
     }
-    public static long CWBackPixel() {
-        return 2L;
+    public static int XK_K() {
+        return (int)75L;
     }
-    public static long CWBorderPixmap() {
-        return 4L;
+    public static int XK_L() {
+        return (int)76L;
     }
-    public static long CWBorderPixel() {
-        return 8L;
+    public static int XK_M() {
+        return (int)77L;
     }
-    public static long CWBitGravity() {
-        return 16L;
+    public static int XK_N() {
+        return (int)78L;
     }
-    public static long CWWinGravity() {
-        return 32L;
+    public static int XK_O() {
+        return (int)79L;
     }
-    public static long CWBackingStore() {
-        return 64L;
+    public static int XK_P() {
+        return (int)80L;
     }
-    public static long CWBackingPlanes() {
-        return 128L;
+    public static int XK_Q() {
+        return (int)81L;
     }
-    public static long CWBackingPixel() {
-        return 256L;
+    public static int XK_R() {
+        return (int)82L;
     }
-    public static long CWOverrideRedirect() {
-        return 512L;
+    public static int XK_S() {
+        return (int)83L;
     }
-    public static long CWSaveUnder() {
-        return 1024L;
+    public static int XK_T() {
+        return (int)84L;
     }
-    public static long CWEventMask() {
-        return 2048L;
+    public static int XK_U() {
+        return (int)85L;
     }
-    public static long CWDontPropagate() {
-        return 4096L;
+    public static int XK_V() {
+        return (int)86L;
     }
-    public static long CWColormap() {
-        return 8192L;
+    public static int XK_W() {
+        return (int)87L;
     }
-    public static long CWCursor() {
-        return 16384L;
+    public static int XK_X() {
+        return (int)88L;
     }
-    public static int CWX() {
-        return (int)1L;
+    public static int XK_Y() {
+        return (int)89L;
     }
-    public static int CWY() {
-        return (int)2L;
+    public static int XK_Z() {
+        return (int)90L;
     }
-    public static int CWWidth() {
-        return (int)4L;
+    public static int XK_bracketleft() {
+        return (int)91L;
     }
-    public static int CWHeight() {
-        return (int)8L;
+    public static int XK_backslash() {
+        return (int)92L;
     }
-    public static int CWBorderWidth() {
-        return (int)16L;
+    public static int XK_bracketright() {
+        return (int)93L;
     }
-    public static int CWSibling() {
-        return (int)32L;
+    public static int XK_asciicircum() {
+        return (int)94L;
     }
-    public static int CWStackMode() {
-        return (int)64L;
+    public static int XK_underscore() {
+        return (int)95L;
     }
-    public static long GCFunction() {
-        return 1L;
+    public static int XK_grave() {
+        return (int)96L;
     }
-    public static long GCPlaneMask() {
-        return 2L;
+    public static int XK_quoteleft() {
+        return (int)96L;
     }
-    public static long GCForeground() {
-        return 4L;
+    public static int XK_a() {
+        return (int)97L;
     }
-    public static long GCBackground() {
-        return 8L;
+    public static int XK_b() {
+        return (int)98L;
     }
-    public static long GCLineWidth() {
-        return 16L;
+    public static int XK_c() {
+        return (int)99L;
     }
-    public static long GCLineStyle() {
-        return 32L;
+    public static int XK_d() {
+        return (int)100L;
     }
-    public static long GCCapStyle() {
-        return 64L;
+    public static int XK_e() {
+        return (int)101L;
     }
-    public static long GCJoinStyle() {
-        return 128L;
+    public static int XK_f() {
+        return (int)102L;
     }
-    public static long GCFillStyle() {
-        return 256L;
+    public static int XK_g() {
+        return (int)103L;
     }
-    public static long GCFillRule() {
-        return 512L;
+    public static int XK_h() {
+        return (int)104L;
     }
-    public static long GCTile() {
-        return 1024L;
+    public static int XK_i() {
+        return (int)105L;
     }
-    public static long GCStipple() {
-        return 2048L;
+    public static int XK_j() {
+        return (int)106L;
     }
-    public static long GCTileStipXOrigin() {
-        return 4096L;
+    public static int XK_k() {
+        return (int)107L;
     }
-    public static long GCTileStipYOrigin() {
-        return 8192L;
+    public static int XK_l() {
+        return (int)108L;
     }
-    public static long GCFont() {
-        return 16384L;
+    public static int XK_m() {
+        return (int)109L;
     }
-    public static long GCSubwindowMode() {
-        return 32768L;
+    public static int XK_n() {
+        return (int)110L;
     }
-    public static long GCGraphicsExposures() {
-        return 65536L;
+    public static int XK_o() {
+        return (int)111L;
     }
-    public static long GCClipXOrigin() {
-        return 131072L;
+    public static int XK_p() {
+        return (int)112L;
     }
-    public static long GCClipYOrigin() {
-        return 262144L;
+    public static int XK_q() {
+        return (int)113L;
     }
-    public static long GCClipMask() {
-        return 524288L;
+    public static int XK_r() {
+        return (int)114L;
     }
-    public static long GCDashOffset() {
-        return 1048576L;
+    public static int XK_s() {
+        return (int)115L;
     }
-    public static long GCDashList() {
-        return 2097152L;
+    public static int XK_t() {
+        return (int)116L;
     }
-    public static long GCArcMode() {
-        return 4194304L;
+    public static int XK_u() {
+        return (int)117L;
     }
-    public static int DoRed() {
-        return (int)1L;
+    public static int XK_v() {
+        return (int)118L;
     }
-    public static int DoGreen() {
-        return (int)2L;
+    public static int XK_w() {
+        return (int)119L;
     }
-    public static int DoBlue() {
-        return (int)4L;
+    public static int XK_x() {
+        return (int)120L;
     }
-    public static long KBKeyClickPercent() {
-        return 1L;
+    public static int XK_y() {
+        return (int)121L;
     }
-    public static long KBBellPercent() {
-        return 2L;
+    public static int XK_z() {
+        return (int)122L;
     }
-    public static long KBBellPitch() {
-        return 4L;
+    public static int XK_braceleft() {
+        return (int)123L;
     }
-    public static long KBBellDuration() {
-        return 8L;
+    public static int XK_bar() {
+        return (int)124L;
     }
-    public static long KBLed() {
-        return 16L;
+    public static int XK_braceright() {
+        return (int)125L;
     }
-    public static long KBLedMode() {
-        return 32L;
+    public static int XK_asciitilde() {
+        return (int)126L;
     }
-    public static long KBKey() {
-        return 64L;
+    public static int XK_nobreakspace() {
+        return (int)160L;
     }
-    public static long KBAutoRepeatMode() {
-        return 128L;
+    public static int XK_exclamdown() {
+        return (int)161L;
     }
-    public static MemoryAddress NULL() {
-        return constants$73.NULL$ADDR;
+    public static int XK_cent() {
+        return (int)162L;
     }
-    public static long AllPlanes() {
-        return -1L;
+    public static int XK_sterling() {
+        return (int)163L;
     }
-    public static MemorySegment XNRequiredCharSet() {
-        return constants$73.XNRequiredCharSet$SEGMENT;
+    public static int XK_currency() {
+        return (int)164L;
     }
-    public static MemorySegment XNQueryOrientation() {
-        return constants$74.XNQueryOrientation$SEGMENT;
+    public static int XK_yen() {
+        return (int)165L;
     }
-    public static MemorySegment XNBaseFontName() {
-        return constants$74.XNBaseFontName$SEGMENT;
+    public static int XK_brokenbar() {
+        return (int)166L;
     }
-    public static MemorySegment XNOMAutomatic() {
-        return constants$74.XNOMAutomatic$SEGMENT;
+    public static int XK_section() {
+        return (int)167L;
     }
-    public static MemorySegment XNMissingCharSet() {
-        return constants$74.XNMissingCharSet$SEGMENT;
+    public static int XK_diaeresis() {
+        return (int)168L;
     }
-    public static MemorySegment XNDefaultString() {
-        return constants$74.XNDefaultString$SEGMENT;
+    public static int XK_copyright() {
+        return (int)169L;
     }
-    public static MemorySegment XNOrientation() {
-        return constants$74.XNOrientation$SEGMENT;
+    public static int XK_ordfeminine() {
+        return (int)170L;
     }
-    public static MemorySegment XNDirectionalDependentDrawing() {
-        return constants$75.XNDirectionalDependentDrawing$SEGMENT;
+    public static int XK_guillemotleft() {
+        return (int)171L;
     }
-    public static MemorySegment XNContextualDrawing() {
-        return constants$75.XNContextualDrawing$SEGMENT;
+    public static int XK_notsign() {
+        return (int)172L;
     }
-    public static MemorySegment XNFontInfo() {
-        return constants$75.XNFontInfo$SEGMENT;
+    public static int XK_hyphen() {
+        return (int)173L;
     }
-    public static long XIMPreeditArea() {
-        return 1L;
+    public static int XK_registered() {
+        return (int)174L;
     }
-    public static long XIMPreeditCallbacks() {
-        return 2L;
+    public static int XK_macron() {
+        return (int)175L;
     }
-    public static long XIMPreeditPosition() {
-        return 4L;
+    public static int XK_degree() {
+        return (int)176L;
     }
-    public static long XIMPreeditNothing() {
-        return 8L;
+    public static int XK_plusminus() {
+        return (int)177L;
     }
-    public static long XIMPreeditNone() {
-        return 16L;
+    public static int XK_twosuperior() {
+        return (int)178L;
     }
-    public static long XIMStatusArea() {
-        return 256L;
+    public static int XK_threesuperior() {
+        return (int)179L;
     }
-    public static long XIMStatusCallbacks() {
-        return 512L;
+    public static int XK_acute() {
+        return (int)180L;
     }
-    public static long XIMStatusNothing() {
-        return 1024L;
+    public static int XK_mu() {
+        return (int)181L;
     }
-    public static long XIMStatusNone() {
-        return 2048L;
+    public static int XK_paragraph() {
+        return (int)182L;
     }
-    public static MemorySegment XNVaNestedList() {
-        return constants$75.XNVaNestedList$SEGMENT;
+    public static int XK_periodcentered() {
+        return (int)183L;
     }
-    public static MemorySegment XNQueryInputStyle() {
-        return constants$75.XNQueryInputStyle$SEGMENT;
+    public static int XK_cedilla() {
+        return (int)184L;
     }
-    public static MemorySegment XNClientWindow() {
-        return constants$75.XNClientWindow$SEGMENT;
+    public static int XK_onesuperior() {
+        return (int)185L;
     }
-    public static MemorySegment XNInputStyle() {
-        return constants$76.XNInputStyle$SEGMENT;
+    public static int XK_masculine() {
+        return (int)186L;
     }
-    public static MemorySegment XNFocusWindow() {
-        return constants$76.XNFocusWindow$SEGMENT;
+    public static int XK_guillemotright() {
+        return (int)187L;
     }
-    public static MemorySegment XNResourceName() {
-        return constants$76.XNResourceName$SEGMENT;
+    public static int XK_onequarter() {
+        return (int)188L;
     }
-    public static MemorySegment XNResourceClass() {
-        return constants$76.XNResourceClass$SEGMENT;
+    public static int XK_onehalf() {
+        return (int)189L;
     }
-    public static MemorySegment XNGeometryCallback() {
-        return constants$76.XNGeometryCallback$SEGMENT;
+    public static int XK_threequarters() {
+        return (int)190L;
     }
-    public static MemorySegment XNDestroyCallback() {
-        return constants$76.XNDestroyCallback$SEGMENT;
+    public static int XK_questiondown() {
+        return (int)191L;
     }
-    public static MemorySegment XNFilterEvents() {
-        return constants$77.XNFilterEvents$SEGMENT;
+    public static int XK_Agrave() {
+        return (int)192L;
     }
-    public static MemorySegment XNPreeditStartCallback() {
-        return constants$77.XNPreeditStartCallback$SEGMENT;
+    public static int XK_Aacute() {
+        return (int)193L;
     }
-    public static MemorySegment XNPreeditDoneCallback() {
-        return constants$77.XNPreeditDoneCallback$SEGMENT;
+    public static int XK_Acircumflex() {
+        return (int)194L;
     }
-    public static MemorySegment XNPreeditDrawCallback() {
-        return constants$77.XNPreeditDrawCallback$SEGMENT;
+    public static int XK_Atilde() {
+        return (int)195L;
     }
-    public static MemorySegment XNPreeditCaretCallback() {
-        return constants$77.XNPreeditCaretCallback$SEGMENT;
+    public static int XK_Adiaeresis() {
+        return (int)196L;
     }
-    public static MemorySegment XNPreeditStateNotifyCallback() {
-        return constants$77.XNPreeditStateNotifyCallback$SEGMENT;
+    public static int XK_Aring() {
+        return (int)197L;
     }
-    public static MemorySegment XNPreeditAttributes() {
-        return constants$78.XNPreeditAttributes$SEGMENT;
+    public static int XK_AE() {
+        return (int)198L;
     }
-    public static MemorySegment XNStatusStartCallback() {
-        return constants$78.XNStatusStartCallback$SEGMENT;
+    public static int XK_Ccedilla() {
+        return (int)199L;
     }
-    public static MemorySegment XNStatusDoneCallback() {
-        return constants$78.XNStatusDoneCallback$SEGMENT;
+    public static int XK_Egrave() {
+        return (int)200L;
     }
-    public static MemorySegment XNStatusDrawCallback() {
-        return constants$78.XNStatusDrawCallback$SEGMENT;
+    public static int XK_Eacute() {
+        return (int)201L;
     }
-    public static MemorySegment XNStatusAttributes() {
-        return constants$78.XNStatusAttributes$SEGMENT;
+    public static int XK_Ecircumflex() {
+        return (int)202L;
+    }
+    public static int XK_Ediaeresis() {
+        return (int)203L;
+    }
+    public static int XK_Igrave() {
+        return (int)204L;
+    }
+    public static int XK_Iacute() {
+        return (int)205L;
+    }
+    public static int XK_Icircumflex() {
+        return (int)206L;
+    }
+    public static int XK_Idiaeresis() {
+        return (int)207L;
+    }
+    public static int XK_ETH() {
+        return (int)208L;
+    }
+    public static int XK_Eth() {
+        return (int)208L;
+    }
+    public static int XK_Ntilde() {
+        return (int)209L;
+    }
+    public static int XK_Ograve() {
+        return (int)210L;
+    }
+    public static int XK_Oacute() {
+        return (int)211L;
+    }
+    public static int XK_Ocircumflex() {
+        return (int)212L;
+    }
+    public static int XK_Otilde() {
+        return (int)213L;
+    }
+    public static int XK_Odiaeresis() {
+        return (int)214L;
+    }
+    public static int XK_multiply() {
+        return (int)215L;
+    }
+    public static int XK_Oslash() {
+        return (int)216L;
+    }
+    public static int XK_Ooblique() {
+        return (int)216L;
+    }
+    public static int XK_Ugrave() {
+        return (int)217L;
+    }
+    public static int XK_Uacute() {
+        return (int)218L;
+    }
+    public static int XK_Ucircumflex() {
+        return (int)219L;
+    }
+    public static int XK_Udiaeresis() {
+        return (int)220L;
+    }
+    public static int XK_Yacute() {
+        return (int)221L;
+    }
+    public static int XK_THORN() {
+        return (int)222L;
+    }
+    public static int XK_Thorn() {
+        return (int)222L;
+    }
+    public static int XK_ssharp() {
+        return (int)223L;
+    }
+    public static int XK_agrave() {
+        return (int)224L;
+    }
+    public static int XK_aacute() {
+        return (int)225L;
+    }
+    public static int XK_acircumflex() {
+        return (int)226L;
+    }
+    public static int XK_atilde() {
+        return (int)227L;
+    }
+    public static int XK_adiaeresis() {
+        return (int)228L;
+    }
+    public static int XK_aring() {
+        return (int)229L;
+    }
+    public static int XK_ae() {
+        return (int)230L;
+    }
+    public static int XK_ccedilla() {
+        return (int)231L;
+    }
+    public static int XK_egrave() {
+        return (int)232L;
+    }
+    public static int XK_eacute() {
+        return (int)233L;
+    }
+    public static int XK_ecircumflex() {
+        return (int)234L;
+    }
+    public static int XK_ediaeresis() {
+        return (int)235L;
+    }
+    public static int XK_igrave() {
+        return (int)236L;
+    }
+    public static int XK_iacute() {
+        return (int)237L;
+    }
+    public static int XK_icircumflex() {
+        return (int)238L;
+    }
+    public static int XK_idiaeresis() {
+        return (int)239L;
+    }
+    public static int XK_eth() {
+        return (int)240L;
+    }
+    public static int XK_ntilde() {
+        return (int)241L;
+    }
+    public static int XK_ograve() {
+        return (int)242L;
+    }
+    public static int XK_oacute() {
+        return (int)243L;
+    }
+    public static int XK_ocircumflex() {
+        return (int)244L;
+    }
+    public static int XK_otilde() {
+        return (int)245L;
+    }
+    public static int XK_odiaeresis() {
+        return (int)246L;
+    }
+    public static int XK_division() {
+        return (int)247L;
+    }
+    public static int XK_oslash() {
+        return (int)248L;
+    }
+    public static int XK_ooblique() {
+        return (int)248L;
+    }
+    public static int XK_ugrave() {
+        return (int)249L;
+    }
+    public static int XK_uacute() {
+        return (int)250L;
+    }
+    public static int XK_ucircumflex() {
+        return (int)251L;
+    }
+    public static int XK_udiaeresis() {
+        return (int)252L;
+    }
+    public static int XK_yacute() {
+        return (int)253L;
+    }
+    public static int XK_thorn() {
+        return (int)254L;
+    }
+    public static int XK_ydiaeresis() {
+        return (int)255L;
+    }
+    public static int XK_Aogonek() {
+        return (int)417L;
+    }
+    public static int XK_breve() {
+        return (int)418L;
+    }
+    public static int XK_Lstroke() {
+        return (int)419L;
+    }
+    public static int XK_Lcaron() {
+        return (int)421L;
+    }
+    public static int XK_Sacute() {
+        return (int)422L;
+    }
+    public static int XK_Scaron() {
+        return (int)425L;
+    }
+    public static int XK_Scedilla() {
+        return (int)426L;
+    }
+    public static int XK_Tcaron() {
+        return (int)427L;
+    }
+    public static int XK_Zacute() {
+        return (int)428L;
+    }
+    public static int XK_Zcaron() {
+        return (int)430L;
+    }
+    public static int XK_Zabovedot() {
+        return (int)431L;
+    }
+    public static int XK_aogonek() {
+        return (int)433L;
+    }
+    public static int XK_ogonek() {
+        return (int)434L;
+    }
+    public static int XK_lstroke() {
+        return (int)435L;
+    }
+    public static int XK_lcaron() {
+        return (int)437L;
+    }
+    public static int XK_sacute() {
+        return (int)438L;
+    }
+    public static int XK_caron() {
+        return (int)439L;
+    }
+    public static int XK_scaron() {
+        return (int)441L;
+    }
+    public static int XK_scedilla() {
+        return (int)442L;
+    }
+    public static int XK_tcaron() {
+        return (int)443L;
+    }
+    public static int XK_zacute() {
+        return (int)444L;
+    }
+    public static int XK_doubleacute() {
+        return (int)445L;
+    }
+    public static int XK_zcaron() {
+        return (int)446L;
+    }
+    public static int XK_zabovedot() {
+        return (int)447L;
+    }
+    public static int XK_Racute() {
+        return (int)448L;
+    }
+    public static int XK_Abreve() {
+        return (int)451L;
+    }
+    public static int XK_Lacute() {
+        return (int)453L;
+    }
+    public static int XK_Cacute() {
+        return (int)454L;
+    }
+    public static int XK_Ccaron() {
+        return (int)456L;
+    }
+    public static int XK_Eogonek() {
+        return (int)458L;
+    }
+    public static int XK_Ecaron() {
+        return (int)460L;
+    }
+    public static int XK_Dcaron() {
+        return (int)463L;
+    }
+    public static int XK_Dstroke() {
+        return (int)464L;
+    }
+    public static int XK_Nacute() {
+        return (int)465L;
+    }
+    public static int XK_Ncaron() {
+        return (int)466L;
+    }
+    public static int XK_Odoubleacute() {
+        return (int)469L;
+    }
+    public static int XK_Rcaron() {
+        return (int)472L;
+    }
+    public static int XK_Uring() {
+        return (int)473L;
+    }
+    public static int XK_Udoubleacute() {
+        return (int)475L;
+    }
+    public static int XK_Tcedilla() {
+        return (int)478L;
+    }
+    public static int XK_racute() {
+        return (int)480L;
+    }
+    public static int XK_abreve() {
+        return (int)483L;
+    }
+    public static int XK_lacute() {
+        return (int)485L;
+    }
+    public static int XK_cacute() {
+        return (int)486L;
+    }
+    public static int XK_ccaron() {
+        return (int)488L;
+    }
+    public static int XK_eogonek() {
+        return (int)490L;
+    }
+    public static int XK_ecaron() {
+        return (int)492L;
+    }
+    public static int XK_dcaron() {
+        return (int)495L;
+    }
+    public static int XK_dstroke() {
+        return (int)496L;
+    }
+    public static int XK_nacute() {
+        return (int)497L;
+    }
+    public static int XK_ncaron() {
+        return (int)498L;
+    }
+    public static int XK_odoubleacute() {
+        return (int)501L;
+    }
+    public static int XK_rcaron() {
+        return (int)504L;
+    }
+    public static int XK_uring() {
+        return (int)505L;
+    }
+    public static int XK_udoubleacute() {
+        return (int)507L;
+    }
+    public static int XK_tcedilla() {
+        return (int)510L;
+    }
+    public static int XK_abovedot() {
+        return (int)511L;
+    }
+    public static int XK_Hstroke() {
+        return (int)673L;
+    }
+    public static int XK_Hcircumflex() {
+        return (int)678L;
+    }
+    public static int XK_Iabovedot() {
+        return (int)681L;
+    }
+    public static int XK_Gbreve() {
+        return (int)683L;
+    }
+    public static int XK_Jcircumflex() {
+        return (int)684L;
+    }
+    public static int XK_hstroke() {
+        return (int)689L;
+    }
+    public static int XK_hcircumflex() {
+        return (int)694L;
+    }
+    public static int XK_idotless() {
+        return (int)697L;
+    }
+    public static int XK_gbreve() {
+        return (int)699L;
+    }
+    public static int XK_jcircumflex() {
+        return (int)700L;
+    }
+    public static int XK_Cabovedot() {
+        return (int)709L;
+    }
+    public static int XK_Ccircumflex() {
+        return (int)710L;
+    }
+    public static int XK_Gabovedot() {
+        return (int)725L;
+    }
+    public static int XK_Gcircumflex() {
+        return (int)728L;
+    }
+    public static int XK_Ubreve() {
+        return (int)733L;
+    }
+    public static int XK_Scircumflex() {
+        return (int)734L;
+    }
+    public static int XK_cabovedot() {
+        return (int)741L;
+    }
+    public static int XK_ccircumflex() {
+        return (int)742L;
+    }
+    public static int XK_gabovedot() {
+        return (int)757L;
+    }
+    public static int XK_gcircumflex() {
+        return (int)760L;
+    }
+    public static int XK_ubreve() {
+        return (int)765L;
+    }
+    public static int XK_scircumflex() {
+        return (int)766L;
+    }
+    public static int XK_kra() {
+        return (int)930L;
+    }
+    public static int XK_kappa() {
+        return (int)930L;
+    }
+    public static int XK_Rcedilla() {
+        return (int)931L;
+    }
+    public static int XK_Itilde() {
+        return (int)933L;
+    }
+    public static int XK_Lcedilla() {
+        return (int)934L;
+    }
+    public static int XK_Emacron() {
+        return (int)938L;
+    }
+    public static int XK_Gcedilla() {
+        return (int)939L;
+    }
+    public static int XK_Tslash() {
+        return (int)940L;
+    }
+    public static int XK_rcedilla() {
+        return (int)947L;
+    }
+    public static int XK_itilde() {
+        return (int)949L;
+    }
+    public static int XK_lcedilla() {
+        return (int)950L;
+    }
+    public static int XK_emacron() {
+        return (int)954L;
+    }
+    public static int XK_gcedilla() {
+        return (int)955L;
+    }
+    public static int XK_tslash() {
+        return (int)956L;
+    }
+    public static int XK_ENG() {
+        return (int)957L;
+    }
+    public static int XK_eng() {
+        return (int)959L;
+    }
+    public static int XK_Amacron() {
+        return (int)960L;
+    }
+    public static int XK_Iogonek() {
+        return (int)967L;
+    }
+    public static int XK_Eabovedot() {
+        return (int)972L;
+    }
+    public static int XK_Imacron() {
+        return (int)975L;
+    }
+    public static int XK_Ncedilla() {
+        return (int)977L;
+    }
+    public static int XK_Omacron() {
+        return (int)978L;
+    }
+    public static int XK_Kcedilla() {
+        return (int)979L;
+    }
+    public static int XK_Uogonek() {
+        return (int)985L;
+    }
+    public static int XK_Utilde() {
+        return (int)989L;
+    }
+    public static int XK_Umacron() {
+        return (int)990L;
+    }
+    public static int XK_amacron() {
+        return (int)992L;
+    }
+    public static int XK_iogonek() {
+        return (int)999L;
+    }
+    public static int XK_eabovedot() {
+        return (int)1004L;
+    }
+    public static int XK_imacron() {
+        return (int)1007L;
+    }
+    public static int XK_ncedilla() {
+        return (int)1009L;
+    }
+    public static int XK_omacron() {
+        return (int)1010L;
+    }
+    public static int XK_kcedilla() {
+        return (int)1011L;
+    }
+    public static int XK_uogonek() {
+        return (int)1017L;
+    }
+    public static int XK_utilde() {
+        return (int)1021L;
+    }
+    public static int XK_umacron() {
+        return (int)1022L;
+    }
+    public static int XK_Wcircumflex() {
+        return (int)16777588L;
+    }
+    public static int XK_wcircumflex() {
+        return (int)16777589L;
+    }
+    public static int XK_Ycircumflex() {
+        return (int)16777590L;
+    }
+    public static int XK_ycircumflex() {
+        return (int)16777591L;
+    }
+    public static int XK_Babovedot() {
+        return (int)16784898L;
+    }
+    public static int XK_babovedot() {
+        return (int)16784899L;
+    }
+    public static int XK_Dabovedot() {
+        return (int)16784906L;
+    }
+    public static int XK_dabovedot() {
+        return (int)16784907L;
+    }
+    public static int XK_Fabovedot() {
+        return (int)16784926L;
+    }
+    public static int XK_fabovedot() {
+        return (int)16784927L;
+    }
+    public static int XK_Mabovedot() {
+        return (int)16784960L;
+    }
+    public static int XK_mabovedot() {
+        return (int)16784961L;
+    }
+    public static int XK_Pabovedot() {
+        return (int)16784982L;
+    }
+    public static int XK_pabovedot() {
+        return (int)16784983L;
+    }
+    public static int XK_Sabovedot() {
+        return (int)16784992L;
+    }
+    public static int XK_sabovedot() {
+        return (int)16784993L;
+    }
+    public static int XK_Tabovedot() {
+        return (int)16785002L;
+    }
+    public static int XK_tabovedot() {
+        return (int)16785003L;
+    }
+    public static int XK_Wgrave() {
+        return (int)16785024L;
+    }
+    public static int XK_wgrave() {
+        return (int)16785025L;
+    }
+    public static int XK_Wacute() {
+        return (int)16785026L;
+    }
+    public static int XK_wacute() {
+        return (int)16785027L;
+    }
+    public static int XK_Wdiaeresis() {
+        return (int)16785028L;
+    }
+    public static int XK_wdiaeresis() {
+        return (int)16785029L;
+    }
+    public static int XK_Ygrave() {
+        return (int)16785138L;
+    }
+    public static int XK_ygrave() {
+        return (int)16785139L;
+    }
+    public static int XK_OE() {
+        return (int)5052L;
+    }
+    public static int XK_oe() {
+        return (int)5053L;
+    }
+    public static int XK_Ydiaeresis() {
+        return (int)5054L;
+    }
+    public static int XK_overline() {
+        return (int)1150L;
+    }
+    public static int XK_kana_fullstop() {
+        return (int)1185L;
+    }
+    public static int XK_kana_openingbracket() {
+        return (int)1186L;
+    }
+    public static int XK_kana_closingbracket() {
+        return (int)1187L;
+    }
+    public static int XK_kana_comma() {
+        return (int)1188L;
+    }
+    public static int XK_kana_conjunctive() {
+        return (int)1189L;
+    }
+    public static int XK_kana_middledot() {
+        return (int)1189L;
+    }
+    public static int XK_kana_WO() {
+        return (int)1190L;
+    }
+    public static int XK_kana_a() {
+        return (int)1191L;
+    }
+    public static int XK_kana_i() {
+        return (int)1192L;
+    }
+    public static int XK_kana_u() {
+        return (int)1193L;
+    }
+    public static int XK_kana_e() {
+        return (int)1194L;
+    }
+    public static int XK_kana_o() {
+        return (int)1195L;
+    }
+    public static int XK_kana_ya() {
+        return (int)1196L;
     }
 }
 
