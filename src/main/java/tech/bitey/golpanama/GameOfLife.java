@@ -12,8 +12,6 @@ class GameOfLife implements Runnable {
 	static final int WIDTH_PX = WIDTH_CELLS * CELL_PX + (WIDTH_CELLS - 1);
 	static final int HEIGHT_PX = HEIGHT_CELLS * CELL_PX + (HEIGHT_CELLS - 1);
 
-	private static final int TICK_PERIOD = 50; // milliseconds
-
 	private final boolean[][] prev_state = new boolean[HEIGHT_CELLS][WIDTH_CELLS];
 	private final boolean[][] state = new boolean[HEIGHT_CELLS][WIDTH_CELLS];
 
@@ -40,6 +38,7 @@ class GameOfLife implements Runnable {
 		}
 
 		render.drawGrid();
+		render.flush();
 		this.render = render;
 	}
 
@@ -61,22 +60,22 @@ class GameOfLife implements Runnable {
 				}
 			}
 
+			render.flush();
+
 			// calculate next state
 			for (int y = 0; y < HEIGHT_CELLS; y++) {
 				for (int x = 0; x < WIDTH_CELLS; x++) {
 
 					// count neighbors
 					int count = 0;
-					{
-						count += live(x - 1, y - 1);
-						count += live(x, y - 1);
-						count += live(x + 1, y - 1);
-						count += live(x - 1, y);
-						count += live(x + 1, y);
-						count += live(x - 1, y + 1);
-						count += live(x, y + 1);
-						count += live(x + 1, y + 1);
-					}
+					count += live(x - 1, y - 1);
+					count += live(x, y - 1);
+					count += live(x + 1, y - 1);
+					count += live(x - 1, y);
+					count += live(x + 1, y);
+					count += live(x - 1, y + 1);
+					count += live(x, y + 1);
+					count += live(x + 1, y + 1);
 
 					// any live cell with two or three live neighbors survives
 					boolean survives = prev_state[y][x] && (count == 2 || count == 3);
@@ -88,8 +87,11 @@ class GameOfLife implements Runnable {
 				}
 			}
 
+			// sleep if necessary
 			try {
-				Thread.sleep(TICK_PERIOD - (System.currentTimeMillis() - time));
+				long millis = 50 - (System.currentTimeMillis() - time);
+				if (millis > 0)
+					Thread.sleep(millis);
 			} catch (InterruptedException e) {
 				throw new RuntimeException(e);
 			}
