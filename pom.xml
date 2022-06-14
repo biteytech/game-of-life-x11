@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>tech.bitey</groupId>
-	<artifactId>jlife</artifactId>
+	<artifactId>golpanama</artifactId>
 	<version>0.0.1</version>
 	
 	<properties>
@@ -26,7 +26,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>tech.bitey.jlife.JLife</mainClass>
+                    <mainClass>tech.bitey.golpanama.LifeJavaFX</mainClass>
                     <commandlineArgs>gosper_glider_gun</commandlineArgs>
                 </configuration>
             </plugin>

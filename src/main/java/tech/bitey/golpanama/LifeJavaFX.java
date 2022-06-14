@@ -1,4 +1,4 @@
-package tech.bitey.jlife;
+package tech.bitey.golpanama;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,7 +14,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class JLife extends Application implements Runnable {
+public class LifeJavaFX extends Application implements Runnable {
 
 	private static Path PATTERN_FILE;
 
@@ -37,7 +37,7 @@ public class JLife extends Application implements Runnable {
 			System.exit(1);
 		}
 
-		PATTERN_FILE = Paths.get("../patterns", args[0] + ".txt");
+		PATTERN_FILE = Paths.get("patterns", args[0] + ".txt");
 		if (!Files.exists(PATTERN_FILE)) {
 			System.err.println("pattern file does not exist: " + PATTERN_FILE);
 			System.exit(1);
