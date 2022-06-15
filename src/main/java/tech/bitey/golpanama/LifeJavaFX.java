@@ -41,8 +41,8 @@ public class LifeJavaFX extends Application {
 			public void handle(long now) {
 
 				if (now - lastTick > GameOfLife.TICK_PERIOD) {
-					game.tick();
 					lastTick = now;
+					game.tick();
 				}
 			}
 		}.start();

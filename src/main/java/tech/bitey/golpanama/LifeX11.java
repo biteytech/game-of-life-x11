@@ -24,14 +24,14 @@ public class LifeX11 {
 
 		new Thread(() -> {
 			while (true) {
-				final long time = System.currentTimeMillis();
+				final long time = System.nanoTime();
 
 				game.tick();
 
 				try {
-					long millis = (GameOfLife.TICK_PERIOD / 1_000_000) - (System.currentTimeMillis() - time);
-					if (millis > 0)
-						Thread.sleep(millis);
+					long nanos = GameOfLife.TICK_PERIOD - (System.nanoTime() - time);
+					if (nanos > 0)
+						Thread.sleep(nanos / 1_000_000, (int) (nanos % 1_000_000));
 				} catch (InterruptedException e) {
 					throw new RuntimeException(e);
 				}
