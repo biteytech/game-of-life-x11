@@ -20,6 +20,22 @@ public class LifeX11 {
 
 	public static void main(String[] args) throws Exception {
 
-		new GameOfLife(args, new RenderX11()).run();
+		final GameOfLife game = new GameOfLife(args, new RenderX11());
+
+		new Thread(() -> {
+			while (true) {
+				final long time = System.currentTimeMillis();
+
+				game.tick();
+
+				try {
+					long millis = (GameOfLife.TICK_PERIOD / 1_000_000) - (System.currentTimeMillis() - time);
+					if (millis > 0)
+						Thread.sleep(millis);
+				} catch (InterruptedException e) {
+					throw new RuntimeException(e);
+				}
+			}
+		}).start();
 	}
 }

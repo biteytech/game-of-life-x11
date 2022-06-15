@@ -16,12 +16,15 @@
 
 package tech.bitey.golpanama;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class LifeJavaFX extends Application {
 
 	private static String[] ARGS;
+
+	private long lastTick = 0; // timestamp in nanoseconds
 
 	public static void main(String[] args) {
 		launch(ARGS = args);
@@ -30,11 +33,18 @@ public class LifeJavaFX extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		RenderJavaFX renderLogic = new RenderJavaFX(primaryStage);
-		GameOfLife game = new GameOfLife(ARGS, renderLogic);
+		final GameOfLife game = new GameOfLife(ARGS, new RenderJavaFX(primaryStage));
 
-		Thread t = new Thread(game, "Game");
-		t.setDaemon(true);
-		t.start();
+		// allow JavaFX to drive the game
+		new AnimationTimer() {
+			@Override
+			public void handle(long now) {
+
+				if (now - lastTick > GameOfLife.TICK_PERIOD) {
+					game.tick();
+					lastTick = now;
+				}
+			}
+		}.start();
 	}
 }
