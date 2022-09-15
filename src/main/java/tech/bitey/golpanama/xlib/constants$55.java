@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$55 {
 
     static final FunctionDescriptor XSetSubwindowMode$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$55 {
     );
     static final MethodHandle XSetSubwindowMode$MH = RuntimeHelper.downcallHandle(
         "XSetSubwindowMode",
-        constants$55.XSetSubwindowMode$FUNC, false
+        constants$55.XSetSubwindowMode$FUNC
     );
     static final FunctionDescriptor XSetTSOrigin$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -26,7 +26,7 @@ class constants$55 {
     );
     static final MethodHandle XSetTSOrigin$MH = RuntimeHelper.downcallHandle(
         "XSetTSOrigin",
-        constants$55.XSetTSOrigin$FUNC, false
+        constants$55.XSetTSOrigin$FUNC
     );
     static final FunctionDescriptor XSetTile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -35,7 +35,7 @@ class constants$55 {
     );
     static final MethodHandle XSetTile$MH = RuntimeHelper.downcallHandle(
         "XSetTile",
-        constants$55.XSetTile$FUNC, false
+        constants$55.XSetTile$FUNC
     );
     static final FunctionDescriptor XSetWindowBackground$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -44,7 +44,7 @@ class constants$55 {
     );
     static final MethodHandle XSetWindowBackground$MH = RuntimeHelper.downcallHandle(
         "XSetWindowBackground",
-        constants$55.XSetWindowBackground$FUNC, false
+        constants$55.XSetWindowBackground$FUNC
     );
     static final FunctionDescriptor XSetWindowBackgroundPixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -53,7 +53,7 @@ class constants$55 {
     );
     static final MethodHandle XSetWindowBackgroundPixmap$MH = RuntimeHelper.downcallHandle(
         "XSetWindowBackgroundPixmap",
-        constants$55.XSetWindowBackgroundPixmap$FUNC, false
+        constants$55.XSetWindowBackgroundPixmap$FUNC
     );
     static final FunctionDescriptor XSetWindowBorder$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -62,7 +62,7 @@ class constants$55 {
     );
     static final MethodHandle XSetWindowBorder$MH = RuntimeHelper.downcallHandle(
         "XSetWindowBorder",
-        constants$55.XSetWindowBorder$FUNC, false
+        constants$55.XSetWindowBorder$FUNC
     );
 }
 

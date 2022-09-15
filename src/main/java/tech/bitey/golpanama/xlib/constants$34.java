@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$34 {
 
     static final FunctionDescriptor XFillRectangle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -20,7 +20,7 @@ class constants$34 {
     );
     static final MethodHandle XFillRectangle$MH = RuntimeHelper.downcallHandle(
         "XFillRectangle",
-        constants$34.XFillRectangle$FUNC, false
+        constants$34.XFillRectangle$FUNC
     );
     static final FunctionDescriptor XFillRectangles$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -31,14 +31,14 @@ class constants$34 {
     );
     static final MethodHandle XFillRectangles$MH = RuntimeHelper.downcallHandle(
         "XFillRectangles",
-        constants$34.XFillRectangles$FUNC, false
+        constants$34.XFillRectangles$FUNC
     );
     static final FunctionDescriptor XFlush$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XFlush$MH = RuntimeHelper.downcallHandle(
         "XFlush",
-        constants$34.XFlush$FUNC, false
+        constants$34.XFlush$FUNC
     );
     static final FunctionDescriptor XForceScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -46,14 +46,14 @@ class constants$34 {
     );
     static final MethodHandle XForceScreenSaver$MH = RuntimeHelper.downcallHandle(
         "XForceScreenSaver",
-        constants$34.XForceScreenSaver$FUNC, false
+        constants$34.XForceScreenSaver$FUNC
     );
     static final FunctionDescriptor XFree$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XFree$MH = RuntimeHelper.downcallHandle(
         "XFree",
-        constants$34.XFree$FUNC, false
+        constants$34.XFree$FUNC
     );
     static final FunctionDescriptor XFreeColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -61,7 +61,7 @@ class constants$34 {
     );
     static final MethodHandle XFreeColormap$MH = RuntimeHelper.downcallHandle(
         "XFreeColormap",
-        constants$34.XFreeColormap$FUNC, false
+        constants$34.XFreeColormap$FUNC
     );
 }
 

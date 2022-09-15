@@ -5,22 +5,22 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$18 {
 
     static final FunctionDescriptor XIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XIOErrorHandler$MH = RuntimeHelper.downcallHandle(
-        constants$18.XIOErrorHandler$FUNC, false
+        constants$18.XIOErrorHandler$FUNC
     );
     static final FunctionDescriptor XSetIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XSetIOErrorHandler$MH = RuntimeHelper.downcallHandle(
         "XSetIOErrorHandler",
-        constants$18.XSetIOErrorHandler$FUNC, false
+        constants$18.XSetIOErrorHandler$FUNC
     );
     static final FunctionDescriptor XListPixmapFormats$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -28,7 +28,7 @@ class constants$18 {
     );
     static final MethodHandle XListPixmapFormats$MH = RuntimeHelper.downcallHandle(
         "XListPixmapFormats",
-        constants$18.XListPixmapFormats$FUNC, false
+        constants$18.XListPixmapFormats$FUNC
     );
     static final FunctionDescriptor XListDepths$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -37,7 +37,7 @@ class constants$18 {
     );
     static final MethodHandle XListDepths$MH = RuntimeHelper.downcallHandle(
         "XListDepths",
-        constants$18.XListDepths$FUNC, false
+        constants$18.XListDepths$FUNC
     );
     static final FunctionDescriptor XReconfigureWMWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -48,7 +48,7 @@ class constants$18 {
     );
     static final MethodHandle XReconfigureWMWindow$MH = RuntimeHelper.downcallHandle(
         "XReconfigureWMWindow",
-        constants$18.XReconfigureWMWindow$FUNC, false
+        constants$18.XReconfigureWMWindow$FUNC
     );
     static final FunctionDescriptor XGetWMProtocols$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -58,7 +58,7 @@ class constants$18 {
     );
     static final MethodHandle XGetWMProtocols$MH = RuntimeHelper.downcallHandle(
         "XGetWMProtocols",
-        constants$18.XGetWMProtocols$FUNC, false
+        constants$18.XGetWMProtocols$FUNC
     );
 }
 

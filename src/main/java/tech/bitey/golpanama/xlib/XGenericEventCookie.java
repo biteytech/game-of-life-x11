@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class XGenericEventCookie {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -78,13 +78,13 @@ public class XGenericEventCookie {
         return XGenericEventCookie.display$VH;
     }
     public static MemoryAddress display$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XGenericEventCookie.display$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XGenericEventCookie.display$VH.get(seg);
     }
     public static void display$set( MemorySegment seg, MemoryAddress x) {
         XGenericEventCookie.display$VH.set(seg, x);
     }
     public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XGenericEventCookie.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XGenericEventCookie.display$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
         XGenericEventCookie.display$VH.set(seg.asSlice(index*sizeof()), x);
@@ -142,13 +142,13 @@ public class XGenericEventCookie {
         return XGenericEventCookie.data$VH;
     }
     public static MemoryAddress data$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XGenericEventCookie.data$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XGenericEventCookie.data$VH.get(seg);
     }
     public static void data$set( MemorySegment seg, MemoryAddress x) {
         XGenericEventCookie.data$VH.set(seg, x);
     }
     public static MemoryAddress data$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XGenericEventCookie.data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XGenericEventCookie.data$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void data$set(MemorySegment seg, long index, MemoryAddress x) {
         XGenericEventCookie.data$VH.set(seg.asSlice(index*sizeof()), x);
@@ -158,11 +158,7 @@ public class XGenericEventCookie {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

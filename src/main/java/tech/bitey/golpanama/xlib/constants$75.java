@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$75 {
 
     static final FunctionDescriptor XDestroyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -14,14 +14,14 @@ class constants$75 {
     );
     static final MethodHandle XDestroyRegion$MH = RuntimeHelper.downcallHandle(
         "XDestroyRegion",
-        constants$75.XDestroyRegion$FUNC, false
+        constants$75.XDestroyRegion$FUNC
     );
     static final FunctionDescriptor XEmptyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XEmptyRegion$MH = RuntimeHelper.downcallHandle(
         "XEmptyRegion",
-        constants$75.XEmptyRegion$FUNC, false
+        constants$75.XEmptyRegion$FUNC
     );
     static final FunctionDescriptor XEqualRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -29,7 +29,7 @@ class constants$75 {
     );
     static final MethodHandle XEqualRegion$MH = RuntimeHelper.downcallHandle(
         "XEqualRegion",
-        constants$75.XEqualRegion$FUNC, false
+        constants$75.XEqualRegion$FUNC
     );
     static final FunctionDescriptor XFindContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -39,7 +39,7 @@ class constants$75 {
     );
     static final MethodHandle XFindContext$MH = RuntimeHelper.downcallHandle(
         "XFindContext",
-        constants$75.XFindContext$FUNC, false
+        constants$75.XFindContext$FUNC
     );
     static final FunctionDescriptor XGetClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -48,7 +48,7 @@ class constants$75 {
     );
     static final MethodHandle XGetClassHint$MH = RuntimeHelper.downcallHandle(
         "XGetClassHint",
-        constants$75.XGetClassHint$FUNC, false
+        constants$75.XGetClassHint$FUNC
     );
     static final FunctionDescriptor XGetIconSizes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -58,7 +58,7 @@ class constants$75 {
     );
     static final MethodHandle XGetIconSizes$MH = RuntimeHelper.downcallHandle(
         "XGetIconSizes",
-        constants$75.XGetIconSizes$FUNC, false
+        constants$75.XGetIconSizes$FUNC
     );
 }
 

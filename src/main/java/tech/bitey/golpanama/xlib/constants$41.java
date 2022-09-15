@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$41 {
 
     static final FunctionDescriptor XInstallColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -15,7 +15,7 @@ class constants$41 {
     );
     static final MethodHandle XInstallColormap$MH = RuntimeHelper.downcallHandle(
         "XInstallColormap",
-        constants$41.XInstallColormap$FUNC, false
+        constants$41.XInstallColormap$FUNC
     );
     static final FunctionDescriptor XKeysymToKeycode$FUNC = FunctionDescriptor.of(Constants$root.C_CHAR$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -23,7 +23,7 @@ class constants$41 {
     );
     static final MethodHandle XKeysymToKeycode$MH = RuntimeHelper.downcallHandle(
         "XKeysymToKeycode",
-        constants$41.XKeysymToKeycode$FUNC, false
+        constants$41.XKeysymToKeycode$FUNC
     );
     static final FunctionDescriptor XKillClient$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -31,7 +31,7 @@ class constants$41 {
     );
     static final MethodHandle XKillClient$MH = RuntimeHelper.downcallHandle(
         "XKillClient",
-        constants$41.XKillClient$FUNC, false
+        constants$41.XKillClient$FUNC
     );
     static final FunctionDescriptor XLookupColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -42,7 +42,7 @@ class constants$41 {
     );
     static final MethodHandle XLookupColor$MH = RuntimeHelper.downcallHandle(
         "XLookupColor",
-        constants$41.XLookupColor$FUNC, false
+        constants$41.XLookupColor$FUNC
     );
     static final FunctionDescriptor XLowerWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -50,7 +50,7 @@ class constants$41 {
     );
     static final MethodHandle XLowerWindow$MH = RuntimeHelper.downcallHandle(
         "XLowerWindow",
-        constants$41.XLowerWindow$FUNC, false
+        constants$41.XLowerWindow$FUNC
     );
     static final FunctionDescriptor XMapRaised$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -58,7 +58,7 @@ class constants$41 {
     );
     static final MethodHandle XMapRaised$MH = RuntimeHelper.downcallHandle(
         "XMapRaised",
-        constants$41.XMapRaised$FUNC, false
+        constants$41.XMapRaised$FUNC
     );
 }
 

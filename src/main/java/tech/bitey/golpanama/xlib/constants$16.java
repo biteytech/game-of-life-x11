@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$16 {
 
     static final FunctionDescriptor XDisplayString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -14,7 +14,7 @@ class constants$16 {
     );
     static final MethodHandle XDisplayString$MH = RuntimeHelper.downcallHandle(
         "XDisplayString",
-        constants$16.XDisplayString$FUNC, false
+        constants$16.XDisplayString$FUNC
     );
     static final FunctionDescriptor XDefaultColormap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -22,21 +22,21 @@ class constants$16 {
     );
     static final MethodHandle XDefaultColormap$MH = RuntimeHelper.downcallHandle(
         "XDefaultColormap",
-        constants$16.XDefaultColormap$FUNC, false
+        constants$16.XDefaultColormap$FUNC
     );
     static final FunctionDescriptor XDefaultColormapOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDefaultColormapOfScreen$MH = RuntimeHelper.downcallHandle(
         "XDefaultColormapOfScreen",
-        constants$16.XDefaultColormapOfScreen$FUNC, false
+        constants$16.XDefaultColormapOfScreen$FUNC
     );
     static final FunctionDescriptor XDisplayOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDisplayOfScreen$MH = RuntimeHelper.downcallHandle(
         "XDisplayOfScreen",
-        constants$16.XDisplayOfScreen$FUNC, false
+        constants$16.XDisplayOfScreen$FUNC
     );
     static final FunctionDescriptor XScreenOfDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -44,14 +44,14 @@ class constants$16 {
     );
     static final MethodHandle XScreenOfDisplay$MH = RuntimeHelper.downcallHandle(
         "XScreenOfDisplay",
-        constants$16.XScreenOfDisplay$FUNC, false
+        constants$16.XScreenOfDisplay$FUNC
     );
     static final FunctionDescriptor XDefaultScreenOfDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDefaultScreenOfDisplay$MH = RuntimeHelper.downcallHandle(
         "XDefaultScreenOfDisplay",
-        constants$16.XDefaultScreenOfDisplay$FUNC, false
+        constants$16.XDefaultScreenOfDisplay$FUNC
     );
 }
 

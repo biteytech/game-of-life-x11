@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class __pthread_internal_slist {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -20,13 +20,13 @@ public class __pthread_internal_slist {
         return __pthread_internal_slist.__next$VH;
     }
     public static MemoryAddress __next$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)__pthread_internal_slist.__next$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)__pthread_internal_slist.__next$VH.get(seg);
     }
     public static void __next$set( MemorySegment seg, MemoryAddress x) {
         __pthread_internal_slist.__next$VH.set(seg, x);
     }
     public static MemoryAddress __next$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)__pthread_internal_slist.__next$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)__pthread_internal_slist.__next$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void __next$set(MemorySegment seg, long index, MemoryAddress x) {
         __pthread_internal_slist.__next$VH.set(seg.asSlice(index*sizeof()), x);
@@ -36,11 +36,7 @@ public class __pthread_internal_slist {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

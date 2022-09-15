@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$21 {
 
     static final FunctionDescriptor XAddToSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -15,7 +15,7 @@ class constants$21 {
     );
     static final MethodHandle XAddToSaveSet$MH = RuntimeHelper.downcallHandle(
         "XAddToSaveSet",
-        constants$21.XAddToSaveSet$FUNC, false
+        constants$21.XAddToSaveSet$FUNC
     );
     static final FunctionDescriptor XAllocColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -24,7 +24,7 @@ class constants$21 {
     );
     static final MethodHandle XAllocColor$MH = RuntimeHelper.downcallHandle(
         "XAllocColor",
-        constants$21.XAllocColor$FUNC, false
+        constants$21.XAllocColor$FUNC
     );
     static final FunctionDescriptor XAllocColorCells$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -37,7 +37,7 @@ class constants$21 {
     );
     static final MethodHandle XAllocColorCells$MH = RuntimeHelper.downcallHandle(
         "XAllocColorCells",
-        constants$21.XAllocColorCells$FUNC, false
+        constants$21.XAllocColorCells$FUNC
     );
     static final FunctionDescriptor XAllocColorPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -54,7 +54,7 @@ class constants$21 {
     );
     static final MethodHandle XAllocColorPlanes$MH = RuntimeHelper.downcallHandle(
         "XAllocColorPlanes",
-        constants$21.XAllocColorPlanes$FUNC, false
+        constants$21.XAllocColorPlanes$FUNC
     );
     static final FunctionDescriptor XAllocNamedColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -65,7 +65,7 @@ class constants$21 {
     );
     static final MethodHandle XAllocNamedColor$MH = RuntimeHelper.downcallHandle(
         "XAllocNamedColor",
-        constants$21.XAllocNamedColor$FUNC, false
+        constants$21.XAllocNamedColor$FUNC
     );
     static final FunctionDescriptor XAllowEvents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -74,7 +74,7 @@ class constants$21 {
     );
     static final MethodHandle XAllowEvents$MH = RuntimeHelper.downcallHandle(
         "XAllowEvents",
-        constants$21.XAllowEvents$FUNC, false
+        constants$21.XAllowEvents$FUNC
     );
 }
 

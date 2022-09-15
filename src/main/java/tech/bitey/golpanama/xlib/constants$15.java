@@ -5,49 +5,49 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$15 {
 
     static final FunctionDescriptor XAllPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT);
     static final MethodHandle XAllPlanes$MH = RuntimeHelper.downcallHandle(
         "XAllPlanes",
-        constants$15.XAllPlanes$FUNC, false
+        constants$15.XAllPlanes$FUNC
     );
     static final FunctionDescriptor XBlackPixelOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XBlackPixelOfScreen$MH = RuntimeHelper.downcallHandle(
         "XBlackPixelOfScreen",
-        constants$15.XBlackPixelOfScreen$FUNC, false
+        constants$15.XBlackPixelOfScreen$FUNC
     );
     static final FunctionDescriptor XWhitePixelOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XWhitePixelOfScreen$MH = RuntimeHelper.downcallHandle(
         "XWhitePixelOfScreen",
-        constants$15.XWhitePixelOfScreen$FUNC, false
+        constants$15.XWhitePixelOfScreen$FUNC
     );
     static final FunctionDescriptor XNextRequest$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XNextRequest$MH = RuntimeHelper.downcallHandle(
         "XNextRequest",
-        constants$15.XNextRequest$FUNC, false
+        constants$15.XNextRequest$FUNC
     );
     static final FunctionDescriptor XLastKnownRequestProcessed$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XLastKnownRequestProcessed$MH = RuntimeHelper.downcallHandle(
         "XLastKnownRequestProcessed",
-        constants$15.XLastKnownRequestProcessed$FUNC, false
+        constants$15.XLastKnownRequestProcessed$FUNC
     );
     static final FunctionDescriptor XServerVendor$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XServerVendor$MH = RuntimeHelper.downcallHandle(
         "XServerVendor",
-        constants$15.XServerVendor$FUNC, false
+        constants$15.XServerVendor$FUNC
     );
 }
 

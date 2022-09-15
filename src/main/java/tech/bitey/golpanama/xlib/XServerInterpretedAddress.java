@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class XServerInterpretedAddress {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -55,13 +55,13 @@ public class XServerInterpretedAddress {
         return XServerInterpretedAddress.type$VH;
     }
     public static MemoryAddress type$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XServerInterpretedAddress.type$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XServerInterpretedAddress.type$VH.get(seg);
     }
     public static void type$set( MemorySegment seg, MemoryAddress x) {
         XServerInterpretedAddress.type$VH.set(seg, x);
     }
     public static MemoryAddress type$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XServerInterpretedAddress.type$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XServerInterpretedAddress.type$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, MemoryAddress x) {
         XServerInterpretedAddress.type$VH.set(seg.asSlice(index*sizeof()), x);
@@ -71,13 +71,13 @@ public class XServerInterpretedAddress {
         return XServerInterpretedAddress.value$VH;
     }
     public static MemoryAddress value$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XServerInterpretedAddress.value$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XServerInterpretedAddress.value$VH.get(seg);
     }
     public static void value$set( MemorySegment seg, MemoryAddress x) {
         XServerInterpretedAddress.value$VH.set(seg, x);
     }
     public static MemoryAddress value$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XServerInterpretedAddress.value$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XServerInterpretedAddress.value$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void value$set(MemorySegment seg, long index, MemoryAddress x) {
         XServerInterpretedAddress.value$VH.set(seg.asSlice(index*sizeof()), x);
@@ -87,11 +87,7 @@ public class XServerInterpretedAddress {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

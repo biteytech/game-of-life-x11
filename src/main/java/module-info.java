@@ -3,6 +3,4 @@ module golpanama {
 
 	requires transitive javafx.base;
 	requires transitive javafx.graphics;
-
-	requires jdk.incubator.foreign;
 }

@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class XOMOrientation {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -38,13 +38,13 @@ public class XOMOrientation {
         return XOMOrientation.orientation$VH;
     }
     public static MemoryAddress orientation$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XOMOrientation.orientation$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XOMOrientation.orientation$VH.get(seg);
     }
     public static void orientation$set( MemorySegment seg, MemoryAddress x) {
         XOMOrientation.orientation$VH.set(seg, x);
     }
     public static MemoryAddress orientation$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XOMOrientation.orientation$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XOMOrientation.orientation$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void orientation$set(MemorySegment seg, long index, MemoryAddress x) {
         XOMOrientation.orientation$VH.set(seg.asSlice(index*sizeof()), x);
@@ -54,11 +54,7 @@ public class XOMOrientation {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

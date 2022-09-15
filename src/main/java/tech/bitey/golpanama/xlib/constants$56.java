@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$56 {
 
     static final FunctionDescriptor XSetWindowBorderPixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$56 {
     );
     static final MethodHandle XSetWindowBorderPixmap$MH = RuntimeHelper.downcallHandle(
         "XSetWindowBorderPixmap",
-        constants$56.XSetWindowBorderPixmap$FUNC, false
+        constants$56.XSetWindowBorderPixmap$FUNC
     );
     static final FunctionDescriptor XSetWindowBorderWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -25,7 +25,7 @@ class constants$56 {
     );
     static final MethodHandle XSetWindowBorderWidth$MH = RuntimeHelper.downcallHandle(
         "XSetWindowBorderWidth",
-        constants$56.XSetWindowBorderWidth$FUNC, false
+        constants$56.XSetWindowBorderWidth$FUNC
     );
     static final FunctionDescriptor XSetWindowColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -34,7 +34,7 @@ class constants$56 {
     );
     static final MethodHandle XSetWindowColormap$MH = RuntimeHelper.downcallHandle(
         "XSetWindowColormap",
-        constants$56.XSetWindowColormap$FUNC, false
+        constants$56.XSetWindowColormap$FUNC
     );
     static final FunctionDescriptor XStoreBuffer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -44,7 +44,7 @@ class constants$56 {
     );
     static final MethodHandle XStoreBuffer$MH = RuntimeHelper.downcallHandle(
         "XStoreBuffer",
-        constants$56.XStoreBuffer$FUNC, false
+        constants$56.XStoreBuffer$FUNC
     );
     static final FunctionDescriptor XStoreBytes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -53,7 +53,7 @@ class constants$56 {
     );
     static final MethodHandle XStoreBytes$MH = RuntimeHelper.downcallHandle(
         "XStoreBytes",
-        constants$56.XStoreBytes$FUNC, false
+        constants$56.XStoreBytes$FUNC
     );
     static final FunctionDescriptor XStoreColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -62,7 +62,7 @@ class constants$56 {
     );
     static final MethodHandle XStoreColor$MH = RuntimeHelper.downcallHandle(
         "XStoreColor",
-        constants$56.XStoreColor$FUNC, false
+        constants$56.XStoreColor$FUNC
     );
 }
 

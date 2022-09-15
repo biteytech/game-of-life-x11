@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$13 {
 
     static final FunctionDescriptor XAddExtension$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -14,7 +14,7 @@ class constants$13 {
     );
     static final MethodHandle XAddExtension$MH = RuntimeHelper.downcallHandle(
         "XAddExtension",
-        constants$13.XAddExtension$FUNC, false
+        constants$13.XAddExtension$FUNC
     );
     static final FunctionDescriptor XFindOnExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -22,7 +22,7 @@ class constants$13 {
     );
     static final MethodHandle XFindOnExtensionList$MH = RuntimeHelper.downcallHandle(
         "XFindOnExtensionList",
-        constants$13.XFindOnExtensionList$FUNC, false
+        constants$13.XFindOnExtensionList$FUNC
     );
     static final FunctionDescriptor XEHeadOfExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         MemoryLayout.unionLayout(
@@ -36,7 +36,7 @@ class constants$13 {
     );
     static final MethodHandle XEHeadOfExtensionList$MH = RuntimeHelper.downcallHandle(
         "XEHeadOfExtensionList",
-        constants$13.XEHeadOfExtensionList$FUNC, false
+        constants$13.XEHeadOfExtensionList$FUNC
     );
     static final FunctionDescriptor XRootWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -44,21 +44,21 @@ class constants$13 {
     );
     static final MethodHandle XRootWindow$MH = RuntimeHelper.downcallHandle(
         "XRootWindow",
-        constants$13.XRootWindow$FUNC, false
+        constants$13.XRootWindow$FUNC
     );
     static final FunctionDescriptor XDefaultRootWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDefaultRootWindow$MH = RuntimeHelper.downcallHandle(
         "XDefaultRootWindow",
-        constants$13.XDefaultRootWindow$FUNC, false
+        constants$13.XDefaultRootWindow$FUNC
     );
     static final FunctionDescriptor XRootWindowOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XRootWindowOfScreen$MH = RuntimeHelper.downcallHandle(
         "XRootWindowOfScreen",
-        constants$13.XRootWindowOfScreen$FUNC, false
+        constants$13.XRootWindowOfScreen$FUNC
     );
 }
 

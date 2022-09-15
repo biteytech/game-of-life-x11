@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$79 {
 
     static final FunctionDescriptor XPointInRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$79 {
     );
     static final MethodHandle XPointInRegion$MH = RuntimeHelper.downcallHandle(
         "XPointInRegion",
-        constants$79.XPointInRegion$FUNC, false
+        constants$79.XPointInRegion$FUNC
     );
     static final FunctionDescriptor XPolygonRegion$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -25,7 +25,7 @@ class constants$79 {
     );
     static final MethodHandle XPolygonRegion$MH = RuntimeHelper.downcallHandle(
         "XPolygonRegion",
-        constants$79.XPolygonRegion$FUNC, false
+        constants$79.XPolygonRegion$FUNC
     );
     static final FunctionDescriptor XRectInRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -36,7 +36,7 @@ class constants$79 {
     );
     static final MethodHandle XRectInRegion$MH = RuntimeHelper.downcallHandle(
         "XRectInRegion",
-        constants$79.XRectInRegion$FUNC, false
+        constants$79.XRectInRegion$FUNC
     );
     static final FunctionDescriptor XSaveContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -46,7 +46,7 @@ class constants$79 {
     );
     static final MethodHandle XSaveContext$MH = RuntimeHelper.downcallHandle(
         "XSaveContext",
-        constants$79.XSaveContext$FUNC, false
+        constants$79.XSaveContext$FUNC
     );
     static final FunctionDescriptor XSetClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -55,7 +55,7 @@ class constants$79 {
     );
     static final MethodHandle XSetClassHint$MH = RuntimeHelper.downcallHandle(
         "XSetClassHint",
-        constants$79.XSetClassHint$FUNC, false
+        constants$79.XSetClassHint$FUNC
     );
     static final FunctionDescriptor XSetIconSizes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -65,7 +65,7 @@ class constants$79 {
     );
     static final MethodHandle XSetIconSizes$MH = RuntimeHelper.downcallHandle(
         "XSetIconSizes",
-        constants$79.XSetIconSizes$FUNC, false
+        constants$79.XSetIconSizes$FUNC
     );
 }
 

@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$47 {
 
     static final FunctionDescriptor XQueryPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -22,7 +22,7 @@ class constants$47 {
     );
     static final MethodHandle XQueryPointer$MH = RuntimeHelper.downcallHandle(
         "XQueryPointer",
-        constants$47.XQueryPointer$FUNC, false
+        constants$47.XQueryPointer$FUNC
     );
     static final FunctionDescriptor XQueryTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -36,7 +36,7 @@ class constants$47 {
     );
     static final MethodHandle XQueryTextExtents$MH = RuntimeHelper.downcallHandle(
         "XQueryTextExtents",
-        constants$47.XQueryTextExtents$FUNC, false
+        constants$47.XQueryTextExtents$FUNC
     );
     static final FunctionDescriptor XQueryTextExtents16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -50,7 +50,7 @@ class constants$47 {
     );
     static final MethodHandle XQueryTextExtents16$MH = RuntimeHelper.downcallHandle(
         "XQueryTextExtents16",
-        constants$47.XQueryTextExtents16$FUNC, false
+        constants$47.XQueryTextExtents16$FUNC
     );
     static final FunctionDescriptor XQueryTree$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -62,7 +62,7 @@ class constants$47 {
     );
     static final MethodHandle XQueryTree$MH = RuntimeHelper.downcallHandle(
         "XQueryTree",
-        constants$47.XQueryTree$FUNC, false
+        constants$47.XQueryTree$FUNC
     );
     static final FunctionDescriptor XRaiseWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -70,7 +70,7 @@ class constants$47 {
     );
     static final MethodHandle XRaiseWindow$MH = RuntimeHelper.downcallHandle(
         "XRaiseWindow",
-        constants$47.XRaiseWindow$FUNC, false
+        constants$47.XRaiseWindow$FUNC
     );
     static final FunctionDescriptor XReadBitmapFile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -84,7 +84,7 @@ class constants$47 {
     );
     static final MethodHandle XReadBitmapFile$MH = RuntimeHelper.downcallHandle(
         "XReadBitmapFile",
-        constants$47.XReadBitmapFile$FUNC, false
+        constants$47.XReadBitmapFile$FUNC
     );
 }
 

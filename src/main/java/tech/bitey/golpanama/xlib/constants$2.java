@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$2 {
 
     static final FunctionDescriptor XICProc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -15,7 +15,7 @@ class constants$2 {
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XICProc$MH = RuntimeHelper.downcallHandle(
-        constants$2.XICProc$FUNC, false
+        constants$2.XICProc$FUNC
     );
     static final FunctionDescriptor XIDProc$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -23,7 +23,7 @@ class constants$2 {
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XIDProc$MH = RuntimeHelper.downcallHandle(
-        constants$2.XIDProc$FUNC, false
+        constants$2.XIDProc$FUNC
     );
     static final  OfInt _Xdebug$LAYOUT = Constants$root.C_INT$LAYOUT;
     static final VarHandle _Xdebug$VH = constants$2._Xdebug$LAYOUT.varHandle();
@@ -34,7 +34,7 @@ class constants$2 {
     );
     static final MethodHandle XLoadQueryFont$MH = RuntimeHelper.downcallHandle(
         "XLoadQueryFont",
-        constants$2.XLoadQueryFont$FUNC, false
+        constants$2.XLoadQueryFont$FUNC
     );
     static final FunctionDescriptor XQueryFont$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -42,7 +42,7 @@ class constants$2 {
     );
     static final MethodHandle XQueryFont$MH = RuntimeHelper.downcallHandle(
         "XQueryFont",
-        constants$2.XQueryFont$FUNC, false
+        constants$2.XQueryFont$FUNC
     );
 }
 

@@ -5,19 +5,19 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public interface XSetAfterFunction$x0 {
 
-    int apply(jdk.incubator.foreign.MemoryAddress x0);
-    static NativeSymbol allocate(XSetAfterFunction$x0 fi, ResourceScope scope) {
-        return RuntimeHelper.upcallStub(XSetAfterFunction$x0.class, fi, constants$6.XSetAfterFunction$x0$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;)I", scope);
+    int apply(java.lang.foreign.MemoryAddress _x0);
+    static MemorySegment allocate(XSetAfterFunction$x0 fi, MemorySession session) {
+        return RuntimeHelper.upcallStub(XSetAfterFunction$x0.class, fi, constants$6.XSetAfterFunction$x0$FUNC, session);
     }
-    static XSetAfterFunction$x0 ofAddress(MemoryAddress addr, ResourceScope scope) {
-        NativeSymbol symbol = NativeSymbol.ofAddress("XSetAfterFunction$x0::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0) -> {
+    static XSetAfterFunction$x0 ofAddress(MemoryAddress addr, MemorySession session) {
+        MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+        return (java.lang.foreign.MemoryAddress __x0) -> {
             try {
-                return (int)constants$6.XSetAfterFunction$x0$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0);
+                return (int)constants$6.XSetAfterFunction$x0$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

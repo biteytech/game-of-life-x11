@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class _XImage {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -108,13 +108,13 @@ public class _XImage {
         return _XImage.data$VH;
     }
     public static MemoryAddress data$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)_XImage.data$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)_XImage.data$VH.get(seg);
     }
     public static void data$set( MemorySegment seg, MemoryAddress x) {
         _XImage.data$VH.set(seg, x);
     }
     public static MemoryAddress data$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)_XImage.data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)_XImage.data$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void data$set(MemorySegment seg, long index, MemoryAddress x) {
         _XImage.data$VH.set(seg.asSlice(index*sizeof()), x);
@@ -284,13 +284,13 @@ public class _XImage {
         return _XImage.obdata$VH;
     }
     public static MemoryAddress obdata$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)_XImage.obdata$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)_XImage.obdata$VH.get(seg);
     }
     public static void obdata$set( MemorySegment seg, MemoryAddress x) {
         _XImage.obdata$VH.set(seg, x);
     }
     public static MemoryAddress obdata$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)_XImage.obdata$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)_XImage.obdata$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void obdata$set(MemorySegment seg, long index, MemoryAddress x) {
         _XImage.obdata$VH.set(seg.asSlice(index*sizeof()), x);
@@ -321,19 +321,19 @@ public class _XImage {
             Constants$root.C_INT$LAYOUT
         );
         static final MethodHandle create_image$MH = RuntimeHelper.downcallHandle(
-            funcs.create_image$FUNC, false
+            funcs.create_image$FUNC
         );
         public interface create_image {
 
-            jdk.incubator.foreign.Addressable apply(jdk.incubator.foreign.MemoryAddress x0, jdk.incubator.foreign.MemoryAddress x1, int x2, int x3, int x4, jdk.incubator.foreign.MemoryAddress x5, int x6, int x7, int x8, int x9);
-            static NativeSymbol allocate(create_image fi, ResourceScope scope) {
-                return RuntimeHelper.upcallStub(create_image.class, fi, funcs.create_image$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;IIILjdk/incubator/foreign/MemoryAddress;IIII)Ljdk/incubator/foreign/Addressable;", scope);
+            java.lang.foreign.Addressable apply(java.lang.foreign.MemoryAddress _x0, java.lang.foreign.MemoryAddress _x1, int _x2, int _x3, int _x4, java.lang.foreign.MemoryAddress _x5, int _x6, int _x7, int _x8, int _x9);
+            static MemorySegment allocate(create_image fi, MemorySession session) {
+                return RuntimeHelper.upcallStub(create_image.class, fi, funcs.create_image$FUNC, session);
             }
-            static create_image ofAddress(MemoryAddress addr, ResourceScope scope) {
-                NativeSymbol symbol = NativeSymbol.ofAddress("create_image::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0, jdk.incubator.foreign.MemoryAddress x1, int x2, int x3, int x4, jdk.incubator.foreign.MemoryAddress x5, int x6, int x7, int x8, int x9) -> {
+            static create_image ofAddress(MemoryAddress addr, MemorySession session) {
+                MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+                return (java.lang.foreign.MemoryAddress __x0, java.lang.foreign.MemoryAddress __x1, int __x2, int __x3, int __x4, java.lang.foreign.MemoryAddress __x5, int __x6, int __x7, int __x8, int __x9) -> {
                     try {
-                        return (jdk.incubator.foreign.Addressable)(jdk.incubator.foreign.MemoryAddress)funcs.create_image$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0, (jdk.incubator.foreign.Addressable)x1, x2, x3, x4, (jdk.incubator.foreign.Addressable)x5, x6, x7, x8, x9);
+                        return (java.lang.foreign.Addressable)(java.lang.foreign.MemoryAddress)funcs.create_image$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, (java.lang.foreign.Addressable)__x1, __x2, __x3, __x4, (java.lang.foreign.Addressable)__x5, __x6, __x7, __x8, __x9);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -346,37 +346,37 @@ return (jdk.incubator.foreign.MemoryAddress x0, jdk.incubator.foreign.MemoryAddr
             return funcs.create_image$VH;
         }
         public static MemoryAddress create_image$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.create_image$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)funcs.create_image$VH.get(seg);
         }
         public static void create_image$set( MemorySegment seg, MemoryAddress x) {
             funcs.create_image$VH.set(seg, x);
         }
         public static MemoryAddress create_image$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.create_image$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)funcs.create_image$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void create_image$set(MemorySegment seg, long index, MemoryAddress x) {
             funcs.create_image$VH.set(seg.asSlice(index*sizeof()), x);
         }
-        public static create_image create_image (MemorySegment segment, ResourceScope scope) {
-            return create_image.ofAddress(create_image$get(segment), scope);
+        public static create_image create_image (MemorySegment segment, MemorySession session) {
+            return create_image.ofAddress(create_image$get(segment), session);
         }
         static final FunctionDescriptor destroy_image$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
             Constants$root.C_POINTER$LAYOUT
         );
         static final MethodHandle destroy_image$MH = RuntimeHelper.downcallHandle(
-            funcs.destroy_image$FUNC, false
+            funcs.destroy_image$FUNC
         );
         public interface destroy_image {
 
-            int apply(jdk.incubator.foreign.MemoryAddress x0);
-            static NativeSymbol allocate(destroy_image fi, ResourceScope scope) {
-                return RuntimeHelper.upcallStub(destroy_image.class, fi, funcs.destroy_image$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;)I", scope);
+            int apply(java.lang.foreign.MemoryAddress _x0);
+            static MemorySegment allocate(destroy_image fi, MemorySession session) {
+                return RuntimeHelper.upcallStub(destroy_image.class, fi, funcs.destroy_image$FUNC, session);
             }
-            static destroy_image ofAddress(MemoryAddress addr, ResourceScope scope) {
-                NativeSymbol symbol = NativeSymbol.ofAddress("destroy_image::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0) -> {
+            static destroy_image ofAddress(MemoryAddress addr, MemorySession session) {
+                MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+                return (java.lang.foreign.MemoryAddress __x0) -> {
                     try {
-                        return (int)funcs.destroy_image$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0);
+                        return (int)funcs.destroy_image$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -389,19 +389,19 @@ return (jdk.incubator.foreign.MemoryAddress x0) -> {
             return funcs.destroy_image$VH;
         }
         public static MemoryAddress destroy_image$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.destroy_image$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)funcs.destroy_image$VH.get(seg);
         }
         public static void destroy_image$set( MemorySegment seg, MemoryAddress x) {
             funcs.destroy_image$VH.set(seg, x);
         }
         public static MemoryAddress destroy_image$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.destroy_image$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)funcs.destroy_image$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void destroy_image$set(MemorySegment seg, long index, MemoryAddress x) {
             funcs.destroy_image$VH.set(seg.asSlice(index*sizeof()), x);
         }
-        public static destroy_image destroy_image (MemorySegment segment, ResourceScope scope) {
-            return destroy_image.ofAddress(destroy_image$get(segment), scope);
+        public static destroy_image destroy_image (MemorySegment segment, MemorySession session) {
+            return destroy_image.ofAddress(destroy_image$get(segment), session);
         }
         static final FunctionDescriptor get_pixel$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
             Constants$root.C_POINTER$LAYOUT,
@@ -409,19 +409,19 @@ return (jdk.incubator.foreign.MemoryAddress x0) -> {
             Constants$root.C_INT$LAYOUT
         );
         static final MethodHandle get_pixel$MH = RuntimeHelper.downcallHandle(
-            funcs.get_pixel$FUNC, false
+            funcs.get_pixel$FUNC
         );
         public interface get_pixel {
 
-            long apply(jdk.incubator.foreign.MemoryAddress x0, int x1, int x2);
-            static NativeSymbol allocate(get_pixel fi, ResourceScope scope) {
-                return RuntimeHelper.upcallStub(get_pixel.class, fi, funcs.get_pixel$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;II)J", scope);
+            long apply(java.lang.foreign.MemoryAddress _x0, int _x1, int _x2);
+            static MemorySegment allocate(get_pixel fi, MemorySession session) {
+                return RuntimeHelper.upcallStub(get_pixel.class, fi, funcs.get_pixel$FUNC, session);
             }
-            static get_pixel ofAddress(MemoryAddress addr, ResourceScope scope) {
-                NativeSymbol symbol = NativeSymbol.ofAddress("get_pixel::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2) -> {
+            static get_pixel ofAddress(MemoryAddress addr, MemorySession session) {
+                MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+                return (java.lang.foreign.MemoryAddress __x0, int __x1, int __x2) -> {
                     try {
-                        return (long)funcs.get_pixel$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0, x1, x2);
+                        return (long)funcs.get_pixel$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, __x1, __x2);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -434,19 +434,19 @@ return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2) -> {
             return funcs.get_pixel$VH;
         }
         public static MemoryAddress get_pixel$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.get_pixel$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)funcs.get_pixel$VH.get(seg);
         }
         public static void get_pixel$set( MemorySegment seg, MemoryAddress x) {
             funcs.get_pixel$VH.set(seg, x);
         }
         public static MemoryAddress get_pixel$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.get_pixel$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)funcs.get_pixel$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void get_pixel$set(MemorySegment seg, long index, MemoryAddress x) {
             funcs.get_pixel$VH.set(seg.asSlice(index*sizeof()), x);
         }
-        public static get_pixel get_pixel (MemorySegment segment, ResourceScope scope) {
-            return get_pixel.ofAddress(get_pixel$get(segment), scope);
+        public static get_pixel get_pixel (MemorySegment segment, MemorySession session) {
+            return get_pixel.ofAddress(get_pixel$get(segment), session);
         }
         static final FunctionDescriptor put_pixel$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
             Constants$root.C_POINTER$LAYOUT,
@@ -455,19 +455,19 @@ return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2) -> {
             Constants$root.C_LONG_LONG$LAYOUT
         );
         static final MethodHandle put_pixel$MH = RuntimeHelper.downcallHandle(
-            funcs.put_pixel$FUNC, false
+            funcs.put_pixel$FUNC
         );
         public interface put_pixel {
 
-            int apply(jdk.incubator.foreign.MemoryAddress x0, int x1, int x2, long x3);
-            static NativeSymbol allocate(put_pixel fi, ResourceScope scope) {
-                return RuntimeHelper.upcallStub(put_pixel.class, fi, funcs.put_pixel$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;IIJ)I", scope);
+            int apply(java.lang.foreign.MemoryAddress _x0, int _x1, int _x2, long _x3);
+            static MemorySegment allocate(put_pixel fi, MemorySession session) {
+                return RuntimeHelper.upcallStub(put_pixel.class, fi, funcs.put_pixel$FUNC, session);
             }
-            static put_pixel ofAddress(MemoryAddress addr, ResourceScope scope) {
-                NativeSymbol symbol = NativeSymbol.ofAddress("put_pixel::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2, long x3) -> {
+            static put_pixel ofAddress(MemoryAddress addr, MemorySession session) {
+                MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+                return (java.lang.foreign.MemoryAddress __x0, int __x1, int __x2, long __x3) -> {
                     try {
-                        return (int)funcs.put_pixel$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0, x1, x2, x3);
+                        return (int)funcs.put_pixel$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, __x1, __x2, __x3);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -480,19 +480,19 @@ return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2, long x3) -> {
             return funcs.put_pixel$VH;
         }
         public static MemoryAddress put_pixel$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.put_pixel$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)funcs.put_pixel$VH.get(seg);
         }
         public static void put_pixel$set( MemorySegment seg, MemoryAddress x) {
             funcs.put_pixel$VH.set(seg, x);
         }
         public static MemoryAddress put_pixel$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.put_pixel$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)funcs.put_pixel$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void put_pixel$set(MemorySegment seg, long index, MemoryAddress x) {
             funcs.put_pixel$VH.set(seg.asSlice(index*sizeof()), x);
         }
-        public static put_pixel put_pixel (MemorySegment segment, ResourceScope scope) {
-            return put_pixel.ofAddress(put_pixel$get(segment), scope);
+        public static put_pixel put_pixel (MemorySegment segment, MemorySession session) {
+            return put_pixel.ofAddress(put_pixel$get(segment), session);
         }
         static final FunctionDescriptor sub_image$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
             Constants$root.C_POINTER$LAYOUT,
@@ -502,19 +502,19 @@ return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2, long x3) -> {
             Constants$root.C_INT$LAYOUT
         );
         static final MethodHandle sub_image$MH = RuntimeHelper.downcallHandle(
-            funcs.sub_image$FUNC, false
+            funcs.sub_image$FUNC
         );
         public interface sub_image {
 
-            jdk.incubator.foreign.Addressable apply(jdk.incubator.foreign.MemoryAddress x0, int x1, int x2, int x3, int x4);
-            static NativeSymbol allocate(sub_image fi, ResourceScope scope) {
-                return RuntimeHelper.upcallStub(sub_image.class, fi, funcs.sub_image$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;IIII)Ljdk/incubator/foreign/Addressable;", scope);
+            java.lang.foreign.Addressable apply(java.lang.foreign.MemoryAddress _x0, int _x1, int _x2, int _x3, int _x4);
+            static MemorySegment allocate(sub_image fi, MemorySession session) {
+                return RuntimeHelper.upcallStub(sub_image.class, fi, funcs.sub_image$FUNC, session);
             }
-            static sub_image ofAddress(MemoryAddress addr, ResourceScope scope) {
-                NativeSymbol symbol = NativeSymbol.ofAddress("sub_image::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2, int x3, int x4) -> {
+            static sub_image ofAddress(MemoryAddress addr, MemorySession session) {
+                MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+                return (java.lang.foreign.MemoryAddress __x0, int __x1, int __x2, int __x3, int __x4) -> {
                     try {
-                        return (jdk.incubator.foreign.Addressable)(jdk.incubator.foreign.MemoryAddress)funcs.sub_image$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0, x1, x2, x3, x4);
+                        return (java.lang.foreign.Addressable)(java.lang.foreign.MemoryAddress)funcs.sub_image$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, __x1, __x2, __x3, __x4);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -527,38 +527,38 @@ return (jdk.incubator.foreign.MemoryAddress x0, int x1, int x2, int x3, int x4) 
             return funcs.sub_image$VH;
         }
         public static MemoryAddress sub_image$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.sub_image$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)funcs.sub_image$VH.get(seg);
         }
         public static void sub_image$set( MemorySegment seg, MemoryAddress x) {
             funcs.sub_image$VH.set(seg, x);
         }
         public static MemoryAddress sub_image$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.sub_image$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)funcs.sub_image$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void sub_image$set(MemorySegment seg, long index, MemoryAddress x) {
             funcs.sub_image$VH.set(seg.asSlice(index*sizeof()), x);
         }
-        public static sub_image sub_image (MemorySegment segment, ResourceScope scope) {
-            return sub_image.ofAddress(sub_image$get(segment), scope);
+        public static sub_image sub_image (MemorySegment segment, MemorySession session) {
+            return sub_image.ofAddress(sub_image$get(segment), session);
         }
         static final FunctionDescriptor add_pixel$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
             Constants$root.C_POINTER$LAYOUT,
             Constants$root.C_LONG_LONG$LAYOUT
         );
         static final MethodHandle add_pixel$MH = RuntimeHelper.downcallHandle(
-            funcs.add_pixel$FUNC, false
+            funcs.add_pixel$FUNC
         );
         public interface add_pixel {
 
-            int apply(jdk.incubator.foreign.MemoryAddress x0, long x1);
-            static NativeSymbol allocate(add_pixel fi, ResourceScope scope) {
-                return RuntimeHelper.upcallStub(add_pixel.class, fi, funcs.add_pixel$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;J)I", scope);
+            int apply(java.lang.foreign.MemoryAddress _x0, long _x1);
+            static MemorySegment allocate(add_pixel fi, MemorySession session) {
+                return RuntimeHelper.upcallStub(add_pixel.class, fi, funcs.add_pixel$FUNC, session);
             }
-            static add_pixel ofAddress(MemoryAddress addr, ResourceScope scope) {
-                NativeSymbol symbol = NativeSymbol.ofAddress("add_pixel::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0, long x1) -> {
+            static add_pixel ofAddress(MemoryAddress addr, MemorySession session) {
+                MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+                return (java.lang.foreign.MemoryAddress __x0, long __x1) -> {
                     try {
-                        return (int)funcs.add_pixel$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0, x1);
+                        return (int)funcs.add_pixel$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, __x1);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -571,30 +571,26 @@ return (jdk.incubator.foreign.MemoryAddress x0, long x1) -> {
             return funcs.add_pixel$VH;
         }
         public static MemoryAddress add_pixel$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.add_pixel$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)funcs.add_pixel$VH.get(seg);
         }
         public static void add_pixel$set( MemorySegment seg, MemoryAddress x) {
             funcs.add_pixel$VH.set(seg, x);
         }
         public static MemoryAddress add_pixel$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)funcs.add_pixel$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)funcs.add_pixel$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void add_pixel$set(MemorySegment seg, long index, MemoryAddress x) {
             funcs.add_pixel$VH.set(seg.asSlice(index*sizeof()), x);
         }
-        public static add_pixel add_pixel (MemorySegment segment, ResourceScope scope) {
-            return add_pixel.ofAddress(add_pixel$get(segment), scope);
+        public static add_pixel add_pixel (MemorySegment segment, MemorySession session) {
+            return add_pixel.ofAddress(add_pixel$get(segment), session);
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-        public static MemorySegment allocateArray(int len, ResourceScope scope) {
-            return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-        }
-        public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+        public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
     }
 
     public static MemorySegment f$slice(MemorySegment seg) {
@@ -605,11 +601,7 @@ return (jdk.incubator.foreign.MemoryAddress x0, long x1) -> {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

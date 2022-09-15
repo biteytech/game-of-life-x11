@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$73 {
 
     static final FunctionDescriptor _Xwctomb$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -15,7 +15,7 @@ class constants$73 {
     );
     static final MethodHandle _Xwctomb$MH = RuntimeHelper.downcallHandle(
         "_Xwctomb",
-        constants$73._Xwctomb$FUNC, false
+        constants$73._Xwctomb$FUNC
     );
     static final FunctionDescriptor XGetEventData$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -23,7 +23,7 @@ class constants$73 {
     );
     static final MethodHandle XGetEventData$MH = RuntimeHelper.downcallHandle(
         "XGetEventData",
-        constants$73.XGetEventData$FUNC, false
+        constants$73.XGetEventData$FUNC
     );
     static final FunctionDescriptor XFreeEventData$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -31,22 +31,22 @@ class constants$73 {
     );
     static final MethodHandle XFreeEventData$MH = RuntimeHelper.downcallHandle(
         "XFreeEventData",
-        constants$73.XFreeEventData$FUNC, false
+        constants$73.XFreeEventData$FUNC
     );
     static final FunctionDescriptor XAllocClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
     static final MethodHandle XAllocClassHint$MH = RuntimeHelper.downcallHandle(
         "XAllocClassHint",
-        constants$73.XAllocClassHint$FUNC, false
+        constants$73.XAllocClassHint$FUNC
     );
     static final FunctionDescriptor XAllocIconSize$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
     static final MethodHandle XAllocIconSize$MH = RuntimeHelper.downcallHandle(
         "XAllocIconSize",
-        constants$73.XAllocIconSize$FUNC, false
+        constants$73.XAllocIconSize$FUNC
     );
     static final FunctionDescriptor XAllocSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
     static final MethodHandle XAllocSizeHints$MH = RuntimeHelper.downcallHandle(
         "XAllocSizeHints",
-        constants$73.XAllocSizeHints$FUNC, false
+        constants$73.XAllocSizeHints$FUNC
     );
 }
 

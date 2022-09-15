@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$61 {
 
     static final FunctionDescriptor XWriteBitmapFile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -20,19 +20,19 @@ class constants$61 {
     );
     static final MethodHandle XWriteBitmapFile$MH = RuntimeHelper.downcallHandle(
         "XWriteBitmapFile",
-        constants$61.XWriteBitmapFile$FUNC, false
+        constants$61.XWriteBitmapFile$FUNC
     );
     static final FunctionDescriptor XSupportsLocale$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
     static final MethodHandle XSupportsLocale$MH = RuntimeHelper.downcallHandle(
         "XSupportsLocale",
-        constants$61.XSupportsLocale$FUNC, false
+        constants$61.XSupportsLocale$FUNC
     );
     static final FunctionDescriptor XSetLocaleModifiers$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XSetLocaleModifiers$MH = RuntimeHelper.downcallHandle(
         "XSetLocaleModifiers",
-        constants$61.XSetLocaleModifiers$FUNC, false
+        constants$61.XSetLocaleModifiers$FUNC
     );
     static final FunctionDescriptor XOpenOM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -42,21 +42,21 @@ class constants$61 {
     );
     static final MethodHandle XOpenOM$MH = RuntimeHelper.downcallHandle(
         "XOpenOM",
-        constants$61.XOpenOM$FUNC, false
+        constants$61.XOpenOM$FUNC
     );
     static final FunctionDescriptor XCloseOM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XCloseOM$MH = RuntimeHelper.downcallHandle(
         "XCloseOM",
-        constants$61.XCloseOM$FUNC, false
+        constants$61.XCloseOM$FUNC
     );
     static final FunctionDescriptor XSetOMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XSetOMValues$MH = RuntimeHelper.downcallHandle(
+    static final MethodHandle XSetOMValues$MH = RuntimeHelper.downcallHandleVariadic(
         "XSetOMValues",
-        constants$61.XSetOMValues$FUNC, true
+        constants$61.XSetOMValues$FUNC
     );
 }
 

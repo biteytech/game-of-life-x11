@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class _XExtData {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -40,13 +40,13 @@ public class _XExtData {
         return _XExtData.next$VH;
     }
     public static MemoryAddress next$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)_XExtData.next$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)_XExtData.next$VH.get(seg);
     }
     public static void next$set( MemorySegment seg, MemoryAddress x) {
         _XExtData.next$VH.set(seg, x);
     }
     public static MemoryAddress next$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)_XExtData.next$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)_XExtData.next$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void next$set(MemorySegment seg, long index, MemoryAddress x) {
         _XExtData.next$VH.set(seg.asSlice(index*sizeof()), x);
@@ -55,19 +55,19 @@ public class _XExtData {
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle free_private$MH = RuntimeHelper.downcallHandle(
-        _XExtData.free_private$FUNC, false
+        _XExtData.free_private$FUNC
     );
     public interface free_private {
 
-        int apply(jdk.incubator.foreign.MemoryAddress x0);
-        static NativeSymbol allocate(free_private fi, ResourceScope scope) {
-            return RuntimeHelper.upcallStub(free_private.class, fi, _XExtData.free_private$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;)I", scope);
+        int apply(java.lang.foreign.MemoryAddress _x0);
+        static MemorySegment allocate(free_private fi, MemorySession session) {
+            return RuntimeHelper.upcallStub(free_private.class, fi, _XExtData.free_private$FUNC, session);
         }
-        static free_private ofAddress(MemoryAddress addr, ResourceScope scope) {
-            NativeSymbol symbol = NativeSymbol.ofAddress("free_private::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0) -> {
+        static free_private ofAddress(MemoryAddress addr, MemorySession session) {
+            MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+            return (java.lang.foreign.MemoryAddress __x0) -> {
                 try {
-                    return (int)_XExtData.free_private$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0);
+                    return (int)_XExtData.free_private$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0);
                 } catch (Throwable ex$) {
                     throw new AssertionError("should not reach here", ex$);
                 }
@@ -80,32 +80,32 @@ return (jdk.incubator.foreign.MemoryAddress x0) -> {
         return _XExtData.free_private$VH;
     }
     public static MemoryAddress free_private$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)_XExtData.free_private$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)_XExtData.free_private$VH.get(seg);
     }
     public static void free_private$set( MemorySegment seg, MemoryAddress x) {
         _XExtData.free_private$VH.set(seg, x);
     }
     public static MemoryAddress free_private$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)_XExtData.free_private$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)_XExtData.free_private$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void free_private$set(MemorySegment seg, long index, MemoryAddress x) {
         _XExtData.free_private$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    public static free_private free_private (MemorySegment segment, ResourceScope scope) {
-        return free_private.ofAddress(free_private$get(segment), scope);
+    public static free_private free_private (MemorySegment segment, MemorySession session) {
+        return free_private.ofAddress(free_private$get(segment), session);
     }
     static final VarHandle private_data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("private_data"));
     public static VarHandle private_data$VH() {
         return _XExtData.private_data$VH;
     }
     public static MemoryAddress private_data$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)_XExtData.private_data$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)_XExtData.private_data$VH.get(seg);
     }
     public static void private_data$set( MemorySegment seg, MemoryAddress x) {
         _XExtData.private_data$VH.set(seg, x);
     }
     public static MemoryAddress private_data$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)_XExtData.private_data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)_XExtData.private_data$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void private_data$set(MemorySegment seg, long index, MemoryAddress x) {
         _XExtData.private_data$VH.set(seg.asSlice(index*sizeof()), x);
@@ -115,11 +115,7 @@ return (jdk.incubator.foreign.MemoryAddress x0) -> {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

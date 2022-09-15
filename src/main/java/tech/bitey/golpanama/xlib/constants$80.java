@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$80 {
 
     static final FunctionDescriptor XSetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$80 {
     );
     static final MethodHandle XSetNormalHints$MH = RuntimeHelper.downcallHandle(
         "XSetNormalHints",
-        constants$80.XSetNormalHints$FUNC, false
+        constants$80.XSetNormalHints$FUNC
     );
     static final FunctionDescriptor XSetRGBColormaps$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -27,7 +27,7 @@ class constants$80 {
     );
     static final MethodHandle XSetRGBColormaps$MH = RuntimeHelper.downcallHandle(
         "XSetRGBColormaps",
-        constants$80.XSetRGBColormaps$FUNC, false
+        constants$80.XSetRGBColormaps$FUNC
     );
     static final FunctionDescriptor XSetSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -37,7 +37,7 @@ class constants$80 {
     );
     static final MethodHandle XSetSizeHints$MH = RuntimeHelper.downcallHandle(
         "XSetSizeHints",
-        constants$80.XSetSizeHints$FUNC, false
+        constants$80.XSetSizeHints$FUNC
     );
     static final FunctionDescriptor XSetStandardProperties$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -51,7 +51,7 @@ class constants$80 {
     );
     static final MethodHandle XSetStandardProperties$MH = RuntimeHelper.downcallHandle(
         "XSetStandardProperties",
-        constants$80.XSetStandardProperties$FUNC, false
+        constants$80.XSetStandardProperties$FUNC
     );
     static final FunctionDescriptor XSetTextProperty$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -61,7 +61,7 @@ class constants$80 {
     );
     static final MethodHandle XSetTextProperty$MH = RuntimeHelper.downcallHandle(
         "XSetTextProperty",
-        constants$80.XSetTextProperty$FUNC, false
+        constants$80.XSetTextProperty$FUNC
     );
     static final FunctionDescriptor XSetWMClientMachine$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -70,7 +70,7 @@ class constants$80 {
     );
     static final MethodHandle XSetWMClientMachine$MH = RuntimeHelper.downcallHandle(
         "XSetWMClientMachine",
-        constants$80.XSetWMClientMachine$FUNC, false
+        constants$80.XSetWMClientMachine$FUNC
     );
 }
 

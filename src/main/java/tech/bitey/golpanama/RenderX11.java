@@ -16,15 +16,16 @@
 
 package tech.bitey.golpanama;
 
-import static jdk.incubator.foreign.MemoryAddress.NULL;
+import static java.lang.foreign.MemoryAddress.NULL;
 import static tech.bitey.golpanama.GameOfLife.CELL_PX;
 import static tech.bitey.golpanama.GameOfLife.HEIGHT_PX;
 import static tech.bitey.golpanama.GameOfLife.WIDTH_PX;
 
-import jdk.incubator.foreign.MemoryAddress;
-import jdk.incubator.foreign.MemorySegment;
-import jdk.incubator.foreign.ResourceScope;
-import jdk.incubator.foreign.SegmentAllocator;
+import java.lang.foreign.MemoryAddress;
+import java.lang.foreign.MemorySegment;
+import java.lang.foreign.MemorySession;
+import java.lang.foreign.SegmentAllocator;
+
 import tech.bitey.golpanama.xlib.XColor;
 import tech.bitey.golpanama.xlib.XEvent;
 import tech.bitey.golpanama.xlib.Xlib_h;
@@ -49,20 +50,17 @@ public class RenderX11 implements Render {
 		win = Xlib_h.XCreateSimpleWindow(display, Xlib_h.XDefaultRootWindow(display), 0, 0, WIDTH_PX, HEIGHT_PX, 0,
 				black, white);
 
-		try (var scope = ResourceScope.newConfinedScope()) {
-			MemoryAddress gameOfLife = SegmentAllocator.implicitAllocator().allocateUtf8String("Game of Life")
-					.address();
-			Xlib_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
-		}
+		MemoryAddress gameOfLife = SegmentAllocator.implicitAllocator().allocateUtf8String("Game of Life").address();
+		Xlib_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
 
 		Xlib_h.XSelectInput(display, win, Xlib_h.ExposureMask());
 
 		Xlib_h.XClearWindow(display, win);
 		Xlib_h.XMapRaised(display, win);
 
-		try (var scope = ResourceScope.newConfinedScope()) {
+		try (var session = MemorySession.openConfined()) {
 			// exposure event
-			MemorySegment event = XEvent.allocate(scope);
+			MemorySegment event = XEvent.allocate(session);
 			Xlib_h.XNextEvent(display, event.address());
 		}
 
@@ -72,9 +70,9 @@ public class RenderX11 implements Render {
 	@Override
 	public void drawGrid() {
 		// set light gray color
-		try (var scope = ResourceScope.newConfinedScope()) {
+		try (var session = MemorySession.openConfined()) {
 			long cmap = Xlib_h.XDefaultColormap(display, 0);
-			MemorySegment near_color = XColor.allocate(scope), true_color = XColor.allocate(scope);
+			MemorySegment near_color = XColor.allocate(session), true_color = XColor.allocate(session);
 			MemorySegment lightGray = SegmentAllocator.implicitAllocator().allocateUtf8String("Light Gray");
 			Xlib_h.XAllocNamedColor(display, cmap, lightGray, near_color.address(), true_color.address());
 			Xlib_h.XSetForeground(display, gc, XColor.pixel$get(near_color));

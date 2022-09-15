@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$68 {
 
     static final FunctionDescriptor XCloseIM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -14,42 +14,42 @@ class constants$68 {
     );
     static final MethodHandle XCloseIM$MH = RuntimeHelper.downcallHandle(
         "XCloseIM",
-        constants$68.XCloseIM$FUNC, false
+        constants$68.XCloseIM$FUNC
     );
     static final FunctionDescriptor XGetIMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XGetIMValues$MH = RuntimeHelper.downcallHandle(
+    static final MethodHandle XGetIMValues$MH = RuntimeHelper.downcallHandleVariadic(
         "XGetIMValues",
-        constants$68.XGetIMValues$FUNC, true
+        constants$68.XGetIMValues$FUNC
     );
     static final FunctionDescriptor XSetIMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XSetIMValues$MH = RuntimeHelper.downcallHandle(
+    static final MethodHandle XSetIMValues$MH = RuntimeHelper.downcallHandleVariadic(
         "XSetIMValues",
-        constants$68.XSetIMValues$FUNC, true
+        constants$68.XSetIMValues$FUNC
     );
     static final FunctionDescriptor XDisplayOfIM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDisplayOfIM$MH = RuntimeHelper.downcallHandle(
         "XDisplayOfIM",
-        constants$68.XDisplayOfIM$FUNC, false
+        constants$68.XDisplayOfIM$FUNC
     );
     static final FunctionDescriptor XLocaleOfIM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XLocaleOfIM$MH = RuntimeHelper.downcallHandle(
         "XLocaleOfIM",
-        constants$68.XLocaleOfIM$FUNC, false
+        constants$68.XLocaleOfIM$FUNC
     );
     static final FunctionDescriptor XCreateIC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XCreateIC$MH = RuntimeHelper.downcallHandle(
+    static final MethodHandle XCreateIC$MH = RuntimeHelper.downcallHandleVariadic(
         "XCreateIC",
-        constants$68.XCreateIC$FUNC, true
+        constants$68.XCreateIC$FUNC
     );
 }
 

@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$20 {
 
     static final FunctionDescriptor XFreeStringList$FUNC = FunctionDescriptor.ofVoid(
@@ -14,7 +14,7 @@ class constants$20 {
     );
     static final MethodHandle XFreeStringList$MH = RuntimeHelper.downcallHandle(
         "XFreeStringList",
-        constants$20.XFreeStringList$FUNC, false
+        constants$20.XFreeStringList$FUNC
     );
     static final FunctionDescriptor XSetTransientForHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -23,14 +23,14 @@ class constants$20 {
     );
     static final MethodHandle XSetTransientForHint$MH = RuntimeHelper.downcallHandle(
         "XSetTransientForHint",
-        constants$20.XSetTransientForHint$FUNC, false
+        constants$20.XSetTransientForHint$FUNC
     );
     static final FunctionDescriptor XActivateScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XActivateScreenSaver$MH = RuntimeHelper.downcallHandle(
         "XActivateScreenSaver",
-        constants$20.XActivateScreenSaver$FUNC, false
+        constants$20.XActivateScreenSaver$FUNC
     );
     static final FunctionDescriptor XAddHost$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -38,7 +38,7 @@ class constants$20 {
     );
     static final MethodHandle XAddHost$MH = RuntimeHelper.downcallHandle(
         "XAddHost",
-        constants$20.XAddHost$FUNC, false
+        constants$20.XAddHost$FUNC
     );
     static final FunctionDescriptor XAddHosts$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -47,7 +47,7 @@ class constants$20 {
     );
     static final MethodHandle XAddHosts$MH = RuntimeHelper.downcallHandle(
         "XAddHosts",
-        constants$20.XAddHosts$FUNC, false
+        constants$20.XAddHosts$FUNC
     );
     static final FunctionDescriptor XAddToExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -55,7 +55,7 @@ class constants$20 {
     );
     static final MethodHandle XAddToExtensionList$MH = RuntimeHelper.downcallHandle(
         "XAddToExtensionList",
-        constants$20.XAddToExtensionList$FUNC, false
+        constants$20.XAddToExtensionList$FUNC
     );
 }
 

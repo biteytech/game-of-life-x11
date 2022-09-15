@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$71 {
 
     static final FunctionDescriptor Xutf8LookupString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -19,14 +19,14 @@ class constants$71 {
     );
     static final MethodHandle Xutf8LookupString$MH = RuntimeHelper.downcallHandle(
         "Xutf8LookupString",
-        constants$71.Xutf8LookupString$FUNC, false
+        constants$71.Xutf8LookupString$FUNC
     );
     static final FunctionDescriptor XVaCreateNestedList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle XVaCreateNestedList$MH = RuntimeHelper.downcallHandle(
+    static final MethodHandle XVaCreateNestedList$MH = RuntimeHelper.downcallHandleVariadic(
         "XVaCreateNestedList",
-        constants$71.XVaCreateNestedList$FUNC, true
+        constants$71.XVaCreateNestedList$FUNC
     );
     static final FunctionDescriptor XRegisterIMInstantiateCallback$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -38,7 +38,7 @@ class constants$71 {
     );
     static final MethodHandle XRegisterIMInstantiateCallback$MH = RuntimeHelper.downcallHandle(
         "XRegisterIMInstantiateCallback",
-        constants$71.XRegisterIMInstantiateCallback$FUNC, false
+        constants$71.XRegisterIMInstantiateCallback$FUNC
     );
     static final FunctionDescriptor XUnregisterIMInstantiateCallback$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -50,7 +50,7 @@ class constants$71 {
     );
     static final MethodHandle XUnregisterIMInstantiateCallback$MH = RuntimeHelper.downcallHandle(
         "XUnregisterIMInstantiateCallback",
-        constants$71.XUnregisterIMInstantiateCallback$FUNC, false
+        constants$71.XUnregisterIMInstantiateCallback$FUNC
     );
     static final FunctionDescriptor XConnectionWatchProc$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -60,7 +60,7 @@ class constants$71 {
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XConnectionWatchProc$MH = RuntimeHelper.downcallHandle(
-        constants$71.XConnectionWatchProc$FUNC, false
+        constants$71.XConnectionWatchProc$FUNC
     );
 }
 

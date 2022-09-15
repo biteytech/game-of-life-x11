@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$11 {
 
     static final FunctionDescriptor XGetKeyboardMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -17,42 +17,42 @@ class constants$11 {
     );
     static final MethodHandle XGetKeyboardMapping$MH = RuntimeHelper.downcallHandle(
         "XGetKeyboardMapping",
-        constants$11.XGetKeyboardMapping$FUNC, false
+        constants$11.XGetKeyboardMapping$FUNC
     );
     static final FunctionDescriptor XStringToKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XStringToKeysym$MH = RuntimeHelper.downcallHandle(
         "XStringToKeysym",
-        constants$11.XStringToKeysym$FUNC, false
+        constants$11.XStringToKeysym$FUNC
     );
     static final FunctionDescriptor XMaxRequestSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XMaxRequestSize$MH = RuntimeHelper.downcallHandle(
         "XMaxRequestSize",
-        constants$11.XMaxRequestSize$FUNC, false
+        constants$11.XMaxRequestSize$FUNC
     );
     static final FunctionDescriptor XExtendedMaxRequestSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XExtendedMaxRequestSize$MH = RuntimeHelper.downcallHandle(
         "XExtendedMaxRequestSize",
-        constants$11.XExtendedMaxRequestSize$FUNC, false
+        constants$11.XExtendedMaxRequestSize$FUNC
     );
     static final FunctionDescriptor XResourceManagerString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XResourceManagerString$MH = RuntimeHelper.downcallHandle(
         "XResourceManagerString",
-        constants$11.XResourceManagerString$FUNC, false
+        constants$11.XResourceManagerString$FUNC
     );
     static final FunctionDescriptor XScreenResourceString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XScreenResourceString$MH = RuntimeHelper.downcallHandle(
         "XScreenResourceString",
-        constants$11.XScreenResourceString$FUNC, false
+        constants$11.XScreenResourceString$FUNC
     );
 }
 

@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$26 {
 
     static final FunctionDescriptor XCirculateSubwindowsUp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -15,7 +15,7 @@ class constants$26 {
     );
     static final MethodHandle XCirculateSubwindowsUp$MH = RuntimeHelper.downcallHandle(
         "XCirculateSubwindowsUp",
-        constants$26.XCirculateSubwindowsUp$FUNC, false
+        constants$26.XCirculateSubwindowsUp$FUNC
     );
     static final FunctionDescriptor XClearArea$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -28,7 +28,7 @@ class constants$26 {
     );
     static final MethodHandle XClearArea$MH = RuntimeHelper.downcallHandle(
         "XClearArea",
-        constants$26.XClearArea$FUNC, false
+        constants$26.XClearArea$FUNC
     );
     static final FunctionDescriptor XClearWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -36,14 +36,14 @@ class constants$26 {
     );
     static final MethodHandle XClearWindow$MH = RuntimeHelper.downcallHandle(
         "XClearWindow",
-        constants$26.XClearWindow$FUNC, false
+        constants$26.XClearWindow$FUNC
     );
     static final FunctionDescriptor XCloseDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XCloseDisplay$MH = RuntimeHelper.downcallHandle(
         "XCloseDisplay",
-        constants$26.XCloseDisplay$FUNC, false
+        constants$26.XCloseDisplay$FUNC
     );
     static final FunctionDescriptor XConfigureWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -53,14 +53,14 @@ class constants$26 {
     );
     static final MethodHandle XConfigureWindow$MH = RuntimeHelper.downcallHandle(
         "XConfigureWindow",
-        constants$26.XConfigureWindow$FUNC, false
+        constants$26.XConfigureWindow$FUNC
     );
     static final FunctionDescriptor XConnectionNumber$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XConnectionNumber$MH = RuntimeHelper.downcallHandle(
         "XConnectionNumber",
-        constants$26.XConnectionNumber$FUNC, false
+        constants$26.XConnectionNumber$FUNC
     );
 }
 

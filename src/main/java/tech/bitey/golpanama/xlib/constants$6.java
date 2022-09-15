@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$6 {
 
     static final FunctionDescriptor XSynchronize$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -15,13 +15,13 @@ class constants$6 {
     );
     static final MethodHandle XSynchronize$MH = RuntimeHelper.downcallHandle(
         "XSynchronize",
-        constants$6.XSynchronize$FUNC, false
+        constants$6.XSynchronize$FUNC
     );
     static final FunctionDescriptor XSetAfterFunction$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XSetAfterFunction$x0$MH = RuntimeHelper.downcallHandle(
-        constants$6.XSetAfterFunction$x0$FUNC, false
+        constants$6.XSetAfterFunction$x0$FUNC
     );
     static final FunctionDescriptor XSetAfterFunction$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -29,7 +29,7 @@ class constants$6 {
     );
     static final MethodHandle XSetAfterFunction$MH = RuntimeHelper.downcallHandle(
         "XSetAfterFunction",
-        constants$6.XSetAfterFunction$FUNC, false
+        constants$6.XSetAfterFunction$FUNC
     );
     static final FunctionDescriptor XInternAtom$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -38,7 +38,7 @@ class constants$6 {
     );
     static final MethodHandle XInternAtom$MH = RuntimeHelper.downcallHandle(
         "XInternAtom",
-        constants$6.XInternAtom$FUNC, false
+        constants$6.XInternAtom$FUNC
     );
     static final FunctionDescriptor XInternAtoms$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -49,7 +49,7 @@ class constants$6 {
     );
     static final MethodHandle XInternAtoms$MH = RuntimeHelper.downcallHandle(
         "XInternAtoms",
-        constants$6.XInternAtoms$FUNC, false
+        constants$6.XInternAtoms$FUNC
     );
 }
 

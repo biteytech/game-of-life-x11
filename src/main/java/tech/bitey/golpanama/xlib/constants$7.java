@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$7 {
 
     static final FunctionDescriptor XCopyColormapAndFree$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
@@ -15,7 +15,7 @@ class constants$7 {
     );
     static final MethodHandle XCopyColormapAndFree$MH = RuntimeHelper.downcallHandle(
         "XCopyColormapAndFree",
-        constants$7.XCopyColormapAndFree$FUNC, false
+        constants$7.XCopyColormapAndFree$FUNC
     );
     static final FunctionDescriptor XCreateColormap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -25,7 +25,7 @@ class constants$7 {
     );
     static final MethodHandle XCreateColormap$MH = RuntimeHelper.downcallHandle(
         "XCreateColormap",
-        constants$7.XCreateColormap$FUNC, false
+        constants$7.XCreateColormap$FUNC
     );
     static final FunctionDescriptor XCreatePixmapCursor$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -38,7 +38,7 @@ class constants$7 {
     );
     static final MethodHandle XCreatePixmapCursor$MH = RuntimeHelper.downcallHandle(
         "XCreatePixmapCursor",
-        constants$7.XCreatePixmapCursor$FUNC, false
+        constants$7.XCreatePixmapCursor$FUNC
     );
     static final FunctionDescriptor XCreateGlyphCursor$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -51,7 +51,7 @@ class constants$7 {
     );
     static final MethodHandle XCreateGlyphCursor$MH = RuntimeHelper.downcallHandle(
         "XCreateGlyphCursor",
-        constants$7.XCreateGlyphCursor$FUNC, false
+        constants$7.XCreateGlyphCursor$FUNC
     );
     static final FunctionDescriptor XCreateFontCursor$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -59,7 +59,7 @@ class constants$7 {
     );
     static final MethodHandle XCreateFontCursor$MH = RuntimeHelper.downcallHandle(
         "XCreateFontCursor",
-        constants$7.XCreateFontCursor$FUNC, false
+        constants$7.XCreateFontCursor$FUNC
     );
     static final FunctionDescriptor XLoadFont$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -67,7 +67,7 @@ class constants$7 {
     );
     static final MethodHandle XLoadFont$MH = RuntimeHelper.downcallHandle(
         "XLoadFont",
-        constants$7.XLoadFont$FUNC, false
+        constants$7.XLoadFont$FUNC
     );
 }
 

@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$64 {
 
     static final FunctionDescriptor XLocaleOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -14,35 +14,35 @@ class constants$64 {
     );
     static final MethodHandle XLocaleOfFontSet$MH = RuntimeHelper.downcallHandle(
         "XLocaleOfFontSet",
-        constants$64.XLocaleOfFontSet$FUNC, false
+        constants$64.XLocaleOfFontSet$FUNC
     );
     static final FunctionDescriptor XContextDependentDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XContextDependentDrawing$MH = RuntimeHelper.downcallHandle(
         "XContextDependentDrawing",
-        constants$64.XContextDependentDrawing$FUNC, false
+        constants$64.XContextDependentDrawing$FUNC
     );
     static final FunctionDescriptor XDirectionalDependentDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDirectionalDependentDrawing$MH = RuntimeHelper.downcallHandle(
         "XDirectionalDependentDrawing",
-        constants$64.XDirectionalDependentDrawing$FUNC, false
+        constants$64.XDirectionalDependentDrawing$FUNC
     );
     static final FunctionDescriptor XContextualDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XContextualDrawing$MH = RuntimeHelper.downcallHandle(
         "XContextualDrawing",
-        constants$64.XContextualDrawing$FUNC, false
+        constants$64.XContextualDrawing$FUNC
     );
     static final FunctionDescriptor XExtentsOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XExtentsOfFontSet$MH = RuntimeHelper.downcallHandle(
         "XExtentsOfFontSet",
-        constants$64.XExtentsOfFontSet$FUNC, false
+        constants$64.XExtentsOfFontSet$FUNC
     );
     static final FunctionDescriptor XmbTextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -51,7 +51,7 @@ class constants$64 {
     );
     static final MethodHandle XmbTextEscapement$MH = RuntimeHelper.downcallHandle(
         "XmbTextEscapement",
-        constants$64.XmbTextEscapement$FUNC, false
+        constants$64.XmbTextEscapement$FUNC
     );
 }
 

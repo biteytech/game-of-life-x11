@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$54 {
 
     static final FunctionDescriptor XSetPlaneMask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$54 {
     );
     static final MethodHandle XSetPlaneMask$MH = RuntimeHelper.downcallHandle(
         "XSetPlaneMask",
-        constants$54.XSetPlaneMask$FUNC, false
+        constants$54.XSetPlaneMask$FUNC
     );
     static final FunctionDescriptor XSetPointerMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -25,7 +25,7 @@ class constants$54 {
     );
     static final MethodHandle XSetPointerMapping$MH = RuntimeHelper.downcallHandle(
         "XSetPointerMapping",
-        constants$54.XSetPointerMapping$FUNC, false
+        constants$54.XSetPointerMapping$FUNC
     );
     static final FunctionDescriptor XSetScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -36,7 +36,7 @@ class constants$54 {
     );
     static final MethodHandle XSetScreenSaver$MH = RuntimeHelper.downcallHandle(
         "XSetScreenSaver",
-        constants$54.XSetScreenSaver$FUNC, false
+        constants$54.XSetScreenSaver$FUNC
     );
     static final FunctionDescriptor XSetSelectionOwner$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -46,7 +46,7 @@ class constants$54 {
     );
     static final MethodHandle XSetSelectionOwner$MH = RuntimeHelper.downcallHandle(
         "XSetSelectionOwner",
-        constants$54.XSetSelectionOwner$FUNC, false
+        constants$54.XSetSelectionOwner$FUNC
     );
     static final FunctionDescriptor XSetState$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -58,7 +58,7 @@ class constants$54 {
     );
     static final MethodHandle XSetState$MH = RuntimeHelper.downcallHandle(
         "XSetState",
-        constants$54.XSetState$FUNC, false
+        constants$54.XSetState$FUNC
     );
     static final FunctionDescriptor XSetStipple$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -67,7 +67,7 @@ class constants$54 {
     );
     static final MethodHandle XSetStipple$MH = RuntimeHelper.downcallHandle(
         "XSetStipple",
-        constants$54.XSetStipple$FUNC, false
+        constants$54.XSetStipple$FUNC
     );
 }
 

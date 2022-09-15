@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class XEDataObject {
 
     static final  GroupLayout $union$LAYOUT = MemoryLayout.unionLayout(
@@ -25,13 +25,13 @@ public class XEDataObject {
         return XEDataObject.display$VH;
     }
     public static MemoryAddress display$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.display$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XEDataObject.display$VH.get(seg);
     }
     public static void display$set( MemorySegment seg, MemoryAddress x) {
         XEDataObject.display$VH.set(seg, x);
     }
     public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XEDataObject.display$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
         XEDataObject.display$VH.set(seg.asSlice(index*sizeof()), x);
@@ -41,13 +41,13 @@ public class XEDataObject {
         return XEDataObject.gc$VH;
     }
     public static MemoryAddress gc$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.gc$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XEDataObject.gc$VH.get(seg);
     }
     public static void gc$set( MemorySegment seg, MemoryAddress x) {
         XEDataObject.gc$VH.set(seg, x);
     }
     public static MemoryAddress gc$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.gc$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XEDataObject.gc$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void gc$set(MemorySegment seg, long index, MemoryAddress x) {
         XEDataObject.gc$VH.set(seg.asSlice(index*sizeof()), x);
@@ -57,13 +57,13 @@ public class XEDataObject {
         return XEDataObject.visual$VH;
     }
     public static MemoryAddress visual$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.visual$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XEDataObject.visual$VH.get(seg);
     }
     public static void visual$set( MemorySegment seg, MemoryAddress x) {
         XEDataObject.visual$VH.set(seg, x);
     }
     public static MemoryAddress visual$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.visual$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XEDataObject.visual$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void visual$set(MemorySegment seg, long index, MemoryAddress x) {
         XEDataObject.visual$VH.set(seg.asSlice(index*sizeof()), x);
@@ -73,13 +73,13 @@ public class XEDataObject {
         return XEDataObject.screen$VH;
     }
     public static MemoryAddress screen$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.screen$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XEDataObject.screen$VH.get(seg);
     }
     public static void screen$set( MemorySegment seg, MemoryAddress x) {
         XEDataObject.screen$VH.set(seg, x);
     }
     public static MemoryAddress screen$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.screen$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XEDataObject.screen$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void screen$set(MemorySegment seg, long index, MemoryAddress x) {
         XEDataObject.screen$VH.set(seg.asSlice(index*sizeof()), x);
@@ -89,13 +89,13 @@ public class XEDataObject {
         return XEDataObject.pixmap_format$VH;
     }
     public static MemoryAddress pixmap_format$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.pixmap_format$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XEDataObject.pixmap_format$VH.get(seg);
     }
     public static void pixmap_format$set( MemorySegment seg, MemoryAddress x) {
         XEDataObject.pixmap_format$VH.set(seg, x);
     }
     public static MemoryAddress pixmap_format$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.pixmap_format$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XEDataObject.pixmap_format$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void pixmap_format$set(MemorySegment seg, long index, MemoryAddress x) {
         XEDataObject.pixmap_format$VH.set(seg.asSlice(index*sizeof()), x);
@@ -105,13 +105,13 @@ public class XEDataObject {
         return XEDataObject.font$VH;
     }
     public static MemoryAddress font$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.font$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)XEDataObject.font$VH.get(seg);
     }
     public static void font$set( MemorySegment seg, MemoryAddress x) {
         XEDataObject.font$VH.set(seg, x);
     }
     public static MemoryAddress font$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)XEDataObject.font$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)XEDataObject.font$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void font$set(MemorySegment seg, long index, MemoryAddress x) {
         XEDataObject.font$VH.set(seg.asSlice(index*sizeof()), x);
@@ -121,11 +121,7 @@ public class XEDataObject {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

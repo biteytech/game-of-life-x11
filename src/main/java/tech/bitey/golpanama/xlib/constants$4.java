@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$4 {
 
     static final FunctionDescriptor XInitImage$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -14,7 +14,7 @@ class constants$4 {
     );
     static final MethodHandle XInitImage$MH = RuntimeHelper.downcallHandle(
         "XInitImage",
-        constants$4.XInitImage$FUNC, false
+        constants$4.XInitImage$FUNC
     );
     static final FunctionDescriptor XGetImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -28,7 +28,7 @@ class constants$4 {
     );
     static final MethodHandle XGetImage$MH = RuntimeHelper.downcallHandle(
         "XGetImage",
-        constants$4.XGetImage$FUNC, false
+        constants$4.XGetImage$FUNC
     );
     static final FunctionDescriptor XGetSubImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -45,19 +45,19 @@ class constants$4 {
     );
     static final MethodHandle XGetSubImage$MH = RuntimeHelper.downcallHandle(
         "XGetSubImage",
-        constants$4.XGetSubImage$FUNC, false
+        constants$4.XGetSubImage$FUNC
     );
     static final FunctionDescriptor XOpenDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XOpenDisplay$MH = RuntimeHelper.downcallHandle(
         "XOpenDisplay",
-        constants$4.XOpenDisplay$FUNC, false
+        constants$4.XOpenDisplay$FUNC
     );
     static final FunctionDescriptor XrmInitialize$FUNC = FunctionDescriptor.ofVoid();
     static final MethodHandle XrmInitialize$MH = RuntimeHelper.downcallHandle(
         "XrmInitialize",
-        constants$4.XrmInitialize$FUNC, false
+        constants$4.XrmInitialize$FUNC
     );
     static final FunctionDescriptor XFetchBytes$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -65,7 +65,7 @@ class constants$4 {
     );
     static final MethodHandle XFetchBytes$MH = RuntimeHelper.downcallHandle(
         "XFetchBytes",
-        constants$4.XFetchBytes$FUNC, false
+        constants$4.XFetchBytes$FUNC
     );
 }
 

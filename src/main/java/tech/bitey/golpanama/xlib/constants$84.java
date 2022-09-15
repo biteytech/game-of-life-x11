@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$84 {
 
     static final FunctionDescriptor XTextPropertyToStringList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$84 {
     );
     static final MethodHandle XTextPropertyToStringList$MH = RuntimeHelper.downcallHandle(
         "XTextPropertyToStringList",
-        constants$84.XTextPropertyToStringList$FUNC, false
+        constants$84.XTextPropertyToStringList$FUNC
     );
     static final FunctionDescriptor XmbTextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -26,7 +26,7 @@ class constants$84 {
     );
     static final MethodHandle XmbTextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
         "XmbTextPropertyToTextList",
-        constants$84.XmbTextPropertyToTextList$FUNC, false
+        constants$84.XmbTextPropertyToTextList$FUNC
     );
     static final FunctionDescriptor XwcTextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -36,7 +36,7 @@ class constants$84 {
     );
     static final MethodHandle XwcTextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
         "XwcTextPropertyToTextList",
-        constants$84.XwcTextPropertyToTextList$FUNC, false
+        constants$84.XwcTextPropertyToTextList$FUNC
     );
     static final FunctionDescriptor Xutf8TextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -46,7 +46,7 @@ class constants$84 {
     );
     static final MethodHandle Xutf8TextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
         "Xutf8TextPropertyToTextList",
-        constants$84.Xutf8TextPropertyToTextList$FUNC, false
+        constants$84.Xutf8TextPropertyToTextList$FUNC
     );
     static final FunctionDescriptor XUnionRectWithRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -55,7 +55,7 @@ class constants$84 {
     );
     static final MethodHandle XUnionRectWithRegion$MH = RuntimeHelper.downcallHandle(
         "XUnionRectWithRegion",
-        constants$84.XUnionRectWithRegion$FUNC, false
+        constants$84.XUnionRectWithRegion$FUNC
     );
     static final FunctionDescriptor XUnionRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -64,7 +64,7 @@ class constants$84 {
     );
     static final MethodHandle XUnionRegion$MH = RuntimeHelper.downcallHandle(
         "XUnionRegion",
-        constants$84.XUnionRegion$FUNC, false
+        constants$84.XUnionRegion$FUNC
     );
 }
 

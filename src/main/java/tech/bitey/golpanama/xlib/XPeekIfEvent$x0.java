@@ -5,19 +5,19 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public interface XPeekIfEvent$x0 {
 
-    int apply(jdk.incubator.foreign.MemoryAddress x0, jdk.incubator.foreign.MemoryAddress x1, jdk.incubator.foreign.MemoryAddress x2);
-    static NativeSymbol allocate(XPeekIfEvent$x0 fi, ResourceScope scope) {
-        return RuntimeHelper.upcallStub(XPeekIfEvent$x0.class, fi, constants$44.XPeekIfEvent$x0$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;)I", scope);
+    int apply(java.lang.foreign.MemoryAddress _x0, java.lang.foreign.MemoryAddress _x1, java.lang.foreign.MemoryAddress _x2);
+    static MemorySegment allocate(XPeekIfEvent$x0 fi, MemorySession session) {
+        return RuntimeHelper.upcallStub(XPeekIfEvent$x0.class, fi, constants$44.XPeekIfEvent$x0$FUNC, session);
     }
-    static XPeekIfEvent$x0 ofAddress(MemoryAddress addr, ResourceScope scope) {
-        NativeSymbol symbol = NativeSymbol.ofAddress("XPeekIfEvent$x0::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0, jdk.incubator.foreign.MemoryAddress x1, jdk.incubator.foreign.MemoryAddress x2) -> {
+    static XPeekIfEvent$x0 ofAddress(MemoryAddress addr, MemorySession session) {
+        MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+        return (java.lang.foreign.MemoryAddress __x0, java.lang.foreign.MemoryAddress __x1, java.lang.foreign.MemoryAddress __x2) -> {
             try {
-                return (int)constants$44.XPeekIfEvent$x0$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0, (jdk.incubator.foreign.Addressable)x1, (jdk.incubator.foreign.Addressable)x2);
+                return (int)constants$44.XPeekIfEvent$x0$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, (java.lang.foreign.Addressable)__x1, (java.lang.foreign.Addressable)__x2);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

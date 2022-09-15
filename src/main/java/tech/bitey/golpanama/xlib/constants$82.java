@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$82 {
 
     static final FunctionDescriptor Xutf8SetWMProperties$FUNC = FunctionDescriptor.ofVoid(
@@ -22,7 +22,7 @@ class constants$82 {
     );
     static final MethodHandle Xutf8SetWMProperties$MH = RuntimeHelper.downcallHandle(
         "Xutf8SetWMProperties",
-        constants$82.Xutf8SetWMProperties$FUNC, false
+        constants$82.Xutf8SetWMProperties$FUNC
     );
     static final FunctionDescriptor XSetWMSizeHints$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -32,7 +32,7 @@ class constants$82 {
     );
     static final MethodHandle XSetWMSizeHints$MH = RuntimeHelper.downcallHandle(
         "XSetWMSizeHints",
-        constants$82.XSetWMSizeHints$FUNC, false
+        constants$82.XSetWMSizeHints$FUNC
     );
     static final FunctionDescriptor XSetRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -41,7 +41,7 @@ class constants$82 {
     );
     static final MethodHandle XSetRegion$MH = RuntimeHelper.downcallHandle(
         "XSetRegion",
-        constants$82.XSetRegion$FUNC, false
+        constants$82.XSetRegion$FUNC
     );
     static final FunctionDescriptor XSetStandardColormap$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -51,7 +51,7 @@ class constants$82 {
     );
     static final MethodHandle XSetStandardColormap$MH = RuntimeHelper.downcallHandle(
         "XSetStandardColormap",
-        constants$82.XSetStandardColormap$FUNC, false
+        constants$82.XSetStandardColormap$FUNC
     );
     static final FunctionDescriptor XSetZoomHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -60,7 +60,7 @@ class constants$82 {
     );
     static final MethodHandle XSetZoomHints$MH = RuntimeHelper.downcallHandle(
         "XSetZoomHints",
-        constants$82.XSetZoomHints$FUNC, false
+        constants$82.XSetZoomHints$FUNC
     );
     static final FunctionDescriptor XShrinkRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -69,7 +69,7 @@ class constants$82 {
     );
     static final MethodHandle XShrinkRegion$MH = RuntimeHelper.downcallHandle(
         "XShrinkRegion",
-        constants$82.XShrinkRegion$FUNC, false
+        constants$82.XShrinkRegion$FUNC
     );
 }
 

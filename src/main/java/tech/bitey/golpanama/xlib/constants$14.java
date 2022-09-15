@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$14 {
 
     static final FunctionDescriptor XDefaultVisual$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -15,14 +15,14 @@ class constants$14 {
     );
     static final MethodHandle XDefaultVisual$MH = RuntimeHelper.downcallHandle(
         "XDefaultVisual",
-        constants$14.XDefaultVisual$FUNC, false
+        constants$14.XDefaultVisual$FUNC
     );
     static final FunctionDescriptor XDefaultVisualOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDefaultVisualOfScreen$MH = RuntimeHelper.downcallHandle(
         "XDefaultVisualOfScreen",
-        constants$14.XDefaultVisualOfScreen$FUNC, false
+        constants$14.XDefaultVisualOfScreen$FUNC
     );
     static final FunctionDescriptor XDefaultGC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -30,14 +30,14 @@ class constants$14 {
     );
     static final MethodHandle XDefaultGC$MH = RuntimeHelper.downcallHandle(
         "XDefaultGC",
-        constants$14.XDefaultGC$FUNC, false
+        constants$14.XDefaultGC$FUNC
     );
     static final FunctionDescriptor XDefaultGCOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDefaultGCOfScreen$MH = RuntimeHelper.downcallHandle(
         "XDefaultGCOfScreen",
-        constants$14.XDefaultGCOfScreen$FUNC, false
+        constants$14.XDefaultGCOfScreen$FUNC
     );
     static final FunctionDescriptor XBlackPixel$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -45,7 +45,7 @@ class constants$14 {
     );
     static final MethodHandle XBlackPixel$MH = RuntimeHelper.downcallHandle(
         "XBlackPixel",
-        constants$14.XBlackPixel$FUNC, false
+        constants$14.XBlackPixel$FUNC
     );
     static final FunctionDescriptor XWhitePixel$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -53,7 +53,7 @@ class constants$14 {
     );
     static final MethodHandle XWhitePixel$MH = RuntimeHelper.downcallHandle(
         "XWhitePixel",
-        constants$14.XWhitePixel$FUNC, false
+        constants$14.XWhitePixel$FUNC
     );
 }
 

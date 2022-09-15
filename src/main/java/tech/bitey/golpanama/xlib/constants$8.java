@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$8 {
 
     static final FunctionDescriptor XCreateGC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -17,14 +17,14 @@ class constants$8 {
     );
     static final MethodHandle XCreateGC$MH = RuntimeHelper.downcallHandle(
         "XCreateGC",
-        constants$8.XCreateGC$FUNC, false
+        constants$8.XCreateGC$FUNC
     );
     static final FunctionDescriptor XGContextFromGC$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XGContextFromGC$MH = RuntimeHelper.downcallHandle(
         "XGContextFromGC",
-        constants$8.XGContextFromGC$FUNC, false
+        constants$8.XGContextFromGC$FUNC
     );
     static final FunctionDescriptor XFlushGC$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -32,7 +32,7 @@ class constants$8 {
     );
     static final MethodHandle XFlushGC$MH = RuntimeHelper.downcallHandle(
         "XFlushGC",
-        constants$8.XFlushGC$FUNC, false
+        constants$8.XFlushGC$FUNC
     );
     static final FunctionDescriptor XCreatePixmap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -43,7 +43,7 @@ class constants$8 {
     );
     static final MethodHandle XCreatePixmap$MH = RuntimeHelper.downcallHandle(
         "XCreatePixmap",
-        constants$8.XCreatePixmap$FUNC, false
+        constants$8.XCreatePixmap$FUNC
     );
     static final FunctionDescriptor XCreateBitmapFromData$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -54,7 +54,7 @@ class constants$8 {
     );
     static final MethodHandle XCreateBitmapFromData$MH = RuntimeHelper.downcallHandle(
         "XCreateBitmapFromData",
-        constants$8.XCreateBitmapFromData$FUNC, false
+        constants$8.XCreateBitmapFromData$FUNC
     );
     static final FunctionDescriptor XCreatePixmapFromBitmapData$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -68,7 +68,7 @@ class constants$8 {
     );
     static final MethodHandle XCreatePixmapFromBitmapData$MH = RuntimeHelper.downcallHandle(
         "XCreatePixmapFromBitmapData",
-        constants$8.XCreatePixmapFromBitmapData$FUNC, false
+        constants$8.XCreatePixmapFromBitmapData$FUNC
     );
 }
 

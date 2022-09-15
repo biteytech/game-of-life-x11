@@ -5,19 +5,19 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$74 {
 
     static final FunctionDescriptor XAllocStandardColormap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
     static final MethodHandle XAllocStandardColormap$MH = RuntimeHelper.downcallHandle(
         "XAllocStandardColormap",
-        constants$74.XAllocStandardColormap$FUNC, false
+        constants$74.XAllocStandardColormap$FUNC
     );
     static final FunctionDescriptor XAllocWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
     static final MethodHandle XAllocWMHints$MH = RuntimeHelper.downcallHandle(
         "XAllocWMHints",
-        constants$74.XAllocWMHints$FUNC, false
+        constants$74.XAllocWMHints$FUNC
     );
     static final FunctionDescriptor XClipBox$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -25,17 +25,17 @@ class constants$74 {
     );
     static final MethodHandle XClipBox$MH = RuntimeHelper.downcallHandle(
         "XClipBox",
-        constants$74.XClipBox$FUNC, false
+        constants$74.XClipBox$FUNC
     );
     static final FunctionDescriptor XCreateRegion$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
     static final MethodHandle XCreateRegion$MH = RuntimeHelper.downcallHandle(
         "XCreateRegion",
-        constants$74.XCreateRegion$FUNC, false
+        constants$74.XCreateRegion$FUNC
     );
     static final FunctionDescriptor XDefaultString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
     static final MethodHandle XDefaultString$MH = RuntimeHelper.downcallHandle(
         "XDefaultString",
-        constants$74.XDefaultString$FUNC, false
+        constants$74.XDefaultString$FUNC
     );
     static final FunctionDescriptor XDeleteContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -44,7 +44,7 @@ class constants$74 {
     );
     static final MethodHandle XDeleteContext$MH = RuntimeHelper.downcallHandle(
         "XDeleteContext",
-        constants$74.XDeleteContext$FUNC, false
+        constants$74.XDeleteContext$FUNC
     );
 }
 

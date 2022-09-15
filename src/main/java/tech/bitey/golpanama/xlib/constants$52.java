@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$52 {
 
     static final FunctionDescriptor XSetDashes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -18,7 +18,7 @@ class constants$52 {
     );
     static final MethodHandle XSetDashes$MH = RuntimeHelper.downcallHandle(
         "XSetDashes",
-        constants$52.XSetDashes$FUNC, false
+        constants$52.XSetDashes$FUNC
     );
     static final FunctionDescriptor XSetFillRule$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -27,7 +27,7 @@ class constants$52 {
     );
     static final MethodHandle XSetFillRule$MH = RuntimeHelper.downcallHandle(
         "XSetFillRule",
-        constants$52.XSetFillRule$FUNC, false
+        constants$52.XSetFillRule$FUNC
     );
     static final FunctionDescriptor XSetFillStyle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -36,7 +36,7 @@ class constants$52 {
     );
     static final MethodHandle XSetFillStyle$MH = RuntimeHelper.downcallHandle(
         "XSetFillStyle",
-        constants$52.XSetFillStyle$FUNC, false
+        constants$52.XSetFillStyle$FUNC
     );
     static final FunctionDescriptor XSetFont$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -45,7 +45,7 @@ class constants$52 {
     );
     static final MethodHandle XSetFont$MH = RuntimeHelper.downcallHandle(
         "XSetFont",
-        constants$52.XSetFont$FUNC, false
+        constants$52.XSetFont$FUNC
     );
     static final FunctionDescriptor XSetFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -54,7 +54,7 @@ class constants$52 {
     );
     static final MethodHandle XSetFontPath$MH = RuntimeHelper.downcallHandle(
         "XSetFontPath",
-        constants$52.XSetFontPath$FUNC, false
+        constants$52.XSetFontPath$FUNC
     );
     static final FunctionDescriptor XSetForeground$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -63,7 +63,7 @@ class constants$52 {
     );
     static final MethodHandle XSetForeground$MH = RuntimeHelper.downcallHandle(
         "XSetForeground",
-        constants$52.XSetForeground$FUNC, false
+        constants$52.XSetForeground$FUNC
     );
 }
 

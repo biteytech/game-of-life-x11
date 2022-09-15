@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$12 {
 
     static final FunctionDescriptor XDisplayMotionBufferSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
@@ -14,33 +14,33 @@ class constants$12 {
     );
     static final MethodHandle XDisplayMotionBufferSize$MH = RuntimeHelper.downcallHandle(
         "XDisplayMotionBufferSize",
-        constants$12.XDisplayMotionBufferSize$FUNC, false
+        constants$12.XDisplayMotionBufferSize$FUNC
     );
     static final FunctionDescriptor XVisualIDFromVisual$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XVisualIDFromVisual$MH = RuntimeHelper.downcallHandle(
         "XVisualIDFromVisual",
-        constants$12.XVisualIDFromVisual$FUNC, false
+        constants$12.XVisualIDFromVisual$FUNC
     );
     static final FunctionDescriptor XInitThreads$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
     static final MethodHandle XInitThreads$MH = RuntimeHelper.downcallHandle(
         "XInitThreads",
-        constants$12.XInitThreads$FUNC, false
+        constants$12.XInitThreads$FUNC
     );
     static final FunctionDescriptor XLockDisplay$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XLockDisplay$MH = RuntimeHelper.downcallHandle(
         "XLockDisplay",
-        constants$12.XLockDisplay$FUNC, false
+        constants$12.XLockDisplay$FUNC
     );
     static final FunctionDescriptor XUnlockDisplay$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XUnlockDisplay$MH = RuntimeHelper.downcallHandle(
         "XUnlockDisplay",
-        constants$12.XUnlockDisplay$FUNC, false
+        constants$12.XUnlockDisplay$FUNC
     );
     static final FunctionDescriptor XInitExtension$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -48,7 +48,7 @@ class constants$12 {
     );
     static final MethodHandle XInitExtension$MH = RuntimeHelper.downcallHandle(
         "XInitExtension",
-        constants$12.XInitExtension$FUNC, false
+        constants$12.XInitExtension$FUNC
     );
 }
 

@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$57 {
 
     static final FunctionDescriptor XStoreColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -17,7 +17,7 @@ class constants$57 {
     );
     static final MethodHandle XStoreColors$MH = RuntimeHelper.downcallHandle(
         "XStoreColors",
-        constants$57.XStoreColors$FUNC, false
+        constants$57.XStoreColors$FUNC
     );
     static final FunctionDescriptor XStoreName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -26,7 +26,7 @@ class constants$57 {
     );
     static final MethodHandle XStoreName$MH = RuntimeHelper.downcallHandle(
         "XStoreName",
-        constants$57.XStoreName$FUNC, false
+        constants$57.XStoreName$FUNC
     );
     static final FunctionDescriptor XStoreNamedColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -37,7 +37,7 @@ class constants$57 {
     );
     static final MethodHandle XStoreNamedColor$MH = RuntimeHelper.downcallHandle(
         "XStoreNamedColor",
-        constants$57.XStoreNamedColor$FUNC, false
+        constants$57.XStoreNamedColor$FUNC
     );
     static final FunctionDescriptor XSync$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -45,7 +45,7 @@ class constants$57 {
     );
     static final MethodHandle XSync$MH = RuntimeHelper.downcallHandle(
         "XSync",
-        constants$57.XSync$FUNC, false
+        constants$57.XSync$FUNC
     );
     static final FunctionDescriptor XTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -58,7 +58,7 @@ class constants$57 {
     );
     static final MethodHandle XTextExtents$MH = RuntimeHelper.downcallHandle(
         "XTextExtents",
-        constants$57.XTextExtents$FUNC, false
+        constants$57.XTextExtents$FUNC
     );
     static final FunctionDescriptor XTextExtents16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -71,7 +71,7 @@ class constants$57 {
     );
     static final MethodHandle XTextExtents16$MH = RuntimeHelper.downcallHandle(
         "XTextExtents16",
-        constants$57.XTextExtents16$FUNC, false
+        constants$57.XTextExtents16$FUNC
     );
 }
 

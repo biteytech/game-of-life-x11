@@ -5,19 +5,19 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public interface XConnectionWatchProc {
 
-    void apply(jdk.incubator.foreign.MemoryAddress x0, jdk.incubator.foreign.MemoryAddress x1, int x2, int x3, jdk.incubator.foreign.MemoryAddress x4);
-    static NativeSymbol allocate(XConnectionWatchProc fi, ResourceScope scope) {
-        return RuntimeHelper.upcallStub(XConnectionWatchProc.class, fi, constants$71.XConnectionWatchProc$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;Ljdk/incubator/foreign/MemoryAddress;IILjdk/incubator/foreign/MemoryAddress;)V", scope);
+    void apply(java.lang.foreign.MemoryAddress _x0, java.lang.foreign.MemoryAddress _x1, int _x2, int _x3, java.lang.foreign.MemoryAddress _x4);
+    static MemorySegment allocate(XConnectionWatchProc fi, MemorySession session) {
+        return RuntimeHelper.upcallStub(XConnectionWatchProc.class, fi, constants$71.XConnectionWatchProc$FUNC, session);
     }
-    static XConnectionWatchProc ofAddress(MemoryAddress addr, ResourceScope scope) {
-        NativeSymbol symbol = NativeSymbol.ofAddress("XConnectionWatchProc::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0, jdk.incubator.foreign.MemoryAddress x1, int x2, int x3, jdk.incubator.foreign.MemoryAddress x4) -> {
+    static XConnectionWatchProc ofAddress(MemoryAddress addr, MemorySession session) {
+        MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+        return (java.lang.foreign.MemoryAddress __x0, java.lang.foreign.MemoryAddress __x1, int __x2, int __x3, java.lang.foreign.MemoryAddress __x4) -> {
             try {
-                constants$71.XConnectionWatchProc$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0, (jdk.incubator.foreign.Addressable)x1, x2, x3, (jdk.incubator.foreign.Addressable)x4);
+                constants$71.XConnectionWatchProc$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, (java.lang.foreign.Addressable)__x1, __x2, __x3, (java.lang.foreign.Addressable)__x4);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

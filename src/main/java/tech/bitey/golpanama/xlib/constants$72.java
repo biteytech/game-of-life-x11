@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$72 {
 
     static final FunctionDescriptor XInternalConnectionNumbers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$72 {
     );
     static final MethodHandle XInternalConnectionNumbers$MH = RuntimeHelper.downcallHandle(
         "XInternalConnectionNumbers",
-        constants$72.XInternalConnectionNumbers$FUNC, false
+        constants$72.XInternalConnectionNumbers$FUNC
     );
     static final FunctionDescriptor XProcessInternalConnection$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -24,7 +24,7 @@ class constants$72 {
     );
     static final MethodHandle XProcessInternalConnection$MH = RuntimeHelper.downcallHandle(
         "XProcessInternalConnection",
-        constants$72.XProcessInternalConnection$FUNC, false
+        constants$72.XProcessInternalConnection$FUNC
     );
     static final FunctionDescriptor XAddConnectionWatch$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -33,7 +33,7 @@ class constants$72 {
     );
     static final MethodHandle XAddConnectionWatch$MH = RuntimeHelper.downcallHandle(
         "XAddConnectionWatch",
-        constants$72.XAddConnectionWatch$FUNC, false
+        constants$72.XAddConnectionWatch$FUNC
     );
     static final FunctionDescriptor XRemoveConnectionWatch$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -42,7 +42,7 @@ class constants$72 {
     );
     static final MethodHandle XRemoveConnectionWatch$MH = RuntimeHelper.downcallHandle(
         "XRemoveConnectionWatch",
-        constants$72.XRemoveConnectionWatch$FUNC, false
+        constants$72.XRemoveConnectionWatch$FUNC
     );
     static final FunctionDescriptor XSetAuthorization$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -52,7 +52,7 @@ class constants$72 {
     );
     static final MethodHandle XSetAuthorization$MH = RuntimeHelper.downcallHandle(
         "XSetAuthorization",
-        constants$72.XSetAuthorization$FUNC, false
+        constants$72.XSetAuthorization$FUNC
     );
     static final FunctionDescriptor _Xmbtowc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -61,7 +61,7 @@ class constants$72 {
     );
     static final MethodHandle _Xmbtowc$MH = RuntimeHelper.downcallHandle(
         "_Xmbtowc",
-        constants$72._Xmbtowc$FUNC, false
+        constants$72._Xmbtowc$FUNC
     );
 }
 

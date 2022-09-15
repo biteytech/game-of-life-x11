@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class __pthread_internal_list {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -21,13 +21,13 @@ public class __pthread_internal_list {
         return __pthread_internal_list.__prev$VH;
     }
     public static MemoryAddress __prev$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)__pthread_internal_list.__prev$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)__pthread_internal_list.__prev$VH.get(seg);
     }
     public static void __prev$set( MemorySegment seg, MemoryAddress x) {
         __pthread_internal_list.__prev$VH.set(seg, x);
     }
     public static MemoryAddress __prev$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)__pthread_internal_list.__prev$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)__pthread_internal_list.__prev$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void __prev$set(MemorySegment seg, long index, MemoryAddress x) {
         __pthread_internal_list.__prev$VH.set(seg.asSlice(index*sizeof()), x);
@@ -37,13 +37,13 @@ public class __pthread_internal_list {
         return __pthread_internal_list.__next$VH;
     }
     public static MemoryAddress __next$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)__pthread_internal_list.__next$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)__pthread_internal_list.__next$VH.get(seg);
     }
     public static void __next$set( MemorySegment seg, MemoryAddress x) {
         __pthread_internal_list.__next$VH.set(seg, x);
     }
     public static MemoryAddress __next$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)__pthread_internal_list.__next$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)__pthread_internal_list.__next$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void __next$set(MemorySegment seg, long index, MemoryAddress x) {
         __pthread_internal_list.__next$VH.set(seg.asSlice(index*sizeof()), x);
@@ -53,11 +53,7 @@ public class __pthread_internal_list {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$50 {
 
     static final FunctionDescriptor XRotateWindowProperties$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -18,14 +18,14 @@ class constants$50 {
     );
     static final MethodHandle XRotateWindowProperties$MH = RuntimeHelper.downcallHandle(
         "XRotateWindowProperties",
-        constants$50.XRotateWindowProperties$FUNC, false
+        constants$50.XRotateWindowProperties$FUNC
     );
     static final FunctionDescriptor XScreenCount$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XScreenCount$MH = RuntimeHelper.downcallHandle(
         "XScreenCount",
-        constants$50.XScreenCount$FUNC, false
+        constants$50.XScreenCount$FUNC
     );
     static final FunctionDescriptor XSelectInput$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -34,7 +34,7 @@ class constants$50 {
     );
     static final MethodHandle XSelectInput$MH = RuntimeHelper.downcallHandle(
         "XSelectInput",
-        constants$50.XSelectInput$FUNC, false
+        constants$50.XSelectInput$FUNC
     );
     static final FunctionDescriptor XSendEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -45,7 +45,7 @@ class constants$50 {
     );
     static final MethodHandle XSendEvent$MH = RuntimeHelper.downcallHandle(
         "XSendEvent",
-        constants$50.XSendEvent$FUNC, false
+        constants$50.XSendEvent$FUNC
     );
     static final FunctionDescriptor XSetAccessControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -53,7 +53,7 @@ class constants$50 {
     );
     static final MethodHandle XSetAccessControl$MH = RuntimeHelper.downcallHandle(
         "XSetAccessControl",
-        constants$50.XSetAccessControl$FUNC, false
+        constants$50.XSetAccessControl$FUNC
     );
     static final FunctionDescriptor XSetArcMode$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -62,7 +62,7 @@ class constants$50 {
     );
     static final MethodHandle XSetArcMode$MH = RuntimeHelper.downcallHandle(
         "XSetArcMode",
-        constants$50.XSetArcMode$FUNC, false
+        constants$50.XSetArcMode$FUNC
     );
 }
 

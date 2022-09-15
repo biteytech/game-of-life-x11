@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$66 {
 
     static final FunctionDescriptor XwcTextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -22,7 +22,7 @@ class constants$66 {
     );
     static final MethodHandle XwcTextPerCharExtents$MH = RuntimeHelper.downcallHandle(
         "XwcTextPerCharExtents",
-        constants$66.XwcTextPerCharExtents$FUNC, false
+        constants$66.XwcTextPerCharExtents$FUNC
     );
     static final FunctionDescriptor Xutf8TextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -37,7 +37,7 @@ class constants$66 {
     );
     static final MethodHandle Xutf8TextPerCharExtents$MH = RuntimeHelper.downcallHandle(
         "Xutf8TextPerCharExtents",
-        constants$66.Xutf8TextPerCharExtents$FUNC, false
+        constants$66.Xutf8TextPerCharExtents$FUNC
     );
     static final FunctionDescriptor XmbDrawText$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -50,7 +50,7 @@ class constants$66 {
     );
     static final MethodHandle XmbDrawText$MH = RuntimeHelper.downcallHandle(
         "XmbDrawText",
-        constants$66.XmbDrawText$FUNC, false
+        constants$66.XmbDrawText$FUNC
     );
     static final FunctionDescriptor XwcDrawText$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -63,7 +63,7 @@ class constants$66 {
     );
     static final MethodHandle XwcDrawText$MH = RuntimeHelper.downcallHandle(
         "XwcDrawText",
-        constants$66.XwcDrawText$FUNC, false
+        constants$66.XwcDrawText$FUNC
     );
     static final FunctionDescriptor Xutf8DrawText$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -76,7 +76,7 @@ class constants$66 {
     );
     static final MethodHandle Xutf8DrawText$MH = RuntimeHelper.downcallHandle(
         "Xutf8DrawText",
-        constants$66.Xutf8DrawText$FUNC, false
+        constants$66.Xutf8DrawText$FUNC
     );
     static final FunctionDescriptor XmbDrawString$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -90,7 +90,7 @@ class constants$66 {
     );
     static final MethodHandle XmbDrawString$MH = RuntimeHelper.downcallHandle(
         "XmbDrawString",
-        constants$66.XmbDrawString$FUNC, false
+        constants$66.XmbDrawString$FUNC
     );
 }
 

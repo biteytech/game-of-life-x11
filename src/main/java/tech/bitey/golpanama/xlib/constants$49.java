@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$49 {
 
     static final FunctionDescriptor XRemoveHosts$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$49 {
     );
     static final MethodHandle XRemoveHosts$MH = RuntimeHelper.downcallHandle(
         "XRemoveHosts",
-        constants$49.XRemoveHosts$FUNC, false
+        constants$49.XRemoveHosts$FUNC
     );
     static final FunctionDescriptor XReparentWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -27,14 +27,14 @@ class constants$49 {
     );
     static final MethodHandle XReparentWindow$MH = RuntimeHelper.downcallHandle(
         "XReparentWindow",
-        constants$49.XReparentWindow$FUNC, false
+        constants$49.XReparentWindow$FUNC
     );
     static final FunctionDescriptor XResetScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XResetScreenSaver$MH = RuntimeHelper.downcallHandle(
         "XResetScreenSaver",
-        constants$49.XResetScreenSaver$FUNC, false
+        constants$49.XResetScreenSaver$FUNC
     );
     static final FunctionDescriptor XResizeWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -44,7 +44,7 @@ class constants$49 {
     );
     static final MethodHandle XResizeWindow$MH = RuntimeHelper.downcallHandle(
         "XResizeWindow",
-        constants$49.XResizeWindow$FUNC, false
+        constants$49.XResizeWindow$FUNC
     );
     static final FunctionDescriptor XRestackWindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -53,7 +53,7 @@ class constants$49 {
     );
     static final MethodHandle XRestackWindows$MH = RuntimeHelper.downcallHandle(
         "XRestackWindows",
-        constants$49.XRestackWindows$FUNC, false
+        constants$49.XRestackWindows$FUNC
     );
     static final FunctionDescriptor XRotateBuffers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -61,7 +61,7 @@ class constants$49 {
     );
     static final MethodHandle XRotateBuffers$MH = RuntimeHelper.downcallHandle(
         "XRotateBuffers",
-        constants$49.XRotateBuffers$FUNC, false
+        constants$49.XRotateBuffers$FUNC
     );
 }
 

@@ -5,19 +5,19 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public interface XIOErrorHandler {
 
-    int apply(jdk.incubator.foreign.MemoryAddress x0);
-    static NativeSymbol allocate(XIOErrorHandler fi, ResourceScope scope) {
-        return RuntimeHelper.upcallStub(XIOErrorHandler.class, fi, constants$17.XIOErrorHandler$FUNC, "(Ljdk/incubator/foreign/MemoryAddress;)I", scope);
+    int apply(java.lang.foreign.MemoryAddress _x0);
+    static MemorySegment allocate(XIOErrorHandler fi, MemorySession session) {
+        return RuntimeHelper.upcallStub(XIOErrorHandler.class, fi, constants$17.XIOErrorHandler$FUNC, session);
     }
-    static XIOErrorHandler ofAddress(MemoryAddress addr, ResourceScope scope) {
-        NativeSymbol symbol = NativeSymbol.ofAddress("XIOErrorHandler::" + Long.toHexString(addr.toRawLongValue()), addr, scope);
-return (jdk.incubator.foreign.MemoryAddress x0) -> {
+    static XIOErrorHandler ofAddress(MemoryAddress addr, MemorySession session) {
+        MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
+        return (java.lang.foreign.MemoryAddress __x0) -> {
             try {
-                return (int)constants$18.XIOErrorHandler$MH.invokeExact(symbol, (jdk.incubator.foreign.Addressable)x0);
+                return (int)constants$18.XIOErrorHandler$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

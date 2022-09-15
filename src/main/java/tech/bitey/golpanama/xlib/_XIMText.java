@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 public class _XIMText {
 
     static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
@@ -44,13 +44,13 @@ public class _XIMText {
         return _XIMText.feedback$VH;
     }
     public static MemoryAddress feedback$get(MemorySegment seg) {
-        return (jdk.incubator.foreign.MemoryAddress)_XIMText.feedback$VH.get(seg);
+        return (java.lang.foreign.MemoryAddress)_XIMText.feedback$VH.get(seg);
     }
     public static void feedback$set( MemorySegment seg, MemoryAddress x) {
         _XIMText.feedback$VH.set(seg, x);
     }
     public static MemoryAddress feedback$get(MemorySegment seg, long index) {
-        return (jdk.incubator.foreign.MemoryAddress)_XIMText.feedback$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemoryAddress)_XIMText.feedback$VH.get(seg.asSlice(index*sizeof()));
     }
     public static void feedback$set(MemorySegment seg, long index, MemoryAddress x) {
         _XIMText.feedback$VH.set(seg.asSlice(index*sizeof()), x);
@@ -85,13 +85,13 @@ public class _XIMText {
             return string.multi_byte$VH;
         }
         public static MemoryAddress multi_byte$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)string.multi_byte$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)string.multi_byte$VH.get(seg);
         }
         public static void multi_byte$set( MemorySegment seg, MemoryAddress x) {
             string.multi_byte$VH.set(seg, x);
         }
         public static MemoryAddress multi_byte$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)string.multi_byte$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)string.multi_byte$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void multi_byte$set(MemorySegment seg, long index, MemoryAddress x) {
             string.multi_byte$VH.set(seg.asSlice(index*sizeof()), x);
@@ -101,13 +101,13 @@ public class _XIMText {
             return string.wide_char$VH;
         }
         public static MemoryAddress wide_char$get(MemorySegment seg) {
-            return (jdk.incubator.foreign.MemoryAddress)string.wide_char$VH.get(seg);
+            return (java.lang.foreign.MemoryAddress)string.wide_char$VH.get(seg);
         }
         public static void wide_char$set( MemorySegment seg, MemoryAddress x) {
             string.wide_char$VH.set(seg, x);
         }
         public static MemoryAddress wide_char$get(MemorySegment seg, long index) {
-            return (jdk.incubator.foreign.MemoryAddress)string.wide_char$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemoryAddress)string.wide_char$VH.get(seg.asSlice(index*sizeof()));
         }
         public static void wide_char$set(MemorySegment seg, long index, MemoryAddress x) {
             string.wide_char$VH.set(seg.asSlice(index*sizeof()), x);
@@ -117,11 +117,7 @@ public class _XIMText {
         public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-        public static MemorySegment allocateArray(int len, ResourceScope scope) {
-            return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-        }
-        public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+        public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
     }
 
     public static MemorySegment string$slice(MemorySegment seg) {
@@ -132,11 +128,7 @@ public class _XIMText {
     public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment allocate(ResourceScope scope) { return allocate(SegmentAllocator.nativeAllocator(scope)); }
-    public static MemorySegment allocateArray(int len, ResourceScope scope) {
-        return allocateArray(len, SegmentAllocator.nativeAllocator(scope));
-    }
-    public static MemorySegment ofAddress(MemoryAddress addr, ResourceScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
 }
 
 

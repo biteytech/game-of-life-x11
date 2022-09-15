@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$1 {
 
     static final FunctionDescriptor select$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -18,7 +18,7 @@ class constants$1 {
     );
     static final MethodHandle select$MH = RuntimeHelper.downcallHandle(
         "select",
-        constants$1.select$FUNC, false
+        constants$1.select$FUNC
     );
     static final FunctionDescriptor pselect$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
@@ -30,7 +30,7 @@ class constants$1 {
     );
     static final MethodHandle pselect$MH = RuntimeHelper.downcallHandle(
         "pselect",
-        constants$1.pselect$FUNC, false
+        constants$1.pselect$FUNC
     );
     static final FunctionDescriptor _Xmblen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -38,7 +38,7 @@ class constants$1 {
     );
     static final MethodHandle _Xmblen$MH = RuntimeHelper.downcallHandle(
         "_Xmblen",
-        constants$1._Xmblen$FUNC, false
+        constants$1._Xmblen$FUNC
     );
     static final FunctionDescriptor XIMProc$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
@@ -46,7 +46,7 @@ class constants$1 {
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XIMProc$MH = RuntimeHelper.downcallHandle(
-        constants$1.XIMProc$FUNC, false
+        constants$1.XIMProc$FUNC
     );
     static final FunctionDescriptor XICProc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,

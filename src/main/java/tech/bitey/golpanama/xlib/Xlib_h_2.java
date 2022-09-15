@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
  class Xlib_h_2 extends Xlib_h_1 {
 
     public static int XK_braille_dots_2567() {
@@ -828,7 +828,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$0.__bswap_16$MH,"__bswap_16");
     }
     public static short __bswap_16 ( short __bsx) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__bswap_16$MH, "__bswap_16");
+        var mh$ = __bswap_16$MH();
         try {
             return (short)mh$.invokeExact(__bsx);
         } catch (Throwable ex$) {
@@ -839,7 +839,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$0.__bswap_32$MH,"__bswap_32");
     }
     public static int __bswap_32 ( int __bsx) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__bswap_32$MH, "__bswap_32");
+        var mh$ = __bswap_32$MH();
         try {
             return (int)mh$.invokeExact(__bsx);
         } catch (Throwable ex$) {
@@ -850,7 +850,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$0.__bswap_64$MH,"__bswap_64");
     }
     public static long __bswap_64 ( long __bsx) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__bswap_64$MH, "__bswap_64");
+        var mh$ = __bswap_64$MH();
         try {
             return (long)mh$.invokeExact(__bsx);
         } catch (Throwable ex$) {
@@ -861,7 +861,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$0.__uint16_identity$MH,"__uint16_identity");
     }
     public static short __uint16_identity ( short __x) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__uint16_identity$MH, "__uint16_identity");
+        var mh$ = __uint16_identity$MH();
         try {
             return (short)mh$.invokeExact(__x);
         } catch (Throwable ex$) {
@@ -872,7 +872,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$0.__uint32_identity$MH,"__uint32_identity");
     }
     public static int __uint32_identity ( int __x) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__uint32_identity$MH, "__uint32_identity");
+        var mh$ = __uint32_identity$MH();
         try {
             return (int)mh$.invokeExact(__x);
         } catch (Throwable ex$) {
@@ -883,7 +883,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$0.__uint64_identity$MH,"__uint64_identity");
     }
     public static long __uint64_identity ( long __x) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$0.__uint64_identity$MH, "__uint64_identity");
+        var mh$ = __uint64_identity$MH();
         try {
             return (long)mh$.invokeExact(__x);
         } catch (Throwable ex$) {
@@ -897,7 +897,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$1.select$MH,"select");
     }
     public static int select ( int __nfds,  Addressable __readfds,  Addressable __writefds,  Addressable __exceptfds,  Addressable __timeout) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$1.select$MH, "select");
+        var mh$ = select$MH();
         try {
             return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout);
         } catch (Throwable ex$) {
@@ -908,7 +908,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$1.pselect$MH,"pselect");
     }
     public static int pselect ( int __nfds,  Addressable __readfds,  Addressable __writefds,  Addressable __exceptfds,  Addressable __timeout,  Addressable __sigmask) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$1.pselect$MH, "pselect");
+        var mh$ = pselect$MH();
         try {
             return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout, __sigmask);
         } catch (Throwable ex$) {
@@ -925,7 +925,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$1._Xmblen$MH,"_Xmblen");
     }
     public static int _Xmblen ( Addressable str,  int len) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$1._Xmblen$MH, "_Xmblen");
+        var mh$ = _Xmblen$MH();
         try {
             return (int)mh$.invokeExact(str, len);
         } catch (Throwable ex$) {
@@ -1026,9 +1026,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$2.XLoadQueryFont$MH,"XLoadQueryFont");
     }
     public static MemoryAddress XLoadQueryFont ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$2.XLoadQueryFont$MH, "XLoadQueryFont");
+        var mh$ = XLoadQueryFont$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1037,9 +1037,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$2.XQueryFont$MH,"XQueryFont");
     }
     public static MemoryAddress XQueryFont ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$2.XQueryFont$MH, "XQueryFont");
+        var mh$ = XQueryFont$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1048,9 +1048,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$3.XGetMotionEvents$MH,"XGetMotionEvents");
     }
     public static MemoryAddress XGetMotionEvents ( Addressable x0,  long x1,  long x2,  long x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XGetMotionEvents$MH, "XGetMotionEvents");
+        var mh$ = XGetMotionEvents$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1059,9 +1059,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$3.XDeleteModifiermapEntry$MH,"XDeleteModifiermapEntry");
     }
     public static MemoryAddress XDeleteModifiermapEntry ( Addressable x0,  byte x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XDeleteModifiermapEntry$MH, "XDeleteModifiermapEntry");
+        var mh$ = XDeleteModifiermapEntry$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1070,9 +1070,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$3.XGetModifierMapping$MH,"XGetModifierMapping");
     }
     public static MemoryAddress XGetModifierMapping ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XGetModifierMapping$MH, "XGetModifierMapping");
+        var mh$ = XGetModifierMapping$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1081,9 +1081,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$3.XInsertModifiermapEntry$MH,"XInsertModifiermapEntry");
     }
     public static MemoryAddress XInsertModifiermapEntry ( Addressable x0,  byte x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XInsertModifiermapEntry$MH, "XInsertModifiermapEntry");
+        var mh$ = XInsertModifiermapEntry$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1092,9 +1092,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$3.XNewModifiermap$MH,"XNewModifiermap");
     }
     public static MemoryAddress XNewModifiermap ( int x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XNewModifiermap$MH, "XNewModifiermap");
+        var mh$ = XNewModifiermap$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1103,9 +1103,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$3.XCreateImage$MH,"XCreateImage");
     }
     public static MemoryAddress XCreateImage ( Addressable x0,  Addressable x1,  int x2,  int x3,  int x4,  Addressable x5,  int x6,  int x7,  int x8,  int x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$3.XCreateImage$MH, "XCreateImage");
+        var mh$ = XCreateImage$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1114,7 +1114,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$4.XInitImage$MH,"XInitImage");
     }
     public static int XInitImage ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XInitImage$MH, "XInitImage");
+        var mh$ = XInitImage$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1125,9 +1125,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$4.XGetImage$MH,"XGetImage");
     }
     public static MemoryAddress XGetImage ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XGetImage$MH, "XGetImage");
+        var mh$ = XGetImage$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1136,9 +1136,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$4.XGetSubImage$MH,"XGetSubImage");
     }
     public static MemoryAddress XGetSubImage ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  int x7,  Addressable x8,  int x9,  int x10) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XGetSubImage$MH, "XGetSubImage");
+        var mh$ = XGetSubImage$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1147,9 +1147,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$4.XOpenDisplay$MH,"XOpenDisplay");
     }
     public static MemoryAddress XOpenDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XOpenDisplay$MH, "XOpenDisplay");
+        var mh$ = XOpenDisplay$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1158,7 +1158,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$4.XrmInitialize$MH,"XrmInitialize");
     }
     public static void XrmInitialize () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XrmInitialize$MH, "XrmInitialize");
+        var mh$ = XrmInitialize$MH();
         try {
             mh$.invokeExact();
         } catch (Throwable ex$) {
@@ -1169,9 +1169,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$4.XFetchBytes$MH,"XFetchBytes");
     }
     public static MemoryAddress XFetchBytes ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$4.XFetchBytes$MH, "XFetchBytes");
+        var mh$ = XFetchBytes$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1180,9 +1180,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$5.XFetchBuffer$MH,"XFetchBuffer");
     }
     public static MemoryAddress XFetchBuffer ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XFetchBuffer$MH, "XFetchBuffer");
+        var mh$ = XFetchBuffer$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1191,9 +1191,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$5.XGetAtomName$MH,"XGetAtomName");
     }
     public static MemoryAddress XGetAtomName ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XGetAtomName$MH, "XGetAtomName");
+        var mh$ = XGetAtomName$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1202,7 +1202,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$5.XGetAtomNames$MH,"XGetAtomNames");
     }
     public static int XGetAtomNames ( Addressable x0,  Addressable x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XGetAtomNames$MH, "XGetAtomNames");
+        var mh$ = XGetAtomNames$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -1213,9 +1213,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$5.XGetDefault$MH,"XGetDefault");
     }
     public static MemoryAddress XGetDefault ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XGetDefault$MH, "XGetDefault");
+        var mh$ = XGetDefault$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1224,9 +1224,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$5.XDisplayName$MH,"XDisplayName");
     }
     public static MemoryAddress XDisplayName ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XDisplayName$MH, "XDisplayName");
+        var mh$ = XDisplayName$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1235,9 +1235,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$5.XKeysymToString$MH,"XKeysymToString");
     }
     public static MemoryAddress XKeysymToString ( long x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$5.XKeysymToString$MH, "XKeysymToString");
+        var mh$ = XKeysymToString$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1246,9 +1246,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$6.XSynchronize$MH,"XSynchronize");
     }
     public static MemoryAddress XSynchronize ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XSynchronize$MH, "XSynchronize");
+        var mh$ = XSynchronize$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1257,9 +1257,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$6.XSetAfterFunction$MH,"XSetAfterFunction");
     }
     public static MemoryAddress XSetAfterFunction ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XSetAfterFunction$MH, "XSetAfterFunction");
+        var mh$ = XSetAfterFunction$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1268,7 +1268,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$6.XInternAtom$MH,"XInternAtom");
     }
     public static long XInternAtom ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XInternAtom$MH, "XInternAtom");
+        var mh$ = XInternAtom$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -1279,7 +1279,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$6.XInternAtoms$MH,"XInternAtoms");
     }
     public static int XInternAtoms ( Addressable x0,  Addressable x1,  int x2,  int x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$6.XInternAtoms$MH, "XInternAtoms");
+        var mh$ = XInternAtoms$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -1290,7 +1290,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$7.XCopyColormapAndFree$MH,"XCopyColormapAndFree");
     }
     public static long XCopyColormapAndFree ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCopyColormapAndFree$MH, "XCopyColormapAndFree");
+        var mh$ = XCopyColormapAndFree$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1301,7 +1301,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$7.XCreateColormap$MH,"XCreateColormap");
     }
     public static long XCreateColormap ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreateColormap$MH, "XCreateColormap");
+        var mh$ = XCreateColormap$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -1312,7 +1312,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$7.XCreatePixmapCursor$MH,"XCreatePixmapCursor");
     }
     public static long XCreatePixmapCursor ( Addressable x0,  long x1,  long x2,  Addressable x3,  Addressable x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreatePixmapCursor$MH, "XCreatePixmapCursor");
+        var mh$ = XCreatePixmapCursor$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -1323,7 +1323,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$7.XCreateGlyphCursor$MH,"XCreateGlyphCursor");
     }
     public static long XCreateGlyphCursor ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreateGlyphCursor$MH, "XCreateGlyphCursor");
+        var mh$ = XCreateGlyphCursor$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -1334,7 +1334,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$7.XCreateFontCursor$MH,"XCreateFontCursor");
     }
     public static long XCreateFontCursor ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XCreateFontCursor$MH, "XCreateFontCursor");
+        var mh$ = XCreateFontCursor$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1345,7 +1345,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$7.XLoadFont$MH,"XLoadFont");
     }
     public static long XLoadFont ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$7.XLoadFont$MH, "XLoadFont");
+        var mh$ = XLoadFont$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1356,9 +1356,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$8.XCreateGC$MH,"XCreateGC");
     }
     public static MemoryAddress XCreateGC ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreateGC$MH, "XCreateGC");
+        var mh$ = XCreateGC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1367,7 +1367,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$8.XGContextFromGC$MH,"XGContextFromGC");
     }
     public static long XGContextFromGC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XGContextFromGC$MH, "XGContextFromGC");
+        var mh$ = XGContextFromGC$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1378,7 +1378,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$8.XFlushGC$MH,"XFlushGC");
     }
     public static void XFlushGC ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XFlushGC$MH, "XFlushGC");
+        var mh$ = XFlushGC$MH();
         try {
             mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1389,7 +1389,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$8.XCreatePixmap$MH,"XCreatePixmap");
     }
     public static long XCreatePixmap ( Addressable x0,  long x1,  int x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreatePixmap$MH, "XCreatePixmap");
+        var mh$ = XCreatePixmap$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -1400,7 +1400,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$8.XCreateBitmapFromData$MH,"XCreateBitmapFromData");
     }
     public static long XCreateBitmapFromData ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreateBitmapFromData$MH, "XCreateBitmapFromData");
+        var mh$ = XCreateBitmapFromData$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -1411,7 +1411,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$8.XCreatePixmapFromBitmapData$MH,"XCreatePixmapFromBitmapData");
     }
     public static long XCreatePixmapFromBitmapData ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  long x5,  long x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$8.XCreatePixmapFromBitmapData$MH, "XCreatePixmapFromBitmapData");
+        var mh$ = XCreatePixmapFromBitmapData$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -1422,7 +1422,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$9.XCreateSimpleWindow$MH,"XCreateSimpleWindow");
     }
     public static long XCreateSimpleWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6,  long x7,  long x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XCreateSimpleWindow$MH, "XCreateSimpleWindow");
+        var mh$ = XCreateSimpleWindow$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -1433,7 +1433,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$9.XGetSelectionOwner$MH,"XGetSelectionOwner");
     }
     public static long XGetSelectionOwner ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XGetSelectionOwner$MH, "XGetSelectionOwner");
+        var mh$ = XGetSelectionOwner$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1444,7 +1444,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$9.XCreateWindow$MH,"XCreateWindow");
     }
     public static long XCreateWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8,  Addressable x9,  long x10,  Addressable x11) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XCreateWindow$MH, "XCreateWindow");
+        var mh$ = XCreateWindow$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
         } catch (Throwable ex$) {
@@ -1455,9 +1455,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$9.XListInstalledColormaps$MH,"XListInstalledColormaps");
     }
     public static MemoryAddress XListInstalledColormaps ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XListInstalledColormaps$MH, "XListInstalledColormaps");
+        var mh$ = XListInstalledColormaps$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1466,9 +1466,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$9.XListFonts$MH,"XListFonts");
     }
     public static MemoryAddress XListFonts ( Addressable x0,  Addressable x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XListFonts$MH, "XListFonts");
+        var mh$ = XListFonts$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1477,9 +1477,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$9.XListFontsWithInfo$MH,"XListFontsWithInfo");
     }
     public static MemoryAddress XListFontsWithInfo ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$9.XListFontsWithInfo$MH, "XListFontsWithInfo");
+        var mh$ = XListFontsWithInfo$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1488,9 +1488,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$10.XGetFontPath$MH,"XGetFontPath");
     }
     public static MemoryAddress XGetFontPath ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XGetFontPath$MH, "XGetFontPath");
+        var mh$ = XGetFontPath$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1499,9 +1499,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$10.XListExtensions$MH,"XListExtensions");
     }
     public static MemoryAddress XListExtensions ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XListExtensions$MH, "XListExtensions");
+        var mh$ = XListExtensions$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1510,9 +1510,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$10.XListProperties$MH,"XListProperties");
     }
     public static MemoryAddress XListProperties ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XListProperties$MH, "XListProperties");
+        var mh$ = XListProperties$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1521,9 +1521,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$10.XListHosts$MH,"XListHosts");
     }
     public static MemoryAddress XListHosts ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XListHosts$MH, "XListHosts");
+        var mh$ = XListHosts$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1532,7 +1532,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$10.XKeycodeToKeysym$MH,"XKeycodeToKeysym");
     }
     public static long XKeycodeToKeysym ( Addressable x0,  byte x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XKeycodeToKeysym$MH, "XKeycodeToKeysym");
+        var mh$ = XKeycodeToKeysym$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -1543,7 +1543,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$10.XLookupKeysym$MH,"XLookupKeysym");
     }
     public static long XLookupKeysym ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$10.XLookupKeysym$MH, "XLookupKeysym");
+        var mh$ = XLookupKeysym$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1554,9 +1554,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$11.XGetKeyboardMapping$MH,"XGetKeyboardMapping");
     }
     public static MemoryAddress XGetKeyboardMapping ( Addressable x0,  byte x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XGetKeyboardMapping$MH, "XGetKeyboardMapping");
+        var mh$ = XGetKeyboardMapping$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1565,7 +1565,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$11.XStringToKeysym$MH,"XStringToKeysym");
     }
     public static long XStringToKeysym ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XStringToKeysym$MH, "XStringToKeysym");
+        var mh$ = XStringToKeysym$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1576,7 +1576,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$11.XMaxRequestSize$MH,"XMaxRequestSize");
     }
     public static long XMaxRequestSize ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XMaxRequestSize$MH, "XMaxRequestSize");
+        var mh$ = XMaxRequestSize$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1587,7 +1587,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$11.XExtendedMaxRequestSize$MH,"XExtendedMaxRequestSize");
     }
     public static long XExtendedMaxRequestSize ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XExtendedMaxRequestSize$MH, "XExtendedMaxRequestSize");
+        var mh$ = XExtendedMaxRequestSize$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1598,9 +1598,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$11.XResourceManagerString$MH,"XResourceManagerString");
     }
     public static MemoryAddress XResourceManagerString ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XResourceManagerString$MH, "XResourceManagerString");
+        var mh$ = XResourceManagerString$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1609,9 +1609,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$11.XScreenResourceString$MH,"XScreenResourceString");
     }
     public static MemoryAddress XScreenResourceString ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$11.XScreenResourceString$MH, "XScreenResourceString");
+        var mh$ = XScreenResourceString$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1620,7 +1620,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$12.XDisplayMotionBufferSize$MH,"XDisplayMotionBufferSize");
     }
     public static long XDisplayMotionBufferSize ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XDisplayMotionBufferSize$MH, "XDisplayMotionBufferSize");
+        var mh$ = XDisplayMotionBufferSize$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1631,7 +1631,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$12.XVisualIDFromVisual$MH,"XVisualIDFromVisual");
     }
     public static long XVisualIDFromVisual ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XVisualIDFromVisual$MH, "XVisualIDFromVisual");
+        var mh$ = XVisualIDFromVisual$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1642,7 +1642,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$12.XInitThreads$MH,"XInitThreads");
     }
     public static int XInitThreads () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XInitThreads$MH, "XInitThreads");
+        var mh$ = XInitThreads$MH();
         try {
             return (int)mh$.invokeExact();
         } catch (Throwable ex$) {
@@ -1653,7 +1653,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$12.XLockDisplay$MH,"XLockDisplay");
     }
     public static void XLockDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XLockDisplay$MH, "XLockDisplay");
+        var mh$ = XLockDisplay$MH();
         try {
             mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1664,7 +1664,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$12.XUnlockDisplay$MH,"XUnlockDisplay");
     }
     public static void XUnlockDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XUnlockDisplay$MH, "XUnlockDisplay");
+        var mh$ = XUnlockDisplay$MH();
         try {
             mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1675,9 +1675,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$12.XInitExtension$MH,"XInitExtension");
     }
     public static MemoryAddress XInitExtension ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$12.XInitExtension$MH, "XInitExtension");
+        var mh$ = XInitExtension$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1686,9 +1686,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$13.XAddExtension$MH,"XAddExtension");
     }
     public static MemoryAddress XAddExtension ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XAddExtension$MH, "XAddExtension");
+        var mh$ = XAddExtension$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1697,9 +1697,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$13.XFindOnExtensionList$MH,"XFindOnExtensionList");
     }
     public static MemoryAddress XFindOnExtensionList ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XFindOnExtensionList$MH, "XFindOnExtensionList");
+        var mh$ = XFindOnExtensionList$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1708,9 +1708,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$13.XEHeadOfExtensionList$MH,"XEHeadOfExtensionList");
     }
     public static MemoryAddress XEHeadOfExtensionList ( MemorySegment x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XEHeadOfExtensionList$MH, "XEHeadOfExtensionList");
+        var mh$ = XEHeadOfExtensionList$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1719,7 +1719,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$13.XRootWindow$MH,"XRootWindow");
     }
     public static long XRootWindow ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XRootWindow$MH, "XRootWindow");
+        var mh$ = XRootWindow$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1730,7 +1730,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$13.XDefaultRootWindow$MH,"XDefaultRootWindow");
     }
     public static long XDefaultRootWindow ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XDefaultRootWindow$MH, "XDefaultRootWindow");
+        var mh$ = XDefaultRootWindow$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1741,7 +1741,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$13.XRootWindowOfScreen$MH,"XRootWindowOfScreen");
     }
     public static long XRootWindowOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$13.XRootWindowOfScreen$MH, "XRootWindowOfScreen");
+        var mh$ = XRootWindowOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1752,9 +1752,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$14.XDefaultVisual$MH,"XDefaultVisual");
     }
     public static MemoryAddress XDefaultVisual ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultVisual$MH, "XDefaultVisual");
+        var mh$ = XDefaultVisual$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1763,9 +1763,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$14.XDefaultVisualOfScreen$MH,"XDefaultVisualOfScreen");
     }
     public static MemoryAddress XDefaultVisualOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultVisualOfScreen$MH, "XDefaultVisualOfScreen");
+        var mh$ = XDefaultVisualOfScreen$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1774,9 +1774,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$14.XDefaultGC$MH,"XDefaultGC");
     }
     public static MemoryAddress XDefaultGC ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultGC$MH, "XDefaultGC");
+        var mh$ = XDefaultGC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1785,9 +1785,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$14.XDefaultGCOfScreen$MH,"XDefaultGCOfScreen");
     }
     public static MemoryAddress XDefaultGCOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XDefaultGCOfScreen$MH, "XDefaultGCOfScreen");
+        var mh$ = XDefaultGCOfScreen$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1796,7 +1796,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$14.XBlackPixel$MH,"XBlackPixel");
     }
     public static long XBlackPixel ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XBlackPixel$MH, "XBlackPixel");
+        var mh$ = XBlackPixel$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1807,7 +1807,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$14.XWhitePixel$MH,"XWhitePixel");
     }
     public static long XWhitePixel ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$14.XWhitePixel$MH, "XWhitePixel");
+        var mh$ = XWhitePixel$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1818,7 +1818,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$15.XAllPlanes$MH,"XAllPlanes");
     }
     public static long XAllPlanes () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XAllPlanes$MH, "XAllPlanes");
+        var mh$ = XAllPlanes$MH();
         try {
             return (long)mh$.invokeExact();
         } catch (Throwable ex$) {
@@ -1829,7 +1829,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$15.XBlackPixelOfScreen$MH,"XBlackPixelOfScreen");
     }
     public static long XBlackPixelOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XBlackPixelOfScreen$MH, "XBlackPixelOfScreen");
+        var mh$ = XBlackPixelOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1840,7 +1840,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$15.XWhitePixelOfScreen$MH,"XWhitePixelOfScreen");
     }
     public static long XWhitePixelOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XWhitePixelOfScreen$MH, "XWhitePixelOfScreen");
+        var mh$ = XWhitePixelOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1851,7 +1851,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$15.XNextRequest$MH,"XNextRequest");
     }
     public static long XNextRequest ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XNextRequest$MH, "XNextRequest");
+        var mh$ = XNextRequest$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1862,7 +1862,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$15.XLastKnownRequestProcessed$MH,"XLastKnownRequestProcessed");
     }
     public static long XLastKnownRequestProcessed ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XLastKnownRequestProcessed$MH, "XLastKnownRequestProcessed");
+        var mh$ = XLastKnownRequestProcessed$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1873,9 +1873,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$15.XServerVendor$MH,"XServerVendor");
     }
     public static MemoryAddress XServerVendor ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$15.XServerVendor$MH, "XServerVendor");
+        var mh$ = XServerVendor$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1884,9 +1884,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$16.XDisplayString$MH,"XDisplayString");
     }
     public static MemoryAddress XDisplayString ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDisplayString$MH, "XDisplayString");
+        var mh$ = XDisplayString$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1895,7 +1895,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$16.XDefaultColormap$MH,"XDefaultColormap");
     }
     public static long XDefaultColormap ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDefaultColormap$MH, "XDefaultColormap");
+        var mh$ = XDefaultColormap$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -1906,7 +1906,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$16.XDefaultColormapOfScreen$MH,"XDefaultColormapOfScreen");
     }
     public static long XDefaultColormapOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDefaultColormapOfScreen$MH, "XDefaultColormapOfScreen");
+        var mh$ = XDefaultColormapOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1917,9 +1917,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$16.XDisplayOfScreen$MH,"XDisplayOfScreen");
     }
     public static MemoryAddress XDisplayOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDisplayOfScreen$MH, "XDisplayOfScreen");
+        var mh$ = XDisplayOfScreen$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1928,9 +1928,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$16.XScreenOfDisplay$MH,"XScreenOfDisplay");
     }
     public static MemoryAddress XScreenOfDisplay ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XScreenOfDisplay$MH, "XScreenOfDisplay");
+        var mh$ = XScreenOfDisplay$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1939,9 +1939,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$16.XDefaultScreenOfDisplay$MH,"XDefaultScreenOfDisplay");
     }
     public static MemoryAddress XDefaultScreenOfDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$16.XDefaultScreenOfDisplay$MH, "XDefaultScreenOfDisplay");
+        var mh$ = XDefaultScreenOfDisplay$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1950,7 +1950,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$17.XEventMaskOfScreen$MH,"XEventMaskOfScreen");
     }
     public static long XEventMaskOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$17.XEventMaskOfScreen$MH, "XEventMaskOfScreen");
+        var mh$ = XEventMaskOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1961,7 +1961,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$17.XScreenNumberOfScreen$MH,"XScreenNumberOfScreen");
     }
     public static int XScreenNumberOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$17.XScreenNumberOfScreen$MH, "XScreenNumberOfScreen");
+        var mh$ = XScreenNumberOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -1972,9 +1972,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$17.XSetErrorHandler$MH,"XSetErrorHandler");
     }
     public static MemoryAddress XSetErrorHandler ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$17.XSetErrorHandler$MH, "XSetErrorHandler");
+        var mh$ = XSetErrorHandler$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1983,9 +1983,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$18.XSetIOErrorHandler$MH,"XSetIOErrorHandler");
     }
     public static MemoryAddress XSetIOErrorHandler ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XSetIOErrorHandler$MH, "XSetIOErrorHandler");
+        var mh$ = XSetIOErrorHandler$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1994,9 +1994,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$18.XListPixmapFormats$MH,"XListPixmapFormats");
     }
     public static MemoryAddress XListPixmapFormats ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XListPixmapFormats$MH, "XListPixmapFormats");
+        var mh$ = XListPixmapFormats$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -2005,9 +2005,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$18.XListDepths$MH,"XListDepths");
     }
     public static MemoryAddress XListDepths ( Addressable x0,  int x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XListDepths$MH, "XListDepths");
+        var mh$ = XListDepths$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -2016,7 +2016,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$18.XReconfigureWMWindow$MH,"XReconfigureWMWindow");
     }
     public static int XReconfigureWMWindow ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XReconfigureWMWindow$MH, "XReconfigureWMWindow");
+        var mh$ = XReconfigureWMWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2027,7 +2027,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$18.XGetWMProtocols$MH,"XGetWMProtocols");
     }
     public static int XGetWMProtocols ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$18.XGetWMProtocols$MH, "XGetWMProtocols");
+        var mh$ = XGetWMProtocols$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2038,7 +2038,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$19.XSetWMProtocols$MH,"XSetWMProtocols");
     }
     public static int XSetWMProtocols ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XSetWMProtocols$MH, "XSetWMProtocols");
+        var mh$ = XSetWMProtocols$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2049,7 +2049,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$19.XIconifyWindow$MH,"XIconifyWindow");
     }
     public static int XIconifyWindow ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XIconifyWindow$MH, "XIconifyWindow");
+        var mh$ = XIconifyWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2060,7 +2060,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$19.XWithdrawWindow$MH,"XWithdrawWindow");
     }
     public static int XWithdrawWindow ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XWithdrawWindow$MH, "XWithdrawWindow");
+        var mh$ = XWithdrawWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2071,7 +2071,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$19.XGetCommand$MH,"XGetCommand");
     }
     public static int XGetCommand ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XGetCommand$MH, "XGetCommand");
+        var mh$ = XGetCommand$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2082,7 +2082,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$19.XGetWMColormapWindows$MH,"XGetWMColormapWindows");
     }
     public static int XGetWMColormapWindows ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XGetWMColormapWindows$MH, "XGetWMColormapWindows");
+        var mh$ = XGetWMColormapWindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2093,7 +2093,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$19.XSetWMColormapWindows$MH,"XSetWMColormapWindows");
     }
     public static int XSetWMColormapWindows ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$19.XSetWMColormapWindows$MH, "XSetWMColormapWindows");
+        var mh$ = XSetWMColormapWindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2104,7 +2104,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$20.XFreeStringList$MH,"XFreeStringList");
     }
     public static void XFreeStringList ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XFreeStringList$MH, "XFreeStringList");
+        var mh$ = XFreeStringList$MH();
         try {
             mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2115,7 +2115,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$20.XSetTransientForHint$MH,"XSetTransientForHint");
     }
     public static int XSetTransientForHint ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XSetTransientForHint$MH, "XSetTransientForHint");
+        var mh$ = XSetTransientForHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2126,7 +2126,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$20.XActivateScreenSaver$MH,"XActivateScreenSaver");
     }
     public static int XActivateScreenSaver ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XActivateScreenSaver$MH, "XActivateScreenSaver");
+        var mh$ = XActivateScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2137,7 +2137,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$20.XAddHost$MH,"XAddHost");
     }
     public static int XAddHost ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XAddHost$MH, "XAddHost");
+        var mh$ = XAddHost$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2148,7 +2148,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$20.XAddHosts$MH,"XAddHosts");
     }
     public static int XAddHosts ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XAddHosts$MH, "XAddHosts");
+        var mh$ = XAddHosts$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2159,7 +2159,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$20.XAddToExtensionList$MH,"XAddToExtensionList");
     }
     public static int XAddToExtensionList ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$20.XAddToExtensionList$MH, "XAddToExtensionList");
+        var mh$ = XAddToExtensionList$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2170,7 +2170,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$21.XAddToSaveSet$MH,"XAddToSaveSet");
     }
     public static int XAddToSaveSet ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAddToSaveSet$MH, "XAddToSaveSet");
+        var mh$ = XAddToSaveSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2181,7 +2181,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$21.XAllocColor$MH,"XAllocColor");
     }
     public static int XAllocColor ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocColor$MH, "XAllocColor");
+        var mh$ = XAllocColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2192,7 +2192,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$21.XAllocColorCells$MH,"XAllocColorCells");
     }
     public static int XAllocColorCells ( Addressable x0,  long x1,  int x2,  Addressable x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocColorCells$MH, "XAllocColorCells");
+        var mh$ = XAllocColorCells$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2203,7 +2203,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$21.XAllocColorPlanes$MH,"XAllocColorPlanes");
     }
     public static int XAllocColorPlanes ( Addressable x0,  long x1,  int x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  Addressable x8,  Addressable x9,  Addressable x10) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocColorPlanes$MH, "XAllocColorPlanes");
+        var mh$ = XAllocColorPlanes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
         } catch (Throwable ex$) {
@@ -2214,7 +2214,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$21.XAllocNamedColor$MH,"XAllocNamedColor");
     }
     public static int XAllocNamedColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllocNamedColor$MH, "XAllocNamedColor");
+        var mh$ = XAllocNamedColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2225,7 +2225,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$21.XAllowEvents$MH,"XAllowEvents");
     }
     public static int XAllowEvents ( Addressable x0,  int x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$21.XAllowEvents$MH, "XAllowEvents");
+        var mh$ = XAllowEvents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2236,7 +2236,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOff$MH,"XAutoRepeatOff");
     }
     public static int XAutoRepeatOff ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOff$MH, "XAutoRepeatOff");
+        var mh$ = XAutoRepeatOff$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2247,7 +2247,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOn$MH,"XAutoRepeatOn");
     }
     public static int XAutoRepeatOn ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOn$MH, "XAutoRepeatOn");
+        var mh$ = XAutoRepeatOn$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2258,7 +2258,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$22.XBell$MH,"XBell");
     }
     public static int XBell ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBell$MH, "XBell");
+        var mh$ = XBell$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2269,7 +2269,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$22.XBitmapBitOrder$MH,"XBitmapBitOrder");
     }
     public static int XBitmapBitOrder ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBitmapBitOrder$MH, "XBitmapBitOrder");
+        var mh$ = XBitmapBitOrder$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2280,7 +2280,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$22.XBitmapPad$MH,"XBitmapPad");
     }
     public static int XBitmapPad ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBitmapPad$MH, "XBitmapPad");
+        var mh$ = XBitmapPad$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2291,7 +2291,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$22.XBitmapUnit$MH,"XBitmapUnit");
     }
     public static int XBitmapUnit ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$22.XBitmapUnit$MH, "XBitmapUnit");
+        var mh$ = XBitmapUnit$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2302,7 +2302,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$23.XCellsOfScreen$MH,"XCellsOfScreen");
     }
     public static int XCellsOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XCellsOfScreen$MH, "XCellsOfScreen");
+        var mh$ = XCellsOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2313,7 +2313,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$23.XChangeActivePointerGrab$MH,"XChangeActivePointerGrab");
     }
     public static int XChangeActivePointerGrab ( Addressable x0,  int x1,  long x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeActivePointerGrab$MH, "XChangeActivePointerGrab");
+        var mh$ = XChangeActivePointerGrab$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2324,7 +2324,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$23.XChangeGC$MH,"XChangeGC");
     }
     public static int XChangeGC ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeGC$MH, "XChangeGC");
+        var mh$ = XChangeGC$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2335,7 +2335,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardControl$MH,"XChangeKeyboardControl");
     }
     public static int XChangeKeyboardControl ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardControl$MH, "XChangeKeyboardControl");
+        var mh$ = XChangeKeyboardControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2346,7 +2346,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardMapping$MH,"XChangeKeyboardMapping");
     }
     public static int XChangeKeyboardMapping ( Addressable x0,  int x1,  int x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardMapping$MH, "XChangeKeyboardMapping");
+        var mh$ = XChangeKeyboardMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2357,7 +2357,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$23.XChangePointerControl$MH,"XChangePointerControl");
     }
     public static int XChangePointerControl ( Addressable x0,  int x1,  int x2,  int x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$23.XChangePointerControl$MH, "XChangePointerControl");
+        var mh$ = XChangePointerControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -2368,7 +2368,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$24.XChangeProperty$MH,"XChangeProperty");
     }
     public static int XChangeProperty ( Addressable x0,  long x1,  long x2,  long x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XChangeProperty$MH, "XChangeProperty");
+        var mh$ = XChangeProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -2379,7 +2379,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$24.XChangeSaveSet$MH,"XChangeSaveSet");
     }
     public static int XChangeSaveSet ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XChangeSaveSet$MH, "XChangeSaveSet");
+        var mh$ = XChangeSaveSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2390,7 +2390,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$24.XChangeWindowAttributes$MH,"XChangeWindowAttributes");
     }
     public static int XChangeWindowAttributes ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XChangeWindowAttributes$MH, "XChangeWindowAttributes");
+        var mh$ = XChangeWindowAttributes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2401,7 +2401,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$24.XCheckIfEvent$MH,"XCheckIfEvent");
     }
     public static int XCheckIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$24.XCheckIfEvent$MH, "XCheckIfEvent");
+        var mh$ = XCheckIfEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2412,7 +2412,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$25.XCheckMaskEvent$MH,"XCheckMaskEvent");
     }
     public static int XCheckMaskEvent ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckMaskEvent$MH, "XCheckMaskEvent");
+        var mh$ = XCheckMaskEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2423,7 +2423,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$25.XCheckTypedEvent$MH,"XCheckTypedEvent");
     }
     public static int XCheckTypedEvent ( Addressable x0,  int x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckTypedEvent$MH, "XCheckTypedEvent");
+        var mh$ = XCheckTypedEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2434,7 +2434,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$25.XCheckTypedWindowEvent$MH,"XCheckTypedWindowEvent");
     }
     public static int XCheckTypedWindowEvent ( Addressable x0,  long x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckTypedWindowEvent$MH, "XCheckTypedWindowEvent");
+        var mh$ = XCheckTypedWindowEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2445,7 +2445,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$25.XCheckWindowEvent$MH,"XCheckWindowEvent");
     }
     public static int XCheckWindowEvent ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCheckWindowEvent$MH, "XCheckWindowEvent");
+        var mh$ = XCheckWindowEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2456,7 +2456,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindows$MH,"XCirculateSubwindows");
     }
     public static int XCirculateSubwindows ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindows$MH, "XCirculateSubwindows");
+        var mh$ = XCirculateSubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2467,7 +2467,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsDown$MH,"XCirculateSubwindowsDown");
     }
     public static int XCirculateSubwindowsDown ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsDown$MH, "XCirculateSubwindowsDown");
+        var mh$ = XCirculateSubwindowsDown$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2478,7 +2478,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$26.XCirculateSubwindowsUp$MH,"XCirculateSubwindowsUp");
     }
     public static int XCirculateSubwindowsUp ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XCirculateSubwindowsUp$MH, "XCirculateSubwindowsUp");
+        var mh$ = XCirculateSubwindowsUp$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2489,7 +2489,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$26.XClearArea$MH,"XClearArea");
     }
     public static int XClearArea ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XClearArea$MH, "XClearArea");
+        var mh$ = XClearArea$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2500,7 +2500,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$26.XClearWindow$MH,"XClearWindow");
     }
     public static int XClearWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XClearWindow$MH, "XClearWindow");
+        var mh$ = XClearWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2511,7 +2511,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$26.XCloseDisplay$MH,"XCloseDisplay");
     }
     public static int XCloseDisplay ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XCloseDisplay$MH, "XCloseDisplay");
+        var mh$ = XCloseDisplay$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2522,7 +2522,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$26.XConfigureWindow$MH,"XConfigureWindow");
     }
     public static int XConfigureWindow ( Addressable x0,  long x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XConfigureWindow$MH, "XConfigureWindow");
+        var mh$ = XConfigureWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2533,7 +2533,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$26.XConnectionNumber$MH,"XConnectionNumber");
     }
     public static int XConnectionNumber ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$26.XConnectionNumber$MH, "XConnectionNumber");
+        var mh$ = XConnectionNumber$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2544,7 +2544,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$27.XConvertSelection$MH,"XConvertSelection");
     }
     public static int XConvertSelection ( Addressable x0,  long x1,  long x2,  long x3,  long x4,  long x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XConvertSelection$MH, "XConvertSelection");
+        var mh$ = XConvertSelection$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -2555,7 +2555,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$27.XCopyArea$MH,"XCopyArea");
     }
     public static int XCopyArea ( Addressable x0,  long x1,  long x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XCopyArea$MH, "XCopyArea");
+        var mh$ = XCopyArea$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
         } catch (Throwable ex$) {
@@ -2566,7 +2566,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$27.XCopyGC$MH,"XCopyGC");
     }
     public static int XCopyGC ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XCopyGC$MH, "XCopyGC");
+        var mh$ = XCopyGC$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -2577,7 +2577,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$27.XCopyPlane$MH,"XCopyPlane");
     }
     public static int XCopyPlane ( Addressable x0,  long x1,  long x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9,  long x10) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XCopyPlane$MH, "XCopyPlane");
+        var mh$ = XCopyPlane$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
         } catch (Throwable ex$) {
@@ -2588,7 +2588,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$27.XDefaultDepth$MH,"XDefaultDepth");
     }
     public static int XDefaultDepth ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XDefaultDepth$MH, "XDefaultDepth");
+        var mh$ = XDefaultDepth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2599,7 +2599,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$27.XDefaultDepthOfScreen$MH,"XDefaultDepthOfScreen");
     }
     public static int XDefaultDepthOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$27.XDefaultDepthOfScreen$MH, "XDefaultDepthOfScreen");
+        var mh$ = XDefaultDepthOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2610,7 +2610,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$28.XDefaultScreen$MH,"XDefaultScreen");
     }
     public static int XDefaultScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDefaultScreen$MH, "XDefaultScreen");
+        var mh$ = XDefaultScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2621,7 +2621,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$28.XDefineCursor$MH,"XDefineCursor");
     }
     public static int XDefineCursor ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDefineCursor$MH, "XDefineCursor");
+        var mh$ = XDefineCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2632,7 +2632,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$28.XDeleteProperty$MH,"XDeleteProperty");
     }
     public static int XDeleteProperty ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDeleteProperty$MH, "XDeleteProperty");
+        var mh$ = XDeleteProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2643,7 +2643,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$28.XDestroyWindow$MH,"XDestroyWindow");
     }
     public static int XDestroyWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDestroyWindow$MH, "XDestroyWindow");
+        var mh$ = XDestroyWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2654,7 +2654,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$28.XDestroySubwindows$MH,"XDestroySubwindows");
     }
     public static int XDestroySubwindows ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDestroySubwindows$MH, "XDestroySubwindows");
+        var mh$ = XDestroySubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2665,7 +2665,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$28.XDoesBackingStore$MH,"XDoesBackingStore");
     }
     public static int XDoesBackingStore ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$28.XDoesBackingStore$MH, "XDoesBackingStore");
+        var mh$ = XDoesBackingStore$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2676,7 +2676,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$29.XDoesSaveUnders$MH,"XDoesSaveUnders");
     }
     public static int XDoesSaveUnders ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDoesSaveUnders$MH, "XDoesSaveUnders");
+        var mh$ = XDoesSaveUnders$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2687,7 +2687,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$29.XDisableAccessControl$MH,"XDisableAccessControl");
     }
     public static int XDisableAccessControl ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisableAccessControl$MH, "XDisableAccessControl");
+        var mh$ = XDisableAccessControl$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2698,7 +2698,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$29.XDisplayCells$MH,"XDisplayCells");
     }
     public static int XDisplayCells ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayCells$MH, "XDisplayCells");
+        var mh$ = XDisplayCells$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2709,7 +2709,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$29.XDisplayHeight$MH,"XDisplayHeight");
     }
     public static int XDisplayHeight ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayHeight$MH, "XDisplayHeight");
+        var mh$ = XDisplayHeight$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2720,7 +2720,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$29.XDisplayHeightMM$MH,"XDisplayHeightMM");
     }
     public static int XDisplayHeightMM ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayHeightMM$MH, "XDisplayHeightMM");
+        var mh$ = XDisplayHeightMM$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2731,7 +2731,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$29.XDisplayKeycodes$MH,"XDisplayKeycodes");
     }
     public static int XDisplayKeycodes ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$29.XDisplayKeycodes$MH, "XDisplayKeycodes");
+        var mh$ = XDisplayKeycodes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2742,7 +2742,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$30.XDisplayPlanes$MH,"XDisplayPlanes");
     }
     public static int XDisplayPlanes ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDisplayPlanes$MH, "XDisplayPlanes");
+        var mh$ = XDisplayPlanes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2753,7 +2753,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$30.XDisplayWidth$MH,"XDisplayWidth");
     }
     public static int XDisplayWidth ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDisplayWidth$MH, "XDisplayWidth");
+        var mh$ = XDisplayWidth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2764,7 +2764,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$30.XDisplayWidthMM$MH,"XDisplayWidthMM");
     }
     public static int XDisplayWidthMM ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDisplayWidthMM$MH, "XDisplayWidthMM");
+        var mh$ = XDisplayWidthMM$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2775,7 +2775,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$30.XDrawArc$MH,"XDrawArc");
     }
     public static int XDrawArc ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDrawArc$MH, "XDrawArc");
+        var mh$ = XDrawArc$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -2786,7 +2786,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$30.XDrawArcs$MH,"XDrawArcs");
     }
     public static int XDrawArcs ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDrawArcs$MH, "XDrawArcs");
+        var mh$ = XDrawArcs$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2797,7 +2797,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$30.XDrawImageString$MH,"XDrawImageString");
     }
     public static int XDrawImageString ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$30.XDrawImageString$MH, "XDrawImageString");
+        var mh$ = XDrawImageString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2808,7 +2808,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$31.XDrawImageString16$MH,"XDrawImageString16");
     }
     public static int XDrawImageString16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawImageString16$MH, "XDrawImageString16");
+        var mh$ = XDrawImageString16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2819,7 +2819,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$31.XDrawLine$MH,"XDrawLine");
     }
     public static int XDrawLine ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawLine$MH, "XDrawLine");
+        var mh$ = XDrawLine$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2830,7 +2830,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$31.XDrawLines$MH,"XDrawLines");
     }
     public static int XDrawLines ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawLines$MH, "XDrawLines");
+        var mh$ = XDrawLines$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -2841,7 +2841,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$31.XDrawPoint$MH,"XDrawPoint");
     }
     public static int XDrawPoint ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawPoint$MH, "XDrawPoint");
+        var mh$ = XDrawPoint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2852,7 +2852,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$31.XDrawPoints$MH,"XDrawPoints");
     }
     public static int XDrawPoints ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawPoints$MH, "XDrawPoints");
+        var mh$ = XDrawPoints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -2863,7 +2863,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$31.XDrawRectangle$MH,"XDrawRectangle");
     }
     public static int XDrawRectangle ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$31.XDrawRectangle$MH, "XDrawRectangle");
+        var mh$ = XDrawRectangle$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2874,7 +2874,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$32.XDrawRectangles$MH,"XDrawRectangles");
     }
     public static int XDrawRectangles ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawRectangles$MH, "XDrawRectangles");
+        var mh$ = XDrawRectangles$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2885,7 +2885,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$32.XDrawSegments$MH,"XDrawSegments");
     }
     public static int XDrawSegments ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawSegments$MH, "XDrawSegments");
+        var mh$ = XDrawSegments$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2896,7 +2896,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$32.XDrawString$MH,"XDrawString");
     }
     public static int XDrawString ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawString$MH, "XDrawString");
+        var mh$ = XDrawString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2907,7 +2907,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$32.XDrawString16$MH,"XDrawString16");
     }
     public static int XDrawString16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawString16$MH, "XDrawString16");
+        var mh$ = XDrawString16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2918,7 +2918,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$32.XDrawText$MH,"XDrawText");
     }
     public static int XDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawText$MH, "XDrawText");
+        var mh$ = XDrawText$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2929,7 +2929,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$32.XDrawText16$MH,"XDrawText16");
     }
     public static int XDrawText16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$32.XDrawText16$MH, "XDrawText16");
+        var mh$ = XDrawText16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -2940,7 +2940,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$33.XEnableAccessControl$MH,"XEnableAccessControl");
     }
     public static int XEnableAccessControl ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XEnableAccessControl$MH, "XEnableAccessControl");
+        var mh$ = XEnableAccessControl$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -2951,7 +2951,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$33.XEventsQueued$MH,"XEventsQueued");
     }
     public static int XEventsQueued ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XEventsQueued$MH, "XEventsQueued");
+        var mh$ = XEventsQueued$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -2962,7 +2962,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$33.XFetchName$MH,"XFetchName");
     }
     public static int XFetchName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFetchName$MH, "XFetchName");
+        var mh$ = XFetchName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -2973,7 +2973,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$33.XFillArc$MH,"XFillArc");
     }
     public static int XFillArc ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFillArc$MH, "XFillArc");
+        var mh$ = XFillArc$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -2984,7 +2984,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$33.XFillArcs$MH,"XFillArcs");
     }
     public static int XFillArcs ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFillArcs$MH, "XFillArcs");
+        var mh$ = XFillArcs$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -2995,7 +2995,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$33.XFillPolygon$MH,"XFillPolygon");
     }
     public static int XFillPolygon ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$33.XFillPolygon$MH, "XFillPolygon");
+        var mh$ = XFillPolygon$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -3006,7 +3006,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$34.XFillRectangle$MH,"XFillRectangle");
     }
     public static int XFillRectangle ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFillRectangle$MH, "XFillRectangle");
+        var mh$ = XFillRectangle$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -3017,7 +3017,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$34.XFillRectangles$MH,"XFillRectangles");
     }
     public static int XFillRectangles ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFillRectangles$MH, "XFillRectangles");
+        var mh$ = XFillRectangles$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -3028,7 +3028,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$34.XFlush$MH,"XFlush");
     }
     public static int XFlush ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFlush$MH, "XFlush");
+        var mh$ = XFlush$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3039,7 +3039,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$34.XForceScreenSaver$MH,"XForceScreenSaver");
     }
     public static int XForceScreenSaver ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XForceScreenSaver$MH, "XForceScreenSaver");
+        var mh$ = XForceScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3050,7 +3050,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$34.XFree$MH,"XFree");
     }
     public static int XFree ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFree$MH, "XFree");
+        var mh$ = XFree$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3061,7 +3061,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$34.XFreeColormap$MH,"XFreeColormap");
     }
     public static int XFreeColormap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$34.XFreeColormap$MH, "XFreeColormap");
+        var mh$ = XFreeColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3072,7 +3072,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$35.XFreeColors$MH,"XFreeColors");
     }
     public static int XFreeColors ( Addressable x0,  long x1,  Addressable x2,  int x3,  long x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeColors$MH, "XFreeColors");
+        var mh$ = XFreeColors$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -3083,7 +3083,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$35.XFreeCursor$MH,"XFreeCursor");
     }
     public static int XFreeCursor ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeCursor$MH, "XFreeCursor");
+        var mh$ = XFreeCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3094,7 +3094,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$35.XFreeExtensionList$MH,"XFreeExtensionList");
     }
     public static int XFreeExtensionList ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeExtensionList$MH, "XFreeExtensionList");
+        var mh$ = XFreeExtensionList$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3105,7 +3105,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$35.XFreeFont$MH,"XFreeFont");
     }
     public static int XFreeFont ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeFont$MH, "XFreeFont");
+        var mh$ = XFreeFont$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3116,7 +3116,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$35.XFreeFontInfo$MH,"XFreeFontInfo");
     }
     public static int XFreeFontInfo ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeFontInfo$MH, "XFreeFontInfo");
+        var mh$ = XFreeFontInfo$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3127,7 +3127,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$35.XFreeFontNames$MH,"XFreeFontNames");
     }
     public static int XFreeFontNames ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$35.XFreeFontNames$MH, "XFreeFontNames");
+        var mh$ = XFreeFontNames$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3138,7 +3138,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$36.XFreeFontPath$MH,"XFreeFontPath");
     }
     public static int XFreeFontPath ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreeFontPath$MH, "XFreeFontPath");
+        var mh$ = XFreeFontPath$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3149,7 +3149,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$36.XFreeGC$MH,"XFreeGC");
     }
     public static int XFreeGC ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreeGC$MH, "XFreeGC");
+        var mh$ = XFreeGC$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3160,7 +3160,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$36.XFreeModifiermap$MH,"XFreeModifiermap");
     }
     public static int XFreeModifiermap ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreeModifiermap$MH, "XFreeModifiermap");
+        var mh$ = XFreeModifiermap$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3171,7 +3171,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$36.XFreePixmap$MH,"XFreePixmap");
     }
     public static int XFreePixmap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XFreePixmap$MH, "XFreePixmap");
+        var mh$ = XFreePixmap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3182,7 +3182,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$36.XGeometry$MH,"XGeometry");
     }
     public static int XGeometry ( Addressable x0,  int x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  Addressable x9,  Addressable x10,  Addressable x11,  Addressable x12) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XGeometry$MH, "XGeometry");
+        var mh$ = XGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12);
         } catch (Throwable ex$) {
@@ -3193,7 +3193,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$36.XGetErrorDatabaseText$MH,"XGetErrorDatabaseText");
     }
     public static int XGetErrorDatabaseText ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$36.XGetErrorDatabaseText$MH, "XGetErrorDatabaseText");
+        var mh$ = XGetErrorDatabaseText$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3204,7 +3204,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$37.XGetErrorText$MH,"XGetErrorText");
     }
     public static int XGetErrorText ( Addressable x0,  int x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetErrorText$MH, "XGetErrorText");
+        var mh$ = XGetErrorText$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3215,7 +3215,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$37.XGetFontProperty$MH,"XGetFontProperty");
     }
     public static int XGetFontProperty ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetFontProperty$MH, "XGetFontProperty");
+        var mh$ = XGetFontProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3226,7 +3226,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$37.XGetGCValues$MH,"XGetGCValues");
     }
     public static int XGetGCValues ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetGCValues$MH, "XGetGCValues");
+        var mh$ = XGetGCValues$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3237,7 +3237,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$37.XGetGeometry$MH,"XGetGeometry");
     }
     public static int XGetGeometry ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetGeometry$MH, "XGetGeometry");
+        var mh$ = XGetGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -3248,7 +3248,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$37.XGetIconName$MH,"XGetIconName");
     }
     public static int XGetIconName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetIconName$MH, "XGetIconName");
+        var mh$ = XGetIconName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3259,7 +3259,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$37.XGetInputFocus$MH,"XGetInputFocus");
     }
     public static int XGetInputFocus ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$37.XGetInputFocus$MH, "XGetInputFocus");
+        var mh$ = XGetInputFocus$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3270,7 +3270,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$38.XGetKeyboardControl$MH,"XGetKeyboardControl");
     }
     public static int XGetKeyboardControl ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetKeyboardControl$MH, "XGetKeyboardControl");
+        var mh$ = XGetKeyboardControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3281,7 +3281,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$38.XGetPointerControl$MH,"XGetPointerControl");
     }
     public static int XGetPointerControl ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetPointerControl$MH, "XGetPointerControl");
+        var mh$ = XGetPointerControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3292,7 +3292,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$38.XGetPointerMapping$MH,"XGetPointerMapping");
     }
     public static int XGetPointerMapping ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetPointerMapping$MH, "XGetPointerMapping");
+        var mh$ = XGetPointerMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3303,7 +3303,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$38.XGetScreenSaver$MH,"XGetScreenSaver");
     }
     public static int XGetScreenSaver ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetScreenSaver$MH, "XGetScreenSaver");
+        var mh$ = XGetScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -3314,7 +3314,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$38.XGetTransientForHint$MH,"XGetTransientForHint");
     }
     public static int XGetTransientForHint ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetTransientForHint$MH, "XGetTransientForHint");
+        var mh$ = XGetTransientForHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3325,7 +3325,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$38.XGetWindowProperty$MH,"XGetWindowProperty");
     }
     public static int XGetWindowProperty ( Addressable x0,  long x1,  long x2,  long x3,  long x4,  int x5,  long x6,  Addressable x7,  Addressable x8,  Addressable x9,  Addressable x10,  Addressable x11) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$38.XGetWindowProperty$MH, "XGetWindowProperty");
+        var mh$ = XGetWindowProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
         } catch (Throwable ex$) {
@@ -3336,7 +3336,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$39.XGetWindowAttributes$MH,"XGetWindowAttributes");
     }
     public static int XGetWindowAttributes ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGetWindowAttributes$MH, "XGetWindowAttributes");
+        var mh$ = XGetWindowAttributes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3347,7 +3347,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$39.XGrabButton$MH,"XGrabButton");
     }
     public static int XGrabButton ( Addressable x0,  int x1,  int x2,  long x3,  int x4,  int x5,  int x6,  int x7,  long x8,  long x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabButton$MH, "XGrabButton");
+        var mh$ = XGrabButton$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
         } catch (Throwable ex$) {
@@ -3358,7 +3358,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$39.XGrabKey$MH,"XGrabKey");
     }
     public static int XGrabKey ( Addressable x0,  int x1,  int x2,  long x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabKey$MH, "XGrabKey");
+        var mh$ = XGrabKey$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -3369,7 +3369,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$39.XGrabKeyboard$MH,"XGrabKeyboard");
     }
     public static int XGrabKeyboard ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  long x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabKeyboard$MH, "XGrabKeyboard");
+        var mh$ = XGrabKeyboard$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3380,7 +3380,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$39.XGrabPointer$MH,"XGrabPointer");
     }
     public static int XGrabPointer ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  long x7,  long x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabPointer$MH, "XGrabPointer");
+        var mh$ = XGrabPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -3391,7 +3391,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$39.XGrabServer$MH,"XGrabServer");
     }
     public static int XGrabServer ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$39.XGrabServer$MH, "XGrabServer");
+        var mh$ = XGrabServer$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3402,7 +3402,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$40.XHeightMMOfScreen$MH,"XHeightMMOfScreen");
     }
     public static int XHeightMMOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XHeightMMOfScreen$MH, "XHeightMMOfScreen");
+        var mh$ = XHeightMMOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3413,7 +3413,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$40.XHeightOfScreen$MH,"XHeightOfScreen");
     }
     public static int XHeightOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XHeightOfScreen$MH, "XHeightOfScreen");
+        var mh$ = XHeightOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3424,7 +3424,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$40.XIfEvent$MH,"XIfEvent");
     }
     public static int XIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XIfEvent$MH, "XIfEvent");
+        var mh$ = XIfEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3435,7 +3435,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$40.XImageByteOrder$MH,"XImageByteOrder");
     }
     public static int XImageByteOrder ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$40.XImageByteOrder$MH, "XImageByteOrder");
+        var mh$ = XImageByteOrder$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3446,7 +3446,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$41.XInstallColormap$MH,"XInstallColormap");
     }
     public static int XInstallColormap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XInstallColormap$MH, "XInstallColormap");
+        var mh$ = XInstallColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3457,7 +3457,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$41.XKeysymToKeycode$MH,"XKeysymToKeycode");
     }
     public static byte XKeysymToKeycode ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XKeysymToKeycode$MH, "XKeysymToKeycode");
+        var mh$ = XKeysymToKeycode$MH();
         try {
             return (byte)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3468,7 +3468,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$41.XKillClient$MH,"XKillClient");
     }
     public static int XKillClient ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XKillClient$MH, "XKillClient");
+        var mh$ = XKillClient$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3479,7 +3479,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$41.XLookupColor$MH,"XLookupColor");
     }
     public static int XLookupColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XLookupColor$MH, "XLookupColor");
+        var mh$ = XLookupColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -3490,7 +3490,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$41.XLowerWindow$MH,"XLowerWindow");
     }
     public static int XLowerWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XLowerWindow$MH, "XLowerWindow");
+        var mh$ = XLowerWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3501,7 +3501,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$41.XMapRaised$MH,"XMapRaised");
     }
     public static int XMapRaised ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$41.XMapRaised$MH, "XMapRaised");
+        var mh$ = XMapRaised$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3512,7 +3512,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$42.XMapSubwindows$MH,"XMapSubwindows");
     }
     public static int XMapSubwindows ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMapSubwindows$MH, "XMapSubwindows");
+        var mh$ = XMapSubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3523,7 +3523,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$42.XMapWindow$MH,"XMapWindow");
     }
     public static int XMapWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMapWindow$MH, "XMapWindow");
+        var mh$ = XMapWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3534,7 +3534,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$42.XMaskEvent$MH,"XMaskEvent");
     }
     public static int XMaskEvent ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMaskEvent$MH, "XMaskEvent");
+        var mh$ = XMaskEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3545,7 +3545,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$42.XMaxCmapsOfScreen$MH,"XMaxCmapsOfScreen");
     }
     public static int XMaxCmapsOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMaxCmapsOfScreen$MH, "XMaxCmapsOfScreen");
+        var mh$ = XMaxCmapsOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3556,7 +3556,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$42.XMinCmapsOfScreen$MH,"XMinCmapsOfScreen");
     }
     public static int XMinCmapsOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMinCmapsOfScreen$MH, "XMinCmapsOfScreen");
+        var mh$ = XMinCmapsOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3567,7 +3567,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$42.XMoveResizeWindow$MH,"XMoveResizeWindow");
     }
     public static int XMoveResizeWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$42.XMoveResizeWindow$MH, "XMoveResizeWindow");
+        var mh$ = XMoveResizeWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3578,7 +3578,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$43.XMoveWindow$MH,"XMoveWindow");
     }
     public static int XMoveWindow ( Addressable x0,  long x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XMoveWindow$MH, "XMoveWindow");
+        var mh$ = XMoveWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3589,7 +3589,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$43.XNextEvent$MH,"XNextEvent");
     }
     public static int XNextEvent ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XNextEvent$MH, "XNextEvent");
+        var mh$ = XNextEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3600,7 +3600,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$43.XNoOp$MH,"XNoOp");
     }
     public static int XNoOp ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XNoOp$MH, "XNoOp");
+        var mh$ = XNoOp$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3611,7 +3611,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$43.XParseColor$MH,"XParseColor");
     }
     public static int XParseColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XParseColor$MH, "XParseColor");
+        var mh$ = XParseColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3622,7 +3622,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$43.XParseGeometry$MH,"XParseGeometry");
     }
     public static int XParseGeometry ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XParseGeometry$MH, "XParseGeometry");
+        var mh$ = XParseGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -3633,7 +3633,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$43.XPeekEvent$MH,"XPeekEvent");
     }
     public static int XPeekEvent ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$43.XPeekEvent$MH, "XPeekEvent");
+        var mh$ = XPeekEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3644,7 +3644,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$44.XPeekIfEvent$MH,"XPeekIfEvent");
     }
     public static int XPeekIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XPeekIfEvent$MH, "XPeekIfEvent");
+        var mh$ = XPeekIfEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3655,7 +3655,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$44.XPending$MH,"XPending");
     }
     public static int XPending ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XPending$MH, "XPending");
+        var mh$ = XPending$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3666,7 +3666,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$44.XPlanesOfScreen$MH,"XPlanesOfScreen");
     }
     public static int XPlanesOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XPlanesOfScreen$MH, "XPlanesOfScreen");
+        var mh$ = XPlanesOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3677,7 +3677,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$44.XProtocolRevision$MH,"XProtocolRevision");
     }
     public static int XProtocolRevision ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$44.XProtocolRevision$MH, "XProtocolRevision");
+        var mh$ = XProtocolRevision$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3688,7 +3688,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$45.XProtocolVersion$MH,"XProtocolVersion");
     }
     public static int XProtocolVersion ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XProtocolVersion$MH, "XProtocolVersion");
+        var mh$ = XProtocolVersion$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3699,7 +3699,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$45.XPutBackEvent$MH,"XPutBackEvent");
     }
     public static int XPutBackEvent ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XPutBackEvent$MH, "XPutBackEvent");
+        var mh$ = XPutBackEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3710,7 +3710,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$45.XPutImage$MH,"XPutImage");
     }
     public static int XPutImage ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XPutImage$MH, "XPutImage");
+        var mh$ = XPutImage$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
         } catch (Throwable ex$) {
@@ -3721,7 +3721,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$45.XQLength$MH,"XQLength");
     }
     public static int XQLength ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XQLength$MH, "XQLength");
+        var mh$ = XQLength$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3732,7 +3732,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$45.XQueryBestCursor$MH,"XQueryBestCursor");
     }
     public static int XQueryBestCursor ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XQueryBestCursor$MH, "XQueryBestCursor");
+        var mh$ = XQueryBestCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3743,7 +3743,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$45.XQueryBestSize$MH,"XQueryBestSize");
     }
     public static int XQueryBestSize ( Addressable x0,  int x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$45.XQueryBestSize$MH, "XQueryBestSize");
+        var mh$ = XQueryBestSize$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -3754,7 +3754,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$46.XQueryBestStipple$MH,"XQueryBestStipple");
     }
     public static int XQueryBestStipple ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryBestStipple$MH, "XQueryBestStipple");
+        var mh$ = XQueryBestStipple$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3765,7 +3765,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$46.XQueryBestTile$MH,"XQueryBestTile");
     }
     public static int XQueryBestTile ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryBestTile$MH, "XQueryBestTile");
+        var mh$ = XQueryBestTile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3776,7 +3776,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$46.XQueryColor$MH,"XQueryColor");
     }
     public static int XQueryColor ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryColor$MH, "XQueryColor");
+        var mh$ = XQueryColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3787,7 +3787,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$46.XQueryColors$MH,"XQueryColors");
     }
     public static int XQueryColors ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryColors$MH, "XQueryColors");
+        var mh$ = XQueryColors$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3798,7 +3798,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$46.XQueryExtension$MH,"XQueryExtension");
     }
     public static int XQueryExtension ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryExtension$MH, "XQueryExtension");
+        var mh$ = XQueryExtension$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -3809,7 +3809,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$46.XQueryKeymap$MH,"XQueryKeymap");
     }
     public static int XQueryKeymap ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$46.XQueryKeymap$MH, "XQueryKeymap");
+        var mh$ = XQueryKeymap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3820,7 +3820,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$47.XQueryPointer$MH,"XQueryPointer");
     }
     public static int XQueryPointer ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryPointer$MH, "XQueryPointer");
+        var mh$ = XQueryPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -3831,7 +3831,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents$MH,"XQueryTextExtents");
     }
     public static int XQueryTextExtents ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents$MH, "XQueryTextExtents");
+        var mh$ = XQueryTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -3842,7 +3842,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents16$MH,"XQueryTextExtents16");
     }
     public static int XQueryTextExtents16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents16$MH, "XQueryTextExtents16");
+        var mh$ = XQueryTextExtents16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -3853,7 +3853,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$47.XQueryTree$MH,"XQueryTree");
     }
     public static int XQueryTree ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XQueryTree$MH, "XQueryTree");
+        var mh$ = XQueryTree$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3864,7 +3864,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$47.XRaiseWindow$MH,"XRaiseWindow");
     }
     public static int XRaiseWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XRaiseWindow$MH, "XRaiseWindow");
+        var mh$ = XRaiseWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3875,7 +3875,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$47.XReadBitmapFile$MH,"XReadBitmapFile");
     }
     public static int XReadBitmapFile ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$47.XReadBitmapFile$MH, "XReadBitmapFile");
+        var mh$ = XReadBitmapFile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -3886,7 +3886,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$48.XReadBitmapFileData$MH,"XReadBitmapFileData");
     }
     public static int XReadBitmapFileData ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XReadBitmapFileData$MH, "XReadBitmapFileData");
+        var mh$ = XReadBitmapFileData$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3897,7 +3897,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$48.XRebindKeysym$MH,"XRebindKeysym");
     }
     public static int XRebindKeysym ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRebindKeysym$MH, "XRebindKeysym");
+        var mh$ = XRebindKeysym$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -3908,7 +3908,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$48.XRecolorCursor$MH,"XRecolorCursor");
     }
     public static int XRecolorCursor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRecolorCursor$MH, "XRecolorCursor");
+        var mh$ = XRecolorCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3919,7 +3919,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$48.XRefreshKeyboardMapping$MH,"XRefreshKeyboardMapping");
     }
     public static int XRefreshKeyboardMapping ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRefreshKeyboardMapping$MH, "XRefreshKeyboardMapping");
+        var mh$ = XRefreshKeyboardMapping$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3930,7 +3930,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$48.XRemoveFromSaveSet$MH,"XRemoveFromSaveSet");
     }
     public static int XRemoveFromSaveSet ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRemoveFromSaveSet$MH, "XRemoveFromSaveSet");
+        var mh$ = XRemoveFromSaveSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3941,7 +3941,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$48.XRemoveHost$MH,"XRemoveHost");
     }
     public static int XRemoveHost ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$48.XRemoveHost$MH, "XRemoveHost");
+        var mh$ = XRemoveHost$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -3952,7 +3952,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$49.XRemoveHosts$MH,"XRemoveHosts");
     }
     public static int XRemoveHosts ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XRemoveHosts$MH, "XRemoveHosts");
+        var mh$ = XRemoveHosts$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -3963,7 +3963,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$49.XReparentWindow$MH,"XReparentWindow");
     }
     public static int XReparentWindow ( Addressable x0,  long x1,  long x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XReparentWindow$MH, "XReparentWindow");
+        var mh$ = XReparentWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -3974,7 +3974,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$49.XResetScreenSaver$MH,"XResetScreenSaver");
     }
     public static int XResetScreenSaver ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XResetScreenSaver$MH, "XResetScreenSaver");
+        var mh$ = XResetScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -3985,7 +3985,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$49.XResizeWindow$MH,"XResizeWindow");
     }
     public static int XResizeWindow ( Addressable x0,  long x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XResizeWindow$MH, "XResizeWindow");
+        var mh$ = XResizeWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -3996,7 +3996,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$49.XRestackWindows$MH,"XRestackWindows");
     }
     public static int XRestackWindows ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XRestackWindows$MH, "XRestackWindows");
+        var mh$ = XRestackWindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4007,7 +4007,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$49.XRotateBuffers$MH,"XRotateBuffers");
     }
     public static int XRotateBuffers ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$49.XRotateBuffers$MH, "XRotateBuffers");
+        var mh$ = XRotateBuffers$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4018,7 +4018,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$50.XRotateWindowProperties$MH,"XRotateWindowProperties");
     }
     public static int XRotateWindowProperties ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XRotateWindowProperties$MH, "XRotateWindowProperties");
+        var mh$ = XRotateWindowProperties$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -4029,7 +4029,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$50.XScreenCount$MH,"XScreenCount");
     }
     public static int XScreenCount ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XScreenCount$MH, "XScreenCount");
+        var mh$ = XScreenCount$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4040,7 +4040,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$50.XSelectInput$MH,"XSelectInput");
     }
     public static int XSelectInput ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSelectInput$MH, "XSelectInput");
+        var mh$ = XSelectInput$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4051,7 +4051,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$50.XSendEvent$MH,"XSendEvent");
     }
     public static int XSendEvent ( Addressable x0,  long x1,  int x2,  long x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSendEvent$MH, "XSendEvent");
+        var mh$ = XSendEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -4062,7 +4062,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$50.XSetAccessControl$MH,"XSetAccessControl");
     }
     public static int XSetAccessControl ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSetAccessControl$MH, "XSetAccessControl");
+        var mh$ = XSetAccessControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4073,7 +4073,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$50.XSetArcMode$MH,"XSetArcMode");
     }
     public static int XSetArcMode ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$50.XSetArcMode$MH, "XSetArcMode");
+        var mh$ = XSetArcMode$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4084,7 +4084,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$51.XSetBackground$MH,"XSetBackground");
     }
     public static int XSetBackground ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetBackground$MH, "XSetBackground");
+        var mh$ = XSetBackground$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4095,7 +4095,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$51.XSetClipMask$MH,"XSetClipMask");
     }
     public static int XSetClipMask ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetClipMask$MH, "XSetClipMask");
+        var mh$ = XSetClipMask$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4106,7 +4106,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$51.XSetClipOrigin$MH,"XSetClipOrigin");
     }
     public static int XSetClipOrigin ( Addressable x0,  Addressable x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetClipOrigin$MH, "XSetClipOrigin");
+        var mh$ = XSetClipOrigin$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4117,7 +4117,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$51.XSetClipRectangles$MH,"XSetClipRectangles");
     }
     public static int XSetClipRectangles ( Addressable x0,  Addressable x1,  int x2,  int x3,  Addressable x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetClipRectangles$MH, "XSetClipRectangles");
+        var mh$ = XSetClipRectangles$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -4128,7 +4128,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$51.XSetCloseDownMode$MH,"XSetCloseDownMode");
     }
     public static int XSetCloseDownMode ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetCloseDownMode$MH, "XSetCloseDownMode");
+        var mh$ = XSetCloseDownMode$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4139,7 +4139,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$51.XSetCommand$MH,"XSetCommand");
     }
     public static int XSetCommand ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$51.XSetCommand$MH, "XSetCommand");
+        var mh$ = XSetCommand$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4150,7 +4150,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$52.XSetDashes$MH,"XSetDashes");
     }
     public static int XSetDashes ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetDashes$MH, "XSetDashes");
+        var mh$ = XSetDashes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -4161,7 +4161,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$52.XSetFillRule$MH,"XSetFillRule");
     }
     public static int XSetFillRule ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFillRule$MH, "XSetFillRule");
+        var mh$ = XSetFillRule$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4172,7 +4172,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$52.XSetFillStyle$MH,"XSetFillStyle");
     }
     public static int XSetFillStyle ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFillStyle$MH, "XSetFillStyle");
+        var mh$ = XSetFillStyle$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4183,7 +4183,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$52.XSetFont$MH,"XSetFont");
     }
     public static int XSetFont ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFont$MH, "XSetFont");
+        var mh$ = XSetFont$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4194,7 +4194,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$52.XSetFontPath$MH,"XSetFontPath");
     }
     public static int XSetFontPath ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetFontPath$MH, "XSetFontPath");
+        var mh$ = XSetFontPath$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4205,7 +4205,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$52.XSetForeground$MH,"XSetForeground");
     }
     public static int XSetForeground ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$52.XSetForeground$MH, "XSetForeground");
+        var mh$ = XSetForeground$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4216,7 +4216,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$53.XSetFunction$MH,"XSetFunction");
     }
     public static int XSetFunction ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetFunction$MH, "XSetFunction");
+        var mh$ = XSetFunction$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4227,7 +4227,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$53.XSetGraphicsExposures$MH,"XSetGraphicsExposures");
     }
     public static int XSetGraphicsExposures ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetGraphicsExposures$MH, "XSetGraphicsExposures");
+        var mh$ = XSetGraphicsExposures$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4238,7 +4238,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$53.XSetIconName$MH,"XSetIconName");
     }
     public static int XSetIconName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetIconName$MH, "XSetIconName");
+        var mh$ = XSetIconName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4249,7 +4249,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$53.XSetInputFocus$MH,"XSetInputFocus");
     }
     public static int XSetInputFocus ( Addressable x0,  long x1,  int x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetInputFocus$MH, "XSetInputFocus");
+        var mh$ = XSetInputFocus$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4260,7 +4260,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$53.XSetLineAttributes$MH,"XSetLineAttributes");
     }
     public static int XSetLineAttributes ( Addressable x0,  Addressable x1,  int x2,  int x3,  int x4,  int x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetLineAttributes$MH, "XSetLineAttributes");
+        var mh$ = XSetLineAttributes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -4271,7 +4271,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$53.XSetModifierMapping$MH,"XSetModifierMapping");
     }
     public static int XSetModifierMapping ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$53.XSetModifierMapping$MH, "XSetModifierMapping");
+        var mh$ = XSetModifierMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4282,7 +4282,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$54.XSetPlaneMask$MH,"XSetPlaneMask");
     }
     public static int XSetPlaneMask ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetPlaneMask$MH, "XSetPlaneMask");
+        var mh$ = XSetPlaneMask$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4293,7 +4293,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$54.XSetPointerMapping$MH,"XSetPointerMapping");
     }
     public static int XSetPointerMapping ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetPointerMapping$MH, "XSetPointerMapping");
+        var mh$ = XSetPointerMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4304,7 +4304,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$54.XSetScreenSaver$MH,"XSetScreenSaver");
     }
     public static int XSetScreenSaver ( Addressable x0,  int x1,  int x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetScreenSaver$MH, "XSetScreenSaver");
+        var mh$ = XSetScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -4315,7 +4315,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$54.XSetSelectionOwner$MH,"XSetSelectionOwner");
     }
     public static int XSetSelectionOwner ( Addressable x0,  long x1,  long x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetSelectionOwner$MH, "XSetSelectionOwner");
+        var mh$ = XSetSelectionOwner$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4326,7 +4326,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$54.XSetState$MH,"XSetState");
     }
     public static int XSetState ( Addressable x0,  Addressable x1,  long x2,  long x3,  int x4,  long x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetState$MH, "XSetState");
+        var mh$ = XSetState$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -4337,7 +4337,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$54.XSetStipple$MH,"XSetStipple");
     }
     public static int XSetStipple ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$54.XSetStipple$MH, "XSetStipple");
+        var mh$ = XSetStipple$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4348,7 +4348,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$55.XSetSubwindowMode$MH,"XSetSubwindowMode");
     }
     public static int XSetSubwindowMode ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetSubwindowMode$MH, "XSetSubwindowMode");
+        var mh$ = XSetSubwindowMode$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4359,7 +4359,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$55.XSetTSOrigin$MH,"XSetTSOrigin");
     }
     public static int XSetTSOrigin ( Addressable x0,  Addressable x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetTSOrigin$MH, "XSetTSOrigin");
+        var mh$ = XSetTSOrigin$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4370,7 +4370,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$55.XSetTile$MH,"XSetTile");
     }
     public static int XSetTile ( Addressable x0,  Addressable x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetTile$MH, "XSetTile");
+        var mh$ = XSetTile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4381,7 +4381,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackground$MH,"XSetWindowBackground");
     }
     public static int XSetWindowBackground ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetWindowBackground$MH, "XSetWindowBackground");
+        var mh$ = XSetWindowBackground$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4392,7 +4392,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackgroundPixmap$MH,"XSetWindowBackgroundPixmap");
     }
     public static int XSetWindowBackgroundPixmap ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetWindowBackgroundPixmap$MH, "XSetWindowBackgroundPixmap");
+        var mh$ = XSetWindowBackgroundPixmap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4403,7 +4403,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorder$MH,"XSetWindowBorder");
     }
     public static int XSetWindowBorder ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$55.XSetWindowBorder$MH, "XSetWindowBorder");
+        var mh$ = XSetWindowBorder$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4414,7 +4414,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderPixmap$MH,"XSetWindowBorderPixmap");
     }
     public static int XSetWindowBorderPixmap ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderPixmap$MH, "XSetWindowBorderPixmap");
+        var mh$ = XSetWindowBorderPixmap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4425,7 +4425,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderWidth$MH,"XSetWindowBorderWidth");
     }
     public static int XSetWindowBorderWidth ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderWidth$MH, "XSetWindowBorderWidth");
+        var mh$ = XSetWindowBorderWidth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4436,7 +4436,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$56.XSetWindowColormap$MH,"XSetWindowColormap");
     }
     public static int XSetWindowColormap ( Addressable x0,  long x1,  long x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XSetWindowColormap$MH, "XSetWindowColormap");
+        var mh$ = XSetWindowColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4447,7 +4447,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$56.XStoreBuffer$MH,"XStoreBuffer");
     }
     public static int XStoreBuffer ( Addressable x0,  Addressable x1,  int x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XStoreBuffer$MH, "XStoreBuffer");
+        var mh$ = XStoreBuffer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4458,7 +4458,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$56.XStoreBytes$MH,"XStoreBytes");
     }
     public static int XStoreBytes ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XStoreBytes$MH, "XStoreBytes");
+        var mh$ = XStoreBytes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4469,7 +4469,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$56.XStoreColor$MH,"XStoreColor");
     }
     public static int XStoreColor ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$56.XStoreColor$MH, "XStoreColor");
+        var mh$ = XStoreColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4480,7 +4480,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$57.XStoreColors$MH,"XStoreColors");
     }
     public static int XStoreColors ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XStoreColors$MH, "XStoreColors");
+        var mh$ = XStoreColors$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4491,7 +4491,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$57.XStoreName$MH,"XStoreName");
     }
     public static int XStoreName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XStoreName$MH, "XStoreName");
+        var mh$ = XStoreName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4502,7 +4502,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$57.XStoreNamedColor$MH,"XStoreNamedColor");
     }
     public static int XStoreNamedColor ( Addressable x0,  long x1,  Addressable x2,  long x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XStoreNamedColor$MH, "XStoreNamedColor");
+        var mh$ = XStoreNamedColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -4513,7 +4513,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$57.XSync$MH,"XSync");
     }
     public static int XSync ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XSync$MH, "XSync");
+        var mh$ = XSync$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4524,7 +4524,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$57.XTextExtents$MH,"XTextExtents");
     }
     public static int XTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XTextExtents$MH, "XTextExtents");
+        var mh$ = XTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -4535,7 +4535,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$57.XTextExtents16$MH,"XTextExtents16");
     }
     public static int XTextExtents16 ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$57.XTextExtents16$MH, "XTextExtents16");
+        var mh$ = XTextExtents16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -4546,7 +4546,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$58.XTextWidth$MH,"XTextWidth");
     }
     public static int XTextWidth ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XTextWidth$MH, "XTextWidth");
+        var mh$ = XTextWidth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4557,7 +4557,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$58.XTextWidth16$MH,"XTextWidth16");
     }
     public static int XTextWidth16 ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XTextWidth16$MH, "XTextWidth16");
+        var mh$ = XTextWidth16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4568,7 +4568,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$58.XTranslateCoordinates$MH,"XTranslateCoordinates");
     }
     public static int XTranslateCoordinates ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XTranslateCoordinates$MH, "XTranslateCoordinates");
+        var mh$ = XTranslateCoordinates$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -4579,7 +4579,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$58.XUndefineCursor$MH,"XUndefineCursor");
     }
     public static int XUndefineCursor ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XUndefineCursor$MH, "XUndefineCursor");
+        var mh$ = XUndefineCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4590,7 +4590,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$58.XUngrabButton$MH,"XUngrabButton");
     }
     public static int XUngrabButton ( Addressable x0,  int x1,  int x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XUngrabButton$MH, "XUngrabButton");
+        var mh$ = XUngrabButton$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4601,7 +4601,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$58.XUngrabKey$MH,"XUngrabKey");
     }
     public static int XUngrabKey ( Addressable x0,  int x1,  int x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$58.XUngrabKey$MH, "XUngrabKey");
+        var mh$ = XUngrabKey$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4612,7 +4612,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$59.XUngrabKeyboard$MH,"XUngrabKeyboard");
     }
     public static int XUngrabKeyboard ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUngrabKeyboard$MH, "XUngrabKeyboard");
+        var mh$ = XUngrabKeyboard$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4623,7 +4623,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$59.XUngrabPointer$MH,"XUngrabPointer");
     }
     public static int XUngrabPointer ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUngrabPointer$MH, "XUngrabPointer");
+        var mh$ = XUngrabPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4634,7 +4634,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$59.XUngrabServer$MH,"XUngrabServer");
     }
     public static int XUngrabServer ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUngrabServer$MH, "XUngrabServer");
+        var mh$ = XUngrabServer$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4645,7 +4645,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$59.XUninstallColormap$MH,"XUninstallColormap");
     }
     public static int XUninstallColormap ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUninstallColormap$MH, "XUninstallColormap");
+        var mh$ = XUninstallColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4656,7 +4656,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$59.XUnloadFont$MH,"XUnloadFont");
     }
     public static int XUnloadFont ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUnloadFont$MH, "XUnloadFont");
+        var mh$ = XUnloadFont$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4667,7 +4667,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$59.XUnmapSubwindows$MH,"XUnmapSubwindows");
     }
     public static int XUnmapSubwindows ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$59.XUnmapSubwindows$MH, "XUnmapSubwindows");
+        var mh$ = XUnmapSubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4678,7 +4678,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$60.XUnmapWindow$MH,"XUnmapWindow");
     }
     public static int XUnmapWindow ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XUnmapWindow$MH, "XUnmapWindow");
+        var mh$ = XUnmapWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4689,7 +4689,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$60.XVendorRelease$MH,"XVendorRelease");
     }
     public static int XVendorRelease ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XVendorRelease$MH, "XVendorRelease");
+        var mh$ = XVendorRelease$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4700,7 +4700,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$60.XWarpPointer$MH,"XWarpPointer");
     }
     public static int XWarpPointer ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWarpPointer$MH, "XWarpPointer");
+        var mh$ = XWarpPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -4711,7 +4711,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$60.XWidthMMOfScreen$MH,"XWidthMMOfScreen");
     }
     public static int XWidthMMOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWidthMMOfScreen$MH, "XWidthMMOfScreen");
+        var mh$ = XWidthMMOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4722,7 +4722,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$60.XWidthOfScreen$MH,"XWidthOfScreen");
     }
     public static int XWidthOfScreen ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWidthOfScreen$MH, "XWidthOfScreen");
+        var mh$ = XWidthOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4733,7 +4733,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$60.XWindowEvent$MH,"XWindowEvent");
     }
     public static int XWindowEvent ( Addressable x0,  long x1,  long x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$60.XWindowEvent$MH, "XWindowEvent");
+        var mh$ = XWindowEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -4744,7 +4744,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$61.XWriteBitmapFile$MH,"XWriteBitmapFile");
     }
     public static int XWriteBitmapFile ( Addressable x0,  Addressable x1,  long x2,  int x3,  int x4,  int x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XWriteBitmapFile$MH, "XWriteBitmapFile");
+        var mh$ = XWriteBitmapFile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -4755,7 +4755,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$61.XSupportsLocale$MH,"XSupportsLocale");
     }
     public static int XSupportsLocale () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XSupportsLocale$MH, "XSupportsLocale");
+        var mh$ = XSupportsLocale$MH();
         try {
             return (int)mh$.invokeExact();
         } catch (Throwable ex$) {
@@ -4766,9 +4766,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$61.XSetLocaleModifiers$MH,"XSetLocaleModifiers");
     }
     public static MemoryAddress XSetLocaleModifiers ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XSetLocaleModifiers$MH, "XSetLocaleModifiers");
+        var mh$ = XSetLocaleModifiers$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4777,9 +4777,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$61.XOpenOM$MH,"XOpenOM");
     }
     public static MemoryAddress XOpenOM ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XOpenOM$MH, "XOpenOM");
+        var mh$ = XOpenOM$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4788,7 +4788,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$61.XCloseOM$MH,"XCloseOM");
     }
     public static int XCloseOM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XCloseOM$MH, "XCloseOM");
+        var mh$ = XCloseOM$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4799,9 +4799,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$61.XSetOMValues$MH,"XSetOMValues");
     }
     public static MemoryAddress XSetOMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$61.XSetOMValues$MH, "XSetOMValues");
+        var mh$ = XSetOMValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4810,9 +4810,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$62.XGetOMValues$MH,"XGetOMValues");
     }
     public static MemoryAddress XGetOMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XGetOMValues$MH, "XGetOMValues");
+        var mh$ = XGetOMValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4821,9 +4821,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$62.XDisplayOfOM$MH,"XDisplayOfOM");
     }
     public static MemoryAddress XDisplayOfOM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XDisplayOfOM$MH, "XDisplayOfOM");
+        var mh$ = XDisplayOfOM$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4832,9 +4832,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$62.XLocaleOfOM$MH,"XLocaleOfOM");
     }
     public static MemoryAddress XLocaleOfOM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XLocaleOfOM$MH, "XLocaleOfOM");
+        var mh$ = XLocaleOfOM$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4843,9 +4843,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$62.XCreateOC$MH,"XCreateOC");
     }
     public static MemoryAddress XCreateOC ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XCreateOC$MH, "XCreateOC");
+        var mh$ = XCreateOC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4854,7 +4854,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$62.XDestroyOC$MH,"XDestroyOC");
     }
     public static void XDestroyOC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XDestroyOC$MH, "XDestroyOC");
+        var mh$ = XDestroyOC$MH();
         try {
             mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4865,9 +4865,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$62.XOMOfOC$MH,"XOMOfOC");
     }
     public static MemoryAddress XOMOfOC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$62.XOMOfOC$MH, "XOMOfOC");
+        var mh$ = XOMOfOC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4876,9 +4876,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$63.XSetOCValues$MH,"XSetOCValues");
     }
     public static MemoryAddress XSetOCValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XSetOCValues$MH, "XSetOCValues");
+        var mh$ = XSetOCValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4887,9 +4887,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$63.XGetOCValues$MH,"XGetOCValues");
     }
     public static MemoryAddress XGetOCValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XGetOCValues$MH, "XGetOCValues");
+        var mh$ = XGetOCValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4898,9 +4898,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$63.XCreateFontSet$MH,"XCreateFontSet");
     }
     public static MemoryAddress XCreateFontSet ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XCreateFontSet$MH, "XCreateFontSet");
+        var mh$ = XCreateFontSet$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4909,7 +4909,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$63.XFreeFontSet$MH,"XFreeFontSet");
     }
     public static void XFreeFontSet ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XFreeFontSet$MH, "XFreeFontSet");
+        var mh$ = XFreeFontSet$MH();
         try {
             mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -4920,7 +4920,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$63.XFontsOfFontSet$MH,"XFontsOfFontSet");
     }
     public static int XFontsOfFontSet ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XFontsOfFontSet$MH, "XFontsOfFontSet");
+        var mh$ = XFontsOfFontSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -4931,9 +4931,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$63.XBaseFontNameListOfFontSet$MH,"XBaseFontNameListOfFontSet");
     }
     public static MemoryAddress XBaseFontNameListOfFontSet ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$63.XBaseFontNameListOfFontSet$MH, "XBaseFontNameListOfFontSet");
+        var mh$ = XBaseFontNameListOfFontSet$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4942,9 +4942,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$64.XLocaleOfFontSet$MH,"XLocaleOfFontSet");
     }
     public static MemoryAddress XLocaleOfFontSet ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XLocaleOfFontSet$MH, "XLocaleOfFontSet");
+        var mh$ = XLocaleOfFontSet$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4953,7 +4953,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$64.XContextDependentDrawing$MH,"XContextDependentDrawing");
     }
     public static int XContextDependentDrawing ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XContextDependentDrawing$MH, "XContextDependentDrawing");
+        var mh$ = XContextDependentDrawing$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4964,7 +4964,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$64.XDirectionalDependentDrawing$MH,"XDirectionalDependentDrawing");
     }
     public static int XDirectionalDependentDrawing ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XDirectionalDependentDrawing$MH, "XDirectionalDependentDrawing");
+        var mh$ = XDirectionalDependentDrawing$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4975,7 +4975,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$64.XContextualDrawing$MH,"XContextualDrawing");
     }
     public static int XContextualDrawing ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XContextualDrawing$MH, "XContextualDrawing");
+        var mh$ = XContextualDrawing$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -4986,9 +4986,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$64.XExtentsOfFontSet$MH,"XExtentsOfFontSet");
     }
     public static MemoryAddress XExtentsOfFontSet ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XExtentsOfFontSet$MH, "XExtentsOfFontSet");
+        var mh$ = XExtentsOfFontSet$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4997,7 +4997,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$64.XmbTextEscapement$MH,"XmbTextEscapement");
     }
     public static int XmbTextEscapement ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$64.XmbTextEscapement$MH, "XmbTextEscapement");
+        var mh$ = XmbTextEscapement$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5008,7 +5008,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$65.XwcTextEscapement$MH,"XwcTextEscapement");
     }
     public static int XwcTextEscapement ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XwcTextEscapement$MH, "XwcTextEscapement");
+        var mh$ = XwcTextEscapement$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5019,7 +5019,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$65.Xutf8TextEscapement$MH,"Xutf8TextEscapement");
     }
     public static int Xutf8TextEscapement ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.Xutf8TextEscapement$MH, "Xutf8TextEscapement");
+        var mh$ = Xutf8TextEscapement$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5030,7 +5030,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$65.XmbTextExtents$MH,"XmbTextExtents");
     }
     public static int XmbTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XmbTextExtents$MH, "XmbTextExtents");
+        var mh$ = XmbTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5041,7 +5041,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$65.XwcTextExtents$MH,"XwcTextExtents");
     }
     public static int XwcTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XwcTextExtents$MH, "XwcTextExtents");
+        var mh$ = XwcTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5052,7 +5052,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$65.Xutf8TextExtents$MH,"Xutf8TextExtents");
     }
     public static int Xutf8TextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.Xutf8TextExtents$MH, "Xutf8TextExtents");
+        var mh$ = Xutf8TextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5063,7 +5063,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$65.XmbTextPerCharExtents$MH,"XmbTextPerCharExtents");
     }
     public static int XmbTextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$65.XmbTextPerCharExtents$MH, "XmbTextPerCharExtents");
+        var mh$ = XmbTextPerCharExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -5074,7 +5074,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$66.XwcTextPerCharExtents$MH,"XwcTextPerCharExtents");
     }
     public static int XwcTextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XwcTextPerCharExtents$MH, "XwcTextPerCharExtents");
+        var mh$ = XwcTextPerCharExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -5085,7 +5085,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$66.Xutf8TextPerCharExtents$MH,"Xutf8TextPerCharExtents");
     }
     public static int Xutf8TextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.Xutf8TextPerCharExtents$MH, "Xutf8TextPerCharExtents");
+        var mh$ = Xutf8TextPerCharExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -5096,7 +5096,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$66.XmbDrawText$MH,"XmbDrawText");
     }
     public static void XmbDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XmbDrawText$MH, "XmbDrawText");
+        var mh$ = XmbDrawText$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -5107,7 +5107,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$66.XwcDrawText$MH,"XwcDrawText");
     }
     public static void XwcDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XwcDrawText$MH, "XwcDrawText");
+        var mh$ = XwcDrawText$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -5118,7 +5118,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$66.Xutf8DrawText$MH,"Xutf8DrawText");
     }
     public static void Xutf8DrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.Xutf8DrawText$MH, "Xutf8DrawText");
+        var mh$ = Xutf8DrawText$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
         } catch (Throwable ex$) {
@@ -5129,7 +5129,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$66.XmbDrawString$MH,"XmbDrawString");
     }
     public static void XmbDrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$66.XmbDrawString$MH, "XmbDrawString");
+        var mh$ = XmbDrawString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -5140,7 +5140,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$67.XwcDrawString$MH,"XwcDrawString");
     }
     public static void XwcDrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XwcDrawString$MH, "XwcDrawString");
+        var mh$ = XwcDrawString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -5151,7 +5151,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$67.Xutf8DrawString$MH,"Xutf8DrawString");
     }
     public static void Xutf8DrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.Xutf8DrawString$MH, "Xutf8DrawString");
+        var mh$ = Xutf8DrawString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -5162,7 +5162,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$67.XmbDrawImageString$MH,"XmbDrawImageString");
     }
     public static void XmbDrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XmbDrawImageString$MH, "XmbDrawImageString");
+        var mh$ = XmbDrawImageString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -5173,7 +5173,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$67.XwcDrawImageString$MH,"XwcDrawImageString");
     }
     public static void XwcDrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XwcDrawImageString$MH, "XwcDrawImageString");
+        var mh$ = XwcDrawImageString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -5184,7 +5184,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$67.Xutf8DrawImageString$MH,"Xutf8DrawImageString");
     }
     public static void Xutf8DrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.Xutf8DrawImageString$MH, "Xutf8DrawImageString");
+        var mh$ = Xutf8DrawImageString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -5195,9 +5195,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$67.XOpenIM$MH,"XOpenIM");
     }
     public static MemoryAddress XOpenIM ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$67.XOpenIM$MH, "XOpenIM");
+        var mh$ = XOpenIM$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5206,7 +5206,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$68.XCloseIM$MH,"XCloseIM");
     }
     public static int XCloseIM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XCloseIM$MH, "XCloseIM");
+        var mh$ = XCloseIM$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -5217,9 +5217,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$68.XGetIMValues$MH,"XGetIMValues");
     }
     public static MemoryAddress XGetIMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XGetIMValues$MH, "XGetIMValues");
+        var mh$ = XGetIMValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5228,9 +5228,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$68.XSetIMValues$MH,"XSetIMValues");
     }
     public static MemoryAddress XSetIMValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XSetIMValues$MH, "XSetIMValues");
+        var mh$ = XSetIMValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5239,9 +5239,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$68.XDisplayOfIM$MH,"XDisplayOfIM");
     }
     public static MemoryAddress XDisplayOfIM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XDisplayOfIM$MH, "XDisplayOfIM");
+        var mh$ = XDisplayOfIM$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5250,9 +5250,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$68.XLocaleOfIM$MH,"XLocaleOfIM");
     }
     public static MemoryAddress XLocaleOfIM ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XLocaleOfIM$MH, "XLocaleOfIM");
+        var mh$ = XLocaleOfIM$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5261,9 +5261,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$68.XCreateIC$MH,"XCreateIC");
     }
     public static MemoryAddress XCreateIC ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$68.XCreateIC$MH, "XCreateIC");
+        var mh$ = XCreateIC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5272,7 +5272,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$69.XDestroyIC$MH,"XDestroyIC");
     }
     public static void XDestroyIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XDestroyIC$MH, "XDestroyIC");
+        var mh$ = XDestroyIC$MH();
         try {
             mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -5283,7 +5283,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$69.XSetICFocus$MH,"XSetICFocus");
     }
     public static void XSetICFocus ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XSetICFocus$MH, "XSetICFocus");
+        var mh$ = XSetICFocus$MH();
         try {
             mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -5294,7 +5294,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$69.XUnsetICFocus$MH,"XUnsetICFocus");
     }
     public static void XUnsetICFocus ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XUnsetICFocus$MH, "XUnsetICFocus");
+        var mh$ = XUnsetICFocus$MH();
         try {
             mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -5305,9 +5305,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$69.XwcResetIC$MH,"XwcResetIC");
     }
     public static MemoryAddress XwcResetIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XwcResetIC$MH, "XwcResetIC");
+        var mh$ = XwcResetIC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5316,9 +5316,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$69.XmbResetIC$MH,"XmbResetIC");
     }
     public static MemoryAddress XmbResetIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.XmbResetIC$MH, "XmbResetIC");
+        var mh$ = XmbResetIC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5327,9 +5327,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$69.Xutf8ResetIC$MH,"Xutf8ResetIC");
     }
     public static MemoryAddress Xutf8ResetIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$69.Xutf8ResetIC$MH, "Xutf8ResetIC");
+        var mh$ = Xutf8ResetIC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5338,9 +5338,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$70.XSetICValues$MH,"XSetICValues");
     }
     public static MemoryAddress XSetICValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XSetICValues$MH, "XSetICValues");
+        var mh$ = XSetICValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5349,9 +5349,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$70.XGetICValues$MH,"XGetICValues");
     }
     public static MemoryAddress XGetICValues ( Addressable x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XGetICValues$MH, "XGetICValues");
+        var mh$ = XGetICValues$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5360,9 +5360,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$70.XIMOfIC$MH,"XIMOfIC");
     }
     public static MemoryAddress XIMOfIC ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XIMOfIC$MH, "XIMOfIC");
+        var mh$ = XIMOfIC$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5371,7 +5371,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$70.XFilterEvent$MH,"XFilterEvent");
     }
     public static int XFilterEvent ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XFilterEvent$MH, "XFilterEvent");
+        var mh$ = XFilterEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -5382,7 +5382,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$70.XmbLookupString$MH,"XmbLookupString");
     }
     public static int XmbLookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XmbLookupString$MH, "XmbLookupString");
+        var mh$ = XmbLookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -5393,7 +5393,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$70.XwcLookupString$MH,"XwcLookupString");
     }
     public static int XwcLookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$70.XwcLookupString$MH, "XwcLookupString");
+        var mh$ = XwcLookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -5404,7 +5404,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$71.Xutf8LookupString$MH,"Xutf8LookupString");
     }
     public static int Xutf8LookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.Xutf8LookupString$MH, "Xutf8LookupString");
+        var mh$ = Xutf8LookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -5415,9 +5415,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$71.XVaCreateNestedList$MH,"XVaCreateNestedList");
     }
     public static MemoryAddress XVaCreateNestedList ( int x0, Object... x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.XVaCreateNestedList$MH, "XVaCreateNestedList");
+        var mh$ = XVaCreateNestedList$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5426,7 +5426,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$71.XRegisterIMInstantiateCallback$MH,"XRegisterIMInstantiateCallback");
     }
     public static int XRegisterIMInstantiateCallback ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.XRegisterIMInstantiateCallback$MH, "XRegisterIMInstantiateCallback");
+        var mh$ = XRegisterIMInstantiateCallback$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -5437,7 +5437,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$71.XUnregisterIMInstantiateCallback$MH,"XUnregisterIMInstantiateCallback");
     }
     public static int XUnregisterIMInstantiateCallback ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$71.XUnregisterIMInstantiateCallback$MH, "XUnregisterIMInstantiateCallback");
+        var mh$ = XUnregisterIMInstantiateCallback$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
         } catch (Throwable ex$) {
@@ -5448,7 +5448,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$72.XInternalConnectionNumbers$MH,"XInternalConnectionNumbers");
     }
     public static int XInternalConnectionNumbers ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XInternalConnectionNumbers$MH, "XInternalConnectionNumbers");
+        var mh$ = XInternalConnectionNumbers$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5459,7 +5459,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$72.XProcessInternalConnection$MH,"XProcessInternalConnection");
     }
     public static void XProcessInternalConnection ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XProcessInternalConnection$MH, "XProcessInternalConnection");
+        var mh$ = XProcessInternalConnection$MH();
         try {
             mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -5470,7 +5470,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$72.XAddConnectionWatch$MH,"XAddConnectionWatch");
     }
     public static int XAddConnectionWatch ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XAddConnectionWatch$MH, "XAddConnectionWatch");
+        var mh$ = XAddConnectionWatch$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5481,7 +5481,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$72.XRemoveConnectionWatch$MH,"XRemoveConnectionWatch");
     }
     public static void XRemoveConnectionWatch ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XRemoveConnectionWatch$MH, "XRemoveConnectionWatch");
+        var mh$ = XRemoveConnectionWatch$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5492,7 +5492,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$72.XSetAuthorization$MH,"XSetAuthorization");
     }
     public static void XSetAuthorization ( Addressable x0,  int x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72.XSetAuthorization$MH, "XSetAuthorization");
+        var mh$ = XSetAuthorization$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5503,7 +5503,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$72._Xmbtowc$MH,"_Xmbtowc");
     }
     public static int _Xmbtowc ( Addressable x0,  Addressable x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$72._Xmbtowc$MH, "_Xmbtowc");
+        var mh$ = _Xmbtowc$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5514,7 +5514,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$73._Xwctomb$MH,"_Xwctomb");
     }
     public static int _Xwctomb ( Addressable x0,  int x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73._Xwctomb$MH, "_Xwctomb");
+        var mh$ = _Xwctomb$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -5525,7 +5525,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$73.XGetEventData$MH,"XGetEventData");
     }
     public static int XGetEventData ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73.XGetEventData$MH, "XGetEventData");
+        var mh$ = XGetEventData$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -5536,7 +5536,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$73.XFreeEventData$MH,"XFreeEventData");
     }
     public static void XFreeEventData ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73.XFreeEventData$MH, "XFreeEventData");
+        var mh$ = XFreeEventData$MH();
         try {
             mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -5564,9 +5564,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$73.XAllocClassHint$MH,"XAllocClassHint");
     }
     public static MemoryAddress XAllocClassHint () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73.XAllocClassHint$MH, "XAllocClassHint");
+        var mh$ = XAllocClassHint$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5575,9 +5575,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$73.XAllocIconSize$MH,"XAllocIconSize");
     }
     public static MemoryAddress XAllocIconSize () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73.XAllocIconSize$MH, "XAllocIconSize");
+        var mh$ = XAllocIconSize$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5586,9 +5586,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$73.XAllocSizeHints$MH,"XAllocSizeHints");
     }
     public static MemoryAddress XAllocSizeHints () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$73.XAllocSizeHints$MH, "XAllocSizeHints");
+        var mh$ = XAllocSizeHints$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5597,9 +5597,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$74.XAllocStandardColormap$MH,"XAllocStandardColormap");
     }
     public static MemoryAddress XAllocStandardColormap () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$74.XAllocStandardColormap$MH, "XAllocStandardColormap");
+        var mh$ = XAllocStandardColormap$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5608,9 +5608,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$74.XAllocWMHints$MH,"XAllocWMHints");
     }
     public static MemoryAddress XAllocWMHints () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$74.XAllocWMHints$MH, "XAllocWMHints");
+        var mh$ = XAllocWMHints$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5619,7 +5619,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$74.XClipBox$MH,"XClipBox");
     }
     public static int XClipBox ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$74.XClipBox$MH, "XClipBox");
+        var mh$ = XClipBox$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -5630,9 +5630,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$74.XCreateRegion$MH,"XCreateRegion");
     }
     public static MemoryAddress XCreateRegion () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$74.XCreateRegion$MH, "XCreateRegion");
+        var mh$ = XCreateRegion$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5641,9 +5641,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$74.XDefaultString$MH,"XDefaultString");
     }
     public static MemoryAddress XDefaultString () {
-        var mh$ = RuntimeHelper.requireNonNull(constants$74.XDefaultString$MH, "XDefaultString");
+        var mh$ = XDefaultString$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5652,7 +5652,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$74.XDeleteContext$MH,"XDeleteContext");
     }
     public static int XDeleteContext ( Addressable x0,  long x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$74.XDeleteContext$MH, "XDeleteContext");
+        var mh$ = XDeleteContext$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5663,7 +5663,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$75.XDestroyRegion$MH,"XDestroyRegion");
     }
     public static int XDestroyRegion ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$75.XDestroyRegion$MH, "XDestroyRegion");
+        var mh$ = XDestroyRegion$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -5674,7 +5674,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$75.XEmptyRegion$MH,"XEmptyRegion");
     }
     public static int XEmptyRegion ( Addressable x0) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$75.XEmptyRegion$MH, "XEmptyRegion");
+        var mh$ = XEmptyRegion$MH();
         try {
             return (int)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
@@ -5685,7 +5685,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$75.XEqualRegion$MH,"XEqualRegion");
     }
     public static int XEqualRegion ( Addressable x0,  Addressable x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$75.XEqualRegion$MH, "XEqualRegion");
+        var mh$ = XEqualRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
@@ -5696,7 +5696,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$75.XFindContext$MH,"XFindContext");
     }
     public static int XFindContext ( Addressable x0,  long x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$75.XFindContext$MH, "XFindContext");
+        var mh$ = XFindContext$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5707,7 +5707,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$75.XGetClassHint$MH,"XGetClassHint");
     }
     public static int XGetClassHint ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$75.XGetClassHint$MH, "XGetClassHint");
+        var mh$ = XGetClassHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5718,7 +5718,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$75.XGetIconSizes$MH,"XGetIconSizes");
     }
     public static int XGetIconSizes ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$75.XGetIconSizes$MH, "XGetIconSizes");
+        var mh$ = XGetIconSizes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5729,7 +5729,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$76.XGetNormalHints$MH,"XGetNormalHints");
     }
     public static int XGetNormalHints ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$76.XGetNormalHints$MH, "XGetNormalHints");
+        var mh$ = XGetNormalHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5740,7 +5740,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$76.XGetRGBColormaps$MH,"XGetRGBColormaps");
     }
     public static int XGetRGBColormaps ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  long x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$76.XGetRGBColormaps$MH, "XGetRGBColormaps");
+        var mh$ = XGetRGBColormaps$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5751,7 +5751,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$76.XGetSizeHints$MH,"XGetSizeHints");
     }
     public static int XGetSizeHints ( Addressable x0,  long x1,  Addressable x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$76.XGetSizeHints$MH, "XGetSizeHints");
+        var mh$ = XGetSizeHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5762,7 +5762,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$76.XGetStandardColormap$MH,"XGetStandardColormap");
     }
     public static int XGetStandardColormap ( Addressable x0,  long x1,  Addressable x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$76.XGetStandardColormap$MH, "XGetStandardColormap");
+        var mh$ = XGetStandardColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5773,7 +5773,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$76.XGetTextProperty$MH,"XGetTextProperty");
     }
     public static int XGetTextProperty ( Addressable x0,  long x1,  Addressable x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$76.XGetTextProperty$MH, "XGetTextProperty");
+        var mh$ = XGetTextProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5784,9 +5784,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$76.XGetVisualInfo$MH,"XGetVisualInfo");
     }
     public static MemoryAddress XGetVisualInfo ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$76.XGetVisualInfo$MH, "XGetVisualInfo");
+        var mh$ = XGetVisualInfo$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5795,7 +5795,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$77.XGetWMClientMachine$MH,"XGetWMClientMachine");
     }
     public static int XGetWMClientMachine ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$77.XGetWMClientMachine$MH, "XGetWMClientMachine");
+        var mh$ = XGetWMClientMachine$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5806,9 +5806,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$77.XGetWMHints$MH,"XGetWMHints");
     }
     public static MemoryAddress XGetWMHints ( Addressable x0,  long x1) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$77.XGetWMHints$MH, "XGetWMHints");
+        var mh$ = XGetWMHints$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5817,7 +5817,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$77.XGetWMIconName$MH,"XGetWMIconName");
     }
     public static int XGetWMIconName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$77.XGetWMIconName$MH, "XGetWMIconName");
+        var mh$ = XGetWMIconName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5828,7 +5828,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$77.XGetWMName$MH,"XGetWMName");
     }
     public static int XGetWMName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$77.XGetWMName$MH, "XGetWMName");
+        var mh$ = XGetWMName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5839,7 +5839,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$77.XGetWMNormalHints$MH,"XGetWMNormalHints");
     }
     public static int XGetWMNormalHints ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$77.XGetWMNormalHints$MH, "XGetWMNormalHints");
+        var mh$ = XGetWMNormalHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5850,7 +5850,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$77.XGetWMSizeHints$MH,"XGetWMSizeHints");
     }
     public static int XGetWMSizeHints ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  long x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$77.XGetWMSizeHints$MH, "XGetWMSizeHints");
+        var mh$ = XGetWMSizeHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5861,7 +5861,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$78.XGetZoomHints$MH,"XGetZoomHints");
     }
     public static int XGetZoomHints ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$78.XGetZoomHints$MH, "XGetZoomHints");
+        var mh$ = XGetZoomHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5872,7 +5872,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$78.XIntersectRegion$MH,"XIntersectRegion");
     }
     public static int XIntersectRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$78.XIntersectRegion$MH, "XIntersectRegion");
+        var mh$ = XIntersectRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5883,7 +5883,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$78.XConvertCase$MH,"XConvertCase");
     }
     public static void XConvertCase ( long x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$78.XConvertCase$MH, "XConvertCase");
+        var mh$ = XConvertCase$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5894,7 +5894,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$78.XLookupString$MH,"XLookupString");
     }
     public static int XLookupString ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$78.XLookupString$MH, "XLookupString");
+        var mh$ = XLookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5905,7 +5905,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$78.XMatchVisualInfo$MH,"XMatchVisualInfo");
     }
     public static int XMatchVisualInfo ( Addressable x0,  int x1,  int x2,  int x3,  Addressable x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$78.XMatchVisualInfo$MH, "XMatchVisualInfo");
+        var mh$ = XMatchVisualInfo$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5916,7 +5916,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$78.XOffsetRegion$MH,"XOffsetRegion");
     }
     public static int XOffsetRegion ( Addressable x0,  int x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$78.XOffsetRegion$MH, "XOffsetRegion");
+        var mh$ = XOffsetRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5927,7 +5927,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$79.XPointInRegion$MH,"XPointInRegion");
     }
     public static int XPointInRegion ( Addressable x0,  int x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$79.XPointInRegion$MH, "XPointInRegion");
+        var mh$ = XPointInRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5938,9 +5938,9 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$79.XPolygonRegion$MH,"XPolygonRegion");
     }
     public static MemoryAddress XPolygonRegion ( Addressable x0,  int x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$79.XPolygonRegion$MH, "XPolygonRegion");
+        var mh$ = XPolygonRegion$MH();
         try {
-            return (jdk.incubator.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5949,7 +5949,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$79.XRectInRegion$MH,"XRectInRegion");
     }
     public static int XRectInRegion ( Addressable x0,  int x1,  int x2,  int x3,  int x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$79.XRectInRegion$MH, "XRectInRegion");
+        var mh$ = XRectInRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -5960,7 +5960,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$79.XSaveContext$MH,"XSaveContext");
     }
     public static int XSaveContext ( Addressable x0,  long x1,  int x2,  Addressable x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$79.XSaveContext$MH, "XSaveContext");
+        var mh$ = XSaveContext$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5971,7 +5971,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$79.XSetClassHint$MH,"XSetClassHint");
     }
     public static int XSetClassHint ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$79.XSetClassHint$MH, "XSetClassHint");
+        var mh$ = XSetClassHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -5982,7 +5982,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$79.XSetIconSizes$MH,"XSetIconSizes");
     }
     public static int XSetIconSizes ( Addressable x0,  long x1,  Addressable x2,  int x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$79.XSetIconSizes$MH, "XSetIconSizes");
+        var mh$ = XSetIconSizes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -5993,7 +5993,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$80.XSetNormalHints$MH,"XSetNormalHints");
     }
     public static int XSetNormalHints ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$80.XSetNormalHints$MH, "XSetNormalHints");
+        var mh$ = XSetNormalHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6004,7 +6004,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$80.XSetRGBColormaps$MH,"XSetRGBColormaps");
     }
     public static void XSetRGBColormaps ( Addressable x0,  long x1,  Addressable x2,  int x3,  long x4) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$80.XSetRGBColormaps$MH, "XSetRGBColormaps");
+        var mh$ = XSetRGBColormaps$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
@@ -6015,7 +6015,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$80.XSetSizeHints$MH,"XSetSizeHints");
     }
     public static int XSetSizeHints ( Addressable x0,  long x1,  Addressable x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$80.XSetSizeHints$MH, "XSetSizeHints");
+        var mh$ = XSetSizeHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -6026,7 +6026,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$80.XSetStandardProperties$MH,"XSetStandardProperties");
     }
     public static int XSetStandardProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  long x4,  Addressable x5,  int x6,  Addressable x7) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$80.XSetStandardProperties$MH, "XSetStandardProperties");
+        var mh$ = XSetStandardProperties$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
@@ -6037,7 +6037,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$80.XSetTextProperty$MH,"XSetTextProperty");
     }
     public static void XSetTextProperty ( Addressable x0,  long x1,  Addressable x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$80.XSetTextProperty$MH, "XSetTextProperty");
+        var mh$ = XSetTextProperty$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -6048,7 +6048,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$80.XSetWMClientMachine$MH,"XSetWMClientMachine");
     }
     public static void XSetWMClientMachine ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$80.XSetWMClientMachine$MH, "XSetWMClientMachine");
+        var mh$ = XSetWMClientMachine$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6059,7 +6059,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$81.XSetWMHints$MH,"XSetWMHints");
     }
     public static int XSetWMHints ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$81.XSetWMHints$MH, "XSetWMHints");
+        var mh$ = XSetWMHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6070,7 +6070,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$81.XSetWMIconName$MH,"XSetWMIconName");
     }
     public static void XSetWMIconName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$81.XSetWMIconName$MH, "XSetWMIconName");
+        var mh$ = XSetWMIconName$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6081,7 +6081,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$81.XSetWMName$MH,"XSetWMName");
     }
     public static void XSetWMName ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$81.XSetWMName$MH, "XSetWMName");
+        var mh$ = XSetWMName$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6092,7 +6092,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$81.XSetWMNormalHints$MH,"XSetWMNormalHints");
     }
     public static void XSetWMNormalHints ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$81.XSetWMNormalHints$MH, "XSetWMNormalHints");
+        var mh$ = XSetWMNormalHints$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6103,7 +6103,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$81.XSetWMProperties$MH,"XSetWMProperties");
     }
     public static void XSetWMProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$81.XSetWMProperties$MH, "XSetWMProperties");
+        var mh$ = XSetWMProperties$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -6114,7 +6114,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$81.XmbSetWMProperties$MH,"XmbSetWMProperties");
     }
     public static void XmbSetWMProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$81.XmbSetWMProperties$MH, "XmbSetWMProperties");
+        var mh$ = XmbSetWMProperties$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -6125,7 +6125,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$82.Xutf8SetWMProperties$MH,"Xutf8SetWMProperties");
     }
     public static void Xutf8SetWMProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$82.Xutf8SetWMProperties$MH, "Xutf8SetWMProperties");
+        var mh$ = Xutf8SetWMProperties$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
         } catch (Throwable ex$) {
@@ -6136,7 +6136,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$82.XSetWMSizeHints$MH,"XSetWMSizeHints");
     }
     public static void XSetWMSizeHints ( Addressable x0,  long x1,  Addressable x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$82.XSetWMSizeHints$MH, "XSetWMSizeHints");
+        var mh$ = XSetWMSizeHints$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -6147,7 +6147,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$82.XSetRegion$MH,"XSetRegion");
     }
     public static int XSetRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$82.XSetRegion$MH, "XSetRegion");
+        var mh$ = XSetRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6158,7 +6158,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$82.XSetStandardColormap$MH,"XSetStandardColormap");
     }
     public static void XSetStandardColormap ( Addressable x0,  long x1,  Addressable x2,  long x3) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$82.XSetStandardColormap$MH, "XSetStandardColormap");
+        var mh$ = XSetStandardColormap$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
@@ -6169,7 +6169,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$82.XSetZoomHints$MH,"XSetZoomHints");
     }
     public static int XSetZoomHints ( Addressable x0,  long x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$82.XSetZoomHints$MH, "XSetZoomHints");
+        var mh$ = XSetZoomHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6180,7 +6180,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$82.XShrinkRegion$MH,"XShrinkRegion");
     }
     public static int XShrinkRegion ( Addressable x0,  int x1,  int x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$82.XShrinkRegion$MH, "XShrinkRegion");
+        var mh$ = XShrinkRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6191,7 +6191,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$83.XStringListToTextProperty$MH,"XStringListToTextProperty");
     }
     public static int XStringListToTextProperty ( Addressable x0,  int x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$83.XStringListToTextProperty$MH, "XStringListToTextProperty");
+        var mh$ = XStringListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6202,7 +6202,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$83.XSubtractRegion$MH,"XSubtractRegion");
     }
     public static int XSubtractRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$83.XSubtractRegion$MH, "XSubtractRegion");
+        var mh$ = XSubtractRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6213,7 +6213,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$83.XmbTextListToTextProperty$MH,"XmbTextListToTextProperty");
     }
     public static int XmbTextListToTextProperty ( Addressable display,  Addressable list,  int count,  int style,  Addressable text_prop_return) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$83.XmbTextListToTextProperty$MH, "XmbTextListToTextProperty");
+        var mh$ = XmbTextListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
         } catch (Throwable ex$) {
@@ -6224,7 +6224,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$83.XwcTextListToTextProperty$MH,"XwcTextListToTextProperty");
     }
     public static int XwcTextListToTextProperty ( Addressable display,  Addressable list,  int count,  int style,  Addressable text_prop_return) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$83.XwcTextListToTextProperty$MH, "XwcTextListToTextProperty");
+        var mh$ = XwcTextListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
         } catch (Throwable ex$) {
@@ -6235,7 +6235,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$83.Xutf8TextListToTextProperty$MH,"Xutf8TextListToTextProperty");
     }
     public static int Xutf8TextListToTextProperty ( Addressable display,  Addressable list,  int count,  int style,  Addressable text_prop_return) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$83.Xutf8TextListToTextProperty$MH, "Xutf8TextListToTextProperty");
+        var mh$ = Xutf8TextListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
         } catch (Throwable ex$) {
@@ -6246,7 +6246,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$83.XwcFreeStringList$MH,"XwcFreeStringList");
     }
     public static void XwcFreeStringList ( Addressable list) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$83.XwcFreeStringList$MH, "XwcFreeStringList");
+        var mh$ = XwcFreeStringList$MH();
         try {
             mh$.invokeExact(list);
         } catch (Throwable ex$) {
@@ -6257,7 +6257,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$84.XTextPropertyToStringList$MH,"XTextPropertyToStringList");
     }
     public static int XTextPropertyToStringList ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$84.XTextPropertyToStringList$MH, "XTextPropertyToStringList");
+        var mh$ = XTextPropertyToStringList$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6268,7 +6268,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$84.XmbTextPropertyToTextList$MH,"XmbTextPropertyToTextList");
     }
     public static int XmbTextPropertyToTextList ( Addressable display,  Addressable text_prop,  Addressable list_return,  Addressable count_return) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$84.XmbTextPropertyToTextList$MH, "XmbTextPropertyToTextList");
+        var mh$ = XmbTextPropertyToTextList$MH();
         try {
             return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
         } catch (Throwable ex$) {
@@ -6279,7 +6279,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$84.XwcTextPropertyToTextList$MH,"XwcTextPropertyToTextList");
     }
     public static int XwcTextPropertyToTextList ( Addressable display,  Addressable text_prop,  Addressable list_return,  Addressable count_return) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$84.XwcTextPropertyToTextList$MH, "XwcTextPropertyToTextList");
+        var mh$ = XwcTextPropertyToTextList$MH();
         try {
             return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
         } catch (Throwable ex$) {
@@ -6290,7 +6290,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$84.Xutf8TextPropertyToTextList$MH,"Xutf8TextPropertyToTextList");
     }
     public static int Xutf8TextPropertyToTextList ( Addressable display,  Addressable text_prop,  Addressable list_return,  Addressable count_return) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$84.Xutf8TextPropertyToTextList$MH, "Xutf8TextPropertyToTextList");
+        var mh$ = Xutf8TextPropertyToTextList$MH();
         try {
             return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
         } catch (Throwable ex$) {
@@ -6301,7 +6301,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$84.XUnionRectWithRegion$MH,"XUnionRectWithRegion");
     }
     public static int XUnionRectWithRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$84.XUnionRectWithRegion$MH, "XUnionRectWithRegion");
+        var mh$ = XUnionRectWithRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6312,7 +6312,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$84.XUnionRegion$MH,"XUnionRegion");
     }
     public static int XUnionRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$84.XUnionRegion$MH, "XUnionRegion");
+        var mh$ = XUnionRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
@@ -6323,7 +6323,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$85.XWMGeometry$MH,"XWMGeometry");
     }
     public static int XWMGeometry ( Addressable x0,  int x1,  Addressable x2,  Addressable x3,  int x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8,  Addressable x9,  Addressable x10) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$85.XWMGeometry$MH, "XWMGeometry");
+        var mh$ = XWMGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
         } catch (Throwable ex$) {
@@ -6334,7 +6334,7 @@ import static jdk.incubator.foreign.ValueLayout.*;
         return RuntimeHelper.requireNonNull(constants$85.XXorRegion$MH,"XXorRegion");
     }
     public static int XXorRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
-        var mh$ = RuntimeHelper.requireNonNull(constants$85.XXorRegion$MH, "XXorRegion");
+        var mh$ = XXorRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {

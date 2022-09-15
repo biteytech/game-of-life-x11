@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$24 {
 
     static final FunctionDescriptor XChangeProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -21,7 +21,7 @@ class constants$24 {
     );
     static final MethodHandle XChangeProperty$MH = RuntimeHelper.downcallHandle(
         "XChangeProperty",
-        constants$24.XChangeProperty$FUNC, false
+        constants$24.XChangeProperty$FUNC
     );
     static final FunctionDescriptor XChangeSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -30,7 +30,7 @@ class constants$24 {
     );
     static final MethodHandle XChangeSaveSet$MH = RuntimeHelper.downcallHandle(
         "XChangeSaveSet",
-        constants$24.XChangeSaveSet$FUNC, false
+        constants$24.XChangeSaveSet$FUNC
     );
     static final FunctionDescriptor XChangeWindowAttributes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -40,7 +40,7 @@ class constants$24 {
     );
     static final MethodHandle XChangeWindowAttributes$MH = RuntimeHelper.downcallHandle(
         "XChangeWindowAttributes",
-        constants$24.XChangeWindowAttributes$FUNC, false
+        constants$24.XChangeWindowAttributes$FUNC
     );
     static final FunctionDescriptor XCheckIfEvent$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -48,7 +48,7 @@ class constants$24 {
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XCheckIfEvent$x0$MH = RuntimeHelper.downcallHandle(
-        constants$24.XCheckIfEvent$x0$FUNC, false
+        constants$24.XCheckIfEvent$x0$FUNC
     );
     static final FunctionDescriptor XCheckIfEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -58,7 +58,7 @@ class constants$24 {
     );
     static final MethodHandle XCheckIfEvent$MH = RuntimeHelper.downcallHandle(
         "XCheckIfEvent",
-        constants$24.XCheckIfEvent$FUNC, false
+        constants$24.XCheckIfEvent$FUNC
     );
 }
 

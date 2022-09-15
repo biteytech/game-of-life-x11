@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$31 {
 
     static final FunctionDescriptor XDrawImageString16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -20,7 +20,7 @@ class constants$31 {
     );
     static final MethodHandle XDrawImageString16$MH = RuntimeHelper.downcallHandle(
         "XDrawImageString16",
-        constants$31.XDrawImageString16$FUNC, false
+        constants$31.XDrawImageString16$FUNC
     );
     static final FunctionDescriptor XDrawLine$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -33,7 +33,7 @@ class constants$31 {
     );
     static final MethodHandle XDrawLine$MH = RuntimeHelper.downcallHandle(
         "XDrawLine",
-        constants$31.XDrawLine$FUNC, false
+        constants$31.XDrawLine$FUNC
     );
     static final FunctionDescriptor XDrawLines$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -45,7 +45,7 @@ class constants$31 {
     );
     static final MethodHandle XDrawLines$MH = RuntimeHelper.downcallHandle(
         "XDrawLines",
-        constants$31.XDrawLines$FUNC, false
+        constants$31.XDrawLines$FUNC
     );
     static final FunctionDescriptor XDrawPoint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -56,7 +56,7 @@ class constants$31 {
     );
     static final MethodHandle XDrawPoint$MH = RuntimeHelper.downcallHandle(
         "XDrawPoint",
-        constants$31.XDrawPoint$FUNC, false
+        constants$31.XDrawPoint$FUNC
     );
     static final FunctionDescriptor XDrawPoints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -68,7 +68,7 @@ class constants$31 {
     );
     static final MethodHandle XDrawPoints$MH = RuntimeHelper.downcallHandle(
         "XDrawPoints",
-        constants$31.XDrawPoints$FUNC, false
+        constants$31.XDrawPoints$FUNC
     );
     static final FunctionDescriptor XDrawRectangle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -81,7 +81,7 @@ class constants$31 {
     );
     static final MethodHandle XDrawRectangle$MH = RuntimeHelper.downcallHandle(
         "XDrawRectangle",
-        constants$31.XDrawRectangle$FUNC, false
+        constants$31.XDrawRectangle$FUNC
     );
 }
 

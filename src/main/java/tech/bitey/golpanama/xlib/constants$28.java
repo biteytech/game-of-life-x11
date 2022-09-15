@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$28 {
 
     static final FunctionDescriptor XDefaultScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -14,7 +14,7 @@ class constants$28 {
     );
     static final MethodHandle XDefaultScreen$MH = RuntimeHelper.downcallHandle(
         "XDefaultScreen",
-        constants$28.XDefaultScreen$FUNC, false
+        constants$28.XDefaultScreen$FUNC
     );
     static final FunctionDescriptor XDefineCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -23,7 +23,7 @@ class constants$28 {
     );
     static final MethodHandle XDefineCursor$MH = RuntimeHelper.downcallHandle(
         "XDefineCursor",
-        constants$28.XDefineCursor$FUNC, false
+        constants$28.XDefineCursor$FUNC
     );
     static final FunctionDescriptor XDeleteProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -32,7 +32,7 @@ class constants$28 {
     );
     static final MethodHandle XDeleteProperty$MH = RuntimeHelper.downcallHandle(
         "XDeleteProperty",
-        constants$28.XDeleteProperty$FUNC, false
+        constants$28.XDeleteProperty$FUNC
     );
     static final FunctionDescriptor XDestroyWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -40,7 +40,7 @@ class constants$28 {
     );
     static final MethodHandle XDestroyWindow$MH = RuntimeHelper.downcallHandle(
         "XDestroyWindow",
-        constants$28.XDestroyWindow$FUNC, false
+        constants$28.XDestroyWindow$FUNC
     );
     static final FunctionDescriptor XDestroySubwindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -48,14 +48,14 @@ class constants$28 {
     );
     static final MethodHandle XDestroySubwindows$MH = RuntimeHelper.downcallHandle(
         "XDestroySubwindows",
-        constants$28.XDestroySubwindows$FUNC, false
+        constants$28.XDestroySubwindows$FUNC
     );
     static final FunctionDescriptor XDoesBackingStore$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XDoesBackingStore$MH = RuntimeHelper.downcallHandle(
         "XDoesBackingStore",
-        constants$28.XDoesBackingStore$FUNC, false
+        constants$28.XDoesBackingStore$FUNC
     );
 }
 

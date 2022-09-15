@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$30 {
 
     static final FunctionDescriptor XDisplayPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -15,7 +15,7 @@ class constants$30 {
     );
     static final MethodHandle XDisplayPlanes$MH = RuntimeHelper.downcallHandle(
         "XDisplayPlanes",
-        constants$30.XDisplayPlanes$FUNC, false
+        constants$30.XDisplayPlanes$FUNC
     );
     static final FunctionDescriptor XDisplayWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -23,7 +23,7 @@ class constants$30 {
     );
     static final MethodHandle XDisplayWidth$MH = RuntimeHelper.downcallHandle(
         "XDisplayWidth",
-        constants$30.XDisplayWidth$FUNC, false
+        constants$30.XDisplayWidth$FUNC
     );
     static final FunctionDescriptor XDisplayWidthMM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -31,7 +31,7 @@ class constants$30 {
     );
     static final MethodHandle XDisplayWidthMM$MH = RuntimeHelper.downcallHandle(
         "XDisplayWidthMM",
-        constants$30.XDisplayWidthMM$FUNC, false
+        constants$30.XDisplayWidthMM$FUNC
     );
     static final FunctionDescriptor XDrawArc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -46,7 +46,7 @@ class constants$30 {
     );
     static final MethodHandle XDrawArc$MH = RuntimeHelper.downcallHandle(
         "XDrawArc",
-        constants$30.XDrawArc$FUNC, false
+        constants$30.XDrawArc$FUNC
     );
     static final FunctionDescriptor XDrawArcs$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -57,7 +57,7 @@ class constants$30 {
     );
     static final MethodHandle XDrawArcs$MH = RuntimeHelper.downcallHandle(
         "XDrawArcs",
-        constants$30.XDrawArcs$FUNC, false
+        constants$30.XDrawArcs$FUNC
     );
     static final FunctionDescriptor XDrawImageString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -70,7 +70,7 @@ class constants$30 {
     );
     static final MethodHandle XDrawImageString$MH = RuntimeHelper.downcallHandle(
         "XDrawImageString",
-        constants$30.XDrawImageString$FUNC, false
+        constants$30.XDrawImageString$FUNC
     );
 }
 

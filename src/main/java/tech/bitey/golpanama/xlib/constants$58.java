@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$58 {
 
     static final FunctionDescriptor XTextWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -16,7 +16,7 @@ class constants$58 {
     );
     static final MethodHandle XTextWidth$MH = RuntimeHelper.downcallHandle(
         "XTextWidth",
-        constants$58.XTextWidth$FUNC, false
+        constants$58.XTextWidth$FUNC
     );
     static final FunctionDescriptor XTextWidth16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -25,7 +25,7 @@ class constants$58 {
     );
     static final MethodHandle XTextWidth16$MH = RuntimeHelper.downcallHandle(
         "XTextWidth16",
-        constants$58.XTextWidth16$FUNC, false
+        constants$58.XTextWidth16$FUNC
     );
     static final FunctionDescriptor XTranslateCoordinates$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -39,7 +39,7 @@ class constants$58 {
     );
     static final MethodHandle XTranslateCoordinates$MH = RuntimeHelper.downcallHandle(
         "XTranslateCoordinates",
-        constants$58.XTranslateCoordinates$FUNC, false
+        constants$58.XTranslateCoordinates$FUNC
     );
     static final FunctionDescriptor XUndefineCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -47,7 +47,7 @@ class constants$58 {
     );
     static final MethodHandle XUndefineCursor$MH = RuntimeHelper.downcallHandle(
         "XUndefineCursor",
-        constants$58.XUndefineCursor$FUNC, false
+        constants$58.XUndefineCursor$FUNC
     );
     static final FunctionDescriptor XUngrabButton$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -57,7 +57,7 @@ class constants$58 {
     );
     static final MethodHandle XUngrabButton$MH = RuntimeHelper.downcallHandle(
         "XUngrabButton",
-        constants$58.XUngrabButton$FUNC, false
+        constants$58.XUngrabButton$FUNC
     );
     static final FunctionDescriptor XUngrabKey$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -67,7 +67,7 @@ class constants$58 {
     );
     static final MethodHandle XUngrabKey$MH = RuntimeHelper.downcallHandle(
         "XUngrabKey",
-        constants$58.XUngrabKey$FUNC, false
+        constants$58.XUngrabKey$FUNC
     );
 }
 

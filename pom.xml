@@ -17,9 +17,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.10.1</version>
 				<configuration>
-					<release>18</release>
+					<release>19</release>
+					<compilerArgs>--enable-preview</compilerArgs>
 				</configuration>
 			</plugin>
 			<!-- execute LifeJavaFX -->
@@ -28,6 +29,9 @@
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.8</version>
 				<configuration>
+					<options>
+						<option>--enable-preview</option>
+					</options>
 					<mainClass>${package}.LifeJavaFX</mainClass>
 					<commandlineArgs>${pattern}</commandlineArgs>
 				</configuration>
@@ -41,12 +45,10 @@
 					<executable>${env.JAVA_HOME}/bin/java</executable>
 					<arguments>
 						<argument>--module-path</argument>
-						<modulepath/>
+						<modulepath />
 						<argument>-classpath</argument>
-						<classpath/>
-						<argument>--add-modules</argument>
-						<argument>jdk.incubator.foreign</argument>
-						<argument>--enable-native-access=golpanama</argument>
+						<classpath />
+						<argument>--enable-preview</argument>
 						<argument>-m</argument>
 						<argument>golpanama/${package}.LifeX11</argument>
 						<argument>${pattern}</argument>

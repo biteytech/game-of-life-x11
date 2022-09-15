@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$3 {
 
     static final FunctionDescriptor XGetMotionEvents$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
@@ -18,7 +18,7 @@ class constants$3 {
     );
     static final MethodHandle XGetMotionEvents$MH = RuntimeHelper.downcallHandle(
         "XGetMotionEvents",
-        constants$3.XGetMotionEvents$FUNC, false
+        constants$3.XGetMotionEvents$FUNC
     );
     static final FunctionDescriptor XDeleteModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -27,14 +27,14 @@ class constants$3 {
     );
     static final MethodHandle XDeleteModifiermapEntry$MH = RuntimeHelper.downcallHandle(
         "XDeleteModifiermapEntry",
-        constants$3.XDeleteModifiermapEntry$FUNC, false
+        constants$3.XDeleteModifiermapEntry$FUNC
     );
     static final FunctionDescriptor XGetModifierMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XGetModifierMapping$MH = RuntimeHelper.downcallHandle(
         "XGetModifierMapping",
-        constants$3.XGetModifierMapping$FUNC, false
+        constants$3.XGetModifierMapping$FUNC
     );
     static final FunctionDescriptor XInsertModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -43,14 +43,14 @@ class constants$3 {
     );
     static final MethodHandle XInsertModifiermapEntry$MH = RuntimeHelper.downcallHandle(
         "XInsertModifiermapEntry",
-        constants$3.XInsertModifiermapEntry$FUNC, false
+        constants$3.XInsertModifiermapEntry$FUNC
     );
     static final FunctionDescriptor XNewModifiermap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
     static final MethodHandle XNewModifiermap$MH = RuntimeHelper.downcallHandle(
         "XNewModifiermap",
-        constants$3.XNewModifiermap$FUNC, false
+        constants$3.XNewModifiermap$FUNC
     );
     static final FunctionDescriptor XCreateImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -66,7 +66,7 @@ class constants$3 {
     );
     static final MethodHandle XCreateImage$MH = RuntimeHelper.downcallHandle(
         "XCreateImage",
-        constants$3.XCreateImage$FUNC, false
+        constants$3.XCreateImage$FUNC
     );
 }
 

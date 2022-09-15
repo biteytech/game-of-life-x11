@@ -5,8 +5,8 @@ package tech.bitey.golpanama.xlib;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
-import jdk.incubator.foreign.*;
-import static jdk.incubator.foreign.ValueLayout.*;
+import java.lang.foreign.*;
+import static java.lang.foreign.ValueLayout.*;
 class constants$36 {
 
     static final FunctionDescriptor XFreeFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
@@ -14,7 +14,7 @@ class constants$36 {
     );
     static final MethodHandle XFreeFontPath$MH = RuntimeHelper.downcallHandle(
         "XFreeFontPath",
-        constants$36.XFreeFontPath$FUNC, false
+        constants$36.XFreeFontPath$FUNC
     );
     static final FunctionDescriptor XFreeGC$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -22,14 +22,14 @@ class constants$36 {
     );
     static final MethodHandle XFreeGC$MH = RuntimeHelper.downcallHandle(
         "XFreeGC",
-        constants$36.XFreeGC$FUNC, false
+        constants$36.XFreeGC$FUNC
     );
     static final FunctionDescriptor XFreeModifiermap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
     static final MethodHandle XFreeModifiermap$MH = RuntimeHelper.downcallHandle(
         "XFreeModifiermap",
-        constants$36.XFreeModifiermap$FUNC, false
+        constants$36.XFreeModifiermap$FUNC
     );
     static final FunctionDescriptor XFreePixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -37,7 +37,7 @@ class constants$36 {
     );
     static final MethodHandle XFreePixmap$MH = RuntimeHelper.downcallHandle(
         "XFreePixmap",
-        constants$36.XFreePixmap$FUNC, false
+        constants$36.XFreePixmap$FUNC
     );
     static final FunctionDescriptor XGeometry$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -56,7 +56,7 @@ class constants$36 {
     );
     static final MethodHandle XGeometry$MH = RuntimeHelper.downcallHandle(
         "XGeometry",
-        constants$36.XGeometry$FUNC, false
+        constants$36.XGeometry$FUNC
     );
     static final FunctionDescriptor XGetErrorDatabaseText$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -68,7 +68,7 @@ class constants$36 {
     );
     static final MethodHandle XGetErrorDatabaseText$MH = RuntimeHelper.downcallHandle(
         "XGetErrorDatabaseText",
-        constants$36.XGetErrorDatabaseText$FUNC, false
+        constants$36.XGetErrorDatabaseText$FUNC
     );
 }
 
