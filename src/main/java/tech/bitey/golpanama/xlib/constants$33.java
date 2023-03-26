@@ -7,23 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$33 {
+final class constants$33 {
 
-    static final FunctionDescriptor XEnableAccessControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XEnableAccessControl$MH = RuntimeHelper.downcallHandle(
-        "XEnableAccessControl",
-        constants$33.XEnableAccessControl$FUNC
-    );
-    static final FunctionDescriptor XEventsQueued$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XEventsQueued$MH = RuntimeHelper.downcallHandle(
-        "XEventsQueued",
-        constants$33.XEventsQueued$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$33() {}
     static final FunctionDescriptor XFetchName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -71,6 +58,30 @@ class constants$33 {
     static final MethodHandle XFillPolygon$MH = RuntimeHelper.downcallHandle(
         "XFillPolygon",
         constants$33.XFillPolygon$FUNC
+    );
+    static final FunctionDescriptor XFillRectangle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XFillRectangle$MH = RuntimeHelper.downcallHandle(
+        "XFillRectangle",
+        constants$33.XFillRectangle$FUNC
+    );
+    static final FunctionDescriptor XFillRectangles$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XFillRectangles$MH = RuntimeHelper.downcallHandle(
+        "XFillRectangles",
+        constants$33.XFillRectangles$FUNC
     );
 }
 

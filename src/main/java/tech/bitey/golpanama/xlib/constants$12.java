@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$12 {
+final class constants$12 {
 
-    static final FunctionDescriptor XDisplayMotionBufferSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayMotionBufferSize$MH = RuntimeHelper.downcallHandle(
-        "XDisplayMotionBufferSize",
-        constants$12.XDisplayMotionBufferSize$FUNC
-    );
-    static final FunctionDescriptor XVisualIDFromVisual$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XVisualIDFromVisual$MH = RuntimeHelper.downcallHandle(
-        "XVisualIDFromVisual",
-        constants$12.XVisualIDFromVisual$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$12() {}
     static final FunctionDescriptor XInitThreads$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
     static final MethodHandle XInitThreads$MH = RuntimeHelper.downcallHandle(
         "XInitThreads",
@@ -49,6 +37,21 @@ class constants$12 {
     static final MethodHandle XInitExtension$MH = RuntimeHelper.downcallHandle(
         "XInitExtension",
         constants$12.XInitExtension$FUNC
+    );
+    static final FunctionDescriptor XAddExtension$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XAddExtension$MH = RuntimeHelper.downcallHandle(
+        "XAddExtension",
+        constants$12.XAddExtension$FUNC
+    );
+    static final FunctionDescriptor XFindOnExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XFindOnExtensionList$MH = RuntimeHelper.downcallHandle(
+        "XFindOnExtensionList",
+        constants$12.XFindOnExtensionList$FUNC
     );
 }
 

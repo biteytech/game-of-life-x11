@@ -7,31 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$24 {
+final class constants$24 {
 
-    static final FunctionDescriptor XChangeProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XChangeProperty$MH = RuntimeHelper.downcallHandle(
-        "XChangeProperty",
-        constants$24.XChangeProperty$FUNC
-    );
-    static final FunctionDescriptor XChangeSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XChangeSaveSet$MH = RuntimeHelper.downcallHandle(
-        "XChangeSaveSet",
-        constants$24.XChangeSaveSet$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$24() {}
     static final FunctionDescriptor XChangeWindowAttributes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -47,8 +26,19 @@ class constants$24 {
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XCheckIfEvent$x0$MH = RuntimeHelper.downcallHandle(
-        constants$24.XCheckIfEvent$x0$FUNC
+    static final FunctionDescriptor XCheckIfEvent$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XCheckIfEvent$x0_UP$MH = RuntimeHelper.upcallHandle(XCheckIfEvent$x0.class, "apply", constants$24.XCheckIfEvent$x0_UP$FUNC);
+    static final FunctionDescriptor XCheckIfEvent$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XCheckIfEvent$x0_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$24.XCheckIfEvent$x0_DOWN$FUNC
     );
     static final FunctionDescriptor XCheckIfEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -59,6 +49,24 @@ class constants$24 {
     static final MethodHandle XCheckIfEvent$MH = RuntimeHelper.downcallHandle(
         "XCheckIfEvent",
         constants$24.XCheckIfEvent$FUNC
+    );
+    static final FunctionDescriptor XCheckMaskEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XCheckMaskEvent$MH = RuntimeHelper.downcallHandle(
+        "XCheckMaskEvent",
+        constants$24.XCheckMaskEvent$FUNC
+    );
+    static final FunctionDescriptor XCheckTypedEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XCheckTypedEvent$MH = RuntimeHelper.downcallHandle(
+        "XCheckTypedEvent",
+        constants$24.XCheckTypedEvent$FUNC
     );
 }
 

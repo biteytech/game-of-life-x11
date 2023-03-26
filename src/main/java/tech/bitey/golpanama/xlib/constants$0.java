@@ -7,50 +7,71 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$0 {
+final class constants$0 {
 
-    static final FunctionDescriptor __bswap_16$FUNC = FunctionDescriptor.of(Constants$root.C_SHORT$LAYOUT,
-        Constants$root.C_SHORT$LAYOUT
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$0() {}
+    static final FunctionDescriptor select$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle __bswap_16$MH = RuntimeHelper.downcallHandle(
-        "__bswap_16",
-        constants$0.__bswap_16$FUNC
+    static final MethodHandle select$MH = RuntimeHelper.downcallHandle(
+        "select",
+        constants$0.select$FUNC
     );
-    static final FunctionDescriptor __bswap_32$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor pselect$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle pselect$MH = RuntimeHelper.downcallHandle(
+        "pselect",
+        constants$0.pselect$FUNC
+    );
+    static final FunctionDescriptor _Xmblen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle __bswap_32$MH = RuntimeHelper.downcallHandle(
-        "__bswap_32",
-        constants$0.__bswap_32$FUNC
+    static final MethodHandle _Xmblen$MH = RuntimeHelper.downcallHandle(
+        "_Xmblen",
+        constants$0._Xmblen$FUNC
     );
-    static final FunctionDescriptor __bswap_64$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
+    static final FunctionDescriptor XIMProc$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle __bswap_64$MH = RuntimeHelper.downcallHandle(
-        "__bswap_64",
-        constants$0.__bswap_64$FUNC
+    static final FunctionDescriptor XIMProc_UP$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final FunctionDescriptor __uint16_identity$FUNC = FunctionDescriptor.of(Constants$root.C_SHORT$LAYOUT,
-        Constants$root.C_SHORT$LAYOUT
+    static final MethodHandle XIMProc_UP$MH = RuntimeHelper.upcallHandle(XIMProc.class, "apply", constants$0.XIMProc_UP$FUNC);
+    static final FunctionDescriptor XIMProc_DOWN$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle __uint16_identity$MH = RuntimeHelper.downcallHandle(
-        "__uint16_identity",
-        constants$0.__uint16_identity$FUNC
+    static final MethodHandle XIMProc_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$0.XIMProc_DOWN$FUNC
     );
-    static final FunctionDescriptor __uint32_identity$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+    static final FunctionDescriptor XICProc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle __uint32_identity$MH = RuntimeHelper.downcallHandle(
-        "__uint32_identity",
-        constants$0.__uint32_identity$FUNC
+    static final FunctionDescriptor XICProc_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final FunctionDescriptor __uint64_identity$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle __uint64_identity$MH = RuntimeHelper.downcallHandle(
-        "__uint64_identity",
-        constants$0.__uint64_identity$FUNC
-    );
+    static final MethodHandle XICProc_UP$MH = RuntimeHelper.upcallHandle(XICProc.class, "apply", constants$0.XICProc_UP$FUNC);
 }
 
 

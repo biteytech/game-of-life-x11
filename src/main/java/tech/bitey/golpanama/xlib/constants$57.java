@@ -7,27 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$57 {
+final class constants$57 {
 
-    static final FunctionDescriptor XStoreColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XStoreColors$MH = RuntimeHelper.downcallHandle(
-        "XStoreColors",
-        constants$57.XStoreColors$FUNC
-    );
-    static final FunctionDescriptor XStoreName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XStoreName$MH = RuntimeHelper.downcallHandle(
-        "XStoreName",
-        constants$57.XStoreName$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$57() {}
     static final FunctionDescriptor XStoreNamedColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -72,6 +55,24 @@ class constants$57 {
     static final MethodHandle XTextExtents16$MH = RuntimeHelper.downcallHandle(
         "XTextExtents16",
         constants$57.XTextExtents16$FUNC
+    );
+    static final FunctionDescriptor XTextWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XTextWidth$MH = RuntimeHelper.downcallHandle(
+        "XTextWidth",
+        constants$57.XTextWidth$FUNC
+    );
+    static final FunctionDescriptor XTextWidth16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XTextWidth16$MH = RuntimeHelper.downcallHandle(
+        "XTextWidth16",
+        constants$57.XTextWidth16$FUNC
     );
 }
 

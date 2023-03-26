@@ -7,9 +7,22 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Window window;
+ *     int mode;
+ *     int detail;
+ * };
+ * }
+ */
 public class XFocusChangeEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -27,10 +40,22 @@ public class XFocusChangeEvent {
     public static VarHandle type$VH() {
         return XFocusChangeEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XFocusChangeEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XFocusChangeEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -43,10 +68,22 @@ public class XFocusChangeEvent {
     public static VarHandle serial$VH() {
         return XFocusChangeEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XFocusChangeEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XFocusChangeEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -59,10 +96,22 @@ public class XFocusChangeEvent {
     public static VarHandle send_event$VH() {
         return XFocusChangeEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XFocusChangeEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XFocusChangeEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -75,26 +124,50 @@ public class XFocusChangeEvent {
     public static VarHandle display$VH() {
         return XFocusChangeEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XFocusChangeEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XFocusChangeEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XFocusChangeEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XFocusChangeEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XFocusChangeEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XFocusChangeEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
         return XFocusChangeEvent.window$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
     public static long window$get(MemorySegment seg) {
         return (long)XFocusChangeEvent.window$VH.get(seg);
     }
-    public static void window$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
+    public static void window$set(MemorySegment seg, long x) {
         XFocusChangeEvent.window$VH.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
@@ -107,10 +180,22 @@ public class XFocusChangeEvent {
     public static VarHandle mode$VH() {
         return XFocusChangeEvent.mode$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int mode;
+     * }
+     */
     public static int mode$get(MemorySegment seg) {
         return (int)XFocusChangeEvent.mode$VH.get(seg);
     }
-    public static void mode$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int mode;
+     * }
+     */
+    public static void mode$set(MemorySegment seg, int x) {
         XFocusChangeEvent.mode$VH.set(seg, x);
     }
     public static int mode$get(MemorySegment seg, long index) {
@@ -123,10 +208,22 @@ public class XFocusChangeEvent {
     public static VarHandle detail$VH() {
         return XFocusChangeEvent.detail$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int detail;
+     * }
+     */
     public static int detail$get(MemorySegment seg) {
         return (int)XFocusChangeEvent.detail$VH.get(seg);
     }
-    public static void detail$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int detail;
+     * }
+     */
+    public static void detail$set(MemorySegment seg, int x) {
         XFocusChangeEvent.detail$VH.set(seg, x);
     }
     public static int detail$get(MemorySegment seg, long index) {
@@ -137,10 +234,10 @@ public class XFocusChangeEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

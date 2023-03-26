@@ -7,23 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$60 {
+final class constants$60 {
 
-    static final FunctionDescriptor XUnmapWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUnmapWindow$MH = RuntimeHelper.downcallHandle(
-        "XUnmapWindow",
-        constants$60.XUnmapWindow$FUNC
-    );
-    static final FunctionDescriptor XVendorRelease$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XVendorRelease$MH = RuntimeHelper.downcallHandle(
-        "XVendorRelease",
-        constants$60.XVendorRelease$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$60() {}
     static final FunctionDescriptor XWarpPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -62,6 +49,24 @@ class constants$60 {
     static final MethodHandle XWindowEvent$MH = RuntimeHelper.downcallHandle(
         "XWindowEvent",
         constants$60.XWindowEvent$FUNC
+    );
+    static final FunctionDescriptor XWriteBitmapFile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XWriteBitmapFile$MH = RuntimeHelper.downcallHandle(
+        "XWriteBitmapFile",
+        constants$60.XWriteBitmapFile$FUNC
+    );
+    static final FunctionDescriptor XSupportsLocale$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
+    static final MethodHandle XSupportsLocale$MH = RuntimeHelper.downcallHandle(
+        "XSupportsLocale",
+        constants$60.XSupportsLocale$FUNC
     );
 }
 

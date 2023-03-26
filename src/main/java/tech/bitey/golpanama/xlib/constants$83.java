@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$83 {
+final class constants$83 {
 
-    static final FunctionDescriptor XStringListToTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XStringListToTextProperty$MH = RuntimeHelper.downcallHandle(
-        "XStringListToTextProperty",
-        constants$83.XStringListToTextProperty$FUNC
-    );
-    static final FunctionDescriptor XSubtractRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSubtractRegion$MH = RuntimeHelper.downcallHandle(
-        "XSubtractRegion",
-        constants$83.XSubtractRegion$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$83() {}
     static final FunctionDescriptor XmbTextListToTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -66,6 +50,25 @@ class constants$83 {
     static final MethodHandle XwcFreeStringList$MH = RuntimeHelper.downcallHandle(
         "XwcFreeStringList",
         constants$83.XwcFreeStringList$FUNC
+    );
+    static final FunctionDescriptor XTextPropertyToStringList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XTextPropertyToStringList$MH = RuntimeHelper.downcallHandle(
+        "XTextPropertyToStringList",
+        constants$83.XTextPropertyToStringList$FUNC
+    );
+    static final FunctionDescriptor XmbTextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XmbTextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
+        "XmbTextPropertyToTextList",
+        constants$83.XmbTextPropertyToTextList$FUNC
     );
 }
 

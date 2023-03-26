@@ -7,23 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$16 {
+final class constants$16 {
 
-    static final FunctionDescriptor XDisplayString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayString$MH = RuntimeHelper.downcallHandle(
-        "XDisplayString",
-        constants$16.XDisplayString$FUNC
-    );
-    static final FunctionDescriptor XDefaultColormap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDefaultColormap$MH = RuntimeHelper.downcallHandle(
-        "XDefaultColormap",
-        constants$16.XDefaultColormap$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$16() {}
     static final FunctionDescriptor XDefaultColormapOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -52,6 +39,20 @@ class constants$16 {
     static final MethodHandle XDefaultScreenOfDisplay$MH = RuntimeHelper.downcallHandle(
         "XDefaultScreenOfDisplay",
         constants$16.XDefaultScreenOfDisplay$FUNC
+    );
+    static final FunctionDescriptor XEventMaskOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XEventMaskOfScreen$MH = RuntimeHelper.downcallHandle(
+        "XEventMaskOfScreen",
+        constants$16.XEventMaskOfScreen$FUNC
+    );
+    static final FunctionDescriptor XScreenNumberOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XScreenNumberOfScreen$MH = RuntimeHelper.downcallHandle(
+        "XScreenNumberOfScreen",
+        constants$16.XScreenNumberOfScreen$FUNC
     );
 }
 

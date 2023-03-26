@@ -7,9 +7,21 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     unsigned long pixel;
+ *     unsigned short red;
+ *     unsigned short green;
+ *     unsigned short blue;
+ *     char flags;
+ *     char pad;
+ * };
+ * }
+ */
 public class XColor {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_LONG_LONG$LAYOUT.withName("pixel"),
         Constants$root.C_SHORT$LAYOUT.withName("red"),
         Constants$root.C_SHORT$LAYOUT.withName("green"),
@@ -24,10 +36,22 @@ public class XColor {
     public static VarHandle pixel$VH() {
         return XColor.pixel$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long pixel;
+     * }
+     */
     public static long pixel$get(MemorySegment seg) {
         return (long)XColor.pixel$VH.get(seg);
     }
-    public static void pixel$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long pixel;
+     * }
+     */
+    public static void pixel$set(MemorySegment seg, long x) {
         XColor.pixel$VH.set(seg, x);
     }
     public static long pixel$get(MemorySegment seg, long index) {
@@ -40,10 +64,22 @@ public class XColor {
     public static VarHandle red$VH() {
         return XColor.red$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short red;
+     * }
+     */
     public static short red$get(MemorySegment seg) {
         return (short)XColor.red$VH.get(seg);
     }
-    public static void red$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short red;
+     * }
+     */
+    public static void red$set(MemorySegment seg, short x) {
         XColor.red$VH.set(seg, x);
     }
     public static short red$get(MemorySegment seg, long index) {
@@ -56,10 +92,22 @@ public class XColor {
     public static VarHandle green$VH() {
         return XColor.green$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short green;
+     * }
+     */
     public static short green$get(MemorySegment seg) {
         return (short)XColor.green$VH.get(seg);
     }
-    public static void green$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short green;
+     * }
+     */
+    public static void green$set(MemorySegment seg, short x) {
         XColor.green$VH.set(seg, x);
     }
     public static short green$get(MemorySegment seg, long index) {
@@ -72,10 +120,22 @@ public class XColor {
     public static VarHandle blue$VH() {
         return XColor.blue$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short blue;
+     * }
+     */
     public static short blue$get(MemorySegment seg) {
         return (short)XColor.blue$VH.get(seg);
     }
-    public static void blue$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short blue;
+     * }
+     */
+    public static void blue$set(MemorySegment seg, short x) {
         XColor.blue$VH.set(seg, x);
     }
     public static short blue$get(MemorySegment seg, long index) {
@@ -88,10 +148,22 @@ public class XColor {
     public static VarHandle flags$VH() {
         return XColor.flags$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * char flags;
+     * }
+     */
     public static byte flags$get(MemorySegment seg) {
         return (byte)XColor.flags$VH.get(seg);
     }
-    public static void flags$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * char flags;
+     * }
+     */
+    public static void flags$set(MemorySegment seg, byte x) {
         XColor.flags$VH.set(seg, x);
     }
     public static byte flags$get(MemorySegment seg, long index) {
@@ -104,10 +176,22 @@ public class XColor {
     public static VarHandle pad$VH() {
         return XColor.pad$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * char pad;
+     * }
+     */
     public static byte pad$get(MemorySegment seg) {
         return (byte)XColor.pad$VH.get(seg);
     }
-    public static void pad$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * char pad;
+     * }
+     */
+    public static void pad$set(MemorySegment seg, byte x) {
         XColor.pad$VH.set(seg, x);
     }
     public static byte pad$get(MemorySegment seg, long index) {
@@ -118,10 +202,10 @@ public class XColor {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

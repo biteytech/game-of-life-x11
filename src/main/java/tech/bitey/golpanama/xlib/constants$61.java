@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$61 {
+final class constants$61 {
 
-    static final FunctionDescriptor XWriteBitmapFile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XWriteBitmapFile$MH = RuntimeHelper.downcallHandle(
-        "XWriteBitmapFile",
-        constants$61.XWriteBitmapFile$FUNC
-    );
-    static final FunctionDescriptor XSupportsLocale$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
-    static final MethodHandle XSupportsLocale$MH = RuntimeHelper.downcallHandle(
-        "XSupportsLocale",
-        constants$61.XSupportsLocale$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$61() {}
     static final FunctionDescriptor XSetLocaleModifiers$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -57,6 +41,20 @@ class constants$61 {
     static final MethodHandle XSetOMValues$MH = RuntimeHelper.downcallHandleVariadic(
         "XSetOMValues",
         constants$61.XSetOMValues$FUNC
+    );
+    static final FunctionDescriptor XGetOMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetOMValues$MH = RuntimeHelper.downcallHandleVariadic(
+        "XGetOMValues",
+        constants$61.XGetOMValues$FUNC
+    );
+    static final FunctionDescriptor XDisplayOfOM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDisplayOfOM$MH = RuntimeHelper.downcallHandle(
+        "XDisplayOfOM",
+        constants$61.XDisplayOfOM$FUNC
     );
 }
 

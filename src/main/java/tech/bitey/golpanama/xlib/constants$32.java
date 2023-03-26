@@ -7,30 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$32 {
+final class constants$32 {
 
-    static final FunctionDescriptor XDrawRectangles$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawRectangles$MH = RuntimeHelper.downcallHandle(
-        "XDrawRectangles",
-        constants$32.XDrawRectangles$FUNC
-    );
-    static final FunctionDescriptor XDrawSegments$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawSegments$MH = RuntimeHelper.downcallHandle(
-        "XDrawSegments",
-        constants$32.XDrawSegments$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$32() {}
     static final FunctionDescriptor XDrawString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -82,6 +62,21 @@ class constants$32 {
     static final MethodHandle XDrawText16$MH = RuntimeHelper.downcallHandle(
         "XDrawText16",
         constants$32.XDrawText16$FUNC
+    );
+    static final FunctionDescriptor XEnableAccessControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XEnableAccessControl$MH = RuntimeHelper.downcallHandle(
+        "XEnableAccessControl",
+        constants$32.XEnableAccessControl$FUNC
+    );
+    static final FunctionDescriptor XEventsQueued$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XEventsQueued$MH = RuntimeHelper.downcallHandle(
+        "XEventsQueued",
+        constants$32.XEventsQueued$FUNC
     );
 }
 

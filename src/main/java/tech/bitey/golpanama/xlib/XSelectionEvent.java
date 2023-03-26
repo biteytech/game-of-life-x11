@@ -7,9 +7,24 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Window requestor;
+ *     Atom selection;
+ *     Atom target;
+ *     Atom property;
+ *     Time time;
+ * };
+ * }
+ */
 public class XSelectionEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -29,10 +44,22 @@ public class XSelectionEvent {
     public static VarHandle type$VH() {
         return XSelectionEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XSelectionEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XSelectionEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -45,10 +72,22 @@ public class XSelectionEvent {
     public static VarHandle serial$VH() {
         return XSelectionEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XSelectionEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XSelectionEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -61,10 +100,22 @@ public class XSelectionEvent {
     public static VarHandle send_event$VH() {
         return XSelectionEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XSelectionEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XSelectionEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -77,26 +128,50 @@ public class XSelectionEvent {
     public static VarHandle display$VH() {
         return XSelectionEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XSelectionEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XSelectionEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XSelectionEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XSelectionEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XSelectionEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XSelectionEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle requestor$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("requestor"));
     public static VarHandle requestor$VH() {
         return XSelectionEvent.requestor$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window requestor;
+     * }
+     */
     public static long requestor$get(MemorySegment seg) {
         return (long)XSelectionEvent.requestor$VH.get(seg);
     }
-    public static void requestor$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window requestor;
+     * }
+     */
+    public static void requestor$set(MemorySegment seg, long x) {
         XSelectionEvent.requestor$VH.set(seg, x);
     }
     public static long requestor$get(MemorySegment seg, long index) {
@@ -109,10 +184,22 @@ public class XSelectionEvent {
     public static VarHandle selection$VH() {
         return XSelectionEvent.selection$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Atom selection;
+     * }
+     */
     public static long selection$get(MemorySegment seg) {
         return (long)XSelectionEvent.selection$VH.get(seg);
     }
-    public static void selection$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Atom selection;
+     * }
+     */
+    public static void selection$set(MemorySegment seg, long x) {
         XSelectionEvent.selection$VH.set(seg, x);
     }
     public static long selection$get(MemorySegment seg, long index) {
@@ -125,10 +212,22 @@ public class XSelectionEvent {
     public static VarHandle target$VH() {
         return XSelectionEvent.target$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Atom target;
+     * }
+     */
     public static long target$get(MemorySegment seg) {
         return (long)XSelectionEvent.target$VH.get(seg);
     }
-    public static void target$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Atom target;
+     * }
+     */
+    public static void target$set(MemorySegment seg, long x) {
         XSelectionEvent.target$VH.set(seg, x);
     }
     public static long target$get(MemorySegment seg, long index) {
@@ -141,10 +240,22 @@ public class XSelectionEvent {
     public static VarHandle property$VH() {
         return XSelectionEvent.property$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Atom property;
+     * }
+     */
     public static long property$get(MemorySegment seg) {
         return (long)XSelectionEvent.property$VH.get(seg);
     }
-    public static void property$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Atom property;
+     * }
+     */
+    public static void property$set(MemorySegment seg, long x) {
         XSelectionEvent.property$VH.set(seg, x);
     }
     public static long property$get(MemorySegment seg, long index) {
@@ -157,10 +268,22 @@ public class XSelectionEvent {
     public static VarHandle time$VH() {
         return XSelectionEvent.time$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Time time;
+     * }
+     */
     public static long time$get(MemorySegment seg) {
         return (long)XSelectionEvent.time$VH.get(seg);
     }
-    public static void time$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Time time;
+     * }
+     */
+    public static void time$set(MemorySegment seg, long x) {
         XSelectionEvent.time$VH.set(seg, x);
     }
     public static long time$get(MemorySegment seg, long index) {
@@ -171,10 +294,10 @@ public class XSelectionEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

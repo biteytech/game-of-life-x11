@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$63 {
+final class constants$63 {
 
-    static final FunctionDescriptor XSetOCValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetOCValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XSetOCValues",
-        constants$63.XSetOCValues$FUNC
-    );
-    static final FunctionDescriptor XGetOCValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetOCValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XGetOCValues",
-        constants$63.XGetOCValues$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$63() {}
     static final FunctionDescriptor XCreateFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -57,6 +45,20 @@ class constants$63 {
     static final MethodHandle XBaseFontNameListOfFontSet$MH = RuntimeHelper.downcallHandle(
         "XBaseFontNameListOfFontSet",
         constants$63.XBaseFontNameListOfFontSet$FUNC
+    );
+    static final FunctionDescriptor XLocaleOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XLocaleOfFontSet$MH = RuntimeHelper.downcallHandle(
+        "XLocaleOfFontSet",
+        constants$63.XLocaleOfFontSet$FUNC
+    );
+    static final FunctionDescriptor XContextDependentDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XContextDependentDrawing$MH = RuntimeHelper.downcallHandle(
+        "XContextDependentDrawing",
+        constants$63.XContextDependentDrawing$FUNC
     );
 }
 

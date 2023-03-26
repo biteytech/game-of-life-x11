@@ -7,9 +7,22 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int key_click_percent;
+ *     int bell_percent;
+ *     unsigned int bell_pitch;
+ *     unsigned int bell_duration;
+ *     unsigned long led_mask;
+ *     int global_auto_repeat;
+ *     char auto_repeats[32];
+ * };
+ * }
+ */
 public class XKeyboardState {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("key_click_percent"),
         Constants$root.C_INT$LAYOUT.withName("bell_percent"),
         Constants$root.C_INT$LAYOUT.withName("bell_pitch"),
@@ -26,10 +39,22 @@ public class XKeyboardState {
     public static VarHandle key_click_percent$VH() {
         return XKeyboardState.key_click_percent$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int key_click_percent;
+     * }
+     */
     public static int key_click_percent$get(MemorySegment seg) {
         return (int)XKeyboardState.key_click_percent$VH.get(seg);
     }
-    public static void key_click_percent$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int key_click_percent;
+     * }
+     */
+    public static void key_click_percent$set(MemorySegment seg, int x) {
         XKeyboardState.key_click_percent$VH.set(seg, x);
     }
     public static int key_click_percent$get(MemorySegment seg, long index) {
@@ -42,10 +67,22 @@ public class XKeyboardState {
     public static VarHandle bell_percent$VH() {
         return XKeyboardState.bell_percent$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int bell_percent;
+     * }
+     */
     public static int bell_percent$get(MemorySegment seg) {
         return (int)XKeyboardState.bell_percent$VH.get(seg);
     }
-    public static void bell_percent$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int bell_percent;
+     * }
+     */
+    public static void bell_percent$set(MemorySegment seg, int x) {
         XKeyboardState.bell_percent$VH.set(seg, x);
     }
     public static int bell_percent$get(MemorySegment seg, long index) {
@@ -58,10 +95,22 @@ public class XKeyboardState {
     public static VarHandle bell_pitch$VH() {
         return XKeyboardState.bell_pitch$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned int bell_pitch;
+     * }
+     */
     public static int bell_pitch$get(MemorySegment seg) {
         return (int)XKeyboardState.bell_pitch$VH.get(seg);
     }
-    public static void bell_pitch$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned int bell_pitch;
+     * }
+     */
+    public static void bell_pitch$set(MemorySegment seg, int x) {
         XKeyboardState.bell_pitch$VH.set(seg, x);
     }
     public static int bell_pitch$get(MemorySegment seg, long index) {
@@ -74,10 +123,22 @@ public class XKeyboardState {
     public static VarHandle bell_duration$VH() {
         return XKeyboardState.bell_duration$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned int bell_duration;
+     * }
+     */
     public static int bell_duration$get(MemorySegment seg) {
         return (int)XKeyboardState.bell_duration$VH.get(seg);
     }
-    public static void bell_duration$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned int bell_duration;
+     * }
+     */
+    public static void bell_duration$set(MemorySegment seg, int x) {
         XKeyboardState.bell_duration$VH.set(seg, x);
     }
     public static int bell_duration$get(MemorySegment seg, long index) {
@@ -90,10 +151,22 @@ public class XKeyboardState {
     public static VarHandle led_mask$VH() {
         return XKeyboardState.led_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long led_mask;
+     * }
+     */
     public static long led_mask$get(MemorySegment seg) {
         return (long)XKeyboardState.led_mask$VH.get(seg);
     }
-    public static void led_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long led_mask;
+     * }
+     */
+    public static void led_mask$set(MemorySegment seg, long x) {
         XKeyboardState.led_mask$VH.set(seg, x);
     }
     public static long led_mask$get(MemorySegment seg, long index) {
@@ -106,10 +179,22 @@ public class XKeyboardState {
     public static VarHandle global_auto_repeat$VH() {
         return XKeyboardState.global_auto_repeat$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int global_auto_repeat;
+     * }
+     */
     public static int global_auto_repeat$get(MemorySegment seg) {
         return (int)XKeyboardState.global_auto_repeat$VH.get(seg);
     }
-    public static void global_auto_repeat$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int global_auto_repeat;
+     * }
+     */
+    public static void global_auto_repeat$set(MemorySegment seg, int x) {
         XKeyboardState.global_auto_repeat$VH.set(seg, x);
     }
     public static int global_auto_repeat$get(MemorySegment seg, long index) {
@@ -123,10 +208,10 @@ public class XKeyboardState {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,9 +7,17 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     unsigned short count_styles;
+ *     XIMStyle* supported_styles;
+ * };
+ * }
+ */
 public class XIMStyles {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_SHORT$LAYOUT.withName("count_styles"),
         MemoryLayout.paddingLayout(48),
         Constants$root.C_POINTER$LAYOUT.withName("supported_styles")
@@ -21,10 +29,22 @@ public class XIMStyles {
     public static VarHandle count_styles$VH() {
         return XIMStyles.count_styles$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short count_styles;
+     * }
+     */
     public static short count_styles$get(MemorySegment seg) {
         return (short)XIMStyles.count_styles$VH.get(seg);
     }
-    public static void count_styles$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short count_styles;
+     * }
+     */
+    public static void count_styles$set(MemorySegment seg, short x) {
         XIMStyles.count_styles$VH.set(seg, x);
     }
     public static short count_styles$get(MemorySegment seg, long index) {
@@ -37,24 +57,36 @@ public class XIMStyles {
     public static VarHandle supported_styles$VH() {
         return XIMStyles.supported_styles$VH;
     }
-    public static MemoryAddress supported_styles$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XIMStyles.supported_styles$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMStyle* supported_styles;
+     * }
+     */
+    public static MemorySegment supported_styles$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XIMStyles.supported_styles$VH.get(seg);
     }
-    public static void supported_styles$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMStyle* supported_styles;
+     * }
+     */
+    public static void supported_styles$set(MemorySegment seg, MemorySegment x) {
         XIMStyles.supported_styles$VH.set(seg, x);
     }
-    public static MemoryAddress supported_styles$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XIMStyles.supported_styles$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment supported_styles$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XIMStyles.supported_styles$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void supported_styles$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void supported_styles$set(MemorySegment seg, long index, MemorySegment x) {
         XIMStyles.supported_styles$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

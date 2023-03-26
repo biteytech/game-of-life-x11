@@ -7,9 +7,17 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct _XIMStatusDrawCallbackStruct {
+ *     XIMStatusDataType type;
+ *     union  data;
+ * };
+ * }
+ */
 public class _XIMStatusDrawCallbackStruct {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         MemoryLayout.unionLayout(
@@ -24,10 +32,22 @@ public class _XIMStatusDrawCallbackStruct {
     public static VarHandle type$VH() {
         return _XIMStatusDrawCallbackStruct.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMStatusDataType type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)_XIMStatusDrawCallbackStruct.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMStatusDataType type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         _XIMStatusDrawCallbackStruct.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -36,9 +56,19 @@ public class _XIMStatusDrawCallbackStruct {
     public static void type$set(MemorySegment seg, long index, int x) {
         _XIMStatusDrawCallbackStruct.type$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    public static class data {
+    /**
+     * {@snippet :
+     * union {
+     *     XIMText* text;
+     *     Pixmap bitmap;
+     * };
+     * }
+     */
+    public static final class data {
 
-        static final  GroupLayout data$union$LAYOUT = MemoryLayout.unionLayout(
+        // Suppresses default constructor, ensuring non-instantiability.
+        private data() {}
+        static final UnionLayout data$union$LAYOUT = MemoryLayout.unionLayout(
             Constants$root.C_POINTER$LAYOUT.withName("text"),
             Constants$root.C_LONG_LONG$LAYOUT.withName("bitmap")
         );
@@ -49,26 +79,50 @@ public class _XIMStatusDrawCallbackStruct {
         public static VarHandle text$VH() {
             return data.text$VH;
         }
-        public static MemoryAddress text$get(MemorySegment seg) {
-            return (java.lang.foreign.MemoryAddress)data.text$VH.get(seg);
+        /**
+         * Getter for field:
+         * {@snippet :
+         * XIMText* text;
+         * }
+         */
+        public static MemorySegment text$get(MemorySegment seg) {
+            return (java.lang.foreign.MemorySegment)data.text$VH.get(seg);
         }
-        public static void text$set( MemorySegment seg, MemoryAddress x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * XIMText* text;
+         * }
+         */
+        public static void text$set(MemorySegment seg, MemorySegment x) {
             data.text$VH.set(seg, x);
         }
-        public static MemoryAddress text$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemoryAddress)data.text$VH.get(seg.asSlice(index*sizeof()));
+        public static MemorySegment text$get(MemorySegment seg, long index) {
+            return (java.lang.foreign.MemorySegment)data.text$VH.get(seg.asSlice(index*sizeof()));
         }
-        public static void text$set(MemorySegment seg, long index, MemoryAddress x) {
+        public static void text$set(MemorySegment seg, long index, MemorySegment x) {
             data.text$VH.set(seg.asSlice(index*sizeof()), x);
         }
         static final VarHandle bitmap$VH = data$union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bitmap"));
         public static VarHandle bitmap$VH() {
             return data.bitmap$VH;
         }
+        /**
+         * Getter for field:
+         * {@snippet :
+         * Pixmap bitmap;
+         * }
+         */
         public static long bitmap$get(MemorySegment seg) {
             return (long)data.bitmap$VH.get(seg);
         }
-        public static void bitmap$set( MemorySegment seg, long x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * Pixmap bitmap;
+         * }
+         */
+        public static void bitmap$set(MemorySegment seg, long x) {
             data.bitmap$VH.set(seg, x);
         }
         public static long bitmap$get(MemorySegment seg, long index) {
@@ -79,10 +133,10 @@ public class _XIMStatusDrawCallbackStruct {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-        public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+        public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+        public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
     }
 
     public static MemorySegment data$slice(MemorySegment seg) {
@@ -90,10 +144,10 @@ public class _XIMStatusDrawCallbackStruct {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

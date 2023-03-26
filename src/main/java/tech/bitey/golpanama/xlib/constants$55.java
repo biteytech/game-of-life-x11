@@ -7,27 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$55 {
+final class constants$55 {
 
-    static final FunctionDescriptor XSetSubwindowMode$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetSubwindowMode$MH = RuntimeHelper.downcallHandle(
-        "XSetSubwindowMode",
-        constants$55.XSetSubwindowMode$FUNC
-    );
-    static final FunctionDescriptor XSetTSOrigin$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetTSOrigin$MH = RuntimeHelper.downcallHandle(
-        "XSetTSOrigin",
-        constants$55.XSetTSOrigin$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$55() {}
     static final FunctionDescriptor XSetTile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -63,6 +46,24 @@ class constants$55 {
     static final MethodHandle XSetWindowBorder$MH = RuntimeHelper.downcallHandle(
         "XSetWindowBorder",
         constants$55.XSetWindowBorder$FUNC
+    );
+    static final FunctionDescriptor XSetWindowBorderPixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetWindowBorderPixmap$MH = RuntimeHelper.downcallHandle(
+        "XSetWindowBorderPixmap",
+        constants$55.XSetWindowBorderPixmap$FUNC
+    );
+    static final FunctionDescriptor XSetWindowBorderWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetWindowBorderWidth$MH = RuntimeHelper.downcallHandle(
+        "XSetWindowBorderWidth",
+        constants$55.XSetWindowBorderWidth$FUNC
     );
 }
 

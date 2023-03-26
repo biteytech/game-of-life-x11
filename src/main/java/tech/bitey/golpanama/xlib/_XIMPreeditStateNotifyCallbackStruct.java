@@ -7,9 +7,16 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct _XIMPreeditStateNotifyCallbackStruct {
+ *     XIMPreeditState state;
+ * };
+ * }
+ */
 public class _XIMPreeditStateNotifyCallbackStruct {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_LONG_LONG$LAYOUT.withName("state")
     ).withName("_XIMPreeditStateNotifyCallbackStruct");
     public static MemoryLayout $LAYOUT() {
@@ -19,10 +26,22 @@ public class _XIMPreeditStateNotifyCallbackStruct {
     public static VarHandle state$VH() {
         return _XIMPreeditStateNotifyCallbackStruct.state$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMPreeditState state;
+     * }
+     */
     public static long state$get(MemorySegment seg) {
         return (long)_XIMPreeditStateNotifyCallbackStruct.state$VH.get(seg);
     }
-    public static void state$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMPreeditState state;
+     * }
+     */
+    public static void state$set(MemorySegment seg, long x) {
         _XIMPreeditStateNotifyCallbackStruct.state$VH.set(seg, x);
     }
     public static long state$get(MemorySegment seg, long index) {
@@ -33,10 +52,10 @@ public class _XIMPreeditStateNotifyCallbackStruct {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

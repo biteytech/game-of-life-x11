@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$43 {
+final class constants$43 {
 
-    static final FunctionDescriptor XMoveWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XMoveWindow$MH = RuntimeHelper.downcallHandle(
-        "XMoveWindow",
-        constants$43.XMoveWindow$FUNC
-    );
-    static final FunctionDescriptor XNextEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XNextEvent$MH = RuntimeHelper.downcallHandle(
-        "XNextEvent",
-        constants$43.XNextEvent$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$43() {}
     static final FunctionDescriptor XNoOp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -62,6 +46,25 @@ class constants$43 {
     static final MethodHandle XPeekEvent$MH = RuntimeHelper.downcallHandle(
         "XPeekEvent",
         constants$43.XPeekEvent$FUNC
+    );
+    static final FunctionDescriptor XPeekIfEvent$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final FunctionDescriptor XPeekIfEvent$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XPeekIfEvent$x0_UP$MH = RuntimeHelper.upcallHandle(XPeekIfEvent$x0.class, "apply", constants$43.XPeekIfEvent$x0_UP$FUNC);
+    static final FunctionDescriptor XPeekIfEvent$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XPeekIfEvent$x0_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$43.XPeekIfEvent$x0_DOWN$FUNC
     );
 }
 

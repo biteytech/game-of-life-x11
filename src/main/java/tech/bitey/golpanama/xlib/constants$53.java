@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$53 {
+final class constants$53 {
 
-    static final FunctionDescriptor XSetFunction$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetFunction$MH = RuntimeHelper.downcallHandle(
-        "XSetFunction",
-        constants$53.XSetFunction$FUNC
-    );
-    static final FunctionDescriptor XSetGraphicsExposures$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetGraphicsExposures$MH = RuntimeHelper.downcallHandle(
-        "XSetGraphicsExposures",
-        constants$53.XSetGraphicsExposures$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$53() {}
     static final FunctionDescriptor XSetIconName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -65,6 +49,24 @@ class constants$53 {
     static final MethodHandle XSetModifierMapping$MH = RuntimeHelper.downcallHandle(
         "XSetModifierMapping",
         constants$53.XSetModifierMapping$FUNC
+    );
+    static final FunctionDescriptor XSetPlaneMask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetPlaneMask$MH = RuntimeHelper.downcallHandle(
+        "XSetPlaneMask",
+        constants$53.XSetPlaneMask$FUNC
+    );
+    static final FunctionDescriptor XSetPointerMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetPointerMapping$MH = RuntimeHelper.downcallHandle(
+        "XSetPointerMapping",
+        constants$53.XSetPointerMapping$FUNC
     );
 }
 

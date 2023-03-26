@@ -7,9 +7,25 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     Visual* visual;
+ *     VisualID visualid;
+ *     int screen;
+ *     int depth;
+ *     int class;
+ *     unsigned long red_mask;
+ *     unsigned long green_mask;
+ *     unsigned long blue_mask;
+ *     int colormap_size;
+ *     int bits_per_rgb;
+ * };
+ * }
+ */
 public class XVisualInfo {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_POINTER$LAYOUT.withName("visual"),
         Constants$root.C_LONG_LONG$LAYOUT.withName("visualid"),
         Constants$root.C_INT$LAYOUT.withName("screen"),
@@ -29,26 +45,50 @@ public class XVisualInfo {
     public static VarHandle visual$VH() {
         return XVisualInfo.visual$VH;
     }
-    public static MemoryAddress visual$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XVisualInfo.visual$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Visual* visual;
+     * }
+     */
+    public static MemorySegment visual$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XVisualInfo.visual$VH.get(seg);
     }
-    public static void visual$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Visual* visual;
+     * }
+     */
+    public static void visual$set(MemorySegment seg, MemorySegment x) {
         XVisualInfo.visual$VH.set(seg, x);
     }
-    public static MemoryAddress visual$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XVisualInfo.visual$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment visual$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XVisualInfo.visual$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void visual$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void visual$set(MemorySegment seg, long index, MemorySegment x) {
         XVisualInfo.visual$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle visualid$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("visualid"));
     public static VarHandle visualid$VH() {
         return XVisualInfo.visualid$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * VisualID visualid;
+     * }
+     */
     public static long visualid$get(MemorySegment seg) {
         return (long)XVisualInfo.visualid$VH.get(seg);
     }
-    public static void visualid$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * VisualID visualid;
+     * }
+     */
+    public static void visualid$set(MemorySegment seg, long x) {
         XVisualInfo.visualid$VH.set(seg, x);
     }
     public static long visualid$get(MemorySegment seg, long index) {
@@ -61,10 +101,22 @@ public class XVisualInfo {
     public static VarHandle screen$VH() {
         return XVisualInfo.screen$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int screen;
+     * }
+     */
     public static int screen$get(MemorySegment seg) {
         return (int)XVisualInfo.screen$VH.get(seg);
     }
-    public static void screen$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int screen;
+     * }
+     */
+    public static void screen$set(MemorySegment seg, int x) {
         XVisualInfo.screen$VH.set(seg, x);
     }
     public static int screen$get(MemorySegment seg, long index) {
@@ -77,10 +129,22 @@ public class XVisualInfo {
     public static VarHandle depth$VH() {
         return XVisualInfo.depth$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int depth;
+     * }
+     */
     public static int depth$get(MemorySegment seg) {
         return (int)XVisualInfo.depth$VH.get(seg);
     }
-    public static void depth$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int depth;
+     * }
+     */
+    public static void depth$set(MemorySegment seg, int x) {
         XVisualInfo.depth$VH.set(seg, x);
     }
     public static int depth$get(MemorySegment seg, long index) {
@@ -93,10 +157,22 @@ public class XVisualInfo {
     public static VarHandle class_$VH() {
         return XVisualInfo.class_$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int class;
+     * }
+     */
     public static int class_$get(MemorySegment seg) {
         return (int)XVisualInfo.class_$VH.get(seg);
     }
-    public static void class_$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int class;
+     * }
+     */
+    public static void class_$set(MemorySegment seg, int x) {
         XVisualInfo.class_$VH.set(seg, x);
     }
     public static int class_$get(MemorySegment seg, long index) {
@@ -109,10 +185,22 @@ public class XVisualInfo {
     public static VarHandle red_mask$VH() {
         return XVisualInfo.red_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long red_mask;
+     * }
+     */
     public static long red_mask$get(MemorySegment seg) {
         return (long)XVisualInfo.red_mask$VH.get(seg);
     }
-    public static void red_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long red_mask;
+     * }
+     */
+    public static void red_mask$set(MemorySegment seg, long x) {
         XVisualInfo.red_mask$VH.set(seg, x);
     }
     public static long red_mask$get(MemorySegment seg, long index) {
@@ -125,10 +213,22 @@ public class XVisualInfo {
     public static VarHandle green_mask$VH() {
         return XVisualInfo.green_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long green_mask;
+     * }
+     */
     public static long green_mask$get(MemorySegment seg) {
         return (long)XVisualInfo.green_mask$VH.get(seg);
     }
-    public static void green_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long green_mask;
+     * }
+     */
+    public static void green_mask$set(MemorySegment seg, long x) {
         XVisualInfo.green_mask$VH.set(seg, x);
     }
     public static long green_mask$get(MemorySegment seg, long index) {
@@ -141,10 +241,22 @@ public class XVisualInfo {
     public static VarHandle blue_mask$VH() {
         return XVisualInfo.blue_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long blue_mask;
+     * }
+     */
     public static long blue_mask$get(MemorySegment seg) {
         return (long)XVisualInfo.blue_mask$VH.get(seg);
     }
-    public static void blue_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long blue_mask;
+     * }
+     */
+    public static void blue_mask$set(MemorySegment seg, long x) {
         XVisualInfo.blue_mask$VH.set(seg, x);
     }
     public static long blue_mask$get(MemorySegment seg, long index) {
@@ -157,10 +269,22 @@ public class XVisualInfo {
     public static VarHandle colormap_size$VH() {
         return XVisualInfo.colormap_size$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int colormap_size;
+     * }
+     */
     public static int colormap_size$get(MemorySegment seg) {
         return (int)XVisualInfo.colormap_size$VH.get(seg);
     }
-    public static void colormap_size$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int colormap_size;
+     * }
+     */
+    public static void colormap_size$set(MemorySegment seg, int x) {
         XVisualInfo.colormap_size$VH.set(seg, x);
     }
     public static int colormap_size$get(MemorySegment seg, long index) {
@@ -173,10 +297,22 @@ public class XVisualInfo {
     public static VarHandle bits_per_rgb$VH() {
         return XVisualInfo.bits_per_rgb$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int bits_per_rgb;
+     * }
+     */
     public static int bits_per_rgb$get(MemorySegment seg) {
         return (int)XVisualInfo.bits_per_rgb$VH.get(seg);
     }
-    public static void bits_per_rgb$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int bits_per_rgb;
+     * }
+     */
+    public static void bits_per_rgb$set(MemorySegment seg, int x) {
         XVisualInfo.bits_per_rgb$VH.set(seg, x);
     }
     public static int bits_per_rgb$get(MemorySegment seg, long index) {
@@ -187,10 +323,10 @@ public class XVisualInfo {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,9 +7,19 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     short x;
+ *     short y;
+ *     unsigned short width;
+ *     unsigned short height;
+ * };
+ * }
+ */
 public class XRectangle {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_SHORT$LAYOUT.withName("x"),
         Constants$root.C_SHORT$LAYOUT.withName("y"),
         Constants$root.C_SHORT$LAYOUT.withName("width"),
@@ -22,10 +32,22 @@ public class XRectangle {
     public static VarHandle x$VH() {
         return XRectangle.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short x;
+     * }
+     */
     public static short x$get(MemorySegment seg) {
         return (short)XRectangle.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, short x) {
         XRectangle.x$VH.set(seg, x);
     }
     public static short x$get(MemorySegment seg, long index) {
@@ -38,10 +60,22 @@ public class XRectangle {
     public static VarHandle y$VH() {
         return XRectangle.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short y;
+     * }
+     */
     public static short y$get(MemorySegment seg) {
         return (short)XRectangle.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, short x) {
         XRectangle.y$VH.set(seg, x);
     }
     public static short y$get(MemorySegment seg, long index) {
@@ -54,10 +88,22 @@ public class XRectangle {
     public static VarHandle width$VH() {
         return XRectangle.width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short width;
+     * }
+     */
     public static short width$get(MemorySegment seg) {
         return (short)XRectangle.width$VH.get(seg);
     }
-    public static void width$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short width;
+     * }
+     */
+    public static void width$set(MemorySegment seg, short x) {
         XRectangle.width$VH.set(seg, x);
     }
     public static short width$get(MemorySegment seg, long index) {
@@ -70,10 +116,22 @@ public class XRectangle {
     public static VarHandle height$VH() {
         return XRectangle.height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short height;
+     * }
+     */
     public static short height$get(MemorySegment seg) {
         return (short)XRectangle.height$VH.get(seg);
     }
-    public static void height$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short height;
+     * }
+     */
+    public static void height$set(MemorySegment seg, short x) {
         XRectangle.height$VH.set(seg, x);
     }
     public static short height$get(MemorySegment seg, long index) {
@@ -84,10 +142,10 @@ public class XRectangle {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

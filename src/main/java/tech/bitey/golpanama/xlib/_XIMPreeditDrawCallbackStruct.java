@@ -7,9 +7,19 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct _XIMPreeditDrawCallbackStruct {
+ *     int caret;
+ *     int chg_first;
+ *     int chg_length;
+ *     XIMText* text;
+ * };
+ * }
+ */
 public class _XIMPreeditDrawCallbackStruct {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("caret"),
         Constants$root.C_INT$LAYOUT.withName("chg_first"),
         Constants$root.C_INT$LAYOUT.withName("chg_length"),
@@ -23,10 +33,22 @@ public class _XIMPreeditDrawCallbackStruct {
     public static VarHandle caret$VH() {
         return _XIMPreeditDrawCallbackStruct.caret$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int caret;
+     * }
+     */
     public static int caret$get(MemorySegment seg) {
         return (int)_XIMPreeditDrawCallbackStruct.caret$VH.get(seg);
     }
-    public static void caret$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int caret;
+     * }
+     */
+    public static void caret$set(MemorySegment seg, int x) {
         _XIMPreeditDrawCallbackStruct.caret$VH.set(seg, x);
     }
     public static int caret$get(MemorySegment seg, long index) {
@@ -39,10 +61,22 @@ public class _XIMPreeditDrawCallbackStruct {
     public static VarHandle chg_first$VH() {
         return _XIMPreeditDrawCallbackStruct.chg_first$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int chg_first;
+     * }
+     */
     public static int chg_first$get(MemorySegment seg) {
         return (int)_XIMPreeditDrawCallbackStruct.chg_first$VH.get(seg);
     }
-    public static void chg_first$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int chg_first;
+     * }
+     */
+    public static void chg_first$set(MemorySegment seg, int x) {
         _XIMPreeditDrawCallbackStruct.chg_first$VH.set(seg, x);
     }
     public static int chg_first$get(MemorySegment seg, long index) {
@@ -55,10 +89,22 @@ public class _XIMPreeditDrawCallbackStruct {
     public static VarHandle chg_length$VH() {
         return _XIMPreeditDrawCallbackStruct.chg_length$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int chg_length;
+     * }
+     */
     public static int chg_length$get(MemorySegment seg) {
         return (int)_XIMPreeditDrawCallbackStruct.chg_length$VH.get(seg);
     }
-    public static void chg_length$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int chg_length;
+     * }
+     */
+    public static void chg_length$set(MemorySegment seg, int x) {
         _XIMPreeditDrawCallbackStruct.chg_length$VH.set(seg, x);
     }
     public static int chg_length$get(MemorySegment seg, long index) {
@@ -71,24 +117,36 @@ public class _XIMPreeditDrawCallbackStruct {
     public static VarHandle text$VH() {
         return _XIMPreeditDrawCallbackStruct.text$VH;
     }
-    public static MemoryAddress text$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)_XIMPreeditDrawCallbackStruct.text$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMText* text;
+     * }
+     */
+    public static MemorySegment text$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)_XIMPreeditDrawCallbackStruct.text$VH.get(seg);
     }
-    public static void text$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMText* text;
+     * }
+     */
+    public static void text$set(MemorySegment seg, MemorySegment x) {
         _XIMPreeditDrawCallbackStruct.text$VH.set(seg, x);
     }
-    public static MemoryAddress text$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)_XIMPreeditDrawCallbackStruct.text$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment text$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)_XIMPreeditDrawCallbackStruct.text$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void text$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void text$set(MemorySegment seg, long index, MemorySegment x) {
         _XIMPreeditDrawCallbackStruct.text$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

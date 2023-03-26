@@ -7,9 +7,20 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct _XIMStringConversionCallbackStruct {
+ *     XIMStringConversionPosition position;
+ *     XIMCaretDirection direction;
+ *     XIMStringConversionOperation operation;
+ *     unsigned short factor;
+ *     XIMStringConversionText* text;
+ * };
+ * }
+ */
 public class _XIMStringConversionCallbackStruct {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_SHORT$LAYOUT.withName("position"),
         MemoryLayout.paddingLayout(16),
         Constants$root.C_INT$LAYOUT.withName("direction"),
@@ -25,10 +36,22 @@ public class _XIMStringConversionCallbackStruct {
     public static VarHandle position$VH() {
         return _XIMStringConversionCallbackStruct.position$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMStringConversionPosition position;
+     * }
+     */
     public static short position$get(MemorySegment seg) {
         return (short)_XIMStringConversionCallbackStruct.position$VH.get(seg);
     }
-    public static void position$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMStringConversionPosition position;
+     * }
+     */
+    public static void position$set(MemorySegment seg, short x) {
         _XIMStringConversionCallbackStruct.position$VH.set(seg, x);
     }
     public static short position$get(MemorySegment seg, long index) {
@@ -41,10 +64,22 @@ public class _XIMStringConversionCallbackStruct {
     public static VarHandle direction$VH() {
         return _XIMStringConversionCallbackStruct.direction$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMCaretDirection direction;
+     * }
+     */
     public static int direction$get(MemorySegment seg) {
         return (int)_XIMStringConversionCallbackStruct.direction$VH.get(seg);
     }
-    public static void direction$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMCaretDirection direction;
+     * }
+     */
+    public static void direction$set(MemorySegment seg, int x) {
         _XIMStringConversionCallbackStruct.direction$VH.set(seg, x);
     }
     public static int direction$get(MemorySegment seg, long index) {
@@ -57,10 +92,22 @@ public class _XIMStringConversionCallbackStruct {
     public static VarHandle operation$VH() {
         return _XIMStringConversionCallbackStruct.operation$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMStringConversionOperation operation;
+     * }
+     */
     public static short operation$get(MemorySegment seg) {
         return (short)_XIMStringConversionCallbackStruct.operation$VH.get(seg);
     }
-    public static void operation$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMStringConversionOperation operation;
+     * }
+     */
+    public static void operation$set(MemorySegment seg, short x) {
         _XIMStringConversionCallbackStruct.operation$VH.set(seg, x);
     }
     public static short operation$get(MemorySegment seg, long index) {
@@ -73,10 +120,22 @@ public class _XIMStringConversionCallbackStruct {
     public static VarHandle factor$VH() {
         return _XIMStringConversionCallbackStruct.factor$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short factor;
+     * }
+     */
     public static short factor$get(MemorySegment seg) {
         return (short)_XIMStringConversionCallbackStruct.factor$VH.get(seg);
     }
-    public static void factor$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short factor;
+     * }
+     */
+    public static void factor$set(MemorySegment seg, short x) {
         _XIMStringConversionCallbackStruct.factor$VH.set(seg, x);
     }
     public static short factor$get(MemorySegment seg, long index) {
@@ -89,24 +148,36 @@ public class _XIMStringConversionCallbackStruct {
     public static VarHandle text$VH() {
         return _XIMStringConversionCallbackStruct.text$VH;
     }
-    public static MemoryAddress text$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)_XIMStringConversionCallbackStruct.text$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMStringConversionText* text;
+     * }
+     */
+    public static MemorySegment text$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)_XIMStringConversionCallbackStruct.text$VH.get(seg);
     }
-    public static void text$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMStringConversionText* text;
+     * }
+     */
+    public static void text$set(MemorySegment seg, MemorySegment x) {
         _XIMStringConversionCallbackStruct.text$VH.set(seg, x);
     }
-    public static MemoryAddress text$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)_XIMStringConversionCallbackStruct.text$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment text$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)_XIMStringConversionCallbackStruct.text$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void text$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void text$set(MemorySegment seg, long index, MemorySegment x) {
         _XIMStringConversionCallbackStruct.text$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$78 {
+final class constants$78 {
 
-    static final FunctionDescriptor XGetZoomHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetZoomHints$MH = RuntimeHelper.downcallHandle(
-        "XGetZoomHints",
-        constants$78.XGetZoomHints$FUNC
-    );
-    static final FunctionDescriptor XIntersectRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIntersectRegion$MH = RuntimeHelper.downcallHandle(
-        "XIntersectRegion",
-        constants$78.XIntersectRegion$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$78() {}
     static final FunctionDescriptor XConvertCase$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -66,6 +50,24 @@ class constants$78 {
     static final MethodHandle XOffsetRegion$MH = RuntimeHelper.downcallHandle(
         "XOffsetRegion",
         constants$78.XOffsetRegion$FUNC
+    );
+    static final FunctionDescriptor XPointInRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XPointInRegion$MH = RuntimeHelper.downcallHandle(
+        "XPointInRegion",
+        constants$78.XPointInRegion$FUNC
+    );
+    static final FunctionDescriptor XPolygonRegion$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XPolygonRegion$MH = RuntimeHelper.downcallHandle(
+        "XPolygonRegion",
+        constants$78.XPolygonRegion$FUNC
     );
 }
 

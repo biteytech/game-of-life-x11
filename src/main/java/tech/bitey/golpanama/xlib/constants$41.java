@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$41 {
+final class constants$41 {
 
-    static final FunctionDescriptor XInstallColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XInstallColormap$MH = RuntimeHelper.downcallHandle(
-        "XInstallColormap",
-        constants$41.XInstallColormap$FUNC
-    );
-    static final FunctionDescriptor XKeysymToKeycode$FUNC = FunctionDescriptor.of(Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XKeysymToKeycode$MH = RuntimeHelper.downcallHandle(
-        "XKeysymToKeycode",
-        constants$41.XKeysymToKeycode$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$41() {}
     static final FunctionDescriptor XKillClient$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT
@@ -59,6 +45,22 @@ class constants$41 {
     static final MethodHandle XMapRaised$MH = RuntimeHelper.downcallHandle(
         "XMapRaised",
         constants$41.XMapRaised$FUNC
+    );
+    static final FunctionDescriptor XMapSubwindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XMapSubwindows$MH = RuntimeHelper.downcallHandle(
+        "XMapSubwindows",
+        constants$41.XMapSubwindows$FUNC
+    );
+    static final FunctionDescriptor XMapWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XMapWindow$MH = RuntimeHelper.downcallHandle(
+        "XMapWindow",
+        constants$41.XMapWindow$FUNC
     );
 }
 

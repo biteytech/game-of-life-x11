@@ -7,18 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$74 {
+final class constants$74 {
 
-    static final FunctionDescriptor XAllocStandardColormap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XAllocStandardColormap$MH = RuntimeHelper.downcallHandle(
-        "XAllocStandardColormap",
-        constants$74.XAllocStandardColormap$FUNC
-    );
-    static final FunctionDescriptor XAllocWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XAllocWMHints$MH = RuntimeHelper.downcallHandle(
-        "XAllocWMHints",
-        constants$74.XAllocWMHints$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$74() {}
     static final FunctionDescriptor XClipBox$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
@@ -45,6 +37,20 @@ class constants$74 {
     static final MethodHandle XDeleteContext$MH = RuntimeHelper.downcallHandle(
         "XDeleteContext",
         constants$74.XDeleteContext$FUNC
+    );
+    static final FunctionDescriptor XDestroyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDestroyRegion$MH = RuntimeHelper.downcallHandle(
+        "XDestroyRegion",
+        constants$74.XDestroyRegion$FUNC
+    );
+    static final FunctionDescriptor XEmptyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XEmptyRegion$MH = RuntimeHelper.downcallHandle(
+        "XEmptyRegion",
+        constants$74.XEmptyRegion$FUNC
     );
 }
 

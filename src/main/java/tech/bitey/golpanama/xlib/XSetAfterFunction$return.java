@@ -9,20 +9,20 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 /**
  * {@snippet :
- * int (*XSetAfterFunction$x0)(Display*);
+ * int (*XSetAfterFunction$return)(Display*);
  * }
  */
-public interface XSetAfterFunction$x0 {
+public interface XSetAfterFunction$return {
 
     int apply(java.lang.foreign.MemorySegment _x0);
-    static MemorySegment allocate(XSetAfterFunction$x0 fi, SegmentScope scope) {
-        return RuntimeHelper.upcallStub(constants$5.XSetAfterFunction$x0_UP$MH, fi, constants$5.XSetAfterFunction$x0$FUNC, scope);
+    static MemorySegment allocate(XSetAfterFunction$return fi, SegmentScope scope) {
+        return RuntimeHelper.upcallStub(constants$5.XSetAfterFunction$return_UP$MH, fi, constants$5.XSetAfterFunction$return$FUNC, scope);
     }
-    static XSetAfterFunction$x0 ofAddress(MemorySegment addr, SegmentScope scope) {
+    static XSetAfterFunction$return ofAddress(MemorySegment addr, SegmentScope scope) {
         MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
         return (java.lang.foreign.MemorySegment __x0) -> {
             try {
-                return (int)constants$5.XSetAfterFunction$x0_DOWN$MH.invokeExact(symbol, __x0);
+                return (int)constants$6.XSetAfterFunction$return_DOWN$MH.invokeExact(symbol, __x0);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$22 {
+final class constants$22 {
 
-    static final FunctionDescriptor XAutoRepeatOff$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAutoRepeatOff$MH = RuntimeHelper.downcallHandle(
-        "XAutoRepeatOff",
-        constants$22.XAutoRepeatOff$FUNC
-    );
-    static final FunctionDescriptor XAutoRepeatOn$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAutoRepeatOn$MH = RuntimeHelper.downcallHandle(
-        "XAutoRepeatOn",
-        constants$22.XAutoRepeatOn$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$22() {}
     static final FunctionDescriptor XBell$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
@@ -51,6 +39,23 @@ class constants$22 {
     static final MethodHandle XBitmapUnit$MH = RuntimeHelper.downcallHandle(
         "XBitmapUnit",
         constants$22.XBitmapUnit$FUNC
+    );
+    static final FunctionDescriptor XCellsOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XCellsOfScreen$MH = RuntimeHelper.downcallHandle(
+        "XCellsOfScreen",
+        constants$22.XCellsOfScreen$FUNC
+    );
+    static final FunctionDescriptor XChangeActivePointerGrab$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XChangeActivePointerGrab$MH = RuntimeHelper.downcallHandle(
+        "XChangeActivePointerGrab",
+        constants$22.XChangeActivePointerGrab$FUNC
     );
 }
 

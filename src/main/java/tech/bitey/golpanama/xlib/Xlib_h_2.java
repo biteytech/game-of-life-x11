@@ -7,896 +7,2679 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
- class Xlib_h_2 extends Xlib_h_1 {
+public class Xlib_h_2 extends Xlib_h_1 {
 
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2567 16787570
+     * }
+     */
     public static int XK_braille_dots_2567() {
         return (int)16787570L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12567 16787571
+     * }
+     */
     public static int XK_braille_dots_12567() {
         return (int)16787571L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3567 16787572
+     * }
+     */
     public static int XK_braille_dots_3567() {
         return (int)16787572L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13567 16787573
+     * }
+     */
     public static int XK_braille_dots_13567() {
         return (int)16787573L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23567 16787574
+     * }
+     */
     public static int XK_braille_dots_23567() {
         return (int)16787574L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123567 16787575
+     * }
+     */
     public static int XK_braille_dots_123567() {
         return (int)16787575L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_4567 16787576
+     * }
+     */
     public static int XK_braille_dots_4567() {
         return (int)16787576L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_14567 16787577
+     * }
+     */
     public static int XK_braille_dots_14567() {
         return (int)16787577L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_24567 16787578
+     * }
+     */
     public static int XK_braille_dots_24567() {
         return (int)16787578L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_124567 16787579
+     * }
+     */
     public static int XK_braille_dots_124567() {
         return (int)16787579L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_34567 16787580
+     * }
+     */
     public static int XK_braille_dots_34567() {
         return (int)16787580L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_134567 16787581
+     * }
+     */
     public static int XK_braille_dots_134567() {
         return (int)16787581L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_234567 16787582
+     * }
+     */
     public static int XK_braille_dots_234567() {
         return (int)16787582L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1234567 16787583
+     * }
+     */
     public static int XK_braille_dots_1234567() {
         return (int)16787583L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_8 16787584
+     * }
+     */
     public static int XK_braille_dots_8() {
         return (int)16787584L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_18 16787585
+     * }
+     */
     public static int XK_braille_dots_18() {
         return (int)16787585L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_28 16787586
+     * }
+     */
     public static int XK_braille_dots_28() {
         return (int)16787586L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_128 16787587
+     * }
+     */
     public static int XK_braille_dots_128() {
         return (int)16787587L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_38 16787588
+     * }
+     */
     public static int XK_braille_dots_38() {
         return (int)16787588L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_138 16787589
+     * }
+     */
     public static int XK_braille_dots_138() {
         return (int)16787589L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_238 16787590
+     * }
+     */
     public static int XK_braille_dots_238() {
         return (int)16787590L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1238 16787591
+     * }
+     */
     public static int XK_braille_dots_1238() {
         return (int)16787591L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_48 16787592
+     * }
+     */
     public static int XK_braille_dots_48() {
         return (int)16787592L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_148 16787593
+     * }
+     */
     public static int XK_braille_dots_148() {
         return (int)16787593L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_248 16787594
+     * }
+     */
     public static int XK_braille_dots_248() {
         return (int)16787594L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1248 16787595
+     * }
+     */
     public static int XK_braille_dots_1248() {
         return (int)16787595L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_348 16787596
+     * }
+     */
     public static int XK_braille_dots_348() {
         return (int)16787596L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1348 16787597
+     * }
+     */
     public static int XK_braille_dots_1348() {
         return (int)16787597L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2348 16787598
+     * }
+     */
     public static int XK_braille_dots_2348() {
         return (int)16787598L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12348 16787599
+     * }
+     */
     public static int XK_braille_dots_12348() {
         return (int)16787599L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_58 16787600
+     * }
+     */
     public static int XK_braille_dots_58() {
         return (int)16787600L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_158 16787601
+     * }
+     */
     public static int XK_braille_dots_158() {
         return (int)16787601L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_258 16787602
+     * }
+     */
     public static int XK_braille_dots_258() {
         return (int)16787602L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1258 16787603
+     * }
+     */
     public static int XK_braille_dots_1258() {
         return (int)16787603L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_358 16787604
+     * }
+     */
     public static int XK_braille_dots_358() {
         return (int)16787604L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1358 16787605
+     * }
+     */
     public static int XK_braille_dots_1358() {
         return (int)16787605L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2358 16787606
+     * }
+     */
     public static int XK_braille_dots_2358() {
         return (int)16787606L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12358 16787607
+     * }
+     */
     public static int XK_braille_dots_12358() {
         return (int)16787607L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_458 16787608
+     * }
+     */
     public static int XK_braille_dots_458() {
         return (int)16787608L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1458 16787609
+     * }
+     */
     public static int XK_braille_dots_1458() {
         return (int)16787609L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2458 16787610
+     * }
+     */
     public static int XK_braille_dots_2458() {
         return (int)16787610L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12458 16787611
+     * }
+     */
     public static int XK_braille_dots_12458() {
         return (int)16787611L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3458 16787612
+     * }
+     */
     public static int XK_braille_dots_3458() {
         return (int)16787612L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13458 16787613
+     * }
+     */
     public static int XK_braille_dots_13458() {
         return (int)16787613L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23458 16787614
+     * }
+     */
     public static int XK_braille_dots_23458() {
         return (int)16787614L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123458 16787615
+     * }
+     */
     public static int XK_braille_dots_123458() {
         return (int)16787615L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_68 16787616
+     * }
+     */
     public static int XK_braille_dots_68() {
         return (int)16787616L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_168 16787617
+     * }
+     */
     public static int XK_braille_dots_168() {
         return (int)16787617L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_268 16787618
+     * }
+     */
     public static int XK_braille_dots_268() {
         return (int)16787618L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1268 16787619
+     * }
+     */
     public static int XK_braille_dots_1268() {
         return (int)16787619L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_368 16787620
+     * }
+     */
     public static int XK_braille_dots_368() {
         return (int)16787620L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1368 16787621
+     * }
+     */
     public static int XK_braille_dots_1368() {
         return (int)16787621L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2368 16787622
+     * }
+     */
     public static int XK_braille_dots_2368() {
         return (int)16787622L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12368 16787623
+     * }
+     */
     public static int XK_braille_dots_12368() {
         return (int)16787623L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_468 16787624
+     * }
+     */
     public static int XK_braille_dots_468() {
         return (int)16787624L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1468 16787625
+     * }
+     */
     public static int XK_braille_dots_1468() {
         return (int)16787625L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2468 16787626
+     * }
+     */
     public static int XK_braille_dots_2468() {
         return (int)16787626L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12468 16787627
+     * }
+     */
     public static int XK_braille_dots_12468() {
         return (int)16787627L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3468 16787628
+     * }
+     */
     public static int XK_braille_dots_3468() {
         return (int)16787628L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13468 16787629
+     * }
+     */
     public static int XK_braille_dots_13468() {
         return (int)16787629L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23468 16787630
+     * }
+     */
     public static int XK_braille_dots_23468() {
         return (int)16787630L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123468 16787631
+     * }
+     */
     public static int XK_braille_dots_123468() {
         return (int)16787631L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_568 16787632
+     * }
+     */
     public static int XK_braille_dots_568() {
         return (int)16787632L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1568 16787633
+     * }
+     */
     public static int XK_braille_dots_1568() {
         return (int)16787633L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2568 16787634
+     * }
+     */
     public static int XK_braille_dots_2568() {
         return (int)16787634L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12568 16787635
+     * }
+     */
     public static int XK_braille_dots_12568() {
         return (int)16787635L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3568 16787636
+     * }
+     */
     public static int XK_braille_dots_3568() {
         return (int)16787636L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13568 16787637
+     * }
+     */
     public static int XK_braille_dots_13568() {
         return (int)16787637L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23568 16787638
+     * }
+     */
     public static int XK_braille_dots_23568() {
         return (int)16787638L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123568 16787639
+     * }
+     */
     public static int XK_braille_dots_123568() {
         return (int)16787639L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_4568 16787640
+     * }
+     */
     public static int XK_braille_dots_4568() {
         return (int)16787640L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_14568 16787641
+     * }
+     */
     public static int XK_braille_dots_14568() {
         return (int)16787641L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_24568 16787642
+     * }
+     */
     public static int XK_braille_dots_24568() {
         return (int)16787642L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_124568 16787643
+     * }
+     */
     public static int XK_braille_dots_124568() {
         return (int)16787643L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_34568 16787644
+     * }
+     */
     public static int XK_braille_dots_34568() {
         return (int)16787644L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_134568 16787645
+     * }
+     */
     public static int XK_braille_dots_134568() {
         return (int)16787645L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_234568 16787646
+     * }
+     */
     public static int XK_braille_dots_234568() {
         return (int)16787646L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1234568 16787647
+     * }
+     */
     public static int XK_braille_dots_1234568() {
         return (int)16787647L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_78 16787648
+     * }
+     */
     public static int XK_braille_dots_78() {
         return (int)16787648L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_178 16787649
+     * }
+     */
     public static int XK_braille_dots_178() {
         return (int)16787649L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_278 16787650
+     * }
+     */
     public static int XK_braille_dots_278() {
         return (int)16787650L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1278 16787651
+     * }
+     */
     public static int XK_braille_dots_1278() {
         return (int)16787651L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_378 16787652
+     * }
+     */
     public static int XK_braille_dots_378() {
         return (int)16787652L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1378 16787653
+     * }
+     */
     public static int XK_braille_dots_1378() {
         return (int)16787653L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2378 16787654
+     * }
+     */
     public static int XK_braille_dots_2378() {
         return (int)16787654L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12378 16787655
+     * }
+     */
     public static int XK_braille_dots_12378() {
         return (int)16787655L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_478 16787656
+     * }
+     */
     public static int XK_braille_dots_478() {
         return (int)16787656L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1478 16787657
+     * }
+     */
     public static int XK_braille_dots_1478() {
         return (int)16787657L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2478 16787658
+     * }
+     */
     public static int XK_braille_dots_2478() {
         return (int)16787658L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12478 16787659
+     * }
+     */
     public static int XK_braille_dots_12478() {
         return (int)16787659L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3478 16787660
+     * }
+     */
     public static int XK_braille_dots_3478() {
         return (int)16787660L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13478 16787661
+     * }
+     */
     public static int XK_braille_dots_13478() {
         return (int)16787661L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23478 16787662
+     * }
+     */
     public static int XK_braille_dots_23478() {
         return (int)16787662L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123478 16787663
+     * }
+     */
     public static int XK_braille_dots_123478() {
         return (int)16787663L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_578 16787664
+     * }
+     */
     public static int XK_braille_dots_578() {
         return (int)16787664L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1578 16787665
+     * }
+     */
     public static int XK_braille_dots_1578() {
         return (int)16787665L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2578 16787666
+     * }
+     */
     public static int XK_braille_dots_2578() {
         return (int)16787666L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12578 16787667
+     * }
+     */
     public static int XK_braille_dots_12578() {
         return (int)16787667L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3578 16787668
+     * }
+     */
     public static int XK_braille_dots_3578() {
         return (int)16787668L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13578 16787669
+     * }
+     */
     public static int XK_braille_dots_13578() {
         return (int)16787669L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23578 16787670
+     * }
+     */
     public static int XK_braille_dots_23578() {
         return (int)16787670L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123578 16787671
+     * }
+     */
     public static int XK_braille_dots_123578() {
         return (int)16787671L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_4578 16787672
+     * }
+     */
     public static int XK_braille_dots_4578() {
         return (int)16787672L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_14578 16787673
+     * }
+     */
     public static int XK_braille_dots_14578() {
         return (int)16787673L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_24578 16787674
+     * }
+     */
     public static int XK_braille_dots_24578() {
         return (int)16787674L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_124578 16787675
+     * }
+     */
     public static int XK_braille_dots_124578() {
         return (int)16787675L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_34578 16787676
+     * }
+     */
     public static int XK_braille_dots_34578() {
         return (int)16787676L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_134578 16787677
+     * }
+     */
     public static int XK_braille_dots_134578() {
         return (int)16787677L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_234578 16787678
+     * }
+     */
     public static int XK_braille_dots_234578() {
         return (int)16787678L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1234578 16787679
+     * }
+     */
     public static int XK_braille_dots_1234578() {
         return (int)16787679L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_678 16787680
+     * }
+     */
     public static int XK_braille_dots_678() {
         return (int)16787680L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1678 16787681
+     * }
+     */
     public static int XK_braille_dots_1678() {
         return (int)16787681L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2678 16787682
+     * }
+     */
     public static int XK_braille_dots_2678() {
         return (int)16787682L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12678 16787683
+     * }
+     */
     public static int XK_braille_dots_12678() {
         return (int)16787683L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3678 16787684
+     * }
+     */
     public static int XK_braille_dots_3678() {
         return (int)16787684L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13678 16787685
+     * }
+     */
     public static int XK_braille_dots_13678() {
         return (int)16787685L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23678 16787686
+     * }
+     */
     public static int XK_braille_dots_23678() {
         return (int)16787686L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123678 16787687
+     * }
+     */
     public static int XK_braille_dots_123678() {
         return (int)16787687L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_4678 16787688
+     * }
+     */
     public static int XK_braille_dots_4678() {
         return (int)16787688L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_14678 16787689
+     * }
+     */
     public static int XK_braille_dots_14678() {
         return (int)16787689L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_24678 16787690
+     * }
+     */
     public static int XK_braille_dots_24678() {
         return (int)16787690L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_124678 16787691
+     * }
+     */
     public static int XK_braille_dots_124678() {
         return (int)16787691L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_34678 16787692
+     * }
+     */
     public static int XK_braille_dots_34678() {
         return (int)16787692L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_134678 16787693
+     * }
+     */
     public static int XK_braille_dots_134678() {
         return (int)16787693L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_234678 16787694
+     * }
+     */
     public static int XK_braille_dots_234678() {
         return (int)16787694L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1234678 16787695
+     * }
+     */
     public static int XK_braille_dots_1234678() {
         return (int)16787695L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_5678 16787696
+     * }
+     */
     public static int XK_braille_dots_5678() {
         return (int)16787696L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_15678 16787697
+     * }
+     */
     public static int XK_braille_dots_15678() {
         return (int)16787697L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_25678 16787698
+     * }
+     */
     public static int XK_braille_dots_25678() {
         return (int)16787698L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_125678 16787699
+     * }
+     */
     public static int XK_braille_dots_125678() {
         return (int)16787699L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_35678 16787700
+     * }
+     */
     public static int XK_braille_dots_35678() {
         return (int)16787700L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_135678 16787701
+     * }
+     */
     public static int XK_braille_dots_135678() {
         return (int)16787701L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_235678 16787702
+     * }
+     */
     public static int XK_braille_dots_235678() {
         return (int)16787702L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1235678 16787703
+     * }
+     */
     public static int XK_braille_dots_1235678() {
         return (int)16787703L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_45678 16787704
+     * }
+     */
     public static int XK_braille_dots_45678() {
         return (int)16787704L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_145678 16787705
+     * }
+     */
     public static int XK_braille_dots_145678() {
         return (int)16787705L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_245678 16787706
+     * }
+     */
     public static int XK_braille_dots_245678() {
         return (int)16787706L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1245678 16787707
+     * }
+     */
     public static int XK_braille_dots_1245678() {
         return (int)16787707L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_345678 16787708
+     * }
+     */
     public static int XK_braille_dots_345678() {
         return (int)16787708L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1345678 16787709
+     * }
+     */
     public static int XK_braille_dots_1345678() {
         return (int)16787709L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2345678 16787710
+     * }
+     */
     public static int XK_braille_dots_2345678() {
         return (int)16787710L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12345678 16787711
+     * }
+     */
     public static int XK_braille_dots_12345678() {
         return (int)16787711L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ng 16780674
+     * }
+     */
     public static int XK_Sinh_ng() {
         return (int)16780674L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_h2 16780675
+     * }
+     */
     public static int XK_Sinh_h2() {
         return (int)16780675L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_a 16780677
+     * }
+     */
     public static int XK_Sinh_a() {
         return (int)16780677L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_aa 16780678
+     * }
+     */
     public static int XK_Sinh_aa() {
         return (int)16780678L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ae 16780679
+     * }
+     */
     public static int XK_Sinh_ae() {
         return (int)16780679L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_aee 16780680
+     * }
+     */
     public static int XK_Sinh_aee() {
         return (int)16780680L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_i 16780681
+     * }
+     */
     public static int XK_Sinh_i() {
         return (int)16780681L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ii 16780682
+     * }
+     */
     public static int XK_Sinh_ii() {
         return (int)16780682L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_u 16780683
+     * }
+     */
     public static int XK_Sinh_u() {
         return (int)16780683L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_uu 16780684
+     * }
+     */
     public static int XK_Sinh_uu() {
         return (int)16780684L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ri 16780685
+     * }
+     */
     public static int XK_Sinh_ri() {
         return (int)16780685L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_rii 16780686
+     * }
+     */
     public static int XK_Sinh_rii() {
         return (int)16780686L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_lu 16780687
+     * }
+     */
     public static int XK_Sinh_lu() {
         return (int)16780687L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_luu 16780688
+     * }
+     */
     public static int XK_Sinh_luu() {
         return (int)16780688L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_e 16780689
+     * }
+     */
     public static int XK_Sinh_e() {
         return (int)16780689L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ee 16780690
+     * }
+     */
     public static int XK_Sinh_ee() {
         return (int)16780690L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ai 16780691
+     * }
+     */
     public static int XK_Sinh_ai() {
         return (int)16780691L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_o 16780692
+     * }
+     */
     public static int XK_Sinh_o() {
         return (int)16780692L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_oo 16780693
+     * }
+     */
     public static int XK_Sinh_oo() {
         return (int)16780693L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_au 16780694
+     * }
+     */
     public static int XK_Sinh_au() {
         return (int)16780694L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ka 16780698
+     * }
+     */
     public static int XK_Sinh_ka() {
         return (int)16780698L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_kha 16780699
+     * }
+     */
     public static int XK_Sinh_kha() {
         return (int)16780699L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ga 16780700
+     * }
+     */
     public static int XK_Sinh_ga() {
         return (int)16780700L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_gha 16780701
+     * }
+     */
     public static int XK_Sinh_gha() {
         return (int)16780701L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ng2 16780702
+     * }
+     */
     public static int XK_Sinh_ng2() {
         return (int)16780702L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_nga 16780703
+     * }
+     */
     public static int XK_Sinh_nga() {
         return (int)16780703L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ca 16780704
+     * }
+     */
     public static int XK_Sinh_ca() {
         return (int)16780704L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_cha 16780705
+     * }
+     */
     public static int XK_Sinh_cha() {
         return (int)16780705L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ja 16780706
+     * }
+     */
     public static int XK_Sinh_ja() {
         return (int)16780706L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_jha 16780707
+     * }
+     */
     public static int XK_Sinh_jha() {
         return (int)16780707L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_nya 16780708
+     * }
+     */
     public static int XK_Sinh_nya() {
         return (int)16780708L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_jnya 16780709
+     * }
+     */
     public static int XK_Sinh_jnya() {
         return (int)16780709L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_nja 16780710
+     * }
+     */
     public static int XK_Sinh_nja() {
         return (int)16780710L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_tta 16780711
+     * }
+     */
     public static int XK_Sinh_tta() {
         return (int)16780711L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ttha 16780712
+     * }
+     */
     public static int XK_Sinh_ttha() {
         return (int)16780712L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_dda 16780713
+     * }
+     */
     public static int XK_Sinh_dda() {
         return (int)16780713L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ddha 16780714
+     * }
+     */
     public static int XK_Sinh_ddha() {
         return (int)16780714L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_nna 16780715
+     * }
+     */
     public static int XK_Sinh_nna() {
         return (int)16780715L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ndda 16780716
+     * }
+     */
     public static int XK_Sinh_ndda() {
         return (int)16780716L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_tha 16780717
+     * }
+     */
     public static int XK_Sinh_tha() {
         return (int)16780717L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_thha 16780718
+     * }
+     */
     public static int XK_Sinh_thha() {
         return (int)16780718L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_dha 16780719
+     * }
+     */
     public static int XK_Sinh_dha() {
         return (int)16780719L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_dhha 16780720
+     * }
+     */
     public static int XK_Sinh_dhha() {
         return (int)16780720L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_na 16780721
+     * }
+     */
     public static int XK_Sinh_na() {
         return (int)16780721L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ndha 16780723
+     * }
+     */
     public static int XK_Sinh_ndha() {
         return (int)16780723L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_pa 16780724
+     * }
+     */
     public static int XK_Sinh_pa() {
         return (int)16780724L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_pha 16780725
+     * }
+     */
     public static int XK_Sinh_pha() {
         return (int)16780725L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ba 16780726
+     * }
+     */
     public static int XK_Sinh_ba() {
         return (int)16780726L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_bha 16780727
+     * }
+     */
     public static int XK_Sinh_bha() {
         return (int)16780727L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ma 16780728
+     * }
+     */
     public static int XK_Sinh_ma() {
         return (int)16780728L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_mba 16780729
+     * }
+     */
     public static int XK_Sinh_mba() {
         return (int)16780729L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ya 16780730
+     * }
+     */
     public static int XK_Sinh_ya() {
         return (int)16780730L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ra 16780731
+     * }
+     */
     public static int XK_Sinh_ra() {
         return (int)16780731L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_la 16780733
+     * }
+     */
     public static int XK_Sinh_la() {
         return (int)16780733L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_va 16780736
+     * }
+     */
     public static int XK_Sinh_va() {
         return (int)16780736L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_sha 16780737
+     * }
+     */
     public static int XK_Sinh_sha() {
         return (int)16780737L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ssha 16780738
+     * }
+     */
     public static int XK_Sinh_ssha() {
         return (int)16780738L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_sa 16780739
+     * }
+     */
     public static int XK_Sinh_sa() {
         return (int)16780739L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ha 16780740
+     * }
+     */
     public static int XK_Sinh_ha() {
         return (int)16780740L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_lla 16780741
+     * }
+     */
     public static int XK_Sinh_lla() {
         return (int)16780741L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_fa 16780742
+     * }
+     */
     public static int XK_Sinh_fa() {
         return (int)16780742L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_al 16780746
+     * }
+     */
     public static int XK_Sinh_al() {
         return (int)16780746L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_aa2 16780751
+     * }
+     */
     public static int XK_Sinh_aa2() {
         return (int)16780751L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ae2 16780752
+     * }
+     */
     public static int XK_Sinh_ae2() {
         return (int)16780752L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_aee2 16780753
+     * }
+     */
     public static int XK_Sinh_aee2() {
         return (int)16780753L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_i2 16780754
+     * }
+     */
     public static int XK_Sinh_i2() {
         return (int)16780754L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ii2 16780755
+     * }
+     */
     public static int XK_Sinh_ii2() {
         return (int)16780755L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_u2 16780756
+     * }
+     */
     public static int XK_Sinh_u2() {
         return (int)16780756L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_uu2 16780758
+     * }
+     */
     public static int XK_Sinh_uu2() {
         return (int)16780758L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ru2 16780760
+     * }
+     */
     public static int XK_Sinh_ru2() {
         return (int)16780760L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_e2 16780761
+     * }
+     */
     public static int XK_Sinh_e2() {
         return (int)16780761L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ee2 16780762
+     * }
+     */
     public static int XK_Sinh_ee2() {
         return (int)16780762L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ai2 16780763
+     * }
+     */
     public static int XK_Sinh_ai2() {
         return (int)16780763L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_o2 16780764
+     * }
+     */
     public static int XK_Sinh_o2() {
         return (int)16780764L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_oo2 16780765
+     * }
+     */
     public static int XK_Sinh_oo2() {
         return (int)16780765L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_au2 16780766
+     * }
+     */
     public static int XK_Sinh_au2() {
         return (int)16780766L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_lu2 16780767
+     * }
+     */
     public static int XK_Sinh_lu2() {
         return (int)16780767L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_ruu2 16780786
+     * }
+     */
     public static int XK_Sinh_ruu2() {
         return (int)16780786L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_luu2 16780787
+     * }
+     */
     public static int XK_Sinh_luu2() {
         return (int)16780787L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sinh_kunddaliya 16780788
+     * }
+     */
     public static int XK_Sinh_kunddaliya() {
         return (int)16780788L;
     }
+    /**
+     * {@snippet :
+     * #define NoValue 0
+     * }
+     */
     public static int NoValue() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define XValue 1
+     * }
+     */
     public static int XValue() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define YValue 2
+     * }
+     */
     public static int YValue() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define WidthValue 4
+     * }
+     */
     public static int WidthValue() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define HeightValue 8
+     * }
+     */
     public static int HeightValue() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define AllValues 15
+     * }
+     */
     public static int AllValues() {
         return (int)15L;
     }
+    /**
+     * {@snippet :
+     * #define XNegative 16
+     * }
+     */
     public static int XNegative() {
         return (int)16L;
     }
+    /**
+     * {@snippet :
+     * #define YNegative 32
+     * }
+     */
     public static int YNegative() {
         return (int)32L;
     }
+    /**
+     * {@snippet :
+     * #define WithdrawnState 0
+     * }
+     */
     public static int WithdrawnState() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define NormalState 1
+     * }
+     */
     public static int NormalState() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define IconicState 3
+     * }
+     */
     public static int IconicState() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define DontCareState 0
+     * }
+     */
     public static int DontCareState() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define ZoomState 2
+     * }
+     */
     public static int ZoomState() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define InactiveState 4
+     * }
+     */
     public static int InactiveState() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define RectangleOut 0
+     * }
+     */
     public static int RectangleOut() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define RectangleIn 1
+     * }
+     */
     public static int RectangleIn() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define RectanglePart 2
+     * }
+     */
     public static int RectanglePart() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define VisualNoMask 0
+     * }
+     */
     public static int VisualNoMask() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define VisualIDMask 1
+     * }
+     */
     public static int VisualIDMask() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define VisualScreenMask 2
+     * }
+     */
     public static int VisualScreenMask() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define VisualDepthMask 4
+     * }
+     */
     public static int VisualDepthMask() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define VisualClassMask 8
+     * }
+     */
     public static int VisualClassMask() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define VisualRedMaskMask 16
+     * }
+     */
     public static int VisualRedMaskMask() {
         return (int)16L;
     }
+    /**
+     * {@snippet :
+     * #define VisualGreenMaskMask 32
+     * }
+     */
     public static int VisualGreenMaskMask() {
         return (int)32L;
     }
+    /**
+     * {@snippet :
+     * #define VisualBlueMaskMask 64
+     * }
+     */
     public static int VisualBlueMaskMask() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define VisualColormapSizeMask 128
+     * }
+     */
     public static int VisualColormapSizeMask() {
         return (int)128L;
     }
+    /**
+     * {@snippet :
+     * #define VisualBitsPerRGBMask 256
+     * }
+     */
     public static int VisualBitsPerRGBMask() {
         return (int)256L;
     }
+    /**
+     * {@snippet :
+     * #define VisualAllMask 511
+     * }
+     */
     public static int VisualAllMask() {
         return (int)511L;
     }
+    /**
+     * {@snippet :
+     * #define BitmapSuccess 0
+     * }
+     */
     public static int BitmapSuccess() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define BitmapOpenFailed 1
+     * }
+     */
     public static int BitmapOpenFailed() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define BitmapFileInvalid 2
+     * }
+     */
     public static int BitmapFileInvalid() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define BitmapNoMemory 3
+     * }
+     */
     public static int BitmapNoMemory() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define XCSUCCESS 0
+     * }
+     */
     public static int XCSUCCESS() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define XCNOMEM 1
+     * }
+     */
     public static int XCNOMEM() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define XCNOENT 2
+     * }
+     */
     public static int XCNOENT() {
         return (int)2L;
     }
-    public static OfShort __int16_t = Constants$root.C_SHORT$LAYOUT;
-    public static OfInt __int32_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong __int64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfShort __int_least16_t = Constants$root.C_SHORT$LAYOUT;
-    public static OfInt __int_least32_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong __int_least64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __quad_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __intmax_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __off_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __off64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt __pid_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong __clock_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __time_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt __daddr_t = Constants$root.C_INT$LAYOUT;
-    public static OfInt __key_t = Constants$root.C_INT$LAYOUT;
-    public static OfInt __clockid_t = Constants$root.C_INT$LAYOUT;
-    public static OfAddress __timer_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfLong __blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __blkcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __fsword_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __syscall_slong_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __loff_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfAddress __caddr_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfLong __intptr_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt __sig_atomic_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong quad_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong loff_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong off_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt pid_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt daddr_t = Constants$root.C_INT$LAYOUT;
-    public static OfAddress caddr_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfInt key_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong clock_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt clockid_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong time_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfAddress timer_t = Constants$root.C_POINTER$LAYOUT;
-    public static OfShort int16_t = Constants$root.C_SHORT$LAYOUT;
-    public static OfInt int32_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong int64_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong register_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static MethodHandle __bswap_16$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__bswap_16$MH,"__bswap_16");
-    }
-    public static short __bswap_16 ( short __bsx) {
-        var mh$ = __bswap_16$MH();
-        try {
-            return (short)mh$.invokeExact(__bsx);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __bswap_32$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__bswap_32$MH,"__bswap_32");
-    }
-    public static int __bswap_32 ( int __bsx) {
-        var mh$ = __bswap_32$MH();
-        try {
-            return (int)mh$.invokeExact(__bsx);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __bswap_64$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__bswap_64$MH,"__bswap_64");
-    }
-    public static long __bswap_64 ( long __bsx) {
-        var mh$ = __bswap_64$MH();
-        try {
-            return (long)mh$.invokeExact(__bsx);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __uint16_identity$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__uint16_identity$MH,"__uint16_identity");
-    }
-    public static short __uint16_identity ( short __x) {
-        var mh$ = __uint16_identity$MH();
-        try {
-            return (short)mh$.invokeExact(__x);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __uint32_identity$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__uint32_identity$MH,"__uint32_identity");
-    }
-    public static int __uint32_identity ( int __x) {
-        var mh$ = __uint32_identity$MH();
-        try {
-            return (int)mh$.invokeExact(__x);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle __uint64_identity$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.__uint64_identity$MH,"__uint64_identity");
-    }
-    public static long __uint64_identity ( long __x) {
-        var mh$ = __uint64_identity$MH();
-        try {
-            return (long)mh$.invokeExact(__x);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static OfLong suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong __fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned char __u_char;
+     * }
+     */
+    public static final OfByte __u_char = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short __u_short;
+     * }
+     */
+    public static final OfShort __u_short = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __u_int;
+     * }
+     */
+    public static final OfInt __u_int = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __u_long;
+     * }
+     */
+    public static final OfLong __u_long = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef signed char __int8_t;
+     * }
+     */
+    public static final OfByte __int8_t = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned char __uint8_t;
+     * }
+     */
+    public static final OfByte __uint8_t = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef short __int16_t;
+     * }
+     */
+    public static final OfShort __int16_t = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short __uint16_t;
+     * }
+     */
+    public static final OfShort __uint16_t = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int __int32_t;
+     * }
+     */
+    public static final OfInt __int32_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __uint32_t;
+     * }
+     */
+    public static final OfInt __uint32_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __int64_t;
+     * }
+     */
+    public static final OfLong __int64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __uint64_t;
+     * }
+     */
+    public static final OfLong __uint64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef signed char __int_least8_t;
+     * }
+     */
+    public static final OfByte __int_least8_t = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned char __uint_least8_t;
+     * }
+     */
+    public static final OfByte __uint_least8_t = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef short __int_least16_t;
+     * }
+     */
+    public static final OfShort __int_least16_t = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short __uint_least16_t;
+     * }
+     */
+    public static final OfShort __uint_least16_t = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int __int_least32_t;
+     * }
+     */
+    public static final OfInt __int_least32_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __uint_least32_t;
+     * }
+     */
+    public static final OfInt __uint_least32_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __int_least64_t;
+     * }
+     */
+    public static final OfLong __int_least64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __uint_least64_t;
+     * }
+     */
+    public static final OfLong __uint_least64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __quad_t;
+     * }
+     */
+    public static final OfLong __quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __u_quad_t;
+     * }
+     */
+    public static final OfLong __u_quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __intmax_t;
+     * }
+     */
+    public static final OfLong __intmax_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __uintmax_t;
+     * }
+     */
+    public static final OfLong __uintmax_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __dev_t;
+     * }
+     */
+    public static final OfLong __dev_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __uid_t;
+     * }
+     */
+    public static final OfInt __uid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __gid_t;
+     * }
+     */
+    public static final OfInt __gid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __ino_t;
+     * }
+     */
+    public static final OfLong __ino_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __ino64_t;
+     * }
+     */
+    public static final OfLong __ino64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __mode_t;
+     * }
+     */
+    public static final OfInt __mode_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __nlink_t;
+     * }
+     */
+    public static final OfLong __nlink_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __off_t;
+     * }
+     */
+    public static final OfLong __off_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __off64_t;
+     * }
+     */
+    public static final OfLong __off64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int __pid_t;
+     * }
+     */
+    public static final OfInt __pid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __clock_t;
+     * }
+     */
+    public static final OfLong __clock_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __rlim_t;
+     * }
+     */
+    public static final OfLong __rlim_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __rlim64_t;
+     * }
+     */
+    public static final OfLong __rlim64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __id_t;
+     * }
+     */
+    public static final OfInt __id_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __time_t;
+     * }
+     */
+    public static final OfLong __time_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __useconds_t;
+     * }
+     */
+    public static final OfInt __useconds_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __suseconds_t;
+     * }
+     */
+    public static final OfLong __suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int __daddr_t;
+     * }
+     */
+    public static final OfInt __daddr_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int __key_t;
+     * }
+     */
+    public static final OfInt __key_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int __clockid_t;
+     * }
+     */
+    public static final OfInt __clockid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef void* __timer_t;
+     * }
+     */
+    public static final OfAddress __timer_t = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __blksize_t;
+     * }
+     */
+    public static final OfLong __blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __blkcnt_t;
+     * }
+     */
+    public static final OfLong __blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __blkcnt64_t;
+     * }
+     */
+    public static final OfLong __blkcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __fsblkcnt_t;
+     * }
+     */
+    public static final OfLong __fsblkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __fsblkcnt64_t;
+     * }
+     */
+    public static final OfLong __fsblkcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __fsfilcnt_t;
+     * }
+     */
+    public static final OfLong __fsfilcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __fsfilcnt64_t;
+     * }
+     */
+    public static final OfLong __fsfilcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __fsword_t;
+     * }
+     */
+    public static final OfLong __fsword_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __ssize_t;
+     * }
+     */
+    public static final OfLong __ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __syscall_slong_t;
+     * }
+     */
+    public static final OfLong __syscall_slong_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __syscall_ulong_t;
+     * }
+     */
+    public static final OfLong __syscall_ulong_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __loff_t;
+     * }
+     */
+    public static final OfLong __loff_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef char* __caddr_t;
+     * }
+     */
+    public static final OfAddress __caddr_t = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __intptr_t;
+     * }
+     */
+    public static final OfLong __intptr_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int __socklen_t;
+     * }
+     */
+    public static final OfInt __socklen_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int __sig_atomic_t;
+     * }
+     */
+    public static final OfInt __sig_atomic_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned char u_char;
+     * }
+     */
+    public static final OfByte u_char = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short u_short;
+     * }
+     */
+    public static final OfShort u_short = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int u_int;
+     * }
+     */
+    public static final OfInt u_int = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long u_long;
+     * }
+     */
+    public static final OfLong u_long = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long quad_t;
+     * }
+     */
+    public static final OfLong quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long u_quad_t;
+     * }
+     */
+    public static final OfLong u_quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long loff_t;
+     * }
+     */
+    public static final OfLong loff_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long ino_t;
+     * }
+     */
+    public static final OfLong ino_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long dev_t;
+     * }
+     */
+    public static final OfLong dev_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int gid_t;
+     * }
+     */
+    public static final OfInt gid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int mode_t;
+     * }
+     */
+    public static final OfInt mode_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long nlink_t;
+     * }
+     */
+    public static final OfLong nlink_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int uid_t;
+     * }
+     */
+    public static final OfInt uid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long off_t;
+     * }
+     */
+    public static final OfLong off_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int pid_t;
+     * }
+     */
+    public static final OfInt pid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int id_t;
+     * }
+     */
+    public static final OfInt id_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long ssize_t;
+     * }
+     */
+    public static final OfLong ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int daddr_t;
+     * }
+     */
+    public static final OfInt daddr_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef char* caddr_t;
+     * }
+     */
+    public static final OfAddress caddr_t = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int key_t;
+     * }
+     */
+    public static final OfInt key_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long clock_t;
+     * }
+     */
+    public static final OfLong clock_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int clockid_t;
+     * }
+     */
+    public static final OfInt clockid_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long time_t;
+     * }
+     */
+    public static final OfLong time_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef void* timer_t;
+     * }
+     */
+    public static final OfAddress timer_t = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long size_t;
+     * }
+     */
+    public static final OfLong size_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long ulong;
+     * }
+     */
+    public static final OfLong ulong = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short ushort;
+     * }
+     */
+    public static final OfShort ushort = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int uint;
+     * }
+     */
+    public static final OfInt uint = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef signed char int8_t;
+     * }
+     */
+    public static final OfByte int8_t = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef short int16_t;
+     * }
+     */
+    public static final OfShort int16_t = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int int32_t;
+     * }
+     */
+    public static final OfInt int32_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long int64_t;
+     * }
+     */
+    public static final OfLong int64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned char u_int8_t;
+     * }
+     */
+    public static final OfByte u_int8_t = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short u_int16_t;
+     * }
+     */
+    public static final OfShort u_int16_t = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int u_int32_t;
+     * }
+     */
+    public static final OfInt u_int32_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long u_int64_t;
+     * }
+     */
+    public static final OfLong u_int64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long register_t;
+     * }
+     */
+    public static final OfLong register_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long suseconds_t;
+     * }
+     */
+    public static final OfLong suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long __fd_mask;
+     * }
+     */
+    public static final OfLong __fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long fd_mask;
+     * }
+     */
+    public static final OfLong fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
     public static MethodHandle select$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.select$MH,"select");
+        return RuntimeHelper.requireNonNull(constants$0.select$MH,"select");
     }
-    public static int select ( int __nfds,  Addressable __readfds,  Addressable __writefds,  Addressable __exceptfds,  Addressable __timeout) {
+    /**
+     * {@snippet :
+     * int select(int __nfds, fd_set* __readfds, fd_set* __writefds, fd_set* __exceptfds, struct timeval* __timeout);
+     * }
+     */
+    public static int select(int __nfds, MemorySegment __readfds, MemorySegment __writefds, MemorySegment __exceptfds, MemorySegment __timeout) {
         var mh$ = select$MH();
         try {
             return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout);
@@ -905,9 +2688,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle pselect$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.pselect$MH,"pselect");
+        return RuntimeHelper.requireNonNull(constants$0.pselect$MH,"pselect");
     }
-    public static int pselect ( int __nfds,  Addressable __readfds,  Addressable __writefds,  Addressable __exceptfds,  Addressable __timeout,  Addressable __sigmask) {
+    /**
+     * {@snippet :
+     * int pselect(int __nfds, fd_set* __readfds, fd_set* __writefds, fd_set* __exceptfds, struct timespec* __timeout, const __sigset_t* __sigmask);
+     * }
+     */
+    public static int pselect(int __nfds, MemorySegment __readfds, MemorySegment __writefds, MemorySegment __exceptfds, MemorySegment __timeout, MemorySegment __sigmask) {
         var mh$ = pselect$MH();
         try {
             return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout, __sigmask);
@@ -915,16 +2703,159 @@ import static java.lang.foreign.ValueLayout.*;
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    public static OfLong blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt pthread_once_t = Constants$root.C_INT$LAYOUT;
-    public static OfInt pthread_spinlock_t = Constants$root.C_INT$LAYOUT;
-    public static OfLong ptrdiff_t = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfInt wchar_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long blksize_t;
+     * }
+     */
+    public static final OfLong blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long blkcnt_t;
+     * }
+     */
+    public static final OfLong blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long fsblkcnt_t;
+     * }
+     */
+    public static final OfLong fsblkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long fsfilcnt_t;
+     * }
+     */
+    public static final OfLong fsfilcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long pthread_t;
+     * }
+     */
+    public static final OfLong pthread_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned int pthread_key_t;
+     * }
+     */
+    public static final OfInt pthread_key_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int pthread_once_t;
+     * }
+     */
+    public static final OfInt pthread_once_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int pthread_spinlock_t;
+     * }
+     */
+    public static final OfInt pthread_spinlock_t = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long XID;
+     * }
+     */
+    public static final OfLong XID = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Mask;
+     * }
+     */
+    public static final OfLong Mask = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Atom;
+     * }
+     */
+    public static final OfLong Atom = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long VisualID;
+     * }
+     */
+    public static final OfLong VisualID = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Time;
+     * }
+     */
+    public static final OfLong Time = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Window;
+     * }
+     */
+    public static final OfLong Window = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Drawable;
+     * }
+     */
+    public static final OfLong Drawable = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Font;
+     * }
+     */
+    public static final OfLong Font = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Pixmap;
+     * }
+     */
+    public static final OfLong Pixmap = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Cursor;
+     * }
+     */
+    public static final OfLong Cursor = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long Colormap;
+     * }
+     */
+    public static final OfLong Colormap = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long GContext;
+     * }
+     */
+    public static final OfLong GContext = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long KeySym;
+     * }
+     */
+    public static final OfLong KeySym = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned char KeyCode;
+     * }
+     */
+    public static final OfByte KeyCode = Constants$root.C_CHAR$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef long ptrdiff_t;
+     * }
+     */
+    public static final OfLong ptrdiff_t = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int wchar_t;
+     * }
+     */
+    public static final OfInt wchar_t = Constants$root.C_INT$LAYOUT;
     public static MethodHandle _Xmblen$MH() {
-        return RuntimeHelper.requireNonNull(constants$1._Xmblen$MH,"_Xmblen");
+        return RuntimeHelper.requireNonNull(constants$0._Xmblen$MH,"_Xmblen");
     }
-    public static int _Xmblen ( Addressable str,  int len) {
+    /**
+     * {@snippet :
+     * int _Xmblen(char* str, int len);
+     * }
+     */
+    public static int _Xmblen(MemorySegment str, int len) {
         var mh$ = _Xmblen$MH();
         try {
             return (int)mh$.invokeExact(str, len);
@@ -932,188 +2863,454 @@ import static java.lang.foreign.ValueLayout.*;
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    public static OfAddress XPointer = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress GC = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress _XPrivDisplay = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XOM = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XOC = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XFontSet = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef char* XPointer;
+     * }
+     */
+    public static final OfAddress XPointer = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct _XGC* GC;
+     * }
+     */
+    public static final OfAddress GC = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct * _XPrivDisplay;
+     * }
+     */
+    public static final OfAddress _XPrivDisplay = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct _XOM* XOM;
+     * }
+     */
+    public static final OfAddress XOM = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct _XOC* XOC;
+     * }
+     */
+    public static final OfAddress XOC = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct _XOC* XFontSet;
+     * }
+     */
+    public static final OfAddress XFontSet = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * enum .XOMOrientation_LTR_TTB = 0;
+     * }
+     */
     public static int XOMOrientation_LTR_TTB() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * enum .XOMOrientation_RTL_TTB = 1;
+     * }
+     */
     public static int XOMOrientation_RTL_TTB() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * enum .XOMOrientation_TTB_LTR = 2;
+     * }
+     */
     public static int XOMOrientation_TTB_LTR() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * enum .XOMOrientation_TTB_RTL = 3;
+     * }
+     */
     public static int XOMOrientation_TTB_RTL() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * enum .XOMOrientation_Context = 4;
+     * }
+     */
     public static int XOMOrientation_Context() {
         return (int)4L;
     }
-    public static OfAddress XIM = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XIC = Constants$root.C_POINTER$LAYOUT;
-    public static OfAddress XVaNestedList = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct _XIM* XIM;
+     * }
+     */
+    public static final OfAddress XIM = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct _XIC* XIC;
+     * }
+     */
+    public static final OfAddress XIC = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long XIMStyle;
+     * }
+     */
+    public static final OfLong XIMStyle = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef void* XVaNestedList;
+     * }
+     */
+    public static final OfAddress XVaNestedList = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long XIMFeedback;
+     * }
+     */
+    public static final OfLong XIMFeedback = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long XIMPreeditState;
+     * }
+     */
+    public static final OfLong XIMPreeditState = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long XIMResetState;
+     * }
+     */
+    public static final OfLong XIMResetState = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned long XIMStringConversionFeedback;
+     * }
+     */
+    public static final OfLong XIMStringConversionFeedback = Constants$root.C_LONG_LONG$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short XIMStringConversionPosition;
+     * }
+     */
+    public static final OfShort XIMStringConversionPosition = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short XIMStringConversionType;
+     * }
+     */
+    public static final OfShort XIMStringConversionType = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef unsigned short XIMStringConversionOperation;
+     * }
+     */
+    public static final OfShort XIMStringConversionOperation = Constants$root.C_SHORT$LAYOUT;
+    /**
+     * {@snippet :
+     * enum .XIMForwardChar = 0;
+     * }
+     */
     public static int XIMForwardChar() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMBackwardChar = 1;
+     * }
+     */
     public static int XIMBackwardChar() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMForwardWord = 2;
+     * }
+     */
     public static int XIMForwardWord() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMBackwardWord = 3;
+     * }
+     */
     public static int XIMBackwardWord() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMCaretUp = 4;
+     * }
+     */
     public static int XIMCaretUp() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMCaretDown = 5;
+     * }
+     */
     public static int XIMCaretDown() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMNextLine = 6;
+     * }
+     */
     public static int XIMNextLine() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMPreviousLine = 7;
+     * }
+     */
     public static int XIMPreviousLine() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMLineStart = 8;
+     * }
+     */
     public static int XIMLineStart() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMLineEnd = 9;
+     * }
+     */
     public static int XIMLineEnd() {
         return (int)9L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMAbsolutePosition = 10;
+     * }
+     */
     public static int XIMAbsolutePosition() {
         return (int)10L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMDontChange = 11;
+     * }
+     */
     public static int XIMDontChange() {
         return (int)11L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMIsInvisible = 0;
+     * }
+     */
     public static int XIMIsInvisible() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMIsPrimary = 1;
+     * }
+     */
     public static int XIMIsPrimary() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMIsSecondary = 2;
+     * }
+     */
     public static int XIMIsSecondary() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMTextType = 0;
+     * }
+     */
     public static int XIMTextType() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * enum .XIMBitmapType = 1;
+     * }
+     */
     public static int XIMBitmapType() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * typedef unsigned long XIMHotKeyState;
+     * }
+     */
+    public static final OfLong XIMHotKeyState = Constants$root.C_LONG_LONG$LAYOUT;
     public static MemoryLayout _Xdebug$LAYOUT() {
-        return constants$2._Xdebug$LAYOUT;
+        return constants$1._Xdebug$LAYOUT;
     }
     public static VarHandle _Xdebug$VH() {
-        return constants$2._Xdebug$VH;
+        return constants$1._Xdebug$VH;
     }
     public static MemorySegment _Xdebug$SEGMENT() {
-        return RuntimeHelper.requireNonNull(constants$2._Xdebug$SEGMENT,"_Xdebug");
+        return RuntimeHelper.requireNonNull(constants$1._Xdebug$SEGMENT,"_Xdebug");
     }
+    /**
+     * Getter for variable:
+     * {@snippet :
+     * int _Xdebug;
+     * }
+     */
     public static int _Xdebug$get() {
-        return (int) constants$2._Xdebug$VH.get(RuntimeHelper.requireNonNull(constants$2._Xdebug$SEGMENT, "_Xdebug"));
+        return (int) constants$1._Xdebug$VH.get(RuntimeHelper.requireNonNull(constants$1._Xdebug$SEGMENT, "_Xdebug"));
     }
-    public static void _Xdebug$set( int x) {
-        constants$2._Xdebug$VH.set(RuntimeHelper.requireNonNull(constants$2._Xdebug$SEGMENT, "_Xdebug"), x);
+    /**
+     * Setter for variable:
+     * {@snippet :
+     * int _Xdebug;
+     * }
+     */
+    public static void _Xdebug$set(int x) {
+        constants$1._Xdebug$VH.set(RuntimeHelper.requireNonNull(constants$1._Xdebug$SEGMENT, "_Xdebug"), x);
     }
     public static MethodHandle XLoadQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XLoadQueryFont$MH,"XLoadQueryFont");
+        return RuntimeHelper.requireNonNull(constants$1.XLoadQueryFont$MH,"XLoadQueryFont");
     }
-    public static MemoryAddress XLoadQueryFont ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * XFontStruct* XLoadQueryFont(Display*, char*);
+     * }
+     */
+    public static MemorySegment XLoadQueryFont(MemorySegment x0, MemorySegment x1) {
         var mh$ = XLoadQueryFont$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XQueryFont$MH,"XQueryFont");
+        return RuntimeHelper.requireNonNull(constants$1.XQueryFont$MH,"XQueryFont");
     }
-    public static MemoryAddress XQueryFont ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * XFontStruct* XQueryFont(Display*, XID);
+     * }
+     */
+    public static MemorySegment XQueryFont(MemorySegment x0, long x1) {
         var mh$ = XQueryFont$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetMotionEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XGetMotionEvents$MH,"XGetMotionEvents");
+        return RuntimeHelper.requireNonNull(constants$2.XGetMotionEvents$MH,"XGetMotionEvents");
     }
-    public static MemoryAddress XGetMotionEvents ( Addressable x0,  long x1,  long x2,  long x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * XTimeCoord* XGetMotionEvents(Display*, Window, Time, Time, int*);
+     * }
+     */
+    public static MemorySegment XGetMotionEvents(MemorySegment x0, long x1, long x2, long x3, MemorySegment x4) {
         var mh$ = XGetMotionEvents$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDeleteModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XDeleteModifiermapEntry$MH,"XDeleteModifiermapEntry");
+        return RuntimeHelper.requireNonNull(constants$2.XDeleteModifiermapEntry$MH,"XDeleteModifiermapEntry");
     }
-    public static MemoryAddress XDeleteModifiermapEntry ( Addressable x0,  byte x1,  int x2) {
+    /**
+     * {@snippet :
+     * XModifierKeymap* XDeleteModifiermapEntry(XModifierKeymap*, KeyCode, int);
+     * }
+     */
+    public static MemorySegment XDeleteModifiermapEntry(MemorySegment x0, byte x1, int x2) {
         var mh$ = XDeleteModifiermapEntry$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetModifierMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XGetModifierMapping$MH,"XGetModifierMapping");
+        return RuntimeHelper.requireNonNull(constants$2.XGetModifierMapping$MH,"XGetModifierMapping");
     }
-    public static MemoryAddress XGetModifierMapping ( Addressable x0) {
+    /**
+     * {@snippet :
+     * XModifierKeymap* XGetModifierMapping(Display*);
+     * }
+     */
+    public static MemorySegment XGetModifierMapping(MemorySegment x0) {
         var mh$ = XGetModifierMapping$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XInsertModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XInsertModifiermapEntry$MH,"XInsertModifiermapEntry");
+        return RuntimeHelper.requireNonNull(constants$2.XInsertModifiermapEntry$MH,"XInsertModifiermapEntry");
     }
-    public static MemoryAddress XInsertModifiermapEntry ( Addressable x0,  byte x1,  int x2) {
+    /**
+     * {@snippet :
+     * XModifierKeymap* XInsertModifiermapEntry(XModifierKeymap*, KeyCode, int);
+     * }
+     */
+    public static MemorySegment XInsertModifiermapEntry(MemorySegment x0, byte x1, int x2) {
         var mh$ = XInsertModifiermapEntry$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XNewModifiermap$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XNewModifiermap$MH,"XNewModifiermap");
+        return RuntimeHelper.requireNonNull(constants$2.XNewModifiermap$MH,"XNewModifiermap");
     }
-    public static MemoryAddress XNewModifiermap ( int x0) {
+    /**
+     * {@snippet :
+     * XModifierKeymap* XNewModifiermap(int);
+     * }
+     */
+    public static MemorySegment XNewModifiermap(int x0) {
         var mh$ = XNewModifiermap$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XCreateImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XCreateImage$MH,"XCreateImage");
+        return RuntimeHelper.requireNonNull(constants$2.XCreateImage$MH,"XCreateImage");
     }
-    public static MemoryAddress XCreateImage ( Addressable x0,  Addressable x1,  int x2,  int x3,  int x4,  Addressable x5,  int x6,  int x7,  int x8,  int x9) {
+    /**
+     * {@snippet :
+     * XImage* XCreateImage(Display*, Visual*, unsigned int, int, int, char*, unsigned int, unsigned int, int, int);
+     * }
+     */
+    public static MemorySegment XCreateImage(MemorySegment x0, MemorySegment x1, int x2, int x3, int x4, MemorySegment x5, int x6, int x7, int x8, int x9) {
         var mh$ = XCreateImage$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XInitImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XInitImage$MH,"XInitImage");
+        return RuntimeHelper.requireNonNull(constants$3.XInitImage$MH,"XInitImage");
     }
-    public static int XInitImage ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XInitImage(XImage*);
+     * }
+     */
+    public static int XInitImage(MemorySegment x0) {
         var mh$ = XInitImage$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -1122,42 +3319,62 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XGetImage$MH,"XGetImage");
+        return RuntimeHelper.requireNonNull(constants$3.XGetImage$MH,"XGetImage");
     }
-    public static MemoryAddress XGetImage ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  int x7) {
+    /**
+     * {@snippet :
+     * XImage* XGetImage(Display*, Drawable, int, int, unsigned int, unsigned int, unsigned long, int);
+     * }
+     */
+    public static MemorySegment XGetImage(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, long x6, int x7) {
         var mh$ = XGetImage$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetSubImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XGetSubImage$MH,"XGetSubImage");
+        return RuntimeHelper.requireNonNull(constants$3.XGetSubImage$MH,"XGetSubImage");
     }
-    public static MemoryAddress XGetSubImage ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  int x7,  Addressable x8,  int x9,  int x10) {
+    /**
+     * {@snippet :
+     * XImage* XGetSubImage(Display*, Drawable, int, int, unsigned int, unsigned int, unsigned long, int, XImage*, int, int);
+     * }
+     */
+    public static MemorySegment XGetSubImage(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, long x6, int x7, MemorySegment x8, int x9, int x10) {
         var mh$ = XGetSubImage$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XOpenDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XOpenDisplay$MH,"XOpenDisplay");
+        return RuntimeHelper.requireNonNull(constants$3.XOpenDisplay$MH,"XOpenDisplay");
     }
-    public static MemoryAddress XOpenDisplay ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Display* XOpenDisplay(char*);
+     * }
+     */
+    public static MemorySegment XOpenDisplay(MemorySegment x0) {
         var mh$ = XOpenDisplay$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XrmInitialize$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XrmInitialize$MH,"XrmInitialize");
+        return RuntimeHelper.requireNonNull(constants$3.XrmInitialize$MH,"XrmInitialize");
     }
-    public static void XrmInitialize () {
+    /**
+     * {@snippet :
+     * void XrmInitialize();
+     * }
+     */
+    public static void XrmInitialize() {
         var mh$ = XrmInitialize$MH();
         try {
             mh$.invokeExact();
@@ -1166,42 +3383,62 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFetchBytes$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XFetchBytes$MH,"XFetchBytes");
+        return RuntimeHelper.requireNonNull(constants$3.XFetchBytes$MH,"XFetchBytes");
     }
-    public static MemoryAddress XFetchBytes ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * char* XFetchBytes(Display*, int*);
+     * }
+     */
+    public static MemorySegment XFetchBytes(MemorySegment x0, MemorySegment x1) {
         var mh$ = XFetchBytes$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XFetchBuffer$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XFetchBuffer$MH,"XFetchBuffer");
+        return RuntimeHelper.requireNonNull(constants$4.XFetchBuffer$MH,"XFetchBuffer");
     }
-    public static MemoryAddress XFetchBuffer ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * char* XFetchBuffer(Display*, int*, int);
+     * }
+     */
+    public static MemorySegment XFetchBuffer(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XFetchBuffer$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetAtomName$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XGetAtomName$MH,"XGetAtomName");
+        return RuntimeHelper.requireNonNull(constants$4.XGetAtomName$MH,"XGetAtomName");
     }
-    public static MemoryAddress XGetAtomName ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * char* XGetAtomName(Display*, Atom);
+     * }
+     */
+    public static MemorySegment XGetAtomName(MemorySegment x0, long x1) {
         var mh$ = XGetAtomName$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetAtomNames$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XGetAtomNames$MH,"XGetAtomNames");
+        return RuntimeHelper.requireNonNull(constants$4.XGetAtomNames$MH,"XGetAtomNames");
     }
-    public static int XGetAtomNames ( Addressable x0,  Addressable x1,  int x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetAtomNames(Display*, Atom*, int, char**);
+     * }
+     */
+    public static int XGetAtomNames(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3) {
         var mh$ = XGetAtomNames$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -1210,45 +3447,65 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetDefault$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XGetDefault$MH,"XGetDefault");
+        return RuntimeHelper.requireNonNull(constants$4.XGetDefault$MH,"XGetDefault");
     }
-    public static MemoryAddress XGetDefault ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * char* XGetDefault(Display*, char*, char*);
+     * }
+     */
+    public static MemorySegment XGetDefault(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XGetDefault$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDisplayName$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XDisplayName$MH,"XDisplayName");
+        return RuntimeHelper.requireNonNull(constants$4.XDisplayName$MH,"XDisplayName");
     }
-    public static MemoryAddress XDisplayName ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XDisplayName(char*);
+     * }
+     */
+    public static MemorySegment XDisplayName(MemorySegment x0) {
         var mh$ = XDisplayName$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XKeysymToString$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XKeysymToString$MH,"XKeysymToString");
+        return RuntimeHelper.requireNonNull(constants$4.XKeysymToString$MH,"XKeysymToString");
     }
-    public static MemoryAddress XKeysymToString ( long x0) {
+    /**
+     * {@snippet :
+     * char* XKeysymToString(KeySym);
+     * }
+     */
+    public static MemorySegment XKeysymToString(long x0) {
         var mh$ = XKeysymToString$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XSynchronize$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XSynchronize$MH,"XSynchronize");
+        return RuntimeHelper.requireNonNull(constants$5.XSynchronize$MH,"XSynchronize");
     }
-    public static MemoryAddress XSynchronize ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int (*XSynchronize(Display*, int))(Display*);
+     * }
+     */
+    public static MemorySegment XSynchronize(MemorySegment x0, int x1) {
         var mh$ = XSynchronize$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1256,10 +3513,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetAfterFunction$MH() {
         return RuntimeHelper.requireNonNull(constants$6.XSetAfterFunction$MH,"XSetAfterFunction");
     }
-    public static MemoryAddress XSetAfterFunction ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int (*XSetAfterFunction(Display*, int (*)(Display*)))(Display*);
+     * }
+     */
+    public static MemorySegment XSetAfterFunction(MemorySegment x0, MemorySegment x1) {
         var mh$ = XSetAfterFunction$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1267,7 +3529,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XInternAtom$MH() {
         return RuntimeHelper.requireNonNull(constants$6.XInternAtom$MH,"XInternAtom");
     }
-    public static long XInternAtom ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * Atom XInternAtom(Display*, char*, int);
+     * }
+     */
+    public static long XInternAtom(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XInternAtom$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2);
@@ -1278,7 +3545,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XInternAtoms$MH() {
         return RuntimeHelper.requireNonNull(constants$6.XInternAtoms$MH,"XInternAtoms");
     }
-    public static int XInternAtoms ( Addressable x0,  Addressable x1,  int x2,  int x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XInternAtoms(Display*, char**, int, int, Atom*);
+     * }
+     */
+    public static int XInternAtoms(MemorySegment x0, MemorySegment x1, int x2, int x3, MemorySegment x4) {
         var mh$ = XInternAtoms$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -1287,9 +3559,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCopyColormapAndFree$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCopyColormapAndFree$MH,"XCopyColormapAndFree");
+        return RuntimeHelper.requireNonNull(constants$6.XCopyColormapAndFree$MH,"XCopyColormapAndFree");
     }
-    public static long XCopyColormapAndFree ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * Colormap XCopyColormapAndFree(Display*, Colormap);
+     * }
+     */
+    public static long XCopyColormapAndFree(MemorySegment x0, long x1) {
         var mh$ = XCopyColormapAndFree$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1298,9 +3575,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCreateColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreateColormap$MH,"XCreateColormap");
+        return RuntimeHelper.requireNonNull(constants$6.XCreateColormap$MH,"XCreateColormap");
     }
-    public static long XCreateColormap ( Addressable x0,  long x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * Colormap XCreateColormap(Display*, Window, Visual*, int);
+     * }
+     */
+    public static long XCreateColormap(MemorySegment x0, long x1, MemorySegment x2, int x3) {
         var mh$ = XCreateColormap$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3);
@@ -1311,7 +3593,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreatePixmapCursor$MH() {
         return RuntimeHelper.requireNonNull(constants$7.XCreatePixmapCursor$MH,"XCreatePixmapCursor");
     }
-    public static long XCreatePixmapCursor ( Addressable x0,  long x1,  long x2,  Addressable x3,  Addressable x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * Cursor XCreatePixmapCursor(Display*, Pixmap, Pixmap, XColor*, XColor*, unsigned int, unsigned int);
+     * }
+     */
+    public static long XCreatePixmapCursor(MemorySegment x0, long x1, long x2, MemorySegment x3, MemorySegment x4, int x5, int x6) {
         var mh$ = XCreatePixmapCursor$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -1322,7 +3609,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateGlyphCursor$MH() {
         return RuntimeHelper.requireNonNull(constants$7.XCreateGlyphCursor$MH,"XCreateGlyphCursor");
     }
-    public static long XCreateGlyphCursor ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6) {
+    /**
+     * {@snippet :
+     * Cursor XCreateGlyphCursor(Display*, Font, Font, unsigned int, unsigned int, const XColor*, const XColor*);
+     * }
+     */
+    public static long XCreateGlyphCursor(MemorySegment x0, long x1, long x2, int x3, int x4, MemorySegment x5, MemorySegment x6) {
         var mh$ = XCreateGlyphCursor$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -1333,7 +3625,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateFontCursor$MH() {
         return RuntimeHelper.requireNonNull(constants$7.XCreateFontCursor$MH,"XCreateFontCursor");
     }
-    public static long XCreateFontCursor ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * Cursor XCreateFontCursor(Display*, unsigned int);
+     * }
+     */
+    public static long XCreateFontCursor(MemorySegment x0, int x1) {
         var mh$ = XCreateFontCursor$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1344,7 +3641,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLoadFont$MH() {
         return RuntimeHelper.requireNonNull(constants$7.XLoadFont$MH,"XLoadFont");
     }
-    public static long XLoadFont ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * Font XLoadFont(Display*, char*);
+     * }
+     */
+    public static long XLoadFont(MemorySegment x0, MemorySegment x1) {
         var mh$ = XLoadFont$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1353,20 +3655,30 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCreateGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreateGC$MH,"XCreateGC");
+        return RuntimeHelper.requireNonNull(constants$7.XCreateGC$MH,"XCreateGC");
     }
-    public static MemoryAddress XCreateGC ( Addressable x0,  long x1,  long x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * GC XCreateGC(Display*, Drawable, unsigned long, XGCValues*);
+     * }
+     */
+    public static MemorySegment XCreateGC(MemorySegment x0, long x1, long x2, MemorySegment x3) {
         var mh$ = XCreateGC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGContextFromGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XGContextFromGC$MH,"XGContextFromGC");
+        return RuntimeHelper.requireNonNull(constants$7.XGContextFromGC$MH,"XGContextFromGC");
     }
-    public static long XGContextFromGC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * GContext XGContextFromGC(GC);
+     * }
+     */
+    public static long XGContextFromGC(MemorySegment x0) {
         var mh$ = XGContextFromGC$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1377,7 +3689,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFlushGC$MH() {
         return RuntimeHelper.requireNonNull(constants$8.XFlushGC$MH,"XFlushGC");
     }
-    public static void XFlushGC ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * void XFlushGC(Display*, GC);
+     * }
+     */
+    public static void XFlushGC(MemorySegment x0, MemorySegment x1) {
         var mh$ = XFlushGC$MH();
         try {
             mh$.invokeExact(x0, x1);
@@ -1388,7 +3705,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreatePixmap$MH() {
         return RuntimeHelper.requireNonNull(constants$8.XCreatePixmap$MH,"XCreatePixmap");
     }
-    public static long XCreatePixmap ( Addressable x0,  long x1,  int x2,  int x3,  int x4) {
+    /**
+     * {@snippet :
+     * Pixmap XCreatePixmap(Display*, Drawable, unsigned int, unsigned int, unsigned int);
+     * }
+     */
+    public static long XCreatePixmap(MemorySegment x0, long x1, int x2, int x3, int x4) {
         var mh$ = XCreatePixmap$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -1399,7 +3721,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateBitmapFromData$MH() {
         return RuntimeHelper.requireNonNull(constants$8.XCreateBitmapFromData$MH,"XCreateBitmapFromData");
     }
-    public static long XCreateBitmapFromData ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
+    /**
+     * {@snippet :
+     * Pixmap XCreateBitmapFromData(Display*, Drawable, char*, unsigned int, unsigned int);
+     * }
+     */
+    public static long XCreateBitmapFromData(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4) {
         var mh$ = XCreateBitmapFromData$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -1410,7 +3737,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreatePixmapFromBitmapData$MH() {
         return RuntimeHelper.requireNonNull(constants$8.XCreatePixmapFromBitmapData$MH,"XCreatePixmapFromBitmapData");
     }
-    public static long XCreatePixmapFromBitmapData ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  long x5,  long x6,  int x7) {
+    /**
+     * {@snippet :
+     * Pixmap XCreatePixmapFromBitmapData(Display*, Drawable, char*, unsigned int, unsigned int, unsigned long, unsigned long, unsigned int);
+     * }
+     */
+    public static long XCreatePixmapFromBitmapData(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, long x5, long x6, int x7) {
         var mh$ = XCreatePixmapFromBitmapData$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -1419,9 +3751,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCreateSimpleWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XCreateSimpleWindow$MH,"XCreateSimpleWindow");
+        return RuntimeHelper.requireNonNull(constants$8.XCreateSimpleWindow$MH,"XCreateSimpleWindow");
     }
-    public static long XCreateSimpleWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6,  long x7,  long x8) {
+    /**
+     * {@snippet :
+     * Window XCreateSimpleWindow(Display*, Window, int, int, unsigned int, unsigned int, unsigned int, unsigned long, unsigned long);
+     * }
+     */
+    public static long XCreateSimpleWindow(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, int x6, long x7, long x8) {
         var mh$ = XCreateSimpleWindow$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -1430,9 +3767,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetSelectionOwner$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XGetSelectionOwner$MH,"XGetSelectionOwner");
+        return RuntimeHelper.requireNonNull(constants$8.XGetSelectionOwner$MH,"XGetSelectionOwner");
     }
-    public static long XGetSelectionOwner ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * Window XGetSelectionOwner(Display*, Atom);
+     * }
+     */
+    public static long XGetSelectionOwner(MemorySegment x0, long x1) {
         var mh$ = XGetSelectionOwner$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1443,7 +3785,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$9.XCreateWindow$MH,"XCreateWindow");
     }
-    public static long XCreateWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8,  Addressable x9,  long x10,  Addressable x11) {
+    /**
+     * {@snippet :
+     * Window XCreateWindow(Display*, Window, int, int, unsigned int, unsigned int, unsigned int, int, unsigned int, Visual*, unsigned long, XSetWindowAttributes*);
+     * }
+     */
+    public static long XCreateWindow(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, int x6, int x7, int x8, MemorySegment x9, long x10, MemorySegment x11) {
         var mh$ = XCreateWindow$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
@@ -1454,10 +3801,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XListInstalledColormaps$MH() {
         return RuntimeHelper.requireNonNull(constants$9.XListInstalledColormaps$MH,"XListInstalledColormaps");
     }
-    public static MemoryAddress XListInstalledColormaps ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * Colormap* XListInstalledColormaps(Display*, Window, int*);
+     * }
+     */
+    public static MemorySegment XListInstalledColormaps(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XListInstalledColormaps$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1465,10 +3817,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XListFonts$MH() {
         return RuntimeHelper.requireNonNull(constants$9.XListFonts$MH,"XListFonts");
     }
-    public static MemoryAddress XListFonts ( Addressable x0,  Addressable x1,  int x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * char** XListFonts(Display*, char*, int, int*);
+     * }
+     */
+    public static MemorySegment XListFonts(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3) {
         var mh$ = XListFonts$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1476,32 +3833,47 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XListFontsWithInfo$MH() {
         return RuntimeHelper.requireNonNull(constants$9.XListFontsWithInfo$MH,"XListFontsWithInfo");
     }
-    public static MemoryAddress XListFontsWithInfo ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * char** XListFontsWithInfo(Display*, char*, int, int*, XFontStruct**);
+     * }
+     */
+    public static MemorySegment XListFontsWithInfo(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XListFontsWithInfo$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XGetFontPath$MH,"XGetFontPath");
+        return RuntimeHelper.requireNonNull(constants$9.XGetFontPath$MH,"XGetFontPath");
     }
-    public static MemoryAddress XGetFontPath ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * char** XGetFontPath(Display*, int*);
+     * }
+     */
+    public static MemorySegment XGetFontPath(MemorySegment x0, MemorySegment x1) {
         var mh$ = XGetFontPath$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XListExtensions$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XListExtensions$MH,"XListExtensions");
+        return RuntimeHelper.requireNonNull(constants$9.XListExtensions$MH,"XListExtensions");
     }
-    public static MemoryAddress XListExtensions ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * char** XListExtensions(Display*, int*);
+     * }
+     */
+    public static MemorySegment XListExtensions(MemorySegment x0, MemorySegment x1) {
         var mh$ = XListExtensions$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1509,10 +3881,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XListProperties$MH() {
         return RuntimeHelper.requireNonNull(constants$10.XListProperties$MH,"XListProperties");
     }
-    public static MemoryAddress XListProperties ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * Atom* XListProperties(Display*, Window, int*);
+     * }
+     */
+    public static MemorySegment XListProperties(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XListProperties$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1520,10 +3897,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XListHosts$MH() {
         return RuntimeHelper.requireNonNull(constants$10.XListHosts$MH,"XListHosts");
     }
-    public static MemoryAddress XListHosts ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * XHostAddress* XListHosts(Display*, int*, int*);
+     * }
+     */
+    public static MemorySegment XListHosts(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XListHosts$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1531,7 +3913,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XKeycodeToKeysym$MH() {
         return RuntimeHelper.requireNonNull(constants$10.XKeycodeToKeysym$MH,"XKeycodeToKeysym");
     }
-    public static long XKeycodeToKeysym ( Addressable x0,  byte x1,  int x2) {
+    /**
+     * {@snippet :
+     * KeySym XKeycodeToKeysym(Display*, KeyCode, int);
+     * }
+     */
+    public static long XKeycodeToKeysym(MemorySegment x0, byte x1, int x2) {
         var mh$ = XKeycodeToKeysym$MH();
         try {
             return (long)mh$.invokeExact(x0, x1, x2);
@@ -1542,7 +3929,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLookupKeysym$MH() {
         return RuntimeHelper.requireNonNull(constants$10.XLookupKeysym$MH,"XLookupKeysym");
     }
-    public static long XLookupKeysym ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * KeySym XLookupKeysym(XKeyEvent*, int);
+     * }
+     */
+    public static long XLookupKeysym(MemorySegment x0, int x1) {
         var mh$ = XLookupKeysym$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1551,20 +3943,30 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XGetKeyboardMapping$MH,"XGetKeyboardMapping");
+        return RuntimeHelper.requireNonNull(constants$10.XGetKeyboardMapping$MH,"XGetKeyboardMapping");
     }
-    public static MemoryAddress XGetKeyboardMapping ( Addressable x0,  byte x1,  int x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * KeySym* XGetKeyboardMapping(Display*, KeyCode, int, int*);
+     * }
+     */
+    public static MemorySegment XGetKeyboardMapping(MemorySegment x0, byte x1, int x2, MemorySegment x3) {
         var mh$ = XGetKeyboardMapping$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XStringToKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XStringToKeysym$MH,"XStringToKeysym");
+        return RuntimeHelper.requireNonNull(constants$10.XStringToKeysym$MH,"XStringToKeysym");
     }
-    public static long XStringToKeysym ( Addressable x0) {
+    /**
+     * {@snippet :
+     * KeySym XStringToKeysym(char*);
+     * }
+     */
+    public static long XStringToKeysym(MemorySegment x0) {
         var mh$ = XStringToKeysym$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1575,7 +3977,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XMaxRequestSize$MH() {
         return RuntimeHelper.requireNonNull(constants$11.XMaxRequestSize$MH,"XMaxRequestSize");
     }
-    public static long XMaxRequestSize ( Addressable x0) {
+    /**
+     * {@snippet :
+     * long XMaxRequestSize(Display*);
+     * }
+     */
+    public static long XMaxRequestSize(MemorySegment x0) {
         var mh$ = XMaxRequestSize$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1586,7 +3993,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XExtendedMaxRequestSize$MH() {
         return RuntimeHelper.requireNonNull(constants$11.XExtendedMaxRequestSize$MH,"XExtendedMaxRequestSize");
     }
-    public static long XExtendedMaxRequestSize ( Addressable x0) {
+    /**
+     * {@snippet :
+     * long XExtendedMaxRequestSize(Display*);
+     * }
+     */
+    public static long XExtendedMaxRequestSize(MemorySegment x0) {
         var mh$ = XExtendedMaxRequestSize$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1597,10 +4009,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XResourceManagerString$MH() {
         return RuntimeHelper.requireNonNull(constants$11.XResourceManagerString$MH,"XResourceManagerString");
     }
-    public static MemoryAddress XResourceManagerString ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XResourceManagerString(Display*);
+     * }
+     */
+    public static MemorySegment XResourceManagerString(MemorySegment x0) {
         var mh$ = XResourceManagerString$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1608,18 +4025,28 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XScreenResourceString$MH() {
         return RuntimeHelper.requireNonNull(constants$11.XScreenResourceString$MH,"XScreenResourceString");
     }
-    public static MemoryAddress XScreenResourceString ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XScreenResourceString(Screen*);
+     * }
+     */
+    public static MemorySegment XScreenResourceString(MemorySegment x0) {
         var mh$ = XScreenResourceString$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDisplayMotionBufferSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XDisplayMotionBufferSize$MH,"XDisplayMotionBufferSize");
+        return RuntimeHelper.requireNonNull(constants$11.XDisplayMotionBufferSize$MH,"XDisplayMotionBufferSize");
     }
-    public static long XDisplayMotionBufferSize ( Addressable x0) {
+    /**
+     * {@snippet :
+     * unsigned long XDisplayMotionBufferSize(Display*);
+     * }
+     */
+    public static long XDisplayMotionBufferSize(MemorySegment x0) {
         var mh$ = XDisplayMotionBufferSize$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1628,9 +4055,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XVisualIDFromVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XVisualIDFromVisual$MH,"XVisualIDFromVisual");
+        return RuntimeHelper.requireNonNull(constants$11.XVisualIDFromVisual$MH,"XVisualIDFromVisual");
     }
-    public static long XVisualIDFromVisual ( Addressable x0) {
+    /**
+     * {@snippet :
+     * VisualID XVisualIDFromVisual(Visual*);
+     * }
+     */
+    public static long XVisualIDFromVisual(MemorySegment x0) {
         var mh$ = XVisualIDFromVisual$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1641,7 +4073,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XInitThreads$MH() {
         return RuntimeHelper.requireNonNull(constants$12.XInitThreads$MH,"XInitThreads");
     }
-    public static int XInitThreads () {
+    /**
+     * {@snippet :
+     * int XInitThreads();
+     * }
+     */
+    public static int XInitThreads() {
         var mh$ = XInitThreads$MH();
         try {
             return (int)mh$.invokeExact();
@@ -1652,7 +4089,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLockDisplay$MH() {
         return RuntimeHelper.requireNonNull(constants$12.XLockDisplay$MH,"XLockDisplay");
     }
-    public static void XLockDisplay ( Addressable x0) {
+    /**
+     * {@snippet :
+     * void XLockDisplay(Display*);
+     * }
+     */
+    public static void XLockDisplay(MemorySegment x0) {
         var mh$ = XLockDisplay$MH();
         try {
             mh$.invokeExact(x0);
@@ -1663,7 +4105,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUnlockDisplay$MH() {
         return RuntimeHelper.requireNonNull(constants$12.XUnlockDisplay$MH,"XUnlockDisplay");
     }
-    public static void XUnlockDisplay ( Addressable x0) {
+    /**
+     * {@snippet :
+     * void XUnlockDisplay(Display*);
+     * }
+     */
+    public static void XUnlockDisplay(MemorySegment x0) {
         var mh$ = XUnlockDisplay$MH();
         try {
             mh$.invokeExact(x0);
@@ -1674,32 +4121,47 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XInitExtension$MH() {
         return RuntimeHelper.requireNonNull(constants$12.XInitExtension$MH,"XInitExtension");
     }
-    public static MemoryAddress XInitExtension ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * XExtCodes* XInitExtension(Display*, char*);
+     * }
+     */
+    public static MemorySegment XInitExtension(MemorySegment x0, MemorySegment x1) {
         var mh$ = XInitExtension$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XAddExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XAddExtension$MH,"XAddExtension");
+        return RuntimeHelper.requireNonNull(constants$12.XAddExtension$MH,"XAddExtension");
     }
-    public static MemoryAddress XAddExtension ( Addressable x0) {
+    /**
+     * {@snippet :
+     * XExtCodes* XAddExtension(Display*);
+     * }
+     */
+    public static MemorySegment XAddExtension(MemorySegment x0) {
         var mh$ = XAddExtension$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XFindOnExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XFindOnExtensionList$MH,"XFindOnExtensionList");
+        return RuntimeHelper.requireNonNull(constants$12.XFindOnExtensionList$MH,"XFindOnExtensionList");
     }
-    public static MemoryAddress XFindOnExtensionList ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * XExtData* XFindOnExtensionList(XExtData**, int);
+     * }
+     */
+    public static MemorySegment XFindOnExtensionList(MemorySegment x0, int x1) {
         var mh$ = XFindOnExtensionList$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1707,10 +4169,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XEHeadOfExtensionList$MH() {
         return RuntimeHelper.requireNonNull(constants$13.XEHeadOfExtensionList$MH,"XEHeadOfExtensionList");
     }
-    public static MemoryAddress XEHeadOfExtensionList ( MemorySegment x0) {
+    /**
+     * {@snippet :
+     * XExtData** XEHeadOfExtensionList(XEDataObject);
+     * }
+     */
+    public static MemorySegment XEHeadOfExtensionList(MemorySegment x0) {
         var mh$ = XEHeadOfExtensionList$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1718,7 +4185,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRootWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$13.XRootWindow$MH,"XRootWindow");
     }
-    public static long XRootWindow ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * Window XRootWindow(Display*, int);
+     * }
+     */
+    public static long XRootWindow(MemorySegment x0, int x1) {
         var mh$ = XRootWindow$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1729,7 +4201,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultRootWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$13.XDefaultRootWindow$MH,"XDefaultRootWindow");
     }
-    public static long XDefaultRootWindow ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Window XDefaultRootWindow(Display*);
+     * }
+     */
+    public static long XDefaultRootWindow(MemorySegment x0) {
         var mh$ = XDefaultRootWindow$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1740,7 +4217,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRootWindowOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$13.XRootWindowOfScreen$MH,"XRootWindowOfScreen");
     }
-    public static long XRootWindowOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Window XRootWindowOfScreen(Screen*);
+     * }
+     */
+    public static long XRootWindowOfScreen(MemorySegment x0) {
         var mh$ = XRootWindowOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1749,23 +4231,33 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDefaultVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultVisual$MH,"XDefaultVisual");
+        return RuntimeHelper.requireNonNull(constants$13.XDefaultVisual$MH,"XDefaultVisual");
     }
-    public static MemoryAddress XDefaultVisual ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * Visual* XDefaultVisual(Display*, int);
+     * }
+     */
+    public static MemorySegment XDefaultVisual(MemorySegment x0, int x1) {
         var mh$ = XDefaultVisual$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDefaultVisualOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultVisualOfScreen$MH,"XDefaultVisualOfScreen");
+        return RuntimeHelper.requireNonNull(constants$13.XDefaultVisualOfScreen$MH,"XDefaultVisualOfScreen");
     }
-    public static MemoryAddress XDefaultVisualOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Visual* XDefaultVisualOfScreen(Screen*);
+     * }
+     */
+    public static MemorySegment XDefaultVisualOfScreen(MemorySegment x0) {
         var mh$ = XDefaultVisualOfScreen$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1773,10 +4265,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultGC$MH() {
         return RuntimeHelper.requireNonNull(constants$14.XDefaultGC$MH,"XDefaultGC");
     }
-    public static MemoryAddress XDefaultGC ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * GC XDefaultGC(Display*, int);
+     * }
+     */
+    public static MemorySegment XDefaultGC(MemorySegment x0, int x1) {
         var mh$ = XDefaultGC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1784,10 +4281,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultGCOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$14.XDefaultGCOfScreen$MH,"XDefaultGCOfScreen");
     }
-    public static MemoryAddress XDefaultGCOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * GC XDefaultGCOfScreen(Screen*);
+     * }
+     */
+    public static MemorySegment XDefaultGCOfScreen(MemorySegment x0) {
         var mh$ = XDefaultGCOfScreen$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1795,7 +4297,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XBlackPixel$MH() {
         return RuntimeHelper.requireNonNull(constants$14.XBlackPixel$MH,"XBlackPixel");
     }
-    public static long XBlackPixel ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * unsigned long XBlackPixel(Display*, int);
+     * }
+     */
+    public static long XBlackPixel(MemorySegment x0, int x1) {
         var mh$ = XBlackPixel$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1806,7 +4313,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XWhitePixel$MH() {
         return RuntimeHelper.requireNonNull(constants$14.XWhitePixel$MH,"XWhitePixel");
     }
-    public static long XWhitePixel ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * unsigned long XWhitePixel(Display*, int);
+     * }
+     */
+    public static long XWhitePixel(MemorySegment x0, int x1) {
         var mh$ = XWhitePixel$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1815,9 +4327,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XAllPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XAllPlanes$MH,"XAllPlanes");
+        return RuntimeHelper.requireNonNull(constants$14.XAllPlanes$MH,"XAllPlanes");
     }
-    public static long XAllPlanes () {
+    /**
+     * {@snippet :
+     * unsigned long XAllPlanes();
+     * }
+     */
+    public static long XAllPlanes() {
         var mh$ = XAllPlanes$MH();
         try {
             return (long)mh$.invokeExact();
@@ -1826,9 +4343,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XBlackPixelOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XBlackPixelOfScreen$MH,"XBlackPixelOfScreen");
+        return RuntimeHelper.requireNonNull(constants$14.XBlackPixelOfScreen$MH,"XBlackPixelOfScreen");
     }
-    public static long XBlackPixelOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * unsigned long XBlackPixelOfScreen(Screen*);
+     * }
+     */
+    public static long XBlackPixelOfScreen(MemorySegment x0) {
         var mh$ = XBlackPixelOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1839,7 +4361,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XWhitePixelOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$15.XWhitePixelOfScreen$MH,"XWhitePixelOfScreen");
     }
-    public static long XWhitePixelOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * unsigned long XWhitePixelOfScreen(Screen*);
+     * }
+     */
+    public static long XWhitePixelOfScreen(MemorySegment x0) {
         var mh$ = XWhitePixelOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1850,7 +4377,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XNextRequest$MH() {
         return RuntimeHelper.requireNonNull(constants$15.XNextRequest$MH,"XNextRequest");
     }
-    public static long XNextRequest ( Addressable x0) {
+    /**
+     * {@snippet :
+     * unsigned long XNextRequest(Display*);
+     * }
+     */
+    public static long XNextRequest(MemorySegment x0) {
         var mh$ = XNextRequest$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1861,7 +4393,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLastKnownRequestProcessed$MH() {
         return RuntimeHelper.requireNonNull(constants$15.XLastKnownRequestProcessed$MH,"XLastKnownRequestProcessed");
     }
-    public static long XLastKnownRequestProcessed ( Addressable x0) {
+    /**
+     * {@snippet :
+     * unsigned long XLastKnownRequestProcessed(Display*);
+     * }
+     */
+    public static long XLastKnownRequestProcessed(MemorySegment x0) {
         var mh$ = XLastKnownRequestProcessed$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1872,29 +4409,44 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XServerVendor$MH() {
         return RuntimeHelper.requireNonNull(constants$15.XServerVendor$MH,"XServerVendor");
     }
-    public static MemoryAddress XServerVendor ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XServerVendor(Display*);
+     * }
+     */
+    public static MemorySegment XServerVendor(MemorySegment x0) {
         var mh$ = XServerVendor$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDisplayString$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDisplayString$MH,"XDisplayString");
+        return RuntimeHelper.requireNonNull(constants$15.XDisplayString$MH,"XDisplayString");
     }
-    public static MemoryAddress XDisplayString ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XDisplayString(Display*);
+     * }
+     */
+    public static MemorySegment XDisplayString(MemorySegment x0) {
         var mh$ = XDisplayString$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDefaultColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDefaultColormap$MH,"XDefaultColormap");
+        return RuntimeHelper.requireNonNull(constants$15.XDefaultColormap$MH,"XDefaultColormap");
     }
-    public static long XDefaultColormap ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * Colormap XDefaultColormap(Display*, int);
+     * }
+     */
+    public static long XDefaultColormap(MemorySegment x0, int x1) {
         var mh$ = XDefaultColormap$MH();
         try {
             return (long)mh$.invokeExact(x0, x1);
@@ -1905,7 +4457,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultColormapOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$16.XDefaultColormapOfScreen$MH,"XDefaultColormapOfScreen");
     }
-    public static long XDefaultColormapOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Colormap XDefaultColormapOfScreen(Screen*);
+     * }
+     */
+    public static long XDefaultColormapOfScreen(MemorySegment x0) {
         var mh$ = XDefaultColormapOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1916,10 +4473,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDisplayOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$16.XDisplayOfScreen$MH,"XDisplayOfScreen");
     }
-    public static MemoryAddress XDisplayOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Display* XDisplayOfScreen(Screen*);
+     * }
+     */
+    public static MemorySegment XDisplayOfScreen(MemorySegment x0) {
         var mh$ = XDisplayOfScreen$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1927,10 +4489,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XScreenOfDisplay$MH() {
         return RuntimeHelper.requireNonNull(constants$16.XScreenOfDisplay$MH,"XScreenOfDisplay");
     }
-    public static MemoryAddress XScreenOfDisplay ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * Screen* XScreenOfDisplay(Display*, int);
+     * }
+     */
+    public static MemorySegment XScreenOfDisplay(MemorySegment x0, int x1) {
         var mh$ = XScreenOfDisplay$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1938,18 +4505,28 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultScreenOfDisplay$MH() {
         return RuntimeHelper.requireNonNull(constants$16.XDefaultScreenOfDisplay$MH,"XDefaultScreenOfDisplay");
     }
-    public static MemoryAddress XDefaultScreenOfDisplay ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Screen* XDefaultScreenOfDisplay(Display*);
+     * }
+     */
+    public static MemorySegment XDefaultScreenOfDisplay(MemorySegment x0) {
         var mh$ = XDefaultScreenOfDisplay$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XEventMaskOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.XEventMaskOfScreen$MH,"XEventMaskOfScreen");
+        return RuntimeHelper.requireNonNull(constants$16.XEventMaskOfScreen$MH,"XEventMaskOfScreen");
     }
-    public static long XEventMaskOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * long XEventMaskOfScreen(Screen*);
+     * }
+     */
+    public static long XEventMaskOfScreen(MemorySegment x0) {
         var mh$ = XEventMaskOfScreen$MH();
         try {
             return (long)mh$.invokeExact(x0);
@@ -1958,9 +4535,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XScreenNumberOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.XScreenNumberOfScreen$MH,"XScreenNumberOfScreen");
+        return RuntimeHelper.requireNonNull(constants$16.XScreenNumberOfScreen$MH,"XScreenNumberOfScreen");
     }
-    public static int XScreenNumberOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XScreenNumberOfScreen(Screen*);
+     * }
+     */
+    public static int XScreenNumberOfScreen(MemorySegment x0) {
         var mh$ = XScreenNumberOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -1971,21 +4553,31 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetErrorHandler$MH() {
         return RuntimeHelper.requireNonNull(constants$17.XSetErrorHandler$MH,"XSetErrorHandler");
     }
-    public static MemoryAddress XSetErrorHandler ( Addressable x0) {
+    /**
+     * {@snippet :
+     * XErrorHandler XSetErrorHandler(XErrorHandler);
+     * }
+     */
+    public static MemorySegment XSetErrorHandler(MemorySegment x0) {
         var mh$ = XSetErrorHandler$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XSetIOErrorHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XSetIOErrorHandler$MH,"XSetIOErrorHandler");
+        return RuntimeHelper.requireNonNull(constants$17.XSetIOErrorHandler$MH,"XSetIOErrorHandler");
     }
-    public static MemoryAddress XSetIOErrorHandler ( Addressable x0) {
+    /**
+     * {@snippet :
+     * XIOErrorHandler XSetIOErrorHandler(XIOErrorHandler);
+     * }
+     */
+    public static MemorySegment XSetIOErrorHandler(MemorySegment x0) {
         var mh$ = XSetIOErrorHandler$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1993,10 +4585,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XListPixmapFormats$MH() {
         return RuntimeHelper.requireNonNull(constants$18.XListPixmapFormats$MH,"XListPixmapFormats");
     }
-    public static MemoryAddress XListPixmapFormats ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * XPixmapFormatValues* XListPixmapFormats(Display*, int*);
+     * }
+     */
+    public static MemorySegment XListPixmapFormats(MemorySegment x0, MemorySegment x1) {
         var mh$ = XListPixmapFormats$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -2004,10 +4601,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XListDepths$MH() {
         return RuntimeHelper.requireNonNull(constants$18.XListDepths$MH,"XListDepths");
     }
-    public static MemoryAddress XListDepths ( Addressable x0,  int x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int* XListDepths(Display*, int, int*);
+     * }
+     */
+    public static MemorySegment XListDepths(MemorySegment x0, int x1, MemorySegment x2) {
         var mh$ = XListDepths$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -2015,7 +4617,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XReconfigureWMWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$18.XReconfigureWMWindow$MH,"XReconfigureWMWindow");
     }
-    public static int XReconfigureWMWindow ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XReconfigureWMWindow(Display*, Window, int, unsigned int, XWindowChanges*);
+     * }
+     */
+    public static int XReconfigureWMWindow(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4) {
         var mh$ = XReconfigureWMWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2026,7 +4633,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetWMProtocols$MH() {
         return RuntimeHelper.requireNonNull(constants$18.XGetWMProtocols$MH,"XGetWMProtocols");
     }
-    public static int XGetWMProtocols ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetWMProtocols(Display*, Window, Atom**, int*);
+     * }
+     */
+    public static int XGetWMProtocols(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XGetWMProtocols$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2035,9 +4647,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetWMProtocols$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XSetWMProtocols$MH,"XSetWMProtocols");
+        return RuntimeHelper.requireNonNull(constants$18.XSetWMProtocols$MH,"XSetWMProtocols");
     }
-    public static int XSetWMProtocols ( Addressable x0,  long x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XSetWMProtocols(Display*, Window, Atom*, int);
+     * }
+     */
+    public static int XSetWMProtocols(MemorySegment x0, long x1, MemorySegment x2, int x3) {
         var mh$ = XSetWMProtocols$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2046,9 +4663,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XIconifyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XIconifyWindow$MH,"XIconifyWindow");
+        return RuntimeHelper.requireNonNull(constants$18.XIconifyWindow$MH,"XIconifyWindow");
     }
-    public static int XIconifyWindow ( Addressable x0,  long x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XIconifyWindow(Display*, Window, int);
+     * }
+     */
+    public static int XIconifyWindow(MemorySegment x0, long x1, int x2) {
         var mh$ = XIconifyWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2059,7 +4681,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XWithdrawWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$19.XWithdrawWindow$MH,"XWithdrawWindow");
     }
-    public static int XWithdrawWindow ( Addressable x0,  long x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XWithdrawWindow(Display*, Window, int);
+     * }
+     */
+    public static int XWithdrawWindow(MemorySegment x0, long x1, int x2) {
         var mh$ = XWithdrawWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2070,7 +4697,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetCommand$MH() {
         return RuntimeHelper.requireNonNull(constants$19.XGetCommand$MH,"XGetCommand");
     }
-    public static int XGetCommand ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetCommand(Display*, Window, char***, int*);
+     * }
+     */
+    public static int XGetCommand(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XGetCommand$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2081,7 +4713,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetWMColormapWindows$MH() {
         return RuntimeHelper.requireNonNull(constants$19.XGetWMColormapWindows$MH,"XGetWMColormapWindows");
     }
-    public static int XGetWMColormapWindows ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetWMColormapWindows(Display*, Window, Window**, int*);
+     * }
+     */
+    public static int XGetWMColormapWindows(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XGetWMColormapWindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2092,7 +4729,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWMColormapWindows$MH() {
         return RuntimeHelper.requireNonNull(constants$19.XSetWMColormapWindows$MH,"XSetWMColormapWindows");
     }
-    public static int XSetWMColormapWindows ( Addressable x0,  long x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XSetWMColormapWindows(Display*, Window, Window*, int);
+     * }
+     */
+    public static int XSetWMColormapWindows(MemorySegment x0, long x1, MemorySegment x2, int x3) {
         var mh$ = XSetWMColormapWindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2101,9 +4743,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFreeStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XFreeStringList$MH,"XFreeStringList");
+        return RuntimeHelper.requireNonNull(constants$19.XFreeStringList$MH,"XFreeStringList");
     }
-    public static void XFreeStringList ( Addressable x0) {
+    /**
+     * {@snippet :
+     * void XFreeStringList(char**);
+     * }
+     */
+    public static void XFreeStringList(MemorySegment x0) {
         var mh$ = XFreeStringList$MH();
         try {
             mh$.invokeExact(x0);
@@ -2112,9 +4759,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetTransientForHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XSetTransientForHint$MH,"XSetTransientForHint");
+        return RuntimeHelper.requireNonNull(constants$19.XSetTransientForHint$MH,"XSetTransientForHint");
     }
-    public static int XSetTransientForHint ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetTransientForHint(Display*, Window, Window);
+     * }
+     */
+    public static int XSetTransientForHint(MemorySegment x0, long x1, long x2) {
         var mh$ = XSetTransientForHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2125,7 +4777,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XActivateScreenSaver$MH() {
         return RuntimeHelper.requireNonNull(constants$20.XActivateScreenSaver$MH,"XActivateScreenSaver");
     }
-    public static int XActivateScreenSaver ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XActivateScreenSaver(Display*);
+     * }
+     */
+    public static int XActivateScreenSaver(MemorySegment x0) {
         var mh$ = XActivateScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2136,7 +4793,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAddHost$MH() {
         return RuntimeHelper.requireNonNull(constants$20.XAddHost$MH,"XAddHost");
     }
-    public static int XAddHost ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XAddHost(Display*, XHostAddress*);
+     * }
+     */
+    public static int XAddHost(MemorySegment x0, MemorySegment x1) {
         var mh$ = XAddHost$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2147,7 +4809,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAddHosts$MH() {
         return RuntimeHelper.requireNonNull(constants$20.XAddHosts$MH,"XAddHosts");
     }
-    public static int XAddHosts ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XAddHosts(Display*, XHostAddress*, int);
+     * }
+     */
+    public static int XAddHosts(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XAddHosts$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2158,7 +4825,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAddToExtensionList$MH() {
         return RuntimeHelper.requireNonNull(constants$20.XAddToExtensionList$MH,"XAddToExtensionList");
     }
-    public static int XAddToExtensionList ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XAddToExtensionList(struct _XExtData**, XExtData*);
+     * }
+     */
+    public static int XAddToExtensionList(MemorySegment x0, MemorySegment x1) {
         var mh$ = XAddToExtensionList$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2167,9 +4839,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XAddToSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAddToSaveSet$MH,"XAddToSaveSet");
+        return RuntimeHelper.requireNonNull(constants$20.XAddToSaveSet$MH,"XAddToSaveSet");
     }
-    public static int XAddToSaveSet ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XAddToSaveSet(Display*, Window);
+     * }
+     */
+    public static int XAddToSaveSet(MemorySegment x0, long x1) {
         var mh$ = XAddToSaveSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2178,9 +4855,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XAllocColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocColor$MH,"XAllocColor");
+        return RuntimeHelper.requireNonNull(constants$20.XAllocColor$MH,"XAllocColor");
     }
-    public static int XAllocColor ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XAllocColor(Display*, Colormap, XColor*);
+     * }
+     */
+    public static int XAllocColor(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XAllocColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2191,7 +4873,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAllocColorCells$MH() {
         return RuntimeHelper.requireNonNull(constants$21.XAllocColorCells$MH,"XAllocColorCells");
     }
-    public static int XAllocColorCells ( Addressable x0,  long x1,  int x2,  Addressable x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XAllocColorCells(Display*, Colormap, int, unsigned long*, unsigned int, unsigned long*, unsigned int);
+     * }
+     */
+    public static int XAllocColorCells(MemorySegment x0, long x1, int x2, MemorySegment x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XAllocColorCells$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2202,7 +4889,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAllocColorPlanes$MH() {
         return RuntimeHelper.requireNonNull(constants$21.XAllocColorPlanes$MH,"XAllocColorPlanes");
     }
-    public static int XAllocColorPlanes ( Addressable x0,  long x1,  int x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  Addressable x8,  Addressable x9,  Addressable x10) {
+    /**
+     * {@snippet :
+     * int XAllocColorPlanes(Display*, Colormap, int, unsigned long*, int, int, int, int, unsigned long*, unsigned long*, unsigned long*);
+     * }
+     */
+    public static int XAllocColorPlanes(MemorySegment x0, long x1, int x2, MemorySegment x3, int x4, int x5, int x6, int x7, MemorySegment x8, MemorySegment x9, MemorySegment x10) {
         var mh$ = XAllocColorPlanes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
@@ -2213,7 +4905,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAllocNamedColor$MH() {
         return RuntimeHelper.requireNonNull(constants$21.XAllocNamedColor$MH,"XAllocNamedColor");
     }
-    public static int XAllocNamedColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XAllocNamedColor(Display*, Colormap, char*, XColor*, XColor*);
+     * }
+     */
+    public static int XAllocNamedColor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XAllocNamedColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2224,7 +4921,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAllowEvents$MH() {
         return RuntimeHelper.requireNonNull(constants$21.XAllowEvents$MH,"XAllowEvents");
     }
-    public static int XAllowEvents ( Addressable x0,  int x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XAllowEvents(Display*, int, Time);
+     * }
+     */
+    public static int XAllowEvents(MemorySegment x0, int x1, long x2) {
         var mh$ = XAllowEvents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2233,9 +4935,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XAutoRepeatOff$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOff$MH,"XAutoRepeatOff");
+        return RuntimeHelper.requireNonNull(constants$21.XAutoRepeatOff$MH,"XAutoRepeatOff");
     }
-    public static int XAutoRepeatOff ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XAutoRepeatOff(Display*);
+     * }
+     */
+    public static int XAutoRepeatOff(MemorySegment x0) {
         var mh$ = XAutoRepeatOff$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2244,9 +4951,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XAutoRepeatOn$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XAutoRepeatOn$MH,"XAutoRepeatOn");
+        return RuntimeHelper.requireNonNull(constants$21.XAutoRepeatOn$MH,"XAutoRepeatOn");
     }
-    public static int XAutoRepeatOn ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XAutoRepeatOn(Display*);
+     * }
+     */
+    public static int XAutoRepeatOn(MemorySegment x0) {
         var mh$ = XAutoRepeatOn$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2257,7 +4969,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XBell$MH() {
         return RuntimeHelper.requireNonNull(constants$22.XBell$MH,"XBell");
     }
-    public static int XBell ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XBell(Display*, int);
+     * }
+     */
+    public static int XBell(MemorySegment x0, int x1) {
         var mh$ = XBell$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2268,7 +4985,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XBitmapBitOrder$MH() {
         return RuntimeHelper.requireNonNull(constants$22.XBitmapBitOrder$MH,"XBitmapBitOrder");
     }
-    public static int XBitmapBitOrder ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XBitmapBitOrder(Display*);
+     * }
+     */
+    public static int XBitmapBitOrder(MemorySegment x0) {
         var mh$ = XBitmapBitOrder$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2279,7 +5001,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XBitmapPad$MH() {
         return RuntimeHelper.requireNonNull(constants$22.XBitmapPad$MH,"XBitmapPad");
     }
-    public static int XBitmapPad ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XBitmapPad(Display*);
+     * }
+     */
+    public static int XBitmapPad(MemorySegment x0) {
         var mh$ = XBitmapPad$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2290,7 +5017,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XBitmapUnit$MH() {
         return RuntimeHelper.requireNonNull(constants$22.XBitmapUnit$MH,"XBitmapUnit");
     }
-    public static int XBitmapUnit ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XBitmapUnit(Display*);
+     * }
+     */
+    public static int XBitmapUnit(MemorySegment x0) {
         var mh$ = XBitmapUnit$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2299,9 +5031,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCellsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XCellsOfScreen$MH,"XCellsOfScreen");
+        return RuntimeHelper.requireNonNull(constants$22.XCellsOfScreen$MH,"XCellsOfScreen");
     }
-    public static int XCellsOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XCellsOfScreen(Screen*);
+     * }
+     */
+    public static int XCellsOfScreen(MemorySegment x0) {
         var mh$ = XCellsOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2310,9 +5047,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XChangeActivePointerGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeActivePointerGrab$MH,"XChangeActivePointerGrab");
+        return RuntimeHelper.requireNonNull(constants$22.XChangeActivePointerGrab$MH,"XChangeActivePointerGrab");
     }
-    public static int XChangeActivePointerGrab ( Addressable x0,  int x1,  long x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XChangeActivePointerGrab(Display*, unsigned int, Cursor, Time);
+     * }
+     */
+    public static int XChangeActivePointerGrab(MemorySegment x0, int x1, long x2, long x3) {
         var mh$ = XChangeActivePointerGrab$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2323,7 +5065,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XChangeGC$MH() {
         return RuntimeHelper.requireNonNull(constants$23.XChangeGC$MH,"XChangeGC");
     }
-    public static int XChangeGC ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XChangeGC(Display*, GC, unsigned long, XGCValues*);
+     * }
+     */
+    public static int XChangeGC(MemorySegment x0, MemorySegment x1, long x2, MemorySegment x3) {
         var mh$ = XChangeGC$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2334,7 +5081,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XChangeKeyboardControl$MH() {
         return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardControl$MH,"XChangeKeyboardControl");
     }
-    public static int XChangeKeyboardControl ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XChangeKeyboardControl(Display*, unsigned long, XKeyboardControl*);
+     * }
+     */
+    public static int XChangeKeyboardControl(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XChangeKeyboardControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2345,7 +5097,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XChangeKeyboardMapping$MH() {
         return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardMapping$MH,"XChangeKeyboardMapping");
     }
-    public static int XChangeKeyboardMapping ( Addressable x0,  int x1,  int x2,  Addressable x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XChangeKeyboardMapping(Display*, int, int, KeySym*, int);
+     * }
+     */
+    public static int XChangeKeyboardMapping(MemorySegment x0, int x1, int x2, MemorySegment x3, int x4) {
         var mh$ = XChangeKeyboardMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2356,7 +5113,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XChangePointerControl$MH() {
         return RuntimeHelper.requireNonNull(constants$23.XChangePointerControl$MH,"XChangePointerControl");
     }
-    public static int XChangePointerControl ( Addressable x0,  int x1,  int x2,  int x3,  int x4,  int x5) {
+    /**
+     * {@snippet :
+     * int XChangePointerControl(Display*, int, int, int, int, int);
+     * }
+     */
+    public static int XChangePointerControl(MemorySegment x0, int x1, int x2, int x3, int x4, int x5) {
         var mh$ = XChangePointerControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -2365,9 +5127,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XChangeProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XChangeProperty$MH,"XChangeProperty");
+        return RuntimeHelper.requireNonNull(constants$23.XChangeProperty$MH,"XChangeProperty");
     }
-    public static int XChangeProperty ( Addressable x0,  long x1,  long x2,  long x3,  int x4,  int x5,  Addressable x6,  int x7) {
+    /**
+     * {@snippet :
+     * int XChangeProperty(Display*, Window, Atom, Atom, int, int, unsigned char*, int);
+     * }
+     */
+    public static int XChangeProperty(MemorySegment x0, long x1, long x2, long x3, int x4, int x5, MemorySegment x6, int x7) {
         var mh$ = XChangeProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -2376,9 +5143,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XChangeSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XChangeSaveSet$MH,"XChangeSaveSet");
+        return RuntimeHelper.requireNonNull(constants$23.XChangeSaveSet$MH,"XChangeSaveSet");
     }
-    public static int XChangeSaveSet ( Addressable x0,  long x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XChangeSaveSet(Display*, Window, int);
+     * }
+     */
+    public static int XChangeSaveSet(MemorySegment x0, long x1, int x2) {
         var mh$ = XChangeSaveSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2389,7 +5161,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XChangeWindowAttributes$MH() {
         return RuntimeHelper.requireNonNull(constants$24.XChangeWindowAttributes$MH,"XChangeWindowAttributes");
     }
-    public static int XChangeWindowAttributes ( Addressable x0,  long x1,  long x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XChangeWindowAttributes(Display*, Window, unsigned long, XSetWindowAttributes*);
+     * }
+     */
+    public static int XChangeWindowAttributes(MemorySegment x0, long x1, long x2, MemorySegment x3) {
         var mh$ = XChangeWindowAttributes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2400,7 +5177,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCheckIfEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$24.XCheckIfEvent$MH,"XCheckIfEvent");
     }
-    public static int XCheckIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XCheckIfEvent(Display*, XEvent*, int (*)(Display*,XEvent*,XPointer), XPointer);
+     * }
+     */
+    public static int XCheckIfEvent(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XCheckIfEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2409,9 +5191,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCheckMaskEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckMaskEvent$MH,"XCheckMaskEvent");
+        return RuntimeHelper.requireNonNull(constants$24.XCheckMaskEvent$MH,"XCheckMaskEvent");
     }
-    public static int XCheckMaskEvent ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XCheckMaskEvent(Display*, long, XEvent*);
+     * }
+     */
+    public static int XCheckMaskEvent(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XCheckMaskEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2420,9 +5207,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCheckTypedEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckTypedEvent$MH,"XCheckTypedEvent");
+        return RuntimeHelper.requireNonNull(constants$24.XCheckTypedEvent$MH,"XCheckTypedEvent");
     }
-    public static int XCheckTypedEvent ( Addressable x0,  int x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XCheckTypedEvent(Display*, int, XEvent*);
+     * }
+     */
+    public static int XCheckTypedEvent(MemorySegment x0, int x1, MemorySegment x2) {
         var mh$ = XCheckTypedEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2433,7 +5225,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCheckTypedWindowEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$25.XCheckTypedWindowEvent$MH,"XCheckTypedWindowEvent");
     }
-    public static int XCheckTypedWindowEvent ( Addressable x0,  long x1,  int x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XCheckTypedWindowEvent(Display*, Window, int, XEvent*);
+     * }
+     */
+    public static int XCheckTypedWindowEvent(MemorySegment x0, long x1, int x2, MemorySegment x3) {
         var mh$ = XCheckTypedWindowEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2444,7 +5241,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCheckWindowEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$25.XCheckWindowEvent$MH,"XCheckWindowEvent");
     }
-    public static int XCheckWindowEvent ( Addressable x0,  long x1,  long x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XCheckWindowEvent(Display*, Window, long, XEvent*);
+     * }
+     */
+    public static int XCheckWindowEvent(MemorySegment x0, long x1, long x2, MemorySegment x3) {
         var mh$ = XCheckWindowEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2455,7 +5257,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCirculateSubwindows$MH() {
         return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindows$MH,"XCirculateSubwindows");
     }
-    public static int XCirculateSubwindows ( Addressable x0,  long x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XCirculateSubwindows(Display*, Window, int);
+     * }
+     */
+    public static int XCirculateSubwindows(MemorySegment x0, long x1, int x2) {
         var mh$ = XCirculateSubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2466,7 +5273,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCirculateSubwindowsDown$MH() {
         return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsDown$MH,"XCirculateSubwindowsDown");
     }
-    public static int XCirculateSubwindowsDown ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XCirculateSubwindowsDown(Display*, Window);
+     * }
+     */
+    public static int XCirculateSubwindowsDown(MemorySegment x0, long x1) {
         var mh$ = XCirculateSubwindowsDown$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2475,9 +5287,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCirculateSubwindowsUp$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XCirculateSubwindowsUp$MH,"XCirculateSubwindowsUp");
+        return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsUp$MH,"XCirculateSubwindowsUp");
     }
-    public static int XCirculateSubwindowsUp ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XCirculateSubwindowsUp(Display*, Window);
+     * }
+     */
+    public static int XCirculateSubwindowsUp(MemorySegment x0, long x1) {
         var mh$ = XCirculateSubwindowsUp$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2486,9 +5303,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XClearArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XClearArea$MH,"XClearArea");
+        return RuntimeHelper.requireNonNull(constants$25.XClearArea$MH,"XClearArea");
     }
-    public static int XClearArea ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XClearArea(Display*, Window, int, int, unsigned int, unsigned int, int);
+     * }
+     */
+    public static int XClearArea(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, int x6) {
         var mh$ = XClearArea$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2499,7 +5321,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XClearWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$26.XClearWindow$MH,"XClearWindow");
     }
-    public static int XClearWindow ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XClearWindow(Display*, Window);
+     * }
+     */
+    public static int XClearWindow(MemorySegment x0, long x1) {
         var mh$ = XClearWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2510,7 +5337,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCloseDisplay$MH() {
         return RuntimeHelper.requireNonNull(constants$26.XCloseDisplay$MH,"XCloseDisplay");
     }
-    public static int XCloseDisplay ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XCloseDisplay(Display*);
+     * }
+     */
+    public static int XCloseDisplay(MemorySegment x0) {
         var mh$ = XCloseDisplay$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2521,7 +5353,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XConfigureWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$26.XConfigureWindow$MH,"XConfigureWindow");
     }
-    public static int XConfigureWindow ( Addressable x0,  long x1,  int x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XConfigureWindow(Display*, Window, unsigned int, XWindowChanges*);
+     * }
+     */
+    public static int XConfigureWindow(MemorySegment x0, long x1, int x2, MemorySegment x3) {
         var mh$ = XConfigureWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2532,7 +5369,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XConnectionNumber$MH() {
         return RuntimeHelper.requireNonNull(constants$26.XConnectionNumber$MH,"XConnectionNumber");
     }
-    public static int XConnectionNumber ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XConnectionNumber(Display*);
+     * }
+     */
+    public static int XConnectionNumber(MemorySegment x0) {
         var mh$ = XConnectionNumber$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2541,9 +5383,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XConvertSelection$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XConvertSelection$MH,"XConvertSelection");
+        return RuntimeHelper.requireNonNull(constants$26.XConvertSelection$MH,"XConvertSelection");
     }
-    public static int XConvertSelection ( Addressable x0,  long x1,  long x2,  long x3,  long x4,  long x5) {
+    /**
+     * {@snippet :
+     * int XConvertSelection(Display*, Atom, Atom, Atom, Window, Time);
+     * }
+     */
+    public static int XConvertSelection(MemorySegment x0, long x1, long x2, long x3, long x4, long x5) {
         var mh$ = XConvertSelection$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -2552,9 +5399,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XCopyArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XCopyArea$MH,"XCopyArea");
+        return RuntimeHelper.requireNonNull(constants$26.XCopyArea$MH,"XCopyArea");
     }
-    public static int XCopyArea ( Addressable x0,  long x1,  long x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9) {
+    /**
+     * {@snippet :
+     * int XCopyArea(Display*, Drawable, Drawable, GC, int, int, unsigned int, unsigned int, int, int);
+     * }
+     */
+    public static int XCopyArea(MemorySegment x0, long x1, long x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, int x9) {
         var mh$ = XCopyArea$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
@@ -2565,7 +5417,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCopyGC$MH() {
         return RuntimeHelper.requireNonNull(constants$27.XCopyGC$MH,"XCopyGC");
     }
-    public static int XCopyGC ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XCopyGC(Display*, GC, unsigned long, GC);
+     * }
+     */
+    public static int XCopyGC(MemorySegment x0, MemorySegment x1, long x2, MemorySegment x3) {
         var mh$ = XCopyGC$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -2576,7 +5433,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCopyPlane$MH() {
         return RuntimeHelper.requireNonNull(constants$27.XCopyPlane$MH,"XCopyPlane");
     }
-    public static int XCopyPlane ( Addressable x0,  long x1,  long x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9,  long x10) {
+    /**
+     * {@snippet :
+     * int XCopyPlane(Display*, Drawable, Drawable, GC, int, int, unsigned int, unsigned int, int, int, unsigned long);
+     * }
+     */
+    public static int XCopyPlane(MemorySegment x0, long x1, long x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, int x9, long x10) {
         var mh$ = XCopyPlane$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
@@ -2587,7 +5449,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultDepth$MH() {
         return RuntimeHelper.requireNonNull(constants$27.XDefaultDepth$MH,"XDefaultDepth");
     }
-    public static int XDefaultDepth ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XDefaultDepth(Display*, int);
+     * }
+     */
+    public static int XDefaultDepth(MemorySegment x0, int x1) {
         var mh$ = XDefaultDepth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2598,7 +5465,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultDepthOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$27.XDefaultDepthOfScreen$MH,"XDefaultDepthOfScreen");
     }
-    public static int XDefaultDepthOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XDefaultDepthOfScreen(Screen*);
+     * }
+     */
+    public static int XDefaultDepthOfScreen(MemorySegment x0) {
         var mh$ = XDefaultDepthOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2607,9 +5479,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDefaultScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDefaultScreen$MH,"XDefaultScreen");
+        return RuntimeHelper.requireNonNull(constants$27.XDefaultScreen$MH,"XDefaultScreen");
     }
-    public static int XDefaultScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XDefaultScreen(Display*);
+     * }
+     */
+    public static int XDefaultScreen(MemorySegment x0) {
         var mh$ = XDefaultScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2618,9 +5495,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDefineCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDefineCursor$MH,"XDefineCursor");
+        return RuntimeHelper.requireNonNull(constants$27.XDefineCursor$MH,"XDefineCursor");
     }
-    public static int XDefineCursor ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XDefineCursor(Display*, Window, Cursor);
+     * }
+     */
+    public static int XDefineCursor(MemorySegment x0, long x1, long x2) {
         var mh$ = XDefineCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2631,7 +5513,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDeleteProperty$MH() {
         return RuntimeHelper.requireNonNull(constants$28.XDeleteProperty$MH,"XDeleteProperty");
     }
-    public static int XDeleteProperty ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XDeleteProperty(Display*, Window, Atom);
+     * }
+     */
+    public static int XDeleteProperty(MemorySegment x0, long x1, long x2) {
         var mh$ = XDeleteProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2642,7 +5529,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDestroyWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$28.XDestroyWindow$MH,"XDestroyWindow");
     }
-    public static int XDestroyWindow ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XDestroyWindow(Display*, Window);
+     * }
+     */
+    public static int XDestroyWindow(MemorySegment x0, long x1) {
         var mh$ = XDestroyWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2653,7 +5545,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDestroySubwindows$MH() {
         return RuntimeHelper.requireNonNull(constants$28.XDestroySubwindows$MH,"XDestroySubwindows");
     }
-    public static int XDestroySubwindows ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XDestroySubwindows(Display*, Window);
+     * }
+     */
+    public static int XDestroySubwindows(MemorySegment x0, long x1) {
         var mh$ = XDestroySubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2664,7 +5561,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDoesBackingStore$MH() {
         return RuntimeHelper.requireNonNull(constants$28.XDoesBackingStore$MH,"XDoesBackingStore");
     }
-    public static int XDoesBackingStore ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XDoesBackingStore(Screen*);
+     * }
+     */
+    public static int XDoesBackingStore(MemorySegment x0) {
         var mh$ = XDoesBackingStore$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2673,9 +5575,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDoesSaveUnders$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDoesSaveUnders$MH,"XDoesSaveUnders");
+        return RuntimeHelper.requireNonNull(constants$28.XDoesSaveUnders$MH,"XDoesSaveUnders");
     }
-    public static int XDoesSaveUnders ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XDoesSaveUnders(Screen*);
+     * }
+     */
+    public static int XDoesSaveUnders(MemorySegment x0) {
         var mh$ = XDoesSaveUnders$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2684,9 +5591,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDisableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisableAccessControl$MH,"XDisableAccessControl");
+        return RuntimeHelper.requireNonNull(constants$28.XDisableAccessControl$MH,"XDisableAccessControl");
     }
-    public static int XDisableAccessControl ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XDisableAccessControl(Display*);
+     * }
+     */
+    public static int XDisableAccessControl(MemorySegment x0) {
         var mh$ = XDisableAccessControl$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2697,7 +5609,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDisplayCells$MH() {
         return RuntimeHelper.requireNonNull(constants$29.XDisplayCells$MH,"XDisplayCells");
     }
-    public static int XDisplayCells ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XDisplayCells(Display*, int);
+     * }
+     */
+    public static int XDisplayCells(MemorySegment x0, int x1) {
         var mh$ = XDisplayCells$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2708,7 +5625,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDisplayHeight$MH() {
         return RuntimeHelper.requireNonNull(constants$29.XDisplayHeight$MH,"XDisplayHeight");
     }
-    public static int XDisplayHeight ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XDisplayHeight(Display*, int);
+     * }
+     */
+    public static int XDisplayHeight(MemorySegment x0, int x1) {
         var mh$ = XDisplayHeight$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2719,7 +5641,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDisplayHeightMM$MH() {
         return RuntimeHelper.requireNonNull(constants$29.XDisplayHeightMM$MH,"XDisplayHeightMM");
     }
-    public static int XDisplayHeightMM ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XDisplayHeightMM(Display*, int);
+     * }
+     */
+    public static int XDisplayHeightMM(MemorySegment x0, int x1) {
         var mh$ = XDisplayHeightMM$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2730,7 +5657,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDisplayKeycodes$MH() {
         return RuntimeHelper.requireNonNull(constants$29.XDisplayKeycodes$MH,"XDisplayKeycodes");
     }
-    public static int XDisplayKeycodes ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XDisplayKeycodes(Display*, int*, int*);
+     * }
+     */
+    public static int XDisplayKeycodes(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XDisplayKeycodes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2739,9 +5671,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDisplayPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDisplayPlanes$MH,"XDisplayPlanes");
+        return RuntimeHelper.requireNonNull(constants$29.XDisplayPlanes$MH,"XDisplayPlanes");
     }
-    public static int XDisplayPlanes ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XDisplayPlanes(Display*, int);
+     * }
+     */
+    public static int XDisplayPlanes(MemorySegment x0, int x1) {
         var mh$ = XDisplayPlanes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2750,9 +5687,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDisplayWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDisplayWidth$MH,"XDisplayWidth");
+        return RuntimeHelper.requireNonNull(constants$29.XDisplayWidth$MH,"XDisplayWidth");
     }
-    public static int XDisplayWidth ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XDisplayWidth(Display*, int);
+     * }
+     */
+    public static int XDisplayWidth(MemorySegment x0, int x1) {
         var mh$ = XDisplayWidth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2763,7 +5705,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDisplayWidthMM$MH() {
         return RuntimeHelper.requireNonNull(constants$30.XDisplayWidthMM$MH,"XDisplayWidthMM");
     }
-    public static int XDisplayWidthMM ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XDisplayWidthMM(Display*, int);
+     * }
+     */
+    public static int XDisplayWidthMM(MemorySegment x0, int x1) {
         var mh$ = XDisplayWidthMM$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2774,7 +5721,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawArc$MH() {
         return RuntimeHelper.requireNonNull(constants$30.XDrawArc$MH,"XDrawArc");
     }
-    public static int XDrawArc ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
+    /**
+     * {@snippet :
+     * int XDrawArc(Display*, Drawable, GC, int, int, unsigned int, unsigned int, int, int);
+     * }
+     */
+    public static int XDrawArc(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6, int x7, int x8) {
         var mh$ = XDrawArc$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -2785,7 +5737,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawArcs$MH() {
         return RuntimeHelper.requireNonNull(constants$30.XDrawArcs$MH,"XDrawArcs");
     }
-    public static int XDrawArcs ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XDrawArcs(Display*, Drawable, GC, XArc*, int);
+     * }
+     */
+    public static int XDrawArcs(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
         var mh$ = XDrawArcs$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2796,7 +5753,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawImageString$MH() {
         return RuntimeHelper.requireNonNull(constants$30.XDrawImageString$MH,"XDrawImageString");
     }
-    public static int XDrawImageString ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawImageString(Display*, Drawable, GC, int, int, char*, int);
+     * }
+     */
+    public static int XDrawImageString(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XDrawImageString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2805,9 +5767,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDrawImageString16$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawImageString16$MH,"XDrawImageString16");
+        return RuntimeHelper.requireNonNull(constants$30.XDrawImageString16$MH,"XDrawImageString16");
     }
-    public static int XDrawImageString16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawImageString16(Display*, Drawable, GC, int, int, const XChar2b*, int);
+     * }
+     */
+    public static int XDrawImageString16(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XDrawImageString16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2816,9 +5783,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDrawLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawLine$MH,"XDrawLine");
+        return RuntimeHelper.requireNonNull(constants$30.XDrawLine$MH,"XDrawLine");
     }
-    public static int XDrawLine ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawLine(Display*, Drawable, GC, int, int, int, int);
+     * }
+     */
+    public static int XDrawLine(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6) {
         var mh$ = XDrawLine$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2829,7 +5801,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawLines$MH() {
         return RuntimeHelper.requireNonNull(constants$31.XDrawLines$MH,"XDrawLines");
     }
-    public static int XDrawLines ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5) {
+    /**
+     * {@snippet :
+     * int XDrawLines(Display*, Drawable, GC, XPoint*, int, int);
+     * }
+     */
+    public static int XDrawLines(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5) {
         var mh$ = XDrawLines$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -2840,7 +5817,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawPoint$MH() {
         return RuntimeHelper.requireNonNull(constants$31.XDrawPoint$MH,"XDrawPoint");
     }
-    public static int XDrawPoint ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XDrawPoint(Display*, Drawable, GC, int, int);
+     * }
+     */
+    public static int XDrawPoint(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4) {
         var mh$ = XDrawPoint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2851,7 +5833,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawPoints$MH() {
         return RuntimeHelper.requireNonNull(constants$31.XDrawPoints$MH,"XDrawPoints");
     }
-    public static int XDrawPoints ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5) {
+    /**
+     * {@snippet :
+     * int XDrawPoints(Display*, Drawable, GC, XPoint*, int, int);
+     * }
+     */
+    public static int XDrawPoints(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5) {
         var mh$ = XDrawPoints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -2862,7 +5849,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawRectangle$MH() {
         return RuntimeHelper.requireNonNull(constants$31.XDrawRectangle$MH,"XDrawRectangle");
     }
-    public static int XDrawRectangle ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawRectangle(Display*, Drawable, GC, int, int, unsigned int, unsigned int);
+     * }
+     */
+    public static int XDrawRectangle(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6) {
         var mh$ = XDrawRectangle$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2871,9 +5863,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDrawRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawRectangles$MH,"XDrawRectangles");
+        return RuntimeHelper.requireNonNull(constants$31.XDrawRectangles$MH,"XDrawRectangles");
     }
-    public static int XDrawRectangles ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XDrawRectangles(Display*, Drawable, GC, XRectangle*, int);
+     * }
+     */
+    public static int XDrawRectangles(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
         var mh$ = XDrawRectangles$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2882,9 +5879,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDrawSegments$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawSegments$MH,"XDrawSegments");
+        return RuntimeHelper.requireNonNull(constants$31.XDrawSegments$MH,"XDrawSegments");
     }
-    public static int XDrawSegments ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XDrawSegments(Display*, Drawable, GC, XSegment*, int);
+     * }
+     */
+    public static int XDrawSegments(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
         var mh$ = XDrawSegments$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2895,7 +5897,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawString$MH() {
         return RuntimeHelper.requireNonNull(constants$32.XDrawString$MH,"XDrawString");
     }
-    public static int XDrawString ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawString(Display*, Drawable, GC, int, int, char*, int);
+     * }
+     */
+    public static int XDrawString(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XDrawString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2906,7 +5913,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawString16$MH() {
         return RuntimeHelper.requireNonNull(constants$32.XDrawString16$MH,"XDrawString16");
     }
-    public static int XDrawString16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawString16(Display*, Drawable, GC, int, int, const XChar2b*, int);
+     * }
+     */
+    public static int XDrawString16(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XDrawString16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2917,7 +5929,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawText$MH() {
         return RuntimeHelper.requireNonNull(constants$32.XDrawText$MH,"XDrawText");
     }
-    public static int XDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawText(Display*, Drawable, GC, int, int, XTextItem*, int);
+     * }
+     */
+    public static int XDrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XDrawText$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2928,7 +5945,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDrawText16$MH() {
         return RuntimeHelper.requireNonNull(constants$32.XDrawText16$MH,"XDrawText16");
     }
-    public static int XDrawText16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XDrawText16(Display*, Drawable, GC, int, int, XTextItem16*, int);
+     * }
+     */
+    public static int XDrawText16(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XDrawText16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -2937,9 +5959,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XEnableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XEnableAccessControl$MH,"XEnableAccessControl");
+        return RuntimeHelper.requireNonNull(constants$32.XEnableAccessControl$MH,"XEnableAccessControl");
     }
-    public static int XEnableAccessControl ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XEnableAccessControl(Display*);
+     * }
+     */
+    public static int XEnableAccessControl(MemorySegment x0) {
         var mh$ = XEnableAccessControl$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -2948,9 +5975,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XEventsQueued$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XEventsQueued$MH,"XEventsQueued");
+        return RuntimeHelper.requireNonNull(constants$32.XEventsQueued$MH,"XEventsQueued");
     }
-    public static int XEventsQueued ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XEventsQueued(Display*, int);
+     * }
+     */
+    public static int XEventsQueued(MemorySegment x0, int x1) {
         var mh$ = XEventsQueued$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -2961,7 +5993,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFetchName$MH() {
         return RuntimeHelper.requireNonNull(constants$33.XFetchName$MH,"XFetchName");
     }
-    public static int XFetchName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XFetchName(Display*, Window, char**);
+     * }
+     */
+    public static int XFetchName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XFetchName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -2972,7 +6009,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFillArc$MH() {
         return RuntimeHelper.requireNonNull(constants$33.XFillArc$MH,"XFillArc");
     }
-    public static int XFillArc ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
+    /**
+     * {@snippet :
+     * int XFillArc(Display*, Drawable, GC, int, int, unsigned int, unsigned int, int, int);
+     * }
+     */
+    public static int XFillArc(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6, int x7, int x8) {
         var mh$ = XFillArc$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -2983,7 +6025,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFillArcs$MH() {
         return RuntimeHelper.requireNonNull(constants$33.XFillArcs$MH,"XFillArcs");
     }
-    public static int XFillArcs ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XFillArcs(Display*, Drawable, GC, XArc*, int);
+     * }
+     */
+    public static int XFillArcs(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
         var mh$ = XFillArcs$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -2994,7 +6041,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFillPolygon$MH() {
         return RuntimeHelper.requireNonNull(constants$33.XFillPolygon$MH,"XFillPolygon");
     }
-    public static int XFillPolygon ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XFillPolygon(Display*, Drawable, GC, XPoint*, int, int, int);
+     * }
+     */
+    public static int XFillPolygon(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, int x6) {
         var mh$ = XFillPolygon$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -3003,9 +6055,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFillRectangle$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFillRectangle$MH,"XFillRectangle");
+        return RuntimeHelper.requireNonNull(constants$33.XFillRectangle$MH,"XFillRectangle");
     }
-    public static int XFillRectangle ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XFillRectangle(Display*, Drawable, GC, int, int, unsigned int, unsigned int);
+     * }
+     */
+    public static int XFillRectangle(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6) {
         var mh$ = XFillRectangle$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -3014,9 +6071,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFillRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFillRectangles$MH,"XFillRectangles");
+        return RuntimeHelper.requireNonNull(constants$33.XFillRectangles$MH,"XFillRectangles");
     }
-    public static int XFillRectangles ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XFillRectangles(Display*, Drawable, GC, XRectangle*, int);
+     * }
+     */
+    public static int XFillRectangles(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
         var mh$ = XFillRectangles$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -3027,7 +6089,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFlush$MH() {
         return RuntimeHelper.requireNonNull(constants$34.XFlush$MH,"XFlush");
     }
-    public static int XFlush ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XFlush(Display*);
+     * }
+     */
+    public static int XFlush(MemorySegment x0) {
         var mh$ = XFlush$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3038,7 +6105,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XForceScreenSaver$MH() {
         return RuntimeHelper.requireNonNull(constants$34.XForceScreenSaver$MH,"XForceScreenSaver");
     }
-    public static int XForceScreenSaver ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XForceScreenSaver(Display*, int);
+     * }
+     */
+    public static int XForceScreenSaver(MemorySegment x0, int x1) {
         var mh$ = XForceScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3049,7 +6121,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFree$MH() {
         return RuntimeHelper.requireNonNull(constants$34.XFree$MH,"XFree");
     }
-    public static int XFree ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XFree(void*);
+     * }
+     */
+    public static int XFree(MemorySegment x0) {
         var mh$ = XFree$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3060,7 +6137,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeColormap$MH() {
         return RuntimeHelper.requireNonNull(constants$34.XFreeColormap$MH,"XFreeColormap");
     }
-    public static int XFreeColormap ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XFreeColormap(Display*, Colormap);
+     * }
+     */
+    public static int XFreeColormap(MemorySegment x0, long x1) {
         var mh$ = XFreeColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3069,9 +6151,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFreeColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeColors$MH,"XFreeColors");
+        return RuntimeHelper.requireNonNull(constants$34.XFreeColors$MH,"XFreeColors");
     }
-    public static int XFreeColors ( Addressable x0,  long x1,  Addressable x2,  int x3,  long x4) {
+    /**
+     * {@snippet :
+     * int XFreeColors(Display*, Colormap, unsigned long*, int, unsigned long);
+     * }
+     */
+    public static int XFreeColors(MemorySegment x0, long x1, MemorySegment x2, int x3, long x4) {
         var mh$ = XFreeColors$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -3080,9 +6167,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFreeCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeCursor$MH,"XFreeCursor");
+        return RuntimeHelper.requireNonNull(constants$34.XFreeCursor$MH,"XFreeCursor");
     }
-    public static int XFreeCursor ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XFreeCursor(Display*, Cursor);
+     * }
+     */
+    public static int XFreeCursor(MemorySegment x0, long x1) {
         var mh$ = XFreeCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3093,7 +6185,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeExtensionList$MH() {
         return RuntimeHelper.requireNonNull(constants$35.XFreeExtensionList$MH,"XFreeExtensionList");
     }
-    public static int XFreeExtensionList ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XFreeExtensionList(char**);
+     * }
+     */
+    public static int XFreeExtensionList(MemorySegment x0) {
         var mh$ = XFreeExtensionList$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3104,7 +6201,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeFont$MH() {
         return RuntimeHelper.requireNonNull(constants$35.XFreeFont$MH,"XFreeFont");
     }
-    public static int XFreeFont ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XFreeFont(Display*, XFontStruct*);
+     * }
+     */
+    public static int XFreeFont(MemorySegment x0, MemorySegment x1) {
         var mh$ = XFreeFont$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3115,7 +6217,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeFontInfo$MH() {
         return RuntimeHelper.requireNonNull(constants$35.XFreeFontInfo$MH,"XFreeFontInfo");
     }
-    public static int XFreeFontInfo ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XFreeFontInfo(char**, XFontStruct*, int);
+     * }
+     */
+    public static int XFreeFontInfo(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XFreeFontInfo$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3126,7 +6233,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeFontNames$MH() {
         return RuntimeHelper.requireNonNull(constants$35.XFreeFontNames$MH,"XFreeFontNames");
     }
-    public static int XFreeFontNames ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XFreeFontNames(char**);
+     * }
+     */
+    public static int XFreeFontNames(MemorySegment x0) {
         var mh$ = XFreeFontNames$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3135,9 +6247,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFreeFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreeFontPath$MH,"XFreeFontPath");
+        return RuntimeHelper.requireNonNull(constants$35.XFreeFontPath$MH,"XFreeFontPath");
     }
-    public static int XFreeFontPath ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XFreeFontPath(char**);
+     * }
+     */
+    public static int XFreeFontPath(MemorySegment x0) {
         var mh$ = XFreeFontPath$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3146,9 +6263,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XFreeGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreeGC$MH,"XFreeGC");
+        return RuntimeHelper.requireNonNull(constants$35.XFreeGC$MH,"XFreeGC");
     }
-    public static int XFreeGC ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XFreeGC(Display*, GC);
+     * }
+     */
+    public static int XFreeGC(MemorySegment x0, MemorySegment x1) {
         var mh$ = XFreeGC$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3159,7 +6281,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeModifiermap$MH() {
         return RuntimeHelper.requireNonNull(constants$36.XFreeModifiermap$MH,"XFreeModifiermap");
     }
-    public static int XFreeModifiermap ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XFreeModifiermap(XModifierKeymap*);
+     * }
+     */
+    public static int XFreeModifiermap(MemorySegment x0) {
         var mh$ = XFreeModifiermap$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3170,7 +6297,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreePixmap$MH() {
         return RuntimeHelper.requireNonNull(constants$36.XFreePixmap$MH,"XFreePixmap");
     }
-    public static int XFreePixmap ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XFreePixmap(Display*, Pixmap);
+     * }
+     */
+    public static int XFreePixmap(MemorySegment x0, long x1) {
         var mh$ = XFreePixmap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3181,7 +6313,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGeometry$MH() {
         return RuntimeHelper.requireNonNull(constants$36.XGeometry$MH,"XGeometry");
     }
-    public static int XGeometry ( Addressable x0,  int x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  Addressable x9,  Addressable x10,  Addressable x11,  Addressable x12) {
+    /**
+     * {@snippet :
+     * int XGeometry(Display*, int, char*, char*, unsigned int, unsigned int, unsigned int, int, int, int*, int*, int*, int*);
+     * }
+     */
+    public static int XGeometry(MemorySegment x0, int x1, MemorySegment x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, MemorySegment x9, MemorySegment x10, MemorySegment x11, MemorySegment x12) {
         var mh$ = XGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12);
@@ -3192,7 +6329,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetErrorDatabaseText$MH() {
         return RuntimeHelper.requireNonNull(constants$36.XGetErrorDatabaseText$MH,"XGetErrorDatabaseText");
     }
-    public static int XGetErrorDatabaseText ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5) {
+    /**
+     * {@snippet :
+     * int XGetErrorDatabaseText(Display*, char*, char*, char*, char*, int);
+     * }
+     */
+    public static int XGetErrorDatabaseText(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5) {
         var mh$ = XGetErrorDatabaseText$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3201,9 +6343,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetErrorText$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetErrorText$MH,"XGetErrorText");
+        return RuntimeHelper.requireNonNull(constants$36.XGetErrorText$MH,"XGetErrorText");
     }
-    public static int XGetErrorText ( Addressable x0,  int x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XGetErrorText(Display*, int, char*, int);
+     * }
+     */
+    public static int XGetErrorText(MemorySegment x0, int x1, MemorySegment x2, int x3) {
         var mh$ = XGetErrorText$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3212,9 +6359,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetFontProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetFontProperty$MH,"XGetFontProperty");
+        return RuntimeHelper.requireNonNull(constants$36.XGetFontProperty$MH,"XGetFontProperty");
     }
-    public static int XGetFontProperty ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetFontProperty(XFontStruct*, Atom, unsigned long*);
+     * }
+     */
+    public static int XGetFontProperty(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetFontProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3225,7 +6377,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetGCValues$MH() {
         return RuntimeHelper.requireNonNull(constants$37.XGetGCValues$MH,"XGetGCValues");
     }
-    public static int XGetGCValues ( Addressable x0,  Addressable x1,  long x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetGCValues(Display*, GC, unsigned long, XGCValues*);
+     * }
+     */
+    public static int XGetGCValues(MemorySegment x0, MemorySegment x1, long x2, MemorySegment x3) {
         var mh$ = XGetGCValues$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3236,7 +6393,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetGeometry$MH() {
         return RuntimeHelper.requireNonNull(constants$37.XGetGeometry$MH,"XGetGeometry");
     }
-    public static int XGetGeometry ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * int XGetGeometry(Display*, Drawable, Window*, int*, int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*);
+     * }
+     */
+    public static int XGetGeometry(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = XGetGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -3247,7 +6409,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetIconName$MH() {
         return RuntimeHelper.requireNonNull(constants$37.XGetIconName$MH,"XGetIconName");
     }
-    public static int XGetIconName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetIconName(Display*, Window, char**);
+     * }
+     */
+    public static int XGetIconName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetIconName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3258,7 +6425,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetInputFocus$MH() {
         return RuntimeHelper.requireNonNull(constants$37.XGetInputFocus$MH,"XGetInputFocus");
     }
-    public static int XGetInputFocus ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetInputFocus(Display*, Window*, int*);
+     * }
+     */
+    public static int XGetInputFocus(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XGetInputFocus$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3267,9 +6439,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetKeyboardControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetKeyboardControl$MH,"XGetKeyboardControl");
+        return RuntimeHelper.requireNonNull(constants$37.XGetKeyboardControl$MH,"XGetKeyboardControl");
     }
-    public static int XGetKeyboardControl ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XGetKeyboardControl(Display*, XKeyboardState*);
+     * }
+     */
+    public static int XGetKeyboardControl(MemorySegment x0, MemorySegment x1) {
         var mh$ = XGetKeyboardControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3278,9 +6455,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetPointerControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetPointerControl$MH,"XGetPointerControl");
+        return RuntimeHelper.requireNonNull(constants$37.XGetPointerControl$MH,"XGetPointerControl");
     }
-    public static int XGetPointerControl ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetPointerControl(Display*, int*, int*, int*);
+     * }
+     */
+    public static int XGetPointerControl(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XGetPointerControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3291,7 +6473,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetPointerMapping$MH() {
         return RuntimeHelper.requireNonNull(constants$38.XGetPointerMapping$MH,"XGetPointerMapping");
     }
-    public static int XGetPointerMapping ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XGetPointerMapping(Display*, unsigned char*, int);
+     * }
+     */
+    public static int XGetPointerMapping(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XGetPointerMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3302,7 +6489,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetScreenSaver$MH() {
         return RuntimeHelper.requireNonNull(constants$38.XGetScreenSaver$MH,"XGetScreenSaver");
     }
-    public static int XGetScreenSaver ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XGetScreenSaver(Display*, int*, int*, int*, int*);
+     * }
+     */
+    public static int XGetScreenSaver(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XGetScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -3313,7 +6505,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetTransientForHint$MH() {
         return RuntimeHelper.requireNonNull(constants$38.XGetTransientForHint$MH,"XGetTransientForHint");
     }
-    public static int XGetTransientForHint ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetTransientForHint(Display*, Window, Window*);
+     * }
+     */
+    public static int XGetTransientForHint(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetTransientForHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3324,7 +6521,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetWindowProperty$MH() {
         return RuntimeHelper.requireNonNull(constants$38.XGetWindowProperty$MH,"XGetWindowProperty");
     }
-    public static int XGetWindowProperty ( Addressable x0,  long x1,  long x2,  long x3,  long x4,  int x5,  long x6,  Addressable x7,  Addressable x8,  Addressable x9,  Addressable x10,  Addressable x11) {
+    /**
+     * {@snippet :
+     * int XGetWindowProperty(Display*, Window, Atom, long, long, int, Atom, Atom*, int*, unsigned long*, unsigned long*, unsigned char**);
+     * }
+     */
+    public static int XGetWindowProperty(MemorySegment x0, long x1, long x2, long x3, long x4, int x5, long x6, MemorySegment x7, MemorySegment x8, MemorySegment x9, MemorySegment x10, MemorySegment x11) {
         var mh$ = XGetWindowProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
@@ -3333,9 +6535,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetWindowAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGetWindowAttributes$MH,"XGetWindowAttributes");
+        return RuntimeHelper.requireNonNull(constants$38.XGetWindowAttributes$MH,"XGetWindowAttributes");
     }
-    public static int XGetWindowAttributes ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetWindowAttributes(Display*, Window, XWindowAttributes*);
+     * }
+     */
+    public static int XGetWindowAttributes(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetWindowAttributes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3344,9 +6551,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGrabButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabButton$MH,"XGrabButton");
+        return RuntimeHelper.requireNonNull(constants$38.XGrabButton$MH,"XGrabButton");
     }
-    public static int XGrabButton ( Addressable x0,  int x1,  int x2,  long x3,  int x4,  int x5,  int x6,  int x7,  long x8,  long x9) {
+    /**
+     * {@snippet :
+     * int XGrabButton(Display*, unsigned int, unsigned int, Window, int, unsigned int, int, int, Window, Cursor);
+     * }
+     */
+    public static int XGrabButton(MemorySegment x0, int x1, int x2, long x3, int x4, int x5, int x6, int x7, long x8, long x9) {
         var mh$ = XGrabButton$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
@@ -3357,7 +6569,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGrabKey$MH() {
         return RuntimeHelper.requireNonNull(constants$39.XGrabKey$MH,"XGrabKey");
     }
-    public static int XGrabKey ( Addressable x0,  int x1,  int x2,  long x3,  int x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XGrabKey(Display*, int, unsigned int, Window, int, int, int);
+     * }
+     */
+    public static int XGrabKey(MemorySegment x0, int x1, int x2, long x3, int x4, int x5, int x6) {
         var mh$ = XGrabKey$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -3368,7 +6585,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGrabKeyboard$MH() {
         return RuntimeHelper.requireNonNull(constants$39.XGrabKeyboard$MH,"XGrabKeyboard");
     }
-    public static int XGrabKeyboard ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  long x5) {
+    /**
+     * {@snippet :
+     * int XGrabKeyboard(Display*, Window, int, int, int, Time);
+     * }
+     */
+    public static int XGrabKeyboard(MemorySegment x0, long x1, int x2, int x3, int x4, long x5) {
         var mh$ = XGrabKeyboard$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3379,7 +6601,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGrabPointer$MH() {
         return RuntimeHelper.requireNonNull(constants$39.XGrabPointer$MH,"XGrabPointer");
     }
-    public static int XGrabPointer ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5,  long x6,  long x7,  long x8) {
+    /**
+     * {@snippet :
+     * int XGrabPointer(Display*, Window, int, unsigned int, int, int, Window, Cursor, Time);
+     * }
+     */
+    public static int XGrabPointer(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, long x6, long x7, long x8) {
         var mh$ = XGrabPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -3390,7 +6617,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGrabServer$MH() {
         return RuntimeHelper.requireNonNull(constants$39.XGrabServer$MH,"XGrabServer");
     }
-    public static int XGrabServer ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XGrabServer(Display*);
+     * }
+     */
+    public static int XGrabServer(MemorySegment x0) {
         var mh$ = XGrabServer$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3399,9 +6631,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XHeightMMOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XHeightMMOfScreen$MH,"XHeightMMOfScreen");
+        return RuntimeHelper.requireNonNull(constants$39.XHeightMMOfScreen$MH,"XHeightMMOfScreen");
     }
-    public static int XHeightMMOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XHeightMMOfScreen(Screen*);
+     * }
+     */
+    public static int XHeightMMOfScreen(MemorySegment x0) {
         var mh$ = XHeightMMOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3410,9 +6647,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XHeightOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XHeightOfScreen$MH,"XHeightOfScreen");
+        return RuntimeHelper.requireNonNull(constants$39.XHeightOfScreen$MH,"XHeightOfScreen");
     }
-    public static int XHeightOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XHeightOfScreen(Screen*);
+     * }
+     */
+    public static int XHeightOfScreen(MemorySegment x0) {
         var mh$ = XHeightOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3423,7 +6665,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XIfEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$40.XIfEvent$MH,"XIfEvent");
     }
-    public static int XIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XIfEvent(Display*, XEvent*, int (*)(Display*,XEvent*,XPointer), XPointer);
+     * }
+     */
+    public static int XIfEvent(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XIfEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3434,7 +6681,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XImageByteOrder$MH() {
         return RuntimeHelper.requireNonNull(constants$40.XImageByteOrder$MH,"XImageByteOrder");
     }
-    public static int XImageByteOrder ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XImageByteOrder(Display*);
+     * }
+     */
+    public static int XImageByteOrder(MemorySegment x0) {
         var mh$ = XImageByteOrder$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3443,9 +6695,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XInstallColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XInstallColormap$MH,"XInstallColormap");
+        return RuntimeHelper.requireNonNull(constants$40.XInstallColormap$MH,"XInstallColormap");
     }
-    public static int XInstallColormap ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XInstallColormap(Display*, Colormap);
+     * }
+     */
+    public static int XInstallColormap(MemorySegment x0, long x1) {
         var mh$ = XInstallColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3454,9 +6711,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XKeysymToKeycode$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XKeysymToKeycode$MH,"XKeysymToKeycode");
+        return RuntimeHelper.requireNonNull(constants$40.XKeysymToKeycode$MH,"XKeysymToKeycode");
     }
-    public static byte XKeysymToKeycode ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * KeyCode XKeysymToKeycode(Display*, KeySym);
+     * }
+     */
+    public static byte XKeysymToKeycode(MemorySegment x0, long x1) {
         var mh$ = XKeysymToKeycode$MH();
         try {
             return (byte)mh$.invokeExact(x0, x1);
@@ -3467,7 +6729,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XKillClient$MH() {
         return RuntimeHelper.requireNonNull(constants$41.XKillClient$MH,"XKillClient");
     }
-    public static int XKillClient ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XKillClient(Display*, XID);
+     * }
+     */
+    public static int XKillClient(MemorySegment x0, long x1) {
         var mh$ = XKillClient$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3478,7 +6745,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLookupColor$MH() {
         return RuntimeHelper.requireNonNull(constants$41.XLookupColor$MH,"XLookupColor");
     }
-    public static int XLookupColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XLookupColor(Display*, Colormap, char*, XColor*, XColor*);
+     * }
+     */
+    public static int XLookupColor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XLookupColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -3489,7 +6761,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLowerWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$41.XLowerWindow$MH,"XLowerWindow");
     }
-    public static int XLowerWindow ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XLowerWindow(Display*, Window);
+     * }
+     */
+    public static int XLowerWindow(MemorySegment x0, long x1) {
         var mh$ = XLowerWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3500,7 +6777,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XMapRaised$MH() {
         return RuntimeHelper.requireNonNull(constants$41.XMapRaised$MH,"XMapRaised");
     }
-    public static int XMapRaised ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XMapRaised(Display*, Window);
+     * }
+     */
+    public static int XMapRaised(MemorySegment x0, long x1) {
         var mh$ = XMapRaised$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3509,9 +6791,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XMapSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMapSubwindows$MH,"XMapSubwindows");
+        return RuntimeHelper.requireNonNull(constants$41.XMapSubwindows$MH,"XMapSubwindows");
     }
-    public static int XMapSubwindows ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XMapSubwindows(Display*, Window);
+     * }
+     */
+    public static int XMapSubwindows(MemorySegment x0, long x1) {
         var mh$ = XMapSubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3520,9 +6807,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XMapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMapWindow$MH,"XMapWindow");
+        return RuntimeHelper.requireNonNull(constants$41.XMapWindow$MH,"XMapWindow");
     }
-    public static int XMapWindow ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XMapWindow(Display*, Window);
+     * }
+     */
+    public static int XMapWindow(MemorySegment x0, long x1) {
         var mh$ = XMapWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3533,7 +6825,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XMaskEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$42.XMaskEvent$MH,"XMaskEvent");
     }
-    public static int XMaskEvent ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XMaskEvent(Display*, long, XEvent*);
+     * }
+     */
+    public static int XMaskEvent(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XMaskEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3544,7 +6841,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XMaxCmapsOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$42.XMaxCmapsOfScreen$MH,"XMaxCmapsOfScreen");
     }
-    public static int XMaxCmapsOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XMaxCmapsOfScreen(Screen*);
+     * }
+     */
+    public static int XMaxCmapsOfScreen(MemorySegment x0) {
         var mh$ = XMaxCmapsOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3555,7 +6857,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XMinCmapsOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$42.XMinCmapsOfScreen$MH,"XMinCmapsOfScreen");
     }
-    public static int XMinCmapsOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XMinCmapsOfScreen(Screen*);
+     * }
+     */
+    public static int XMinCmapsOfScreen(MemorySegment x0) {
         var mh$ = XMinCmapsOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3566,7 +6873,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XMoveResizeWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$42.XMoveResizeWindow$MH,"XMoveResizeWindow");
     }
-    public static int XMoveResizeWindow ( Addressable x0,  long x1,  int x2,  int x3,  int x4,  int x5) {
+    /**
+     * {@snippet :
+     * int XMoveResizeWindow(Display*, Window, int, int, unsigned int, unsigned int);
+     * }
+     */
+    public static int XMoveResizeWindow(MemorySegment x0, long x1, int x2, int x3, int x4, int x5) {
         var mh$ = XMoveResizeWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3575,9 +6887,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XMoveWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XMoveWindow$MH,"XMoveWindow");
+        return RuntimeHelper.requireNonNull(constants$42.XMoveWindow$MH,"XMoveWindow");
     }
-    public static int XMoveWindow ( Addressable x0,  long x1,  int x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XMoveWindow(Display*, Window, int, int);
+     * }
+     */
+    public static int XMoveWindow(MemorySegment x0, long x1, int x2, int x3) {
         var mh$ = XMoveWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3586,9 +6903,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XNextEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XNextEvent$MH,"XNextEvent");
+        return RuntimeHelper.requireNonNull(constants$42.XNextEvent$MH,"XNextEvent");
     }
-    public static int XNextEvent ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XNextEvent(Display*, XEvent*);
+     * }
+     */
+    public static int XNextEvent(MemorySegment x0, MemorySegment x1) {
         var mh$ = XNextEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3599,7 +6921,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XNoOp$MH() {
         return RuntimeHelper.requireNonNull(constants$43.XNoOp$MH,"XNoOp");
     }
-    public static int XNoOp ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XNoOp(Display*);
+     * }
+     */
+    public static int XNoOp(MemorySegment x0) {
         var mh$ = XNoOp$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3610,7 +6937,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XParseColor$MH() {
         return RuntimeHelper.requireNonNull(constants$43.XParseColor$MH,"XParseColor");
     }
-    public static int XParseColor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XParseColor(Display*, Colormap, char*, XColor*);
+     * }
+     */
+    public static int XParseColor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XParseColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3621,7 +6953,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XParseGeometry$MH() {
         return RuntimeHelper.requireNonNull(constants$43.XParseGeometry$MH,"XParseGeometry");
     }
-    public static int XParseGeometry ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XParseGeometry(char*, int*, int*, unsigned int*, unsigned int*);
+     * }
+     */
+    public static int XParseGeometry(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XParseGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -3632,7 +6969,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XPeekEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$43.XPeekEvent$MH,"XPeekEvent");
     }
-    public static int XPeekEvent ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XPeekEvent(Display*, XEvent*);
+     * }
+     */
+    public static int XPeekEvent(MemorySegment x0, MemorySegment x1) {
         var mh$ = XPeekEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3643,7 +6985,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XPeekIfEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$44.XPeekIfEvent$MH,"XPeekIfEvent");
     }
-    public static int XPeekIfEvent ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XPeekIfEvent(Display*, XEvent*, int (*)(Display*,XEvent*,XPointer), XPointer);
+     * }
+     */
+    public static int XPeekIfEvent(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XPeekIfEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3654,7 +7001,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XPending$MH() {
         return RuntimeHelper.requireNonNull(constants$44.XPending$MH,"XPending");
     }
-    public static int XPending ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XPending(Display*);
+     * }
+     */
+    public static int XPending(MemorySegment x0) {
         var mh$ = XPending$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3665,7 +7017,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XPlanesOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$44.XPlanesOfScreen$MH,"XPlanesOfScreen");
     }
-    public static int XPlanesOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XPlanesOfScreen(Screen*);
+     * }
+     */
+    public static int XPlanesOfScreen(MemorySegment x0) {
         var mh$ = XPlanesOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3676,7 +7033,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XProtocolRevision$MH() {
         return RuntimeHelper.requireNonNull(constants$44.XProtocolRevision$MH,"XProtocolRevision");
     }
-    public static int XProtocolRevision ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XProtocolRevision(Display*);
+     * }
+     */
+    public static int XProtocolRevision(MemorySegment x0) {
         var mh$ = XProtocolRevision$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3685,9 +7047,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XProtocolVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XProtocolVersion$MH,"XProtocolVersion");
+        return RuntimeHelper.requireNonNull(constants$44.XProtocolVersion$MH,"XProtocolVersion");
     }
-    public static int XProtocolVersion ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XProtocolVersion(Display*);
+     * }
+     */
+    public static int XProtocolVersion(MemorySegment x0) {
         var mh$ = XProtocolVersion$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3696,9 +7063,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XPutBackEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XPutBackEvent$MH,"XPutBackEvent");
+        return RuntimeHelper.requireNonNull(constants$44.XPutBackEvent$MH,"XPutBackEvent");
     }
-    public static int XPutBackEvent ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XPutBackEvent(Display*, XEvent*);
+     * }
+     */
+    public static int XPutBackEvent(MemorySegment x0, MemorySegment x1) {
         var mh$ = XPutBackEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3709,7 +7081,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XPutImage$MH() {
         return RuntimeHelper.requireNonNull(constants$45.XPutImage$MH,"XPutImage");
     }
-    public static int XPutImage ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  int x6,  int x7,  int x8,  int x9) {
+    /**
+     * {@snippet :
+     * int XPutImage(Display*, Drawable, GC, XImage*, int, int, int, int, unsigned int, unsigned int);
+     * }
+     */
+    public static int XPutImage(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, int x9) {
         var mh$ = XPutImage$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
@@ -3720,7 +7097,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQLength$MH() {
         return RuntimeHelper.requireNonNull(constants$45.XQLength$MH,"XQLength");
     }
-    public static int XQLength ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XQLength(Display*);
+     * }
+     */
+    public static int XQLength(MemorySegment x0) {
         var mh$ = XQLength$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3731,7 +7113,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryBestCursor$MH() {
         return RuntimeHelper.requireNonNull(constants$45.XQueryBestCursor$MH,"XQueryBestCursor");
     }
-    public static int XQueryBestCursor ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XQueryBestCursor(Display*, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * }
+     */
+    public static int XQueryBestCursor(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XQueryBestCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3742,7 +7129,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryBestSize$MH() {
         return RuntimeHelper.requireNonNull(constants$45.XQueryBestSize$MH,"XQueryBestSize");
     }
-    public static int XQueryBestSize ( Addressable x0,  int x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6) {
+    /**
+     * {@snippet :
+     * int XQueryBestSize(Display*, int, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * }
+     */
+    public static int XQueryBestSize(MemorySegment x0, int x1, long x2, int x3, int x4, MemorySegment x5, MemorySegment x6) {
         var mh$ = XQueryBestSize$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -3751,9 +7143,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XQueryBestStipple$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryBestStipple$MH,"XQueryBestStipple");
+        return RuntimeHelper.requireNonNull(constants$45.XQueryBestStipple$MH,"XQueryBestStipple");
     }
-    public static int XQueryBestStipple ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XQueryBestStipple(Display*, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * }
+     */
+    public static int XQueryBestStipple(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XQueryBestStipple$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3762,9 +7159,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XQueryBestTile$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryBestTile$MH,"XQueryBestTile");
+        return RuntimeHelper.requireNonNull(constants$45.XQueryBestTile$MH,"XQueryBestTile");
     }
-    public static int XQueryBestTile ( Addressable x0,  long x1,  int x2,  int x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XQueryBestTile(Display*, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * }
+     */
+    public static int XQueryBestTile(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XQueryBestTile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3775,7 +7177,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryColor$MH() {
         return RuntimeHelper.requireNonNull(constants$46.XQueryColor$MH,"XQueryColor");
     }
-    public static int XQueryColor ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XQueryColor(Display*, Colormap, XColor*);
+     * }
+     */
+    public static int XQueryColor(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XQueryColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3786,7 +7193,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryColors$MH() {
         return RuntimeHelper.requireNonNull(constants$46.XQueryColors$MH,"XQueryColors");
     }
-    public static int XQueryColors ( Addressable x0,  long x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XQueryColors(Display*, Colormap, XColor*, int);
+     * }
+     */
+    public static int XQueryColors(MemorySegment x0, long x1, MemorySegment x2, int x3) {
         var mh$ = XQueryColors$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3797,7 +7209,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryExtension$MH() {
         return RuntimeHelper.requireNonNull(constants$46.XQueryExtension$MH,"XQueryExtension");
     }
-    public static int XQueryExtension ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XQueryExtension(Display*, char*, int*, int*, int*);
+     * }
+     */
+    public static int XQueryExtension(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XQueryExtension$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -3808,7 +7225,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryKeymap$MH() {
         return RuntimeHelper.requireNonNull(constants$46.XQueryKeymap$MH,"XQueryKeymap");
     }
-    public static int XQueryKeymap ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XQueryKeymap(Display*, char [32]);
+     * }
+     */
+    public static int XQueryKeymap(MemorySegment x0, MemorySegment x1) {
         var mh$ = XQueryKeymap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3817,9 +7239,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XQueryPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryPointer$MH,"XQueryPointer");
+        return RuntimeHelper.requireNonNull(constants$46.XQueryPointer$MH,"XQueryPointer");
     }
-    public static int XQueryPointer ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * int XQueryPointer(Display*, Window, Window*, Window*, int*, int*, int*, int*, unsigned int*);
+     * }
+     */
+    public static int XQueryPointer(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = XQueryPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -3828,9 +7255,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XQueryTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents$MH,"XQueryTextExtents");
+        return RuntimeHelper.requireNonNull(constants$46.XQueryTextExtents$MH,"XQueryTextExtents");
     }
-    public static int XQueryTextExtents ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
+    /**
+     * {@snippet :
+     * int XQueryTextExtents(Display*, XID, char*, int, int*, int*, int*, XCharStruct*);
+     * }
+     */
+    public static int XQueryTextExtents(MemorySegment x0, long x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
         var mh$ = XQueryTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -3841,7 +7273,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryTextExtents16$MH() {
         return RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents16$MH,"XQueryTextExtents16");
     }
-    public static int XQueryTextExtents16 ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
+    /**
+     * {@snippet :
+     * int XQueryTextExtents16(Display*, XID, const XChar2b*, int, int*, int*, int*, XCharStruct*);
+     * }
+     */
+    public static int XQueryTextExtents16(MemorySegment x0, long x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
         var mh$ = XQueryTextExtents16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -3852,7 +7289,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XQueryTree$MH() {
         return RuntimeHelper.requireNonNull(constants$47.XQueryTree$MH,"XQueryTree");
     }
-    public static int XQueryTree ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XQueryTree(Display*, Window, Window*, Window*, Window**, unsigned int*);
+     * }
+     */
+    public static int XQueryTree(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XQueryTree$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3863,7 +7305,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRaiseWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$47.XRaiseWindow$MH,"XRaiseWindow");
     }
-    public static int XRaiseWindow ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XRaiseWindow(Display*, Window);
+     * }
+     */
+    public static int XRaiseWindow(MemorySegment x0, long x1) {
         var mh$ = XRaiseWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3874,7 +7321,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XReadBitmapFile$MH() {
         return RuntimeHelper.requireNonNull(constants$47.XReadBitmapFile$MH,"XReadBitmapFile");
     }
-    public static int XReadBitmapFile ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6,  Addressable x7) {
+    /**
+     * {@snippet :
+     * int XReadBitmapFile(Display*, Drawable, char*, unsigned int*, unsigned int*, Pixmap*, int*, int*);
+     * }
+     */
+    public static int XReadBitmapFile(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
         var mh$ = XReadBitmapFile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -3883,9 +7335,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XReadBitmapFileData$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XReadBitmapFileData$MH,"XReadBitmapFileData");
+        return RuntimeHelper.requireNonNull(constants$47.XReadBitmapFileData$MH,"XReadBitmapFileData");
     }
-    public static int XReadBitmapFileData ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XReadBitmapFileData(char*, unsigned int*, unsigned int*, unsigned char**, int*, int*);
+     * }
+     */
+    public static int XReadBitmapFileData(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XReadBitmapFileData$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3894,9 +7351,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XRebindKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRebindKeysym$MH,"XRebindKeysym");
+        return RuntimeHelper.requireNonNull(constants$47.XRebindKeysym$MH,"XRebindKeysym");
     }
-    public static int XRebindKeysym ( Addressable x0,  long x1,  Addressable x2,  int x3,  Addressable x4,  int x5) {
+    /**
+     * {@snippet :
+     * int XRebindKeysym(Display*, KeySym, KeySym*, int, unsigned char*, int);
+     * }
+     */
+    public static int XRebindKeysym(MemorySegment x0, long x1, MemorySegment x2, int x3, MemorySegment x4, int x5) {
         var mh$ = XRebindKeysym$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -3907,7 +7369,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRecolorCursor$MH() {
         return RuntimeHelper.requireNonNull(constants$48.XRecolorCursor$MH,"XRecolorCursor");
     }
-    public static int XRecolorCursor ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XRecolorCursor(Display*, Cursor, XColor*, XColor*);
+     * }
+     */
+    public static int XRecolorCursor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XRecolorCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3918,7 +7385,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRefreshKeyboardMapping$MH() {
         return RuntimeHelper.requireNonNull(constants$48.XRefreshKeyboardMapping$MH,"XRefreshKeyboardMapping");
     }
-    public static int XRefreshKeyboardMapping ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XRefreshKeyboardMapping(XMappingEvent*);
+     * }
+     */
+    public static int XRefreshKeyboardMapping(MemorySegment x0) {
         var mh$ = XRefreshKeyboardMapping$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3929,7 +7401,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRemoveFromSaveSet$MH() {
         return RuntimeHelper.requireNonNull(constants$48.XRemoveFromSaveSet$MH,"XRemoveFromSaveSet");
     }
-    public static int XRemoveFromSaveSet ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XRemoveFromSaveSet(Display*, Window);
+     * }
+     */
+    public static int XRemoveFromSaveSet(MemorySegment x0, long x1) {
         var mh$ = XRemoveFromSaveSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3940,7 +7417,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRemoveHost$MH() {
         return RuntimeHelper.requireNonNull(constants$48.XRemoveHost$MH,"XRemoveHost");
     }
-    public static int XRemoveHost ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XRemoveHost(Display*, XHostAddress*);
+     * }
+     */
+    public static int XRemoveHost(MemorySegment x0, MemorySegment x1) {
         var mh$ = XRemoveHost$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -3949,9 +7431,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XRemoveHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XRemoveHosts$MH,"XRemoveHosts");
+        return RuntimeHelper.requireNonNull(constants$48.XRemoveHosts$MH,"XRemoveHosts");
     }
-    public static int XRemoveHosts ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XRemoveHosts(Display*, XHostAddress*, int);
+     * }
+     */
+    public static int XRemoveHosts(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XRemoveHosts$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -3960,9 +7447,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XReparentWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XReparentWindow$MH,"XReparentWindow");
+        return RuntimeHelper.requireNonNull(constants$48.XReparentWindow$MH,"XReparentWindow");
     }
-    public static int XReparentWindow ( Addressable x0,  long x1,  long x2,  int x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XReparentWindow(Display*, Window, Window, int, int);
+     * }
+     */
+    public static int XReparentWindow(MemorySegment x0, long x1, long x2, int x3, int x4) {
         var mh$ = XReparentWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -3973,7 +7465,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XResetScreenSaver$MH() {
         return RuntimeHelper.requireNonNull(constants$49.XResetScreenSaver$MH,"XResetScreenSaver");
     }
-    public static int XResetScreenSaver ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XResetScreenSaver(Display*);
+     * }
+     */
+    public static int XResetScreenSaver(MemorySegment x0) {
         var mh$ = XResetScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -3984,7 +7481,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XResizeWindow$MH() {
         return RuntimeHelper.requireNonNull(constants$49.XResizeWindow$MH,"XResizeWindow");
     }
-    public static int XResizeWindow ( Addressable x0,  long x1,  int x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XResizeWindow(Display*, Window, unsigned int, unsigned int);
+     * }
+     */
+    public static int XResizeWindow(MemorySegment x0, long x1, int x2, int x3) {
         var mh$ = XResizeWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -3995,7 +7497,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRestackWindows$MH() {
         return RuntimeHelper.requireNonNull(constants$49.XRestackWindows$MH,"XRestackWindows");
     }
-    public static int XRestackWindows ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XRestackWindows(Display*, Window*, int);
+     * }
+     */
+    public static int XRestackWindows(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XRestackWindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4006,7 +7513,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRotateBuffers$MH() {
         return RuntimeHelper.requireNonNull(constants$49.XRotateBuffers$MH,"XRotateBuffers");
     }
-    public static int XRotateBuffers ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XRotateBuffers(Display*, int);
+     * }
+     */
+    public static int XRotateBuffers(MemorySegment x0, int x1) {
         var mh$ = XRotateBuffers$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4015,9 +7527,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XRotateWindowProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XRotateWindowProperties$MH,"XRotateWindowProperties");
+        return RuntimeHelper.requireNonNull(constants$49.XRotateWindowProperties$MH,"XRotateWindowProperties");
     }
-    public static int XRotateWindowProperties ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XRotateWindowProperties(Display*, Window, Atom*, int, int);
+     * }
+     */
+    public static int XRotateWindowProperties(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4) {
         var mh$ = XRotateWindowProperties$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -4026,9 +7543,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XScreenCount$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XScreenCount$MH,"XScreenCount");
+        return RuntimeHelper.requireNonNull(constants$49.XScreenCount$MH,"XScreenCount");
     }
-    public static int XScreenCount ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XScreenCount(Display*);
+     * }
+     */
+    public static int XScreenCount(MemorySegment x0) {
         var mh$ = XScreenCount$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4039,7 +7561,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSelectInput$MH() {
         return RuntimeHelper.requireNonNull(constants$50.XSelectInput$MH,"XSelectInput");
     }
-    public static int XSelectInput ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSelectInput(Display*, Window, long);
+     * }
+     */
+    public static int XSelectInput(MemorySegment x0, long x1, long x2) {
         var mh$ = XSelectInput$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4050,7 +7577,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSendEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$50.XSendEvent$MH,"XSendEvent");
     }
-    public static int XSendEvent ( Addressable x0,  long x1,  int x2,  long x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XSendEvent(Display*, Window, int, long, XEvent*);
+     * }
+     */
+    public static int XSendEvent(MemorySegment x0, long x1, int x2, long x3, MemorySegment x4) {
         var mh$ = XSendEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -4061,7 +7593,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetAccessControl$MH() {
         return RuntimeHelper.requireNonNull(constants$50.XSetAccessControl$MH,"XSetAccessControl");
     }
-    public static int XSetAccessControl ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XSetAccessControl(Display*, int);
+     * }
+     */
+    public static int XSetAccessControl(MemorySegment x0, int x1) {
         var mh$ = XSetAccessControl$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4072,7 +7609,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetArcMode$MH() {
         return RuntimeHelper.requireNonNull(constants$50.XSetArcMode$MH,"XSetArcMode");
     }
-    public static int XSetArcMode ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetArcMode(Display*, GC, int);
+     * }
+     */
+    public static int XSetArcMode(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetArcMode$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4081,9 +7623,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetBackground$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetBackground$MH,"XSetBackground");
+        return RuntimeHelper.requireNonNull(constants$50.XSetBackground$MH,"XSetBackground");
     }
-    public static int XSetBackground ( Addressable x0,  Addressable x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetBackground(Display*, GC, unsigned long);
+     * }
+     */
+    public static int XSetBackground(MemorySegment x0, MemorySegment x1, long x2) {
         var mh$ = XSetBackground$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4092,9 +7639,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetClipMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetClipMask$MH,"XSetClipMask");
+        return RuntimeHelper.requireNonNull(constants$50.XSetClipMask$MH,"XSetClipMask");
     }
-    public static int XSetClipMask ( Addressable x0,  Addressable x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetClipMask(Display*, GC, Pixmap);
+     * }
+     */
+    public static int XSetClipMask(MemorySegment x0, MemorySegment x1, long x2) {
         var mh$ = XSetClipMask$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4105,7 +7657,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetClipOrigin$MH() {
         return RuntimeHelper.requireNonNull(constants$51.XSetClipOrigin$MH,"XSetClipOrigin");
     }
-    public static int XSetClipOrigin ( Addressable x0,  Addressable x1,  int x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XSetClipOrigin(Display*, GC, int, int);
+     * }
+     */
+    public static int XSetClipOrigin(MemorySegment x0, MemorySegment x1, int x2, int x3) {
         var mh$ = XSetClipOrigin$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4116,7 +7673,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetClipRectangles$MH() {
         return RuntimeHelper.requireNonNull(constants$51.XSetClipRectangles$MH,"XSetClipRectangles");
     }
-    public static int XSetClipRectangles ( Addressable x0,  Addressable x1,  int x2,  int x3,  Addressable x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XSetClipRectangles(Display*, GC, int, int, XRectangle*, int, int);
+     * }
+     */
+    public static int XSetClipRectangles(MemorySegment x0, MemorySegment x1, int x2, int x3, MemorySegment x4, int x5, int x6) {
         var mh$ = XSetClipRectangles$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -4127,7 +7689,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetCloseDownMode$MH() {
         return RuntimeHelper.requireNonNull(constants$51.XSetCloseDownMode$MH,"XSetCloseDownMode");
     }
-    public static int XSetCloseDownMode ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XSetCloseDownMode(Display*, int);
+     * }
+     */
+    public static int XSetCloseDownMode(MemorySegment x0, int x1) {
         var mh$ = XSetCloseDownMode$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4138,7 +7705,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetCommand$MH() {
         return RuntimeHelper.requireNonNull(constants$51.XSetCommand$MH,"XSetCommand");
     }
-    public static int XSetCommand ( Addressable x0,  long x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XSetCommand(Display*, Window, char**, int);
+     * }
+     */
+    public static int XSetCommand(MemorySegment x0, long x1, MemorySegment x2, int x3) {
         var mh$ = XSetCommand$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4147,9 +7719,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetDashes$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetDashes$MH,"XSetDashes");
+        return RuntimeHelper.requireNonNull(constants$51.XSetDashes$MH,"XSetDashes");
     }
-    public static int XSetDashes ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XSetDashes(Display*, GC, int, char*, int);
+     * }
+     */
+    public static int XSetDashes(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, int x4) {
         var mh$ = XSetDashes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -4158,9 +7735,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetFillRule$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFillRule$MH,"XSetFillRule");
+        return RuntimeHelper.requireNonNull(constants$51.XSetFillRule$MH,"XSetFillRule");
     }
-    public static int XSetFillRule ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetFillRule(Display*, GC, int);
+     * }
+     */
+    public static int XSetFillRule(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetFillRule$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4171,7 +7753,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetFillStyle$MH() {
         return RuntimeHelper.requireNonNull(constants$52.XSetFillStyle$MH,"XSetFillStyle");
     }
-    public static int XSetFillStyle ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetFillStyle(Display*, GC, int);
+     * }
+     */
+    public static int XSetFillStyle(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetFillStyle$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4182,7 +7769,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetFont$MH() {
         return RuntimeHelper.requireNonNull(constants$52.XSetFont$MH,"XSetFont");
     }
-    public static int XSetFont ( Addressable x0,  Addressable x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetFont(Display*, GC, Font);
+     * }
+     */
+    public static int XSetFont(MemorySegment x0, MemorySegment x1, long x2) {
         var mh$ = XSetFont$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4193,7 +7785,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetFontPath$MH() {
         return RuntimeHelper.requireNonNull(constants$52.XSetFontPath$MH,"XSetFontPath");
     }
-    public static int XSetFontPath ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetFontPath(Display*, char**, int);
+     * }
+     */
+    public static int XSetFontPath(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetFontPath$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4204,7 +7801,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetForeground$MH() {
         return RuntimeHelper.requireNonNull(constants$52.XSetForeground$MH,"XSetForeground");
     }
-    public static int XSetForeground ( Addressable x0,  Addressable x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetForeground(Display*, GC, unsigned long);
+     * }
+     */
+    public static int XSetForeground(MemorySegment x0, MemorySegment x1, long x2) {
         var mh$ = XSetForeground$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4213,9 +7815,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetFunction$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetFunction$MH,"XSetFunction");
+        return RuntimeHelper.requireNonNull(constants$52.XSetFunction$MH,"XSetFunction");
     }
-    public static int XSetFunction ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetFunction(Display*, GC, int);
+     * }
+     */
+    public static int XSetFunction(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetFunction$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4224,9 +7831,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetGraphicsExposures$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetGraphicsExposures$MH,"XSetGraphicsExposures");
+        return RuntimeHelper.requireNonNull(constants$52.XSetGraphicsExposures$MH,"XSetGraphicsExposures");
     }
-    public static int XSetGraphicsExposures ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetGraphicsExposures(Display*, GC, int);
+     * }
+     */
+    public static int XSetGraphicsExposures(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetGraphicsExposures$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4237,7 +7849,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetIconName$MH() {
         return RuntimeHelper.requireNonNull(constants$53.XSetIconName$MH,"XSetIconName");
     }
-    public static int XSetIconName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XSetIconName(Display*, Window, char*);
+     * }
+     */
+    public static int XSetIconName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetIconName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4248,7 +7865,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetInputFocus$MH() {
         return RuntimeHelper.requireNonNull(constants$53.XSetInputFocus$MH,"XSetInputFocus");
     }
-    public static int XSetInputFocus ( Addressable x0,  long x1,  int x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XSetInputFocus(Display*, Window, int, Time);
+     * }
+     */
+    public static int XSetInputFocus(MemorySegment x0, long x1, int x2, long x3) {
         var mh$ = XSetInputFocus$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4259,7 +7881,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetLineAttributes$MH() {
         return RuntimeHelper.requireNonNull(constants$53.XSetLineAttributes$MH,"XSetLineAttributes");
     }
-    public static int XSetLineAttributes ( Addressable x0,  Addressable x1,  int x2,  int x3,  int x4,  int x5) {
+    /**
+     * {@snippet :
+     * int XSetLineAttributes(Display*, GC, unsigned int, int, int, int);
+     * }
+     */
+    public static int XSetLineAttributes(MemorySegment x0, MemorySegment x1, int x2, int x3, int x4, int x5) {
         var mh$ = XSetLineAttributes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -4270,7 +7897,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetModifierMapping$MH() {
         return RuntimeHelper.requireNonNull(constants$53.XSetModifierMapping$MH,"XSetModifierMapping");
     }
-    public static int XSetModifierMapping ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XSetModifierMapping(Display*, XModifierKeymap*);
+     * }
+     */
+    public static int XSetModifierMapping(MemorySegment x0, MemorySegment x1) {
         var mh$ = XSetModifierMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4279,9 +7911,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetPlaneMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetPlaneMask$MH,"XSetPlaneMask");
+        return RuntimeHelper.requireNonNull(constants$53.XSetPlaneMask$MH,"XSetPlaneMask");
     }
-    public static int XSetPlaneMask ( Addressable x0,  Addressable x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetPlaneMask(Display*, GC, unsigned long);
+     * }
+     */
+    public static int XSetPlaneMask(MemorySegment x0, MemorySegment x1, long x2) {
         var mh$ = XSetPlaneMask$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4290,9 +7927,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetPointerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetPointerMapping$MH,"XSetPointerMapping");
+        return RuntimeHelper.requireNonNull(constants$53.XSetPointerMapping$MH,"XSetPointerMapping");
     }
-    public static int XSetPointerMapping ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetPointerMapping(Display*, unsigned char*, int);
+     * }
+     */
+    public static int XSetPointerMapping(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetPointerMapping$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4303,7 +7945,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetScreenSaver$MH() {
         return RuntimeHelper.requireNonNull(constants$54.XSetScreenSaver$MH,"XSetScreenSaver");
     }
-    public static int XSetScreenSaver ( Addressable x0,  int x1,  int x2,  int x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XSetScreenSaver(Display*, int, int, int, int);
+     * }
+     */
+    public static int XSetScreenSaver(MemorySegment x0, int x1, int x2, int x3, int x4) {
         var mh$ = XSetScreenSaver$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -4314,7 +7961,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetSelectionOwner$MH() {
         return RuntimeHelper.requireNonNull(constants$54.XSetSelectionOwner$MH,"XSetSelectionOwner");
     }
-    public static int XSetSelectionOwner ( Addressable x0,  long x1,  long x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XSetSelectionOwner(Display*, Atom, Window, Time);
+     * }
+     */
+    public static int XSetSelectionOwner(MemorySegment x0, long x1, long x2, long x3) {
         var mh$ = XSetSelectionOwner$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4325,7 +7977,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetState$MH() {
         return RuntimeHelper.requireNonNull(constants$54.XSetState$MH,"XSetState");
     }
-    public static int XSetState ( Addressable x0,  Addressable x1,  long x2,  long x3,  int x4,  long x5) {
+    /**
+     * {@snippet :
+     * int XSetState(Display*, GC, unsigned long, unsigned long, int, unsigned long);
+     * }
+     */
+    public static int XSetState(MemorySegment x0, MemorySegment x1, long x2, long x3, int x4, long x5) {
         var mh$ = XSetState$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -4336,7 +7993,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetStipple$MH() {
         return RuntimeHelper.requireNonNull(constants$54.XSetStipple$MH,"XSetStipple");
     }
-    public static int XSetStipple ( Addressable x0,  Addressable x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetStipple(Display*, GC, Pixmap);
+     * }
+     */
+    public static int XSetStipple(MemorySegment x0, MemorySegment x1, long x2) {
         var mh$ = XSetStipple$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4345,9 +8007,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetSubwindowMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetSubwindowMode$MH,"XSetSubwindowMode");
+        return RuntimeHelper.requireNonNull(constants$54.XSetSubwindowMode$MH,"XSetSubwindowMode");
     }
-    public static int XSetSubwindowMode ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetSubwindowMode(Display*, GC, int);
+     * }
+     */
+    public static int XSetSubwindowMode(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XSetSubwindowMode$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4356,9 +8023,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetTSOrigin$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetTSOrigin$MH,"XSetTSOrigin");
+        return RuntimeHelper.requireNonNull(constants$54.XSetTSOrigin$MH,"XSetTSOrigin");
     }
-    public static int XSetTSOrigin ( Addressable x0,  Addressable x1,  int x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XSetTSOrigin(Display*, GC, int, int);
+     * }
+     */
+    public static int XSetTSOrigin(MemorySegment x0, MemorySegment x1, int x2, int x3) {
         var mh$ = XSetTSOrigin$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4369,7 +8041,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetTile$MH() {
         return RuntimeHelper.requireNonNull(constants$55.XSetTile$MH,"XSetTile");
     }
-    public static int XSetTile ( Addressable x0,  Addressable x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetTile(Display*, GC, Pixmap);
+     * }
+     */
+    public static int XSetTile(MemorySegment x0, MemorySegment x1, long x2) {
         var mh$ = XSetTile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4380,7 +8057,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWindowBackground$MH() {
         return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackground$MH,"XSetWindowBackground");
     }
-    public static int XSetWindowBackground ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetWindowBackground(Display*, Window, unsigned long);
+     * }
+     */
+    public static int XSetWindowBackground(MemorySegment x0, long x1, long x2) {
         var mh$ = XSetWindowBackground$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4391,7 +8073,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWindowBackgroundPixmap$MH() {
         return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackgroundPixmap$MH,"XSetWindowBackgroundPixmap");
     }
-    public static int XSetWindowBackgroundPixmap ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetWindowBackgroundPixmap(Display*, Window, Pixmap);
+     * }
+     */
+    public static int XSetWindowBackgroundPixmap(MemorySegment x0, long x1, long x2) {
         var mh$ = XSetWindowBackgroundPixmap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4402,7 +8089,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWindowBorder$MH() {
         return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorder$MH,"XSetWindowBorder");
     }
-    public static int XSetWindowBorder ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetWindowBorder(Display*, Window, unsigned long);
+     * }
+     */
+    public static int XSetWindowBorder(MemorySegment x0, long x1, long x2) {
         var mh$ = XSetWindowBorder$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4411,9 +8103,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetWindowBorderPixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderPixmap$MH,"XSetWindowBorderPixmap");
+        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorderPixmap$MH,"XSetWindowBorderPixmap");
     }
-    public static int XSetWindowBorderPixmap ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetWindowBorderPixmap(Display*, Window, Pixmap);
+     * }
+     */
+    public static int XSetWindowBorderPixmap(MemorySegment x0, long x1, long x2) {
         var mh$ = XSetWindowBorderPixmap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4422,9 +8119,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetWindowBorderWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XSetWindowBorderWidth$MH,"XSetWindowBorderWidth");
+        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorderWidth$MH,"XSetWindowBorderWidth");
     }
-    public static int XSetWindowBorderWidth ( Addressable x0,  long x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XSetWindowBorderWidth(Display*, Window, unsigned int);
+     * }
+     */
+    public static int XSetWindowBorderWidth(MemorySegment x0, long x1, int x2) {
         var mh$ = XSetWindowBorderWidth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4435,7 +8137,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWindowColormap$MH() {
         return RuntimeHelper.requireNonNull(constants$56.XSetWindowColormap$MH,"XSetWindowColormap");
     }
-    public static int XSetWindowColormap ( Addressable x0,  long x1,  long x2) {
+    /**
+     * {@snippet :
+     * int XSetWindowColormap(Display*, Window, Colormap);
+     * }
+     */
+    public static int XSetWindowColormap(MemorySegment x0, long x1, long x2) {
         var mh$ = XSetWindowColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4446,7 +8153,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XStoreBuffer$MH() {
         return RuntimeHelper.requireNonNull(constants$56.XStoreBuffer$MH,"XStoreBuffer");
     }
-    public static int XStoreBuffer ( Addressable x0,  Addressable x1,  int x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XStoreBuffer(Display*, char*, int, int);
+     * }
+     */
+    public static int XStoreBuffer(MemorySegment x0, MemorySegment x1, int x2, int x3) {
         var mh$ = XStoreBuffer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4457,7 +8169,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XStoreBytes$MH() {
         return RuntimeHelper.requireNonNull(constants$56.XStoreBytes$MH,"XStoreBytes");
     }
-    public static int XStoreBytes ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XStoreBytes(Display*, char*, int);
+     * }
+     */
+    public static int XStoreBytes(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XStoreBytes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4468,7 +8185,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XStoreColor$MH() {
         return RuntimeHelper.requireNonNull(constants$56.XStoreColor$MH,"XStoreColor");
     }
-    public static int XStoreColor ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XStoreColor(Display*, Colormap, XColor*);
+     * }
+     */
+    public static int XStoreColor(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XStoreColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4477,9 +8199,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XStoreColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XStoreColors$MH,"XStoreColors");
+        return RuntimeHelper.requireNonNull(constants$56.XStoreColors$MH,"XStoreColors");
     }
-    public static int XStoreColors ( Addressable x0,  long x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XStoreColors(Display*, Colormap, XColor*, int);
+     * }
+     */
+    public static int XStoreColors(MemorySegment x0, long x1, MemorySegment x2, int x3) {
         var mh$ = XStoreColors$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4488,9 +8215,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XStoreName$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XStoreName$MH,"XStoreName");
+        return RuntimeHelper.requireNonNull(constants$56.XStoreName$MH,"XStoreName");
     }
-    public static int XStoreName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XStoreName(Display*, Window, char*);
+     * }
+     */
+    public static int XStoreName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XStoreName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4501,7 +8233,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XStoreNamedColor$MH() {
         return RuntimeHelper.requireNonNull(constants$57.XStoreNamedColor$MH,"XStoreNamedColor");
     }
-    public static int XStoreNamedColor ( Addressable x0,  long x1,  Addressable x2,  long x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XStoreNamedColor(Display*, Colormap, char*, unsigned long, int);
+     * }
+     */
+    public static int XStoreNamedColor(MemorySegment x0, long x1, MemorySegment x2, long x3, int x4) {
         var mh$ = XStoreNamedColor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -4512,7 +8249,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSync$MH() {
         return RuntimeHelper.requireNonNull(constants$57.XSync$MH,"XSync");
     }
-    public static int XSync ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int XSync(Display*, int);
+     * }
+     */
+    public static int XSync(MemorySegment x0, int x1) {
         var mh$ = XSync$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4523,7 +8265,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XTextExtents$MH() {
         return RuntimeHelper.requireNonNull(constants$57.XTextExtents$MH,"XTextExtents");
     }
-    public static int XTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6) {
+    /**
+     * {@snippet :
+     * int XTextExtents(XFontStruct*, char*, int, int*, int*, int*, XCharStruct*);
+     * }
+     */
+    public static int XTextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6) {
         var mh$ = XTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -4534,7 +8281,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XTextExtents16$MH() {
         return RuntimeHelper.requireNonNull(constants$57.XTextExtents16$MH,"XTextExtents16");
     }
-    public static int XTextExtents16 ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  Addressable x5,  Addressable x6) {
+    /**
+     * {@snippet :
+     * int XTextExtents16(XFontStruct*, const XChar2b*, int, int*, int*, int*, XCharStruct*);
+     * }
+     */
+    public static int XTextExtents16(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6) {
         var mh$ = XTextExtents16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -4543,9 +8295,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XTextWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XTextWidth$MH,"XTextWidth");
+        return RuntimeHelper.requireNonNull(constants$57.XTextWidth$MH,"XTextWidth");
     }
-    public static int XTextWidth ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XTextWidth(XFontStruct*, char*, int);
+     * }
+     */
+    public static int XTextWidth(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XTextWidth$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4554,9 +8311,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XTextWidth16$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XTextWidth16$MH,"XTextWidth16");
+        return RuntimeHelper.requireNonNull(constants$57.XTextWidth16$MH,"XTextWidth16");
     }
-    public static int XTextWidth16 ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XTextWidth16(XFontStruct*, const XChar2b*, int);
+     * }
+     */
+    public static int XTextWidth16(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XTextWidth16$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4567,7 +8329,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XTranslateCoordinates$MH() {
         return RuntimeHelper.requireNonNull(constants$58.XTranslateCoordinates$MH,"XTranslateCoordinates");
     }
-    public static int XTranslateCoordinates ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  Addressable x5,  Addressable x6,  Addressable x7) {
+    /**
+     * {@snippet :
+     * int XTranslateCoordinates(Display*, Window, Window, int, int, int*, int*, Window*);
+     * }
+     */
+    public static int XTranslateCoordinates(MemorySegment x0, long x1, long x2, int x3, int x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
         var mh$ = XTranslateCoordinates$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -4578,7 +8345,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUndefineCursor$MH() {
         return RuntimeHelper.requireNonNull(constants$58.XUndefineCursor$MH,"XUndefineCursor");
     }
-    public static int XUndefineCursor ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XUndefineCursor(Display*, Window);
+     * }
+     */
+    public static int XUndefineCursor(MemorySegment x0, long x1) {
         var mh$ = XUndefineCursor$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4589,7 +8361,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUngrabButton$MH() {
         return RuntimeHelper.requireNonNull(constants$58.XUngrabButton$MH,"XUngrabButton");
     }
-    public static int XUngrabButton ( Addressable x0,  int x1,  int x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XUngrabButton(Display*, unsigned int, unsigned int, Window);
+     * }
+     */
+    public static int XUngrabButton(MemorySegment x0, int x1, int x2, long x3) {
         var mh$ = XUngrabButton$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4600,7 +8377,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUngrabKey$MH() {
         return RuntimeHelper.requireNonNull(constants$58.XUngrabKey$MH,"XUngrabKey");
     }
-    public static int XUngrabKey ( Addressable x0,  int x1,  int x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XUngrabKey(Display*, int, unsigned int, Window);
+     * }
+     */
+    public static int XUngrabKey(MemorySegment x0, int x1, int x2, long x3) {
         var mh$ = XUngrabKey$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4609,9 +8391,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XUngrabKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUngrabKeyboard$MH,"XUngrabKeyboard");
+        return RuntimeHelper.requireNonNull(constants$58.XUngrabKeyboard$MH,"XUngrabKeyboard");
     }
-    public static int XUngrabKeyboard ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XUngrabKeyboard(Display*, Time);
+     * }
+     */
+    public static int XUngrabKeyboard(MemorySegment x0, long x1) {
         var mh$ = XUngrabKeyboard$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4620,9 +8407,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XUngrabPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUngrabPointer$MH,"XUngrabPointer");
+        return RuntimeHelper.requireNonNull(constants$58.XUngrabPointer$MH,"XUngrabPointer");
     }
-    public static int XUngrabPointer ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XUngrabPointer(Display*, Time);
+     * }
+     */
+    public static int XUngrabPointer(MemorySegment x0, long x1) {
         var mh$ = XUngrabPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4633,7 +8425,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUngrabServer$MH() {
         return RuntimeHelper.requireNonNull(constants$59.XUngrabServer$MH,"XUngrabServer");
     }
-    public static int XUngrabServer ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XUngrabServer(Display*);
+     * }
+     */
+    public static int XUngrabServer(MemorySegment x0) {
         var mh$ = XUngrabServer$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4644,7 +8441,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUninstallColormap$MH() {
         return RuntimeHelper.requireNonNull(constants$59.XUninstallColormap$MH,"XUninstallColormap");
     }
-    public static int XUninstallColormap ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XUninstallColormap(Display*, Colormap);
+     * }
+     */
+    public static int XUninstallColormap(MemorySegment x0, long x1) {
         var mh$ = XUninstallColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4655,7 +8457,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUnloadFont$MH() {
         return RuntimeHelper.requireNonNull(constants$59.XUnloadFont$MH,"XUnloadFont");
     }
-    public static int XUnloadFont ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XUnloadFont(Display*, Font);
+     * }
+     */
+    public static int XUnloadFont(MemorySegment x0, long x1) {
         var mh$ = XUnloadFont$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4666,7 +8473,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUnmapSubwindows$MH() {
         return RuntimeHelper.requireNonNull(constants$59.XUnmapSubwindows$MH,"XUnmapSubwindows");
     }
-    public static int XUnmapSubwindows ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XUnmapSubwindows(Display*, Window);
+     * }
+     */
+    public static int XUnmapSubwindows(MemorySegment x0, long x1) {
         var mh$ = XUnmapSubwindows$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4675,9 +8487,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XUnmapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XUnmapWindow$MH,"XUnmapWindow");
+        return RuntimeHelper.requireNonNull(constants$59.XUnmapWindow$MH,"XUnmapWindow");
     }
-    public static int XUnmapWindow ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XUnmapWindow(Display*, Window);
+     * }
+     */
+    public static int XUnmapWindow(MemorySegment x0, long x1) {
         var mh$ = XUnmapWindow$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -4686,9 +8503,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XVendorRelease$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XVendorRelease$MH,"XVendorRelease");
+        return RuntimeHelper.requireNonNull(constants$59.XVendorRelease$MH,"XVendorRelease");
     }
-    public static int XVendorRelease ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XVendorRelease(Display*);
+     * }
+     */
+    public static int XVendorRelease(MemorySegment x0) {
         var mh$ = XVendorRelease$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4699,7 +8521,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XWarpPointer$MH() {
         return RuntimeHelper.requireNonNull(constants$60.XWarpPointer$MH,"XWarpPointer");
     }
-    public static int XWarpPointer ( Addressable x0,  long x1,  long x2,  int x3,  int x4,  int x5,  int x6,  int x7,  int x8) {
+    /**
+     * {@snippet :
+     * int XWarpPointer(Display*, Window, Window, int, int, unsigned int, unsigned int, int, int);
+     * }
+     */
+    public static int XWarpPointer(MemorySegment x0, long x1, long x2, int x3, int x4, int x5, int x6, int x7, int x8) {
         var mh$ = XWarpPointer$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -4710,7 +8537,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XWidthMMOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$60.XWidthMMOfScreen$MH,"XWidthMMOfScreen");
     }
-    public static int XWidthMMOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XWidthMMOfScreen(Screen*);
+     * }
+     */
+    public static int XWidthMMOfScreen(MemorySegment x0) {
         var mh$ = XWidthMMOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4721,7 +8553,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XWidthOfScreen$MH() {
         return RuntimeHelper.requireNonNull(constants$60.XWidthOfScreen$MH,"XWidthOfScreen");
     }
-    public static int XWidthOfScreen ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XWidthOfScreen(Screen*);
+     * }
+     */
+    public static int XWidthOfScreen(MemorySegment x0) {
         var mh$ = XWidthOfScreen$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4732,7 +8569,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XWindowEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$60.XWindowEvent$MH,"XWindowEvent");
     }
-    public static int XWindowEvent ( Addressable x0,  long x1,  long x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XWindowEvent(Display*, Window, long, XEvent*);
+     * }
+     */
+    public static int XWindowEvent(MemorySegment x0, long x1, long x2, MemorySegment x3) {
         var mh$ = XWindowEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -4741,9 +8583,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XWriteBitmapFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XWriteBitmapFile$MH,"XWriteBitmapFile");
+        return RuntimeHelper.requireNonNull(constants$60.XWriteBitmapFile$MH,"XWriteBitmapFile");
     }
-    public static int XWriteBitmapFile ( Addressable x0,  Addressable x1,  long x2,  int x3,  int x4,  int x5,  int x6) {
+    /**
+     * {@snippet :
+     * int XWriteBitmapFile(Display*, char*, Pixmap, unsigned int, unsigned int, int, int);
+     * }
+     */
+    public static int XWriteBitmapFile(MemorySegment x0, MemorySegment x1, long x2, int x3, int x4, int x5, int x6) {
         var mh$ = XWriteBitmapFile$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -4752,9 +8599,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSupportsLocale$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XSupportsLocale$MH,"XSupportsLocale");
+        return RuntimeHelper.requireNonNull(constants$60.XSupportsLocale$MH,"XSupportsLocale");
     }
-    public static int XSupportsLocale () {
+    /**
+     * {@snippet :
+     * int XSupportsLocale();
+     * }
+     */
+    public static int XSupportsLocale() {
         var mh$ = XSupportsLocale$MH();
         try {
             return (int)mh$.invokeExact();
@@ -4765,10 +8617,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetLocaleModifiers$MH() {
         return RuntimeHelper.requireNonNull(constants$61.XSetLocaleModifiers$MH,"XSetLocaleModifiers");
     }
-    public static MemoryAddress XSetLocaleModifiers ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XSetLocaleModifiers(char*);
+     * }
+     */
+    public static MemorySegment XSetLocaleModifiers(MemorySegment x0) {
         var mh$ = XSetLocaleModifiers$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4776,10 +8633,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XOpenOM$MH() {
         return RuntimeHelper.requireNonNull(constants$61.XOpenOM$MH,"XOpenOM");
     }
-    public static MemoryAddress XOpenOM ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * XOM XOpenOM(Display*, struct _XrmHashBucketRec*, char*, char*);
+     * }
+     */
+    public static MemorySegment XOpenOM(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XOpenOM$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4787,7 +8649,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCloseOM$MH() {
         return RuntimeHelper.requireNonNull(constants$61.XCloseOM$MH,"XCloseOM");
     }
-    public static int XCloseOM ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XCloseOM(XOM);
+     * }
+     */
+    public static int XCloseOM(MemorySegment x0) {
         var mh$ = XCloseOM$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4798,32 +8665,47 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetOMValues$MH() {
         return RuntimeHelper.requireNonNull(constants$61.XSetOMValues$MH,"XSetOMValues");
     }
-    public static MemoryAddress XSetOMValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XSetOMValues(XOM,...);
+     * }
+     */
+    public static MemorySegment XSetOMValues(MemorySegment x0, Object... x1) {
         var mh$ = XSetOMValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetOMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XGetOMValues$MH,"XGetOMValues");
+        return RuntimeHelper.requireNonNull(constants$61.XGetOMValues$MH,"XGetOMValues");
     }
-    public static MemoryAddress XGetOMValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XGetOMValues(XOM,...);
+     * }
+     */
+    public static MemorySegment XGetOMValues(MemorySegment x0, Object... x1) {
         var mh$ = XGetOMValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDisplayOfOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XDisplayOfOM$MH,"XDisplayOfOM");
+        return RuntimeHelper.requireNonNull(constants$61.XDisplayOfOM$MH,"XDisplayOfOM");
     }
-    public static MemoryAddress XDisplayOfOM ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Display* XDisplayOfOM(XOM);
+     * }
+     */
+    public static MemorySegment XDisplayOfOM(MemorySegment x0) {
         var mh$ = XDisplayOfOM$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4831,10 +8713,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLocaleOfOM$MH() {
         return RuntimeHelper.requireNonNull(constants$62.XLocaleOfOM$MH,"XLocaleOfOM");
     }
-    public static MemoryAddress XLocaleOfOM ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XLocaleOfOM(XOM);
+     * }
+     */
+    public static MemorySegment XLocaleOfOM(MemorySegment x0) {
         var mh$ = XLocaleOfOM$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4842,10 +8729,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateOC$MH() {
         return RuntimeHelper.requireNonNull(constants$62.XCreateOC$MH,"XCreateOC");
     }
-    public static MemoryAddress XCreateOC ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * XOC XCreateOC(XOM,...);
+     * }
+     */
+    public static MemorySegment XCreateOC(MemorySegment x0, Object... x1) {
         var mh$ = XCreateOC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4853,7 +8745,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDestroyOC$MH() {
         return RuntimeHelper.requireNonNull(constants$62.XDestroyOC$MH,"XDestroyOC");
     }
-    public static void XDestroyOC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * void XDestroyOC(XOC);
+     * }
+     */
+    public static void XDestroyOC(MemorySegment x0) {
         var mh$ = XDestroyOC$MH();
         try {
             mh$.invokeExact(x0);
@@ -4864,32 +8761,47 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XOMOfOC$MH() {
         return RuntimeHelper.requireNonNull(constants$62.XOMOfOC$MH,"XOMOfOC");
     }
-    public static MemoryAddress XOMOfOC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * XOM XOMOfOC(XOC);
+     * }
+     */
+    public static MemorySegment XOMOfOC(MemorySegment x0) {
         var mh$ = XOMOfOC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XSetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XSetOCValues$MH,"XSetOCValues");
+        return RuntimeHelper.requireNonNull(constants$62.XSetOCValues$MH,"XSetOCValues");
     }
-    public static MemoryAddress XSetOCValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XSetOCValues(XOC,...);
+     * }
+     */
+    public static MemorySegment XSetOCValues(MemorySegment x0, Object... x1) {
         var mh$ = XSetOCValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XGetOCValues$MH,"XGetOCValues");
+        return RuntimeHelper.requireNonNull(constants$62.XGetOCValues$MH,"XGetOCValues");
     }
-    public static MemoryAddress XGetOCValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XGetOCValues(XOC,...);
+     * }
+     */
+    public static MemorySegment XGetOCValues(MemorySegment x0, Object... x1) {
         var mh$ = XGetOCValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4897,10 +8809,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateFontSet$MH() {
         return RuntimeHelper.requireNonNull(constants$63.XCreateFontSet$MH,"XCreateFontSet");
     }
-    public static MemoryAddress XCreateFontSet ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * XFontSet XCreateFontSet(Display*, char*, char***, int*, char**);
+     * }
+     */
+    public static MemorySegment XCreateFontSet(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XCreateFontSet$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3, x4);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4908,7 +8825,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeFontSet$MH() {
         return RuntimeHelper.requireNonNull(constants$63.XFreeFontSet$MH,"XFreeFontSet");
     }
-    public static void XFreeFontSet ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * void XFreeFontSet(Display*, XFontSet);
+     * }
+     */
+    public static void XFreeFontSet(MemorySegment x0, MemorySegment x1) {
         var mh$ = XFreeFontSet$MH();
         try {
             mh$.invokeExact(x0, x1);
@@ -4919,7 +8841,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFontsOfFontSet$MH() {
         return RuntimeHelper.requireNonNull(constants$63.XFontsOfFontSet$MH,"XFontsOfFontSet");
     }
-    public static int XFontsOfFontSet ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XFontsOfFontSet(XFontSet, XFontStruct***, char***);
+     * }
+     */
+    public static int XFontsOfFontSet(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XFontsOfFontSet$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -4930,29 +8857,44 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XBaseFontNameListOfFontSet$MH() {
         return RuntimeHelper.requireNonNull(constants$63.XBaseFontNameListOfFontSet$MH,"XBaseFontNameListOfFontSet");
     }
-    public static MemoryAddress XBaseFontNameListOfFontSet ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XBaseFontNameListOfFontSet(XFontSet);
+     * }
+     */
+    public static MemorySegment XBaseFontNameListOfFontSet(MemorySegment x0) {
         var mh$ = XBaseFontNameListOfFontSet$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XLocaleOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XLocaleOfFontSet$MH,"XLocaleOfFontSet");
+        return RuntimeHelper.requireNonNull(constants$63.XLocaleOfFontSet$MH,"XLocaleOfFontSet");
     }
-    public static MemoryAddress XLocaleOfFontSet ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XLocaleOfFontSet(XFontSet);
+     * }
+     */
+    public static MemorySegment XLocaleOfFontSet(MemorySegment x0) {
         var mh$ = XLocaleOfFontSet$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XContextDependentDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XContextDependentDrawing$MH,"XContextDependentDrawing");
+        return RuntimeHelper.requireNonNull(constants$63.XContextDependentDrawing$MH,"XContextDependentDrawing");
     }
-    public static int XContextDependentDrawing ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XContextDependentDrawing(XFontSet);
+     * }
+     */
+    public static int XContextDependentDrawing(MemorySegment x0) {
         var mh$ = XContextDependentDrawing$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4963,7 +8905,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDirectionalDependentDrawing$MH() {
         return RuntimeHelper.requireNonNull(constants$64.XDirectionalDependentDrawing$MH,"XDirectionalDependentDrawing");
     }
-    public static int XDirectionalDependentDrawing ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XDirectionalDependentDrawing(XFontSet);
+     * }
+     */
+    public static int XDirectionalDependentDrawing(MemorySegment x0) {
         var mh$ = XDirectionalDependentDrawing$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4974,7 +8921,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XContextualDrawing$MH() {
         return RuntimeHelper.requireNonNull(constants$64.XContextualDrawing$MH,"XContextualDrawing");
     }
-    public static int XContextualDrawing ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XContextualDrawing(XFontSet);
+     * }
+     */
+    public static int XContextualDrawing(MemorySegment x0) {
         var mh$ = XContextualDrawing$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -4985,10 +8937,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XExtentsOfFontSet$MH() {
         return RuntimeHelper.requireNonNull(constants$64.XExtentsOfFontSet$MH,"XExtentsOfFontSet");
     }
-    public static MemoryAddress XExtentsOfFontSet ( Addressable x0) {
+    /**
+     * {@snippet :
+     * XFontSetExtents* XExtentsOfFontSet(XFontSet);
+     * }
+     */
+    public static MemorySegment XExtentsOfFontSet(MemorySegment x0) {
         var mh$ = XExtentsOfFontSet$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -4996,7 +8953,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbTextEscapement$MH() {
         return RuntimeHelper.requireNonNull(constants$64.XmbTextEscapement$MH,"XmbTextEscapement");
     }
-    public static int XmbTextEscapement ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XmbTextEscapement(XFontSet, char*, int);
+     * }
+     */
+    public static int XmbTextEscapement(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XmbTextEscapement$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5005,9 +8967,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XwcTextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XwcTextEscapement$MH,"XwcTextEscapement");
+        return RuntimeHelper.requireNonNull(constants$64.XwcTextEscapement$MH,"XwcTextEscapement");
     }
-    public static int XwcTextEscapement ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XwcTextEscapement(XFontSet, const wchar_t*, int);
+     * }
+     */
+    public static int XwcTextEscapement(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = XwcTextEscapement$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5016,9 +8983,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle Xutf8TextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.Xutf8TextEscapement$MH,"Xutf8TextEscapement");
+        return RuntimeHelper.requireNonNull(constants$64.Xutf8TextEscapement$MH,"Xutf8TextEscapement");
     }
-    public static int Xutf8TextEscapement ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int Xutf8TextEscapement(XFontSet, char*, int);
+     * }
+     */
+    public static int Xutf8TextEscapement(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = Xutf8TextEscapement$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5029,7 +9001,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbTextExtents$MH() {
         return RuntimeHelper.requireNonNull(constants$65.XmbTextExtents$MH,"XmbTextExtents");
     }
-    public static int XmbTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XmbTextExtents(XFontSet, char*, int, XRectangle*, XRectangle*);
+     * }
+     */
+    public static int XmbTextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XmbTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5040,7 +9017,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcTextExtents$MH() {
         return RuntimeHelper.requireNonNull(constants$65.XwcTextExtents$MH,"XwcTextExtents");
     }
-    public static int XwcTextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XwcTextExtents(XFontSet, const wchar_t*, int, XRectangle*, XRectangle*);
+     * }
+     */
+    public static int XwcTextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XwcTextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5051,7 +9033,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle Xutf8TextExtents$MH() {
         return RuntimeHelper.requireNonNull(constants$65.Xutf8TextExtents$MH,"Xutf8TextExtents");
     }
-    public static int Xutf8TextExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int Xutf8TextExtents(XFontSet, char*, int, XRectangle*, XRectangle*);
+     * }
+     */
+    public static int Xutf8TextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = Xutf8TextExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5062,7 +9049,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbTextPerCharExtents$MH() {
         return RuntimeHelper.requireNonNull(constants$65.XmbTextPerCharExtents$MH,"XmbTextPerCharExtents");
     }
-    public static int XmbTextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * int XmbTextPerCharExtents(XFontSet, char*, int, XRectangle*, XRectangle*, int, int*, XRectangle*, XRectangle*);
+     * }
+     */
+    public static int XmbTextPerCharExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = XmbTextPerCharExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -5071,9 +9063,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XwcTextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XwcTextPerCharExtents$MH,"XwcTextPerCharExtents");
+        return RuntimeHelper.requireNonNull(constants$65.XwcTextPerCharExtents$MH,"XwcTextPerCharExtents");
     }
-    public static int XwcTextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * int XwcTextPerCharExtents(XFontSet, const wchar_t*, int, XRectangle*, XRectangle*, int, int*, XRectangle*, XRectangle*);
+     * }
+     */
+    public static int XwcTextPerCharExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = XwcTextPerCharExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -5082,9 +9079,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle Xutf8TextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.Xutf8TextPerCharExtents$MH,"Xutf8TextPerCharExtents");
+        return RuntimeHelper.requireNonNull(constants$65.Xutf8TextPerCharExtents$MH,"Xutf8TextPerCharExtents");
     }
-    public static int Xutf8TextPerCharExtents ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * int Xutf8TextPerCharExtents(XFontSet, char*, int, XRectangle*, XRectangle*, int, int*, XRectangle*, XRectangle*);
+     * }
+     */
+    public static int Xutf8TextPerCharExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = Xutf8TextPerCharExtents$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -5095,7 +9097,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbDrawText$MH() {
         return RuntimeHelper.requireNonNull(constants$66.XmbDrawText$MH,"XmbDrawText");
     }
-    public static void XmbDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * void XmbDrawText(Display*, Drawable, GC, int, int, XmbTextItem*, int);
+     * }
+     */
+    public static void XmbDrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XmbDrawText$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -5106,7 +9113,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcDrawText$MH() {
         return RuntimeHelper.requireNonNull(constants$66.XwcDrawText$MH,"XwcDrawText");
     }
-    public static void XwcDrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * void XwcDrawText(Display*, Drawable, GC, int, int, XwcTextItem*, int);
+     * }
+     */
+    public static void XwcDrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = XwcDrawText$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -5117,7 +9129,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle Xutf8DrawText$MH() {
         return RuntimeHelper.requireNonNull(constants$66.Xutf8DrawText$MH,"Xutf8DrawText");
     }
-    public static void Xutf8DrawText ( Addressable x0,  long x1,  Addressable x2,  int x3,  int x4,  Addressable x5,  int x6) {
+    /**
+     * {@snippet :
+     * void Xutf8DrawText(Display*, Drawable, GC, int, int, XmbTextItem*, int);
+     * }
+     */
+    public static void Xutf8DrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
         var mh$ = Xutf8DrawText$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
@@ -5128,7 +9145,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbDrawString$MH() {
         return RuntimeHelper.requireNonNull(constants$66.XmbDrawString$MH,"XmbDrawString");
     }
-    public static void XmbDrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
+    /**
+     * {@snippet :
+     * void XmbDrawString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * }
+     */
+    public static void XmbDrawString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
         var mh$ = XmbDrawString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -5137,9 +9159,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XwcDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XwcDrawString$MH,"XwcDrawString");
+        return RuntimeHelper.requireNonNull(constants$66.XwcDrawString$MH,"XwcDrawString");
     }
-    public static void XwcDrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
+    /**
+     * {@snippet :
+     * void XwcDrawString(Display*, Drawable, XFontSet, GC, int, int, const wchar_t*, int);
+     * }
+     */
+    public static void XwcDrawString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
         var mh$ = XwcDrawString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -5148,9 +9175,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle Xutf8DrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.Xutf8DrawString$MH,"Xutf8DrawString");
+        return RuntimeHelper.requireNonNull(constants$66.Xutf8DrawString$MH,"Xutf8DrawString");
     }
-    public static void Xutf8DrawString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
+    /**
+     * {@snippet :
+     * void Xutf8DrawString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * }
+     */
+    public static void Xutf8DrawString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
         var mh$ = Xutf8DrawString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -5161,7 +9193,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbDrawImageString$MH() {
         return RuntimeHelper.requireNonNull(constants$67.XmbDrawImageString$MH,"XmbDrawImageString");
     }
-    public static void XmbDrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
+    /**
+     * {@snippet :
+     * void XmbDrawImageString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * }
+     */
+    public static void XmbDrawImageString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
         var mh$ = XmbDrawImageString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -5172,7 +9209,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcDrawImageString$MH() {
         return RuntimeHelper.requireNonNull(constants$67.XwcDrawImageString$MH,"XwcDrawImageString");
     }
-    public static void XwcDrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
+    /**
+     * {@snippet :
+     * void XwcDrawImageString(Display*, Drawable, XFontSet, GC, int, int, const wchar_t*, int);
+     * }
+     */
+    public static void XwcDrawImageString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
         var mh$ = XwcDrawImageString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -5183,7 +9225,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle Xutf8DrawImageString$MH() {
         return RuntimeHelper.requireNonNull(constants$67.Xutf8DrawImageString$MH,"Xutf8DrawImageString");
     }
-    public static void Xutf8DrawImageString ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  int x4,  int x5,  Addressable x6,  int x7) {
+    /**
+     * {@snippet :
+     * void Xutf8DrawImageString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * }
+     */
+    public static void Xutf8DrawImageString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
         var mh$ = Xutf8DrawImageString$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -5194,18 +9241,28 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XOpenIM$MH() {
         return RuntimeHelper.requireNonNull(constants$67.XOpenIM$MH,"XOpenIM");
     }
-    public static MemoryAddress XOpenIM ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * XIM XOpenIM(Display*, struct _XrmHashBucketRec*, char*, char*);
+     * }
+     */
+    public static MemorySegment XOpenIM(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XOpenIM$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XCloseIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XCloseIM$MH,"XCloseIM");
+        return RuntimeHelper.requireNonNull(constants$67.XCloseIM$MH,"XCloseIM");
     }
-    public static int XCloseIM ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XCloseIM(XIM);
+     * }
+     */
+    public static int XCloseIM(MemorySegment x0) {
         var mh$ = XCloseIM$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -5214,12 +9271,17 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetIMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XGetIMValues$MH,"XGetIMValues");
+        return RuntimeHelper.requireNonNull(constants$67.XGetIMValues$MH,"XGetIMValues");
     }
-    public static MemoryAddress XGetIMValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XGetIMValues(XIM,...);
+     * }
+     */
+    public static MemorySegment XGetIMValues(MemorySegment x0, Object... x1) {
         var mh$ = XGetIMValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5227,10 +9289,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetIMValues$MH() {
         return RuntimeHelper.requireNonNull(constants$68.XSetIMValues$MH,"XSetIMValues");
     }
-    public static MemoryAddress XSetIMValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XSetIMValues(XIM,...);
+     * }
+     */
+    public static MemorySegment XSetIMValues(MemorySegment x0, Object... x1) {
         var mh$ = XSetIMValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5238,10 +9305,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDisplayOfIM$MH() {
         return RuntimeHelper.requireNonNull(constants$68.XDisplayOfIM$MH,"XDisplayOfIM");
     }
-    public static MemoryAddress XDisplayOfIM ( Addressable x0) {
+    /**
+     * {@snippet :
+     * Display* XDisplayOfIM(XIM);
+     * }
+     */
+    public static MemorySegment XDisplayOfIM(MemorySegment x0) {
         var mh$ = XDisplayOfIM$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5249,10 +9321,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLocaleOfIM$MH() {
         return RuntimeHelper.requireNonNull(constants$68.XLocaleOfIM$MH,"XLocaleOfIM");
     }
-    public static MemoryAddress XLocaleOfIM ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XLocaleOfIM(XIM);
+     * }
+     */
+    public static MemorySegment XLocaleOfIM(MemorySegment x0) {
         var mh$ = XLocaleOfIM$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5260,18 +9337,28 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateIC$MH() {
         return RuntimeHelper.requireNonNull(constants$68.XCreateIC$MH,"XCreateIC");
     }
-    public static MemoryAddress XCreateIC ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * XIC XCreateIC(XIM,...);
+     * }
+     */
+    public static MemorySegment XCreateIC(MemorySegment x0, Object... x1) {
         var mh$ = XCreateIC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XDestroyIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XDestroyIC$MH,"XDestroyIC");
+        return RuntimeHelper.requireNonNull(constants$68.XDestroyIC$MH,"XDestroyIC");
     }
-    public static void XDestroyIC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * void XDestroyIC(XIC);
+     * }
+     */
+    public static void XDestroyIC(MemorySegment x0) {
         var mh$ = XDestroyIC$MH();
         try {
             mh$.invokeExact(x0);
@@ -5280,9 +9367,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetICFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XSetICFocus$MH,"XSetICFocus");
+        return RuntimeHelper.requireNonNull(constants$68.XSetICFocus$MH,"XSetICFocus");
     }
-    public static void XSetICFocus ( Addressable x0) {
+    /**
+     * {@snippet :
+     * void XSetICFocus(XIC);
+     * }
+     */
+    public static void XSetICFocus(MemorySegment x0) {
         var mh$ = XSetICFocus$MH();
         try {
             mh$.invokeExact(x0);
@@ -5293,7 +9385,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUnsetICFocus$MH() {
         return RuntimeHelper.requireNonNull(constants$69.XUnsetICFocus$MH,"XUnsetICFocus");
     }
-    public static void XUnsetICFocus ( Addressable x0) {
+    /**
+     * {@snippet :
+     * void XUnsetICFocus(XIC);
+     * }
+     */
+    public static void XUnsetICFocus(MemorySegment x0) {
         var mh$ = XUnsetICFocus$MH();
         try {
             mh$.invokeExact(x0);
@@ -5304,10 +9401,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcResetIC$MH() {
         return RuntimeHelper.requireNonNull(constants$69.XwcResetIC$MH,"XwcResetIC");
     }
-    public static MemoryAddress XwcResetIC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * wchar_t* XwcResetIC(XIC);
+     * }
+     */
+    public static MemorySegment XwcResetIC(MemorySegment x0) {
         var mh$ = XwcResetIC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5315,10 +9417,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbResetIC$MH() {
         return RuntimeHelper.requireNonNull(constants$69.XmbResetIC$MH,"XmbResetIC");
     }
-    public static MemoryAddress XmbResetIC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* XmbResetIC(XIC);
+     * }
+     */
+    public static MemorySegment XmbResetIC(MemorySegment x0) {
         var mh$ = XmbResetIC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5326,32 +9433,47 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle Xutf8ResetIC$MH() {
         return RuntimeHelper.requireNonNull(constants$69.Xutf8ResetIC$MH,"Xutf8ResetIC");
     }
-    public static MemoryAddress Xutf8ResetIC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * char* Xutf8ResetIC(XIC);
+     * }
+     */
+    public static MemorySegment Xutf8ResetIC(MemorySegment x0) {
         var mh$ = Xutf8ResetIC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XSetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XSetICValues$MH,"XSetICValues");
+        return RuntimeHelper.requireNonNull(constants$69.XSetICValues$MH,"XSetICValues");
     }
-    public static MemoryAddress XSetICValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XSetICValues(XIC,...);
+     * }
+     */
+    public static MemorySegment XSetICValues(MemorySegment x0, Object... x1) {
         var mh$ = XSetICValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XGetICValues$MH,"XGetICValues");
+        return RuntimeHelper.requireNonNull(constants$69.XGetICValues$MH,"XGetICValues");
     }
-    public static MemoryAddress XGetICValues ( Addressable x0, Object... x1) {
+    /**
+     * {@snippet :
+     * char* XGetICValues(XIC,...);
+     * }
+     */
+    public static MemorySegment XGetICValues(MemorySegment x0, Object... x1) {
         var mh$ = XGetICValues$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5359,10 +9481,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XIMOfIC$MH() {
         return RuntimeHelper.requireNonNull(constants$70.XIMOfIC$MH,"XIMOfIC");
     }
-    public static MemoryAddress XIMOfIC ( Addressable x0) {
+    /**
+     * {@snippet :
+     * XIM XIMOfIC(XIC);
+     * }
+     */
+    public static MemorySegment XIMOfIC(MemorySegment x0) {
         var mh$ = XIMOfIC$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5370,7 +9497,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFilterEvent$MH() {
         return RuntimeHelper.requireNonNull(constants$70.XFilterEvent$MH,"XFilterEvent");
     }
-    public static int XFilterEvent ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * int XFilterEvent(XEvent*, Window);
+     * }
+     */
+    public static int XFilterEvent(MemorySegment x0, long x1) {
         var mh$ = XFilterEvent$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -5381,7 +9513,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbLookupString$MH() {
         return RuntimeHelper.requireNonNull(constants$70.XmbLookupString$MH,"XmbLookupString");
     }
-    public static int XmbLookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XmbLookupString(XIC, XKeyPressedEvent*, char*, int, KeySym*, int*);
+     * }
+     */
+    public static int XmbLookupString(MemorySegment x0, MemorySegment x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XmbLookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -5392,7 +9529,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcLookupString$MH() {
         return RuntimeHelper.requireNonNull(constants$70.XwcLookupString$MH,"XwcLookupString");
     }
-    public static int XwcLookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XwcLookupString(XIC, XKeyPressedEvent*, wchar_t*, int, KeySym*, int*);
+     * }
+     */
+    public static int XwcLookupString(MemorySegment x0, MemorySegment x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XwcLookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -5401,9 +9543,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle Xutf8LookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.Xutf8LookupString$MH,"Xutf8LookupString");
+        return RuntimeHelper.requireNonNull(constants$70.Xutf8LookupString$MH,"Xutf8LookupString");
     }
-    public static int Xutf8LookupString ( Addressable x0,  Addressable x1,  Addressable x2,  int x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int Xutf8LookupString(XIC, XKeyPressedEvent*, char*, int, KeySym*, int*);
+     * }
+     */
+    public static int Xutf8LookupString(MemorySegment x0, MemorySegment x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = Xutf8LookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -5412,12 +9559,17 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XVaCreateNestedList$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XVaCreateNestedList$MH,"XVaCreateNestedList");
+        return RuntimeHelper.requireNonNull(constants$70.XVaCreateNestedList$MH,"XVaCreateNestedList");
     }
-    public static MemoryAddress XVaCreateNestedList ( int x0, Object... x1) {
+    /**
+     * {@snippet :
+     * XVaNestedList XVaCreateNestedList(int,...);
+     * }
+     */
+    public static MemorySegment XVaCreateNestedList(int x0, Object... x1) {
         var mh$ = XVaCreateNestedList$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5425,7 +9577,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRegisterIMInstantiateCallback$MH() {
         return RuntimeHelper.requireNonNull(constants$71.XRegisterIMInstantiateCallback$MH,"XRegisterIMInstantiateCallback");
     }
-    public static int XRegisterIMInstantiateCallback ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XRegisterIMInstantiateCallback(Display*, struct _XrmHashBucketRec*, char*, char*, XIDProc, XPointer);
+     * }
+     */
+    public static int XRegisterIMInstantiateCallback(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XRegisterIMInstantiateCallback$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -5436,7 +9593,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUnregisterIMInstantiateCallback$MH() {
         return RuntimeHelper.requireNonNull(constants$71.XUnregisterIMInstantiateCallback$MH,"XUnregisterIMInstantiateCallback");
     }
-    public static int XUnregisterIMInstantiateCallback ( Addressable x0,  Addressable x1,  Addressable x2,  Addressable x3,  Addressable x4,  Addressable x5) {
+    /**
+     * {@snippet :
+     * int XUnregisterIMInstantiateCallback(Display*, struct _XrmHashBucketRec*, char*, char*, XIDProc, XPointer);
+     * }
+     */
+    public static int XUnregisterIMInstantiateCallback(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
         var mh$ = XUnregisterIMInstantiateCallback$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
@@ -5445,9 +9607,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XInternalConnectionNumbers$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XInternalConnectionNumbers$MH,"XInternalConnectionNumbers");
+        return RuntimeHelper.requireNonNull(constants$71.XInternalConnectionNumbers$MH,"XInternalConnectionNumbers");
     }
-    public static int XInternalConnectionNumbers ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XInternalConnectionNumbers(Display*, int**, int*);
+     * }
+     */
+    public static int XInternalConnectionNumbers(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XInternalConnectionNumbers$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5456,9 +9623,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XProcessInternalConnection$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XProcessInternalConnection$MH,"XProcessInternalConnection");
+        return RuntimeHelper.requireNonNull(constants$71.XProcessInternalConnection$MH,"XProcessInternalConnection");
     }
-    public static void XProcessInternalConnection ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * void XProcessInternalConnection(Display*, int);
+     * }
+     */
+    public static void XProcessInternalConnection(MemorySegment x0, int x1) {
         var mh$ = XProcessInternalConnection$MH();
         try {
             mh$.invokeExact(x0, x1);
@@ -5469,7 +9641,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAddConnectionWatch$MH() {
         return RuntimeHelper.requireNonNull(constants$72.XAddConnectionWatch$MH,"XAddConnectionWatch");
     }
-    public static int XAddConnectionWatch ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XAddConnectionWatch(Display*, XConnectionWatchProc, XPointer);
+     * }
+     */
+    public static int XAddConnectionWatch(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XAddConnectionWatch$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5480,7 +9657,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRemoveConnectionWatch$MH() {
         return RuntimeHelper.requireNonNull(constants$72.XRemoveConnectionWatch$MH,"XRemoveConnectionWatch");
     }
-    public static void XRemoveConnectionWatch ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * void XRemoveConnectionWatch(Display*, XConnectionWatchProc, XPointer);
+     * }
+     */
+    public static void XRemoveConnectionWatch(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XRemoveConnectionWatch$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
@@ -5491,7 +9673,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetAuthorization$MH() {
         return RuntimeHelper.requireNonNull(constants$72.XSetAuthorization$MH,"XSetAuthorization");
     }
-    public static void XSetAuthorization ( Addressable x0,  int x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * void XSetAuthorization(char*, int, char*, int);
+     * }
+     */
+    public static void XSetAuthorization(MemorySegment x0, int x1, MemorySegment x2, int x3) {
         var mh$ = XSetAuthorization$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
@@ -5502,7 +9689,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle _Xmbtowc$MH() {
         return RuntimeHelper.requireNonNull(constants$72._Xmbtowc$MH,"_Xmbtowc");
     }
-    public static int _Xmbtowc ( Addressable x0,  Addressable x1,  int x2) {
+    /**
+     * {@snippet :
+     * int _Xmbtowc(wchar_t*, char*, int);
+     * }
+     */
+    public static int _Xmbtowc(MemorySegment x0, MemorySegment x1, int x2) {
         var mh$ = _Xmbtowc$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5511,9 +9703,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle _Xwctomb$MH() {
-        return RuntimeHelper.requireNonNull(constants$73._Xwctomb$MH,"_Xwctomb");
+        return RuntimeHelper.requireNonNull(constants$72._Xwctomb$MH,"_Xwctomb");
     }
-    public static int _Xwctomb ( Addressable x0,  int x1) {
+    /**
+     * {@snippet :
+     * int _Xwctomb(char*, wchar_t);
+     * }
+     */
+    public static int _Xwctomb(MemorySegment x0, int x1) {
         var mh$ = _Xwctomb$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -5522,9 +9719,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetEventData$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XGetEventData$MH,"XGetEventData");
+        return RuntimeHelper.requireNonNull(constants$72.XGetEventData$MH,"XGetEventData");
     }
-    public static int XGetEventData ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XGetEventData(Display*, XGenericEventCookie*);
+     * }
+     */
+    public static int XGetEventData(MemorySegment x0, MemorySegment x1) {
         var mh$ = XGetEventData$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -5535,7 +9737,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFreeEventData$MH() {
         return RuntimeHelper.requireNonNull(constants$73.XFreeEventData$MH,"XFreeEventData");
     }
-    public static void XFreeEventData ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * void XFreeEventData(Display*, XGenericEventCookie*);
+     * }
+     */
+    public static void XFreeEventData(MemorySegment x0, MemorySegment x1) {
         var mh$ = XFreeEventData$MH();
         try {
             mh$.invokeExact(x0, x1);
@@ -5543,30 +9750,70 @@ import static java.lang.foreign.ValueLayout.*;
             throw new AssertionError("should not reach here", ex$);
         }
     }
+    /**
+     * {@snippet :
+     * enum .XStringStyle = 0;
+     * }
+     */
     public static int XStringStyle() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * enum .XCompoundTextStyle = 1;
+     * }
+     */
     public static int XCompoundTextStyle() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * enum .XTextStyle = 2;
+     * }
+     */
     public static int XTextStyle() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * enum .XStdICCTextStyle = 3;
+     * }
+     */
     public static int XStdICCTextStyle() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * enum .XUTF8StringStyle = 4;
+     * }
+     */
     public static int XUTF8StringStyle() {
         return (int)4L;
     }
-    public static OfAddress Region = Constants$root.C_POINTER$LAYOUT;
-    public static OfInt XContext = Constants$root.C_INT$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef struct _XRegion* Region;
+     * }
+     */
+    public static final OfAddress Region = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * typedef int XContext;
+     * }
+     */
+    public static final OfInt XContext = Constants$root.C_INT$LAYOUT;
     public static MethodHandle XAllocClassHint$MH() {
         return RuntimeHelper.requireNonNull(constants$73.XAllocClassHint$MH,"XAllocClassHint");
     }
-    public static MemoryAddress XAllocClassHint () {
+    /**
+     * {@snippet :
+     * XClassHint* XAllocClassHint();
+     * }
+     */
+    public static MemorySegment XAllocClassHint() {
         var mh$ = XAllocClassHint$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5574,10 +9821,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAllocIconSize$MH() {
         return RuntimeHelper.requireNonNull(constants$73.XAllocIconSize$MH,"XAllocIconSize");
     }
-    public static MemoryAddress XAllocIconSize () {
+    /**
+     * {@snippet :
+     * XIconSize* XAllocIconSize();
+     * }
+     */
+    public static MemorySegment XAllocIconSize() {
         var mh$ = XAllocIconSize$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5585,32 +9837,47 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XAllocSizeHints$MH() {
         return RuntimeHelper.requireNonNull(constants$73.XAllocSizeHints$MH,"XAllocSizeHints");
     }
-    public static MemoryAddress XAllocSizeHints () {
+    /**
+     * {@snippet :
+     * XSizeHints* XAllocSizeHints();
+     * }
+     */
+    public static MemorySegment XAllocSizeHints() {
         var mh$ = XAllocSizeHints$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XAllocStandardColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XAllocStandardColormap$MH,"XAllocStandardColormap");
+        return RuntimeHelper.requireNonNull(constants$73.XAllocStandardColormap$MH,"XAllocStandardColormap");
     }
-    public static MemoryAddress XAllocStandardColormap () {
+    /**
+     * {@snippet :
+     * XStandardColormap* XAllocStandardColormap();
+     * }
+     */
+    public static MemorySegment XAllocStandardColormap() {
         var mh$ = XAllocStandardColormap$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XAllocWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XAllocWMHints$MH,"XAllocWMHints");
+        return RuntimeHelper.requireNonNull(constants$73.XAllocWMHints$MH,"XAllocWMHints");
     }
-    public static MemoryAddress XAllocWMHints () {
+    /**
+     * {@snippet :
+     * XWMHints* XAllocWMHints();
+     * }
+     */
+    public static MemorySegment XAllocWMHints() {
         var mh$ = XAllocWMHints$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5618,7 +9885,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XClipBox$MH() {
         return RuntimeHelper.requireNonNull(constants$74.XClipBox$MH,"XClipBox");
     }
-    public static int XClipBox ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XClipBox(Region, XRectangle*);
+     * }
+     */
+    public static int XClipBox(MemorySegment x0, MemorySegment x1) {
         var mh$ = XClipBox$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -5629,10 +9901,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XCreateRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$74.XCreateRegion$MH,"XCreateRegion");
     }
-    public static MemoryAddress XCreateRegion () {
+    /**
+     * {@snippet :
+     * Region XCreateRegion();
+     * }
+     */
+    public static MemorySegment XCreateRegion() {
         var mh$ = XCreateRegion$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5640,10 +9917,15 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDefaultString$MH() {
         return RuntimeHelper.requireNonNull(constants$74.XDefaultString$MH,"XDefaultString");
     }
-    public static MemoryAddress XDefaultString () {
+    /**
+     * {@snippet :
+     * char* XDefaultString();
+     * }
+     */
+    public static MemorySegment XDefaultString() {
         var mh$ = XDefaultString$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact();
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5651,7 +9933,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XDeleteContext$MH() {
         return RuntimeHelper.requireNonNull(constants$74.XDeleteContext$MH,"XDeleteContext");
     }
-    public static int XDeleteContext ( Addressable x0,  long x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XDeleteContext(Display*, XID, XContext);
+     * }
+     */
+    public static int XDeleteContext(MemorySegment x0, long x1, int x2) {
         var mh$ = XDeleteContext$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5660,9 +9947,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XDestroyRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XDestroyRegion$MH,"XDestroyRegion");
+        return RuntimeHelper.requireNonNull(constants$74.XDestroyRegion$MH,"XDestroyRegion");
     }
-    public static int XDestroyRegion ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XDestroyRegion(Region);
+     * }
+     */
+    public static int XDestroyRegion(MemorySegment x0) {
         var mh$ = XDestroyRegion$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -5671,9 +9963,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XEmptyRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XEmptyRegion$MH,"XEmptyRegion");
+        return RuntimeHelper.requireNonNull(constants$74.XEmptyRegion$MH,"XEmptyRegion");
     }
-    public static int XEmptyRegion ( Addressable x0) {
+    /**
+     * {@snippet :
+     * int XEmptyRegion(Region);
+     * }
+     */
+    public static int XEmptyRegion(MemorySegment x0) {
         var mh$ = XEmptyRegion$MH();
         try {
             return (int)mh$.invokeExact(x0);
@@ -5684,7 +9981,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XEqualRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$75.XEqualRegion$MH,"XEqualRegion");
     }
-    public static int XEqualRegion ( Addressable x0,  Addressable x1) {
+    /**
+     * {@snippet :
+     * int XEqualRegion(Region, Region);
+     * }
+     */
+    public static int XEqualRegion(MemorySegment x0, MemorySegment x1) {
         var mh$ = XEqualRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1);
@@ -5695,7 +9997,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XFindContext$MH() {
         return RuntimeHelper.requireNonNull(constants$75.XFindContext$MH,"XFindContext");
     }
-    public static int XFindContext ( Addressable x0,  long x1,  int x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XFindContext(Display*, XID, XContext, XPointer*);
+     * }
+     */
+    public static int XFindContext(MemorySegment x0, long x1, int x2, MemorySegment x3) {
         var mh$ = XFindContext$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5706,7 +10013,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetClassHint$MH() {
         return RuntimeHelper.requireNonNull(constants$75.XGetClassHint$MH,"XGetClassHint");
     }
-    public static int XGetClassHint ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetClassHint(Display*, Window, XClassHint*);
+     * }
+     */
+    public static int XGetClassHint(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetClassHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5717,7 +10029,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetIconSizes$MH() {
         return RuntimeHelper.requireNonNull(constants$75.XGetIconSizes$MH,"XGetIconSizes");
     }
-    public static int XGetIconSizes ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetIconSizes(Display*, Window, XIconSize**, int*);
+     * }
+     */
+    public static int XGetIconSizes(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XGetIconSizes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5726,9 +10043,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetNormalHints$MH,"XGetNormalHints");
+        return RuntimeHelper.requireNonNull(constants$75.XGetNormalHints$MH,"XGetNormalHints");
     }
-    public static int XGetNormalHints ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetNormalHints(Display*, Window, XSizeHints*);
+     * }
+     */
+    public static int XGetNormalHints(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetNormalHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5737,9 +10059,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetRGBColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetRGBColormaps$MH,"XGetRGBColormaps");
+        return RuntimeHelper.requireNonNull(constants$75.XGetRGBColormaps$MH,"XGetRGBColormaps");
     }
-    public static int XGetRGBColormaps ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  long x4) {
+    /**
+     * {@snippet :
+     * int XGetRGBColormaps(Display*, Window, XStandardColormap**, int*, Atom);
+     * }
+     */
+    public static int XGetRGBColormaps(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, long x4) {
         var mh$ = XGetRGBColormaps$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5750,7 +10077,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetSizeHints$MH() {
         return RuntimeHelper.requireNonNull(constants$76.XGetSizeHints$MH,"XGetSizeHints");
     }
-    public static int XGetSizeHints ( Addressable x0,  long x1,  Addressable x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XGetSizeHints(Display*, Window, XSizeHints*, Atom);
+     * }
+     */
+    public static int XGetSizeHints(MemorySegment x0, long x1, MemorySegment x2, long x3) {
         var mh$ = XGetSizeHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5761,7 +10093,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetStandardColormap$MH() {
         return RuntimeHelper.requireNonNull(constants$76.XGetStandardColormap$MH,"XGetStandardColormap");
     }
-    public static int XGetStandardColormap ( Addressable x0,  long x1,  Addressable x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XGetStandardColormap(Display*, Window, XStandardColormap*, Atom);
+     * }
+     */
+    public static int XGetStandardColormap(MemorySegment x0, long x1, MemorySegment x2, long x3) {
         var mh$ = XGetStandardColormap$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5772,7 +10109,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetTextProperty$MH() {
         return RuntimeHelper.requireNonNull(constants$76.XGetTextProperty$MH,"XGetTextProperty");
     }
-    public static int XGetTextProperty ( Addressable x0,  long x1,  Addressable x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XGetTextProperty(Display*, Window, XTextProperty*, Atom);
+     * }
+     */
+    public static int XGetTextProperty(MemorySegment x0, long x1, MemorySegment x2, long x3) {
         var mh$ = XGetTextProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5783,18 +10125,28 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetVisualInfo$MH() {
         return RuntimeHelper.requireNonNull(constants$76.XGetVisualInfo$MH,"XGetVisualInfo");
     }
-    public static MemoryAddress XGetVisualInfo ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * XVisualInfo* XGetVisualInfo(Display*, long, XVisualInfo*, int*);
+     * }
+     */
+    public static MemorySegment XGetVisualInfo(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XGetVisualInfo$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2, x3);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
     public static MethodHandle XGetWMClientMachine$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XGetWMClientMachine$MH,"XGetWMClientMachine");
+        return RuntimeHelper.requireNonNull(constants$76.XGetWMClientMachine$MH,"XGetWMClientMachine");
     }
-    public static int XGetWMClientMachine ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetWMClientMachine(Display*, Window, XTextProperty*);
+     * }
+     */
+    public static int XGetWMClientMachine(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetWMClientMachine$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5803,12 +10155,17 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XGetWMHints$MH,"XGetWMHints");
+        return RuntimeHelper.requireNonNull(constants$76.XGetWMHints$MH,"XGetWMHints");
     }
-    public static MemoryAddress XGetWMHints ( Addressable x0,  long x1) {
+    /**
+     * {@snippet :
+     * XWMHints* XGetWMHints(Display*, Window);
+     * }
+     */
+    public static MemorySegment XGetWMHints(MemorySegment x0, long x1) {
         var mh$ = XGetWMHints$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5816,7 +10173,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetWMIconName$MH() {
         return RuntimeHelper.requireNonNull(constants$77.XGetWMIconName$MH,"XGetWMIconName");
     }
-    public static int XGetWMIconName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetWMIconName(Display*, Window, XTextProperty*);
+     * }
+     */
+    public static int XGetWMIconName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetWMIconName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5827,7 +10189,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetWMName$MH() {
         return RuntimeHelper.requireNonNull(constants$77.XGetWMName$MH,"XGetWMName");
     }
-    public static int XGetWMName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetWMName(Display*, Window, XTextProperty*);
+     * }
+     */
+    public static int XGetWMName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetWMName$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5838,7 +10205,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetWMNormalHints$MH() {
         return RuntimeHelper.requireNonNull(constants$77.XGetWMNormalHints$MH,"XGetWMNormalHints");
     }
-    public static int XGetWMNormalHints ( Addressable x0,  long x1,  Addressable x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XGetWMNormalHints(Display*, Window, XSizeHints*, long*);
+     * }
+     */
+    public static int XGetWMNormalHints(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
         var mh$ = XGetWMNormalHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5849,7 +10221,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XGetWMSizeHints$MH() {
         return RuntimeHelper.requireNonNull(constants$77.XGetWMSizeHints$MH,"XGetWMSizeHints");
     }
-    public static int XGetWMSizeHints ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  long x4) {
+    /**
+     * {@snippet :
+     * int XGetWMSizeHints(Display*, Window, XSizeHints*, long*, Atom);
+     * }
+     */
+    public static int XGetWMSizeHints(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, long x4) {
         var mh$ = XGetWMSizeHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5858,9 +10235,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XGetZoomHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XGetZoomHints$MH,"XGetZoomHints");
+        return RuntimeHelper.requireNonNull(constants$77.XGetZoomHints$MH,"XGetZoomHints");
     }
-    public static int XGetZoomHints ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XGetZoomHints(Display*, Window, XSizeHints*);
+     * }
+     */
+    public static int XGetZoomHints(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XGetZoomHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5869,9 +10251,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XIntersectRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XIntersectRegion$MH,"XIntersectRegion");
+        return RuntimeHelper.requireNonNull(constants$77.XIntersectRegion$MH,"XIntersectRegion");
     }
-    public static int XIntersectRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XIntersectRegion(Region, Region, Region);
+     * }
+     */
+    public static int XIntersectRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XIntersectRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5882,7 +10269,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XConvertCase$MH() {
         return RuntimeHelper.requireNonNull(constants$78.XConvertCase$MH,"XConvertCase");
     }
-    public static void XConvertCase ( long x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * void XConvertCase(KeySym, KeySym*, KeySym*);
+     * }
+     */
+    public static void XConvertCase(long x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XConvertCase$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
@@ -5893,7 +10285,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XLookupString$MH() {
         return RuntimeHelper.requireNonNull(constants$78.XLookupString$MH,"XLookupString");
     }
-    public static int XLookupString ( Addressable x0,  Addressable x1,  int x2,  Addressable x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XLookupString(XKeyEvent*, char*, int, KeySym*, XComposeStatus*);
+     * }
+     */
+    public static int XLookupString(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
         var mh$ = XLookupString$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5904,7 +10301,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XMatchVisualInfo$MH() {
         return RuntimeHelper.requireNonNull(constants$78.XMatchVisualInfo$MH,"XMatchVisualInfo");
     }
-    public static int XMatchVisualInfo ( Addressable x0,  int x1,  int x2,  int x3,  Addressable x4) {
+    /**
+     * {@snippet :
+     * int XMatchVisualInfo(Display*, int, int, int, XVisualInfo*);
+     * }
+     */
+    public static int XMatchVisualInfo(MemorySegment x0, int x1, int x2, int x3, MemorySegment x4) {
         var mh$ = XMatchVisualInfo$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5915,7 +10317,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XOffsetRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$78.XOffsetRegion$MH,"XOffsetRegion");
     }
-    public static int XOffsetRegion ( Addressable x0,  int x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XOffsetRegion(Region, int, int);
+     * }
+     */
+    public static int XOffsetRegion(MemorySegment x0, int x1, int x2) {
         var mh$ = XOffsetRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5924,9 +10331,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XPointInRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XPointInRegion$MH,"XPointInRegion");
+        return RuntimeHelper.requireNonNull(constants$78.XPointInRegion$MH,"XPointInRegion");
     }
-    public static int XPointInRegion ( Addressable x0,  int x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XPointInRegion(Region, int, int);
+     * }
+     */
+    public static int XPointInRegion(MemorySegment x0, int x1, int x2) {
         var mh$ = XPointInRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5935,12 +10347,17 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XPolygonRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XPolygonRegion$MH,"XPolygonRegion");
+        return RuntimeHelper.requireNonNull(constants$78.XPolygonRegion$MH,"XPolygonRegion");
     }
-    public static MemoryAddress XPolygonRegion ( Addressable x0,  int x1,  int x2) {
+    /**
+     * {@snippet :
+     * Region XPolygonRegion(XPoint*, int, int);
+     * }
+     */
+    public static MemorySegment XPolygonRegion(MemorySegment x0, int x1, int x2) {
         var mh$ = XPolygonRegion$MH();
         try {
-            return (java.lang.foreign.MemoryAddress)mh$.invokeExact(x0, x1, x2);
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -5948,7 +10365,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XRectInRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$79.XRectInRegion$MH,"XRectInRegion");
     }
-    public static int XRectInRegion ( Addressable x0,  int x1,  int x2,  int x3,  int x4) {
+    /**
+     * {@snippet :
+     * int XRectInRegion(Region, int, int, unsigned int, unsigned int);
+     * }
+     */
+    public static int XRectInRegion(MemorySegment x0, int x1, int x2, int x3, int x4) {
         var mh$ = XRectInRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -5959,7 +10381,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSaveContext$MH() {
         return RuntimeHelper.requireNonNull(constants$79.XSaveContext$MH,"XSaveContext");
     }
-    public static int XSaveContext ( Addressable x0,  long x1,  int x2,  Addressable x3) {
+    /**
+     * {@snippet :
+     * int XSaveContext(Display*, XID, XContext, char*);
+     * }
+     */
+    public static int XSaveContext(MemorySegment x0, long x1, int x2, MemorySegment x3) {
         var mh$ = XSaveContext$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5970,7 +10397,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetClassHint$MH() {
         return RuntimeHelper.requireNonNull(constants$79.XSetClassHint$MH,"XSetClassHint");
     }
-    public static int XSetClassHint ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XSetClassHint(Display*, Window, XClassHint*);
+     * }
+     */
+    public static int XSetClassHint(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetClassHint$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -5981,7 +10413,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetIconSizes$MH() {
         return RuntimeHelper.requireNonNull(constants$79.XSetIconSizes$MH,"XSetIconSizes");
     }
-    public static int XSetIconSizes ( Addressable x0,  long x1,  Addressable x2,  int x3) {
+    /**
+     * {@snippet :
+     * int XSetIconSizes(Display*, Window, XIconSize*, int);
+     * }
+     */
+    public static int XSetIconSizes(MemorySegment x0, long x1, MemorySegment x2, int x3) {
         var mh$ = XSetIconSizes$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -5990,9 +10427,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetNormalHints$MH,"XSetNormalHints");
+        return RuntimeHelper.requireNonNull(constants$79.XSetNormalHints$MH,"XSetNormalHints");
     }
-    public static int XSetNormalHints ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XSetNormalHints(Display*, Window, XSizeHints*);
+     * }
+     */
+    public static int XSetNormalHints(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetNormalHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6001,9 +10443,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetRGBColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetRGBColormaps$MH,"XSetRGBColormaps");
+        return RuntimeHelper.requireNonNull(constants$79.XSetRGBColormaps$MH,"XSetRGBColormaps");
     }
-    public static void XSetRGBColormaps ( Addressable x0,  long x1,  Addressable x2,  int x3,  long x4) {
+    /**
+     * {@snippet :
+     * void XSetRGBColormaps(Display*, Window, XStandardColormap*, int, Atom);
+     * }
+     */
+    public static void XSetRGBColormaps(MemorySegment x0, long x1, MemorySegment x2, int x3, long x4) {
         var mh$ = XSetRGBColormaps$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4);
@@ -6014,7 +10461,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetSizeHints$MH() {
         return RuntimeHelper.requireNonNull(constants$80.XSetSizeHints$MH,"XSetSizeHints");
     }
-    public static int XSetSizeHints ( Addressable x0,  long x1,  Addressable x2,  long x3) {
+    /**
+     * {@snippet :
+     * int XSetSizeHints(Display*, Window, XSizeHints*, Atom);
+     * }
+     */
+    public static int XSetSizeHints(MemorySegment x0, long x1, MemorySegment x2, long x3) {
         var mh$ = XSetSizeHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3);
@@ -6025,7 +10477,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetStandardProperties$MH() {
         return RuntimeHelper.requireNonNull(constants$80.XSetStandardProperties$MH,"XSetStandardProperties");
     }
-    public static int XSetStandardProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  long x4,  Addressable x5,  int x6,  Addressable x7) {
+    /**
+     * {@snippet :
+     * int XSetStandardProperties(Display*, Window, char*, char*, Pixmap, char**, int, XSizeHints*);
+     * }
+     */
+    public static int XSetStandardProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, long x4, MemorySegment x5, int x6, MemorySegment x7) {
         var mh$ = XSetStandardProperties$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
@@ -6036,7 +10493,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetTextProperty$MH() {
         return RuntimeHelper.requireNonNull(constants$80.XSetTextProperty$MH,"XSetTextProperty");
     }
-    public static void XSetTextProperty ( Addressable x0,  long x1,  Addressable x2,  long x3) {
+    /**
+     * {@snippet :
+     * void XSetTextProperty(Display*, Window, XTextProperty*, Atom);
+     * }
+     */
+    public static void XSetTextProperty(MemorySegment x0, long x1, MemorySegment x2, long x3) {
         var mh$ = XSetTextProperty$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
@@ -6047,7 +10509,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWMClientMachine$MH() {
         return RuntimeHelper.requireNonNull(constants$80.XSetWMClientMachine$MH,"XSetWMClientMachine");
     }
-    public static void XSetWMClientMachine ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * void XSetWMClientMachine(Display*, Window, XTextProperty*);
+     * }
+     */
+    public static void XSetWMClientMachine(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetWMClientMachine$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
@@ -6056,9 +10523,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.XSetWMHints$MH,"XSetWMHints");
+        return RuntimeHelper.requireNonNull(constants$80.XSetWMHints$MH,"XSetWMHints");
     }
-    public static int XSetWMHints ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XSetWMHints(Display*, Window, XWMHints*);
+     * }
+     */
+    public static int XSetWMHints(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetWMHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6067,9 +10539,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetWMIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.XSetWMIconName$MH,"XSetWMIconName");
+        return RuntimeHelper.requireNonNull(constants$80.XSetWMIconName$MH,"XSetWMIconName");
     }
-    public static void XSetWMIconName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * void XSetWMIconName(Display*, Window, XTextProperty*);
+     * }
+     */
+    public static void XSetWMIconName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetWMIconName$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
@@ -6080,7 +10557,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWMName$MH() {
         return RuntimeHelper.requireNonNull(constants$81.XSetWMName$MH,"XSetWMName");
     }
-    public static void XSetWMName ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * void XSetWMName(Display*, Window, XTextProperty*);
+     * }
+     */
+    public static void XSetWMName(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetWMName$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
@@ -6091,7 +10573,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWMNormalHints$MH() {
         return RuntimeHelper.requireNonNull(constants$81.XSetWMNormalHints$MH,"XSetWMNormalHints");
     }
-    public static void XSetWMNormalHints ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * void XSetWMNormalHints(Display*, Window, XSizeHints*);
+     * }
+     */
+    public static void XSetWMNormalHints(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetWMNormalHints$MH();
         try {
             mh$.invokeExact(x0, x1, x2);
@@ -6102,7 +10589,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetWMProperties$MH() {
         return RuntimeHelper.requireNonNull(constants$81.XSetWMProperties$MH,"XSetWMProperties");
     }
-    public static void XSetWMProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * void XSetWMProperties(Display*, Window, XTextProperty*, XTextProperty*, char**, int, XSizeHints*, XWMHints*, XClassHint*);
+     * }
+     */
+    public static void XSetWMProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = XSetWMProperties$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -6113,7 +10605,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbSetWMProperties$MH() {
         return RuntimeHelper.requireNonNull(constants$81.XmbSetWMProperties$MH,"XmbSetWMProperties");
     }
-    public static void XmbSetWMProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * void XmbSetWMProperties(Display*, Window, char*, char*, char**, int, XSizeHints*, XWMHints*, XClassHint*);
+     * }
+     */
+    public static void XmbSetWMProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = XmbSetWMProperties$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -6122,9 +10619,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle Xutf8SetWMProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.Xutf8SetWMProperties$MH,"Xutf8SetWMProperties");
+        return RuntimeHelper.requireNonNull(constants$81.Xutf8SetWMProperties$MH,"Xutf8SetWMProperties");
     }
-    public static void Xutf8SetWMProperties ( Addressable x0,  long x1,  Addressable x2,  Addressable x3,  Addressable x4,  int x5,  Addressable x6,  Addressable x7,  Addressable x8) {
+    /**
+     * {@snippet :
+     * void Xutf8SetWMProperties(Display*, Window, char*, char*, char**, int, XSizeHints*, XWMHints*, XClassHint*);
+     * }
+     */
+    public static void Xutf8SetWMProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
         var mh$ = Xutf8SetWMProperties$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
@@ -6133,9 +10635,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSetWMSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.XSetWMSizeHints$MH,"XSetWMSizeHints");
+        return RuntimeHelper.requireNonNull(constants$81.XSetWMSizeHints$MH,"XSetWMSizeHints");
     }
-    public static void XSetWMSizeHints ( Addressable x0,  long x1,  Addressable x2,  long x3) {
+    /**
+     * {@snippet :
+     * void XSetWMSizeHints(Display*, Window, XSizeHints*, Atom);
+     * }
+     */
+    public static void XSetWMSizeHints(MemorySegment x0, long x1, MemorySegment x2, long x3) {
         var mh$ = XSetWMSizeHints$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
@@ -6146,7 +10653,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$82.XSetRegion$MH,"XSetRegion");
     }
-    public static int XSetRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XSetRegion(Display*, GC, Region);
+     * }
+     */
+    public static int XSetRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XSetRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6157,7 +10669,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetStandardColormap$MH() {
         return RuntimeHelper.requireNonNull(constants$82.XSetStandardColormap$MH,"XSetStandardColormap");
     }
-    public static void XSetStandardColormap ( Addressable x0,  long x1,  Addressable x2,  long x3) {
+    /**
+     * {@snippet :
+     * void XSetStandardColormap(Display*, Window, XStandardColormap*, Atom);
+     * }
+     */
+    public static void XSetStandardColormap(MemorySegment x0, long x1, MemorySegment x2, long x3) {
         var mh$ = XSetStandardColormap$MH();
         try {
             mh$.invokeExact(x0, x1, x2, x3);
@@ -6168,7 +10685,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XSetZoomHints$MH() {
         return RuntimeHelper.requireNonNull(constants$82.XSetZoomHints$MH,"XSetZoomHints");
     }
-    public static int XSetZoomHints ( Addressable x0,  long x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XSetZoomHints(Display*, Window, XSizeHints*);
+     * }
+     */
+    public static int XSetZoomHints(MemorySegment x0, long x1, MemorySegment x2) {
         var mh$ = XSetZoomHints$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6179,7 +10701,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XShrinkRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$82.XShrinkRegion$MH,"XShrinkRegion");
     }
-    public static int XShrinkRegion ( Addressable x0,  int x1,  int x2) {
+    /**
+     * {@snippet :
+     * int XShrinkRegion(Region, int, int);
+     * }
+     */
+    public static int XShrinkRegion(MemorySegment x0, int x1, int x2) {
         var mh$ = XShrinkRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6188,9 +10715,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XStringListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.XStringListToTextProperty$MH,"XStringListToTextProperty");
+        return RuntimeHelper.requireNonNull(constants$82.XStringListToTextProperty$MH,"XStringListToTextProperty");
     }
-    public static int XStringListToTextProperty ( Addressable x0,  int x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XStringListToTextProperty(char**, int, XTextProperty*);
+     * }
+     */
+    public static int XStringListToTextProperty(MemorySegment x0, int x1, MemorySegment x2) {
         var mh$ = XStringListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6199,9 +10731,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XSubtractRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.XSubtractRegion$MH,"XSubtractRegion");
+        return RuntimeHelper.requireNonNull(constants$82.XSubtractRegion$MH,"XSubtractRegion");
     }
-    public static int XSubtractRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XSubtractRegion(Region, Region, Region);
+     * }
+     */
+    public static int XSubtractRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XSubtractRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6212,7 +10749,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XmbTextListToTextProperty$MH() {
         return RuntimeHelper.requireNonNull(constants$83.XmbTextListToTextProperty$MH,"XmbTextListToTextProperty");
     }
-    public static int XmbTextListToTextProperty ( Addressable display,  Addressable list,  int count,  int style,  Addressable text_prop_return) {
+    /**
+     * {@snippet :
+     * int XmbTextListToTextProperty(Display* display, char** list, int count, XICCEncodingStyle style, XTextProperty* text_prop_return);
+     * }
+     */
+    public static int XmbTextListToTextProperty(MemorySegment display, MemorySegment list, int count, int style, MemorySegment text_prop_return) {
         var mh$ = XmbTextListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
@@ -6223,7 +10765,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcTextListToTextProperty$MH() {
         return RuntimeHelper.requireNonNull(constants$83.XwcTextListToTextProperty$MH,"XwcTextListToTextProperty");
     }
-    public static int XwcTextListToTextProperty ( Addressable display,  Addressable list,  int count,  int style,  Addressable text_prop_return) {
+    /**
+     * {@snippet :
+     * int XwcTextListToTextProperty(Display* display, wchar_t** list, int count, XICCEncodingStyle style, XTextProperty* text_prop_return);
+     * }
+     */
+    public static int XwcTextListToTextProperty(MemorySegment display, MemorySegment list, int count, int style, MemorySegment text_prop_return) {
         var mh$ = XwcTextListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
@@ -6234,7 +10781,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle Xutf8TextListToTextProperty$MH() {
         return RuntimeHelper.requireNonNull(constants$83.Xutf8TextListToTextProperty$MH,"Xutf8TextListToTextProperty");
     }
-    public static int Xutf8TextListToTextProperty ( Addressable display,  Addressable list,  int count,  int style,  Addressable text_prop_return) {
+    /**
+     * {@snippet :
+     * int Xutf8TextListToTextProperty(Display* display, char** list, int count, XICCEncodingStyle style, XTextProperty* text_prop_return);
+     * }
+     */
+    public static int Xutf8TextListToTextProperty(MemorySegment display, MemorySegment list, int count, int style, MemorySegment text_prop_return) {
         var mh$ = Xutf8TextListToTextProperty$MH();
         try {
             return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
@@ -6245,7 +10797,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcFreeStringList$MH() {
         return RuntimeHelper.requireNonNull(constants$83.XwcFreeStringList$MH,"XwcFreeStringList");
     }
-    public static void XwcFreeStringList ( Addressable list) {
+    /**
+     * {@snippet :
+     * void XwcFreeStringList(wchar_t** list);
+     * }
+     */
+    public static void XwcFreeStringList(MemorySegment list) {
         var mh$ = XwcFreeStringList$MH();
         try {
             mh$.invokeExact(list);
@@ -6254,9 +10811,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XTextPropertyToStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.XTextPropertyToStringList$MH,"XTextPropertyToStringList");
+        return RuntimeHelper.requireNonNull(constants$83.XTextPropertyToStringList$MH,"XTextPropertyToStringList");
     }
-    public static int XTextPropertyToStringList ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XTextPropertyToStringList(XTextProperty*, char***, int*);
+     * }
+     */
+    public static int XTextPropertyToStringList(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XTextPropertyToStringList$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6265,9 +10827,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XmbTextPropertyToTextList$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.XmbTextPropertyToTextList$MH,"XmbTextPropertyToTextList");
+        return RuntimeHelper.requireNonNull(constants$83.XmbTextPropertyToTextList$MH,"XmbTextPropertyToTextList");
     }
-    public static int XmbTextPropertyToTextList ( Addressable display,  Addressable text_prop,  Addressable list_return,  Addressable count_return) {
+    /**
+     * {@snippet :
+     * int XmbTextPropertyToTextList(Display* display, const XTextProperty* text_prop, char*** list_return, int* count_return);
+     * }
+     */
+    public static int XmbTextPropertyToTextList(MemorySegment display, MemorySegment text_prop, MemorySegment list_return, MemorySegment count_return) {
         var mh$ = XmbTextPropertyToTextList$MH();
         try {
             return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
@@ -6278,7 +10845,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XwcTextPropertyToTextList$MH() {
         return RuntimeHelper.requireNonNull(constants$84.XwcTextPropertyToTextList$MH,"XwcTextPropertyToTextList");
     }
-    public static int XwcTextPropertyToTextList ( Addressable display,  Addressable text_prop,  Addressable list_return,  Addressable count_return) {
+    /**
+     * {@snippet :
+     * int XwcTextPropertyToTextList(Display* display, const XTextProperty* text_prop, wchar_t*** list_return, int* count_return);
+     * }
+     */
+    public static int XwcTextPropertyToTextList(MemorySegment display, MemorySegment text_prop, MemorySegment list_return, MemorySegment count_return) {
         var mh$ = XwcTextPropertyToTextList$MH();
         try {
             return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
@@ -6289,7 +10861,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle Xutf8TextPropertyToTextList$MH() {
         return RuntimeHelper.requireNonNull(constants$84.Xutf8TextPropertyToTextList$MH,"Xutf8TextPropertyToTextList");
     }
-    public static int Xutf8TextPropertyToTextList ( Addressable display,  Addressable text_prop,  Addressable list_return,  Addressable count_return) {
+    /**
+     * {@snippet :
+     * int Xutf8TextPropertyToTextList(Display* display, const XTextProperty* text_prop, char*** list_return, int* count_return);
+     * }
+     */
+    public static int Xutf8TextPropertyToTextList(MemorySegment display, MemorySegment text_prop, MemorySegment list_return, MemorySegment count_return) {
         var mh$ = Xutf8TextPropertyToTextList$MH();
         try {
             return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
@@ -6300,7 +10877,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUnionRectWithRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$84.XUnionRectWithRegion$MH,"XUnionRectWithRegion");
     }
-    public static int XUnionRectWithRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XUnionRectWithRegion(XRectangle*, Region, Region);
+     * }
+     */
+    public static int XUnionRectWithRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XUnionRectWithRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6311,7 +10893,12 @@ import static java.lang.foreign.ValueLayout.*;
     public static MethodHandle XUnionRegion$MH() {
         return RuntimeHelper.requireNonNull(constants$84.XUnionRegion$MH,"XUnionRegion");
     }
-    public static int XUnionRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XUnionRegion(Region, Region, Region);
+     * }
+     */
+    public static int XUnionRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XUnionRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6320,9 +10907,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XWMGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.XWMGeometry$MH,"XWMGeometry");
+        return RuntimeHelper.requireNonNull(constants$84.XWMGeometry$MH,"XWMGeometry");
     }
-    public static int XWMGeometry ( Addressable x0,  int x1,  Addressable x2,  Addressable x3,  int x4,  Addressable x5,  Addressable x6,  Addressable x7,  Addressable x8,  Addressable x9,  Addressable x10) {
+    /**
+     * {@snippet :
+     * int XWMGeometry(Display*, int, char*, char*, unsigned int, XSizeHints*, int*, int*, int*, int*, int*);
+     * }
+     */
+    public static int XWMGeometry(MemorySegment x0, int x1, MemorySegment x2, MemorySegment x3, int x4, MemorySegment x5, MemorySegment x6, MemorySegment x7, MemorySegment x8, MemorySegment x9, MemorySegment x10) {
         var mh$ = XWMGeometry$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
@@ -6331,9 +10923,14 @@ import static java.lang.foreign.ValueLayout.*;
         }
     }
     public static MethodHandle XXorRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.XXorRegion$MH,"XXorRegion");
+        return RuntimeHelper.requireNonNull(constants$84.XXorRegion$MH,"XXorRegion");
     }
-    public static int XXorRegion ( Addressable x0,  Addressable x1,  Addressable x2) {
+    /**
+     * {@snippet :
+     * int XXorRegion(Region, Region, Region);
+     * }
+     */
+    public static int XXorRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
         var mh$ = XXorRegion$MH();
         try {
             return (int)mh$.invokeExact(x0, x1, x2);
@@ -6341,485 +10938,685 @@ import static java.lang.foreign.ValueLayout.*;
             throw new AssertionError("should not reach here", ex$);
         }
     }
+    /**
+     * {@snippet :
+     * #define _POSIX_C_SOURCE 200809
+     * }
+     */
     public static long _POSIX_C_SOURCE() {
         return 200809L;
     }
+    /**
+     * {@snippet :
+     * #define __STDC_ISO_10646__ 201706
+     * }
+     */
     public static long __STDC_ISO_10646__() {
         return 201706L;
     }
+    /**
+     * {@snippet :
+     * #define __TIMESIZE 64
+     * }
+     */
     public static int __TIMESIZE() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define __BYTE_ORDER 1234
+     * }
+     */
     public static int __BYTE_ORDER() {
         return (int)1234L;
     }
+    /**
+     * {@snippet :
+     * #define __FLOAT_WORD_ORDER 1234
+     * }
+     */
     public static int __FLOAT_WORD_ORDER() {
         return (int)1234L;
     }
+    /**
+     * {@snippet :
+     * #define LITTLE_ENDIAN 1234
+     * }
+     */
     public static int LITTLE_ENDIAN() {
         return (int)1234L;
     }
+    /**
+     * {@snippet :
+     * #define BIG_ENDIAN 4321
+     * }
+     */
     public static int BIG_ENDIAN() {
         return (int)4321L;
     }
+    /**
+     * {@snippet :
+     * #define PDP_ENDIAN 3412
+     * }
+     */
     public static int PDP_ENDIAN() {
         return (int)3412L;
     }
+    /**
+     * {@snippet :
+     * #define BYTE_ORDER 1234
+     * }
+     */
     public static int BYTE_ORDER() {
         return (int)1234L;
     }
+    /**
+     * {@snippet :
+     * #define __FD_ZERO_STOS "stosq"
+     * }
+     */
     public static MemorySegment __FD_ZERO_STOS() {
         return constants$85.__FD_ZERO_STOS$SEGMENT;
     }
+    /**
+     * {@snippet :
+     * #define _SIGSET_NWORDS 16
+     * }
+     */
     public static long _SIGSET_NWORDS() {
         return 16L;
     }
+    /**
+     * {@snippet :
+     * #define __NFDBITS 64
+     * }
+     */
     public static int __NFDBITS() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define FD_SETSIZE 1024
+     * }
+     */
     public static int FD_SETSIZE() {
         return (int)1024L;
     }
+    /**
+     * {@snippet :
+     * #define NFDBITS 64
+     * }
+     */
     public static int NFDBITS() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define __PTHREAD_RWLOCK_ELISION_EXTRA 0
+     * }
+     */
     public static int __PTHREAD_RWLOCK_ELISION_EXTRA() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define None 0
+     * }
+     */
     public static long None() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define ParentRelative 1
+     * }
+     */
     public static long ParentRelative() {
         return 1L;
     }
+    /**
+     * {@snippet :
+     * #define CopyFromParent 0
+     * }
+     */
     public static long CopyFromParent() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define PointerWindow 0
+     * }
+     */
     public static long PointerWindow() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define InputFocus 1
+     * }
+     */
     public static long InputFocus() {
         return 1L;
     }
+    /**
+     * {@snippet :
+     * #define PointerRoot 1
+     * }
+     */
     public static long PointerRoot() {
         return 1L;
     }
+    /**
+     * {@snippet :
+     * #define AnyPropertyType 0
+     * }
+     */
     public static long AnyPropertyType() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define AnyKey 0
+     * }
+     */
     public static long AnyKey() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define AnyButton 0
+     * }
+     */
     public static long AnyButton() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define AllTemporary 0
+     * }
+     */
     public static long AllTemporary() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define CurrentTime 0
+     * }
+     */
     public static long CurrentTime() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define NoSymbol 0
+     * }
+     */
     public static long NoSymbol() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define NoEventMask 0
+     * }
+     */
     public static long NoEventMask() {
         return 0L;
     }
+    /**
+     * {@snippet :
+     * #define KeyPressMask 1
+     * }
+     */
     public static long KeyPressMask() {
         return 1L;
     }
+    /**
+     * {@snippet :
+     * #define KeyReleaseMask 2
+     * }
+     */
     public static long KeyReleaseMask() {
         return 2L;
     }
+    /**
+     * {@snippet :
+     * #define ButtonPressMask 4
+     * }
+     */
     public static long ButtonPressMask() {
         return 4L;
     }
+    /**
+     * {@snippet :
+     * #define ButtonReleaseMask 8
+     * }
+     */
     public static long ButtonReleaseMask() {
         return 8L;
     }
+    /**
+     * {@snippet :
+     * #define EnterWindowMask 16
+     * }
+     */
     public static long EnterWindowMask() {
         return 16L;
     }
+    /**
+     * {@snippet :
+     * #define LeaveWindowMask 32
+     * }
+     */
     public static long LeaveWindowMask() {
         return 32L;
     }
+    /**
+     * {@snippet :
+     * #define PointerMotionMask 64
+     * }
+     */
     public static long PointerMotionMask() {
         return 64L;
     }
+    /**
+     * {@snippet :
+     * #define PointerMotionHintMask 128
+     * }
+     */
     public static long PointerMotionHintMask() {
         return 128L;
     }
+    /**
+     * {@snippet :
+     * #define Button1MotionMask 256
+     * }
+     */
     public static long Button1MotionMask() {
         return 256L;
     }
+    /**
+     * {@snippet :
+     * #define Button2MotionMask 512
+     * }
+     */
     public static long Button2MotionMask() {
         return 512L;
     }
+    /**
+     * {@snippet :
+     * #define Button3MotionMask 1024
+     * }
+     */
     public static long Button3MotionMask() {
         return 1024L;
     }
+    /**
+     * {@snippet :
+     * #define Button4MotionMask 2048
+     * }
+     */
     public static long Button4MotionMask() {
         return 2048L;
     }
+    /**
+     * {@snippet :
+     * #define Button5MotionMask 4096
+     * }
+     */
     public static long Button5MotionMask() {
         return 4096L;
     }
+    /**
+     * {@snippet :
+     * #define ButtonMotionMask 8192
+     * }
+     */
     public static long ButtonMotionMask() {
         return 8192L;
     }
+    /**
+     * {@snippet :
+     * #define KeymapStateMask 16384
+     * }
+     */
     public static long KeymapStateMask() {
         return 16384L;
     }
+    /**
+     * {@snippet :
+     * #define ExposureMask 32768
+     * }
+     */
     public static long ExposureMask() {
         return 32768L;
     }
+    /**
+     * {@snippet :
+     * #define VisibilityChangeMask 65536
+     * }
+     */
     public static long VisibilityChangeMask() {
         return 65536L;
     }
+    /**
+     * {@snippet :
+     * #define StructureNotifyMask 131072
+     * }
+     */
     public static long StructureNotifyMask() {
         return 131072L;
     }
+    /**
+     * {@snippet :
+     * #define ResizeRedirectMask 262144
+     * }
+     */
     public static long ResizeRedirectMask() {
         return 262144L;
     }
+    /**
+     * {@snippet :
+     * #define SubstructureNotifyMask 524288
+     * }
+     */
     public static long SubstructureNotifyMask() {
         return 524288L;
     }
+    /**
+     * {@snippet :
+     * #define SubstructureRedirectMask 1048576
+     * }
+     */
     public static long SubstructureRedirectMask() {
         return 1048576L;
     }
+    /**
+     * {@snippet :
+     * #define FocusChangeMask 2097152
+     * }
+     */
     public static long FocusChangeMask() {
         return 2097152L;
     }
+    /**
+     * {@snippet :
+     * #define PropertyChangeMask 4194304
+     * }
+     */
     public static long PropertyChangeMask() {
         return 4194304L;
     }
+    /**
+     * {@snippet :
+     * #define ColormapChangeMask 8388608
+     * }
+     */
     public static long ColormapChangeMask() {
         return 8388608L;
     }
+    /**
+     * {@snippet :
+     * #define OwnerGrabButtonMask 16777216
+     * }
+     */
     public static long OwnerGrabButtonMask() {
         return 16777216L;
     }
+    /**
+     * {@snippet :
+     * #define ShiftMask 1
+     * }
+     */
     public static int ShiftMask() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define LockMask 2
+     * }
+     */
     public static int LockMask() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define ControlMask 4
+     * }
+     */
     public static int ControlMask() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define Mod1Mask 8
+     * }
+     */
     public static int Mod1Mask() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define Mod2Mask 16
+     * }
+     */
     public static int Mod2Mask() {
         return (int)16L;
     }
+    /**
+     * {@snippet :
+     * #define Mod3Mask 32
+     * }
+     */
     public static int Mod3Mask() {
         return (int)32L;
     }
+    /**
+     * {@snippet :
+     * #define Mod4Mask 64
+     * }
+     */
     public static int Mod4Mask() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define Mod5Mask 128
+     * }
+     */
     public static int Mod5Mask() {
         return (int)128L;
     }
+    /**
+     * {@snippet :
+     * #define Button1Mask 256
+     * }
+     */
     public static int Button1Mask() {
         return (int)256L;
     }
+    /**
+     * {@snippet :
+     * #define Button2Mask 512
+     * }
+     */
     public static int Button2Mask() {
         return (int)512L;
     }
+    /**
+     * {@snippet :
+     * #define Button3Mask 1024
+     * }
+     */
     public static int Button3Mask() {
         return (int)1024L;
     }
+    /**
+     * {@snippet :
+     * #define Button4Mask 2048
+     * }
+     */
     public static int Button4Mask() {
         return (int)2048L;
     }
+    /**
+     * {@snippet :
+     * #define Button5Mask 4096
+     * }
+     */
     public static int Button5Mask() {
         return (int)4096L;
     }
+    /**
+     * {@snippet :
+     * #define AnyModifier 32768
+     * }
+     */
     public static int AnyModifier() {
         return (int)32768L;
     }
+    /**
+     * {@snippet :
+     * #define RevertToNone 0
+     * }
+     */
     public static int RevertToNone() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define RevertToPointerRoot 1
+     * }
+     */
     public static int RevertToPointerRoot() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define CWBackPixmap 1
+     * }
+     */
     public static long CWBackPixmap() {
         return 1L;
     }
+    /**
+     * {@snippet :
+     * #define CWBackPixel 2
+     * }
+     */
     public static long CWBackPixel() {
         return 2L;
     }
+    /**
+     * {@snippet :
+     * #define CWBorderPixmap 4
+     * }
+     */
     public static long CWBorderPixmap() {
         return 4L;
     }
+    /**
+     * {@snippet :
+     * #define CWBorderPixel 8
+     * }
+     */
     public static long CWBorderPixel() {
         return 8L;
     }
+    /**
+     * {@snippet :
+     * #define CWBitGravity 16
+     * }
+     */
     public static long CWBitGravity() {
         return 16L;
     }
+    /**
+     * {@snippet :
+     * #define CWWinGravity 32
+     * }
+     */
     public static long CWWinGravity() {
         return 32L;
     }
+    /**
+     * {@snippet :
+     * #define CWBackingStore 64
+     * }
+     */
     public static long CWBackingStore() {
         return 64L;
     }
+    /**
+     * {@snippet :
+     * #define CWBackingPlanes 128
+     * }
+     */
     public static long CWBackingPlanes() {
         return 128L;
     }
+    /**
+     * {@snippet :
+     * #define CWBackingPixel 256
+     * }
+     */
     public static long CWBackingPixel() {
         return 256L;
     }
+    /**
+     * {@snippet :
+     * #define CWOverrideRedirect 512
+     * }
+     */
     public static long CWOverrideRedirect() {
         return 512L;
     }
+    /**
+     * {@snippet :
+     * #define CWSaveUnder 1024
+     * }
+     */
     public static long CWSaveUnder() {
         return 1024L;
     }
+    /**
+     * {@snippet :
+     * #define CWEventMask 2048
+     * }
+     */
     public static long CWEventMask() {
         return 2048L;
     }
+    /**
+     * {@snippet :
+     * #define CWDontPropagate 4096
+     * }
+     */
     public static long CWDontPropagate() {
         return 4096L;
     }
+    /**
+     * {@snippet :
+     * #define CWColormap 8192
+     * }
+     */
     public static long CWColormap() {
         return 8192L;
     }
+    /**
+     * {@snippet :
+     * #define CWCursor 16384
+     * }
+     */
     public static long CWCursor() {
         return 16384L;
     }
+    /**
+     * {@snippet :
+     * #define CWX 1
+     * }
+     */
     public static int CWX() {
         return (int)1L;
-    }
-    public static int CWY() {
-        return (int)2L;
-    }
-    public static int CWWidth() {
-        return (int)4L;
-    }
-    public static int CWHeight() {
-        return (int)8L;
-    }
-    public static int CWBorderWidth() {
-        return (int)16L;
-    }
-    public static int CWSibling() {
-        return (int)32L;
-    }
-    public static int CWStackMode() {
-        return (int)64L;
-    }
-    public static long GCFunction() {
-        return 1L;
-    }
-    public static long GCPlaneMask() {
-        return 2L;
-    }
-    public static long GCForeground() {
-        return 4L;
-    }
-    public static long GCBackground() {
-        return 8L;
-    }
-    public static long GCLineWidth() {
-        return 16L;
-    }
-    public static long GCLineStyle() {
-        return 32L;
-    }
-    public static long GCCapStyle() {
-        return 64L;
-    }
-    public static long GCJoinStyle() {
-        return 128L;
-    }
-    public static long GCFillStyle() {
-        return 256L;
-    }
-    public static long GCFillRule() {
-        return 512L;
-    }
-    public static long GCTile() {
-        return 1024L;
-    }
-    public static long GCStipple() {
-        return 2048L;
-    }
-    public static long GCTileStipXOrigin() {
-        return 4096L;
-    }
-    public static long GCTileStipYOrigin() {
-        return 8192L;
-    }
-    public static long GCFont() {
-        return 16384L;
-    }
-    public static long GCSubwindowMode() {
-        return 32768L;
-    }
-    public static long GCGraphicsExposures() {
-        return 65536L;
-    }
-    public static long GCClipXOrigin() {
-        return 131072L;
-    }
-    public static long GCClipYOrigin() {
-        return 262144L;
-    }
-    public static long GCClipMask() {
-        return 524288L;
-    }
-    public static long GCDashOffset() {
-        return 1048576L;
-    }
-    public static long GCDashList() {
-        return 2097152L;
-    }
-    public static long GCArcMode() {
-        return 4194304L;
-    }
-    public static int DoRed() {
-        return (int)1L;
-    }
-    public static int DoGreen() {
-        return (int)2L;
-    }
-    public static int DoBlue() {
-        return (int)4L;
-    }
-    public static long KBKeyClickPercent() {
-        return 1L;
-    }
-    public static long KBBellPercent() {
-        return 2L;
-    }
-    public static long KBBellPitch() {
-        return 4L;
-    }
-    public static long KBBellDuration() {
-        return 8L;
-    }
-    public static long KBLed() {
-        return 16L;
-    }
-    public static long KBLedMode() {
-        return 32L;
-    }
-    public static long KBKey() {
-        return 64L;
-    }
-    public static long KBAutoRepeatMode() {
-        return 128L;
-    }
-    public static MemoryAddress NULL() {
-        return constants$85.NULL$ADDR;
-    }
-    public static long AllPlanes() {
-        return -1L;
-    }
-    public static MemorySegment XNRequiredCharSet() {
-        return constants$85.XNRequiredCharSet$SEGMENT;
-    }
-    public static MemorySegment XNQueryOrientation() {
-        return constants$85.XNQueryOrientation$SEGMENT;
-    }
-    public static MemorySegment XNBaseFontName() {
-        return constants$86.XNBaseFontName$SEGMENT;
-    }
-    public static MemorySegment XNOMAutomatic() {
-        return constants$86.XNOMAutomatic$SEGMENT;
-    }
-    public static MemorySegment XNMissingCharSet() {
-        return constants$86.XNMissingCharSet$SEGMENT;
-    }
-    public static MemorySegment XNDefaultString() {
-        return constants$86.XNDefaultString$SEGMENT;
-    }
-    public static MemorySegment XNOrientation() {
-        return constants$86.XNOrientation$SEGMENT;
-    }
-    public static MemorySegment XNDirectionalDependentDrawing() {
-        return constants$86.XNDirectionalDependentDrawing$SEGMENT;
-    }
-    public static MemorySegment XNContextualDrawing() {
-        return constants$87.XNContextualDrawing$SEGMENT;
-    }
-    public static MemorySegment XNFontInfo() {
-        return constants$87.XNFontInfo$SEGMENT;
-    }
-    public static long XIMPreeditArea() {
-        return 1L;
-    }
-    public static long XIMPreeditCallbacks() {
-        return 2L;
-    }
-    public static long XIMPreeditPosition() {
-        return 4L;
-    }
-    public static long XIMPreeditNothing() {
-        return 8L;
-    }
-    public static long XIMPreeditNone() {
-        return 16L;
-    }
-    public static long XIMStatusArea() {
-        return 256L;
-    }
-    public static long XIMStatusCallbacks() {
-        return 512L;
-    }
-    public static long XIMStatusNothing() {
-        return 1024L;
-    }
-    public static long XIMStatusNone() {
-        return 2048L;
-    }
-    public static MemorySegment XNVaNestedList() {
-        return constants$87.XNVaNestedList$SEGMENT;
-    }
-    public static MemorySegment XNQueryInputStyle() {
-        return constants$87.XNQueryInputStyle$SEGMENT;
-    }
-    public static MemorySegment XNClientWindow() {
-        return constants$87.XNClientWindow$SEGMENT;
-    }
-    public static MemorySegment XNInputStyle() {
-        return constants$87.XNInputStyle$SEGMENT;
-    }
-    public static MemorySegment XNFocusWindow() {
-        return constants$88.XNFocusWindow$SEGMENT;
-    }
-    public static MemorySegment XNResourceName() {
-        return constants$88.XNResourceName$SEGMENT;
-    }
-    public static MemorySegment XNResourceClass() {
-        return constants$88.XNResourceClass$SEGMENT;
-    }
-    public static MemorySegment XNGeometryCallback() {
-        return constants$88.XNGeometryCallback$SEGMENT;
-    }
-    public static MemorySegment XNDestroyCallback() {
-        return constants$88.XNDestroyCallback$SEGMENT;
-    }
-    public static MemorySegment XNFilterEvents() {
-        return constants$88.XNFilterEvents$SEGMENT;
-    }
-    public static MemorySegment XNPreeditStartCallback() {
-        return constants$89.XNPreeditStartCallback$SEGMENT;
-    }
-    public static MemorySegment XNPreeditDoneCallback() {
-        return constants$89.XNPreeditDoneCallback$SEGMENT;
-    }
-    public static MemorySegment XNPreeditDrawCallback() {
-        return constants$89.XNPreeditDrawCallback$SEGMENT;
-    }
-    public static MemorySegment XNPreeditCaretCallback() {
-        return constants$89.XNPreeditCaretCallback$SEGMENT;
     }
 }
 

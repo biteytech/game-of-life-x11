@@ -7,28 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$76 {
+final class constants$76 {
 
-    static final FunctionDescriptor XGetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetNormalHints$MH = RuntimeHelper.downcallHandle(
-        "XGetNormalHints",
-        constants$76.XGetNormalHints$FUNC
-    );
-    static final FunctionDescriptor XGetRGBColormaps$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetRGBColormaps$MH = RuntimeHelper.downcallHandle(
-        "XGetRGBColormaps",
-        constants$76.XGetRGBColormaps$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$76() {}
     static final FunctionDescriptor XGetSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -68,6 +50,23 @@ class constants$76 {
     static final MethodHandle XGetVisualInfo$MH = RuntimeHelper.downcallHandle(
         "XGetVisualInfo",
         constants$76.XGetVisualInfo$FUNC
+    );
+    static final FunctionDescriptor XGetWMClientMachine$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetWMClientMachine$MH = RuntimeHelper.downcallHandle(
+        "XGetWMClientMachine",
+        constants$76.XGetWMClientMachine$FUNC
+    );
+    static final FunctionDescriptor XGetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetWMHints$MH = RuntimeHelper.downcallHandle(
+        "XGetWMHints",
+        constants$76.XGetWMHints$FUNC
     );
 }
 

@@ -7,8 +7,15 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-public class XIMPreeditDrawCallbackStruct extends _XIMPreeditDrawCallbackStruct {
+/**
+ * {@snippet :
+ * typedef struct _XIMPreeditDrawCallbackStruct XIMPreeditDrawCallbackStruct;
+ * }
+ */
+public final class XIMPreeditDrawCallbackStruct extends _XIMPreeditDrawCallbackStruct {
 
+    // Suppresses default constructor, ensuring non-instantiability.
+    private XIMPreeditDrawCallbackStruct() {}
 }
 
 

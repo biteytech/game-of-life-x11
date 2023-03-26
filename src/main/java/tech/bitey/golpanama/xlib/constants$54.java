@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$54 {
+final class constants$54 {
 
-    static final FunctionDescriptor XSetPlaneMask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetPlaneMask$MH = RuntimeHelper.downcallHandle(
-        "XSetPlaneMask",
-        constants$54.XSetPlaneMask$FUNC
-    );
-    static final FunctionDescriptor XSetPointerMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetPointerMapping$MH = RuntimeHelper.downcallHandle(
-        "XSetPointerMapping",
-        constants$54.XSetPointerMapping$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$54() {}
     static final FunctionDescriptor XSetScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT,
@@ -68,6 +52,25 @@ class constants$54 {
     static final MethodHandle XSetStipple$MH = RuntimeHelper.downcallHandle(
         "XSetStipple",
         constants$54.XSetStipple$FUNC
+    );
+    static final FunctionDescriptor XSetSubwindowMode$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetSubwindowMode$MH = RuntimeHelper.downcallHandle(
+        "XSetSubwindowMode",
+        constants$54.XSetSubwindowMode$FUNC
+    );
+    static final FunctionDescriptor XSetTSOrigin$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetTSOrigin$MH = RuntimeHelper.downcallHandle(
+        "XSetTSOrigin",
+        constants$54.XSetTSOrigin$FUNC
     );
 }
 

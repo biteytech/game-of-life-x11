@@ -7,28 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$80 {
+final class constants$80 {
 
-    static final FunctionDescriptor XSetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetNormalHints$MH = RuntimeHelper.downcallHandle(
-        "XSetNormalHints",
-        constants$80.XSetNormalHints$FUNC
-    );
-    static final FunctionDescriptor XSetRGBColormaps$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetRGBColormaps$MH = RuntimeHelper.downcallHandle(
-        "XSetRGBColormaps",
-        constants$80.XSetRGBColormaps$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$80() {}
     static final FunctionDescriptor XSetSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -71,6 +53,24 @@ class constants$80 {
     static final MethodHandle XSetWMClientMachine$MH = RuntimeHelper.downcallHandle(
         "XSetWMClientMachine",
         constants$80.XSetWMClientMachine$FUNC
+    );
+    static final FunctionDescriptor XSetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMHints$MH = RuntimeHelper.downcallHandle(
+        "XSetWMHints",
+        constants$80.XSetWMHints$FUNC
+    );
+    static final FunctionDescriptor XSetWMIconName$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetWMIconName$MH = RuntimeHelper.downcallHandle(
+        "XSetWMIconName",
+        constants$80.XSetWMIconName$FUNC
     );
 }
 

@@ -7,9 +7,21 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     short x;
+ *     short y;
+ *     unsigned short width;
+ *     unsigned short height;
+ *     short angle1;
+ *     short angle2;
+ * };
+ * }
+ */
 public class XArc {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_SHORT$LAYOUT.withName("x"),
         Constants$root.C_SHORT$LAYOUT.withName("y"),
         Constants$root.C_SHORT$LAYOUT.withName("width"),
@@ -24,10 +36,22 @@ public class XArc {
     public static VarHandle x$VH() {
         return XArc.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short x;
+     * }
+     */
     public static short x$get(MemorySegment seg) {
         return (short)XArc.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, short x) {
         XArc.x$VH.set(seg, x);
     }
     public static short x$get(MemorySegment seg, long index) {
@@ -40,10 +64,22 @@ public class XArc {
     public static VarHandle y$VH() {
         return XArc.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short y;
+     * }
+     */
     public static short y$get(MemorySegment seg) {
         return (short)XArc.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, short x) {
         XArc.y$VH.set(seg, x);
     }
     public static short y$get(MemorySegment seg, long index) {
@@ -56,10 +92,22 @@ public class XArc {
     public static VarHandle width$VH() {
         return XArc.width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short width;
+     * }
+     */
     public static short width$get(MemorySegment seg) {
         return (short)XArc.width$VH.get(seg);
     }
-    public static void width$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short width;
+     * }
+     */
+    public static void width$set(MemorySegment seg, short x) {
         XArc.width$VH.set(seg, x);
     }
     public static short width$get(MemorySegment seg, long index) {
@@ -72,10 +120,22 @@ public class XArc {
     public static VarHandle height$VH() {
         return XArc.height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short height;
+     * }
+     */
     public static short height$get(MemorySegment seg) {
         return (short)XArc.height$VH.get(seg);
     }
-    public static void height$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short height;
+     * }
+     */
+    public static void height$set(MemorySegment seg, short x) {
         XArc.height$VH.set(seg, x);
     }
     public static short height$get(MemorySegment seg, long index) {
@@ -88,10 +148,22 @@ public class XArc {
     public static VarHandle angle1$VH() {
         return XArc.angle1$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short angle1;
+     * }
+     */
     public static short angle1$get(MemorySegment seg) {
         return (short)XArc.angle1$VH.get(seg);
     }
-    public static void angle1$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short angle1;
+     * }
+     */
+    public static void angle1$set(MemorySegment seg, short x) {
         XArc.angle1$VH.set(seg, x);
     }
     public static short angle1$get(MemorySegment seg, long index) {
@@ -104,10 +176,22 @@ public class XArc {
     public static VarHandle angle2$VH() {
         return XArc.angle2$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short angle2;
+     * }
+     */
     public static short angle2$get(MemorySegment seg) {
         return (short)XArc.angle2$VH.get(seg);
     }
-    public static void angle2$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short angle2;
+     * }
+     */
+    public static void angle2$set(MemorySegment seg, short x) {
         XArc.angle2$VH.set(seg, x);
     }
     public static short angle2$get(MemorySegment seg, long index) {
@@ -118,10 +202,10 @@ public class XArc {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

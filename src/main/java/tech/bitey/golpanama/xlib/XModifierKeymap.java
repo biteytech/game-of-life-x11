@@ -7,9 +7,17 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int max_keypermod;
+ *     KeyCode* modifiermap;
+ * };
+ * }
+ */
 public class XModifierKeymap {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("max_keypermod"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_POINTER$LAYOUT.withName("modifiermap")
@@ -21,10 +29,22 @@ public class XModifierKeymap {
     public static VarHandle max_keypermod$VH() {
         return XModifierKeymap.max_keypermod$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int max_keypermod;
+     * }
+     */
     public static int max_keypermod$get(MemorySegment seg) {
         return (int)XModifierKeymap.max_keypermod$VH.get(seg);
     }
-    public static void max_keypermod$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int max_keypermod;
+     * }
+     */
+    public static void max_keypermod$set(MemorySegment seg, int x) {
         XModifierKeymap.max_keypermod$VH.set(seg, x);
     }
     public static int max_keypermod$get(MemorySegment seg, long index) {
@@ -37,24 +57,36 @@ public class XModifierKeymap {
     public static VarHandle modifiermap$VH() {
         return XModifierKeymap.modifiermap$VH;
     }
-    public static MemoryAddress modifiermap$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XModifierKeymap.modifiermap$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * KeyCode* modifiermap;
+     * }
+     */
+    public static MemorySegment modifiermap$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XModifierKeymap.modifiermap$VH.get(seg);
     }
-    public static void modifiermap$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * KeyCode* modifiermap;
+     * }
+     */
+    public static void modifiermap$set(MemorySegment seg, MemorySegment x) {
         XModifierKeymap.modifiermap$VH.set(seg, x);
     }
-    public static MemoryAddress modifiermap$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XModifierKeymap.modifiermap$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment modifiermap$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XModifierKeymap.modifiermap$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void modifiermap$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void modifiermap$set(MemorySegment seg, long index, MemorySegment x) {
         XModifierKeymap.modifiermap$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

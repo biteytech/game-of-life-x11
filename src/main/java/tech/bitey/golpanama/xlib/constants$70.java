@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$70 {
+final class constants$70 {
 
-    static final FunctionDescriptor XSetICValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetICValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XSetICValues",
-        constants$70.XSetICValues$FUNC
-    );
-    static final FunctionDescriptor XGetICValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetICValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XGetICValues",
-        constants$70.XGetICValues$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$70() {}
     static final FunctionDescriptor XIMOfIC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -61,6 +49,25 @@ class constants$70 {
     static final MethodHandle XwcLookupString$MH = RuntimeHelper.downcallHandle(
         "XwcLookupString",
         constants$70.XwcLookupString$FUNC
+    );
+    static final FunctionDescriptor Xutf8LookupString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle Xutf8LookupString$MH = RuntimeHelper.downcallHandle(
+        "Xutf8LookupString",
+        constants$70.Xutf8LookupString$FUNC
+    );
+    static final FunctionDescriptor XVaCreateNestedList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XVaCreateNestedList$MH = RuntimeHelper.downcallHandleVariadic(
+        "XVaCreateNestedList",
+        constants$70.XVaCreateNestedList$FUNC
     );
 }
 

@@ -7,27 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$19 {
+final class constants$19 {
 
-    static final FunctionDescriptor XSetWMProtocols$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetWMProtocols$MH = RuntimeHelper.downcallHandle(
-        "XSetWMProtocols",
-        constants$19.XSetWMProtocols$FUNC
-    );
-    static final FunctionDescriptor XIconifyWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XIconifyWindow$MH = RuntimeHelper.downcallHandle(
-        "XIconifyWindow",
-        constants$19.XIconifyWindow$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$19() {}
     static final FunctionDescriptor XWithdrawWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -66,6 +49,22 @@ class constants$19 {
     static final MethodHandle XSetWMColormapWindows$MH = RuntimeHelper.downcallHandle(
         "XSetWMColormapWindows",
         constants$19.XSetWMColormapWindows$FUNC
+    );
+    static final FunctionDescriptor XFreeStringList$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XFreeStringList$MH = RuntimeHelper.downcallHandle(
+        "XFreeStringList",
+        constants$19.XFreeStringList$FUNC
+    );
+    static final FunctionDescriptor XSetTransientForHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetTransientForHint$MH = RuntimeHelper.downcallHandle(
+        "XSetTransientForHint",
+        constants$19.XSetTransientForHint$FUNC
     );
 }
 

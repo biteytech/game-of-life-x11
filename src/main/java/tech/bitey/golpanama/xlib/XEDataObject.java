@@ -7,9 +7,21 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * union {
+ *     Display* display;
+ *     GC gc;
+ *     Visual* visual;
+ *     Screen* screen;
+ *     ScreenFormat* pixmap_format;
+ *     XFontStruct* font;
+ * };
+ * }
+ */
 public class XEDataObject {
 
-    static final  GroupLayout $union$LAYOUT = MemoryLayout.unionLayout(
+    static final UnionLayout $union$LAYOUT = MemoryLayout.unionLayout(
         Constants$root.C_POINTER$LAYOUT.withName("display"),
         Constants$root.C_POINTER$LAYOUT.withName("gc"),
         Constants$root.C_POINTER$LAYOUT.withName("visual"),
@@ -24,104 +36,176 @@ public class XEDataObject {
     public static VarHandle display$VH() {
         return XEDataObject.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XEDataObject.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XEDataObject.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle gc$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("gc"));
     public static VarHandle gc$VH() {
         return XEDataObject.gc$VH;
     }
-    public static MemoryAddress gc$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.gc$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * GC gc;
+     * }
+     */
+    public static MemorySegment gc$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.gc$VH.get(seg);
     }
-    public static void gc$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * GC gc;
+     * }
+     */
+    public static void gc$set(MemorySegment seg, MemorySegment x) {
         XEDataObject.gc$VH.set(seg, x);
     }
-    public static MemoryAddress gc$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.gc$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment gc$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.gc$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void gc$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void gc$set(MemorySegment seg, long index, MemorySegment x) {
         XEDataObject.gc$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle visual$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("visual"));
     public static VarHandle visual$VH() {
         return XEDataObject.visual$VH;
     }
-    public static MemoryAddress visual$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.visual$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Visual* visual;
+     * }
+     */
+    public static MemorySegment visual$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.visual$VH.get(seg);
     }
-    public static void visual$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Visual* visual;
+     * }
+     */
+    public static void visual$set(MemorySegment seg, MemorySegment x) {
         XEDataObject.visual$VH.set(seg, x);
     }
-    public static MemoryAddress visual$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.visual$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment visual$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.visual$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void visual$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void visual$set(MemorySegment seg, long index, MemorySegment x) {
         XEDataObject.visual$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle screen$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("screen"));
     public static VarHandle screen$VH() {
         return XEDataObject.screen$VH;
     }
-    public static MemoryAddress screen$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.screen$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Screen* screen;
+     * }
+     */
+    public static MemorySegment screen$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.screen$VH.get(seg);
     }
-    public static void screen$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Screen* screen;
+     * }
+     */
+    public static void screen$set(MemorySegment seg, MemorySegment x) {
         XEDataObject.screen$VH.set(seg, x);
     }
-    public static MemoryAddress screen$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.screen$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment screen$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.screen$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void screen$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void screen$set(MemorySegment seg, long index, MemorySegment x) {
         XEDataObject.screen$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle pixmap_format$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("pixmap_format"));
     public static VarHandle pixmap_format$VH() {
         return XEDataObject.pixmap_format$VH;
     }
-    public static MemoryAddress pixmap_format$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.pixmap_format$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * ScreenFormat* pixmap_format;
+     * }
+     */
+    public static MemorySegment pixmap_format$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.pixmap_format$VH.get(seg);
     }
-    public static void pixmap_format$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * ScreenFormat* pixmap_format;
+     * }
+     */
+    public static void pixmap_format$set(MemorySegment seg, MemorySegment x) {
         XEDataObject.pixmap_format$VH.set(seg, x);
     }
-    public static MemoryAddress pixmap_format$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.pixmap_format$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment pixmap_format$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.pixmap_format$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void pixmap_format$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void pixmap_format$set(MemorySegment seg, long index, MemorySegment x) {
         XEDataObject.pixmap_format$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle font$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("font"));
     public static VarHandle font$VH() {
         return XEDataObject.font$VH;
     }
-    public static MemoryAddress font$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.font$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XFontStruct* font;
+     * }
+     */
+    public static MemorySegment font$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.font$VH.get(seg);
     }
-    public static void font$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XFontStruct* font;
+     * }
+     */
+    public static void font$set(MemorySegment seg, MemorySegment x) {
         XEDataObject.font$VH.set(seg, x);
     }
-    public static MemoryAddress font$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XEDataObject.font$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment font$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XEDataObject.font$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void font$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void font$set(MemorySegment seg, long index, MemorySegment x) {
         XEDataObject.font$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

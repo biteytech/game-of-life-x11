@@ -7,8 +7,15 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-public class Display {
+/**
+ * {@snippet :
+ * typedef struct _XDisplay Display;
+ * }
+ */
+public final class Display {
 
+    // Suppresses default constructor, ensuring non-instantiability.
+    private Display() {}
 }
 
 

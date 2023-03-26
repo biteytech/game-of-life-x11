@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$62 {
+final class constants$62 {
 
-    static final FunctionDescriptor XGetOMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetOMValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XGetOMValues",
-        constants$62.XGetOMValues$FUNC
-    );
-    static final FunctionDescriptor XDisplayOfOM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayOfOM$MH = RuntimeHelper.downcallHandle(
-        "XDisplayOfOM",
-        constants$62.XDisplayOfOM$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$62() {}
     static final FunctionDescriptor XLocaleOfOM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -50,6 +38,20 @@ class constants$62 {
     static final MethodHandle XOMOfOC$MH = RuntimeHelper.downcallHandle(
         "XOMOfOC",
         constants$62.XOMOfOC$FUNC
+    );
+    static final FunctionDescriptor XSetOCValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetOCValues$MH = RuntimeHelper.downcallHandleVariadic(
+        "XSetOCValues",
+        constants$62.XSetOCValues$FUNC
+    );
+    static final FunctionDescriptor XGetOCValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetOCValues$MH = RuntimeHelper.downcallHandleVariadic(
+        "XGetOCValues",
+        constants$62.XGetOCValues$FUNC
     );
 }
 

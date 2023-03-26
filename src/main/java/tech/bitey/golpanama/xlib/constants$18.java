@@ -7,21 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$18 {
+final class constants$18 {
 
-    static final FunctionDescriptor XIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIOErrorHandler$MH = RuntimeHelper.downcallHandle(
-        constants$18.XIOErrorHandler$FUNC
-    );
-    static final FunctionDescriptor XSetIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetIOErrorHandler$MH = RuntimeHelper.downcallHandle(
-        "XSetIOErrorHandler",
-        constants$18.XSetIOErrorHandler$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$18() {}
     static final FunctionDescriptor XListPixmapFormats$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
@@ -59,6 +48,25 @@ class constants$18 {
     static final MethodHandle XGetWMProtocols$MH = RuntimeHelper.downcallHandle(
         "XGetWMProtocols",
         constants$18.XGetWMProtocols$FUNC
+    );
+    static final FunctionDescriptor XSetWMProtocols$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetWMProtocols$MH = RuntimeHelper.downcallHandle(
+        "XSetWMProtocols",
+        constants$18.XSetWMProtocols$FUNC
+    );
+    static final FunctionDescriptor XIconifyWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XIconifyWindow$MH = RuntimeHelper.downcallHandle(
+        "XIconifyWindow",
+        constants$18.XIconifyWindow$FUNC
     );
 }
 

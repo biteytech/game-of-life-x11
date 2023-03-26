@@ -7,31 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$9 {
+final class constants$9 {
 
-    static final FunctionDescriptor XCreateSimpleWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XCreateSimpleWindow$MH = RuntimeHelper.downcallHandle(
-        "XCreateSimpleWindow",
-        constants$9.XCreateSimpleWindow$FUNC
-    );
-    static final FunctionDescriptor XGetSelectionOwner$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetSelectionOwner$MH = RuntimeHelper.downcallHandle(
-        "XGetSelectionOwner",
-        constants$9.XGetSelectionOwner$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$9() {}
     static final FunctionDescriptor XCreateWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -79,6 +58,22 @@ class constants$9 {
     static final MethodHandle XListFontsWithInfo$MH = RuntimeHelper.downcallHandle(
         "XListFontsWithInfo",
         constants$9.XListFontsWithInfo$FUNC
+    );
+    static final FunctionDescriptor XGetFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetFontPath$MH = RuntimeHelper.downcallHandle(
+        "XGetFontPath",
+        constants$9.XGetFontPath$FUNC
+    );
+    static final FunctionDescriptor XListExtensions$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XListExtensions$MH = RuntimeHelper.downcallHandle(
+        "XListExtensions",
+        constants$9.XListExtensions$FUNC
     );
 }
 

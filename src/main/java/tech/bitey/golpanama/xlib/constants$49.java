@@ -7,28 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$49 {
+final class constants$49 {
 
-    static final FunctionDescriptor XRemoveHosts$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRemoveHosts$MH = RuntimeHelper.downcallHandle(
-        "XRemoveHosts",
-        constants$49.XRemoveHosts$FUNC
-    );
-    static final FunctionDescriptor XReparentWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XReparentWindow$MH = RuntimeHelper.downcallHandle(
-        "XReparentWindow",
-        constants$49.XReparentWindow$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$49() {}
     static final FunctionDescriptor XResetScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -62,6 +44,24 @@ class constants$49 {
     static final MethodHandle XRotateBuffers$MH = RuntimeHelper.downcallHandle(
         "XRotateBuffers",
         constants$49.XRotateBuffers$FUNC
+    );
+    static final FunctionDescriptor XRotateWindowProperties$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XRotateWindowProperties$MH = RuntimeHelper.downcallHandle(
+        "XRotateWindowProperties",
+        constants$49.XRotateWindowProperties$FUNC
+    );
+    static final FunctionDescriptor XScreenCount$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XScreenCount$MH = RuntimeHelper.downcallHandle(
+        "XScreenCount",
+        constants$49.XScreenCount$FUNC
     );
 }
 

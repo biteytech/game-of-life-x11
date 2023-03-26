@@ -7,9 +7,18 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int depth;
+ *     int bits_per_pixel;
+ *     int scanline_pad;
+ * };
+ * }
+ */
 public class XPixmapFormatValues {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("depth"),
         Constants$root.C_INT$LAYOUT.withName("bits_per_pixel"),
         Constants$root.C_INT$LAYOUT.withName("scanline_pad")
@@ -21,10 +30,22 @@ public class XPixmapFormatValues {
     public static VarHandle depth$VH() {
         return XPixmapFormatValues.depth$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int depth;
+     * }
+     */
     public static int depth$get(MemorySegment seg) {
         return (int)XPixmapFormatValues.depth$VH.get(seg);
     }
-    public static void depth$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int depth;
+     * }
+     */
+    public static void depth$set(MemorySegment seg, int x) {
         XPixmapFormatValues.depth$VH.set(seg, x);
     }
     public static int depth$get(MemorySegment seg, long index) {
@@ -37,10 +58,22 @@ public class XPixmapFormatValues {
     public static VarHandle bits_per_pixel$VH() {
         return XPixmapFormatValues.bits_per_pixel$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int bits_per_pixel;
+     * }
+     */
     public static int bits_per_pixel$get(MemorySegment seg) {
         return (int)XPixmapFormatValues.bits_per_pixel$VH.get(seg);
     }
-    public static void bits_per_pixel$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int bits_per_pixel;
+     * }
+     */
+    public static void bits_per_pixel$set(MemorySegment seg, int x) {
         XPixmapFormatValues.bits_per_pixel$VH.set(seg, x);
     }
     public static int bits_per_pixel$get(MemorySegment seg, long index) {
@@ -53,10 +86,22 @@ public class XPixmapFormatValues {
     public static VarHandle scanline_pad$VH() {
         return XPixmapFormatValues.scanline_pad$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int scanline_pad;
+     * }
+     */
     public static int scanline_pad$get(MemorySegment seg) {
         return (int)XPixmapFormatValues.scanline_pad$VH.get(seg);
     }
-    public static void scanline_pad$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int scanline_pad;
+     * }
+     */
+    public static void scanline_pad$set(MemorySegment seg, int x) {
         XPixmapFormatValues.scanline_pad$VH.set(seg, x);
     }
     public static int scanline_pad$get(MemorySegment seg, long index) {
@@ -67,10 +112,10 @@ public class XPixmapFormatValues {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

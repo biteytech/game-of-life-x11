@@ -7,27 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$35 {
+final class constants$35 {
 
-    static final FunctionDescriptor XFreeColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XFreeColors$MH = RuntimeHelper.downcallHandle(
-        "XFreeColors",
-        constants$35.XFreeColors$FUNC
-    );
-    static final FunctionDescriptor XFreeCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XFreeCursor$MH = RuntimeHelper.downcallHandle(
-        "XFreeCursor",
-        constants$35.XFreeCursor$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$35() {}
     static final FunctionDescriptor XFreeExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -58,6 +41,21 @@ class constants$35 {
     static final MethodHandle XFreeFontNames$MH = RuntimeHelper.downcallHandle(
         "XFreeFontNames",
         constants$35.XFreeFontNames$FUNC
+    );
+    static final FunctionDescriptor XFreeFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XFreeFontPath$MH = RuntimeHelper.downcallHandle(
+        "XFreeFontPath",
+        constants$35.XFreeFontPath$FUNC
+    );
+    static final FunctionDescriptor XFreeGC$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XFreeGC$MH = RuntimeHelper.downcallHandle(
+        "XFreeGC",
+        constants$35.XFreeGC$FUNC
     );
 }
 

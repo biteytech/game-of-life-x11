@@ -7,21 +7,15 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$6 {
+final class constants$6 {
 
-    static final FunctionDescriptor XSynchronize$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSynchronize$MH = RuntimeHelper.downcallHandle(
-        "XSynchronize",
-        constants$6.XSynchronize$FUNC
-    );
-    static final FunctionDescriptor XSetAfterFunction$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$6() {}
+    static final FunctionDescriptor XSetAfterFunction$return_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XSetAfterFunction$x0$MH = RuntimeHelper.downcallHandle(
-        constants$6.XSetAfterFunction$x0$FUNC
+    static final MethodHandle XSetAfterFunction$return_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$6.XSetAfterFunction$return_DOWN$FUNC
     );
     static final FunctionDescriptor XSetAfterFunction$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -50,6 +44,24 @@ class constants$6 {
     static final MethodHandle XInternAtoms$MH = RuntimeHelper.downcallHandle(
         "XInternAtoms",
         constants$6.XInternAtoms$FUNC
+    );
+    static final FunctionDescriptor XCopyColormapAndFree$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XCopyColormapAndFree$MH = RuntimeHelper.downcallHandle(
+        "XCopyColormapAndFree",
+        constants$6.XCopyColormapAndFree$FUNC
+    );
+    static final FunctionDescriptor XCreateColormap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XCreateColormap$MH = RuntimeHelper.downcallHandle(
+        "XCreateColormap",
+        constants$6.XCreateColormap$FUNC
     );
 }
 

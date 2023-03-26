@@ -16,15 +16,13 @@
 
 package tech.bitey.golpanama;
 
-import static java.lang.foreign.MemoryAddress.NULL;
+import static java.lang.foreign.MemorySegment.NULL;
 import static tech.bitey.golpanama.GameOfLife.CELL_PX;
 import static tech.bitey.golpanama.GameOfLife.HEIGHT_PX;
 import static tech.bitey.golpanama.GameOfLife.WIDTH_PX;
 
-import java.lang.foreign.MemoryAddress;
+import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
-import java.lang.foreign.MemorySession;
-import java.lang.foreign.SegmentAllocator;
 
 import tech.bitey.golpanama.xlib.XColor;
 import tech.bitey.golpanama.xlib.XEvent;
@@ -32,9 +30,9 @@ import tech.bitey.golpanama.xlib.Xlib_h;
 
 public class RenderX11 implements Render {
 
-	private final MemoryAddress display;
+	private final MemorySegment display;
 	private final long win;
-	private final MemoryAddress gc; // graphics context
+	private final MemorySegment gc; // graphics context
 
 	private final long black, white;
 
@@ -50,18 +48,18 @@ public class RenderX11 implements Render {
 		win = Xlib_h.XCreateSimpleWindow(display, Xlib_h.XDefaultRootWindow(display), 0, 0, WIDTH_PX, HEIGHT_PX, 0,
 				black, white);
 
-		MemoryAddress gameOfLife = SegmentAllocator.implicitAllocator().allocateUtf8String("Game of Life").address();
-		Xlib_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
+		try (Arena offHeap = Arena.openConfined()) {
+			MemorySegment gameOfLife = offHeap.allocateUtf8String("Game of Life");
+			Xlib_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
 
-		Xlib_h.XSelectInput(display, win, Xlib_h.ExposureMask());
+			Xlib_h.XSelectInput(display, win, Xlib_h.ExposureMask());
 
-		Xlib_h.XClearWindow(display, win);
-		Xlib_h.XMapRaised(display, win);
+			Xlib_h.XClearWindow(display, win);
+			Xlib_h.XMapRaised(display, win);
 
-		try (var session = MemorySession.openConfined()) {
 			// exposure event
-			MemorySegment event = XEvent.allocate(session);
-			Xlib_h.XNextEvent(display, event.address());
+			MemorySegment event = XEvent.allocate(offHeap);
+			Xlib_h.XNextEvent(display, event);
 		}
 
 		gc = Xlib_h.XCreateGC(display, win, 0, NULL);
@@ -70,11 +68,11 @@ public class RenderX11 implements Render {
 	@Override
 	public void drawGrid() {
 		// set light gray color
-		try (var session = MemorySession.openConfined()) {
+		try (Arena offHeap = Arena.openConfined()) {
 			long cmap = Xlib_h.XDefaultColormap(display, 0);
-			MemorySegment near_color = XColor.allocate(session), true_color = XColor.allocate(session);
-			MemorySegment lightGray = SegmentAllocator.implicitAllocator().allocateUtf8String("Light Gray");
-			Xlib_h.XAllocNamedColor(display, cmap, lightGray, near_color.address(), true_color.address());
+			MemorySegment near_color = XColor.allocate(offHeap), true_color = XColor.allocate(offHeap);
+			MemorySegment lightGray = offHeap.allocateUtf8String("Light Gray");
+			Xlib_h.XAllocNamedColor(display, cmap, lightGray, near_color, true_color);
 			Xlib_h.XSetForeground(display, gc, XColor.pixel$get(near_color));
 		}
 

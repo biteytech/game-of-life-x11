@@ -7,9 +7,21 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     short lbearing;
+ *     short rbearing;
+ *     short width;
+ *     short ascent;
+ *     short descent;
+ *     unsigned short attributes;
+ * };
+ * }
+ */
 public class XCharStruct {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_SHORT$LAYOUT.withName("lbearing"),
         Constants$root.C_SHORT$LAYOUT.withName("rbearing"),
         Constants$root.C_SHORT$LAYOUT.withName("width"),
@@ -24,10 +36,22 @@ public class XCharStruct {
     public static VarHandle lbearing$VH() {
         return XCharStruct.lbearing$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short lbearing;
+     * }
+     */
     public static short lbearing$get(MemorySegment seg) {
         return (short)XCharStruct.lbearing$VH.get(seg);
     }
-    public static void lbearing$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short lbearing;
+     * }
+     */
+    public static void lbearing$set(MemorySegment seg, short x) {
         XCharStruct.lbearing$VH.set(seg, x);
     }
     public static short lbearing$get(MemorySegment seg, long index) {
@@ -40,10 +64,22 @@ public class XCharStruct {
     public static VarHandle rbearing$VH() {
         return XCharStruct.rbearing$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short rbearing;
+     * }
+     */
     public static short rbearing$get(MemorySegment seg) {
         return (short)XCharStruct.rbearing$VH.get(seg);
     }
-    public static void rbearing$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short rbearing;
+     * }
+     */
+    public static void rbearing$set(MemorySegment seg, short x) {
         XCharStruct.rbearing$VH.set(seg, x);
     }
     public static short rbearing$get(MemorySegment seg, long index) {
@@ -56,10 +92,22 @@ public class XCharStruct {
     public static VarHandle width$VH() {
         return XCharStruct.width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short width;
+     * }
+     */
     public static short width$get(MemorySegment seg) {
         return (short)XCharStruct.width$VH.get(seg);
     }
-    public static void width$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short width;
+     * }
+     */
+    public static void width$set(MemorySegment seg, short x) {
         XCharStruct.width$VH.set(seg, x);
     }
     public static short width$get(MemorySegment seg, long index) {
@@ -72,10 +120,22 @@ public class XCharStruct {
     public static VarHandle ascent$VH() {
         return XCharStruct.ascent$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short ascent;
+     * }
+     */
     public static short ascent$get(MemorySegment seg) {
         return (short)XCharStruct.ascent$VH.get(seg);
     }
-    public static void ascent$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short ascent;
+     * }
+     */
+    public static void ascent$set(MemorySegment seg, short x) {
         XCharStruct.ascent$VH.set(seg, x);
     }
     public static short ascent$get(MemorySegment seg, long index) {
@@ -88,10 +148,22 @@ public class XCharStruct {
     public static VarHandle descent$VH() {
         return XCharStruct.descent$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short descent;
+     * }
+     */
     public static short descent$get(MemorySegment seg) {
         return (short)XCharStruct.descent$VH.get(seg);
     }
-    public static void descent$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short descent;
+     * }
+     */
+    public static void descent$set(MemorySegment seg, short x) {
         XCharStruct.descent$VH.set(seg, x);
     }
     public static short descent$get(MemorySegment seg, long index) {
@@ -104,10 +176,22 @@ public class XCharStruct {
     public static VarHandle attributes$VH() {
         return XCharStruct.attributes$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short attributes;
+     * }
+     */
     public static short attributes$get(MemorySegment seg) {
         return (short)XCharStruct.attributes$VH.get(seg);
     }
-    public static void attributes$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short attributes;
+     * }
+     */
+    public static void attributes$set(MemorySegment seg, short x) {
         XCharStruct.attributes$VH.set(seg, x);
     }
     public static short attributes$get(MemorySegment seg, long index) {
@@ -118,10 +202,10 @@ public class XCharStruct {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

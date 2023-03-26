@@ -7,8 +7,15 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-public class XIMPreeditStateNotifyCallbackStruct extends _XIMPreeditStateNotifyCallbackStruct {
+/**
+ * {@snippet :
+ * typedef struct _XIMPreeditStateNotifyCallbackStruct XIMPreeditStateNotifyCallbackStruct;
+ * }
+ */
+public final class XIMPreeditStateNotifyCallbackStruct extends _XIMPreeditStateNotifyCallbackStruct {
 
+    // Suppresses default constructor, ensuring non-instantiability.
+    private XIMPreeditStateNotifyCallbackStruct() {}
 }
 
 

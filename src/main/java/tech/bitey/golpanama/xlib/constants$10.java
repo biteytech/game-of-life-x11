@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$10 {
+final class constants$10 {
 
-    static final FunctionDescriptor XGetFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetFontPath$MH = RuntimeHelper.downcallHandle(
-        "XGetFontPath",
-        constants$10.XGetFontPath$FUNC
-    );
-    static final FunctionDescriptor XListExtensions$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListExtensions$MH = RuntimeHelper.downcallHandle(
-        "XListExtensions",
-        constants$10.XListExtensions$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$10() {}
     static final FunctionDescriptor XListProperties$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -59,6 +45,23 @@ class constants$10 {
     static final MethodHandle XLookupKeysym$MH = RuntimeHelper.downcallHandle(
         "XLookupKeysym",
         constants$10.XLookupKeysym$FUNC
+    );
+    static final FunctionDescriptor XGetKeyboardMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_CHAR$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetKeyboardMapping$MH = RuntimeHelper.downcallHandle(
+        "XGetKeyboardMapping",
+        constants$10.XGetKeyboardMapping$FUNC
+    );
+    static final FunctionDescriptor XStringToKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XStringToKeysym$MH = RuntimeHelper.downcallHandle(
+        "XStringToKeysym",
+        constants$10.XStringToKeysym$FUNC
     );
 }
 

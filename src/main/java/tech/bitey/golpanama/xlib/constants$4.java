@@ -7,65 +7,59 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$4 {
+final class constants$4 {
 
-    static final FunctionDescriptor XInitImage$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XInitImage$MH = RuntimeHelper.downcallHandle(
-        "XInitImage",
-        constants$4.XInitImage$FUNC
-    );
-    static final FunctionDescriptor XGetImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$4() {}
+    static final FunctionDescriptor XFetchBuffer$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle XGetImage$MH = RuntimeHelper.downcallHandle(
-        "XGetImage",
-        constants$4.XGetImage$FUNC
+    static final MethodHandle XFetchBuffer$MH = RuntimeHelper.downcallHandle(
+        "XFetchBuffer",
+        constants$4.XFetchBuffer$FUNC
     );
-    static final FunctionDescriptor XGetSubImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XGetAtomName$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetAtomName$MH = RuntimeHelper.downcallHandle(
+        "XGetAtomName",
+        constants$4.XGetAtomName$FUNC
+    );
+    static final FunctionDescriptor XGetAtomNames$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGetSubImage$MH = RuntimeHelper.downcallHandle(
-        "XGetSubImage",
-        constants$4.XGetSubImage$FUNC
-    );
-    static final FunctionDescriptor XOpenDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XOpenDisplay$MH = RuntimeHelper.downcallHandle(
-        "XOpenDisplay",
-        constants$4.XOpenDisplay$FUNC
+    static final MethodHandle XGetAtomNames$MH = RuntimeHelper.downcallHandle(
+        "XGetAtomNames",
+        constants$4.XGetAtomNames$FUNC
     );
-    static final FunctionDescriptor XrmInitialize$FUNC = FunctionDescriptor.ofVoid();
-    static final MethodHandle XrmInitialize$MH = RuntimeHelper.downcallHandle(
-        "XrmInitialize",
-        constants$4.XrmInitialize$FUNC
-    );
-    static final FunctionDescriptor XFetchBytes$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XGetDefault$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XFetchBytes$MH = RuntimeHelper.downcallHandle(
-        "XFetchBytes",
-        constants$4.XFetchBytes$FUNC
+    static final MethodHandle XGetDefault$MH = RuntimeHelper.downcallHandle(
+        "XGetDefault",
+        constants$4.XGetDefault$FUNC
+    );
+    static final FunctionDescriptor XDisplayName$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDisplayName$MH = RuntimeHelper.downcallHandle(
+        "XDisplayName",
+        constants$4.XDisplayName$FUNC
+    );
+    static final FunctionDescriptor XKeysymToString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XKeysymToString$MH = RuntimeHelper.downcallHandle(
+        "XKeysymToString",
+        constants$4.XKeysymToString$FUNC
     );
 }
 

@@ -7,66 +7,67 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$3 {
+final class constants$3 {
 
-    static final FunctionDescriptor XGetMotionEvents$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$3() {}
+    static final FunctionDescriptor XInitImage$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XGetMotionEvents$MH = RuntimeHelper.downcallHandle(
-        "XGetMotionEvents",
-        constants$3.XGetMotionEvents$FUNC
+    static final MethodHandle XInitImage$MH = RuntimeHelper.downcallHandle(
+        "XInitImage",
+        constants$3.XInitImage$FUNC
     );
-    static final FunctionDescriptor XDeleteModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XGetImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_CHAR$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle XDeleteModifiermapEntry$MH = RuntimeHelper.downcallHandle(
-        "XDeleteModifiermapEntry",
-        constants$3.XDeleteModifiermapEntry$FUNC
+    static final MethodHandle XGetImage$MH = RuntimeHelper.downcallHandle(
+        "XGetImage",
+        constants$3.XGetImage$FUNC
     );
-    static final FunctionDescriptor XGetModifierMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XGetSubImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XGetSubImage$MH = RuntimeHelper.downcallHandle(
+        "XGetSubImage",
+        constants$3.XGetSubImage$FUNC
+    );
+    static final FunctionDescriptor XOpenDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XGetModifierMapping$MH = RuntimeHelper.downcallHandle(
-        "XGetModifierMapping",
-        constants$3.XGetModifierMapping$FUNC
+    static final MethodHandle XOpenDisplay$MH = RuntimeHelper.downcallHandle(
+        "XOpenDisplay",
+        constants$3.XOpenDisplay$FUNC
     );
-    static final FunctionDescriptor XInsertModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XrmInitialize$FUNC = FunctionDescriptor.ofVoid();
+    static final MethodHandle XrmInitialize$MH = RuntimeHelper.downcallHandle(
+        "XrmInitialize",
+        constants$3.XrmInitialize$FUNC
+    );
+    static final FunctionDescriptor XFetchBytes$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XInsertModifiermapEntry$MH = RuntimeHelper.downcallHandle(
-        "XInsertModifiermapEntry",
-        constants$3.XInsertModifiermapEntry$FUNC
-    );
-    static final FunctionDescriptor XNewModifiermap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XNewModifiermap$MH = RuntimeHelper.downcallHandle(
-        "XNewModifiermap",
-        constants$3.XNewModifiermap$FUNC
-    );
-    static final FunctionDescriptor XCreateImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCreateImage$MH = RuntimeHelper.downcallHandle(
-        "XCreateImage",
-        constants$3.XCreateImage$FUNC
+    static final MethodHandle XFetchBytes$MH = RuntimeHelper.downcallHandle(
+        "XFetchBytes",
+        constants$3.XFetchBytes$FUNC
     );
 }
 

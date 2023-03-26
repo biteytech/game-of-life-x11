@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$25 {
+final class constants$25 {
 
-    static final FunctionDescriptor XCheckMaskEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckMaskEvent$MH = RuntimeHelper.downcallHandle(
-        "XCheckMaskEvent",
-        constants$25.XCheckMaskEvent$FUNC
-    );
-    static final FunctionDescriptor XCheckTypedEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckTypedEvent$MH = RuntimeHelper.downcallHandle(
-        "XCheckTypedEvent",
-        constants$25.XCheckTypedEvent$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$25() {}
     static final FunctionDescriptor XCheckTypedWindowEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -63,6 +47,27 @@ class constants$25 {
     static final MethodHandle XCirculateSubwindowsDown$MH = RuntimeHelper.downcallHandle(
         "XCirculateSubwindowsDown",
         constants$25.XCirculateSubwindowsDown$FUNC
+    );
+    static final FunctionDescriptor XCirculateSubwindowsUp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XCirculateSubwindowsUp$MH = RuntimeHelper.downcallHandle(
+        "XCirculateSubwindowsUp",
+        constants$25.XCirculateSubwindowsUp$FUNC
+    );
+    static final FunctionDescriptor XClearArea$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XClearArea$MH = RuntimeHelper.downcallHandle(
+        "XClearArea",
+        constants$25.XClearArea$FUNC
     );
 }
 

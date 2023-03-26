@@ -7,23 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$45 {
+final class constants$45 {
 
-    static final FunctionDescriptor XProtocolVersion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XProtocolVersion$MH = RuntimeHelper.downcallHandle(
-        "XProtocolVersion",
-        constants$45.XProtocolVersion$FUNC
-    );
-    static final FunctionDescriptor XPutBackEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPutBackEvent$MH = RuntimeHelper.downcallHandle(
-        "XPutBackEvent",
-        constants$45.XPutBackEvent$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$45() {}
     static final FunctionDescriptor XPutImage$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -71,6 +58,30 @@ class constants$45 {
     static final MethodHandle XQueryBestSize$MH = RuntimeHelper.downcallHandle(
         "XQueryBestSize",
         constants$45.XQueryBestSize$FUNC
+    );
+    static final FunctionDescriptor XQueryBestStipple$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XQueryBestStipple$MH = RuntimeHelper.downcallHandle(
+        "XQueryBestStipple",
+        constants$45.XQueryBestStipple$FUNC
+    );
+    static final FunctionDescriptor XQueryBestTile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XQueryBestTile$MH = RuntimeHelper.downcallHandle(
+        "XQueryBestTile",
+        constants$45.XQueryBestTile$FUNC
     );
 }
 

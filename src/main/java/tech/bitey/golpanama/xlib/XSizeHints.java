@@ -7,9 +7,31 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     long flags;
+ *     int x;
+ *     int y;
+ *     int width;
+ *     int height;
+ *     int min_width;
+ *     int min_height;
+ *     int max_width;
+ *     int max_height;
+ *     int width_inc;
+ *     int height_inc;
+ *     struct  min_aspect;
+ *     struct  max_aspect;
+ *     int base_width;
+ *     int base_height;
+ *     int win_gravity;
+ * };
+ * }
+ */
 public class XSizeHints {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_LONG_LONG$LAYOUT.withName("flags"),
         Constants$root.C_INT$LAYOUT.withName("x"),
         Constants$root.C_INT$LAYOUT.withName("y"),
@@ -41,10 +63,22 @@ public class XSizeHints {
     public static VarHandle flags$VH() {
         return XSizeHints.flags$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * long flags;
+     * }
+     */
     public static long flags$get(MemorySegment seg) {
         return (long)XSizeHints.flags$VH.get(seg);
     }
-    public static void flags$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * long flags;
+     * }
+     */
+    public static void flags$set(MemorySegment seg, long x) {
         XSizeHints.flags$VH.set(seg, x);
     }
     public static long flags$get(MemorySegment seg, long index) {
@@ -57,10 +91,22 @@ public class XSizeHints {
     public static VarHandle x$VH() {
         return XSizeHints.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
     public static int x$get(MemorySegment seg) {
         return (int)XSizeHints.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, int x) {
         XSizeHints.x$VH.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
@@ -73,10 +119,22 @@ public class XSizeHints {
     public static VarHandle y$VH() {
         return XSizeHints.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
     public static int y$get(MemorySegment seg) {
         return (int)XSizeHints.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, int x) {
         XSizeHints.y$VH.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
@@ -89,10 +147,22 @@ public class XSizeHints {
     public static VarHandle width$VH() {
         return XSizeHints.width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int width;
+     * }
+     */
     public static int width$get(MemorySegment seg) {
         return (int)XSizeHints.width$VH.get(seg);
     }
-    public static void width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int width;
+     * }
+     */
+    public static void width$set(MemorySegment seg, int x) {
         XSizeHints.width$VH.set(seg, x);
     }
     public static int width$get(MemorySegment seg, long index) {
@@ -105,10 +175,22 @@ public class XSizeHints {
     public static VarHandle height$VH() {
         return XSizeHints.height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int height;
+     * }
+     */
     public static int height$get(MemorySegment seg) {
         return (int)XSizeHints.height$VH.get(seg);
     }
-    public static void height$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int height;
+     * }
+     */
+    public static void height$set(MemorySegment seg, int x) {
         XSizeHints.height$VH.set(seg, x);
     }
     public static int height$get(MemorySegment seg, long index) {
@@ -121,10 +203,22 @@ public class XSizeHints {
     public static VarHandle min_width$VH() {
         return XSizeHints.min_width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int min_width;
+     * }
+     */
     public static int min_width$get(MemorySegment seg) {
         return (int)XSizeHints.min_width$VH.get(seg);
     }
-    public static void min_width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int min_width;
+     * }
+     */
+    public static void min_width$set(MemorySegment seg, int x) {
         XSizeHints.min_width$VH.set(seg, x);
     }
     public static int min_width$get(MemorySegment seg, long index) {
@@ -137,10 +231,22 @@ public class XSizeHints {
     public static VarHandle min_height$VH() {
         return XSizeHints.min_height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int min_height;
+     * }
+     */
     public static int min_height$get(MemorySegment seg) {
         return (int)XSizeHints.min_height$VH.get(seg);
     }
-    public static void min_height$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int min_height;
+     * }
+     */
+    public static void min_height$set(MemorySegment seg, int x) {
         XSizeHints.min_height$VH.set(seg, x);
     }
     public static int min_height$get(MemorySegment seg, long index) {
@@ -153,10 +259,22 @@ public class XSizeHints {
     public static VarHandle max_width$VH() {
         return XSizeHints.max_width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int max_width;
+     * }
+     */
     public static int max_width$get(MemorySegment seg) {
         return (int)XSizeHints.max_width$VH.get(seg);
     }
-    public static void max_width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int max_width;
+     * }
+     */
+    public static void max_width$set(MemorySegment seg, int x) {
         XSizeHints.max_width$VH.set(seg, x);
     }
     public static int max_width$get(MemorySegment seg, long index) {
@@ -169,10 +287,22 @@ public class XSizeHints {
     public static VarHandle max_height$VH() {
         return XSizeHints.max_height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int max_height;
+     * }
+     */
     public static int max_height$get(MemorySegment seg) {
         return (int)XSizeHints.max_height$VH.get(seg);
     }
-    public static void max_height$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int max_height;
+     * }
+     */
+    public static void max_height$set(MemorySegment seg, int x) {
         XSizeHints.max_height$VH.set(seg, x);
     }
     public static int max_height$get(MemorySegment seg, long index) {
@@ -185,10 +315,22 @@ public class XSizeHints {
     public static VarHandle width_inc$VH() {
         return XSizeHints.width_inc$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int width_inc;
+     * }
+     */
     public static int width_inc$get(MemorySegment seg) {
         return (int)XSizeHints.width_inc$VH.get(seg);
     }
-    public static void width_inc$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int width_inc;
+     * }
+     */
+    public static void width_inc$set(MemorySegment seg, int x) {
         XSizeHints.width_inc$VH.set(seg, x);
     }
     public static int width_inc$get(MemorySegment seg, long index) {
@@ -201,10 +343,22 @@ public class XSizeHints {
     public static VarHandle height_inc$VH() {
         return XSizeHints.height_inc$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int height_inc;
+     * }
+     */
     public static int height_inc$get(MemorySegment seg) {
         return (int)XSizeHints.height_inc$VH.get(seg);
     }
-    public static void height_inc$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int height_inc;
+     * }
+     */
+    public static void height_inc$set(MemorySegment seg, int x) {
         XSizeHints.height_inc$VH.set(seg, x);
     }
     public static int height_inc$get(MemorySegment seg, long index) {
@@ -213,9 +367,19 @@ public class XSizeHints {
     public static void height_inc$set(MemorySegment seg, long index, int x) {
         XSizeHints.height_inc$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    public static class min_aspect {
+    /**
+     * {@snippet :
+     * struct {
+     *     int x;
+     *     int y;
+     * };
+     * }
+     */
+    public static final class min_aspect {
 
-        static final  GroupLayout min_aspect$struct$LAYOUT = MemoryLayout.structLayout(
+        // Suppresses default constructor, ensuring non-instantiability.
+        private min_aspect() {}
+        static final StructLayout min_aspect$struct$LAYOUT = MemoryLayout.structLayout(
             Constants$root.C_INT$LAYOUT.withName("x"),
             Constants$root.C_INT$LAYOUT.withName("y")
         );
@@ -226,10 +390,22 @@ public class XSizeHints {
         public static VarHandle x$VH() {
             return min_aspect.x$VH;
         }
+        /**
+         * Getter for field:
+         * {@snippet :
+         * int x;
+         * }
+         */
         public static int x$get(MemorySegment seg) {
             return (int)min_aspect.x$VH.get(seg);
         }
-        public static void x$set( MemorySegment seg, int x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * int x;
+         * }
+         */
+        public static void x$set(MemorySegment seg, int x) {
             min_aspect.x$VH.set(seg, x);
         }
         public static int x$get(MemorySegment seg, long index) {
@@ -242,10 +418,22 @@ public class XSizeHints {
         public static VarHandle y$VH() {
             return min_aspect.y$VH;
         }
+        /**
+         * Getter for field:
+         * {@snippet :
+         * int y;
+         * }
+         */
         public static int y$get(MemorySegment seg) {
             return (int)min_aspect.y$VH.get(seg);
         }
-        public static void y$set( MemorySegment seg, int x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * int y;
+         * }
+         */
+        public static void y$set(MemorySegment seg, int x) {
             min_aspect.y$VH.set(seg, x);
         }
         public static int y$get(MemorySegment seg, long index) {
@@ -256,18 +444,28 @@ public class XSizeHints {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-        public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+        public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+        public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
     }
 
     public static MemorySegment min_aspect$slice(MemorySegment seg) {
         return seg.asSlice(48, 8);
     }
-    public static class max_aspect {
+    /**
+     * {@snippet :
+     * struct {
+     *     int x;
+     *     int y;
+     * };
+     * }
+     */
+    public static final class max_aspect {
 
-        static final  GroupLayout max_aspect$struct$LAYOUT = MemoryLayout.structLayout(
+        // Suppresses default constructor, ensuring non-instantiability.
+        private max_aspect() {}
+        static final StructLayout max_aspect$struct$LAYOUT = MemoryLayout.structLayout(
             Constants$root.C_INT$LAYOUT.withName("x"),
             Constants$root.C_INT$LAYOUT.withName("y")
         );
@@ -278,10 +476,22 @@ public class XSizeHints {
         public static VarHandle x$VH() {
             return max_aspect.x$VH;
         }
+        /**
+         * Getter for field:
+         * {@snippet :
+         * int x;
+         * }
+         */
         public static int x$get(MemorySegment seg) {
             return (int)max_aspect.x$VH.get(seg);
         }
-        public static void x$set( MemorySegment seg, int x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * int x;
+         * }
+         */
+        public static void x$set(MemorySegment seg, int x) {
             max_aspect.x$VH.set(seg, x);
         }
         public static int x$get(MemorySegment seg, long index) {
@@ -294,10 +504,22 @@ public class XSizeHints {
         public static VarHandle y$VH() {
             return max_aspect.y$VH;
         }
+        /**
+         * Getter for field:
+         * {@snippet :
+         * int y;
+         * }
+         */
         public static int y$get(MemorySegment seg) {
             return (int)max_aspect.y$VH.get(seg);
         }
-        public static void y$set( MemorySegment seg, int x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * int y;
+         * }
+         */
+        public static void y$set(MemorySegment seg, int x) {
             max_aspect.y$VH.set(seg, x);
         }
         public static int y$get(MemorySegment seg, long index) {
@@ -308,10 +530,10 @@ public class XSizeHints {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-        public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+        public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+        public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
     }
 
     public static MemorySegment max_aspect$slice(MemorySegment seg) {
@@ -321,10 +543,22 @@ public class XSizeHints {
     public static VarHandle base_width$VH() {
         return XSizeHints.base_width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int base_width;
+     * }
+     */
     public static int base_width$get(MemorySegment seg) {
         return (int)XSizeHints.base_width$VH.get(seg);
     }
-    public static void base_width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int base_width;
+     * }
+     */
+    public static void base_width$set(MemorySegment seg, int x) {
         XSizeHints.base_width$VH.set(seg, x);
     }
     public static int base_width$get(MemorySegment seg, long index) {
@@ -337,10 +571,22 @@ public class XSizeHints {
     public static VarHandle base_height$VH() {
         return XSizeHints.base_height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int base_height;
+     * }
+     */
     public static int base_height$get(MemorySegment seg) {
         return (int)XSizeHints.base_height$VH.get(seg);
     }
-    public static void base_height$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int base_height;
+     * }
+     */
+    public static void base_height$set(MemorySegment seg, int x) {
         XSizeHints.base_height$VH.set(seg, x);
     }
     public static int base_height$get(MemorySegment seg, long index) {
@@ -353,10 +599,22 @@ public class XSizeHints {
     public static VarHandle win_gravity$VH() {
         return XSizeHints.win_gravity$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int win_gravity;
+     * }
+     */
     public static int win_gravity$get(MemorySegment seg) {
         return (int)XSizeHints.win_gravity$VH.get(seg);
     }
-    public static void win_gravity$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int win_gravity;
+     * }
+     */
+    public static void win_gravity$set(MemorySegment seg, int x) {
         XSizeHints.win_gravity$VH.set(seg, x);
     }
     public static int win_gravity$get(MemorySegment seg, long index) {
@@ -367,10 +625,10 @@ public class XSizeHints {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

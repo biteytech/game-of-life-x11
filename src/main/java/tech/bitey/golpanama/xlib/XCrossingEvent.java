@@ -7,9 +7,32 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Window window;
+ *     Window root;
+ *     Window subwindow;
+ *     Time time;
+ *     int x;
+ *     int y;
+ *     int x_root;
+ *     int y_root;
+ *     int mode;
+ *     int detail;
+ *     int same_screen;
+ *     int focus;
+ *     unsigned int state;
+ * };
+ * }
+ */
 public class XCrossingEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -38,10 +61,22 @@ public class XCrossingEvent {
     public static VarHandle type$VH() {
         return XCrossingEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XCrossingEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XCrossingEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -54,10 +89,22 @@ public class XCrossingEvent {
     public static VarHandle serial$VH() {
         return XCrossingEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XCrossingEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XCrossingEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -70,10 +117,22 @@ public class XCrossingEvent {
     public static VarHandle send_event$VH() {
         return XCrossingEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XCrossingEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XCrossingEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -86,26 +145,50 @@ public class XCrossingEvent {
     public static VarHandle display$VH() {
         return XCrossingEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XCrossingEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XCrossingEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XCrossingEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XCrossingEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XCrossingEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XCrossingEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
         return XCrossingEvent.window$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
     public static long window$get(MemorySegment seg) {
         return (long)XCrossingEvent.window$VH.get(seg);
     }
-    public static void window$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
+    public static void window$set(MemorySegment seg, long x) {
         XCrossingEvent.window$VH.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
@@ -118,10 +201,22 @@ public class XCrossingEvent {
     public static VarHandle root$VH() {
         return XCrossingEvent.root$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window root;
+     * }
+     */
     public static long root$get(MemorySegment seg) {
         return (long)XCrossingEvent.root$VH.get(seg);
     }
-    public static void root$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window root;
+     * }
+     */
+    public static void root$set(MemorySegment seg, long x) {
         XCrossingEvent.root$VH.set(seg, x);
     }
     public static long root$get(MemorySegment seg, long index) {
@@ -134,10 +229,22 @@ public class XCrossingEvent {
     public static VarHandle subwindow$VH() {
         return XCrossingEvent.subwindow$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window subwindow;
+     * }
+     */
     public static long subwindow$get(MemorySegment seg) {
         return (long)XCrossingEvent.subwindow$VH.get(seg);
     }
-    public static void subwindow$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window subwindow;
+     * }
+     */
+    public static void subwindow$set(MemorySegment seg, long x) {
         XCrossingEvent.subwindow$VH.set(seg, x);
     }
     public static long subwindow$get(MemorySegment seg, long index) {
@@ -150,10 +257,22 @@ public class XCrossingEvent {
     public static VarHandle time$VH() {
         return XCrossingEvent.time$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Time time;
+     * }
+     */
     public static long time$get(MemorySegment seg) {
         return (long)XCrossingEvent.time$VH.get(seg);
     }
-    public static void time$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Time time;
+     * }
+     */
+    public static void time$set(MemorySegment seg, long x) {
         XCrossingEvent.time$VH.set(seg, x);
     }
     public static long time$get(MemorySegment seg, long index) {
@@ -166,10 +285,22 @@ public class XCrossingEvent {
     public static VarHandle x$VH() {
         return XCrossingEvent.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
     public static int x$get(MemorySegment seg) {
         return (int)XCrossingEvent.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, int x) {
         XCrossingEvent.x$VH.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
@@ -182,10 +313,22 @@ public class XCrossingEvent {
     public static VarHandle y$VH() {
         return XCrossingEvent.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
     public static int y$get(MemorySegment seg) {
         return (int)XCrossingEvent.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, int x) {
         XCrossingEvent.y$VH.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
@@ -198,10 +341,22 @@ public class XCrossingEvent {
     public static VarHandle x_root$VH() {
         return XCrossingEvent.x_root$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x_root;
+     * }
+     */
     public static int x_root$get(MemorySegment seg) {
         return (int)XCrossingEvent.x_root$VH.get(seg);
     }
-    public static void x_root$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x_root;
+     * }
+     */
+    public static void x_root$set(MemorySegment seg, int x) {
         XCrossingEvent.x_root$VH.set(seg, x);
     }
     public static int x_root$get(MemorySegment seg, long index) {
@@ -214,10 +369,22 @@ public class XCrossingEvent {
     public static VarHandle y_root$VH() {
         return XCrossingEvent.y_root$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y_root;
+     * }
+     */
     public static int y_root$get(MemorySegment seg) {
         return (int)XCrossingEvent.y_root$VH.get(seg);
     }
-    public static void y_root$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y_root;
+     * }
+     */
+    public static void y_root$set(MemorySegment seg, int x) {
         XCrossingEvent.y_root$VH.set(seg, x);
     }
     public static int y_root$get(MemorySegment seg, long index) {
@@ -230,10 +397,22 @@ public class XCrossingEvent {
     public static VarHandle mode$VH() {
         return XCrossingEvent.mode$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int mode;
+     * }
+     */
     public static int mode$get(MemorySegment seg) {
         return (int)XCrossingEvent.mode$VH.get(seg);
     }
-    public static void mode$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int mode;
+     * }
+     */
+    public static void mode$set(MemorySegment seg, int x) {
         XCrossingEvent.mode$VH.set(seg, x);
     }
     public static int mode$get(MemorySegment seg, long index) {
@@ -246,10 +425,22 @@ public class XCrossingEvent {
     public static VarHandle detail$VH() {
         return XCrossingEvent.detail$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int detail;
+     * }
+     */
     public static int detail$get(MemorySegment seg) {
         return (int)XCrossingEvent.detail$VH.get(seg);
     }
-    public static void detail$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int detail;
+     * }
+     */
+    public static void detail$set(MemorySegment seg, int x) {
         XCrossingEvent.detail$VH.set(seg, x);
     }
     public static int detail$get(MemorySegment seg, long index) {
@@ -262,10 +453,22 @@ public class XCrossingEvent {
     public static VarHandle same_screen$VH() {
         return XCrossingEvent.same_screen$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int same_screen;
+     * }
+     */
     public static int same_screen$get(MemorySegment seg) {
         return (int)XCrossingEvent.same_screen$VH.get(seg);
     }
-    public static void same_screen$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int same_screen;
+     * }
+     */
+    public static void same_screen$set(MemorySegment seg, int x) {
         XCrossingEvent.same_screen$VH.set(seg, x);
     }
     public static int same_screen$get(MemorySegment seg, long index) {
@@ -278,10 +481,22 @@ public class XCrossingEvent {
     public static VarHandle focus$VH() {
         return XCrossingEvent.focus$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int focus;
+     * }
+     */
     public static int focus$get(MemorySegment seg) {
         return (int)XCrossingEvent.focus$VH.get(seg);
     }
-    public static void focus$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int focus;
+     * }
+     */
+    public static void focus$set(MemorySegment seg, int x) {
         XCrossingEvent.focus$VH.set(seg, x);
     }
     public static int focus$get(MemorySegment seg, long index) {
@@ -294,10 +509,22 @@ public class XCrossingEvent {
     public static VarHandle state$VH() {
         return XCrossingEvent.state$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned int state;
+     * }
+     */
     public static int state$get(MemorySegment seg) {
         return (int)XCrossingEvent.state$VH.get(seg);
     }
-    public static void state$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned int state;
+     * }
+     */
+    public static void state$set(MemorySegment seg, int x) {
         XCrossingEvent.state$VH.set(seg, x);
     }
     public static int state$get(MemorySegment seg, long index) {
@@ -308,10 +535,10 @@ public class XCrossingEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

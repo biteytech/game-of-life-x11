@@ -7,9 +7,17 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     char* res_name;
+ *     char* res_class;
+ * };
+ * }
+ */
 public class XClassHint {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_POINTER$LAYOUT.withName("res_name"),
         Constants$root.C_POINTER$LAYOUT.withName("res_class")
     );
@@ -20,40 +28,64 @@ public class XClassHint {
     public static VarHandle res_name$VH() {
         return XClassHint.res_name$VH;
     }
-    public static MemoryAddress res_name$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XClassHint.res_name$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * char* res_name;
+     * }
+     */
+    public static MemorySegment res_name$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XClassHint.res_name$VH.get(seg);
     }
-    public static void res_name$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * char* res_name;
+     * }
+     */
+    public static void res_name$set(MemorySegment seg, MemorySegment x) {
         XClassHint.res_name$VH.set(seg, x);
     }
-    public static MemoryAddress res_name$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XClassHint.res_name$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment res_name$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XClassHint.res_name$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void res_name$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void res_name$set(MemorySegment seg, long index, MemorySegment x) {
         XClassHint.res_name$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle res_class$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("res_class"));
     public static VarHandle res_class$VH() {
         return XClassHint.res_class$VH;
     }
-    public static MemoryAddress res_class$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XClassHint.res_class$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * char* res_class;
+     * }
+     */
+    public static MemorySegment res_class$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XClassHint.res_class$VH.get(seg);
     }
-    public static void res_class$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * char* res_class;
+     * }
+     */
+    public static void res_class$set(MemorySegment seg, MemorySegment x) {
         XClassHint.res_class$VH.set(seg, x);
     }
-    public static MemoryAddress res_class$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XClassHint.res_class$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment res_class$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XClassHint.res_class$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void res_class$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void res_class$set(MemorySegment seg, long index, MemorySegment x) {
         XClassHint.res_class$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$30 {
+final class constants$30 {
 
-    static final FunctionDescriptor XDisplayPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayPlanes$MH = RuntimeHelper.downcallHandle(
-        "XDisplayPlanes",
-        constants$30.XDisplayPlanes$FUNC
-    );
-    static final FunctionDescriptor XDisplayWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayWidth$MH = RuntimeHelper.downcallHandle(
-        "XDisplayWidth",
-        constants$30.XDisplayWidth$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$30() {}
     static final FunctionDescriptor XDisplayWidthMM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
@@ -71,6 +57,32 @@ class constants$30 {
     static final MethodHandle XDrawImageString$MH = RuntimeHelper.downcallHandle(
         "XDrawImageString",
         constants$30.XDrawImageString$FUNC
+    );
+    static final FunctionDescriptor XDrawImageString16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XDrawImageString16$MH = RuntimeHelper.downcallHandle(
+        "XDrawImageString16",
+        constants$30.XDrawImageString16$FUNC
+    );
+    static final FunctionDescriptor XDrawLine$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XDrawLine$MH = RuntimeHelper.downcallHandle(
+        "XDrawLine",
+        constants$30.XDrawLine$FUNC
     );
 }
 

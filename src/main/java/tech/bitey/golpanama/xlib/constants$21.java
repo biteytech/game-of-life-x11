@@ -7,25 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$21 {
+final class constants$21 {
 
-    static final FunctionDescriptor XAddToSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XAddToSaveSet$MH = RuntimeHelper.downcallHandle(
-        "XAddToSaveSet",
-        constants$21.XAddToSaveSet$FUNC
-    );
-    static final FunctionDescriptor XAllocColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAllocColor$MH = RuntimeHelper.downcallHandle(
-        "XAllocColor",
-        constants$21.XAllocColor$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$21() {}
     static final FunctionDescriptor XAllocColorCells$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -75,6 +60,20 @@ class constants$21 {
     static final MethodHandle XAllowEvents$MH = RuntimeHelper.downcallHandle(
         "XAllowEvents",
         constants$21.XAllowEvents$FUNC
+    );
+    static final FunctionDescriptor XAutoRepeatOff$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XAutoRepeatOff$MH = RuntimeHelper.downcallHandle(
+        "XAutoRepeatOff",
+        constants$21.XAutoRepeatOff$FUNC
+    );
+    static final FunctionDescriptor XAutoRepeatOn$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XAutoRepeatOn$MH = RuntimeHelper.downcallHandle(
+        "XAutoRepeatOn",
+        constants$21.XAutoRepeatOn$FUNC
     );
 }
 

@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$51 {
+final class constants$51 {
 
-    static final FunctionDescriptor XSetBackground$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetBackground$MH = RuntimeHelper.downcallHandle(
-        "XSetBackground",
-        constants$51.XSetBackground$FUNC
-    );
-    static final FunctionDescriptor XSetClipMask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetClipMask$MH = RuntimeHelper.downcallHandle(
-        "XSetClipMask",
-        constants$51.XSetClipMask$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$51() {}
     static final FunctionDescriptor XSetClipOrigin$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -67,6 +51,26 @@ class constants$51 {
     static final MethodHandle XSetCommand$MH = RuntimeHelper.downcallHandle(
         "XSetCommand",
         constants$51.XSetCommand$FUNC
+    );
+    static final FunctionDescriptor XSetDashes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetDashes$MH = RuntimeHelper.downcallHandle(
+        "XSetDashes",
+        constants$51.XSetDashes$FUNC
+    );
+    static final FunctionDescriptor XSetFillRule$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XSetFillRule$MH = RuntimeHelper.downcallHandle(
+        "XSetFillRule",
+        constants$51.XSetFillRule$FUNC
     );
 }
 

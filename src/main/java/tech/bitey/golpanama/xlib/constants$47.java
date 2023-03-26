@@ -7,37 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$47 {
+final class constants$47 {
 
-    static final FunctionDescriptor XQueryPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryPointer$MH = RuntimeHelper.downcallHandle(
-        "XQueryPointer",
-        constants$47.XQueryPointer$FUNC
-    );
-    static final FunctionDescriptor XQueryTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryTextExtents$MH = RuntimeHelper.downcallHandle(
-        "XQueryTextExtents",
-        constants$47.XQueryTextExtents$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$47() {}
     static final FunctionDescriptor XQueryTextExtents16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -85,6 +58,30 @@ class constants$47 {
     static final MethodHandle XReadBitmapFile$MH = RuntimeHelper.downcallHandle(
         "XReadBitmapFile",
         constants$47.XReadBitmapFile$FUNC
+    );
+    static final FunctionDescriptor XReadBitmapFileData$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XReadBitmapFileData$MH = RuntimeHelper.downcallHandle(
+        "XReadBitmapFileData",
+        constants$47.XReadBitmapFileData$FUNC
+    );
+    static final FunctionDescriptor XRebindKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XRebindKeysym$MH = RuntimeHelper.downcallHandle(
+        "XRebindKeysym",
+        constants$47.XRebindKeysym$FUNC
     );
 }
 

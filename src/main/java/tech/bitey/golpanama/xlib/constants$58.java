@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$58 {
+final class constants$58 {
 
-    static final FunctionDescriptor XTextWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XTextWidth$MH = RuntimeHelper.downcallHandle(
-        "XTextWidth",
-        constants$58.XTextWidth$FUNC
-    );
-    static final FunctionDescriptor XTextWidth16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XTextWidth16$MH = RuntimeHelper.downcallHandle(
-        "XTextWidth16",
-        constants$58.XTextWidth16$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$58() {}
     static final FunctionDescriptor XTranslateCoordinates$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -68,6 +52,22 @@ class constants$58 {
     static final MethodHandle XUngrabKey$MH = RuntimeHelper.downcallHandle(
         "XUngrabKey",
         constants$58.XUngrabKey$FUNC
+    );
+    static final FunctionDescriptor XUngrabKeyboard$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XUngrabKeyboard$MH = RuntimeHelper.downcallHandle(
+        "XUngrabKeyboard",
+        constants$58.XUngrabKeyboard$FUNC
+    );
+    static final FunctionDescriptor XUngrabPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XUngrabPointer$MH = RuntimeHelper.downcallHandle(
+        "XUngrabPointer",
+        constants$58.XUngrabPointer$FUNC
     );
 }
 

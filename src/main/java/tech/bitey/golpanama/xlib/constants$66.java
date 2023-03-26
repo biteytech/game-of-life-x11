@@ -7,38 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$66 {
+final class constants$66 {
 
-    static final FunctionDescriptor XwcTextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcTextPerCharExtents$MH = RuntimeHelper.downcallHandle(
-        "XwcTextPerCharExtents",
-        constants$66.XwcTextPerCharExtents$FUNC
-    );
-    static final FunctionDescriptor Xutf8TextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8TextPerCharExtents$MH = RuntimeHelper.downcallHandle(
-        "Xutf8TextPerCharExtents",
-        constants$66.Xutf8TextPerCharExtents$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$66() {}
     static final FunctionDescriptor XmbDrawText$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -91,6 +63,34 @@ class constants$66 {
     static final MethodHandle XmbDrawString$MH = RuntimeHelper.downcallHandle(
         "XmbDrawString",
         constants$66.XmbDrawString$FUNC
+    );
+    static final FunctionDescriptor XwcDrawString$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XwcDrawString$MH = RuntimeHelper.downcallHandle(
+        "XwcDrawString",
+        constants$66.XwcDrawString$FUNC
+    );
+    static final FunctionDescriptor Xutf8DrawString$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle Xutf8DrawString$MH = RuntimeHelper.downcallHandle(
+        "Xutf8DrawString",
+        constants$66.Xutf8DrawString$FUNC
     );
 }
 

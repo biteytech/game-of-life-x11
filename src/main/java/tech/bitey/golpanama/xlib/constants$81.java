@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$81 {
+final class constants$81 {
 
-    static final FunctionDescriptor XSetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMHints$MH = RuntimeHelper.downcallHandle(
-        "XSetWMHints",
-        constants$81.XSetWMHints$FUNC
-    );
-    static final FunctionDescriptor XSetWMIconName$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMIconName$MH = RuntimeHelper.downcallHandle(
-        "XSetWMIconName",
-        constants$81.XSetWMIconName$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$81() {}
     static final FunctionDescriptor XSetWMName$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -74,6 +58,31 @@ class constants$81 {
     static final MethodHandle XmbSetWMProperties$MH = RuntimeHelper.downcallHandle(
         "XmbSetWMProperties",
         constants$81.XmbSetWMProperties$FUNC
+    );
+    static final FunctionDescriptor Xutf8SetWMProperties$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle Xutf8SetWMProperties$MH = RuntimeHelper.downcallHandle(
+        "Xutf8SetWMProperties",
+        constants$81.Xutf8SetWMProperties$FUNC
+    );
+    static final FunctionDescriptor XSetWMSizeHints$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetWMSizeHints$MH = RuntimeHelper.downcallHandle(
+        "XSetWMSizeHints",
+        constants$81.XSetWMSizeHints$FUNC
     );
 }
 

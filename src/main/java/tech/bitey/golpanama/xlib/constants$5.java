@@ -7,58 +7,51 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$5 {
+final class constants$5 {
 
-    static final FunctionDescriptor XFetchBuffer$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$5() {}
+    static final FunctionDescriptor XSynchronize$return$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final FunctionDescriptor XSynchronize$return_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSynchronize$return_UP$MH = RuntimeHelper.upcallHandle(XSynchronize$return.class, "apply", constants$5.XSynchronize$return_UP$FUNC);
+    static final FunctionDescriptor XSynchronize$return_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSynchronize$return_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$5.XSynchronize$return_DOWN$FUNC
+    );
+    static final FunctionDescriptor XSynchronize$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle XFetchBuffer$MH = RuntimeHelper.downcallHandle(
-        "XFetchBuffer",
-        constants$5.XFetchBuffer$FUNC
+    static final MethodHandle XSynchronize$MH = RuntimeHelper.downcallHandle(
+        "XSynchronize",
+        constants$5.XSynchronize$FUNC
     );
-    static final FunctionDescriptor XGetAtomName$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetAtomName$MH = RuntimeHelper.downcallHandle(
-        "XGetAtomName",
-        constants$5.XGetAtomName$FUNC
-    );
-    static final FunctionDescriptor XGetAtomNames$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor XSetAfterFunction$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XGetAtomNames$MH = RuntimeHelper.downcallHandle(
-        "XGetAtomNames",
-        constants$5.XGetAtomNames$FUNC
-    );
-    static final FunctionDescriptor XGetDefault$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XSetAfterFunction$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XGetDefault$MH = RuntimeHelper.downcallHandle(
-        "XGetDefault",
-        constants$5.XGetDefault$FUNC
-    );
-    static final FunctionDescriptor XDisplayName$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final MethodHandle XSetAfterFunction$x0_UP$MH = RuntimeHelper.upcallHandle(XSetAfterFunction$x0.class, "apply", constants$5.XSetAfterFunction$x0_UP$FUNC);
+    static final FunctionDescriptor XSetAfterFunction$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XDisplayName$MH = RuntimeHelper.downcallHandle(
-        "XDisplayName",
-        constants$5.XDisplayName$FUNC
+    static final MethodHandle XSetAfterFunction$x0_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$5.XSetAfterFunction$x0_DOWN$FUNC
     );
-    static final FunctionDescriptor XKeysymToString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
+    static final FunctionDescriptor XSetAfterFunction$return$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XKeysymToString$MH = RuntimeHelper.downcallHandle(
-        "XKeysymToString",
-        constants$5.XKeysymToString$FUNC
+    static final FunctionDescriptor XSetAfterFunction$return_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
+    static final MethodHandle XSetAfterFunction$return_UP$MH = RuntimeHelper.upcallHandle(XSetAfterFunction$return.class, "apply", constants$5.XSetAfterFunction$return_UP$FUNC);
 }
 
 

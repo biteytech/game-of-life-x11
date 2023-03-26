@@ -7,9 +7,25 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Window event;
+ *     Window window;
+ *     Window parent;
+ *     int x;
+ *     int y;
+ *     int override_redirect;
+ * };
+ * }
+ */
 public class XReparentEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -31,10 +47,22 @@ public class XReparentEvent {
     public static VarHandle type$VH() {
         return XReparentEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XReparentEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XReparentEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -47,10 +75,22 @@ public class XReparentEvent {
     public static VarHandle serial$VH() {
         return XReparentEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XReparentEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XReparentEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -63,10 +103,22 @@ public class XReparentEvent {
     public static VarHandle send_event$VH() {
         return XReparentEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XReparentEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XReparentEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -79,26 +131,50 @@ public class XReparentEvent {
     public static VarHandle display$VH() {
         return XReparentEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XReparentEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XReparentEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XReparentEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XReparentEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XReparentEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XReparentEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("event"));
     public static VarHandle event$VH() {
         return XReparentEvent.event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window event;
+     * }
+     */
     public static long event$get(MemorySegment seg) {
         return (long)XReparentEvent.event$VH.get(seg);
     }
-    public static void event$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window event;
+     * }
+     */
+    public static void event$set(MemorySegment seg, long x) {
         XReparentEvent.event$VH.set(seg, x);
     }
     public static long event$get(MemorySegment seg, long index) {
@@ -111,10 +187,22 @@ public class XReparentEvent {
     public static VarHandle window$VH() {
         return XReparentEvent.window$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
     public static long window$get(MemorySegment seg) {
         return (long)XReparentEvent.window$VH.get(seg);
     }
-    public static void window$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
+    public static void window$set(MemorySegment seg, long x) {
         XReparentEvent.window$VH.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
@@ -127,10 +215,22 @@ public class XReparentEvent {
     public static VarHandle parent$VH() {
         return XReparentEvent.parent$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window parent;
+     * }
+     */
     public static long parent$get(MemorySegment seg) {
         return (long)XReparentEvent.parent$VH.get(seg);
     }
-    public static void parent$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window parent;
+     * }
+     */
+    public static void parent$set(MemorySegment seg, long x) {
         XReparentEvent.parent$VH.set(seg, x);
     }
     public static long parent$get(MemorySegment seg, long index) {
@@ -143,10 +243,22 @@ public class XReparentEvent {
     public static VarHandle x$VH() {
         return XReparentEvent.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
     public static int x$get(MemorySegment seg) {
         return (int)XReparentEvent.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, int x) {
         XReparentEvent.x$VH.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
@@ -159,10 +271,22 @@ public class XReparentEvent {
     public static VarHandle y$VH() {
         return XReparentEvent.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
     public static int y$get(MemorySegment seg) {
         return (int)XReparentEvent.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, int x) {
         XReparentEvent.y$VH.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
@@ -175,10 +299,22 @@ public class XReparentEvent {
     public static VarHandle override_redirect$VH() {
         return XReparentEvent.override_redirect$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int override_redirect;
+     * }
+     */
     public static int override_redirect$get(MemorySegment seg) {
         return (int)XReparentEvent.override_redirect$VH.get(seg);
     }
-    public static void override_redirect$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int override_redirect;
+     * }
+     */
+    public static void override_redirect$set(MemorySegment seg, int x) {
         XReparentEvent.override_redirect$VH.set(seg, x);
     }
     public static int override_redirect$get(MemorySegment seg, long index) {
@@ -189,10 +325,10 @@ public class XReparentEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

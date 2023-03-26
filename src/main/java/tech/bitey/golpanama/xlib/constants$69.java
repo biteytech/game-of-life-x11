@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$69 {
+final class constants$69 {
 
-    static final FunctionDescriptor XDestroyIC$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDestroyIC$MH = RuntimeHelper.downcallHandle(
-        "XDestroyIC",
-        constants$69.XDestroyIC$FUNC
-    );
-    static final FunctionDescriptor XSetICFocus$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetICFocus$MH = RuntimeHelper.downcallHandle(
-        "XSetICFocus",
-        constants$69.XSetICFocus$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$69() {}
     static final FunctionDescriptor XUnsetICFocus$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT
     );
@@ -50,6 +38,20 @@ class constants$69 {
     static final MethodHandle Xutf8ResetIC$MH = RuntimeHelper.downcallHandle(
         "Xutf8ResetIC",
         constants$69.Xutf8ResetIC$FUNC
+    );
+    static final FunctionDescriptor XSetICValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetICValues$MH = RuntimeHelper.downcallHandleVariadic(
+        "XSetICValues",
+        constants$69.XSetICValues$FUNC
+    );
+    static final FunctionDescriptor XGetICValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetICValues$MH = RuntimeHelper.downcallHandleVariadic(
+        "XGetICValues",
+        constants$69.XGetICValues$FUNC
     );
 }
 

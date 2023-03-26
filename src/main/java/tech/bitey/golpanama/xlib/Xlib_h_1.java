@@ -7,3005 +7,8005 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
- class Xlib_h_1 {
+public class Xlib_h_1 {
 
+    /**
+     * {@snippet :
+     * #define XK_kana_yu 1197
+     * }
+     */
     public static int XK_kana_yu() {
         return (int)1197L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_yo 1198
+     * }
+     */
     public static int XK_kana_yo() {
         return (int)1198L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_tsu 1199
+     * }
+     */
     public static int XK_kana_tsu() {
         return (int)1199L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_tu 1199
+     * }
+     */
     public static int XK_kana_tu() {
         return (int)1199L;
     }
+    /**
+     * {@snippet :
+     * #define XK_prolongedsound 1200
+     * }
+     */
     public static int XK_prolongedsound() {
         return (int)1200L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_A 1201
+     * }
+     */
     public static int XK_kana_A() {
         return (int)1201L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_I 1202
+     * }
+     */
     public static int XK_kana_I() {
         return (int)1202L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_U 1203
+     * }
+     */
     public static int XK_kana_U() {
         return (int)1203L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_E 1204
+     * }
+     */
     public static int XK_kana_E() {
         return (int)1204L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_O 1205
+     * }
+     */
     public static int XK_kana_O() {
         return (int)1205L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_KA 1206
+     * }
+     */
     public static int XK_kana_KA() {
         return (int)1206L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_KI 1207
+     * }
+     */
     public static int XK_kana_KI() {
         return (int)1207L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_KU 1208
+     * }
+     */
     public static int XK_kana_KU() {
         return (int)1208L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_KE 1209
+     * }
+     */
     public static int XK_kana_KE() {
         return (int)1209L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_KO 1210
+     * }
+     */
     public static int XK_kana_KO() {
         return (int)1210L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_SA 1211
+     * }
+     */
     public static int XK_kana_SA() {
         return (int)1211L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_SHI 1212
+     * }
+     */
     public static int XK_kana_SHI() {
         return (int)1212L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_SU 1213
+     * }
+     */
     public static int XK_kana_SU() {
         return (int)1213L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_SE 1214
+     * }
+     */
     public static int XK_kana_SE() {
         return (int)1214L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_SO 1215
+     * }
+     */
     public static int XK_kana_SO() {
         return (int)1215L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_TA 1216
+     * }
+     */
     public static int XK_kana_TA() {
         return (int)1216L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_CHI 1217
+     * }
+     */
     public static int XK_kana_CHI() {
         return (int)1217L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_TI 1217
+     * }
+     */
     public static int XK_kana_TI() {
         return (int)1217L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_TSU 1218
+     * }
+     */
     public static int XK_kana_TSU() {
         return (int)1218L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_TU 1218
+     * }
+     */
     public static int XK_kana_TU() {
         return (int)1218L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_TE 1219
+     * }
+     */
     public static int XK_kana_TE() {
         return (int)1219L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_TO 1220
+     * }
+     */
     public static int XK_kana_TO() {
         return (int)1220L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_NA 1221
+     * }
+     */
     public static int XK_kana_NA() {
         return (int)1221L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_NI 1222
+     * }
+     */
     public static int XK_kana_NI() {
         return (int)1222L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_NU 1223
+     * }
+     */
     public static int XK_kana_NU() {
         return (int)1223L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_NE 1224
+     * }
+     */
     public static int XK_kana_NE() {
         return (int)1224L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_NO 1225
+     * }
+     */
     public static int XK_kana_NO() {
         return (int)1225L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_HA 1226
+     * }
+     */
     public static int XK_kana_HA() {
         return (int)1226L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_HI 1227
+     * }
+     */
     public static int XK_kana_HI() {
         return (int)1227L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_FU 1228
+     * }
+     */
     public static int XK_kana_FU() {
         return (int)1228L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_HU 1228
+     * }
+     */
     public static int XK_kana_HU() {
         return (int)1228L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_HE 1229
+     * }
+     */
     public static int XK_kana_HE() {
         return (int)1229L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_HO 1230
+     * }
+     */
     public static int XK_kana_HO() {
         return (int)1230L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_MA 1231
+     * }
+     */
     public static int XK_kana_MA() {
         return (int)1231L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_MI 1232
+     * }
+     */
     public static int XK_kana_MI() {
         return (int)1232L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_MU 1233
+     * }
+     */
     public static int XK_kana_MU() {
         return (int)1233L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_ME 1234
+     * }
+     */
     public static int XK_kana_ME() {
         return (int)1234L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_MO 1235
+     * }
+     */
     public static int XK_kana_MO() {
         return (int)1235L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_YA 1236
+     * }
+     */
     public static int XK_kana_YA() {
         return (int)1236L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_YU 1237
+     * }
+     */
     public static int XK_kana_YU() {
         return (int)1237L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_YO 1238
+     * }
+     */
     public static int XK_kana_YO() {
         return (int)1238L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_RA 1239
+     * }
+     */
     public static int XK_kana_RA() {
         return (int)1239L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_RI 1240
+     * }
+     */
     public static int XK_kana_RI() {
         return (int)1240L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_RU 1241
+     * }
+     */
     public static int XK_kana_RU() {
         return (int)1241L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_RE 1242
+     * }
+     */
     public static int XK_kana_RE() {
         return (int)1242L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_RO 1243
+     * }
+     */
     public static int XK_kana_RO() {
         return (int)1243L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_WA 1244
+     * }
+     */
     public static int XK_kana_WA() {
         return (int)1244L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_N 1245
+     * }
+     */
     public static int XK_kana_N() {
         return (int)1245L;
     }
+    /**
+     * {@snippet :
+     * #define XK_voicedsound 1246
+     * }
+     */
     public static int XK_voicedsound() {
         return (int)1246L;
     }
+    /**
+     * {@snippet :
+     * #define XK_semivoicedsound 1247
+     * }
+     */
     public static int XK_semivoicedsound() {
         return (int)1247L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_switch 65406
+     * }
+     */
     public static int XK_kana_switch() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_0 16778992
+     * }
+     */
     public static int XK_Farsi_0() {
         return (int)16778992L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_1 16778993
+     * }
+     */
     public static int XK_Farsi_1() {
         return (int)16778993L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_2 16778994
+     * }
+     */
     public static int XK_Farsi_2() {
         return (int)16778994L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_3 16778995
+     * }
+     */
     public static int XK_Farsi_3() {
         return (int)16778995L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_4 16778996
+     * }
+     */
     public static int XK_Farsi_4() {
         return (int)16778996L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_5 16778997
+     * }
+     */
     public static int XK_Farsi_5() {
         return (int)16778997L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_6 16778998
+     * }
+     */
     public static int XK_Farsi_6() {
         return (int)16778998L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_7 16778999
+     * }
+     */
     public static int XK_Farsi_7() {
         return (int)16778999L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_8 16779000
+     * }
+     */
     public static int XK_Farsi_8() {
         return (int)16779000L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_9 16779001
+     * }
+     */
     public static int XK_Farsi_9() {
         return (int)16779001L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_percent 16778858
+     * }
+     */
     public static int XK_Arabic_percent() {
         return (int)16778858L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_superscript_alef 16778864
+     * }
+     */
     public static int XK_Arabic_superscript_alef() {
         return (int)16778864L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_tteh 16778873
+     * }
+     */
     public static int XK_Arabic_tteh() {
         return (int)16778873L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_peh 16778878
+     * }
+     */
     public static int XK_Arabic_peh() {
         return (int)16778878L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_tcheh 16778886
+     * }
+     */
     public static int XK_Arabic_tcheh() {
         return (int)16778886L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_ddal 16778888
+     * }
+     */
     public static int XK_Arabic_ddal() {
         return (int)16778888L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_rreh 16778897
+     * }
+     */
     public static int XK_Arabic_rreh() {
         return (int)16778897L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_comma 1452
+     * }
+     */
     public static int XK_Arabic_comma() {
         return (int)1452L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_fullstop 16778964
+     * }
+     */
     public static int XK_Arabic_fullstop() {
         return (int)16778964L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_0 16778848
+     * }
+     */
     public static int XK_Arabic_0() {
         return (int)16778848L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_1 16778849
+     * }
+     */
     public static int XK_Arabic_1() {
         return (int)16778849L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_2 16778850
+     * }
+     */
     public static int XK_Arabic_2() {
         return (int)16778850L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_3 16778851
+     * }
+     */
     public static int XK_Arabic_3() {
         return (int)16778851L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_4 16778852
+     * }
+     */
     public static int XK_Arabic_4() {
         return (int)16778852L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_5 16778853
+     * }
+     */
     public static int XK_Arabic_5() {
         return (int)16778853L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_6 16778854
+     * }
+     */
     public static int XK_Arabic_6() {
         return (int)16778854L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_7 16778855
+     * }
+     */
     public static int XK_Arabic_7() {
         return (int)16778855L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_8 16778856
+     * }
+     */
     public static int XK_Arabic_8() {
         return (int)16778856L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_9 16778857
+     * }
+     */
     public static int XK_Arabic_9() {
         return (int)16778857L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_semicolon 1467
+     * }
+     */
     public static int XK_Arabic_semicolon() {
         return (int)1467L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_question_mark 1471
+     * }
+     */
     public static int XK_Arabic_question_mark() {
         return (int)1471L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hamza 1473
+     * }
+     */
     public static int XK_Arabic_hamza() {
         return (int)1473L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_maddaonalef 1474
+     * }
+     */
     public static int XK_Arabic_maddaonalef() {
         return (int)1474L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hamzaonalef 1475
+     * }
+     */
     public static int XK_Arabic_hamzaonalef() {
         return (int)1475L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hamzaonwaw 1476
+     * }
+     */
     public static int XK_Arabic_hamzaonwaw() {
         return (int)1476L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hamzaunderalef 1477
+     * }
+     */
     public static int XK_Arabic_hamzaunderalef() {
         return (int)1477L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hamzaonyeh 1478
+     * }
+     */
     public static int XK_Arabic_hamzaonyeh() {
         return (int)1478L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_alef 1479
+     * }
+     */
     public static int XK_Arabic_alef() {
         return (int)1479L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_beh 1480
+     * }
+     */
     public static int XK_Arabic_beh() {
         return (int)1480L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_tehmarbuta 1481
+     * }
+     */
     public static int XK_Arabic_tehmarbuta() {
         return (int)1481L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_teh 1482
+     * }
+     */
     public static int XK_Arabic_teh() {
         return (int)1482L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_theh 1483
+     * }
+     */
     public static int XK_Arabic_theh() {
         return (int)1483L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_jeem 1484
+     * }
+     */
     public static int XK_Arabic_jeem() {
         return (int)1484L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hah 1485
+     * }
+     */
     public static int XK_Arabic_hah() {
         return (int)1485L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_khah 1486
+     * }
+     */
     public static int XK_Arabic_khah() {
         return (int)1486L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_dal 1487
+     * }
+     */
     public static int XK_Arabic_dal() {
         return (int)1487L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_thal 1488
+     * }
+     */
     public static int XK_Arabic_thal() {
         return (int)1488L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_ra 1489
+     * }
+     */
     public static int XK_Arabic_ra() {
         return (int)1489L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_zain 1490
+     * }
+     */
     public static int XK_Arabic_zain() {
         return (int)1490L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_seen 1491
+     * }
+     */
     public static int XK_Arabic_seen() {
         return (int)1491L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_sheen 1492
+     * }
+     */
     public static int XK_Arabic_sheen() {
         return (int)1492L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_sad 1493
+     * }
+     */
     public static int XK_Arabic_sad() {
         return (int)1493L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_dad 1494
+     * }
+     */
     public static int XK_Arabic_dad() {
         return (int)1494L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_tah 1495
+     * }
+     */
     public static int XK_Arabic_tah() {
         return (int)1495L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_zah 1496
+     * }
+     */
     public static int XK_Arabic_zah() {
         return (int)1496L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_ain 1497
+     * }
+     */
     public static int XK_Arabic_ain() {
         return (int)1497L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_ghain 1498
+     * }
+     */
     public static int XK_Arabic_ghain() {
         return (int)1498L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_tatweel 1504
+     * }
+     */
     public static int XK_Arabic_tatweel() {
         return (int)1504L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_feh 1505
+     * }
+     */
     public static int XK_Arabic_feh() {
         return (int)1505L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_qaf 1506
+     * }
+     */
     public static int XK_Arabic_qaf() {
         return (int)1506L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_kaf 1507
+     * }
+     */
     public static int XK_Arabic_kaf() {
         return (int)1507L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_lam 1508
+     * }
+     */
     public static int XK_Arabic_lam() {
         return (int)1508L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_meem 1509
+     * }
+     */
     public static int XK_Arabic_meem() {
         return (int)1509L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_noon 1510
+     * }
+     */
     public static int XK_Arabic_noon() {
         return (int)1510L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_ha 1511
+     * }
+     */
     public static int XK_Arabic_ha() {
         return (int)1511L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_heh 1511
+     * }
+     */
     public static int XK_Arabic_heh() {
         return (int)1511L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_waw 1512
+     * }
+     */
     public static int XK_Arabic_waw() {
         return (int)1512L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_alefmaksura 1513
+     * }
+     */
     public static int XK_Arabic_alefmaksura() {
         return (int)1513L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_yeh 1514
+     * }
+     */
     public static int XK_Arabic_yeh() {
         return (int)1514L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_fathatan 1515
+     * }
+     */
     public static int XK_Arabic_fathatan() {
         return (int)1515L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_dammatan 1516
+     * }
+     */
     public static int XK_Arabic_dammatan() {
         return (int)1516L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_kasratan 1517
+     * }
+     */
     public static int XK_Arabic_kasratan() {
         return (int)1517L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_fatha 1518
+     * }
+     */
     public static int XK_Arabic_fatha() {
         return (int)1518L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_damma 1519
+     * }
+     */
     public static int XK_Arabic_damma() {
         return (int)1519L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_kasra 1520
+     * }
+     */
     public static int XK_Arabic_kasra() {
         return (int)1520L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_shadda 1521
+     * }
+     */
     public static int XK_Arabic_shadda() {
         return (int)1521L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_sukun 1522
+     * }
+     */
     public static int XK_Arabic_sukun() {
         return (int)1522L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_madda_above 16778835
+     * }
+     */
     public static int XK_Arabic_madda_above() {
         return (int)16778835L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hamza_above 16778836
+     * }
+     */
     public static int XK_Arabic_hamza_above() {
         return (int)16778836L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_hamza_below 16778837
+     * }
+     */
     public static int XK_Arabic_hamza_below() {
         return (int)16778837L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_jeh 16778904
+     * }
+     */
     public static int XK_Arabic_jeh() {
         return (int)16778904L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_veh 16778916
+     * }
+     */
     public static int XK_Arabic_veh() {
         return (int)16778916L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_keheh 16778921
+     * }
+     */
     public static int XK_Arabic_keheh() {
         return (int)16778921L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_gaf 16778927
+     * }
+     */
     public static int XK_Arabic_gaf() {
         return (int)16778927L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_noon_ghunna 16778938
+     * }
+     */
     public static int XK_Arabic_noon_ghunna() {
         return (int)16778938L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_heh_doachashmee 16778942
+     * }
+     */
     public static int XK_Arabic_heh_doachashmee() {
         return (int)16778942L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Farsi_yeh 16778956
+     * }
+     */
     public static int XK_Farsi_yeh() {
         return (int)16778956L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_farsi_yeh 16778956
+     * }
+     */
     public static int XK_Arabic_farsi_yeh() {
         return (int)16778956L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_yeh_baree 16778962
+     * }
+     */
     public static int XK_Arabic_yeh_baree() {
         return (int)16778962L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_heh_goal 16778945
+     * }
+     */
     public static int XK_Arabic_heh_goal() {
         return (int)16778945L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Arabic_switch 65406
+     * }
+     */
     public static int XK_Arabic_switch() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_GHE_bar 16778386
+     * }
+     */
     public static int XK_Cyrillic_GHE_bar() {
         return (int)16778386L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ghe_bar 16778387
+     * }
+     */
     public static int XK_Cyrillic_ghe_bar() {
         return (int)16778387L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ZHE_descender 16778390
+     * }
+     */
     public static int XK_Cyrillic_ZHE_descender() {
         return (int)16778390L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_zhe_descender 16778391
+     * }
+     */
     public static int XK_Cyrillic_zhe_descender() {
         return (int)16778391L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_KA_descender 16778394
+     * }
+     */
     public static int XK_Cyrillic_KA_descender() {
         return (int)16778394L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ka_descender 16778395
+     * }
+     */
     public static int XK_Cyrillic_ka_descender() {
         return (int)16778395L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_KA_vertstroke 16778396
+     * }
+     */
     public static int XK_Cyrillic_KA_vertstroke() {
         return (int)16778396L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ka_vertstroke 16778397
+     * }
+     */
     public static int XK_Cyrillic_ka_vertstroke() {
         return (int)16778397L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_EN_descender 16778402
+     * }
+     */
     public static int XK_Cyrillic_EN_descender() {
         return (int)16778402L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_en_descender 16778403
+     * }
+     */
     public static int XK_Cyrillic_en_descender() {
         return (int)16778403L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_U_straight 16778414
+     * }
+     */
     public static int XK_Cyrillic_U_straight() {
         return (int)16778414L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_u_straight 16778415
+     * }
+     */
     public static int XK_Cyrillic_u_straight() {
         return (int)16778415L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_U_straight_bar 16778416
+     * }
+     */
     public static int XK_Cyrillic_U_straight_bar() {
         return (int)16778416L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_u_straight_bar 16778417
+     * }
+     */
     public static int XK_Cyrillic_u_straight_bar() {
         return (int)16778417L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_HA_descender 16778418
+     * }
+     */
     public static int XK_Cyrillic_HA_descender() {
         return (int)16778418L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ha_descender 16778419
+     * }
+     */
     public static int XK_Cyrillic_ha_descender() {
         return (int)16778419L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_CHE_descender 16778422
+     * }
+     */
     public static int XK_Cyrillic_CHE_descender() {
         return (int)16778422L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_che_descender 16778423
+     * }
+     */
     public static int XK_Cyrillic_che_descender() {
         return (int)16778423L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_CHE_vertstroke 16778424
+     * }
+     */
     public static int XK_Cyrillic_CHE_vertstroke() {
         return (int)16778424L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_che_vertstroke 16778425
+     * }
+     */
     public static int XK_Cyrillic_che_vertstroke() {
         return (int)16778425L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_SHHA 16778426
+     * }
+     */
     public static int XK_Cyrillic_SHHA() {
         return (int)16778426L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_shha 16778427
+     * }
+     */
     public static int XK_Cyrillic_shha() {
         return (int)16778427L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_SCHWA 16778456
+     * }
+     */
     public static int XK_Cyrillic_SCHWA() {
         return (int)16778456L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_schwa 16778457
+     * }
+     */
     public static int XK_Cyrillic_schwa() {
         return (int)16778457L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_I_macron 16778466
+     * }
+     */
     public static int XK_Cyrillic_I_macron() {
         return (int)16778466L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_i_macron 16778467
+     * }
+     */
     public static int XK_Cyrillic_i_macron() {
         return (int)16778467L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_O_bar 16778472
+     * }
+     */
     public static int XK_Cyrillic_O_bar() {
         return (int)16778472L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_o_bar 16778473
+     * }
+     */
     public static int XK_Cyrillic_o_bar() {
         return (int)16778473L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_U_macron 16778478
+     * }
+     */
     public static int XK_Cyrillic_U_macron() {
         return (int)16778478L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_u_macron 16778479
+     * }
+     */
     public static int XK_Cyrillic_u_macron() {
         return (int)16778479L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_dje 1697
+     * }
+     */
     public static int XK_Serbian_dje() {
         return (int)1697L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Macedonia_gje 1698
+     * }
+     */
     public static int XK_Macedonia_gje() {
         return (int)1698L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_io 1699
+     * }
+     */
     public static int XK_Cyrillic_io() {
         return (int)1699L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_ie 1700
+     * }
+     */
     public static int XK_Ukrainian_ie() {
         return (int)1700L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukranian_je 1700
+     * }
+     */
     public static int XK_Ukranian_je() {
         return (int)1700L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Macedonia_dse 1701
+     * }
+     */
     public static int XK_Macedonia_dse() {
         return (int)1701L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_i 1702
+     * }
+     */
     public static int XK_Ukrainian_i() {
         return (int)1702L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukranian_i 1702
+     * }
+     */
     public static int XK_Ukranian_i() {
         return (int)1702L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_yi 1703
+     * }
+     */
     public static int XK_Ukrainian_yi() {
         return (int)1703L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukranian_yi 1703
+     * }
+     */
     public static int XK_Ukranian_yi() {
         return (int)1703L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_je 1704
+     * }
+     */
     public static int XK_Cyrillic_je() {
         return (int)1704L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_je 1704
+     * }
+     */
     public static int XK_Serbian_je() {
         return (int)1704L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_lje 1705
+     * }
+     */
     public static int XK_Cyrillic_lje() {
         return (int)1705L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_lje 1705
+     * }
+     */
     public static int XK_Serbian_lje() {
         return (int)1705L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_nje 1706
+     * }
+     */
     public static int XK_Cyrillic_nje() {
         return (int)1706L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_nje 1706
+     * }
+     */
     public static int XK_Serbian_nje() {
         return (int)1706L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_tshe 1707
+     * }
+     */
     public static int XK_Serbian_tshe() {
         return (int)1707L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Macedonia_kje 1708
+     * }
+     */
     public static int XK_Macedonia_kje() {
         return (int)1708L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_ghe_with_upturn 1709
+     * }
+     */
     public static int XK_Ukrainian_ghe_with_upturn() {
         return (int)1709L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Byelorussian_shortu 1710
+     * }
+     */
     public static int XK_Byelorussian_shortu() {
         return (int)1710L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_dzhe 1711
+     * }
+     */
     public static int XK_Cyrillic_dzhe() {
         return (int)1711L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_dze 1711
+     * }
+     */
     public static int XK_Serbian_dze() {
         return (int)1711L;
     }
+    /**
+     * {@snippet :
+     * #define XK_numerosign 1712
+     * }
+     */
     public static int XK_numerosign() {
         return (int)1712L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_DJE 1713
+     * }
+     */
     public static int XK_Serbian_DJE() {
         return (int)1713L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Macedonia_GJE 1714
+     * }
+     */
     public static int XK_Macedonia_GJE() {
         return (int)1714L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_IO 1715
+     * }
+     */
     public static int XK_Cyrillic_IO() {
         return (int)1715L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_IE 1716
+     * }
+     */
     public static int XK_Ukrainian_IE() {
         return (int)1716L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukranian_JE 1716
+     * }
+     */
     public static int XK_Ukranian_JE() {
         return (int)1716L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Macedonia_DSE 1717
+     * }
+     */
     public static int XK_Macedonia_DSE() {
         return (int)1717L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_I 1718
+     * }
+     */
     public static int XK_Ukrainian_I() {
         return (int)1718L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukranian_I 1718
+     * }
+     */
     public static int XK_Ukranian_I() {
         return (int)1718L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_YI 1719
+     * }
+     */
     public static int XK_Ukrainian_YI() {
         return (int)1719L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukranian_YI 1719
+     * }
+     */
     public static int XK_Ukranian_YI() {
         return (int)1719L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_JE 1720
+     * }
+     */
     public static int XK_Cyrillic_JE() {
         return (int)1720L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_JE 1720
+     * }
+     */
     public static int XK_Serbian_JE() {
         return (int)1720L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_LJE 1721
+     * }
+     */
     public static int XK_Cyrillic_LJE() {
         return (int)1721L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_LJE 1721
+     * }
+     */
     public static int XK_Serbian_LJE() {
         return (int)1721L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_NJE 1722
+     * }
+     */
     public static int XK_Cyrillic_NJE() {
         return (int)1722L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_NJE 1722
+     * }
+     */
     public static int XK_Serbian_NJE() {
         return (int)1722L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_TSHE 1723
+     * }
+     */
     public static int XK_Serbian_TSHE() {
         return (int)1723L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Macedonia_KJE 1724
+     * }
+     */
     public static int XK_Macedonia_KJE() {
         return (int)1724L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ukrainian_GHE_WITH_UPTURN 1725
+     * }
+     */
     public static int XK_Ukrainian_GHE_WITH_UPTURN() {
         return (int)1725L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Byelorussian_SHORTU 1726
+     * }
+     */
     public static int XK_Byelorussian_SHORTU() {
         return (int)1726L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_DZHE 1727
+     * }
+     */
     public static int XK_Cyrillic_DZHE() {
         return (int)1727L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Serbian_DZE 1727
+     * }
+     */
     public static int XK_Serbian_DZE() {
         return (int)1727L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_yu 1728
+     * }
+     */
     public static int XK_Cyrillic_yu() {
         return (int)1728L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_a 1729
+     * }
+     */
     public static int XK_Cyrillic_a() {
         return (int)1729L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_be 1730
+     * }
+     */
     public static int XK_Cyrillic_be() {
         return (int)1730L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_tse 1731
+     * }
+     */
     public static int XK_Cyrillic_tse() {
         return (int)1731L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_de 1732
+     * }
+     */
     public static int XK_Cyrillic_de() {
         return (int)1732L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ie 1733
+     * }
+     */
     public static int XK_Cyrillic_ie() {
         return (int)1733L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ef 1734
+     * }
+     */
     public static int XK_Cyrillic_ef() {
         return (int)1734L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ghe 1735
+     * }
+     */
     public static int XK_Cyrillic_ghe() {
         return (int)1735L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ha 1736
+     * }
+     */
     public static int XK_Cyrillic_ha() {
         return (int)1736L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_i 1737
+     * }
+     */
     public static int XK_Cyrillic_i() {
         return (int)1737L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_shorti 1738
+     * }
+     */
     public static int XK_Cyrillic_shorti() {
         return (int)1738L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ka 1739
+     * }
+     */
     public static int XK_Cyrillic_ka() {
         return (int)1739L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_el 1740
+     * }
+     */
     public static int XK_Cyrillic_el() {
         return (int)1740L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_em 1741
+     * }
+     */
     public static int XK_Cyrillic_em() {
         return (int)1741L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_en 1742
+     * }
+     */
     public static int XK_Cyrillic_en() {
         return (int)1742L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_o 1743
+     * }
+     */
     public static int XK_Cyrillic_o() {
         return (int)1743L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_pe 1744
+     * }
+     */
     public static int XK_Cyrillic_pe() {
         return (int)1744L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ya 1745
+     * }
+     */
     public static int XK_Cyrillic_ya() {
         return (int)1745L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_er 1746
+     * }
+     */
     public static int XK_Cyrillic_er() {
         return (int)1746L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_es 1747
+     * }
+     */
     public static int XK_Cyrillic_es() {
         return (int)1747L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_te 1748
+     * }
+     */
     public static int XK_Cyrillic_te() {
         return (int)1748L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_u 1749
+     * }
+     */
     public static int XK_Cyrillic_u() {
         return (int)1749L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_zhe 1750
+     * }
+     */
     public static int XK_Cyrillic_zhe() {
         return (int)1750L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ve 1751
+     * }
+     */
     public static int XK_Cyrillic_ve() {
         return (int)1751L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_softsign 1752
+     * }
+     */
     public static int XK_Cyrillic_softsign() {
         return (int)1752L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_yeru 1753
+     * }
+     */
     public static int XK_Cyrillic_yeru() {
         return (int)1753L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ze 1754
+     * }
+     */
     public static int XK_Cyrillic_ze() {
         return (int)1754L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_sha 1755
+     * }
+     */
     public static int XK_Cyrillic_sha() {
         return (int)1755L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_e 1756
+     * }
+     */
     public static int XK_Cyrillic_e() {
         return (int)1756L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_shcha 1757
+     * }
+     */
     public static int XK_Cyrillic_shcha() {
         return (int)1757L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_che 1758
+     * }
+     */
     public static int XK_Cyrillic_che() {
         return (int)1758L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_hardsign 1759
+     * }
+     */
     public static int XK_Cyrillic_hardsign() {
         return (int)1759L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_YU 1760
+     * }
+     */
     public static int XK_Cyrillic_YU() {
         return (int)1760L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_A 1761
+     * }
+     */
     public static int XK_Cyrillic_A() {
         return (int)1761L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_BE 1762
+     * }
+     */
     public static int XK_Cyrillic_BE() {
         return (int)1762L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_TSE 1763
+     * }
+     */
     public static int XK_Cyrillic_TSE() {
         return (int)1763L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_DE 1764
+     * }
+     */
     public static int XK_Cyrillic_DE() {
         return (int)1764L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_IE 1765
+     * }
+     */
     public static int XK_Cyrillic_IE() {
         return (int)1765L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_EF 1766
+     * }
+     */
     public static int XK_Cyrillic_EF() {
         return (int)1766L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_GHE 1767
+     * }
+     */
     public static int XK_Cyrillic_GHE() {
         return (int)1767L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_HA 1768
+     * }
+     */
     public static int XK_Cyrillic_HA() {
         return (int)1768L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_I 1769
+     * }
+     */
     public static int XK_Cyrillic_I() {
         return (int)1769L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_SHORTI 1770
+     * }
+     */
     public static int XK_Cyrillic_SHORTI() {
         return (int)1770L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_KA 1771
+     * }
+     */
     public static int XK_Cyrillic_KA() {
         return (int)1771L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_EL 1772
+     * }
+     */
     public static int XK_Cyrillic_EL() {
         return (int)1772L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_EM 1773
+     * }
+     */
     public static int XK_Cyrillic_EM() {
         return (int)1773L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_EN 1774
+     * }
+     */
     public static int XK_Cyrillic_EN() {
         return (int)1774L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_O 1775
+     * }
+     */
     public static int XK_Cyrillic_O() {
         return (int)1775L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_PE 1776
+     * }
+     */
     public static int XK_Cyrillic_PE() {
         return (int)1776L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_YA 1777
+     * }
+     */
     public static int XK_Cyrillic_YA() {
         return (int)1777L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ER 1778
+     * }
+     */
     public static int XK_Cyrillic_ER() {
         return (int)1778L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ES 1779
+     * }
+     */
     public static int XK_Cyrillic_ES() {
         return (int)1779L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_TE 1780
+     * }
+     */
     public static int XK_Cyrillic_TE() {
         return (int)1780L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_U 1781
+     * }
+     */
     public static int XK_Cyrillic_U() {
         return (int)1781L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ZHE 1782
+     * }
+     */
     public static int XK_Cyrillic_ZHE() {
         return (int)1782L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_VE 1783
+     * }
+     */
     public static int XK_Cyrillic_VE() {
         return (int)1783L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_SOFTSIGN 1784
+     * }
+     */
     public static int XK_Cyrillic_SOFTSIGN() {
         return (int)1784L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_YERU 1785
+     * }
+     */
     public static int XK_Cyrillic_YERU() {
         return (int)1785L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_ZE 1786
+     * }
+     */
     public static int XK_Cyrillic_ZE() {
         return (int)1786L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_SHA 1787
+     * }
+     */
     public static int XK_Cyrillic_SHA() {
         return (int)1787L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_E 1788
+     * }
+     */
     public static int XK_Cyrillic_E() {
         return (int)1788L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_SHCHA 1789
+     * }
+     */
     public static int XK_Cyrillic_SHCHA() {
         return (int)1789L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_CHE 1790
+     * }
+     */
     public static int XK_Cyrillic_CHE() {
         return (int)1790L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cyrillic_HARDSIGN 1791
+     * }
+     */
     public static int XK_Cyrillic_HARDSIGN() {
         return (int)1791L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_ALPHAaccent 1953
+     * }
+     */
     public static int XK_Greek_ALPHAaccent() {
         return (int)1953L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_EPSILONaccent 1954
+     * }
+     */
     public static int XK_Greek_EPSILONaccent() {
         return (int)1954L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_ETAaccent 1955
+     * }
+     */
     public static int XK_Greek_ETAaccent() {
         return (int)1955L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_IOTAaccent 1956
+     * }
+     */
     public static int XK_Greek_IOTAaccent() {
         return (int)1956L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_IOTAdieresis 1957
+     * }
+     */
     public static int XK_Greek_IOTAdieresis() {
         return (int)1957L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_IOTAdiaeresis 1957
+     * }
+     */
     public static int XK_Greek_IOTAdiaeresis() {
         return (int)1957L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_OMICRONaccent 1959
+     * }
+     */
     public static int XK_Greek_OMICRONaccent() {
         return (int)1959L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_UPSILONaccent 1960
+     * }
+     */
     public static int XK_Greek_UPSILONaccent() {
         return (int)1960L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_UPSILONdieresis 1961
+     * }
+     */
     public static int XK_Greek_UPSILONdieresis() {
         return (int)1961L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_OMEGAaccent 1963
+     * }
+     */
     public static int XK_Greek_OMEGAaccent() {
         return (int)1963L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_accentdieresis 1966
+     * }
+     */
     public static int XK_Greek_accentdieresis() {
         return (int)1966L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_horizbar 1967
+     * }
+     */
     public static int XK_Greek_horizbar() {
         return (int)1967L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_alphaaccent 1969
+     * }
+     */
     public static int XK_Greek_alphaaccent() {
         return (int)1969L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_epsilonaccent 1970
+     * }
+     */
     public static int XK_Greek_epsilonaccent() {
         return (int)1970L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_etaaccent 1971
+     * }
+     */
     public static int XK_Greek_etaaccent() {
         return (int)1971L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_iotaaccent 1972
+     * }
+     */
     public static int XK_Greek_iotaaccent() {
         return (int)1972L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_iotadieresis 1973
+     * }
+     */
     public static int XK_Greek_iotadieresis() {
         return (int)1973L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_iotaaccentdieresis 1974
+     * }
+     */
     public static int XK_Greek_iotaaccentdieresis() {
         return (int)1974L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_omicronaccent 1975
+     * }
+     */
     public static int XK_Greek_omicronaccent() {
         return (int)1975L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_upsilonaccent 1976
+     * }
+     */
     public static int XK_Greek_upsilonaccent() {
         return (int)1976L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_upsilondieresis 1977
+     * }
+     */
     public static int XK_Greek_upsilondieresis() {
         return (int)1977L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_upsilonaccentdieresis 1978
+     * }
+     */
     public static int XK_Greek_upsilonaccentdieresis() {
         return (int)1978L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_omegaaccent 1979
+     * }
+     */
     public static int XK_Greek_omegaaccent() {
         return (int)1979L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_ALPHA 1985
+     * }
+     */
     public static int XK_Greek_ALPHA() {
         return (int)1985L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_BETA 1986
+     * }
+     */
     public static int XK_Greek_BETA() {
         return (int)1986L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_GAMMA 1987
+     * }
+     */
     public static int XK_Greek_GAMMA() {
         return (int)1987L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_DELTA 1988
+     * }
+     */
     public static int XK_Greek_DELTA() {
         return (int)1988L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_EPSILON 1989
+     * }
+     */
     public static int XK_Greek_EPSILON() {
         return (int)1989L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_ZETA 1990
+     * }
+     */
     public static int XK_Greek_ZETA() {
         return (int)1990L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_ETA 1991
+     * }
+     */
     public static int XK_Greek_ETA() {
         return (int)1991L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_THETA 1992
+     * }
+     */
     public static int XK_Greek_THETA() {
         return (int)1992L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_IOTA 1993
+     * }
+     */
     public static int XK_Greek_IOTA() {
         return (int)1993L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_KAPPA 1994
+     * }
+     */
     public static int XK_Greek_KAPPA() {
         return (int)1994L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_LAMDA 1995
+     * }
+     */
     public static int XK_Greek_LAMDA() {
         return (int)1995L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_LAMBDA 1995
+     * }
+     */
     public static int XK_Greek_LAMBDA() {
         return (int)1995L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_MU 1996
+     * }
+     */
     public static int XK_Greek_MU() {
         return (int)1996L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_NU 1997
+     * }
+     */
     public static int XK_Greek_NU() {
         return (int)1997L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_XI 1998
+     * }
+     */
     public static int XK_Greek_XI() {
         return (int)1998L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_OMICRON 1999
+     * }
+     */
     public static int XK_Greek_OMICRON() {
         return (int)1999L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_PI 2000
+     * }
+     */
     public static int XK_Greek_PI() {
         return (int)2000L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_RHO 2001
+     * }
+     */
     public static int XK_Greek_RHO() {
         return (int)2001L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_SIGMA 2002
+     * }
+     */
     public static int XK_Greek_SIGMA() {
         return (int)2002L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_TAU 2004
+     * }
+     */
     public static int XK_Greek_TAU() {
         return (int)2004L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_UPSILON 2005
+     * }
+     */
     public static int XK_Greek_UPSILON() {
         return (int)2005L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_PHI 2006
+     * }
+     */
     public static int XK_Greek_PHI() {
         return (int)2006L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_CHI 2007
+     * }
+     */
     public static int XK_Greek_CHI() {
         return (int)2007L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_PSI 2008
+     * }
+     */
     public static int XK_Greek_PSI() {
         return (int)2008L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_OMEGA 2009
+     * }
+     */
     public static int XK_Greek_OMEGA() {
         return (int)2009L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_alpha 2017
+     * }
+     */
     public static int XK_Greek_alpha() {
         return (int)2017L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_beta 2018
+     * }
+     */
     public static int XK_Greek_beta() {
         return (int)2018L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_gamma 2019
+     * }
+     */
     public static int XK_Greek_gamma() {
         return (int)2019L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_delta 2020
+     * }
+     */
     public static int XK_Greek_delta() {
         return (int)2020L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_epsilon 2021
+     * }
+     */
     public static int XK_Greek_epsilon() {
         return (int)2021L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_zeta 2022
+     * }
+     */
     public static int XK_Greek_zeta() {
         return (int)2022L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_eta 2023
+     * }
+     */
     public static int XK_Greek_eta() {
         return (int)2023L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_theta 2024
+     * }
+     */
     public static int XK_Greek_theta() {
         return (int)2024L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_iota 2025
+     * }
+     */
     public static int XK_Greek_iota() {
         return (int)2025L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_kappa 2026
+     * }
+     */
     public static int XK_Greek_kappa() {
         return (int)2026L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_lamda 2027
+     * }
+     */
     public static int XK_Greek_lamda() {
         return (int)2027L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_lambda 2027
+     * }
+     */
     public static int XK_Greek_lambda() {
         return (int)2027L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_mu 2028
+     * }
+     */
     public static int XK_Greek_mu() {
         return (int)2028L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_nu 2029
+     * }
+     */
     public static int XK_Greek_nu() {
         return (int)2029L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_xi 2030
+     * }
+     */
     public static int XK_Greek_xi() {
         return (int)2030L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_omicron 2031
+     * }
+     */
     public static int XK_Greek_omicron() {
         return (int)2031L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_pi 2032
+     * }
+     */
     public static int XK_Greek_pi() {
         return (int)2032L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_rho 2033
+     * }
+     */
     public static int XK_Greek_rho() {
         return (int)2033L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_sigma 2034
+     * }
+     */
     public static int XK_Greek_sigma() {
         return (int)2034L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_finalsmallsigma 2035
+     * }
+     */
     public static int XK_Greek_finalsmallsigma() {
         return (int)2035L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_tau 2036
+     * }
+     */
     public static int XK_Greek_tau() {
         return (int)2036L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_upsilon 2037
+     * }
+     */
     public static int XK_Greek_upsilon() {
         return (int)2037L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_phi 2038
+     * }
+     */
     public static int XK_Greek_phi() {
         return (int)2038L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_chi 2039
+     * }
+     */
     public static int XK_Greek_chi() {
         return (int)2039L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_psi 2040
+     * }
+     */
     public static int XK_Greek_psi() {
         return (int)2040L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_omega 2041
+     * }
+     */
     public static int XK_Greek_omega() {
         return (int)2041L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Greek_switch 65406
+     * }
+     */
     public static int XK_Greek_switch() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_doublelowline 3295
+     * }
+     */
     public static int XK_hebrew_doublelowline() {
         return (int)3295L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_aleph 3296
+     * }
+     */
     public static int XK_hebrew_aleph() {
         return (int)3296L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_bet 3297
+     * }
+     */
     public static int XK_hebrew_bet() {
         return (int)3297L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_beth 3297
+     * }
+     */
     public static int XK_hebrew_beth() {
         return (int)3297L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_gimel 3298
+     * }
+     */
     public static int XK_hebrew_gimel() {
         return (int)3298L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_gimmel 3298
+     * }
+     */
     public static int XK_hebrew_gimmel() {
         return (int)3298L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_dalet 3299
+     * }
+     */
     public static int XK_hebrew_dalet() {
         return (int)3299L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_daleth 3299
+     * }
+     */
     public static int XK_hebrew_daleth() {
         return (int)3299L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_he 3300
+     * }
+     */
     public static int XK_hebrew_he() {
         return (int)3300L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_waw 3301
+     * }
+     */
     public static int XK_hebrew_waw() {
         return (int)3301L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_zain 3302
+     * }
+     */
     public static int XK_hebrew_zain() {
         return (int)3302L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_zayin 3302
+     * }
+     */
     public static int XK_hebrew_zayin() {
         return (int)3302L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_chet 3303
+     * }
+     */
     public static int XK_hebrew_chet() {
         return (int)3303L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_het 3303
+     * }
+     */
     public static int XK_hebrew_het() {
         return (int)3303L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_tet 3304
+     * }
+     */
     public static int XK_hebrew_tet() {
         return (int)3304L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_teth 3304
+     * }
+     */
     public static int XK_hebrew_teth() {
         return (int)3304L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_yod 3305
+     * }
+     */
     public static int XK_hebrew_yod() {
         return (int)3305L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_finalkaph 3306
+     * }
+     */
     public static int XK_hebrew_finalkaph() {
         return (int)3306L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_kaph 3307
+     * }
+     */
     public static int XK_hebrew_kaph() {
         return (int)3307L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_lamed 3308
+     * }
+     */
     public static int XK_hebrew_lamed() {
         return (int)3308L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_finalmem 3309
+     * }
+     */
     public static int XK_hebrew_finalmem() {
         return (int)3309L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_mem 3310
+     * }
+     */
     public static int XK_hebrew_mem() {
         return (int)3310L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_finalnun 3311
+     * }
+     */
     public static int XK_hebrew_finalnun() {
         return (int)3311L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_nun 3312
+     * }
+     */
     public static int XK_hebrew_nun() {
         return (int)3312L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_samech 3313
+     * }
+     */
     public static int XK_hebrew_samech() {
         return (int)3313L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_samekh 3313
+     * }
+     */
     public static int XK_hebrew_samekh() {
         return (int)3313L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_ayin 3314
+     * }
+     */
     public static int XK_hebrew_ayin() {
         return (int)3314L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_finalpe 3315
+     * }
+     */
     public static int XK_hebrew_finalpe() {
         return (int)3315L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_pe 3316
+     * }
+     */
     public static int XK_hebrew_pe() {
         return (int)3316L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_finalzade 3317
+     * }
+     */
     public static int XK_hebrew_finalzade() {
         return (int)3317L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_finalzadi 3317
+     * }
+     */
     public static int XK_hebrew_finalzadi() {
         return (int)3317L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_zade 3318
+     * }
+     */
     public static int XK_hebrew_zade() {
         return (int)3318L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_zadi 3318
+     * }
+     */
     public static int XK_hebrew_zadi() {
         return (int)3318L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_qoph 3319
+     * }
+     */
     public static int XK_hebrew_qoph() {
         return (int)3319L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_kuf 3319
+     * }
+     */
     public static int XK_hebrew_kuf() {
         return (int)3319L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_resh 3320
+     * }
+     */
     public static int XK_hebrew_resh() {
         return (int)3320L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_shin 3321
+     * }
+     */
     public static int XK_hebrew_shin() {
         return (int)3321L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_taw 3322
+     * }
+     */
     public static int XK_hebrew_taw() {
         return (int)3322L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hebrew_taf 3322
+     * }
+     */
     public static int XK_hebrew_taf() {
         return (int)3322L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hebrew_switch 65406
+     * }
+     */
     public static int XK_Hebrew_switch() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_kokai 3489
+     * }
+     */
     public static int XK_Thai_kokai() {
         return (int)3489L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_khokhai 3490
+     * }
+     */
     public static int XK_Thai_khokhai() {
         return (int)3490L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_khokhuat 3491
+     * }
+     */
     public static int XK_Thai_khokhuat() {
         return (int)3491L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_khokhwai 3492
+     * }
+     */
     public static int XK_Thai_khokhwai() {
         return (int)3492L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_khokhon 3493
+     * }
+     */
     public static int XK_Thai_khokhon() {
         return (int)3493L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_khorakhang 3494
+     * }
+     */
     public static int XK_Thai_khorakhang() {
         return (int)3494L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_ngongu 3495
+     * }
+     */
     public static int XK_Thai_ngongu() {
         return (int)3495L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_chochan 3496
+     * }
+     */
     public static int XK_Thai_chochan() {
         return (int)3496L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_choching 3497
+     * }
+     */
     public static int XK_Thai_choching() {
         return (int)3497L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_chochang 3498
+     * }
+     */
     public static int XK_Thai_chochang() {
         return (int)3498L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_soso 3499
+     * }
+     */
     public static int XK_Thai_soso() {
         return (int)3499L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_chochoe 3500
+     * }
+     */
     public static int XK_Thai_chochoe() {
         return (int)3500L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_yoying 3501
+     * }
+     */
     public static int XK_Thai_yoying() {
         return (int)3501L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_dochada 3502
+     * }
+     */
     public static int XK_Thai_dochada() {
         return (int)3502L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_topatak 3503
+     * }
+     */
     public static int XK_Thai_topatak() {
         return (int)3503L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_thothan 3504
+     * }
+     */
     public static int XK_Thai_thothan() {
         return (int)3504L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_thonangmontho 3505
+     * }
+     */
     public static int XK_Thai_thonangmontho() {
         return (int)3505L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_thophuthao 3506
+     * }
+     */
     public static int XK_Thai_thophuthao() {
         return (int)3506L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_nonen 3507
+     * }
+     */
     public static int XK_Thai_nonen() {
         return (int)3507L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_dodek 3508
+     * }
+     */
     public static int XK_Thai_dodek() {
         return (int)3508L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_totao 3509
+     * }
+     */
     public static int XK_Thai_totao() {
         return (int)3509L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_thothung 3510
+     * }
+     */
     public static int XK_Thai_thothung() {
         return (int)3510L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_thothahan 3511
+     * }
+     */
     public static int XK_Thai_thothahan() {
         return (int)3511L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_thothong 3512
+     * }
+     */
     public static int XK_Thai_thothong() {
         return (int)3512L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_nonu 3513
+     * }
+     */
     public static int XK_Thai_nonu() {
         return (int)3513L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_bobaimai 3514
+     * }
+     */
     public static int XK_Thai_bobaimai() {
         return (int)3514L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_popla 3515
+     * }
+     */
     public static int XK_Thai_popla() {
         return (int)3515L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_phophung 3516
+     * }
+     */
     public static int XK_Thai_phophung() {
         return (int)3516L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_fofa 3517
+     * }
+     */
     public static int XK_Thai_fofa() {
         return (int)3517L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_phophan 3518
+     * }
+     */
     public static int XK_Thai_phophan() {
         return (int)3518L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_fofan 3519
+     * }
+     */
     public static int XK_Thai_fofan() {
         return (int)3519L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_phosamphao 3520
+     * }
+     */
     public static int XK_Thai_phosamphao() {
         return (int)3520L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_moma 3521
+     * }
+     */
     public static int XK_Thai_moma() {
         return (int)3521L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_yoyak 3522
+     * }
+     */
     public static int XK_Thai_yoyak() {
         return (int)3522L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_rorua 3523
+     * }
+     */
     public static int XK_Thai_rorua() {
         return (int)3523L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_ru 3524
+     * }
+     */
     public static int XK_Thai_ru() {
         return (int)3524L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_loling 3525
+     * }
+     */
     public static int XK_Thai_loling() {
         return (int)3525L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lu 3526
+     * }
+     */
     public static int XK_Thai_lu() {
         return (int)3526L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_wowaen 3527
+     * }
+     */
     public static int XK_Thai_wowaen() {
         return (int)3527L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sosala 3528
+     * }
+     */
     public static int XK_Thai_sosala() {
         return (int)3528L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sorusi 3529
+     * }
+     */
     public static int XK_Thai_sorusi() {
         return (int)3529L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sosua 3530
+     * }
+     */
     public static int XK_Thai_sosua() {
         return (int)3530L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_hohip 3531
+     * }
+     */
     public static int XK_Thai_hohip() {
         return (int)3531L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lochula 3532
+     * }
+     */
     public static int XK_Thai_lochula() {
         return (int)3532L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_oang 3533
+     * }
+     */
     public static int XK_Thai_oang() {
         return (int)3533L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_honokhuk 3534
+     * }
+     */
     public static int XK_Thai_honokhuk() {
         return (int)3534L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_paiyannoi 3535
+     * }
+     */
     public static int XK_Thai_paiyannoi() {
         return (int)3535L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraa 3536
+     * }
+     */
     public static int XK_Thai_saraa() {
         return (int)3536L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maihanakat 3537
+     * }
+     */
     public static int XK_Thai_maihanakat() {
         return (int)3537L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraaa 3538
+     * }
+     */
     public static int XK_Thai_saraaa() {
         return (int)3538L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraam 3539
+     * }
+     */
     public static int XK_Thai_saraam() {
         return (int)3539L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sarai 3540
+     * }
+     */
     public static int XK_Thai_sarai() {
         return (int)3540L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraii 3541
+     * }
+     */
     public static int XK_Thai_saraii() {
         return (int)3541L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraue 3542
+     * }
+     */
     public static int XK_Thai_saraue() {
         return (int)3542L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sarauee 3543
+     * }
+     */
     public static int XK_Thai_sarauee() {
         return (int)3543L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sarau 3544
+     * }
+     */
     public static int XK_Thai_sarau() {
         return (int)3544L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sarauu 3545
+     * }
+     */
     public static int XK_Thai_sarauu() {
         return (int)3545L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_phinthu 3546
+     * }
+     */
     public static int XK_Thai_phinthu() {
         return (int)3546L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maihanakat_maitho 3550
+     * }
+     */
     public static int XK_Thai_maihanakat_maitho() {
         return (int)3550L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_baht 3551
+     * }
+     */
     public static int XK_Thai_baht() {
         return (int)3551L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sarae 3552
+     * }
+     */
     public static int XK_Thai_sarae() {
         return (int)3552L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraae 3553
+     * }
+     */
     public static int XK_Thai_saraae() {
         return (int)3553L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_sarao 3554
+     * }
+     */
     public static int XK_Thai_sarao() {
         return (int)3554L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraaimaimuan 3555
+     * }
+     */
     public static int XK_Thai_saraaimaimuan() {
         return (int)3555L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_saraaimaimalai 3556
+     * }
+     */
     public static int XK_Thai_saraaimaimalai() {
         return (int)3556L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lakkhangyao 3557
+     * }
+     */
     public static int XK_Thai_lakkhangyao() {
         return (int)3557L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maiyamok 3558
+     * }
+     */
     public static int XK_Thai_maiyamok() {
         return (int)3558L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maitaikhu 3559
+     * }
+     */
     public static int XK_Thai_maitaikhu() {
         return (int)3559L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maiek 3560
+     * }
+     */
     public static int XK_Thai_maiek() {
         return (int)3560L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maitho 3561
+     * }
+     */
     public static int XK_Thai_maitho() {
         return (int)3561L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maitri 3562
+     * }
+     */
     public static int XK_Thai_maitri() {
         return (int)3562L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_maichattawa 3563
+     * }
+     */
     public static int XK_Thai_maichattawa() {
         return (int)3563L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_thanthakhat 3564
+     * }
+     */
     public static int XK_Thai_thanthakhat() {
         return (int)3564L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_nikhahit 3565
+     * }
+     */
     public static int XK_Thai_nikhahit() {
         return (int)3565L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_leksun 3568
+     * }
+     */
     public static int XK_Thai_leksun() {
         return (int)3568L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_leknung 3569
+     * }
+     */
     public static int XK_Thai_leknung() {
         return (int)3569L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_leksong 3570
+     * }
+     */
     public static int XK_Thai_leksong() {
         return (int)3570L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_leksam 3571
+     * }
+     */
     public static int XK_Thai_leksam() {
         return (int)3571L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_leksi 3572
+     * }
+     */
     public static int XK_Thai_leksi() {
         return (int)3572L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lekha 3573
+     * }
+     */
     public static int XK_Thai_lekha() {
         return (int)3573L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lekhok 3574
+     * }
+     */
     public static int XK_Thai_lekhok() {
         return (int)3574L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lekchet 3575
+     * }
+     */
     public static int XK_Thai_lekchet() {
         return (int)3575L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lekpaet 3576
+     * }
+     */
     public static int XK_Thai_lekpaet() {
         return (int)3576L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thai_lekkao 3577
+     * }
+     */
     public static int XK_Thai_lekkao() {
         return (int)3577L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul 65329
+     * }
+     */
     public static int XK_Hangul() {
         return (int)65329L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Start 65330
+     * }
+     */
     public static int XK_Hangul_Start() {
         return (int)65330L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_End 65331
+     * }
+     */
     public static int XK_Hangul_End() {
         return (int)65331L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Hanja 65332
+     * }
+     */
     public static int XK_Hangul_Hanja() {
         return (int)65332L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Jamo 65333
+     * }
+     */
     public static int XK_Hangul_Jamo() {
         return (int)65333L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Romaja 65334
+     * }
+     */
     public static int XK_Hangul_Romaja() {
         return (int)65334L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Codeinput 65335
+     * }
+     */
     public static int XK_Hangul_Codeinput() {
         return (int)65335L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Jeonja 65336
+     * }
+     */
     public static int XK_Hangul_Jeonja() {
         return (int)65336L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Banja 65337
+     * }
+     */
     public static int XK_Hangul_Banja() {
         return (int)65337L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_PreHanja 65338
+     * }
+     */
     public static int XK_Hangul_PreHanja() {
         return (int)65338L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_PostHanja 65339
+     * }
+     */
     public static int XK_Hangul_PostHanja() {
         return (int)65339L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SingleCandidate 65340
+     * }
+     */
     public static int XK_Hangul_SingleCandidate() {
         return (int)65340L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_MultipleCandidate 65341
+     * }
+     */
     public static int XK_Hangul_MultipleCandidate() {
         return (int)65341L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_PreviousCandidate 65342
+     * }
+     */
     public static int XK_Hangul_PreviousCandidate() {
         return (int)65342L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Special 65343
+     * }
+     */
     public static int XK_Hangul_Special() {
         return (int)65343L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_switch 65406
+     * }
+     */
     public static int XK_Hangul_switch() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Kiyeog 3745
+     * }
+     */
     public static int XK_Hangul_Kiyeog() {
         return (int)3745L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SsangKiyeog 3746
+     * }
+     */
     public static int XK_Hangul_SsangKiyeog() {
         return (int)3746L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_KiyeogSios 3747
+     * }
+     */
     public static int XK_Hangul_KiyeogSios() {
         return (int)3747L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Nieun 3748
+     * }
+     */
     public static int XK_Hangul_Nieun() {
         return (int)3748L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_NieunJieuj 3749
+     * }
+     */
     public static int XK_Hangul_NieunJieuj() {
         return (int)3749L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_NieunHieuh 3750
+     * }
+     */
     public static int XK_Hangul_NieunHieuh() {
         return (int)3750L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Dikeud 3751
+     * }
+     */
     public static int XK_Hangul_Dikeud() {
         return (int)3751L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SsangDikeud 3752
+     * }
+     */
     public static int XK_Hangul_SsangDikeud() {
         return (int)3752L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Rieul 3753
+     * }
+     */
     public static int XK_Hangul_Rieul() {
         return (int)3753L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulKiyeog 3754
+     * }
+     */
     public static int XK_Hangul_RieulKiyeog() {
         return (int)3754L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulMieum 3755
+     * }
+     */
     public static int XK_Hangul_RieulMieum() {
         return (int)3755L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulPieub 3756
+     * }
+     */
     public static int XK_Hangul_RieulPieub() {
         return (int)3756L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulSios 3757
+     * }
+     */
     public static int XK_Hangul_RieulSios() {
         return (int)3757L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulTieut 3758
+     * }
+     */
     public static int XK_Hangul_RieulTieut() {
         return (int)3758L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulPhieuf 3759
+     * }
+     */
     public static int XK_Hangul_RieulPhieuf() {
         return (int)3759L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulHieuh 3760
+     * }
+     */
     public static int XK_Hangul_RieulHieuh() {
         return (int)3760L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Mieum 3761
+     * }
+     */
     public static int XK_Hangul_Mieum() {
         return (int)3761L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Pieub 3762
+     * }
+     */
     public static int XK_Hangul_Pieub() {
         return (int)3762L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SsangPieub 3763
+     * }
+     */
     public static int XK_Hangul_SsangPieub() {
         return (int)3763L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_PieubSios 3764
+     * }
+     */
     public static int XK_Hangul_PieubSios() {
         return (int)3764L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Sios 3765
+     * }
+     */
     public static int XK_Hangul_Sios() {
         return (int)3765L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SsangSios 3766
+     * }
+     */
     public static int XK_Hangul_SsangSios() {
         return (int)3766L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Ieung 3767
+     * }
+     */
     public static int XK_Hangul_Ieung() {
         return (int)3767L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Jieuj 3768
+     * }
+     */
     public static int XK_Hangul_Jieuj() {
         return (int)3768L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SsangJieuj 3769
+     * }
+     */
     public static int XK_Hangul_SsangJieuj() {
         return (int)3769L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Cieuc 3770
+     * }
+     */
     public static int XK_Hangul_Cieuc() {
         return (int)3770L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Khieuq 3771
+     * }
+     */
     public static int XK_Hangul_Khieuq() {
         return (int)3771L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Tieut 3772
+     * }
+     */
     public static int XK_Hangul_Tieut() {
         return (int)3772L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Phieuf 3773
+     * }
+     */
     public static int XK_Hangul_Phieuf() {
         return (int)3773L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_Hieuh 3774
+     * }
+     */
     public static int XK_Hangul_Hieuh() {
         return (int)3774L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_A 3775
+     * }
+     */
     public static int XK_Hangul_A() {
         return (int)3775L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_AE 3776
+     * }
+     */
     public static int XK_Hangul_AE() {
         return (int)3776L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YA 3777
+     * }
+     */
     public static int XK_Hangul_YA() {
         return (int)3777L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YAE 3778
+     * }
+     */
     public static int XK_Hangul_YAE() {
         return (int)3778L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_EO 3779
+     * }
+     */
     public static int XK_Hangul_EO() {
         return (int)3779L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_E 3780
+     * }
+     */
     public static int XK_Hangul_E() {
         return (int)3780L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YEO 3781
+     * }
+     */
     public static int XK_Hangul_YEO() {
         return (int)3781L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YE 3782
+     * }
+     */
     public static int XK_Hangul_YE() {
         return (int)3782L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_O 3783
+     * }
+     */
     public static int XK_Hangul_O() {
         return (int)3783L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_WA 3784
+     * }
+     */
     public static int XK_Hangul_WA() {
         return (int)3784L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_WAE 3785
+     * }
+     */
     public static int XK_Hangul_WAE() {
         return (int)3785L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_OE 3786
+     * }
+     */
     public static int XK_Hangul_OE() {
         return (int)3786L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YO 3787
+     * }
+     */
     public static int XK_Hangul_YO() {
         return (int)3787L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_U 3788
+     * }
+     */
     public static int XK_Hangul_U() {
         return (int)3788L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_WEO 3789
+     * }
+     */
     public static int XK_Hangul_WEO() {
         return (int)3789L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_WE 3790
+     * }
+     */
     public static int XK_Hangul_WE() {
         return (int)3790L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_WI 3791
+     * }
+     */
     public static int XK_Hangul_WI() {
         return (int)3791L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YU 3792
+     * }
+     */
     public static int XK_Hangul_YU() {
         return (int)3792L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_EU 3793
+     * }
+     */
     public static int XK_Hangul_EU() {
         return (int)3793L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YI 3794
+     * }
+     */
     public static int XK_Hangul_YI() {
         return (int)3794L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_I 3795
+     * }
+     */
     public static int XK_Hangul_I() {
         return (int)3795L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Kiyeog 3796
+     * }
+     */
     public static int XK_Hangul_J_Kiyeog() {
         return (int)3796L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_SsangKiyeog 3797
+     * }
+     */
     public static int XK_Hangul_J_SsangKiyeog() {
         return (int)3797L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_KiyeogSios 3798
+     * }
+     */
     public static int XK_Hangul_J_KiyeogSios() {
         return (int)3798L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Nieun 3799
+     * }
+     */
     public static int XK_Hangul_J_Nieun() {
         return (int)3799L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_NieunJieuj 3800
+     * }
+     */
     public static int XK_Hangul_J_NieunJieuj() {
         return (int)3800L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_NieunHieuh 3801
+     * }
+     */
     public static int XK_Hangul_J_NieunHieuh() {
         return (int)3801L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Dikeud 3802
+     * }
+     */
     public static int XK_Hangul_J_Dikeud() {
         return (int)3802L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Rieul 3803
+     * }
+     */
     public static int XK_Hangul_J_Rieul() {
         return (int)3803L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_RieulKiyeog 3804
+     * }
+     */
     public static int XK_Hangul_J_RieulKiyeog() {
         return (int)3804L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_RieulMieum 3805
+     * }
+     */
     public static int XK_Hangul_J_RieulMieum() {
         return (int)3805L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_RieulPieub 3806
+     * }
+     */
     public static int XK_Hangul_J_RieulPieub() {
         return (int)3806L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_RieulSios 3807
+     * }
+     */
     public static int XK_Hangul_J_RieulSios() {
         return (int)3807L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_RieulTieut 3808
+     * }
+     */
     public static int XK_Hangul_J_RieulTieut() {
         return (int)3808L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_RieulPhieuf 3809
+     * }
+     */
     public static int XK_Hangul_J_RieulPhieuf() {
         return (int)3809L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_RieulHieuh 3810
+     * }
+     */
     public static int XK_Hangul_J_RieulHieuh() {
         return (int)3810L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Mieum 3811
+     * }
+     */
     public static int XK_Hangul_J_Mieum() {
         return (int)3811L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Pieub 3812
+     * }
+     */
     public static int XK_Hangul_J_Pieub() {
         return (int)3812L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_PieubSios 3813
+     * }
+     */
     public static int XK_Hangul_J_PieubSios() {
         return (int)3813L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Sios 3814
+     * }
+     */
     public static int XK_Hangul_J_Sios() {
         return (int)3814L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_SsangSios 3815
+     * }
+     */
     public static int XK_Hangul_J_SsangSios() {
         return (int)3815L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Ieung 3816
+     * }
+     */
     public static int XK_Hangul_J_Ieung() {
         return (int)3816L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Jieuj 3817
+     * }
+     */
     public static int XK_Hangul_J_Jieuj() {
         return (int)3817L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Cieuc 3818
+     * }
+     */
     public static int XK_Hangul_J_Cieuc() {
         return (int)3818L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Khieuq 3819
+     * }
+     */
     public static int XK_Hangul_J_Khieuq() {
         return (int)3819L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Tieut 3820
+     * }
+     */
     public static int XK_Hangul_J_Tieut() {
         return (int)3820L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Phieuf 3821
+     * }
+     */
     public static int XK_Hangul_J_Phieuf() {
         return (int)3821L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_Hieuh 3822
+     * }
+     */
     public static int XK_Hangul_J_Hieuh() {
         return (int)3822L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_RieulYeorinHieuh 3823
+     * }
+     */
     public static int XK_Hangul_RieulYeorinHieuh() {
         return (int)3823L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SunkyeongeumMieum 3824
+     * }
+     */
     public static int XK_Hangul_SunkyeongeumMieum() {
         return (int)3824L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SunkyeongeumPieub 3825
+     * }
+     */
     public static int XK_Hangul_SunkyeongeumPieub() {
         return (int)3825L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_PanSios 3826
+     * }
+     */
     public static int XK_Hangul_PanSios() {
         return (int)3826L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_KkogjiDalrinIeung 3827
+     * }
+     */
     public static int XK_Hangul_KkogjiDalrinIeung() {
         return (int)3827L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_SunkyeongeumPhieuf 3828
+     * }
+     */
     public static int XK_Hangul_SunkyeongeumPhieuf() {
         return (int)3828L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_YeorinHieuh 3829
+     * }
+     */
     public static int XK_Hangul_YeorinHieuh() {
         return (int)3829L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_AraeA 3830
+     * }
+     */
     public static int XK_Hangul_AraeA() {
         return (int)3830L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_AraeAE 3831
+     * }
+     */
     public static int XK_Hangul_AraeAE() {
         return (int)3831L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_PanSios 3832
+     * }
+     */
     public static int XK_Hangul_J_PanSios() {
         return (int)3832L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_KkogjiDalrinIeung 3833
+     * }
+     */
     public static int XK_Hangul_J_KkogjiDalrinIeung() {
         return (int)3833L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hangul_J_YeorinHieuh 3834
+     * }
+     */
     public static int XK_Hangul_J_YeorinHieuh() {
         return (int)3834L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Korean_Won 3839
+     * }
+     */
     public static int XK_Korean_Won() {
         return (int)3839L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ligature_ew 16778631
+     * }
+     */
     public static int XK_Armenian_ligature_ew() {
         return (int)16778631L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_full_stop 16778633
+     * }
+     */
     public static int XK_Armenian_full_stop() {
         return (int)16778633L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_verjaket 16778633
+     * }
+     */
     public static int XK_Armenian_verjaket() {
         return (int)16778633L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_separation_mark 16778589
+     * }
+     */
     public static int XK_Armenian_separation_mark() {
         return (int)16778589L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_but 16778589
+     * }
+     */
     public static int XK_Armenian_but() {
         return (int)16778589L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_hyphen 16778634
+     * }
+     */
     public static int XK_Armenian_hyphen() {
         return (int)16778634L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_yentamna 16778634
+     * }
+     */
     public static int XK_Armenian_yentamna() {
         return (int)16778634L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_exclam 16778588
+     * }
+     */
     public static int XK_Armenian_exclam() {
         return (int)16778588L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_amanak 16778588
+     * }
+     */
     public static int XK_Armenian_amanak() {
         return (int)16778588L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_accent 16778587
+     * }
+     */
     public static int XK_Armenian_accent() {
         return (int)16778587L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_shesht 16778587
+     * }
+     */
     public static int XK_Armenian_shesht() {
         return (int)16778587L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_question 16778590
+     * }
+     */
     public static int XK_Armenian_question() {
         return (int)16778590L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_paruyk 16778590
+     * }
+     */
     public static int XK_Armenian_paruyk() {
         return (int)16778590L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_AYB 16778545
+     * }
+     */
     public static int XK_Armenian_AYB() {
         return (int)16778545L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ayb 16778593
+     * }
+     */
     public static int XK_Armenian_ayb() {
         return (int)16778593L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_BEN 16778546
+     * }
+     */
     public static int XK_Armenian_BEN() {
         return (int)16778546L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ben 16778594
+     * }
+     */
     public static int XK_Armenian_ben() {
         return (int)16778594L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_GIM 16778547
+     * }
+     */
     public static int XK_Armenian_GIM() {
         return (int)16778547L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_gim 16778595
+     * }
+     */
     public static int XK_Armenian_gim() {
         return (int)16778595L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_DA 16778548
+     * }
+     */
     public static int XK_Armenian_DA() {
         return (int)16778548L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_da 16778596
+     * }
+     */
     public static int XK_Armenian_da() {
         return (int)16778596L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_YECH 16778549
+     * }
+     */
     public static int XK_Armenian_YECH() {
         return (int)16778549L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_yech 16778597
+     * }
+     */
     public static int XK_Armenian_yech() {
         return (int)16778597L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ZA 16778550
+     * }
+     */
     public static int XK_Armenian_ZA() {
         return (int)16778550L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_za 16778598
+     * }
+     */
     public static int XK_Armenian_za() {
         return (int)16778598L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_E 16778551
+     * }
+     */
     public static int XK_Armenian_E() {
         return (int)16778551L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_e 16778599
+     * }
+     */
     public static int XK_Armenian_e() {
         return (int)16778599L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_AT 16778552
+     * }
+     */
     public static int XK_Armenian_AT() {
         return (int)16778552L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_at 16778600
+     * }
+     */
     public static int XK_Armenian_at() {
         return (int)16778600L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_TO 16778553
+     * }
+     */
     public static int XK_Armenian_TO() {
         return (int)16778553L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_to 16778601
+     * }
+     */
     public static int XK_Armenian_to() {
         return (int)16778601L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ZHE 16778554
+     * }
+     */
     public static int XK_Armenian_ZHE() {
         return (int)16778554L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_zhe 16778602
+     * }
+     */
     public static int XK_Armenian_zhe() {
         return (int)16778602L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_INI 16778555
+     * }
+     */
     public static int XK_Armenian_INI() {
         return (int)16778555L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ini 16778603
+     * }
+     */
     public static int XK_Armenian_ini() {
         return (int)16778603L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_LYUN 16778556
+     * }
+     */
     public static int XK_Armenian_LYUN() {
         return (int)16778556L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_lyun 16778604
+     * }
+     */
     public static int XK_Armenian_lyun() {
         return (int)16778604L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_KHE 16778557
+     * }
+     */
     public static int XK_Armenian_KHE() {
         return (int)16778557L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_khe 16778605
+     * }
+     */
     public static int XK_Armenian_khe() {
         return (int)16778605L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_TSA 16778558
+     * }
+     */
     public static int XK_Armenian_TSA() {
         return (int)16778558L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_tsa 16778606
+     * }
+     */
     public static int XK_Armenian_tsa() {
         return (int)16778606L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_KEN 16778559
+     * }
+     */
     public static int XK_Armenian_KEN() {
         return (int)16778559L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ken 16778607
+     * }
+     */
     public static int XK_Armenian_ken() {
         return (int)16778607L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_HO 16778560
+     * }
+     */
     public static int XK_Armenian_HO() {
         return (int)16778560L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ho 16778608
+     * }
+     */
     public static int XK_Armenian_ho() {
         return (int)16778608L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_DZA 16778561
+     * }
+     */
     public static int XK_Armenian_DZA() {
         return (int)16778561L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_dza 16778609
+     * }
+     */
     public static int XK_Armenian_dza() {
         return (int)16778609L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_GHAT 16778562
+     * }
+     */
     public static int XK_Armenian_GHAT() {
         return (int)16778562L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ghat 16778610
+     * }
+     */
     public static int XK_Armenian_ghat() {
         return (int)16778610L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_TCHE 16778563
+     * }
+     */
     public static int XK_Armenian_TCHE() {
         return (int)16778563L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_tche 16778611
+     * }
+     */
     public static int XK_Armenian_tche() {
         return (int)16778611L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_MEN 16778564
+     * }
+     */
     public static int XK_Armenian_MEN() {
         return (int)16778564L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_men 16778612
+     * }
+     */
     public static int XK_Armenian_men() {
         return (int)16778612L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_HI 16778565
+     * }
+     */
     public static int XK_Armenian_HI() {
         return (int)16778565L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_hi 16778613
+     * }
+     */
     public static int XK_Armenian_hi() {
         return (int)16778613L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_NU 16778566
+     * }
+     */
     public static int XK_Armenian_NU() {
         return (int)16778566L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_nu 16778614
+     * }
+     */
     public static int XK_Armenian_nu() {
         return (int)16778614L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_SHA 16778567
+     * }
+     */
     public static int XK_Armenian_SHA() {
         return (int)16778567L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_sha 16778615
+     * }
+     */
     public static int XK_Armenian_sha() {
         return (int)16778615L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_VO 16778568
+     * }
+     */
     public static int XK_Armenian_VO() {
         return (int)16778568L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_vo 16778616
+     * }
+     */
     public static int XK_Armenian_vo() {
         return (int)16778616L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_CHA 16778569
+     * }
+     */
     public static int XK_Armenian_CHA() {
         return (int)16778569L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_cha 16778617
+     * }
+     */
     public static int XK_Armenian_cha() {
         return (int)16778617L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_PE 16778570
+     * }
+     */
     public static int XK_Armenian_PE() {
         return (int)16778570L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_pe 16778618
+     * }
+     */
     public static int XK_Armenian_pe() {
         return (int)16778618L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_JE 16778571
+     * }
+     */
     public static int XK_Armenian_JE() {
         return (int)16778571L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_je 16778619
+     * }
+     */
     public static int XK_Armenian_je() {
         return (int)16778619L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_RA 16778572
+     * }
+     */
     public static int XK_Armenian_RA() {
         return (int)16778572L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ra 16778620
+     * }
+     */
     public static int XK_Armenian_ra() {
         return (int)16778620L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_SE 16778573
+     * }
+     */
     public static int XK_Armenian_SE() {
         return (int)16778573L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_se 16778621
+     * }
+     */
     public static int XK_Armenian_se() {
         return (int)16778621L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_VEV 16778574
+     * }
+     */
     public static int XK_Armenian_VEV() {
         return (int)16778574L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_vev 16778622
+     * }
+     */
     public static int XK_Armenian_vev() {
         return (int)16778622L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_TYUN 16778575
+     * }
+     */
     public static int XK_Armenian_TYUN() {
         return (int)16778575L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_tyun 16778623
+     * }
+     */
     public static int XK_Armenian_tyun() {
         return (int)16778623L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_RE 16778576
+     * }
+     */
     public static int XK_Armenian_RE() {
         return (int)16778576L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_re 16778624
+     * }
+     */
     public static int XK_Armenian_re() {
         return (int)16778624L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_TSO 16778577
+     * }
+     */
     public static int XK_Armenian_TSO() {
         return (int)16778577L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_tso 16778625
+     * }
+     */
     public static int XK_Armenian_tso() {
         return (int)16778625L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_VYUN 16778578
+     * }
+     */
     public static int XK_Armenian_VYUN() {
         return (int)16778578L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_vyun 16778626
+     * }
+     */
     public static int XK_Armenian_vyun() {
         return (int)16778626L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_PYUR 16778579
+     * }
+     */
     public static int XK_Armenian_PYUR() {
         return (int)16778579L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_pyur 16778627
+     * }
+     */
     public static int XK_Armenian_pyur() {
         return (int)16778627L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_KE 16778580
+     * }
+     */
     public static int XK_Armenian_KE() {
         return (int)16778580L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_ke 16778628
+     * }
+     */
     public static int XK_Armenian_ke() {
         return (int)16778628L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_O 16778581
+     * }
+     */
     public static int XK_Armenian_O() {
         return (int)16778581L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_o 16778629
+     * }
+     */
     public static int XK_Armenian_o() {
         return (int)16778629L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_FE 16778582
+     * }
+     */
     public static int XK_Armenian_FE() {
         return (int)16778582L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_fe 16778630
+     * }
+     */
     public static int XK_Armenian_fe() {
         return (int)16778630L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Armenian_apostrophe 16778586
+     * }
+     */
     public static int XK_Armenian_apostrophe() {
         return (int)16778586L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_an 16781520
+     * }
+     */
     public static int XK_Georgian_an() {
         return (int)16781520L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_ban 16781521
+     * }
+     */
     public static int XK_Georgian_ban() {
         return (int)16781521L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_gan 16781522
+     * }
+     */
     public static int XK_Georgian_gan() {
         return (int)16781522L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_don 16781523
+     * }
+     */
     public static int XK_Georgian_don() {
         return (int)16781523L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_en 16781524
+     * }
+     */
     public static int XK_Georgian_en() {
         return (int)16781524L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_vin 16781525
+     * }
+     */
     public static int XK_Georgian_vin() {
         return (int)16781525L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_zen 16781526
+     * }
+     */
     public static int XK_Georgian_zen() {
         return (int)16781526L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_tan 16781527
+     * }
+     */
     public static int XK_Georgian_tan() {
         return (int)16781527L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_in 16781528
+     * }
+     */
     public static int XK_Georgian_in() {
         return (int)16781528L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_kan 16781529
+     * }
+     */
     public static int XK_Georgian_kan() {
         return (int)16781529L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_las 16781530
+     * }
+     */
     public static int XK_Georgian_las() {
         return (int)16781530L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_man 16781531
+     * }
+     */
     public static int XK_Georgian_man() {
         return (int)16781531L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_nar 16781532
+     * }
+     */
     public static int XK_Georgian_nar() {
         return (int)16781532L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_on 16781533
+     * }
+     */
     public static int XK_Georgian_on() {
         return (int)16781533L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_par 16781534
+     * }
+     */
     public static int XK_Georgian_par() {
         return (int)16781534L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_zhar 16781535
+     * }
+     */
     public static int XK_Georgian_zhar() {
         return (int)16781535L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_rae 16781536
+     * }
+     */
     public static int XK_Georgian_rae() {
         return (int)16781536L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_san 16781537
+     * }
+     */
     public static int XK_Georgian_san() {
         return (int)16781537L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_tar 16781538
+     * }
+     */
     public static int XK_Georgian_tar() {
         return (int)16781538L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_un 16781539
+     * }
+     */
     public static int XK_Georgian_un() {
         return (int)16781539L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_phar 16781540
+     * }
+     */
     public static int XK_Georgian_phar() {
         return (int)16781540L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_khar 16781541
+     * }
+     */
     public static int XK_Georgian_khar() {
         return (int)16781541L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_ghan 16781542
+     * }
+     */
     public static int XK_Georgian_ghan() {
         return (int)16781542L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_qar 16781543
+     * }
+     */
     public static int XK_Georgian_qar() {
         return (int)16781543L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_shin 16781544
+     * }
+     */
     public static int XK_Georgian_shin() {
         return (int)16781544L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_chin 16781545
+     * }
+     */
     public static int XK_Georgian_chin() {
         return (int)16781545L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_can 16781546
+     * }
+     */
     public static int XK_Georgian_can() {
         return (int)16781546L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_jil 16781547
+     * }
+     */
     public static int XK_Georgian_jil() {
         return (int)16781547L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_cil 16781548
+     * }
+     */
     public static int XK_Georgian_cil() {
         return (int)16781548L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_char 16781549
+     * }
+     */
     public static int XK_Georgian_char() {
         return (int)16781549L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_xan 16781550
+     * }
+     */
     public static int XK_Georgian_xan() {
         return (int)16781550L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_jhan 16781551
+     * }
+     */
     public static int XK_Georgian_jhan() {
         return (int)16781551L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_hae 16781552
+     * }
+     */
     public static int XK_Georgian_hae() {
         return (int)16781552L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_he 16781553
+     * }
+     */
     public static int XK_Georgian_he() {
         return (int)16781553L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_hie 16781554
+     * }
+     */
     public static int XK_Georgian_hie() {
         return (int)16781554L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_we 16781555
+     * }
+     */
     public static int XK_Georgian_we() {
         return (int)16781555L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_har 16781556
+     * }
+     */
     public static int XK_Georgian_har() {
         return (int)16781556L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_hoe 16781557
+     * }
+     */
     public static int XK_Georgian_hoe() {
         return (int)16781557L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Georgian_fi 16781558
+     * }
+     */
     public static int XK_Georgian_fi() {
         return (int)16781558L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Xabovedot 16785034
+     * }
+     */
     public static int XK_Xabovedot() {
         return (int)16785034L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ibreve 16777516
+     * }
+     */
     public static int XK_Ibreve() {
         return (int)16777516L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Zstroke 16777653
+     * }
+     */
     public static int XK_Zstroke() {
         return (int)16777653L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Gcaron 16777702
+     * }
+     */
     public static int XK_Gcaron() {
         return (int)16777702L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ocaron 16777681
+     * }
+     */
     public static int XK_Ocaron() {
         return (int)16777681L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Obarred 16777631
+     * }
+     */
     public static int XK_Obarred() {
         return (int)16777631L;
     }
+    /**
+     * {@snippet :
+     * #define XK_xabovedot 16785035
+     * }
+     */
     public static int XK_xabovedot() {
         return (int)16785035L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ibreve 16777517
+     * }
+     */
     public static int XK_ibreve() {
         return (int)16777517L;
     }
+    /**
+     * {@snippet :
+     * #define XK_zstroke 16777654
+     * }
+     */
     public static int XK_zstroke() {
         return (int)16777654L;
     }
+    /**
+     * {@snippet :
+     * #define XK_gcaron 16777703
+     * }
+     */
     public static int XK_gcaron() {
         return (int)16777703L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ocaron 16777682
+     * }
+     */
     public static int XK_ocaron() {
         return (int)16777682L;
     }
+    /**
+     * {@snippet :
+     * #define XK_obarred 16777845
+     * }
+     */
     public static int XK_obarred() {
         return (int)16777845L;
     }
+    /**
+     * {@snippet :
+     * #define XK_SCHWA 16777615
+     * }
+     */
     public static int XK_SCHWA() {
         return (int)16777615L;
     }
+    /**
+     * {@snippet :
+     * #define XK_schwa 16777817
+     * }
+     */
     public static int XK_schwa() {
         return (int)16777817L;
     }
+    /**
+     * {@snippet :
+     * #define XK_EZH 16777655
+     * }
+     */
     public static int XK_EZH() {
         return (int)16777655L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ezh 16777874
+     * }
+     */
     public static int XK_ezh() {
         return (int)16777874L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Lbelowdot 16784950
+     * }
+     */
     public static int XK_Lbelowdot() {
         return (int)16784950L;
     }
+    /**
+     * {@snippet :
+     * #define XK_lbelowdot 16784951
+     * }
+     */
     public static int XK_lbelowdot() {
         return (int)16784951L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Abelowdot 16785056
+     * }
+     */
     public static int XK_Abelowdot() {
         return (int)16785056L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abelowdot 16785057
+     * }
+     */
     public static int XK_abelowdot() {
         return (int)16785057L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ahook 16785058
+     * }
+     */
     public static int XK_Ahook() {
         return (int)16785058L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ahook 16785059
+     * }
+     */
     public static int XK_ahook() {
         return (int)16785059L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Acircumflexacute 16785060
+     * }
+     */
     public static int XK_Acircumflexacute() {
         return (int)16785060L;
     }
+    /**
+     * {@snippet :
+     * #define XK_acircumflexacute 16785061
+     * }
+     */
     public static int XK_acircumflexacute() {
         return (int)16785061L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Acircumflexgrave 16785062
+     * }
+     */
     public static int XK_Acircumflexgrave() {
         return (int)16785062L;
     }
+    /**
+     * {@snippet :
+     * #define XK_acircumflexgrave 16785063
+     * }
+     */
     public static int XK_acircumflexgrave() {
         return (int)16785063L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Acircumflexhook 16785064
+     * }
+     */
     public static int XK_Acircumflexhook() {
         return (int)16785064L;
     }
+    /**
+     * {@snippet :
+     * #define XK_acircumflexhook 16785065
+     * }
+     */
     public static int XK_acircumflexhook() {
         return (int)16785065L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Acircumflextilde 16785066
+     * }
+     */
     public static int XK_Acircumflextilde() {
         return (int)16785066L;
     }
+    /**
+     * {@snippet :
+     * #define XK_acircumflextilde 16785067
+     * }
+     */
     public static int XK_acircumflextilde() {
         return (int)16785067L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Acircumflexbelowdot 16785068
+     * }
+     */
     public static int XK_Acircumflexbelowdot() {
         return (int)16785068L;
     }
+    /**
+     * {@snippet :
+     * #define XK_acircumflexbelowdot 16785069
+     * }
+     */
     public static int XK_acircumflexbelowdot() {
         return (int)16785069L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Abreveacute 16785070
+     * }
+     */
     public static int XK_Abreveacute() {
         return (int)16785070L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abreveacute 16785071
+     * }
+     */
     public static int XK_abreveacute() {
         return (int)16785071L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Abrevegrave 16785072
+     * }
+     */
     public static int XK_Abrevegrave() {
         return (int)16785072L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abrevegrave 16785073
+     * }
+     */
     public static int XK_abrevegrave() {
         return (int)16785073L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Abrevehook 16785074
+     * }
+     */
     public static int XK_Abrevehook() {
         return (int)16785074L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abrevehook 16785075
+     * }
+     */
     public static int XK_abrevehook() {
         return (int)16785075L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Abrevetilde 16785076
+     * }
+     */
     public static int XK_Abrevetilde() {
         return (int)16785076L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abrevetilde 16785077
+     * }
+     */
     public static int XK_abrevetilde() {
         return (int)16785077L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Abrevebelowdot 16785078
+     * }
+     */
     public static int XK_Abrevebelowdot() {
         return (int)16785078L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abrevebelowdot 16785079
+     * }
+     */
     public static int XK_abrevebelowdot() {
         return (int)16785079L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ebelowdot 16785080
+     * }
+     */
     public static int XK_Ebelowdot() {
         return (int)16785080L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ebelowdot 16785081
+     * }
+     */
     public static int XK_ebelowdot() {
         return (int)16785081L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ehook 16785082
+     * }
+     */
     public static int XK_Ehook() {
         return (int)16785082L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ehook 16785083
+     * }
+     */
     public static int XK_ehook() {
         return (int)16785083L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Etilde 16785084
+     * }
+     */
     public static int XK_Etilde() {
         return (int)16785084L;
     }
+    /**
+     * {@snippet :
+     * #define XK_etilde 16785085
+     * }
+     */
     public static int XK_etilde() {
         return (int)16785085L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ecircumflexacute 16785086
+     * }
+     */
     public static int XK_Ecircumflexacute() {
         return (int)16785086L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ecircumflexacute 16785087
+     * }
+     */
     public static int XK_ecircumflexacute() {
         return (int)16785087L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ecircumflexgrave 16785088
+     * }
+     */
     public static int XK_Ecircumflexgrave() {
         return (int)16785088L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ecircumflexgrave 16785089
+     * }
+     */
     public static int XK_ecircumflexgrave() {
         return (int)16785089L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ecircumflexhook 16785090
+     * }
+     */
     public static int XK_Ecircumflexhook() {
         return (int)16785090L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ecircumflexhook 16785091
+     * }
+     */
     public static int XK_ecircumflexhook() {
         return (int)16785091L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ecircumflextilde 16785092
+     * }
+     */
     public static int XK_Ecircumflextilde() {
         return (int)16785092L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ecircumflextilde 16785093
+     * }
+     */
     public static int XK_ecircumflextilde() {
         return (int)16785093L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ecircumflexbelowdot 16785094
+     * }
+     */
     public static int XK_Ecircumflexbelowdot() {
         return (int)16785094L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ecircumflexbelowdot 16785095
+     * }
+     */
     public static int XK_ecircumflexbelowdot() {
         return (int)16785095L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ihook 16785096
+     * }
+     */
     public static int XK_Ihook() {
         return (int)16785096L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ihook 16785097
+     * }
+     */
     public static int XK_ihook() {
         return (int)16785097L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ibelowdot 16785098
+     * }
+     */
     public static int XK_Ibelowdot() {
         return (int)16785098L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ibelowdot 16785099
+     * }
+     */
     public static int XK_ibelowdot() {
         return (int)16785099L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Obelowdot 16785100
+     * }
+     */
     public static int XK_Obelowdot() {
         return (int)16785100L;
     }
+    /**
+     * {@snippet :
+     * #define XK_obelowdot 16785101
+     * }
+     */
     public static int XK_obelowdot() {
         return (int)16785101L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ohook 16785102
+     * }
+     */
     public static int XK_Ohook() {
         return (int)16785102L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ohook 16785103
+     * }
+     */
     public static int XK_ohook() {
         return (int)16785103L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ocircumflexacute 16785104
+     * }
+     */
     public static int XK_Ocircumflexacute() {
         return (int)16785104L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ocircumflexacute 16785105
+     * }
+     */
     public static int XK_ocircumflexacute() {
         return (int)16785105L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ocircumflexgrave 16785106
+     * }
+     */
     public static int XK_Ocircumflexgrave() {
         return (int)16785106L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ocircumflexgrave 16785107
+     * }
+     */
     public static int XK_ocircumflexgrave() {
         return (int)16785107L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ocircumflexhook 16785108
+     * }
+     */
     public static int XK_Ocircumflexhook() {
         return (int)16785108L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ocircumflexhook 16785109
+     * }
+     */
     public static int XK_ocircumflexhook() {
         return (int)16785109L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ocircumflextilde 16785110
+     * }
+     */
     public static int XK_Ocircumflextilde() {
         return (int)16785110L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ocircumflextilde 16785111
+     * }
+     */
     public static int XK_ocircumflextilde() {
         return (int)16785111L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ocircumflexbelowdot 16785112
+     * }
+     */
     public static int XK_Ocircumflexbelowdot() {
         return (int)16785112L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ocircumflexbelowdot 16785113
+     * }
+     */
     public static int XK_ocircumflexbelowdot() {
         return (int)16785113L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ohornacute 16785114
+     * }
+     */
     public static int XK_Ohornacute() {
         return (int)16785114L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ohornacute 16785115
+     * }
+     */
     public static int XK_ohornacute() {
         return (int)16785115L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ohorngrave 16785116
+     * }
+     */
     public static int XK_Ohorngrave() {
         return (int)16785116L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ohorngrave 16785117
+     * }
+     */
     public static int XK_ohorngrave() {
         return (int)16785117L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ohornhook 16785118
+     * }
+     */
     public static int XK_Ohornhook() {
         return (int)16785118L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ohornhook 16785119
+     * }
+     */
     public static int XK_ohornhook() {
         return (int)16785119L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ohorntilde 16785120
+     * }
+     */
     public static int XK_Ohorntilde() {
         return (int)16785120L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ohorntilde 16785121
+     * }
+     */
     public static int XK_ohorntilde() {
         return (int)16785121L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ohornbelowdot 16785122
+     * }
+     */
     public static int XK_Ohornbelowdot() {
         return (int)16785122L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ohornbelowdot 16785123
+     * }
+     */
     public static int XK_ohornbelowdot() {
         return (int)16785123L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ubelowdot 16785124
+     * }
+     */
     public static int XK_Ubelowdot() {
         return (int)16785124L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ubelowdot 16785125
+     * }
+     */
     public static int XK_ubelowdot() {
         return (int)16785125L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uhook 16785126
+     * }
+     */
     public static int XK_Uhook() {
         return (int)16785126L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uhook 16785127
+     * }
+     */
     public static int XK_uhook() {
         return (int)16785127L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uhornacute 16785128
+     * }
+     */
     public static int XK_Uhornacute() {
         return (int)16785128L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uhornacute 16785129
+     * }
+     */
     public static int XK_uhornacute() {
         return (int)16785129L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uhorngrave 16785130
+     * }
+     */
     public static int XK_Uhorngrave() {
         return (int)16785130L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uhorngrave 16785131
+     * }
+     */
     public static int XK_uhorngrave() {
         return (int)16785131L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uhornhook 16785132
+     * }
+     */
     public static int XK_Uhornhook() {
         return (int)16785132L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uhornhook 16785133
+     * }
+     */
     public static int XK_uhornhook() {
         return (int)16785133L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uhorntilde 16785134
+     * }
+     */
     public static int XK_Uhorntilde() {
         return (int)16785134L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uhorntilde 16785135
+     * }
+     */
     public static int XK_uhorntilde() {
         return (int)16785135L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uhornbelowdot 16785136
+     * }
+     */
     public static int XK_Uhornbelowdot() {
         return (int)16785136L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uhornbelowdot 16785137
+     * }
+     */
     public static int XK_uhornbelowdot() {
         return (int)16785137L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ybelowdot 16785140
+     * }
+     */
     public static int XK_Ybelowdot() {
         return (int)16785140L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ybelowdot 16785141
+     * }
+     */
     public static int XK_ybelowdot() {
         return (int)16785141L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Yhook 16785142
+     * }
+     */
     public static int XK_Yhook() {
         return (int)16785142L;
     }
+    /**
+     * {@snippet :
+     * #define XK_yhook 16785143
+     * }
+     */
     public static int XK_yhook() {
         return (int)16785143L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ytilde 16785144
+     * }
+     */
     public static int XK_Ytilde() {
         return (int)16785144L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ytilde 16785145
+     * }
+     */
     public static int XK_ytilde() {
         return (int)16785145L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ohorn 16777632
+     * }
+     */
     public static int XK_Ohorn() {
         return (int)16777632L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ohorn 16777633
+     * }
+     */
     public static int XK_ohorn() {
         return (int)16777633L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uhorn 16777647
+     * }
+     */
     public static int XK_Uhorn() {
         return (int)16777647L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uhorn 16777648
+     * }
+     */
     public static int XK_uhorn() {
         return (int)16777648L;
     }
+    /**
+     * {@snippet :
+     * #define XK_EcuSign 16785568
+     * }
+     */
     public static int XK_EcuSign() {
         return (int)16785568L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ColonSign 16785569
+     * }
+     */
     public static int XK_ColonSign() {
         return (int)16785569L;
     }
+    /**
+     * {@snippet :
+     * #define XK_CruzeiroSign 16785570
+     * }
+     */
     public static int XK_CruzeiroSign() {
         return (int)16785570L;
     }
+    /**
+     * {@snippet :
+     * #define XK_FFrancSign 16785571
+     * }
+     */
     public static int XK_FFrancSign() {
         return (int)16785571L;
     }
+    /**
+     * {@snippet :
+     * #define XK_LiraSign 16785572
+     * }
+     */
     public static int XK_LiraSign() {
         return (int)16785572L;
     }
+    /**
+     * {@snippet :
+     * #define XK_MillSign 16785573
+     * }
+     */
     public static int XK_MillSign() {
         return (int)16785573L;
     }
+    /**
+     * {@snippet :
+     * #define XK_NairaSign 16785574
+     * }
+     */
     public static int XK_NairaSign() {
         return (int)16785574L;
     }
+    /**
+     * {@snippet :
+     * #define XK_PesetaSign 16785575
+     * }
+     */
     public static int XK_PesetaSign() {
         return (int)16785575L;
     }
+    /**
+     * {@snippet :
+     * #define XK_RupeeSign 16785576
+     * }
+     */
     public static int XK_RupeeSign() {
         return (int)16785576L;
     }
+    /**
+     * {@snippet :
+     * #define XK_WonSign 16785577
+     * }
+     */
     public static int XK_WonSign() {
         return (int)16785577L;
     }
+    /**
+     * {@snippet :
+     * #define XK_NewSheqelSign 16785578
+     * }
+     */
     public static int XK_NewSheqelSign() {
         return (int)16785578L;
     }
+    /**
+     * {@snippet :
+     * #define XK_DongSign 16785579
+     * }
+     */
     public static int XK_DongSign() {
         return (int)16785579L;
     }
+    /**
+     * {@snippet :
+     * #define XK_EuroSign 8364
+     * }
+     */
     public static int XK_EuroSign() {
         return (int)8364L;
     }
+    /**
+     * {@snippet :
+     * #define XK_zerosuperior 16785520
+     * }
+     */
     public static int XK_zerosuperior() {
         return (int)16785520L;
     }
+    /**
+     * {@snippet :
+     * #define XK_foursuperior 16785524
+     * }
+     */
     public static int XK_foursuperior() {
         return (int)16785524L;
     }
+    /**
+     * {@snippet :
+     * #define XK_fivesuperior 16785525
+     * }
+     */
     public static int XK_fivesuperior() {
         return (int)16785525L;
     }
+    /**
+     * {@snippet :
+     * #define XK_sixsuperior 16785526
+     * }
+     */
     public static int XK_sixsuperior() {
         return (int)16785526L;
     }
+    /**
+     * {@snippet :
+     * #define XK_sevensuperior 16785527
+     * }
+     */
     public static int XK_sevensuperior() {
         return (int)16785527L;
     }
+    /**
+     * {@snippet :
+     * #define XK_eightsuperior 16785528
+     * }
+     */
     public static int XK_eightsuperior() {
         return (int)16785528L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ninesuperior 16785529
+     * }
+     */
     public static int XK_ninesuperior() {
         return (int)16785529L;
     }
+    /**
+     * {@snippet :
+     * #define XK_zerosubscript 16785536
+     * }
+     */
     public static int XK_zerosubscript() {
         return (int)16785536L;
     }
+    /**
+     * {@snippet :
+     * #define XK_onesubscript 16785537
+     * }
+     */
     public static int XK_onesubscript() {
         return (int)16785537L;
     }
+    /**
+     * {@snippet :
+     * #define XK_twosubscript 16785538
+     * }
+     */
     public static int XK_twosubscript() {
         return (int)16785538L;
     }
+    /**
+     * {@snippet :
+     * #define XK_threesubscript 16785539
+     * }
+     */
     public static int XK_threesubscript() {
         return (int)16785539L;
     }
+    /**
+     * {@snippet :
+     * #define XK_foursubscript 16785540
+     * }
+     */
     public static int XK_foursubscript() {
         return (int)16785540L;
     }
+    /**
+     * {@snippet :
+     * #define XK_fivesubscript 16785541
+     * }
+     */
     public static int XK_fivesubscript() {
         return (int)16785541L;
     }
+    /**
+     * {@snippet :
+     * #define XK_sixsubscript 16785542
+     * }
+     */
     public static int XK_sixsubscript() {
         return (int)16785542L;
     }
+    /**
+     * {@snippet :
+     * #define XK_sevensubscript 16785543
+     * }
+     */
     public static int XK_sevensubscript() {
         return (int)16785543L;
     }
+    /**
+     * {@snippet :
+     * #define XK_eightsubscript 16785544
+     * }
+     */
     public static int XK_eightsubscript() {
         return (int)16785544L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ninesubscript 16785545
+     * }
+     */
     public static int XK_ninesubscript() {
         return (int)16785545L;
     }
+    /**
+     * {@snippet :
+     * #define XK_partdifferential 16785922
+     * }
+     */
     public static int XK_partdifferential() {
         return (int)16785922L;
     }
+    /**
+     * {@snippet :
+     * #define XK_emptyset 16785925
+     * }
+     */
     public static int XK_emptyset() {
         return (int)16785925L;
     }
+    /**
+     * {@snippet :
+     * #define XK_elementof 16785928
+     * }
+     */
     public static int XK_elementof() {
         return (int)16785928L;
     }
+    /**
+     * {@snippet :
+     * #define XK_notelementof 16785929
+     * }
+     */
     public static int XK_notelementof() {
         return (int)16785929L;
     }
+    /**
+     * {@snippet :
+     * #define XK_containsas 16785931
+     * }
+     */
     public static int XK_containsas() {
         return (int)16785931L;
     }
+    /**
+     * {@snippet :
+     * #define XK_squareroot 16785946
+     * }
+     */
     public static int XK_squareroot() {
         return (int)16785946L;
     }
+    /**
+     * {@snippet :
+     * #define XK_cuberoot 16785947
+     * }
+     */
     public static int XK_cuberoot() {
         return (int)16785947L;
     }
+    /**
+     * {@snippet :
+     * #define XK_fourthroot 16785948
+     * }
+     */
     public static int XK_fourthroot() {
         return (int)16785948L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dintegral 16785964
+     * }
+     */
     public static int XK_dintegral() {
         return (int)16785964L;
     }
+    /**
+     * {@snippet :
+     * #define XK_tintegral 16785965
+     * }
+     */
     public static int XK_tintegral() {
         return (int)16785965L;
     }
+    /**
+     * {@snippet :
+     * #define XK_because 16785973
+     * }
+     */
     public static int XK_because() {
         return (int)16785973L;
     }
+    /**
+     * {@snippet :
+     * #define XK_approxeq 16785992
+     * }
+     */
     public static int XK_approxeq() {
         return (int)16785992L;
     }
+    /**
+     * {@snippet :
+     * #define XK_notapproxeq 16785991
+     * }
+     */
     public static int XK_notapproxeq() {
         return (int)16785991L;
     }
+    /**
+     * {@snippet :
+     * #define XK_notidentical 16786018
+     * }
+     */
     public static int XK_notidentical() {
         return (int)16786018L;
     }
+    /**
+     * {@snippet :
+     * #define XK_stricteq 16786019
+     * }
+     */
     public static int XK_stricteq() {
         return (int)16786019L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_1 65521
+     * }
+     */
     public static int XK_braille_dot_1() {
         return (int)65521L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_2 65522
+     * }
+     */
     public static int XK_braille_dot_2() {
         return (int)65522L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_3 65523
+     * }
+     */
     public static int XK_braille_dot_3() {
         return (int)65523L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_4 65524
+     * }
+     */
     public static int XK_braille_dot_4() {
         return (int)65524L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_5 65525
+     * }
+     */
     public static int XK_braille_dot_5() {
         return (int)65525L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_6 65526
+     * }
+     */
     public static int XK_braille_dot_6() {
         return (int)65526L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_7 65527
+     * }
+     */
     public static int XK_braille_dot_7() {
         return (int)65527L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_8 65528
+     * }
+     */
     public static int XK_braille_dot_8() {
         return (int)65528L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_9 65529
+     * }
+     */
     public static int XK_braille_dot_9() {
         return (int)65529L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dot_10 65530
+     * }
+     */
     public static int XK_braille_dot_10() {
         return (int)65530L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_blank 16787456
+     * }
+     */
     public static int XK_braille_blank() {
         return (int)16787456L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1 16787457
+     * }
+     */
     public static int XK_braille_dots_1() {
         return (int)16787457L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2 16787458
+     * }
+     */
     public static int XK_braille_dots_2() {
         return (int)16787458L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12 16787459
+     * }
+     */
     public static int XK_braille_dots_12() {
         return (int)16787459L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3 16787460
+     * }
+     */
     public static int XK_braille_dots_3() {
         return (int)16787460L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13 16787461
+     * }
+     */
     public static int XK_braille_dots_13() {
         return (int)16787461L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23 16787462
+     * }
+     */
     public static int XK_braille_dots_23() {
         return (int)16787462L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123 16787463
+     * }
+     */
     public static int XK_braille_dots_123() {
         return (int)16787463L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_4 16787464
+     * }
+     */
     public static int XK_braille_dots_4() {
         return (int)16787464L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_14 16787465
+     * }
+     */
     public static int XK_braille_dots_14() {
         return (int)16787465L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_24 16787466
+     * }
+     */
     public static int XK_braille_dots_24() {
         return (int)16787466L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_124 16787467
+     * }
+     */
     public static int XK_braille_dots_124() {
         return (int)16787467L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_34 16787468
+     * }
+     */
     public static int XK_braille_dots_34() {
         return (int)16787468L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_134 16787469
+     * }
+     */
     public static int XK_braille_dots_134() {
         return (int)16787469L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_234 16787470
+     * }
+     */
     public static int XK_braille_dots_234() {
         return (int)16787470L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1234 16787471
+     * }
+     */
     public static int XK_braille_dots_1234() {
         return (int)16787471L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_5 16787472
+     * }
+     */
     public static int XK_braille_dots_5() {
         return (int)16787472L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_15 16787473
+     * }
+     */
     public static int XK_braille_dots_15() {
         return (int)16787473L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_25 16787474
+     * }
+     */
     public static int XK_braille_dots_25() {
         return (int)16787474L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_125 16787475
+     * }
+     */
     public static int XK_braille_dots_125() {
         return (int)16787475L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_35 16787476
+     * }
+     */
     public static int XK_braille_dots_35() {
         return (int)16787476L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_135 16787477
+     * }
+     */
     public static int XK_braille_dots_135() {
         return (int)16787477L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_235 16787478
+     * }
+     */
     public static int XK_braille_dots_235() {
         return (int)16787478L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1235 16787479
+     * }
+     */
     public static int XK_braille_dots_1235() {
         return (int)16787479L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_45 16787480
+     * }
+     */
     public static int XK_braille_dots_45() {
         return (int)16787480L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_145 16787481
+     * }
+     */
     public static int XK_braille_dots_145() {
         return (int)16787481L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_245 16787482
+     * }
+     */
     public static int XK_braille_dots_245() {
         return (int)16787482L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1245 16787483
+     * }
+     */
     public static int XK_braille_dots_1245() {
         return (int)16787483L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_345 16787484
+     * }
+     */
     public static int XK_braille_dots_345() {
         return (int)16787484L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1345 16787485
+     * }
+     */
     public static int XK_braille_dots_1345() {
         return (int)16787485L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2345 16787486
+     * }
+     */
     public static int XK_braille_dots_2345() {
         return (int)16787486L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12345 16787487
+     * }
+     */
     public static int XK_braille_dots_12345() {
         return (int)16787487L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_6 16787488
+     * }
+     */
     public static int XK_braille_dots_6() {
         return (int)16787488L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_16 16787489
+     * }
+     */
     public static int XK_braille_dots_16() {
         return (int)16787489L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_26 16787490
+     * }
+     */
     public static int XK_braille_dots_26() {
         return (int)16787490L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_126 16787491
+     * }
+     */
     public static int XK_braille_dots_126() {
         return (int)16787491L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_36 16787492
+     * }
+     */
     public static int XK_braille_dots_36() {
         return (int)16787492L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_136 16787493
+     * }
+     */
     public static int XK_braille_dots_136() {
         return (int)16787493L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_236 16787494
+     * }
+     */
     public static int XK_braille_dots_236() {
         return (int)16787494L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1236 16787495
+     * }
+     */
     public static int XK_braille_dots_1236() {
         return (int)16787495L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_46 16787496
+     * }
+     */
     public static int XK_braille_dots_46() {
         return (int)16787496L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_146 16787497
+     * }
+     */
     public static int XK_braille_dots_146() {
         return (int)16787497L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_246 16787498
+     * }
+     */
     public static int XK_braille_dots_246() {
         return (int)16787498L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1246 16787499
+     * }
+     */
     public static int XK_braille_dots_1246() {
         return (int)16787499L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_346 16787500
+     * }
+     */
     public static int XK_braille_dots_346() {
         return (int)16787500L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1346 16787501
+     * }
+     */
     public static int XK_braille_dots_1346() {
         return (int)16787501L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2346 16787502
+     * }
+     */
     public static int XK_braille_dots_2346() {
         return (int)16787502L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12346 16787503
+     * }
+     */
     public static int XK_braille_dots_12346() {
         return (int)16787503L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_56 16787504
+     * }
+     */
     public static int XK_braille_dots_56() {
         return (int)16787504L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_156 16787505
+     * }
+     */
     public static int XK_braille_dots_156() {
         return (int)16787505L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_256 16787506
+     * }
+     */
     public static int XK_braille_dots_256() {
         return (int)16787506L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1256 16787507
+     * }
+     */
     public static int XK_braille_dots_1256() {
         return (int)16787507L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_356 16787508
+     * }
+     */
     public static int XK_braille_dots_356() {
         return (int)16787508L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1356 16787509
+     * }
+     */
     public static int XK_braille_dots_1356() {
         return (int)16787509L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2356 16787510
+     * }
+     */
     public static int XK_braille_dots_2356() {
         return (int)16787510L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12356 16787511
+     * }
+     */
     public static int XK_braille_dots_12356() {
         return (int)16787511L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_456 16787512
+     * }
+     */
     public static int XK_braille_dots_456() {
         return (int)16787512L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1456 16787513
+     * }
+     */
     public static int XK_braille_dots_1456() {
         return (int)16787513L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2456 16787514
+     * }
+     */
     public static int XK_braille_dots_2456() {
         return (int)16787514L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12456 16787515
+     * }
+     */
     public static int XK_braille_dots_12456() {
         return (int)16787515L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3456 16787516
+     * }
+     */
     public static int XK_braille_dots_3456() {
         return (int)16787516L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13456 16787517
+     * }
+     */
     public static int XK_braille_dots_13456() {
         return (int)16787517L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23456 16787518
+     * }
+     */
     public static int XK_braille_dots_23456() {
         return (int)16787518L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123456 16787519
+     * }
+     */
     public static int XK_braille_dots_123456() {
         return (int)16787519L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_7 16787520
+     * }
+     */
     public static int XK_braille_dots_7() {
         return (int)16787520L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_17 16787521
+     * }
+     */
     public static int XK_braille_dots_17() {
         return (int)16787521L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_27 16787522
+     * }
+     */
     public static int XK_braille_dots_27() {
         return (int)16787522L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_127 16787523
+     * }
+     */
     public static int XK_braille_dots_127() {
         return (int)16787523L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_37 16787524
+     * }
+     */
     public static int XK_braille_dots_37() {
         return (int)16787524L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_137 16787525
+     * }
+     */
     public static int XK_braille_dots_137() {
         return (int)16787525L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_237 16787526
+     * }
+     */
     public static int XK_braille_dots_237() {
         return (int)16787526L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1237 16787527
+     * }
+     */
     public static int XK_braille_dots_1237() {
         return (int)16787527L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_47 16787528
+     * }
+     */
     public static int XK_braille_dots_47() {
         return (int)16787528L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_147 16787529
+     * }
+     */
     public static int XK_braille_dots_147() {
         return (int)16787529L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_247 16787530
+     * }
+     */
     public static int XK_braille_dots_247() {
         return (int)16787530L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1247 16787531
+     * }
+     */
     public static int XK_braille_dots_1247() {
         return (int)16787531L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_347 16787532
+     * }
+     */
     public static int XK_braille_dots_347() {
         return (int)16787532L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1347 16787533
+     * }
+     */
     public static int XK_braille_dots_1347() {
         return (int)16787533L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2347 16787534
+     * }
+     */
     public static int XK_braille_dots_2347() {
         return (int)16787534L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12347 16787535
+     * }
+     */
     public static int XK_braille_dots_12347() {
         return (int)16787535L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_57 16787536
+     * }
+     */
     public static int XK_braille_dots_57() {
         return (int)16787536L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_157 16787537
+     * }
+     */
     public static int XK_braille_dots_157() {
         return (int)16787537L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_257 16787538
+     * }
+     */
     public static int XK_braille_dots_257() {
         return (int)16787538L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1257 16787539
+     * }
+     */
     public static int XK_braille_dots_1257() {
         return (int)16787539L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_357 16787540
+     * }
+     */
     public static int XK_braille_dots_357() {
         return (int)16787540L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1357 16787541
+     * }
+     */
     public static int XK_braille_dots_1357() {
         return (int)16787541L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2357 16787542
+     * }
+     */
     public static int XK_braille_dots_2357() {
         return (int)16787542L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12357 16787543
+     * }
+     */
     public static int XK_braille_dots_12357() {
         return (int)16787543L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_457 16787544
+     * }
+     */
     public static int XK_braille_dots_457() {
         return (int)16787544L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1457 16787545
+     * }
+     */
     public static int XK_braille_dots_1457() {
         return (int)16787545L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2457 16787546
+     * }
+     */
     public static int XK_braille_dots_2457() {
         return (int)16787546L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12457 16787547
+     * }
+     */
     public static int XK_braille_dots_12457() {
         return (int)16787547L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3457 16787548
+     * }
+     */
     public static int XK_braille_dots_3457() {
         return (int)16787548L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13457 16787549
+     * }
+     */
     public static int XK_braille_dots_13457() {
         return (int)16787549L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23457 16787550
+     * }
+     */
     public static int XK_braille_dots_23457() {
         return (int)16787550L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123457 16787551
+     * }
+     */
     public static int XK_braille_dots_123457() {
         return (int)16787551L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_67 16787552
+     * }
+     */
     public static int XK_braille_dots_67() {
         return (int)16787552L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_167 16787553
+     * }
+     */
     public static int XK_braille_dots_167() {
         return (int)16787553L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_267 16787554
+     * }
+     */
     public static int XK_braille_dots_267() {
         return (int)16787554L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1267 16787555
+     * }
+     */
     public static int XK_braille_dots_1267() {
         return (int)16787555L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_367 16787556
+     * }
+     */
     public static int XK_braille_dots_367() {
         return (int)16787556L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1367 16787557
+     * }
+     */
     public static int XK_braille_dots_1367() {
         return (int)16787557L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2367 16787558
+     * }
+     */
     public static int XK_braille_dots_2367() {
         return (int)16787558L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12367 16787559
+     * }
+     */
     public static int XK_braille_dots_12367() {
         return (int)16787559L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_467 16787560
+     * }
+     */
     public static int XK_braille_dots_467() {
         return (int)16787560L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1467 16787561
+     * }
+     */
     public static int XK_braille_dots_1467() {
         return (int)16787561L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_2467 16787562
+     * }
+     */
     public static int XK_braille_dots_2467() {
         return (int)16787562L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_12467 16787563
+     * }
+     */
     public static int XK_braille_dots_12467() {
         return (int)16787563L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_3467 16787564
+     * }
+     */
     public static int XK_braille_dots_3467() {
         return (int)16787564L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13467 16787565
+     * }
+     */
     public static int XK_braille_dots_13467() {
         return (int)16787565L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23467 16787566
+     * }
+     */
     public static int XK_braille_dots_23467() {
         return (int)16787566L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123467 16787567
+     * }
+     */
     public static int XK_braille_dots_123467() {
         return (int)16787567L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_567 16787568
+     * }
+     */
     public static int XK_braille_dots_567() {
         return (int)16787568L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1567 16787569
+     * }
+     */
     public static int XK_braille_dots_1567() {
         return (int)16787569L;
     }

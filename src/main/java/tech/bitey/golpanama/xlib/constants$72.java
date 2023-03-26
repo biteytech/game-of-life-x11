@@ -7,25 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$72 {
+final class constants$72 {
 
-    static final FunctionDescriptor XInternalConnectionNumbers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XInternalConnectionNumbers$MH = RuntimeHelper.downcallHandle(
-        "XInternalConnectionNumbers",
-        constants$72.XInternalConnectionNumbers$FUNC
-    );
-    static final FunctionDescriptor XProcessInternalConnection$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XProcessInternalConnection$MH = RuntimeHelper.downcallHandle(
-        "XProcessInternalConnection",
-        constants$72.XProcessInternalConnection$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$72() {}
     static final FunctionDescriptor XAddConnectionWatch$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -62,6 +47,22 @@ class constants$72 {
     static final MethodHandle _Xmbtowc$MH = RuntimeHelper.downcallHandle(
         "_Xmbtowc",
         constants$72._Xmbtowc$FUNC
+    );
+    static final FunctionDescriptor _Xwctomb$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle _Xwctomb$MH = RuntimeHelper.downcallHandle(
+        "_Xwctomb",
+        constants$72._Xwctomb$FUNC
+    );
+    static final FunctionDescriptor XGetEventData$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetEventData$MH = RuntimeHelper.downcallHandle(
+        "XGetEventData",
+        constants$72.XGetEventData$FUNC
     );
 }
 

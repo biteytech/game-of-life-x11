@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$65 {
+final class constants$65 {
 
-    static final FunctionDescriptor XwcTextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XwcTextEscapement$MH = RuntimeHelper.downcallHandle(
-        "XwcTextEscapement",
-        constants$65.XwcTextEscapement$FUNC
-    );
-    static final FunctionDescriptor Xutf8TextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle Xutf8TextEscapement$MH = RuntimeHelper.downcallHandle(
-        "Xutf8TextEscapement",
-        constants$65.Xutf8TextEscapement$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$65() {}
     static final FunctionDescriptor XmbTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -74,6 +58,36 @@ class constants$65 {
     static final MethodHandle XmbTextPerCharExtents$MH = RuntimeHelper.downcallHandle(
         "XmbTextPerCharExtents",
         constants$65.XmbTextPerCharExtents$FUNC
+    );
+    static final FunctionDescriptor XwcTextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XwcTextPerCharExtents$MH = RuntimeHelper.downcallHandle(
+        "XwcTextPerCharExtents",
+        constants$65.XwcTextPerCharExtents$FUNC
+    );
+    static final FunctionDescriptor Xutf8TextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle Xutf8TextPerCharExtents$MH = RuntimeHelper.downcallHandle(
+        "Xutf8TextPerCharExtents",
+        constants$65.Xutf8TextPerCharExtents$FUNC
     );
 }
 

@@ -7,9 +7,22 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     Display* display;
+ *     XID resourceid;
+ *     unsigned long serial;
+ *     unsigned char error_code;
+ *     unsigned char request_code;
+ *     unsigned char minor_code;
+ * };
+ * }
+ */
 public class XErrorEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_POINTER$LAYOUT.withName("display"),
@@ -27,10 +40,22 @@ public class XErrorEvent {
     public static VarHandle type$VH() {
         return XErrorEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XErrorEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XErrorEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -43,26 +68,50 @@ public class XErrorEvent {
     public static VarHandle display$VH() {
         return XErrorEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XErrorEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XErrorEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XErrorEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XErrorEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XErrorEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XErrorEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle resourceid$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("resourceid"));
     public static VarHandle resourceid$VH() {
         return XErrorEvent.resourceid$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XID resourceid;
+     * }
+     */
     public static long resourceid$get(MemorySegment seg) {
         return (long)XErrorEvent.resourceid$VH.get(seg);
     }
-    public static void resourceid$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XID resourceid;
+     * }
+     */
+    public static void resourceid$set(MemorySegment seg, long x) {
         XErrorEvent.resourceid$VH.set(seg, x);
     }
     public static long resourceid$get(MemorySegment seg, long index) {
@@ -75,10 +124,22 @@ public class XErrorEvent {
     public static VarHandle serial$VH() {
         return XErrorEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XErrorEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XErrorEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -91,10 +152,22 @@ public class XErrorEvent {
     public static VarHandle error_code$VH() {
         return XErrorEvent.error_code$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned char error_code;
+     * }
+     */
     public static byte error_code$get(MemorySegment seg) {
         return (byte)XErrorEvent.error_code$VH.get(seg);
     }
-    public static void error_code$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned char error_code;
+     * }
+     */
+    public static void error_code$set(MemorySegment seg, byte x) {
         XErrorEvent.error_code$VH.set(seg, x);
     }
     public static byte error_code$get(MemorySegment seg, long index) {
@@ -107,10 +180,22 @@ public class XErrorEvent {
     public static VarHandle request_code$VH() {
         return XErrorEvent.request_code$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned char request_code;
+     * }
+     */
     public static byte request_code$get(MemorySegment seg) {
         return (byte)XErrorEvent.request_code$VH.get(seg);
     }
-    public static void request_code$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned char request_code;
+     * }
+     */
+    public static void request_code$set(MemorySegment seg, byte x) {
         XErrorEvent.request_code$VH.set(seg, x);
     }
     public static byte request_code$get(MemorySegment seg, long index) {
@@ -123,10 +208,22 @@ public class XErrorEvent {
     public static VarHandle minor_code$VH() {
         return XErrorEvent.minor_code$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned char minor_code;
+     * }
+     */
     public static byte minor_code$get(MemorySegment seg) {
         return (byte)XErrorEvent.minor_code$VH.get(seg);
     }
-    public static void minor_code$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned char minor_code;
+     * }
+     */
+    public static void minor_code$set(MemorySegment seg, byte x) {
         XErrorEvent.minor_code$VH.set(seg, x);
     }
     public static byte minor_code$get(MemorySegment seg, long index) {
@@ -137,10 +234,10 @@ public class XErrorEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

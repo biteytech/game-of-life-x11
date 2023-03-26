@@ -7,29 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$26 {
+final class constants$26 {
 
-    static final FunctionDescriptor XCirculateSubwindowsUp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XCirculateSubwindowsUp$MH = RuntimeHelper.downcallHandle(
-        "XCirculateSubwindowsUp",
-        constants$26.XCirculateSubwindowsUp$FUNC
-    );
-    static final FunctionDescriptor XClearArea$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XClearArea$MH = RuntimeHelper.downcallHandle(
-        "XClearArea",
-        constants$26.XClearArea$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$26() {}
     static final FunctionDescriptor XClearWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT
@@ -61,6 +42,34 @@ class constants$26 {
     static final MethodHandle XConnectionNumber$MH = RuntimeHelper.downcallHandle(
         "XConnectionNumber",
         constants$26.XConnectionNumber$FUNC
+    );
+    static final FunctionDescriptor XConvertSelection$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XConvertSelection$MH = RuntimeHelper.downcallHandle(
+        "XConvertSelection",
+        constants$26.XConvertSelection$FUNC
+    );
+    static final FunctionDescriptor XCopyArea$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XCopyArea$MH = RuntimeHelper.downcallHandle(
+        "XCopyArea",
+        constants$26.XCopyArea$FUNC
     );
 }
 

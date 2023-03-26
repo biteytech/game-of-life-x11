@@ -7,25 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$11 {
+final class constants$11 {
 
-    static final FunctionDescriptor XGetKeyboardMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetKeyboardMapping$MH = RuntimeHelper.downcallHandle(
-        "XGetKeyboardMapping",
-        constants$11.XGetKeyboardMapping$FUNC
-    );
-    static final FunctionDescriptor XStringToKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XStringToKeysym$MH = RuntimeHelper.downcallHandle(
-        "XStringToKeysym",
-        constants$11.XStringToKeysym$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$11() {}
     static final FunctionDescriptor XMaxRequestSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -53,6 +38,20 @@ class constants$11 {
     static final MethodHandle XScreenResourceString$MH = RuntimeHelper.downcallHandle(
         "XScreenResourceString",
         constants$11.XScreenResourceString$FUNC
+    );
+    static final FunctionDescriptor XDisplayMotionBufferSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDisplayMotionBufferSize$MH = RuntimeHelper.downcallHandle(
+        "XDisplayMotionBufferSize",
+        constants$11.XDisplayMotionBufferSize$FUNC
+    );
+    static final FunctionDescriptor XVisualIDFromVisual$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XVisualIDFromVisual$MH = RuntimeHelper.downcallHandle(
+        "XVisualIDFromVisual",
+        constants$11.XVisualIDFromVisual$FUNC
     );
 }
 

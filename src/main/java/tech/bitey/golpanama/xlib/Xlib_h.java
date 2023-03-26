@@ -9,3012 +9,8011 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 public class Xlib_h extends Xlib_h_3 {
 
-    /* package-private */ Xlib_h() {}
-    public static OfByte C_CHAR = Constants$root.C_CHAR$LAYOUT;
-    public static OfShort C_SHORT = Constants$root.C_SHORT$LAYOUT;
-    public static OfInt C_INT = Constants$root.C_INT$LAYOUT;
-    public static OfLong C_LONG = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfLong C_LONG_LONG = Constants$root.C_LONG_LONG$LAYOUT;
-    public static OfFloat C_FLOAT = Constants$root.C_FLOAT$LAYOUT;
-    public static OfDouble C_DOUBLE = Constants$root.C_DOUBLE$LAYOUT;
-    public static OfAddress C_POINTER = Constants$root.C_POINTER$LAYOUT;
+    public static final OfByte C_CHAR = Constants$root.C_CHAR$LAYOUT;
+    public static final OfShort C_SHORT = Constants$root.C_SHORT$LAYOUT;
+    public static final OfInt C_INT = Constants$root.C_INT$LAYOUT;
+    public static final OfLong C_LONG = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong C_LONG_LONG = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfFloat C_FLOAT = Constants$root.C_FLOAT$LAYOUT;
+    public static final OfDouble C_DOUBLE = Constants$root.C_DOUBLE$LAYOUT;
+    public static final OfAddress C_POINTER = Constants$root.C_POINTER$LAYOUT;
+    /**
+     * {@snippet :
+     * #define XlibSpecificationRelease 6
+     * }
+     */
     public static int XlibSpecificationRelease() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define _SYS_TYPES_H 1
+     * }
+     */
     public static int _SYS_TYPES_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _FEATURES_H 1
+     * }
+     */
     public static int _FEATURES_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _DEFAULT_SOURCE 1
+     * }
+     */
     public static int _DEFAULT_SOURCE() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __GLIBC_USE_ISOC2X 0
+     * }
+     */
     public static int __GLIBC_USE_ISOC2X() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_ISOC11 1
+     * }
+     */
     public static int __USE_ISOC11() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_ISOC99 1
+     * }
+     */
     public static int __USE_ISOC99() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_ISOC95 1
+     * }
+     */
     public static int __USE_ISOC95() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_POSIX_IMPLICITLY 1
+     * }
+     */
     public static int __USE_POSIX_IMPLICITLY() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _POSIX_SOURCE 1
+     * }
+     */
     public static int _POSIX_SOURCE() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_POSIX 1
+     * }
+     */
     public static int __USE_POSIX() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_POSIX2 1
+     * }
+     */
     public static int __USE_POSIX2() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_POSIX199309 1
+     * }
+     */
     public static int __USE_POSIX199309() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_POSIX199506 1
+     * }
+     */
     public static int __USE_POSIX199506() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_XOPEN2K 1
+     * }
+     */
     public static int __USE_XOPEN2K() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_XOPEN2K8 1
+     * }
+     */
     public static int __USE_XOPEN2K8() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _ATFILE_SOURCE 1
+     * }
+     */
     public static int _ATFILE_SOURCE() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_MISC 1
+     * }
+     */
     public static int __USE_MISC() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_ATFILE 1
+     * }
+     */
     public static int __USE_ATFILE() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __USE_FORTIFY_LEVEL 0
+     * }
+     */
     public static int __USE_FORTIFY_LEVEL() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define __GLIBC_USE_DEPRECATED_GETS 0
+     * }
+     */
     public static int __GLIBC_USE_DEPRECATED_GETS() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define __GLIBC_USE_DEPRECATED_SCANF 0
+     * }
+     */
     public static int __GLIBC_USE_DEPRECATED_SCANF() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define _STDC_PREDEF_H 1
+     * }
+     */
     public static int _STDC_PREDEF_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __STDC_IEC_559__ 1
+     * }
+     */
     public static int __STDC_IEC_559__() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __STDC_IEC_559_COMPLEX__ 1
+     * }
+     */
     public static int __STDC_IEC_559_COMPLEX__() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __GNU_LIBRARY__ 6
+     * }
+     */
     public static int __GNU_LIBRARY__() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define __GLIBC__ 2
+     * }
+     */
     public static int __GLIBC__() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define __GLIBC_MINOR__ 31
+     * }
+     */
     public static int __GLIBC_MINOR__() {
         return (int)31L;
     }
+    /**
+     * {@snippet :
+     * #define _SYS_CDEFS_H 1
+     * }
+     */
     public static int _SYS_CDEFS_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __glibc_c99_flexarr_available 1
+     * }
+     */
     public static int __glibc_c99_flexarr_available() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __WORDSIZE 64
+     * }
+     */
     public static int __WORDSIZE() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define __WORDSIZE_TIME64_COMPAT32 1
+     * }
+     */
     public static int __WORDSIZE_TIME64_COMPAT32() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __SYSCALL_WORDSIZE 64
+     * }
+     */
     public static int __SYSCALL_WORDSIZE() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define __LONG_DOUBLE_USES_FLOAT128 0
+     * }
+     */
     public static int __LONG_DOUBLE_USES_FLOAT128() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define __HAVE_GENERIC_SELECTION 1
+     * }
+     */
     public static int __HAVE_GENERIC_SELECTION() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_TYPES_H 1
+     * }
+     */
     public static int _BITS_TYPES_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_TYPESIZES_H 1
+     * }
+     */
     public static int _BITS_TYPESIZES_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __OFF_T_MATCHES_OFF64_T 1
+     * }
+     */
     public static int __OFF_T_MATCHES_OFF64_T() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __INO_T_MATCHES_INO64_T 1
+     * }
+     */
     public static int __INO_T_MATCHES_INO64_T() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __RLIM_T_MATCHES_RLIM64_T 1
+     * }
+     */
     public static int __RLIM_T_MATCHES_RLIM64_T() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __STATFS_MATCHES_STATFS64 1
+     * }
+     */
     public static int __STATFS_MATCHES_STATFS64() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __FD_SETSIZE 1024
+     * }
+     */
     public static int __FD_SETSIZE() {
         return (int)1024L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_TIME64_H 1
+     * }
+     */
     public static int _BITS_TIME64_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __clock_t_defined 1
+     * }
+     */
     public static int __clock_t_defined() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __clockid_t_defined 1
+     * }
+     */
     public static int __clockid_t_defined() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __time_t_defined 1
+     * }
+     */
     public static int __time_t_defined() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __timer_t_defined 1
+     * }
+     */
     public static int __timer_t_defined() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_STDINT_INTN_H 1
+     * }
+     */
     public static int _BITS_STDINT_INTN_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __BIT_TYPES_DEFINED__ 1
+     * }
+     */
     public static int __BIT_TYPES_DEFINED__() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _ENDIAN_H 1
+     * }
+     */
     public static int _ENDIAN_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_ENDIAN_H 1
+     * }
+     */
     public static int _BITS_ENDIAN_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __LITTLE_ENDIAN 1234
+     * }
+     */
     public static int __LITTLE_ENDIAN() {
         return (int)1234L;
     }
+    /**
+     * {@snippet :
+     * #define __BIG_ENDIAN 4321
+     * }
+     */
     public static int __BIG_ENDIAN() {
         return (int)4321L;
     }
+    /**
+     * {@snippet :
+     * #define __PDP_ENDIAN 3412
+     * }
+     */
     public static int __PDP_ENDIAN() {
         return (int)3412L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_ENDIANNESS_H 1
+     * }
+     */
     public static int _BITS_ENDIANNESS_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_BYTESWAP_H 1
+     * }
+     */
     public static int _BITS_BYTESWAP_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_UINTN_IDENTITY_H 1
+     * }
+     */
     public static int _BITS_UINTN_IDENTITY_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _SYS_SELECT_H 1
+     * }
+     */
     public static int _SYS_SELECT_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __sigset_t_defined 1
+     * }
+     */
     public static int __sigset_t_defined() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __timeval_defined 1
+     * }
+     */
     public static int __timeval_defined() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _STRUCT_TIMESPEC 1
+     * }
+     */
     public static int _STRUCT_TIMESPEC() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_PTHREADTYPES_COMMON_H 1
+     * }
+     */
     public static int _BITS_PTHREADTYPES_COMMON_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _THREAD_SHARED_TYPES_H 1
+     * }
+     */
     public static int _THREAD_SHARED_TYPES_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define _BITS_PTHREADTYPES_ARCH_H 1
+     * }
+     */
     public static int _BITS_PTHREADTYPES_ARCH_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_MUTEX_T 40
+     * }
+     */
     public static int __SIZEOF_PTHREAD_MUTEX_T() {
         return (int)40L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_ATTR_T 56
+     * }
+     */
     public static int __SIZEOF_PTHREAD_ATTR_T() {
         return (int)56L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_RWLOCK_T 56
+     * }
+     */
     public static int __SIZEOF_PTHREAD_RWLOCK_T() {
         return (int)56L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_BARRIER_T 32
+     * }
+     */
     public static int __SIZEOF_PTHREAD_BARRIER_T() {
         return (int)32L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_MUTEXATTR_T 4
+     * }
+     */
     public static int __SIZEOF_PTHREAD_MUTEXATTR_T() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_COND_T 48
+     * }
+     */
     public static int __SIZEOF_PTHREAD_COND_T() {
         return (int)48L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_CONDATTR_T 4
+     * }
+     */
     public static int __SIZEOF_PTHREAD_CONDATTR_T() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_RWLOCKATTR_T 8
+     * }
+     */
     public static int __SIZEOF_PTHREAD_RWLOCKATTR_T() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define __SIZEOF_PTHREAD_BARRIERATTR_T 4
+     * }
+     */
     public static int __SIZEOF_PTHREAD_BARRIERATTR_T() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define _THREAD_MUTEX_INTERNAL_H 1
+     * }
+     */
     public static int _THREAD_MUTEX_INTERNAL_H() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __PTHREAD_MUTEX_HAVE_PREV 1
+     * }
+     */
     public static int __PTHREAD_MUTEX_HAVE_PREV() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define __have_pthread_attr_t 1
+     * }
+     */
     public static int __have_pthread_attr_t() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define X_PROTOCOL 11
+     * }
+     */
     public static int X_PROTOCOL() {
         return (int)11L;
     }
+    /**
+     * {@snippet :
+     * #define X_PROTOCOL_REVISION 0
+     * }
+     */
     public static int X_PROTOCOL_REVISION() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define KeyPress 2
+     * }
+     */
     public static int KeyPress() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define KeyRelease 3
+     * }
+     */
     public static int KeyRelease() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define ButtonPress 4
+     * }
+     */
     public static int ButtonPress() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define ButtonRelease 5
+     * }
+     */
     public static int ButtonRelease() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define MotionNotify 6
+     * }
+     */
     public static int MotionNotify() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define EnterNotify 7
+     * }
+     */
     public static int EnterNotify() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * #define LeaveNotify 8
+     * }
+     */
     public static int LeaveNotify() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define FocusIn 9
+     * }
+     */
     public static int FocusIn() {
         return (int)9L;
     }
+    /**
+     * {@snippet :
+     * #define FocusOut 10
+     * }
+     */
     public static int FocusOut() {
         return (int)10L;
     }
+    /**
+     * {@snippet :
+     * #define KeymapNotify 11
+     * }
+     */
     public static int KeymapNotify() {
         return (int)11L;
     }
+    /**
+     * {@snippet :
+     * #define Expose 12
+     * }
+     */
     public static int Expose() {
         return (int)12L;
     }
+    /**
+     * {@snippet :
+     * #define GraphicsExpose 13
+     * }
+     */
     public static int GraphicsExpose() {
         return (int)13L;
     }
+    /**
+     * {@snippet :
+     * #define NoExpose 14
+     * }
+     */
     public static int NoExpose() {
         return (int)14L;
     }
+    /**
+     * {@snippet :
+     * #define VisibilityNotify 15
+     * }
+     */
     public static int VisibilityNotify() {
         return (int)15L;
     }
+    /**
+     * {@snippet :
+     * #define CreateNotify 16
+     * }
+     */
     public static int CreateNotify() {
         return (int)16L;
     }
+    /**
+     * {@snippet :
+     * #define DestroyNotify 17
+     * }
+     */
     public static int DestroyNotify() {
         return (int)17L;
     }
+    /**
+     * {@snippet :
+     * #define UnmapNotify 18
+     * }
+     */
     public static int UnmapNotify() {
         return (int)18L;
     }
+    /**
+     * {@snippet :
+     * #define MapNotify 19
+     * }
+     */
     public static int MapNotify() {
         return (int)19L;
     }
+    /**
+     * {@snippet :
+     * #define MapRequest 20
+     * }
+     */
     public static int MapRequest() {
         return (int)20L;
     }
+    /**
+     * {@snippet :
+     * #define ReparentNotify 21
+     * }
+     */
     public static int ReparentNotify() {
         return (int)21L;
     }
+    /**
+     * {@snippet :
+     * #define ConfigureNotify 22
+     * }
+     */
     public static int ConfigureNotify() {
         return (int)22L;
     }
+    /**
+     * {@snippet :
+     * #define ConfigureRequest 23
+     * }
+     */
     public static int ConfigureRequest() {
         return (int)23L;
     }
+    /**
+     * {@snippet :
+     * #define GravityNotify 24
+     * }
+     */
     public static int GravityNotify() {
         return (int)24L;
     }
+    /**
+     * {@snippet :
+     * #define ResizeRequest 25
+     * }
+     */
     public static int ResizeRequest() {
         return (int)25L;
     }
+    /**
+     * {@snippet :
+     * #define CirculateNotify 26
+     * }
+     */
     public static int CirculateNotify() {
         return (int)26L;
     }
+    /**
+     * {@snippet :
+     * #define CirculateRequest 27
+     * }
+     */
     public static int CirculateRequest() {
         return (int)27L;
     }
+    /**
+     * {@snippet :
+     * #define PropertyNotify 28
+     * }
+     */
     public static int PropertyNotify() {
         return (int)28L;
     }
+    /**
+     * {@snippet :
+     * #define SelectionClear 29
+     * }
+     */
     public static int SelectionClear() {
         return (int)29L;
     }
+    /**
+     * {@snippet :
+     * #define SelectionRequest 30
+     * }
+     */
     public static int SelectionRequest() {
         return (int)30L;
     }
+    /**
+     * {@snippet :
+     * #define SelectionNotify 31
+     * }
+     */
     public static int SelectionNotify() {
         return (int)31L;
     }
+    /**
+     * {@snippet :
+     * #define ColormapNotify 32
+     * }
+     */
     public static int ColormapNotify() {
         return (int)32L;
     }
+    /**
+     * {@snippet :
+     * #define ClientMessage 33
+     * }
+     */
     public static int ClientMessage() {
         return (int)33L;
     }
+    /**
+     * {@snippet :
+     * #define MappingNotify 34
+     * }
+     */
     public static int MappingNotify() {
         return (int)34L;
     }
+    /**
+     * {@snippet :
+     * #define GenericEvent 35
+     * }
+     */
     public static int GenericEvent() {
         return (int)35L;
     }
+    /**
+     * {@snippet :
+     * #define LASTEvent 36
+     * }
+     */
     public static int LASTEvent() {
         return (int)36L;
     }
+    /**
+     * {@snippet :
+     * #define ShiftMapIndex 0
+     * }
+     */
     public static int ShiftMapIndex() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define LockMapIndex 1
+     * }
+     */
     public static int LockMapIndex() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define ControlMapIndex 2
+     * }
+     */
     public static int ControlMapIndex() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define Mod1MapIndex 3
+     * }
+     */
     public static int Mod1MapIndex() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define Mod2MapIndex 4
+     * }
+     */
     public static int Mod2MapIndex() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define Mod3MapIndex 5
+     * }
+     */
     public static int Mod3MapIndex() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define Mod4MapIndex 6
+     * }
+     */
     public static int Mod4MapIndex() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define Mod5MapIndex 7
+     * }
+     */
     public static int Mod5MapIndex() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * #define Button1 1
+     * }
+     */
     public static int Button1() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define Button2 2
+     * }
+     */
     public static int Button2() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define Button3 3
+     * }
+     */
     public static int Button3() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define Button4 4
+     * }
+     */
     public static int Button4() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define Button5 5
+     * }
+     */
     public static int Button5() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyNormal 0
+     * }
+     */
     public static int NotifyNormal() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyGrab 1
+     * }
+     */
     public static int NotifyGrab() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyUngrab 2
+     * }
+     */
     public static int NotifyUngrab() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyWhileGrabbed 3
+     * }
+     */
     public static int NotifyWhileGrabbed() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyHint 1
+     * }
+     */
     public static int NotifyHint() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyAncestor 0
+     * }
+     */
     public static int NotifyAncestor() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyVirtual 1
+     * }
+     */
     public static int NotifyVirtual() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyInferior 2
+     * }
+     */
     public static int NotifyInferior() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyNonlinear 3
+     * }
+     */
     public static int NotifyNonlinear() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyNonlinearVirtual 4
+     * }
+     */
     public static int NotifyNonlinearVirtual() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyPointer 5
+     * }
+     */
     public static int NotifyPointer() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyPointerRoot 6
+     * }
+     */
     public static int NotifyPointerRoot() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define NotifyDetailNone 7
+     * }
+     */
     public static int NotifyDetailNone() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * #define VisibilityUnobscured 0
+     * }
+     */
     public static int VisibilityUnobscured() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define VisibilityPartiallyObscured 1
+     * }
+     */
     public static int VisibilityPartiallyObscured() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define VisibilityFullyObscured 2
+     * }
+     */
     public static int VisibilityFullyObscured() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define PlaceOnTop 0
+     * }
+     */
     public static int PlaceOnTop() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define PlaceOnBottom 1
+     * }
+     */
     public static int PlaceOnBottom() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define FamilyInternet 0
+     * }
+     */
     public static int FamilyInternet() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define FamilyDECnet 1
+     * }
+     */
     public static int FamilyDECnet() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define FamilyChaos 2
+     * }
+     */
     public static int FamilyChaos() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define FamilyInternet6 6
+     * }
+     */
     public static int FamilyInternet6() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define FamilyServerInterpreted 5
+     * }
+     */
     public static int FamilyServerInterpreted() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define PropertyNewValue 0
+     * }
+     */
     public static int PropertyNewValue() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define PropertyDelete 1
+     * }
+     */
     public static int PropertyDelete() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define ColormapUninstalled 0
+     * }
+     */
     public static int ColormapUninstalled() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define ColormapInstalled 1
+     * }
+     */
     public static int ColormapInstalled() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define GrabModeSync 0
+     * }
+     */
     public static int GrabModeSync() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define GrabModeAsync 1
+     * }
+     */
     public static int GrabModeAsync() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define GrabSuccess 0
+     * }
+     */
     public static int GrabSuccess() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define AlreadyGrabbed 1
+     * }
+     */
     public static int AlreadyGrabbed() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define GrabInvalidTime 2
+     * }
+     */
     public static int GrabInvalidTime() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define GrabNotViewable 3
+     * }
+     */
     public static int GrabNotViewable() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define GrabFrozen 4
+     * }
+     */
     public static int GrabFrozen() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define AsyncPointer 0
+     * }
+     */
     public static int AsyncPointer() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define SyncPointer 1
+     * }
+     */
     public static int SyncPointer() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define ReplayPointer 2
+     * }
+     */
     public static int ReplayPointer() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define AsyncKeyboard 3
+     * }
+     */
     public static int AsyncKeyboard() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define SyncKeyboard 4
+     * }
+     */
     public static int SyncKeyboard() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define ReplayKeyboard 5
+     * }
+     */
     public static int ReplayKeyboard() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define AsyncBoth 6
+     * }
+     */
     public static int AsyncBoth() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define SyncBoth 7
+     * }
+     */
     public static int SyncBoth() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * #define RevertToParent 2
+     * }
+     */
     public static int RevertToParent() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define Success 0
+     * }
+     */
     public static int Success() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define BadRequest 1
+     * }
+     */
     public static int BadRequest() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define BadValue 2
+     * }
+     */
     public static int BadValue() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define BadWindow 3
+     * }
+     */
     public static int BadWindow() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define BadPixmap 4
+     * }
+     */
     public static int BadPixmap() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define BadAtom 5
+     * }
+     */
     public static int BadAtom() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define BadCursor 6
+     * }
+     */
     public static int BadCursor() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define BadFont 7
+     * }
+     */
     public static int BadFont() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * #define BadMatch 8
+     * }
+     */
     public static int BadMatch() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define BadDrawable 9
+     * }
+     */
     public static int BadDrawable() {
         return (int)9L;
     }
+    /**
+     * {@snippet :
+     * #define BadAccess 10
+     * }
+     */
     public static int BadAccess() {
         return (int)10L;
     }
+    /**
+     * {@snippet :
+     * #define BadAlloc 11
+     * }
+     */
     public static int BadAlloc() {
         return (int)11L;
     }
+    /**
+     * {@snippet :
+     * #define BadColor 12
+     * }
+     */
     public static int BadColor() {
         return (int)12L;
     }
+    /**
+     * {@snippet :
+     * #define BadGC 13
+     * }
+     */
     public static int BadGC() {
         return (int)13L;
     }
+    /**
+     * {@snippet :
+     * #define BadIDChoice 14
+     * }
+     */
     public static int BadIDChoice() {
         return (int)14L;
     }
+    /**
+     * {@snippet :
+     * #define BadName 15
+     * }
+     */
     public static int BadName() {
         return (int)15L;
     }
+    /**
+     * {@snippet :
+     * #define BadLength 16
+     * }
+     */
     public static int BadLength() {
         return (int)16L;
     }
+    /**
+     * {@snippet :
+     * #define BadImplementation 17
+     * }
+     */
     public static int BadImplementation() {
         return (int)17L;
     }
+    /**
+     * {@snippet :
+     * #define FirstExtensionError 128
+     * }
+     */
     public static int FirstExtensionError() {
         return (int)128L;
     }
+    /**
+     * {@snippet :
+     * #define LastExtensionError 255
+     * }
+     */
     public static int LastExtensionError() {
         return (int)255L;
     }
+    /**
+     * {@snippet :
+     * #define InputOutput 1
+     * }
+     */
     public static int InputOutput() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define InputOnly 2
+     * }
+     */
     public static int InputOnly() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define ForgetGravity 0
+     * }
+     */
     public static int ForgetGravity() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define NorthWestGravity 1
+     * }
+     */
     public static int NorthWestGravity() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define NorthGravity 2
+     * }
+     */
     public static int NorthGravity() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define NorthEastGravity 3
+     * }
+     */
     public static int NorthEastGravity() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define WestGravity 4
+     * }
+     */
     public static int WestGravity() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define CenterGravity 5
+     * }
+     */
     public static int CenterGravity() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define EastGravity 6
+     * }
+     */
     public static int EastGravity() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define SouthWestGravity 7
+     * }
+     */
     public static int SouthWestGravity() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * #define SouthGravity 8
+     * }
+     */
     public static int SouthGravity() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define SouthEastGravity 9
+     * }
+     */
     public static int SouthEastGravity() {
         return (int)9L;
     }
+    /**
+     * {@snippet :
+     * #define StaticGravity 10
+     * }
+     */
     public static int StaticGravity() {
         return (int)10L;
     }
+    /**
+     * {@snippet :
+     * #define UnmapGravity 0
+     * }
+     */
     public static int UnmapGravity() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define NotUseful 0
+     * }
+     */
     public static int NotUseful() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define WhenMapped 1
+     * }
+     */
     public static int WhenMapped() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define Always 2
+     * }
+     */
     public static int Always() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define IsUnmapped 0
+     * }
+     */
     public static int IsUnmapped() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define IsUnviewable 1
+     * }
+     */
     public static int IsUnviewable() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define IsViewable 2
+     * }
+     */
     public static int IsViewable() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define SetModeInsert 0
+     * }
+     */
     public static int SetModeInsert() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define SetModeDelete 1
+     * }
+     */
     public static int SetModeDelete() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define DestroyAll 0
+     * }
+     */
     public static int DestroyAll() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define RetainPermanent 1
+     * }
+     */
     public static int RetainPermanent() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define RetainTemporary 2
+     * }
+     */
     public static int RetainTemporary() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define Above 0
+     * }
+     */
     public static int Above() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define Below 1
+     * }
+     */
     public static int Below() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define TopIf 2
+     * }
+     */
     public static int TopIf() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define BottomIf 3
+     * }
+     */
     public static int BottomIf() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define Opposite 4
+     * }
+     */
     public static int Opposite() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define RaiseLowest 0
+     * }
+     */
     public static int RaiseLowest() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define LowerHighest 1
+     * }
+     */
     public static int LowerHighest() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define PropModeReplace 0
+     * }
+     */
     public static int PropModeReplace() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define PropModePrepend 1
+     * }
+     */
     public static int PropModePrepend() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define PropModeAppend 2
+     * }
+     */
     public static int PropModeAppend() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define GXclear 0
+     * }
+     */
     public static int GXclear() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define GXand 1
+     * }
+     */
     public static int GXand() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define GXandReverse 2
+     * }
+     */
     public static int GXandReverse() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define GXcopy 3
+     * }
+     */
     public static int GXcopy() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define GXandInverted 4
+     * }
+     */
     public static int GXandInverted() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define GXnoop 5
+     * }
+     */
     public static int GXnoop() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define GXxor 6
+     * }
+     */
     public static int GXxor() {
         return (int)6L;
     }
+    /**
+     * {@snippet :
+     * #define GXor 7
+     * }
+     */
     public static int GXor() {
         return (int)7L;
     }
+    /**
+     * {@snippet :
+     * #define GXnor 8
+     * }
+     */
     public static int GXnor() {
         return (int)8L;
     }
+    /**
+     * {@snippet :
+     * #define GXequiv 9
+     * }
+     */
     public static int GXequiv() {
         return (int)9L;
     }
+    /**
+     * {@snippet :
+     * #define GXinvert 10
+     * }
+     */
     public static int GXinvert() {
         return (int)10L;
     }
+    /**
+     * {@snippet :
+     * #define GXorReverse 11
+     * }
+     */
     public static int GXorReverse() {
         return (int)11L;
     }
+    /**
+     * {@snippet :
+     * #define GXcopyInverted 12
+     * }
+     */
     public static int GXcopyInverted() {
         return (int)12L;
     }
+    /**
+     * {@snippet :
+     * #define GXorInverted 13
+     * }
+     */
     public static int GXorInverted() {
         return (int)13L;
     }
+    /**
+     * {@snippet :
+     * #define GXnand 14
+     * }
+     */
     public static int GXnand() {
         return (int)14L;
     }
+    /**
+     * {@snippet :
+     * #define GXset 15
+     * }
+     */
     public static int GXset() {
         return (int)15L;
     }
+    /**
+     * {@snippet :
+     * #define LineSolid 0
+     * }
+     */
     public static int LineSolid() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define LineOnOffDash 1
+     * }
+     */
     public static int LineOnOffDash() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define LineDoubleDash 2
+     * }
+     */
     public static int LineDoubleDash() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define CapNotLast 0
+     * }
+     */
     public static int CapNotLast() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define CapButt 1
+     * }
+     */
     public static int CapButt() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define CapRound 2
+     * }
+     */
     public static int CapRound() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define CapProjecting 3
+     * }
+     */
     public static int CapProjecting() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define JoinMiter 0
+     * }
+     */
     public static int JoinMiter() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define JoinRound 1
+     * }
+     */
     public static int JoinRound() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define JoinBevel 2
+     * }
+     */
     public static int JoinBevel() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define FillSolid 0
+     * }
+     */
     public static int FillSolid() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define FillTiled 1
+     * }
+     */
     public static int FillTiled() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define FillStippled 2
+     * }
+     */
     public static int FillStippled() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define FillOpaqueStippled 3
+     * }
+     */
     public static int FillOpaqueStippled() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define EvenOddRule 0
+     * }
+     */
     public static int EvenOddRule() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define WindingRule 1
+     * }
+     */
     public static int WindingRule() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define ClipByChildren 0
+     * }
+     */
     public static int ClipByChildren() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define IncludeInferiors 1
+     * }
+     */
     public static int IncludeInferiors() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define Unsorted 0
+     * }
+     */
     public static int Unsorted() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define YSorted 1
+     * }
+     */
     public static int YSorted() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define YXSorted 2
+     * }
+     */
     public static int YXSorted() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define YXBanded 3
+     * }
+     */
     public static int YXBanded() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define CoordModeOrigin 0
+     * }
+     */
     public static int CoordModeOrigin() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define CoordModePrevious 1
+     * }
+     */
     public static int CoordModePrevious() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define Complex 0
+     * }
+     */
     public static int Complex() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define Nonconvex 1
+     * }
+     */
     public static int Nonconvex() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define Convex 2
+     * }
+     */
     public static int Convex() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define ArcChord 0
+     * }
+     */
     public static int ArcChord() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define ArcPieSlice 1
+     * }
+     */
     public static int ArcPieSlice() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define GCLastBit 22
+     * }
+     */
     public static int GCLastBit() {
         return (int)22L;
     }
+    /**
+     * {@snippet :
+     * #define FontLeftToRight 0
+     * }
+     */
     public static int FontLeftToRight() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define FontRightToLeft 1
+     * }
+     */
     public static int FontRightToLeft() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define FontChange 255
+     * }
+     */
     public static int FontChange() {
         return (int)255L;
     }
+    /**
+     * {@snippet :
+     * #define XYBitmap 0
+     * }
+     */
     public static int XYBitmap() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define XYPixmap 1
+     * }
+     */
     public static int XYPixmap() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define ZPixmap 2
+     * }
+     */
     public static int ZPixmap() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define AllocNone 0
+     * }
+     */
     public static int AllocNone() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define AllocAll 1
+     * }
+     */
     public static int AllocAll() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define CursorShape 0
+     * }
+     */
     public static int CursorShape() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define TileShape 1
+     * }
+     */
     public static int TileShape() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define StippleShape 2
+     * }
+     */
     public static int StippleShape() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define AutoRepeatModeOff 0
+     * }
+     */
     public static int AutoRepeatModeOff() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define AutoRepeatModeOn 1
+     * }
+     */
     public static int AutoRepeatModeOn() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define AutoRepeatModeDefault 2
+     * }
+     */
     public static int AutoRepeatModeDefault() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define LedModeOff 0
+     * }
+     */
     public static int LedModeOff() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define LedModeOn 1
+     * }
+     */
     public static int LedModeOn() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define MappingSuccess 0
+     * }
+     */
     public static int MappingSuccess() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define MappingBusy 1
+     * }
+     */
     public static int MappingBusy() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define MappingFailed 2
+     * }
+     */
     public static int MappingFailed() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define MappingModifier 0
+     * }
+     */
     public static int MappingModifier() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define MappingKeyboard 1
+     * }
+     */
     public static int MappingKeyboard() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define MappingPointer 2
+     * }
+     */
     public static int MappingPointer() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define DontPreferBlanking 0
+     * }
+     */
     public static int DontPreferBlanking() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define PreferBlanking 1
+     * }
+     */
     public static int PreferBlanking() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define DefaultBlanking 2
+     * }
+     */
     public static int DefaultBlanking() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define DisableScreenSaver 0
+     * }
+     */
     public static int DisableScreenSaver() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define DisableScreenInterval 0
+     * }
+     */
     public static int DisableScreenInterval() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define DontAllowExposures 0
+     * }
+     */
     public static int DontAllowExposures() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define AllowExposures 1
+     * }
+     */
     public static int AllowExposures() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define DefaultExposures 2
+     * }
+     */
     public static int DefaultExposures() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define ScreenSaverReset 0
+     * }
+     */
     public static int ScreenSaverReset() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define ScreenSaverActive 1
+     * }
+     */
     public static int ScreenSaverActive() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define HostInsert 0
+     * }
+     */
     public static int HostInsert() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define HostDelete 1
+     * }
+     */
     public static int HostDelete() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define EnableAccess 1
+     * }
+     */
     public static int EnableAccess() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define DisableAccess 0
+     * }
+     */
     public static int DisableAccess() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define StaticGray 0
+     * }
+     */
     public static int StaticGray() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define GrayScale 1
+     * }
+     */
     public static int GrayScale() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define StaticColor 2
+     * }
+     */
     public static int StaticColor() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define PseudoColor 3
+     * }
+     */
     public static int PseudoColor() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define TrueColor 4
+     * }
+     */
     public static int TrueColor() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define DirectColor 5
+     * }
+     */
     public static int DirectColor() {
         return (int)5L;
     }
+    /**
+     * {@snippet :
+     * #define LSBFirst 0
+     * }
+     */
     public static int LSBFirst() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define MSBFirst 1
+     * }
+     */
     public static int MSBFirst() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define NeedFunctionPrototypes 1
+     * }
+     */
     public static int NeedFunctionPrototypes() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define NeedVarargsPrototypes 1
+     * }
+     */
     public static int NeedVarargsPrototypes() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define NeedNestedPrototypes 1
+     * }
+     */
     public static int NeedNestedPrototypes() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define FUNCPROTO 15
+     * }
+     */
     public static int FUNCPROTO() {
         return (int)15L;
     }
+    /**
+     * {@snippet :
+     * #define NeedWidePrototypes 0
+     * }
+     */
     public static int NeedWidePrototypes() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define X_HAVE_UTF8_STRING 1
+     * }
+     */
     public static int X_HAVE_UTF8_STRING() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define True 1
+     * }
+     */
     public static int True() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define False 0
+     * }
+     */
     public static int False() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define QueuedAlready 0
+     * }
+     */
     public static int QueuedAlready() {
         return (int)0L;
     }
+    /**
+     * {@snippet :
+     * #define QueuedAfterReading 1
+     * }
+     */
     public static int QueuedAfterReading() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define QueuedAfterFlush 2
+     * }
+     */
     public static int QueuedAfterFlush() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define XLookupNone 1
+     * }
+     */
     public static int XLookupNone() {
         return (int)1L;
     }
+    /**
+     * {@snippet :
+     * #define XLookupChars 2
+     * }
+     */
     public static int XLookupChars() {
         return (int)2L;
     }
+    /**
+     * {@snippet :
+     * #define XLookupKeySym 3
+     * }
+     */
     public static int XLookupKeySym() {
         return (int)3L;
     }
+    /**
+     * {@snippet :
+     * #define XLookupBoth 4
+     * }
+     */
     public static int XLookupBoth() {
         return (int)4L;
     }
+    /**
+     * {@snippet :
+     * #define XK_VoidSymbol 16777215
+     * }
+     */
     public static int XK_VoidSymbol() {
         return (int)16777215L;
     }
+    /**
+     * {@snippet :
+     * #define XK_BackSpace 65288
+     * }
+     */
     public static int XK_BackSpace() {
         return (int)65288L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Tab 65289
+     * }
+     */
     public static int XK_Tab() {
         return (int)65289L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Linefeed 65290
+     * }
+     */
     public static int XK_Linefeed() {
         return (int)65290L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Clear 65291
+     * }
+     */
     public static int XK_Clear() {
         return (int)65291L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Return 65293
+     * }
+     */
     public static int XK_Return() {
         return (int)65293L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pause 65299
+     * }
+     */
     public static int XK_Pause() {
         return (int)65299L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Scroll_Lock 65300
+     * }
+     */
     public static int XK_Scroll_Lock() {
         return (int)65300L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sys_Req 65301
+     * }
+     */
     public static int XK_Sys_Req() {
         return (int)65301L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Escape 65307
+     * }
+     */
     public static int XK_Escape() {
         return (int)65307L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Delete 65535
+     * }
+     */
     public static int XK_Delete() {
         return (int)65535L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Multi_key 65312
+     * }
+     */
     public static int XK_Multi_key() {
         return (int)65312L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Codeinput 65335
+     * }
+     */
     public static int XK_Codeinput() {
         return (int)65335L;
     }
+    /**
+     * {@snippet :
+     * #define XK_SingleCandidate 65340
+     * }
+     */
     public static int XK_SingleCandidate() {
         return (int)65340L;
     }
+    /**
+     * {@snippet :
+     * #define XK_MultipleCandidate 65341
+     * }
+     */
     public static int XK_MultipleCandidate() {
         return (int)65341L;
     }
+    /**
+     * {@snippet :
+     * #define XK_PreviousCandidate 65342
+     * }
+     */
     public static int XK_PreviousCandidate() {
         return (int)65342L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Kanji 65313
+     * }
+     */
     public static int XK_Kanji() {
         return (int)65313L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Muhenkan 65314
+     * }
+     */
     public static int XK_Muhenkan() {
         return (int)65314L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Henkan_Mode 65315
+     * }
+     */
     public static int XK_Henkan_Mode() {
         return (int)65315L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Henkan 65315
+     * }
+     */
     public static int XK_Henkan() {
         return (int)65315L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Romaji 65316
+     * }
+     */
     public static int XK_Romaji() {
         return (int)65316L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hiragana 65317
+     * }
+     */
     public static int XK_Hiragana() {
         return (int)65317L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Katakana 65318
+     * }
+     */
     public static int XK_Katakana() {
         return (int)65318L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hiragana_Katakana 65319
+     * }
+     */
     public static int XK_Hiragana_Katakana() {
         return (int)65319L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Zenkaku 65320
+     * }
+     */
     public static int XK_Zenkaku() {
         return (int)65320L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hankaku 65321
+     * }
+     */
     public static int XK_Hankaku() {
         return (int)65321L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Zenkaku_Hankaku 65322
+     * }
+     */
     public static int XK_Zenkaku_Hankaku() {
         return (int)65322L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Touroku 65323
+     * }
+     */
     public static int XK_Touroku() {
         return (int)65323L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Massyo 65324
+     * }
+     */
     public static int XK_Massyo() {
         return (int)65324L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Kana_Lock 65325
+     * }
+     */
     public static int XK_Kana_Lock() {
         return (int)65325L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Kana_Shift 65326
+     * }
+     */
     public static int XK_Kana_Shift() {
         return (int)65326L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Eisu_Shift 65327
+     * }
+     */
     public static int XK_Eisu_Shift() {
         return (int)65327L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Eisu_toggle 65328
+     * }
+     */
     public static int XK_Eisu_toggle() {
         return (int)65328L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Kanji_Bangou 65335
+     * }
+     */
     public static int XK_Kanji_Bangou() {
         return (int)65335L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Zen_Koho 65341
+     * }
+     */
     public static int XK_Zen_Koho() {
         return (int)65341L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Mae_Koho 65342
+     * }
+     */
     public static int XK_Mae_Koho() {
         return (int)65342L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Home 65360
+     * }
+     */
     public static int XK_Home() {
         return (int)65360L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Left 65361
+     * }
+     */
     public static int XK_Left() {
         return (int)65361L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Up 65362
+     * }
+     */
     public static int XK_Up() {
         return (int)65362L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Right 65363
+     * }
+     */
     public static int XK_Right() {
         return (int)65363L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Down 65364
+     * }
+     */
     public static int XK_Down() {
         return (int)65364L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Prior 65365
+     * }
+     */
     public static int XK_Prior() {
         return (int)65365L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Page_Up 65365
+     * }
+     */
     public static int XK_Page_Up() {
         return (int)65365L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Next 65366
+     * }
+     */
     public static int XK_Next() {
         return (int)65366L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Page_Down 65366
+     * }
+     */
     public static int XK_Page_Down() {
         return (int)65366L;
     }
+    /**
+     * {@snippet :
+     * #define XK_End 65367
+     * }
+     */
     public static int XK_End() {
         return (int)65367L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Begin 65368
+     * }
+     */
     public static int XK_Begin() {
         return (int)65368L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Select 65376
+     * }
+     */
     public static int XK_Select() {
         return (int)65376L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Print 65377
+     * }
+     */
     public static int XK_Print() {
         return (int)65377L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Execute 65378
+     * }
+     */
     public static int XK_Execute() {
         return (int)65378L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Insert 65379
+     * }
+     */
     public static int XK_Insert() {
         return (int)65379L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Undo 65381
+     * }
+     */
     public static int XK_Undo() {
         return (int)65381L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Redo 65382
+     * }
+     */
     public static int XK_Redo() {
         return (int)65382L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Menu 65383
+     * }
+     */
     public static int XK_Menu() {
         return (int)65383L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Find 65384
+     * }
+     */
     public static int XK_Find() {
         return (int)65384L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cancel 65385
+     * }
+     */
     public static int XK_Cancel() {
         return (int)65385L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Help 65386
+     * }
+     */
     public static int XK_Help() {
         return (int)65386L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Break 65387
+     * }
+     */
     public static int XK_Break() {
         return (int)65387L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Mode_switch 65406
+     * }
+     */
     public static int XK_Mode_switch() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_script_switch 65406
+     * }
+     */
     public static int XK_script_switch() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Num_Lock 65407
+     * }
+     */
     public static int XK_Num_Lock() {
         return (int)65407L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Space 65408
+     * }
+     */
     public static int XK_KP_Space() {
         return (int)65408L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Tab 65417
+     * }
+     */
     public static int XK_KP_Tab() {
         return (int)65417L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Enter 65421
+     * }
+     */
     public static int XK_KP_Enter() {
         return (int)65421L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_F1 65425
+     * }
+     */
     public static int XK_KP_F1() {
         return (int)65425L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_F2 65426
+     * }
+     */
     public static int XK_KP_F2() {
         return (int)65426L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_F3 65427
+     * }
+     */
     public static int XK_KP_F3() {
         return (int)65427L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_F4 65428
+     * }
+     */
     public static int XK_KP_F4() {
         return (int)65428L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Home 65429
+     * }
+     */
     public static int XK_KP_Home() {
         return (int)65429L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Left 65430
+     * }
+     */
     public static int XK_KP_Left() {
         return (int)65430L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Up 65431
+     * }
+     */
     public static int XK_KP_Up() {
         return (int)65431L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Right 65432
+     * }
+     */
     public static int XK_KP_Right() {
         return (int)65432L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Down 65433
+     * }
+     */
     public static int XK_KP_Down() {
         return (int)65433L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Prior 65434
+     * }
+     */
     public static int XK_KP_Prior() {
         return (int)65434L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Page_Up 65434
+     * }
+     */
     public static int XK_KP_Page_Up() {
         return (int)65434L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Next 65435
+     * }
+     */
     public static int XK_KP_Next() {
         return (int)65435L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Page_Down 65435
+     * }
+     */
     public static int XK_KP_Page_Down() {
         return (int)65435L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_End 65436
+     * }
+     */
     public static int XK_KP_End() {
         return (int)65436L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Begin 65437
+     * }
+     */
     public static int XK_KP_Begin() {
         return (int)65437L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Insert 65438
+     * }
+     */
     public static int XK_KP_Insert() {
         return (int)65438L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Delete 65439
+     * }
+     */
     public static int XK_KP_Delete() {
         return (int)65439L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Equal 65469
+     * }
+     */
     public static int XK_KP_Equal() {
         return (int)65469L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Multiply 65450
+     * }
+     */
     public static int XK_KP_Multiply() {
         return (int)65450L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Add 65451
+     * }
+     */
     public static int XK_KP_Add() {
         return (int)65451L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Separator 65452
+     * }
+     */
     public static int XK_KP_Separator() {
         return (int)65452L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Subtract 65453
+     * }
+     */
     public static int XK_KP_Subtract() {
         return (int)65453L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Decimal 65454
+     * }
+     */
     public static int XK_KP_Decimal() {
         return (int)65454L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_Divide 65455
+     * }
+     */
     public static int XK_KP_Divide() {
         return (int)65455L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_0 65456
+     * }
+     */
     public static int XK_KP_0() {
         return (int)65456L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_1 65457
+     * }
+     */
     public static int XK_KP_1() {
         return (int)65457L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_2 65458
+     * }
+     */
     public static int XK_KP_2() {
         return (int)65458L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_3 65459
+     * }
+     */
     public static int XK_KP_3() {
         return (int)65459L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_4 65460
+     * }
+     */
     public static int XK_KP_4() {
         return (int)65460L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_5 65461
+     * }
+     */
     public static int XK_KP_5() {
         return (int)65461L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_6 65462
+     * }
+     */
     public static int XK_KP_6() {
         return (int)65462L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_7 65463
+     * }
+     */
     public static int XK_KP_7() {
         return (int)65463L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_8 65464
+     * }
+     */
     public static int XK_KP_8() {
         return (int)65464L;
     }
+    /**
+     * {@snippet :
+     * #define XK_KP_9 65465
+     * }
+     */
     public static int XK_KP_9() {
         return (int)65465L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F1 65470
+     * }
+     */
     public static int XK_F1() {
         return (int)65470L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F2 65471
+     * }
+     */
     public static int XK_F2() {
         return (int)65471L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F3 65472
+     * }
+     */
     public static int XK_F3() {
         return (int)65472L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F4 65473
+     * }
+     */
     public static int XK_F4() {
         return (int)65473L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F5 65474
+     * }
+     */
     public static int XK_F5() {
         return (int)65474L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F6 65475
+     * }
+     */
     public static int XK_F6() {
         return (int)65475L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F7 65476
+     * }
+     */
     public static int XK_F7() {
         return (int)65476L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F8 65477
+     * }
+     */
     public static int XK_F8() {
         return (int)65477L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F9 65478
+     * }
+     */
     public static int XK_F9() {
         return (int)65478L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F10 65479
+     * }
+     */
     public static int XK_F10() {
         return (int)65479L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F11 65480
+     * }
+     */
     public static int XK_F11() {
         return (int)65480L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L1 65480
+     * }
+     */
     public static int XK_L1() {
         return (int)65480L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F12 65481
+     * }
+     */
     public static int XK_F12() {
         return (int)65481L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L2 65481
+     * }
+     */
     public static int XK_L2() {
         return (int)65481L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F13 65482
+     * }
+     */
     public static int XK_F13() {
         return (int)65482L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L3 65482
+     * }
+     */
     public static int XK_L3() {
         return (int)65482L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F14 65483
+     * }
+     */
     public static int XK_F14() {
         return (int)65483L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L4 65483
+     * }
+     */
     public static int XK_L4() {
         return (int)65483L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F15 65484
+     * }
+     */
     public static int XK_F15() {
         return (int)65484L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L5 65484
+     * }
+     */
     public static int XK_L5() {
         return (int)65484L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F16 65485
+     * }
+     */
     public static int XK_F16() {
         return (int)65485L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L6 65485
+     * }
+     */
     public static int XK_L6() {
         return (int)65485L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F17 65486
+     * }
+     */
     public static int XK_F17() {
         return (int)65486L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L7 65486
+     * }
+     */
     public static int XK_L7() {
         return (int)65486L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F18 65487
+     * }
+     */
     public static int XK_F18() {
         return (int)65487L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L8 65487
+     * }
+     */
     public static int XK_L8() {
         return (int)65487L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F19 65488
+     * }
+     */
     public static int XK_F19() {
         return (int)65488L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L9 65488
+     * }
+     */
     public static int XK_L9() {
         return (int)65488L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F20 65489
+     * }
+     */
     public static int XK_F20() {
         return (int)65489L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L10 65489
+     * }
+     */
     public static int XK_L10() {
         return (int)65489L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F21 65490
+     * }
+     */
     public static int XK_F21() {
         return (int)65490L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R1 65490
+     * }
+     */
     public static int XK_R1() {
         return (int)65490L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F22 65491
+     * }
+     */
     public static int XK_F22() {
         return (int)65491L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R2 65491
+     * }
+     */
     public static int XK_R2() {
         return (int)65491L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F23 65492
+     * }
+     */
     public static int XK_F23() {
         return (int)65492L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R3 65492
+     * }
+     */
     public static int XK_R3() {
         return (int)65492L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F24 65493
+     * }
+     */
     public static int XK_F24() {
         return (int)65493L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R4 65493
+     * }
+     */
     public static int XK_R4() {
         return (int)65493L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F25 65494
+     * }
+     */
     public static int XK_F25() {
         return (int)65494L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R5 65494
+     * }
+     */
     public static int XK_R5() {
         return (int)65494L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F26 65495
+     * }
+     */
     public static int XK_F26() {
         return (int)65495L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R6 65495
+     * }
+     */
     public static int XK_R6() {
         return (int)65495L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F27 65496
+     * }
+     */
     public static int XK_F27() {
         return (int)65496L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R7 65496
+     * }
+     */
     public static int XK_R7() {
         return (int)65496L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F28 65497
+     * }
+     */
     public static int XK_F28() {
         return (int)65497L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R8 65497
+     * }
+     */
     public static int XK_R8() {
         return (int)65497L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F29 65498
+     * }
+     */
     public static int XK_F29() {
         return (int)65498L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R9 65498
+     * }
+     */
     public static int XK_R9() {
         return (int)65498L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F30 65499
+     * }
+     */
     public static int XK_F30() {
         return (int)65499L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R10 65499
+     * }
+     */
     public static int XK_R10() {
         return (int)65499L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F31 65500
+     * }
+     */
     public static int XK_F31() {
         return (int)65500L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R11 65500
+     * }
+     */
     public static int XK_R11() {
         return (int)65500L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F32 65501
+     * }
+     */
     public static int XK_F32() {
         return (int)65501L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R12 65501
+     * }
+     */
     public static int XK_R12() {
         return (int)65501L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F33 65502
+     * }
+     */
     public static int XK_F33() {
         return (int)65502L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R13 65502
+     * }
+     */
     public static int XK_R13() {
         return (int)65502L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F34 65503
+     * }
+     */
     public static int XK_F34() {
         return (int)65503L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R14 65503
+     * }
+     */
     public static int XK_R14() {
         return (int)65503L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F35 65504
+     * }
+     */
     public static int XK_F35() {
         return (int)65504L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R15 65504
+     * }
+     */
     public static int XK_R15() {
         return (int)65504L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Shift_L 65505
+     * }
+     */
     public static int XK_Shift_L() {
         return (int)65505L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Shift_R 65506
+     * }
+     */
     public static int XK_Shift_R() {
         return (int)65506L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Control_L 65507
+     * }
+     */
     public static int XK_Control_L() {
         return (int)65507L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Control_R 65508
+     * }
+     */
     public static int XK_Control_R() {
         return (int)65508L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Caps_Lock 65509
+     * }
+     */
     public static int XK_Caps_Lock() {
         return (int)65509L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Shift_Lock 65510
+     * }
+     */
     public static int XK_Shift_Lock() {
         return (int)65510L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Meta_L 65511
+     * }
+     */
     public static int XK_Meta_L() {
         return (int)65511L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Meta_R 65512
+     * }
+     */
     public static int XK_Meta_R() {
         return (int)65512L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Alt_L 65513
+     * }
+     */
     public static int XK_Alt_L() {
         return (int)65513L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Alt_R 65514
+     * }
+     */
     public static int XK_Alt_R() {
         return (int)65514L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Super_L 65515
+     * }
+     */
     public static int XK_Super_L() {
         return (int)65515L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Super_R 65516
+     * }
+     */
     public static int XK_Super_R() {
         return (int)65516L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hyper_L 65517
+     * }
+     */
     public static int XK_Hyper_L() {
         return (int)65517L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hyper_R 65518
+     * }
+     */
     public static int XK_Hyper_R() {
         return (int)65518L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Lock 65025
+     * }
+     */
     public static int XK_ISO_Lock() {
         return (int)65025L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Level2_Latch 65026
+     * }
+     */
     public static int XK_ISO_Level2_Latch() {
         return (int)65026L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Level3_Shift 65027
+     * }
+     */
     public static int XK_ISO_Level3_Shift() {
         return (int)65027L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Level3_Latch 65028
+     * }
+     */
     public static int XK_ISO_Level3_Latch() {
         return (int)65028L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Level3_Lock 65029
+     * }
+     */
     public static int XK_ISO_Level3_Lock() {
         return (int)65029L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Level5_Shift 65041
+     * }
+     */
     public static int XK_ISO_Level5_Shift() {
         return (int)65041L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Level5_Latch 65042
+     * }
+     */
     public static int XK_ISO_Level5_Latch() {
         return (int)65042L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Level5_Lock 65043
+     * }
+     */
     public static int XK_ISO_Level5_Lock() {
         return (int)65043L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Group_Shift 65406
+     * }
+     */
     public static int XK_ISO_Group_Shift() {
         return (int)65406L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Group_Latch 65030
+     * }
+     */
     public static int XK_ISO_Group_Latch() {
         return (int)65030L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Group_Lock 65031
+     * }
+     */
     public static int XK_ISO_Group_Lock() {
         return (int)65031L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Next_Group 65032
+     * }
+     */
     public static int XK_ISO_Next_Group() {
         return (int)65032L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Next_Group_Lock 65033
+     * }
+     */
     public static int XK_ISO_Next_Group_Lock() {
         return (int)65033L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Prev_Group 65034
+     * }
+     */
     public static int XK_ISO_Prev_Group() {
         return (int)65034L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Prev_Group_Lock 65035
+     * }
+     */
     public static int XK_ISO_Prev_Group_Lock() {
         return (int)65035L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_First_Group 65036
+     * }
+     */
     public static int XK_ISO_First_Group() {
         return (int)65036L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_First_Group_Lock 65037
+     * }
+     */
     public static int XK_ISO_First_Group_Lock() {
         return (int)65037L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Last_Group 65038
+     * }
+     */
     public static int XK_ISO_Last_Group() {
         return (int)65038L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Last_Group_Lock 65039
+     * }
+     */
     public static int XK_ISO_Last_Group_Lock() {
         return (int)65039L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Left_Tab 65056
+     * }
+     */
     public static int XK_ISO_Left_Tab() {
         return (int)65056L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Move_Line_Up 65057
+     * }
+     */
     public static int XK_ISO_Move_Line_Up() {
         return (int)65057L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Move_Line_Down 65058
+     * }
+     */
     public static int XK_ISO_Move_Line_Down() {
         return (int)65058L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Partial_Line_Up 65059
+     * }
+     */
     public static int XK_ISO_Partial_Line_Up() {
         return (int)65059L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Partial_Line_Down 65060
+     * }
+     */
     public static int XK_ISO_Partial_Line_Down() {
         return (int)65060L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Partial_Space_Left 65061
+     * }
+     */
     public static int XK_ISO_Partial_Space_Left() {
         return (int)65061L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Partial_Space_Right 65062
+     * }
+     */
     public static int XK_ISO_Partial_Space_Right() {
         return (int)65062L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Set_Margin_Left 65063
+     * }
+     */
     public static int XK_ISO_Set_Margin_Left() {
         return (int)65063L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Set_Margin_Right 65064
+     * }
+     */
     public static int XK_ISO_Set_Margin_Right() {
         return (int)65064L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Release_Margin_Left 65065
+     * }
+     */
     public static int XK_ISO_Release_Margin_Left() {
         return (int)65065L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Release_Margin_Right 65066
+     * }
+     */
     public static int XK_ISO_Release_Margin_Right() {
         return (int)65066L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Release_Both_Margins 65067
+     * }
+     */
     public static int XK_ISO_Release_Both_Margins() {
         return (int)65067L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Fast_Cursor_Left 65068
+     * }
+     */
     public static int XK_ISO_Fast_Cursor_Left() {
         return (int)65068L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Fast_Cursor_Right 65069
+     * }
+     */
     public static int XK_ISO_Fast_Cursor_Right() {
         return (int)65069L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Fast_Cursor_Up 65070
+     * }
+     */
     public static int XK_ISO_Fast_Cursor_Up() {
         return (int)65070L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Fast_Cursor_Down 65071
+     * }
+     */
     public static int XK_ISO_Fast_Cursor_Down() {
         return (int)65071L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Continuous_Underline 65072
+     * }
+     */
     public static int XK_ISO_Continuous_Underline() {
         return (int)65072L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Discontinuous_Underline 65073
+     * }
+     */
     public static int XK_ISO_Discontinuous_Underline() {
         return (int)65073L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Emphasize 65074
+     * }
+     */
     public static int XK_ISO_Emphasize() {
         return (int)65074L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Center_Object 65075
+     * }
+     */
     public static int XK_ISO_Center_Object() {
         return (int)65075L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ISO_Enter 65076
+     * }
+     */
     public static int XK_ISO_Enter() {
         return (int)65076L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_grave 65104
+     * }
+     */
     public static int XK_dead_grave() {
         return (int)65104L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_acute 65105
+     * }
+     */
     public static int XK_dead_acute() {
         return (int)65105L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_circumflex 65106
+     * }
+     */
     public static int XK_dead_circumflex() {
         return (int)65106L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_tilde 65107
+     * }
+     */
     public static int XK_dead_tilde() {
         return (int)65107L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_perispomeni 65107
+     * }
+     */
     public static int XK_dead_perispomeni() {
         return (int)65107L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_macron 65108
+     * }
+     */
     public static int XK_dead_macron() {
         return (int)65108L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_breve 65109
+     * }
+     */
     public static int XK_dead_breve() {
         return (int)65109L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_abovedot 65110
+     * }
+     */
     public static int XK_dead_abovedot() {
         return (int)65110L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_diaeresis 65111
+     * }
+     */
     public static int XK_dead_diaeresis() {
         return (int)65111L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_abovering 65112
+     * }
+     */
     public static int XK_dead_abovering() {
         return (int)65112L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_doubleacute 65113
+     * }
+     */
     public static int XK_dead_doubleacute() {
         return (int)65113L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_caron 65114
+     * }
+     */
     public static int XK_dead_caron() {
         return (int)65114L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_cedilla 65115
+     * }
+     */
     public static int XK_dead_cedilla() {
         return (int)65115L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_ogonek 65116
+     * }
+     */
     public static int XK_dead_ogonek() {
         return (int)65116L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_iota 65117
+     * }
+     */
     public static int XK_dead_iota() {
         return (int)65117L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_voiced_sound 65118
+     * }
+     */
     public static int XK_dead_voiced_sound() {
         return (int)65118L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_semivoiced_sound 65119
+     * }
+     */
     public static int XK_dead_semivoiced_sound() {
         return (int)65119L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowdot 65120
+     * }
+     */
     public static int XK_dead_belowdot() {
         return (int)65120L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_hook 65121
+     * }
+     */
     public static int XK_dead_hook() {
         return (int)65121L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_horn 65122
+     * }
+     */
     public static int XK_dead_horn() {
         return (int)65122L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_stroke 65123
+     * }
+     */
     public static int XK_dead_stroke() {
         return (int)65123L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_abovecomma 65124
+     * }
+     */
     public static int XK_dead_abovecomma() {
         return (int)65124L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_psili 65124
+     * }
+     */
     public static int XK_dead_psili() {
         return (int)65124L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_abovereversedcomma 65125
+     * }
+     */
     public static int XK_dead_abovereversedcomma() {
         return (int)65125L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_dasia 65125
+     * }
+     */
     public static int XK_dead_dasia() {
         return (int)65125L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_doublegrave 65126
+     * }
+     */
     public static int XK_dead_doublegrave() {
         return (int)65126L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowring 65127
+     * }
+     */
     public static int XK_dead_belowring() {
         return (int)65127L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowmacron 65128
+     * }
+     */
     public static int XK_dead_belowmacron() {
         return (int)65128L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowcircumflex 65129
+     * }
+     */
     public static int XK_dead_belowcircumflex() {
         return (int)65129L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowtilde 65130
+     * }
+     */
     public static int XK_dead_belowtilde() {
         return (int)65130L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowbreve 65131
+     * }
+     */
     public static int XK_dead_belowbreve() {
         return (int)65131L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowdiaeresis 65132
+     * }
+     */
     public static int XK_dead_belowdiaeresis() {
         return (int)65132L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_invertedbreve 65133
+     * }
+     */
     public static int XK_dead_invertedbreve() {
         return (int)65133L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowcomma 65134
+     * }
+     */
     public static int XK_dead_belowcomma() {
         return (int)65134L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_currency 65135
+     * }
+     */
     public static int XK_dead_currency() {
         return (int)65135L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_lowline 65168
+     * }
+     */
     public static int XK_dead_lowline() {
         return (int)65168L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_aboveverticalline 65169
+     * }
+     */
     public static int XK_dead_aboveverticalline() {
         return (int)65169L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_belowverticalline 65170
+     * }
+     */
     public static int XK_dead_belowverticalline() {
         return (int)65170L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_longsolidusoverlay 65171
+     * }
+     */
     public static int XK_dead_longsolidusoverlay() {
         return (int)65171L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_a 65152
+     * }
+     */
     public static int XK_dead_a() {
         return (int)65152L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_A 65153
+     * }
+     */
     public static int XK_dead_A() {
         return (int)65153L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_e 65154
+     * }
+     */
     public static int XK_dead_e() {
         return (int)65154L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_E 65155
+     * }
+     */
     public static int XK_dead_E() {
         return (int)65155L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_i 65156
+     * }
+     */
     public static int XK_dead_i() {
         return (int)65156L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_I 65157
+     * }
+     */
     public static int XK_dead_I() {
         return (int)65157L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_o 65158
+     * }
+     */
     public static int XK_dead_o() {
         return (int)65158L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_O 65159
+     * }
+     */
     public static int XK_dead_O() {
         return (int)65159L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_u 65160
+     * }
+     */
     public static int XK_dead_u() {
         return (int)65160L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_U 65161
+     * }
+     */
     public static int XK_dead_U() {
         return (int)65161L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_small_schwa 65162
+     * }
+     */
     public static int XK_dead_small_schwa() {
         return (int)65162L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_capital_schwa 65163
+     * }
+     */
     public static int XK_dead_capital_schwa() {
         return (int)65163L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dead_greek 65164
+     * }
+     */
     public static int XK_dead_greek() {
         return (int)65164L;
     }
+    /**
+     * {@snippet :
+     * #define XK_First_Virtual_Screen 65232
+     * }
+     */
     public static int XK_First_Virtual_Screen() {
         return (int)65232L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Prev_Virtual_Screen 65233
+     * }
+     */
     public static int XK_Prev_Virtual_Screen() {
         return (int)65233L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Next_Virtual_Screen 65234
+     * }
+     */
     public static int XK_Next_Virtual_Screen() {
         return (int)65234L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Last_Virtual_Screen 65236
+     * }
+     */
     public static int XK_Last_Virtual_Screen() {
         return (int)65236L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Terminate_Server 65237
+     * }
+     */
     public static int XK_Terminate_Server() {
         return (int)65237L;
     }
+    /**
+     * {@snippet :
+     * #define XK_AccessX_Enable 65136
+     * }
+     */
     public static int XK_AccessX_Enable() {
         return (int)65136L;
     }
+    /**
+     * {@snippet :
+     * #define XK_AccessX_Feedback_Enable 65137
+     * }
+     */
     public static int XK_AccessX_Feedback_Enable() {
         return (int)65137L;
     }
+    /**
+     * {@snippet :
+     * #define XK_RepeatKeys_Enable 65138
+     * }
+     */
     public static int XK_RepeatKeys_Enable() {
         return (int)65138L;
     }
+    /**
+     * {@snippet :
+     * #define XK_SlowKeys_Enable 65139
+     * }
+     */
     public static int XK_SlowKeys_Enable() {
         return (int)65139L;
     }
+    /**
+     * {@snippet :
+     * #define XK_BounceKeys_Enable 65140
+     * }
+     */
     public static int XK_BounceKeys_Enable() {
         return (int)65140L;
     }
+    /**
+     * {@snippet :
+     * #define XK_StickyKeys_Enable 65141
+     * }
+     */
     public static int XK_StickyKeys_Enable() {
         return (int)65141L;
     }
+    /**
+     * {@snippet :
+     * #define XK_MouseKeys_Enable 65142
+     * }
+     */
     public static int XK_MouseKeys_Enable() {
         return (int)65142L;
     }
+    /**
+     * {@snippet :
+     * #define XK_MouseKeys_Accel_Enable 65143
+     * }
+     */
     public static int XK_MouseKeys_Accel_Enable() {
         return (int)65143L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Overlay1_Enable 65144
+     * }
+     */
     public static int XK_Overlay1_Enable() {
         return (int)65144L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Overlay2_Enable 65145
+     * }
+     */
     public static int XK_Overlay2_Enable() {
         return (int)65145L;
     }
+    /**
+     * {@snippet :
+     * #define XK_AudibleBell_Enable 65146
+     * }
+     */
     public static int XK_AudibleBell_Enable() {
         return (int)65146L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Left 65248
+     * }
+     */
     public static int XK_Pointer_Left() {
         return (int)65248L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Right 65249
+     * }
+     */
     public static int XK_Pointer_Right() {
         return (int)65249L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Up 65250
+     * }
+     */
     public static int XK_Pointer_Up() {
         return (int)65250L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Down 65251
+     * }
+     */
     public static int XK_Pointer_Down() {
         return (int)65251L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_UpLeft 65252
+     * }
+     */
     public static int XK_Pointer_UpLeft() {
         return (int)65252L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_UpRight 65253
+     * }
+     */
     public static int XK_Pointer_UpRight() {
         return (int)65253L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DownLeft 65254
+     * }
+     */
     public static int XK_Pointer_DownLeft() {
         return (int)65254L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DownRight 65255
+     * }
+     */
     public static int XK_Pointer_DownRight() {
         return (int)65255L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Button_Dflt 65256
+     * }
+     */
     public static int XK_Pointer_Button_Dflt() {
         return (int)65256L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Button1 65257
+     * }
+     */
     public static int XK_Pointer_Button1() {
         return (int)65257L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Button2 65258
+     * }
+     */
     public static int XK_Pointer_Button2() {
         return (int)65258L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Button3 65259
+     * }
+     */
     public static int XK_Pointer_Button3() {
         return (int)65259L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Button4 65260
+     * }
+     */
     public static int XK_Pointer_Button4() {
         return (int)65260L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Button5 65261
+     * }
+     */
     public static int XK_Pointer_Button5() {
         return (int)65261L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DblClick_Dflt 65262
+     * }
+     */
     public static int XK_Pointer_DblClick_Dflt() {
         return (int)65262L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DblClick1 65263
+     * }
+     */
     public static int XK_Pointer_DblClick1() {
         return (int)65263L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DblClick2 65264
+     * }
+     */
     public static int XK_Pointer_DblClick2() {
         return (int)65264L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DblClick3 65265
+     * }
+     */
     public static int XK_Pointer_DblClick3() {
         return (int)65265L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DblClick4 65266
+     * }
+     */
     public static int XK_Pointer_DblClick4() {
         return (int)65266L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DblClick5 65267
+     * }
+     */
     public static int XK_Pointer_DblClick5() {
         return (int)65267L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Drag_Dflt 65268
+     * }
+     */
     public static int XK_Pointer_Drag_Dflt() {
         return (int)65268L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Drag1 65269
+     * }
+     */
     public static int XK_Pointer_Drag1() {
         return (int)65269L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Drag2 65270
+     * }
+     */
     public static int XK_Pointer_Drag2() {
         return (int)65270L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Drag3 65271
+     * }
+     */
     public static int XK_Pointer_Drag3() {
         return (int)65271L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Drag4 65272
+     * }
+     */
     public static int XK_Pointer_Drag4() {
         return (int)65272L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Drag5 65277
+     * }
+     */
     public static int XK_Pointer_Drag5() {
         return (int)65277L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_EnableKeys 65273
+     * }
+     */
     public static int XK_Pointer_EnableKeys() {
         return (int)65273L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_Accelerate 65274
+     * }
+     */
     public static int XK_Pointer_Accelerate() {
         return (int)65274L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DfltBtnNext 65275
+     * }
+     */
     public static int XK_Pointer_DfltBtnNext() {
         return (int)65275L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pointer_DfltBtnPrev 65276
+     * }
+     */
     public static int XK_Pointer_DfltBtnPrev() {
         return (int)65276L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ch 65184
+     * }
+     */
     public static int XK_ch() {
         return (int)65184L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ch 65185
+     * }
+     */
     public static int XK_Ch() {
         return (int)65185L;
     }
+    /**
+     * {@snippet :
+     * #define XK_CH 65186
+     * }
+     */
     public static int XK_CH() {
         return (int)65186L;
     }
+    /**
+     * {@snippet :
+     * #define XK_c_h 65187
+     * }
+     */
     public static int XK_c_h() {
         return (int)65187L;
     }
+    /**
+     * {@snippet :
+     * #define XK_C_h 65188
+     * }
+     */
     public static int XK_C_h() {
         return (int)65188L;
     }
+    /**
+     * {@snippet :
+     * #define XK_C_H 65189
+     * }
+     */
     public static int XK_C_H() {
         return (int)65189L;
     }
+    /**
+     * {@snippet :
+     * #define XK_space 32
+     * }
+     */
     public static int XK_space() {
         return (int)32L;
     }
+    /**
+     * {@snippet :
+     * #define XK_exclam 33
+     * }
+     */
     public static int XK_exclam() {
         return (int)33L;
     }
+    /**
+     * {@snippet :
+     * #define XK_quotedbl 34
+     * }
+     */
     public static int XK_quotedbl() {
         return (int)34L;
     }
+    /**
+     * {@snippet :
+     * #define XK_numbersign 35
+     * }
+     */
     public static int XK_numbersign() {
         return (int)35L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dollar 36
+     * }
+     */
     public static int XK_dollar() {
         return (int)36L;
     }
+    /**
+     * {@snippet :
+     * #define XK_percent 37
+     * }
+     */
     public static int XK_percent() {
         return (int)37L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ampersand 38
+     * }
+     */
     public static int XK_ampersand() {
         return (int)38L;
     }
+    /**
+     * {@snippet :
+     * #define XK_apostrophe 39
+     * }
+     */
     public static int XK_apostrophe() {
         return (int)39L;
     }
+    /**
+     * {@snippet :
+     * #define XK_quoteright 39
+     * }
+     */
     public static int XK_quoteright() {
         return (int)39L;
     }
+    /**
+     * {@snippet :
+     * #define XK_parenleft 40
+     * }
+     */
     public static int XK_parenleft() {
         return (int)40L;
     }
+    /**
+     * {@snippet :
+     * #define XK_parenright 41
+     * }
+     */
     public static int XK_parenright() {
         return (int)41L;
     }
+    /**
+     * {@snippet :
+     * #define XK_asterisk 42
+     * }
+     */
     public static int XK_asterisk() {
         return (int)42L;
     }
+    /**
+     * {@snippet :
+     * #define XK_plus 43
+     * }
+     */
     public static int XK_plus() {
         return (int)43L;
     }
+    /**
+     * {@snippet :
+     * #define XK_comma 44
+     * }
+     */
     public static int XK_comma() {
         return (int)44L;
     }
+    /**
+     * {@snippet :
+     * #define XK_minus 45
+     * }
+     */
     public static int XK_minus() {
         return (int)45L;
     }
+    /**
+     * {@snippet :
+     * #define XK_period 46
+     * }
+     */
     public static int XK_period() {
         return (int)46L;
     }
+    /**
+     * {@snippet :
+     * #define XK_slash 47
+     * }
+     */
     public static int XK_slash() {
         return (int)47L;
     }
+    /**
+     * {@snippet :
+     * #define XK_0 48
+     * }
+     */
     public static int XK_0() {
         return (int)48L;
     }
+    /**
+     * {@snippet :
+     * #define XK_1 49
+     * }
+     */
     public static int XK_1() {
         return (int)49L;
     }
+    /**
+     * {@snippet :
+     * #define XK_2 50
+     * }
+     */
     public static int XK_2() {
         return (int)50L;
     }
+    /**
+     * {@snippet :
+     * #define XK_3 51
+     * }
+     */
     public static int XK_3() {
         return (int)51L;
     }
+    /**
+     * {@snippet :
+     * #define XK_4 52
+     * }
+     */
     public static int XK_4() {
         return (int)52L;
     }
+    /**
+     * {@snippet :
+     * #define XK_5 53
+     * }
+     */
     public static int XK_5() {
         return (int)53L;
     }
+    /**
+     * {@snippet :
+     * #define XK_6 54
+     * }
+     */
     public static int XK_6() {
         return (int)54L;
     }
+    /**
+     * {@snippet :
+     * #define XK_7 55
+     * }
+     */
     public static int XK_7() {
         return (int)55L;
     }
+    /**
+     * {@snippet :
+     * #define XK_8 56
+     * }
+     */
     public static int XK_8() {
         return (int)56L;
     }
+    /**
+     * {@snippet :
+     * #define XK_9 57
+     * }
+     */
     public static int XK_9() {
         return (int)57L;
     }
+    /**
+     * {@snippet :
+     * #define XK_colon 58
+     * }
+     */
     public static int XK_colon() {
         return (int)58L;
     }
+    /**
+     * {@snippet :
+     * #define XK_semicolon 59
+     * }
+     */
     public static int XK_semicolon() {
         return (int)59L;
     }
+    /**
+     * {@snippet :
+     * #define XK_less 60
+     * }
+     */
     public static int XK_less() {
         return (int)60L;
     }
+    /**
+     * {@snippet :
+     * #define XK_equal 61
+     * }
+     */
     public static int XK_equal() {
         return (int)61L;
     }
+    /**
+     * {@snippet :
+     * #define XK_greater 62
+     * }
+     */
     public static int XK_greater() {
         return (int)62L;
     }
+    /**
+     * {@snippet :
+     * #define XK_question 63
+     * }
+     */
     public static int XK_question() {
         return (int)63L;
     }
+    /**
+     * {@snippet :
+     * #define XK_at 64
+     * }
+     */
     public static int XK_at() {
         return (int)64L;
     }
+    /**
+     * {@snippet :
+     * #define XK_A 65
+     * }
+     */
     public static int XK_A() {
         return (int)65L;
     }
+    /**
+     * {@snippet :
+     * #define XK_B 66
+     * }
+     */
     public static int XK_B() {
         return (int)66L;
     }
+    /**
+     * {@snippet :
+     * #define XK_C 67
+     * }
+     */
     public static int XK_C() {
         return (int)67L;
     }
+    /**
+     * {@snippet :
+     * #define XK_D 68
+     * }
+     */
     public static int XK_D() {
         return (int)68L;
     }
+    /**
+     * {@snippet :
+     * #define XK_E 69
+     * }
+     */
     public static int XK_E() {
         return (int)69L;
     }
+    /**
+     * {@snippet :
+     * #define XK_F 70
+     * }
+     */
     public static int XK_F() {
         return (int)70L;
     }
+    /**
+     * {@snippet :
+     * #define XK_G 71
+     * }
+     */
     public static int XK_G() {
         return (int)71L;
     }
+    /**
+     * {@snippet :
+     * #define XK_H 72
+     * }
+     */
     public static int XK_H() {
         return (int)72L;
     }
+    /**
+     * {@snippet :
+     * #define XK_I 73
+     * }
+     */
     public static int XK_I() {
         return (int)73L;
     }
+    /**
+     * {@snippet :
+     * #define XK_J 74
+     * }
+     */
     public static int XK_J() {
         return (int)74L;
     }
+    /**
+     * {@snippet :
+     * #define XK_K 75
+     * }
+     */
     public static int XK_K() {
         return (int)75L;
     }
+    /**
+     * {@snippet :
+     * #define XK_L 76
+     * }
+     */
     public static int XK_L() {
         return (int)76L;
     }
+    /**
+     * {@snippet :
+     * #define XK_M 77
+     * }
+     */
     public static int XK_M() {
         return (int)77L;
     }
+    /**
+     * {@snippet :
+     * #define XK_N 78
+     * }
+     */
     public static int XK_N() {
         return (int)78L;
     }
+    /**
+     * {@snippet :
+     * #define XK_O 79
+     * }
+     */
     public static int XK_O() {
         return (int)79L;
     }
+    /**
+     * {@snippet :
+     * #define XK_P 80
+     * }
+     */
     public static int XK_P() {
         return (int)80L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Q 81
+     * }
+     */
     public static int XK_Q() {
         return (int)81L;
     }
+    /**
+     * {@snippet :
+     * #define XK_R 82
+     * }
+     */
     public static int XK_R() {
         return (int)82L;
     }
+    /**
+     * {@snippet :
+     * #define XK_S 83
+     * }
+     */
     public static int XK_S() {
         return (int)83L;
     }
+    /**
+     * {@snippet :
+     * #define XK_T 84
+     * }
+     */
     public static int XK_T() {
         return (int)84L;
     }
+    /**
+     * {@snippet :
+     * #define XK_U 85
+     * }
+     */
     public static int XK_U() {
         return (int)85L;
     }
+    /**
+     * {@snippet :
+     * #define XK_V 86
+     * }
+     */
     public static int XK_V() {
         return (int)86L;
     }
+    /**
+     * {@snippet :
+     * #define XK_W 87
+     * }
+     */
     public static int XK_W() {
         return (int)87L;
     }
+    /**
+     * {@snippet :
+     * #define XK_X 88
+     * }
+     */
     public static int XK_X() {
         return (int)88L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Y 89
+     * }
+     */
     public static int XK_Y() {
         return (int)89L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Z 90
+     * }
+     */
     public static int XK_Z() {
         return (int)90L;
     }
+    /**
+     * {@snippet :
+     * #define XK_bracketleft 91
+     * }
+     */
     public static int XK_bracketleft() {
         return (int)91L;
     }
+    /**
+     * {@snippet :
+     * #define XK_backslash 92
+     * }
+     */
     public static int XK_backslash() {
         return (int)92L;
     }
+    /**
+     * {@snippet :
+     * #define XK_bracketright 93
+     * }
+     */
     public static int XK_bracketright() {
         return (int)93L;
     }
+    /**
+     * {@snippet :
+     * #define XK_asciicircum 94
+     * }
+     */
     public static int XK_asciicircum() {
         return (int)94L;
     }
+    /**
+     * {@snippet :
+     * #define XK_underscore 95
+     * }
+     */
     public static int XK_underscore() {
         return (int)95L;
     }
+    /**
+     * {@snippet :
+     * #define XK_grave 96
+     * }
+     */
     public static int XK_grave() {
         return (int)96L;
     }
+    /**
+     * {@snippet :
+     * #define XK_quoteleft 96
+     * }
+     */
     public static int XK_quoteleft() {
         return (int)96L;
     }
+    /**
+     * {@snippet :
+     * #define XK_a 97
+     * }
+     */
     public static int XK_a() {
         return (int)97L;
     }
+    /**
+     * {@snippet :
+     * #define XK_b 98
+     * }
+     */
     public static int XK_b() {
         return (int)98L;
     }
+    /**
+     * {@snippet :
+     * #define XK_c 99
+     * }
+     */
     public static int XK_c() {
         return (int)99L;
     }
+    /**
+     * {@snippet :
+     * #define XK_d 100
+     * }
+     */
     public static int XK_d() {
         return (int)100L;
     }
+    /**
+     * {@snippet :
+     * #define XK_e 101
+     * }
+     */
     public static int XK_e() {
         return (int)101L;
     }
+    /**
+     * {@snippet :
+     * #define XK_f 102
+     * }
+     */
     public static int XK_f() {
         return (int)102L;
     }
+    /**
+     * {@snippet :
+     * #define XK_g 103
+     * }
+     */
     public static int XK_g() {
         return (int)103L;
     }
+    /**
+     * {@snippet :
+     * #define XK_h 104
+     * }
+     */
     public static int XK_h() {
         return (int)104L;
     }
+    /**
+     * {@snippet :
+     * #define XK_i 105
+     * }
+     */
     public static int XK_i() {
         return (int)105L;
     }
+    /**
+     * {@snippet :
+     * #define XK_j 106
+     * }
+     */
     public static int XK_j() {
         return (int)106L;
     }
+    /**
+     * {@snippet :
+     * #define XK_k 107
+     * }
+     */
     public static int XK_k() {
         return (int)107L;
     }
+    /**
+     * {@snippet :
+     * #define XK_l 108
+     * }
+     */
     public static int XK_l() {
         return (int)108L;
     }
+    /**
+     * {@snippet :
+     * #define XK_m 109
+     * }
+     */
     public static int XK_m() {
         return (int)109L;
     }
+    /**
+     * {@snippet :
+     * #define XK_n 110
+     * }
+     */
     public static int XK_n() {
         return (int)110L;
     }
+    /**
+     * {@snippet :
+     * #define XK_o 111
+     * }
+     */
     public static int XK_o() {
         return (int)111L;
     }
+    /**
+     * {@snippet :
+     * #define XK_p 112
+     * }
+     */
     public static int XK_p() {
         return (int)112L;
     }
+    /**
+     * {@snippet :
+     * #define XK_q 113
+     * }
+     */
     public static int XK_q() {
         return (int)113L;
     }
+    /**
+     * {@snippet :
+     * #define XK_r 114
+     * }
+     */
     public static int XK_r() {
         return (int)114L;
     }
+    /**
+     * {@snippet :
+     * #define XK_s 115
+     * }
+     */
     public static int XK_s() {
         return (int)115L;
     }
+    /**
+     * {@snippet :
+     * #define XK_t 116
+     * }
+     */
     public static int XK_t() {
         return (int)116L;
     }
+    /**
+     * {@snippet :
+     * #define XK_u 117
+     * }
+     */
     public static int XK_u() {
         return (int)117L;
     }
+    /**
+     * {@snippet :
+     * #define XK_v 118
+     * }
+     */
     public static int XK_v() {
         return (int)118L;
     }
+    /**
+     * {@snippet :
+     * #define XK_w 119
+     * }
+     */
     public static int XK_w() {
         return (int)119L;
     }
+    /**
+     * {@snippet :
+     * #define XK_x 120
+     * }
+     */
     public static int XK_x() {
         return (int)120L;
     }
+    /**
+     * {@snippet :
+     * #define XK_y 121
+     * }
+     */
     public static int XK_y() {
         return (int)121L;
     }
+    /**
+     * {@snippet :
+     * #define XK_z 122
+     * }
+     */
     public static int XK_z() {
         return (int)122L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braceleft 123
+     * }
+     */
     public static int XK_braceleft() {
         return (int)123L;
     }
+    /**
+     * {@snippet :
+     * #define XK_bar 124
+     * }
+     */
     public static int XK_bar() {
         return (int)124L;
     }
+    /**
+     * {@snippet :
+     * #define XK_braceright 125
+     * }
+     */
     public static int XK_braceright() {
         return (int)125L;
     }
+    /**
+     * {@snippet :
+     * #define XK_asciitilde 126
+     * }
+     */
     public static int XK_asciitilde() {
         return (int)126L;
     }
+    /**
+     * {@snippet :
+     * #define XK_nobreakspace 160
+     * }
+     */
     public static int XK_nobreakspace() {
         return (int)160L;
     }
+    /**
+     * {@snippet :
+     * #define XK_exclamdown 161
+     * }
+     */
     public static int XK_exclamdown() {
         return (int)161L;
     }
+    /**
+     * {@snippet :
+     * #define XK_cent 162
+     * }
+     */
     public static int XK_cent() {
         return (int)162L;
     }
+    /**
+     * {@snippet :
+     * #define XK_sterling 163
+     * }
+     */
     public static int XK_sterling() {
         return (int)163L;
     }
+    /**
+     * {@snippet :
+     * #define XK_currency 164
+     * }
+     */
     public static int XK_currency() {
         return (int)164L;
     }
+    /**
+     * {@snippet :
+     * #define XK_yen 165
+     * }
+     */
     public static int XK_yen() {
         return (int)165L;
     }
+    /**
+     * {@snippet :
+     * #define XK_brokenbar 166
+     * }
+     */
     public static int XK_brokenbar() {
         return (int)166L;
     }
+    /**
+     * {@snippet :
+     * #define XK_section 167
+     * }
+     */
     public static int XK_section() {
         return (int)167L;
     }
+    /**
+     * {@snippet :
+     * #define XK_diaeresis 168
+     * }
+     */
     public static int XK_diaeresis() {
         return (int)168L;
     }
+    /**
+     * {@snippet :
+     * #define XK_copyright 169
+     * }
+     */
     public static int XK_copyright() {
         return (int)169L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ordfeminine 170
+     * }
+     */
     public static int XK_ordfeminine() {
         return (int)170L;
     }
+    /**
+     * {@snippet :
+     * #define XK_guillemotleft 171
+     * }
+     */
     public static int XK_guillemotleft() {
         return (int)171L;
     }
+    /**
+     * {@snippet :
+     * #define XK_notsign 172
+     * }
+     */
     public static int XK_notsign() {
         return (int)172L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hyphen 173
+     * }
+     */
     public static int XK_hyphen() {
         return (int)173L;
     }
+    /**
+     * {@snippet :
+     * #define XK_registered 174
+     * }
+     */
     public static int XK_registered() {
         return (int)174L;
     }
+    /**
+     * {@snippet :
+     * #define XK_macron 175
+     * }
+     */
     public static int XK_macron() {
         return (int)175L;
     }
+    /**
+     * {@snippet :
+     * #define XK_degree 176
+     * }
+     */
     public static int XK_degree() {
         return (int)176L;
     }
+    /**
+     * {@snippet :
+     * #define XK_plusminus 177
+     * }
+     */
     public static int XK_plusminus() {
         return (int)177L;
     }
+    /**
+     * {@snippet :
+     * #define XK_twosuperior 178
+     * }
+     */
     public static int XK_twosuperior() {
         return (int)178L;
     }
+    /**
+     * {@snippet :
+     * #define XK_threesuperior 179
+     * }
+     */
     public static int XK_threesuperior() {
         return (int)179L;
     }
+    /**
+     * {@snippet :
+     * #define XK_acute 180
+     * }
+     */
     public static int XK_acute() {
         return (int)180L;
     }
+    /**
+     * {@snippet :
+     * #define XK_mu 181
+     * }
+     */
     public static int XK_mu() {
         return (int)181L;
     }
+    /**
+     * {@snippet :
+     * #define XK_paragraph 182
+     * }
+     */
     public static int XK_paragraph() {
         return (int)182L;
     }
+    /**
+     * {@snippet :
+     * #define XK_periodcentered 183
+     * }
+     */
     public static int XK_periodcentered() {
         return (int)183L;
     }
+    /**
+     * {@snippet :
+     * #define XK_cedilla 184
+     * }
+     */
     public static int XK_cedilla() {
         return (int)184L;
     }
+    /**
+     * {@snippet :
+     * #define XK_onesuperior 185
+     * }
+     */
     public static int XK_onesuperior() {
         return (int)185L;
     }
+    /**
+     * {@snippet :
+     * #define XK_masculine 186
+     * }
+     */
     public static int XK_masculine() {
         return (int)186L;
     }
+    /**
+     * {@snippet :
+     * #define XK_guillemotright 187
+     * }
+     */
     public static int XK_guillemotright() {
         return (int)187L;
     }
+    /**
+     * {@snippet :
+     * #define XK_onequarter 188
+     * }
+     */
     public static int XK_onequarter() {
         return (int)188L;
     }
+    /**
+     * {@snippet :
+     * #define XK_onehalf 189
+     * }
+     */
     public static int XK_onehalf() {
         return (int)189L;
     }
+    /**
+     * {@snippet :
+     * #define XK_threequarters 190
+     * }
+     */
     public static int XK_threequarters() {
         return (int)190L;
     }
+    /**
+     * {@snippet :
+     * #define XK_questiondown 191
+     * }
+     */
     public static int XK_questiondown() {
         return (int)191L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Agrave 192
+     * }
+     */
     public static int XK_Agrave() {
         return (int)192L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Aacute 193
+     * }
+     */
     public static int XK_Aacute() {
         return (int)193L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Acircumflex 194
+     * }
+     */
     public static int XK_Acircumflex() {
         return (int)194L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Atilde 195
+     * }
+     */
     public static int XK_Atilde() {
         return (int)195L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Adiaeresis 196
+     * }
+     */
     public static int XK_Adiaeresis() {
         return (int)196L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Aring 197
+     * }
+     */
     public static int XK_Aring() {
         return (int)197L;
     }
+    /**
+     * {@snippet :
+     * #define XK_AE 198
+     * }
+     */
     public static int XK_AE() {
         return (int)198L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ccedilla 199
+     * }
+     */
     public static int XK_Ccedilla() {
         return (int)199L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Egrave 200
+     * }
+     */
     public static int XK_Egrave() {
         return (int)200L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Eacute 201
+     * }
+     */
     public static int XK_Eacute() {
         return (int)201L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ecircumflex 202
+     * }
+     */
     public static int XK_Ecircumflex() {
         return (int)202L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ediaeresis 203
+     * }
+     */
     public static int XK_Ediaeresis() {
         return (int)203L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Igrave 204
+     * }
+     */
     public static int XK_Igrave() {
         return (int)204L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Iacute 205
+     * }
+     */
     public static int XK_Iacute() {
         return (int)205L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Icircumflex 206
+     * }
+     */
     public static int XK_Icircumflex() {
         return (int)206L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Idiaeresis 207
+     * }
+     */
     public static int XK_Idiaeresis() {
         return (int)207L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ETH 208
+     * }
+     */
     public static int XK_ETH() {
         return (int)208L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Eth 208
+     * }
+     */
     public static int XK_Eth() {
         return (int)208L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ntilde 209
+     * }
+     */
     public static int XK_Ntilde() {
         return (int)209L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ograve 210
+     * }
+     */
     public static int XK_Ograve() {
         return (int)210L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Oacute 211
+     * }
+     */
     public static int XK_Oacute() {
         return (int)211L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ocircumflex 212
+     * }
+     */
     public static int XK_Ocircumflex() {
         return (int)212L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Otilde 213
+     * }
+     */
     public static int XK_Otilde() {
         return (int)213L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Odiaeresis 214
+     * }
+     */
     public static int XK_Odiaeresis() {
         return (int)214L;
     }
+    /**
+     * {@snippet :
+     * #define XK_multiply 215
+     * }
+     */
     public static int XK_multiply() {
         return (int)215L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Oslash 216
+     * }
+     */
     public static int XK_Oslash() {
         return (int)216L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ooblique 216
+     * }
+     */
     public static int XK_Ooblique() {
         return (int)216L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ugrave 217
+     * }
+     */
     public static int XK_Ugrave() {
         return (int)217L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uacute 218
+     * }
+     */
     public static int XK_Uacute() {
         return (int)218L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ucircumflex 219
+     * }
+     */
     public static int XK_Ucircumflex() {
         return (int)219L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Udiaeresis 220
+     * }
+     */
     public static int XK_Udiaeresis() {
         return (int)220L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Yacute 221
+     * }
+     */
     public static int XK_Yacute() {
         return (int)221L;
     }
+    /**
+     * {@snippet :
+     * #define XK_THORN 222
+     * }
+     */
     public static int XK_THORN() {
         return (int)222L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Thorn 222
+     * }
+     */
     public static int XK_Thorn() {
         return (int)222L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ssharp 223
+     * }
+     */
     public static int XK_ssharp() {
         return (int)223L;
     }
+    /**
+     * {@snippet :
+     * #define XK_agrave 224
+     * }
+     */
     public static int XK_agrave() {
         return (int)224L;
     }
+    /**
+     * {@snippet :
+     * #define XK_aacute 225
+     * }
+     */
     public static int XK_aacute() {
         return (int)225L;
     }
+    /**
+     * {@snippet :
+     * #define XK_acircumflex 226
+     * }
+     */
     public static int XK_acircumflex() {
         return (int)226L;
     }
+    /**
+     * {@snippet :
+     * #define XK_atilde 227
+     * }
+     */
     public static int XK_atilde() {
         return (int)227L;
     }
+    /**
+     * {@snippet :
+     * #define XK_adiaeresis 228
+     * }
+     */
     public static int XK_adiaeresis() {
         return (int)228L;
     }
+    /**
+     * {@snippet :
+     * #define XK_aring 229
+     * }
+     */
     public static int XK_aring() {
         return (int)229L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ae 230
+     * }
+     */
     public static int XK_ae() {
         return (int)230L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ccedilla 231
+     * }
+     */
     public static int XK_ccedilla() {
         return (int)231L;
     }
+    /**
+     * {@snippet :
+     * #define XK_egrave 232
+     * }
+     */
     public static int XK_egrave() {
         return (int)232L;
     }
+    /**
+     * {@snippet :
+     * #define XK_eacute 233
+     * }
+     */
     public static int XK_eacute() {
         return (int)233L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ecircumflex 234
+     * }
+     */
     public static int XK_ecircumflex() {
         return (int)234L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ediaeresis 235
+     * }
+     */
     public static int XK_ediaeresis() {
         return (int)235L;
     }
+    /**
+     * {@snippet :
+     * #define XK_igrave 236
+     * }
+     */
     public static int XK_igrave() {
         return (int)236L;
     }
+    /**
+     * {@snippet :
+     * #define XK_iacute 237
+     * }
+     */
     public static int XK_iacute() {
         return (int)237L;
     }
+    /**
+     * {@snippet :
+     * #define XK_icircumflex 238
+     * }
+     */
     public static int XK_icircumflex() {
         return (int)238L;
     }
+    /**
+     * {@snippet :
+     * #define XK_idiaeresis 239
+     * }
+     */
     public static int XK_idiaeresis() {
         return (int)239L;
     }
+    /**
+     * {@snippet :
+     * #define XK_eth 240
+     * }
+     */
     public static int XK_eth() {
         return (int)240L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ntilde 241
+     * }
+     */
     public static int XK_ntilde() {
         return (int)241L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ograve 242
+     * }
+     */
     public static int XK_ograve() {
         return (int)242L;
     }
+    /**
+     * {@snippet :
+     * #define XK_oacute 243
+     * }
+     */
     public static int XK_oacute() {
         return (int)243L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ocircumflex 244
+     * }
+     */
     public static int XK_ocircumflex() {
         return (int)244L;
     }
+    /**
+     * {@snippet :
+     * #define XK_otilde 245
+     * }
+     */
     public static int XK_otilde() {
         return (int)245L;
     }
+    /**
+     * {@snippet :
+     * #define XK_odiaeresis 246
+     * }
+     */
     public static int XK_odiaeresis() {
         return (int)246L;
     }
+    /**
+     * {@snippet :
+     * #define XK_division 247
+     * }
+     */
     public static int XK_division() {
         return (int)247L;
     }
+    /**
+     * {@snippet :
+     * #define XK_oslash 248
+     * }
+     */
     public static int XK_oslash() {
         return (int)248L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ooblique 248
+     * }
+     */
     public static int XK_ooblique() {
         return (int)248L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ugrave 249
+     * }
+     */
     public static int XK_ugrave() {
         return (int)249L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uacute 250
+     * }
+     */
     public static int XK_uacute() {
         return (int)250L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ucircumflex 251
+     * }
+     */
     public static int XK_ucircumflex() {
         return (int)251L;
     }
+    /**
+     * {@snippet :
+     * #define XK_udiaeresis 252
+     * }
+     */
     public static int XK_udiaeresis() {
         return (int)252L;
     }
+    /**
+     * {@snippet :
+     * #define XK_yacute 253
+     * }
+     */
     public static int XK_yacute() {
         return (int)253L;
     }
+    /**
+     * {@snippet :
+     * #define XK_thorn 254
+     * }
+     */
     public static int XK_thorn() {
         return (int)254L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ydiaeresis 255
+     * }
+     */
     public static int XK_ydiaeresis() {
         return (int)255L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Aogonek 417
+     * }
+     */
     public static int XK_Aogonek() {
         return (int)417L;
     }
+    /**
+     * {@snippet :
+     * #define XK_breve 418
+     * }
+     */
     public static int XK_breve() {
         return (int)418L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Lstroke 419
+     * }
+     */
     public static int XK_Lstroke() {
         return (int)419L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Lcaron 421
+     * }
+     */
     public static int XK_Lcaron() {
         return (int)421L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sacute 422
+     * }
+     */
     public static int XK_Sacute() {
         return (int)422L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Scaron 425
+     * }
+     */
     public static int XK_Scaron() {
         return (int)425L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Scedilla 426
+     * }
+     */
     public static int XK_Scedilla() {
         return (int)426L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Tcaron 427
+     * }
+     */
     public static int XK_Tcaron() {
         return (int)427L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Zacute 428
+     * }
+     */
     public static int XK_Zacute() {
         return (int)428L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Zcaron 430
+     * }
+     */
     public static int XK_Zcaron() {
         return (int)430L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Zabovedot 431
+     * }
+     */
     public static int XK_Zabovedot() {
         return (int)431L;
     }
+    /**
+     * {@snippet :
+     * #define XK_aogonek 433
+     * }
+     */
     public static int XK_aogonek() {
         return (int)433L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ogonek 434
+     * }
+     */
     public static int XK_ogonek() {
         return (int)434L;
     }
+    /**
+     * {@snippet :
+     * #define XK_lstroke 435
+     * }
+     */
     public static int XK_lstroke() {
         return (int)435L;
     }
+    /**
+     * {@snippet :
+     * #define XK_lcaron 437
+     * }
+     */
     public static int XK_lcaron() {
         return (int)437L;
     }
+    /**
+     * {@snippet :
+     * #define XK_sacute 438
+     * }
+     */
     public static int XK_sacute() {
         return (int)438L;
     }
+    /**
+     * {@snippet :
+     * #define XK_caron 439
+     * }
+     */
     public static int XK_caron() {
         return (int)439L;
     }
+    /**
+     * {@snippet :
+     * #define XK_scaron 441
+     * }
+     */
     public static int XK_scaron() {
         return (int)441L;
     }
+    /**
+     * {@snippet :
+     * #define XK_scedilla 442
+     * }
+     */
     public static int XK_scedilla() {
         return (int)442L;
     }
+    /**
+     * {@snippet :
+     * #define XK_tcaron 443
+     * }
+     */
     public static int XK_tcaron() {
         return (int)443L;
     }
+    /**
+     * {@snippet :
+     * #define XK_zacute 444
+     * }
+     */
     public static int XK_zacute() {
         return (int)444L;
     }
+    /**
+     * {@snippet :
+     * #define XK_doubleacute 445
+     * }
+     */
     public static int XK_doubleacute() {
         return (int)445L;
     }
+    /**
+     * {@snippet :
+     * #define XK_zcaron 446
+     * }
+     */
     public static int XK_zcaron() {
         return (int)446L;
     }
+    /**
+     * {@snippet :
+     * #define XK_zabovedot 447
+     * }
+     */
     public static int XK_zabovedot() {
         return (int)447L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Racute 448
+     * }
+     */
     public static int XK_Racute() {
         return (int)448L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Abreve 451
+     * }
+     */
     public static int XK_Abreve() {
         return (int)451L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Lacute 453
+     * }
+     */
     public static int XK_Lacute() {
         return (int)453L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cacute 454
+     * }
+     */
     public static int XK_Cacute() {
         return (int)454L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ccaron 456
+     * }
+     */
     public static int XK_Ccaron() {
         return (int)456L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Eogonek 458
+     * }
+     */
     public static int XK_Eogonek() {
         return (int)458L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ecaron 460
+     * }
+     */
     public static int XK_Ecaron() {
         return (int)460L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Dcaron 463
+     * }
+     */
     public static int XK_Dcaron() {
         return (int)463L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Dstroke 464
+     * }
+     */
     public static int XK_Dstroke() {
         return (int)464L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Nacute 465
+     * }
+     */
     public static int XK_Nacute() {
         return (int)465L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ncaron 466
+     * }
+     */
     public static int XK_Ncaron() {
         return (int)466L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Odoubleacute 469
+     * }
+     */
     public static int XK_Odoubleacute() {
         return (int)469L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Rcaron 472
+     * }
+     */
     public static int XK_Rcaron() {
         return (int)472L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uring 473
+     * }
+     */
     public static int XK_Uring() {
         return (int)473L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Udoubleacute 475
+     * }
+     */
     public static int XK_Udoubleacute() {
         return (int)475L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Tcedilla 478
+     * }
+     */
     public static int XK_Tcedilla() {
         return (int)478L;
     }
+    /**
+     * {@snippet :
+     * #define XK_racute 480
+     * }
+     */
     public static int XK_racute() {
         return (int)480L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abreve 483
+     * }
+     */
     public static int XK_abreve() {
         return (int)483L;
     }
+    /**
+     * {@snippet :
+     * #define XK_lacute 485
+     * }
+     */
     public static int XK_lacute() {
         return (int)485L;
     }
+    /**
+     * {@snippet :
+     * #define XK_cacute 486
+     * }
+     */
     public static int XK_cacute() {
         return (int)486L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ccaron 488
+     * }
+     */
     public static int XK_ccaron() {
         return (int)488L;
     }
+    /**
+     * {@snippet :
+     * #define XK_eogonek 490
+     * }
+     */
     public static int XK_eogonek() {
         return (int)490L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ecaron 492
+     * }
+     */
     public static int XK_ecaron() {
         return (int)492L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dcaron 495
+     * }
+     */
     public static int XK_dcaron() {
         return (int)495L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dstroke 496
+     * }
+     */
     public static int XK_dstroke() {
         return (int)496L;
     }
+    /**
+     * {@snippet :
+     * #define XK_nacute 497
+     * }
+     */
     public static int XK_nacute() {
         return (int)497L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ncaron 498
+     * }
+     */
     public static int XK_ncaron() {
         return (int)498L;
     }
+    /**
+     * {@snippet :
+     * #define XK_odoubleacute 501
+     * }
+     */
     public static int XK_odoubleacute() {
         return (int)501L;
     }
+    /**
+     * {@snippet :
+     * #define XK_rcaron 504
+     * }
+     */
     public static int XK_rcaron() {
         return (int)504L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uring 505
+     * }
+     */
     public static int XK_uring() {
         return (int)505L;
     }
+    /**
+     * {@snippet :
+     * #define XK_udoubleacute 507
+     * }
+     */
     public static int XK_udoubleacute() {
         return (int)507L;
     }
+    /**
+     * {@snippet :
+     * #define XK_tcedilla 510
+     * }
+     */
     public static int XK_tcedilla() {
         return (int)510L;
     }
+    /**
+     * {@snippet :
+     * #define XK_abovedot 511
+     * }
+     */
     public static int XK_abovedot() {
         return (int)511L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hstroke 673
+     * }
+     */
     public static int XK_Hstroke() {
         return (int)673L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Hcircumflex 678
+     * }
+     */
     public static int XK_Hcircumflex() {
         return (int)678L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Iabovedot 681
+     * }
+     */
     public static int XK_Iabovedot() {
         return (int)681L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Gbreve 683
+     * }
+     */
     public static int XK_Gbreve() {
         return (int)683L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Jcircumflex 684
+     * }
+     */
     public static int XK_Jcircumflex() {
         return (int)684L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hstroke 689
+     * }
+     */
     public static int XK_hstroke() {
         return (int)689L;
     }
+    /**
+     * {@snippet :
+     * #define XK_hcircumflex 694
+     * }
+     */
     public static int XK_hcircumflex() {
         return (int)694L;
     }
+    /**
+     * {@snippet :
+     * #define XK_idotless 697
+     * }
+     */
     public static int XK_idotless() {
         return (int)697L;
     }
+    /**
+     * {@snippet :
+     * #define XK_gbreve 699
+     * }
+     */
     public static int XK_gbreve() {
         return (int)699L;
     }
+    /**
+     * {@snippet :
+     * #define XK_jcircumflex 700
+     * }
+     */
     public static int XK_jcircumflex() {
         return (int)700L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Cabovedot 709
+     * }
+     */
     public static int XK_Cabovedot() {
         return (int)709L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ccircumflex 710
+     * }
+     */
     public static int XK_Ccircumflex() {
         return (int)710L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Gabovedot 725
+     * }
+     */
     public static int XK_Gabovedot() {
         return (int)725L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Gcircumflex 728
+     * }
+     */
     public static int XK_Gcircumflex() {
         return (int)728L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ubreve 733
+     * }
+     */
     public static int XK_Ubreve() {
         return (int)733L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Scircumflex 734
+     * }
+     */
     public static int XK_Scircumflex() {
         return (int)734L;
     }
+    /**
+     * {@snippet :
+     * #define XK_cabovedot 741
+     * }
+     */
     public static int XK_cabovedot() {
         return (int)741L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ccircumflex 742
+     * }
+     */
     public static int XK_ccircumflex() {
         return (int)742L;
     }
+    /**
+     * {@snippet :
+     * #define XK_gabovedot 757
+     * }
+     */
     public static int XK_gabovedot() {
         return (int)757L;
     }
+    /**
+     * {@snippet :
+     * #define XK_gcircumflex 760
+     * }
+     */
     public static int XK_gcircumflex() {
         return (int)760L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ubreve 765
+     * }
+     */
     public static int XK_ubreve() {
         return (int)765L;
     }
+    /**
+     * {@snippet :
+     * #define XK_scircumflex 766
+     * }
+     */
     public static int XK_scircumflex() {
         return (int)766L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kra 930
+     * }
+     */
     public static int XK_kra() {
         return (int)930L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kappa 930
+     * }
+     */
     public static int XK_kappa() {
         return (int)930L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Rcedilla 931
+     * }
+     */
     public static int XK_Rcedilla() {
         return (int)931L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Itilde 933
+     * }
+     */
     public static int XK_Itilde() {
         return (int)933L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Lcedilla 934
+     * }
+     */
     public static int XK_Lcedilla() {
         return (int)934L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Emacron 938
+     * }
+     */
     public static int XK_Emacron() {
         return (int)938L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Gcedilla 939
+     * }
+     */
     public static int XK_Gcedilla() {
         return (int)939L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Tslash 940
+     * }
+     */
     public static int XK_Tslash() {
         return (int)940L;
     }
+    /**
+     * {@snippet :
+     * #define XK_rcedilla 947
+     * }
+     */
     public static int XK_rcedilla() {
         return (int)947L;
     }
+    /**
+     * {@snippet :
+     * #define XK_itilde 949
+     * }
+     */
     public static int XK_itilde() {
         return (int)949L;
     }
+    /**
+     * {@snippet :
+     * #define XK_lcedilla 950
+     * }
+     */
     public static int XK_lcedilla() {
         return (int)950L;
     }
+    /**
+     * {@snippet :
+     * #define XK_emacron 954
+     * }
+     */
     public static int XK_emacron() {
         return (int)954L;
     }
+    /**
+     * {@snippet :
+     * #define XK_gcedilla 955
+     * }
+     */
     public static int XK_gcedilla() {
         return (int)955L;
     }
+    /**
+     * {@snippet :
+     * #define XK_tslash 956
+     * }
+     */
     public static int XK_tslash() {
         return (int)956L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ENG 957
+     * }
+     */
     public static int XK_ENG() {
         return (int)957L;
     }
+    /**
+     * {@snippet :
+     * #define XK_eng 959
+     * }
+     */
     public static int XK_eng() {
         return (int)959L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Amacron 960
+     * }
+     */
     public static int XK_Amacron() {
         return (int)960L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Iogonek 967
+     * }
+     */
     public static int XK_Iogonek() {
         return (int)967L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Eabovedot 972
+     * }
+     */
     public static int XK_Eabovedot() {
         return (int)972L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Imacron 975
+     * }
+     */
     public static int XK_Imacron() {
         return (int)975L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ncedilla 977
+     * }
+     */
     public static int XK_Ncedilla() {
         return (int)977L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Omacron 978
+     * }
+     */
     public static int XK_Omacron() {
         return (int)978L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Kcedilla 979
+     * }
+     */
     public static int XK_Kcedilla() {
         return (int)979L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Uogonek 985
+     * }
+     */
     public static int XK_Uogonek() {
         return (int)985L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Utilde 989
+     * }
+     */
     public static int XK_Utilde() {
         return (int)989L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Umacron 990
+     * }
+     */
     public static int XK_Umacron() {
         return (int)990L;
     }
+    /**
+     * {@snippet :
+     * #define XK_amacron 992
+     * }
+     */
     public static int XK_amacron() {
         return (int)992L;
     }
+    /**
+     * {@snippet :
+     * #define XK_iogonek 999
+     * }
+     */
     public static int XK_iogonek() {
         return (int)999L;
     }
+    /**
+     * {@snippet :
+     * #define XK_eabovedot 1004
+     * }
+     */
     public static int XK_eabovedot() {
         return (int)1004L;
     }
+    /**
+     * {@snippet :
+     * #define XK_imacron 1007
+     * }
+     */
     public static int XK_imacron() {
         return (int)1007L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ncedilla 1009
+     * }
+     */
     public static int XK_ncedilla() {
         return (int)1009L;
     }
+    /**
+     * {@snippet :
+     * #define XK_omacron 1010
+     * }
+     */
     public static int XK_omacron() {
         return (int)1010L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kcedilla 1011
+     * }
+     */
     public static int XK_kcedilla() {
         return (int)1011L;
     }
+    /**
+     * {@snippet :
+     * #define XK_uogonek 1017
+     * }
+     */
     public static int XK_uogonek() {
         return (int)1017L;
     }
+    /**
+     * {@snippet :
+     * #define XK_utilde 1021
+     * }
+     */
     public static int XK_utilde() {
         return (int)1021L;
     }
+    /**
+     * {@snippet :
+     * #define XK_umacron 1022
+     * }
+     */
     public static int XK_umacron() {
         return (int)1022L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Wcircumflex 16777588
+     * }
+     */
     public static int XK_Wcircumflex() {
         return (int)16777588L;
     }
+    /**
+     * {@snippet :
+     * #define XK_wcircumflex 16777589
+     * }
+     */
     public static int XK_wcircumflex() {
         return (int)16777589L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ycircumflex 16777590
+     * }
+     */
     public static int XK_Ycircumflex() {
         return (int)16777590L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ycircumflex 16777591
+     * }
+     */
     public static int XK_ycircumflex() {
         return (int)16777591L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Babovedot 16784898
+     * }
+     */
     public static int XK_Babovedot() {
         return (int)16784898L;
     }
+    /**
+     * {@snippet :
+     * #define XK_babovedot 16784899
+     * }
+     */
     public static int XK_babovedot() {
         return (int)16784899L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Dabovedot 16784906
+     * }
+     */
     public static int XK_Dabovedot() {
         return (int)16784906L;
     }
+    /**
+     * {@snippet :
+     * #define XK_dabovedot 16784907
+     * }
+     */
     public static int XK_dabovedot() {
         return (int)16784907L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Fabovedot 16784926
+     * }
+     */
     public static int XK_Fabovedot() {
         return (int)16784926L;
     }
+    /**
+     * {@snippet :
+     * #define XK_fabovedot 16784927
+     * }
+     */
     public static int XK_fabovedot() {
         return (int)16784927L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Mabovedot 16784960
+     * }
+     */
     public static int XK_Mabovedot() {
         return (int)16784960L;
     }
+    /**
+     * {@snippet :
+     * #define XK_mabovedot 16784961
+     * }
+     */
     public static int XK_mabovedot() {
         return (int)16784961L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Pabovedot 16784982
+     * }
+     */
     public static int XK_Pabovedot() {
         return (int)16784982L;
     }
+    /**
+     * {@snippet :
+     * #define XK_pabovedot 16784983
+     * }
+     */
     public static int XK_pabovedot() {
         return (int)16784983L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Sabovedot 16784992
+     * }
+     */
     public static int XK_Sabovedot() {
         return (int)16784992L;
     }
+    /**
+     * {@snippet :
+     * #define XK_sabovedot 16784993
+     * }
+     */
     public static int XK_sabovedot() {
         return (int)16784993L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Tabovedot 16785002
+     * }
+     */
     public static int XK_Tabovedot() {
         return (int)16785002L;
     }
+    /**
+     * {@snippet :
+     * #define XK_tabovedot 16785003
+     * }
+     */
     public static int XK_tabovedot() {
         return (int)16785003L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Wgrave 16785024
+     * }
+     */
     public static int XK_Wgrave() {
         return (int)16785024L;
     }
+    /**
+     * {@snippet :
+     * #define XK_wgrave 16785025
+     * }
+     */
     public static int XK_wgrave() {
         return (int)16785025L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Wacute 16785026
+     * }
+     */
     public static int XK_Wacute() {
         return (int)16785026L;
     }
+    /**
+     * {@snippet :
+     * #define XK_wacute 16785027
+     * }
+     */
     public static int XK_wacute() {
         return (int)16785027L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Wdiaeresis 16785028
+     * }
+     */
     public static int XK_Wdiaeresis() {
         return (int)16785028L;
     }
+    /**
+     * {@snippet :
+     * #define XK_wdiaeresis 16785029
+     * }
+     */
     public static int XK_wdiaeresis() {
         return (int)16785029L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ygrave 16785138
+     * }
+     */
     public static int XK_Ygrave() {
         return (int)16785138L;
     }
+    /**
+     * {@snippet :
+     * #define XK_ygrave 16785139
+     * }
+     */
     public static int XK_ygrave() {
         return (int)16785139L;
     }
+    /**
+     * {@snippet :
+     * #define XK_OE 5052
+     * }
+     */
     public static int XK_OE() {
         return (int)5052L;
     }
+    /**
+     * {@snippet :
+     * #define XK_oe 5053
+     * }
+     */
     public static int XK_oe() {
         return (int)5053L;
     }
+    /**
+     * {@snippet :
+     * #define XK_Ydiaeresis 5054
+     * }
+     */
     public static int XK_Ydiaeresis() {
         return (int)5054L;
     }
+    /**
+     * {@snippet :
+     * #define XK_overline 1150
+     * }
+     */
     public static int XK_overline() {
         return (int)1150L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_fullstop 1185
+     * }
+     */
     public static int XK_kana_fullstop() {
         return (int)1185L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_openingbracket 1186
+     * }
+     */
     public static int XK_kana_openingbracket() {
         return (int)1186L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_closingbracket 1187
+     * }
+     */
     public static int XK_kana_closingbracket() {
         return (int)1187L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_comma 1188
+     * }
+     */
     public static int XK_kana_comma() {
         return (int)1188L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_conjunctive 1189
+     * }
+     */
     public static int XK_kana_conjunctive() {
         return (int)1189L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_middledot 1189
+     * }
+     */
     public static int XK_kana_middledot() {
         return (int)1189L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_WO 1190
+     * }
+     */
     public static int XK_kana_WO() {
         return (int)1190L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_a 1191
+     * }
+     */
     public static int XK_kana_a() {
         return (int)1191L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_i 1192
+     * }
+     */
     public static int XK_kana_i() {
         return (int)1192L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_u 1193
+     * }
+     */
     public static int XK_kana_u() {
         return (int)1193L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_e 1194
+     * }
+     */
     public static int XK_kana_e() {
         return (int)1194L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_o 1195
+     * }
+     */
     public static int XK_kana_o() {
         return (int)1195L;
     }
+    /**
+     * {@snippet :
+     * #define XK_kana_ya 1196
+     * }
+     */
     public static int XK_kana_ya() {
         return (int)1196L;
     }

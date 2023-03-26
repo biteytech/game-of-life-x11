@@ -7,27 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$84 {
+final class constants$84 {
 
-    static final FunctionDescriptor XTextPropertyToStringList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XTextPropertyToStringList$MH = RuntimeHelper.downcallHandle(
-        "XTextPropertyToStringList",
-        constants$84.XTextPropertyToStringList$FUNC
-    );
-    static final FunctionDescriptor XmbTextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbTextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
-        "XmbTextPropertyToTextList",
-        constants$84.XmbTextPropertyToTextList$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$84() {}
     static final FunctionDescriptor XwcTextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -65,6 +48,32 @@ class constants$84 {
     static final MethodHandle XUnionRegion$MH = RuntimeHelper.downcallHandle(
         "XUnionRegion",
         constants$84.XUnionRegion$FUNC
+    );
+    static final FunctionDescriptor XWMGeometry$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XWMGeometry$MH = RuntimeHelper.downcallHandle(
+        "XWMGeometry",
+        constants$84.XWMGeometry$FUNC
+    );
+    static final FunctionDescriptor XXorRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XXorRegion$MH = RuntimeHelper.downcallHandle(
+        "XXorRegion",
+        constants$84.XXorRegion$FUNC
     );
 }
 

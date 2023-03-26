@@ -7,9 +7,24 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     long flags;
+ *     int input;
+ *     int initial_state;
+ *     Pixmap icon_pixmap;
+ *     Window icon_window;
+ *     int icon_x;
+ *     int icon_y;
+ *     Pixmap icon_mask;
+ *     XID window_group;
+ * };
+ * }
+ */
 public class XWMHints {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_LONG_LONG$LAYOUT.withName("flags"),
         Constants$root.C_INT$LAYOUT.withName("input"),
         Constants$root.C_INT$LAYOUT.withName("initial_state"),
@@ -27,10 +42,22 @@ public class XWMHints {
     public static VarHandle flags$VH() {
         return XWMHints.flags$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * long flags;
+     * }
+     */
     public static long flags$get(MemorySegment seg) {
         return (long)XWMHints.flags$VH.get(seg);
     }
-    public static void flags$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * long flags;
+     * }
+     */
+    public static void flags$set(MemorySegment seg, long x) {
         XWMHints.flags$VH.set(seg, x);
     }
     public static long flags$get(MemorySegment seg, long index) {
@@ -43,10 +70,22 @@ public class XWMHints {
     public static VarHandle input$VH() {
         return XWMHints.input$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int input;
+     * }
+     */
     public static int input$get(MemorySegment seg) {
         return (int)XWMHints.input$VH.get(seg);
     }
-    public static void input$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int input;
+     * }
+     */
+    public static void input$set(MemorySegment seg, int x) {
         XWMHints.input$VH.set(seg, x);
     }
     public static int input$get(MemorySegment seg, long index) {
@@ -59,10 +98,22 @@ public class XWMHints {
     public static VarHandle initial_state$VH() {
         return XWMHints.initial_state$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int initial_state;
+     * }
+     */
     public static int initial_state$get(MemorySegment seg) {
         return (int)XWMHints.initial_state$VH.get(seg);
     }
-    public static void initial_state$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int initial_state;
+     * }
+     */
+    public static void initial_state$set(MemorySegment seg, int x) {
         XWMHints.initial_state$VH.set(seg, x);
     }
     public static int initial_state$get(MemorySegment seg, long index) {
@@ -75,10 +126,22 @@ public class XWMHints {
     public static VarHandle icon_pixmap$VH() {
         return XWMHints.icon_pixmap$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Pixmap icon_pixmap;
+     * }
+     */
     public static long icon_pixmap$get(MemorySegment seg) {
         return (long)XWMHints.icon_pixmap$VH.get(seg);
     }
-    public static void icon_pixmap$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Pixmap icon_pixmap;
+     * }
+     */
+    public static void icon_pixmap$set(MemorySegment seg, long x) {
         XWMHints.icon_pixmap$VH.set(seg, x);
     }
     public static long icon_pixmap$get(MemorySegment seg, long index) {
@@ -91,10 +154,22 @@ public class XWMHints {
     public static VarHandle icon_window$VH() {
         return XWMHints.icon_window$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window icon_window;
+     * }
+     */
     public static long icon_window$get(MemorySegment seg) {
         return (long)XWMHints.icon_window$VH.get(seg);
     }
-    public static void icon_window$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window icon_window;
+     * }
+     */
+    public static void icon_window$set(MemorySegment seg, long x) {
         XWMHints.icon_window$VH.set(seg, x);
     }
     public static long icon_window$get(MemorySegment seg, long index) {
@@ -107,10 +182,22 @@ public class XWMHints {
     public static VarHandle icon_x$VH() {
         return XWMHints.icon_x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int icon_x;
+     * }
+     */
     public static int icon_x$get(MemorySegment seg) {
         return (int)XWMHints.icon_x$VH.get(seg);
     }
-    public static void icon_x$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int icon_x;
+     * }
+     */
+    public static void icon_x$set(MemorySegment seg, int x) {
         XWMHints.icon_x$VH.set(seg, x);
     }
     public static int icon_x$get(MemorySegment seg, long index) {
@@ -123,10 +210,22 @@ public class XWMHints {
     public static VarHandle icon_y$VH() {
         return XWMHints.icon_y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int icon_y;
+     * }
+     */
     public static int icon_y$get(MemorySegment seg) {
         return (int)XWMHints.icon_y$VH.get(seg);
     }
-    public static void icon_y$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int icon_y;
+     * }
+     */
+    public static void icon_y$set(MemorySegment seg, int x) {
         XWMHints.icon_y$VH.set(seg, x);
     }
     public static int icon_y$get(MemorySegment seg, long index) {
@@ -139,10 +238,22 @@ public class XWMHints {
     public static VarHandle icon_mask$VH() {
         return XWMHints.icon_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Pixmap icon_mask;
+     * }
+     */
     public static long icon_mask$get(MemorySegment seg) {
         return (long)XWMHints.icon_mask$VH.get(seg);
     }
-    public static void icon_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Pixmap icon_mask;
+     * }
+     */
+    public static void icon_mask$set(MemorySegment seg, long x) {
         XWMHints.icon_mask$VH.set(seg, x);
     }
     public static long icon_mask$get(MemorySegment seg, long index) {
@@ -155,10 +266,22 @@ public class XWMHints {
     public static VarHandle window_group$VH() {
         return XWMHints.window_group$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XID window_group;
+     * }
+     */
     public static long window_group$get(MemorySegment seg) {
         return (long)XWMHints.window_group$VH.get(seg);
     }
-    public static void window_group$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XID window_group;
+     * }
+     */
+    public static void window_group$set(MemorySegment seg, long x) {
         XWMHints.window_group$VH.set(seg, x);
     }
     public static long window_group$get(MemorySegment seg, long index) {
@@ -169,10 +292,10 @@ public class XWMHints {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

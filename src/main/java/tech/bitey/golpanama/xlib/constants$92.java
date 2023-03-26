@@ -7,14 +7,16 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$92 {
+final class constants$92 {
 
-    static final MemorySegment XNFontSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("fontSet");
-    static final MemorySegment XNLineSpace$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("lineSpace");
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$92() {}
     static final MemorySegment XNCursor$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("cursor");
     static final MemorySegment XNQueryIMValuesList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryIMValuesList");
     static final MemorySegment XNQueryICValuesList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryICValuesList");
     static final MemorySegment XNVisiblePosition$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("visiblePosition");
+    static final MemorySegment XNR6PreeditCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("r6PreeditCallback");
+    static final MemorySegment XNStringConversionCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stringConversionCallback");
 }
 
 

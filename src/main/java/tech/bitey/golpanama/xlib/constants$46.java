@@ -7,32 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$46 {
+final class constants$46 {
 
-    static final FunctionDescriptor XQueryBestStipple$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryBestStipple$MH = RuntimeHelper.downcallHandle(
-        "XQueryBestStipple",
-        constants$46.XQueryBestStipple$FUNC
-    );
-    static final FunctionDescriptor XQueryBestTile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryBestTile$MH = RuntimeHelper.downcallHandle(
-        "XQueryBestTile",
-        constants$46.XQueryBestTile$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$46() {}
     static final FunctionDescriptor XQueryColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -70,6 +48,35 @@ class constants$46 {
     static final MethodHandle XQueryKeymap$MH = RuntimeHelper.downcallHandle(
         "XQueryKeymap",
         constants$46.XQueryKeymap$FUNC
+    );
+    static final FunctionDescriptor XQueryPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XQueryPointer$MH = RuntimeHelper.downcallHandle(
+        "XQueryPointer",
+        constants$46.XQueryPointer$FUNC
+    );
+    static final FunctionDescriptor XQueryTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XQueryTextExtents$MH = RuntimeHelper.downcallHandle(
+        "XQueryTextExtents",
+        constants$46.XQueryTextExtents$FUNC
     );
 }
 

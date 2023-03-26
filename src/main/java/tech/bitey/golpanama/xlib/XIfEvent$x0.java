@@ -7,17 +7,22 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * int (*XIfEvent$x0)(Display*,XEvent*,XPointer);
+ * }
+ */
 public interface XIfEvent$x0 {
 
-    int apply(java.lang.foreign.MemoryAddress _x0, java.lang.foreign.MemoryAddress _x1, java.lang.foreign.MemoryAddress _x2);
-    static MemorySegment allocate(XIfEvent$x0 fi, MemorySession session) {
-        return RuntimeHelper.upcallStub(XIfEvent$x0.class, fi, constants$40.XIfEvent$x0$FUNC, session);
+    int apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1, java.lang.foreign.MemorySegment _x2);
+    static MemorySegment allocate(XIfEvent$x0 fi, SegmentScope scope) {
+        return RuntimeHelper.upcallStub(constants$40.XIfEvent$x0_UP$MH, fi, constants$40.XIfEvent$x0$FUNC, scope);
     }
-    static XIfEvent$x0 ofAddress(MemoryAddress addr, MemorySession session) {
-        MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
-        return (java.lang.foreign.MemoryAddress __x0, java.lang.foreign.MemoryAddress __x1, java.lang.foreign.MemoryAddress __x2) -> {
+    static XIfEvent$x0 ofAddress(MemorySegment addr, SegmentScope scope) {
+        MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+        return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1, java.lang.foreign.MemorySegment __x2) -> {
             try {
-                return (int)constants$40.XIfEvent$x0$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, (java.lang.foreign.Addressable)__x1, (java.lang.foreign.Addressable)__x2);
+                return (int)constants$40.XIfEvent$x0_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

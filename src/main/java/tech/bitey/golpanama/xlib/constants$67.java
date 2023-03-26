@@ -7,36 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$67 {
+final class constants$67 {
 
-    static final FunctionDescriptor XwcDrawString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XwcDrawString$MH = RuntimeHelper.downcallHandle(
-        "XwcDrawString",
-        constants$67.XwcDrawString$FUNC
-    );
-    static final FunctionDescriptor Xutf8DrawString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle Xutf8DrawString$MH = RuntimeHelper.downcallHandle(
-        "Xutf8DrawString",
-        constants$67.Xutf8DrawString$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$67() {}
     static final FunctionDescriptor XmbDrawImageString$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -88,6 +62,20 @@ class constants$67 {
     static final MethodHandle XOpenIM$MH = RuntimeHelper.downcallHandle(
         "XOpenIM",
         constants$67.XOpenIM$FUNC
+    );
+    static final FunctionDescriptor XCloseIM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XCloseIM$MH = RuntimeHelper.downcallHandle(
+        "XCloseIM",
+        constants$67.XCloseIM$FUNC
+    );
+    static final FunctionDescriptor XGetIMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetIMValues$MH = RuntimeHelper.downcallHandleVariadic(
+        "XGetIMValues",
+        constants$67.XGetIMValues$FUNC
     );
 }
 

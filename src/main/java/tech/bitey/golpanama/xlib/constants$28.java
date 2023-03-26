@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$28 {
+final class constants$28 {
 
-    static final FunctionDescriptor XDefaultScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDefaultScreen$MH = RuntimeHelper.downcallHandle(
-        "XDefaultScreen",
-        constants$28.XDefaultScreen$FUNC
-    );
-    static final FunctionDescriptor XDefineCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XDefineCursor$MH = RuntimeHelper.downcallHandle(
-        "XDefineCursor",
-        constants$28.XDefineCursor$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$28() {}
     static final FunctionDescriptor XDeleteProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -56,6 +42,20 @@ class constants$28 {
     static final MethodHandle XDoesBackingStore$MH = RuntimeHelper.downcallHandle(
         "XDoesBackingStore",
         constants$28.XDoesBackingStore$FUNC
+    );
+    static final FunctionDescriptor XDoesSaveUnders$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDoesSaveUnders$MH = RuntimeHelper.downcallHandle(
+        "XDoesSaveUnders",
+        constants$28.XDoesSaveUnders$FUNC
+    );
+    static final FunctionDescriptor XDisableAccessControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDisableAccessControl$MH = RuntimeHelper.downcallHandle(
+        "XDisableAccessControl",
+        constants$28.XDisableAccessControl$FUNC
     );
 }
 

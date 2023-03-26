@@ -7,25 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$8 {
+final class constants$8 {
 
-    static final FunctionDescriptor XCreateGC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCreateGC$MH = RuntimeHelper.downcallHandle(
-        "XCreateGC",
-        constants$8.XCreateGC$FUNC
-    );
-    static final FunctionDescriptor XGContextFromGC$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGContextFromGC$MH = RuntimeHelper.downcallHandle(
-        "XGContextFromGC",
-        constants$8.XGContextFromGC$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$8() {}
     static final FunctionDescriptor XFlushGC$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
@@ -69,6 +54,29 @@ class constants$8 {
     static final MethodHandle XCreatePixmapFromBitmapData$MH = RuntimeHelper.downcallHandle(
         "XCreatePixmapFromBitmapData",
         constants$8.XCreatePixmapFromBitmapData$FUNC
+    );
+    static final FunctionDescriptor XCreateSimpleWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XCreateSimpleWindow$MH = RuntimeHelper.downcallHandle(
+        "XCreateSimpleWindow",
+        constants$8.XCreateSimpleWindow$FUNC
+    );
+    static final FunctionDescriptor XGetSelectionOwner$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetSelectionOwner$MH = RuntimeHelper.downcallHandle(
+        "XGetSelectionOwner",
+        constants$8.XGetSelectionOwner$FUNC
     );
 }
 

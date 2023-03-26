@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$73 {
+final class constants$73 {
 
-    static final FunctionDescriptor _Xwctomb$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle _Xwctomb$MH = RuntimeHelper.downcallHandle(
-        "_Xwctomb",
-        constants$73._Xwctomb$FUNC
-    );
-    static final FunctionDescriptor XGetEventData$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetEventData$MH = RuntimeHelper.downcallHandle(
-        "XGetEventData",
-        constants$73.XGetEventData$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$73() {}
     static final FunctionDescriptor XFreeEventData$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
@@ -47,6 +33,16 @@ class constants$73 {
     static final MethodHandle XAllocSizeHints$MH = RuntimeHelper.downcallHandle(
         "XAllocSizeHints",
         constants$73.XAllocSizeHints$FUNC
+    );
+    static final FunctionDescriptor XAllocStandardColormap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XAllocStandardColormap$MH = RuntimeHelper.downcallHandle(
+        "XAllocStandardColormap",
+        constants$73.XAllocStandardColormap$FUNC
+    );
+    static final FunctionDescriptor XAllocWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle XAllocWMHints$MH = RuntimeHelper.downcallHandle(
+        "XAllocWMHints",
+        constants$73.XAllocWMHints$FUNC
     );
 }
 

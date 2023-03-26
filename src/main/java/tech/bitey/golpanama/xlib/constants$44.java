@@ -7,16 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$44 {
+final class constants$44 {
 
-    static final FunctionDescriptor XPeekIfEvent$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPeekIfEvent$x0$MH = RuntimeHelper.downcallHandle(
-        constants$44.XPeekIfEvent$x0$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$44() {}
     static final FunctionDescriptor XPeekIfEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -47,6 +41,21 @@ class constants$44 {
     static final MethodHandle XProtocolRevision$MH = RuntimeHelper.downcallHandle(
         "XProtocolRevision",
         constants$44.XProtocolRevision$FUNC
+    );
+    static final FunctionDescriptor XProtocolVersion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XProtocolVersion$MH = RuntimeHelper.downcallHandle(
+        "XProtocolVersion",
+        constants$44.XProtocolVersion$FUNC
+    );
+    static final FunctionDescriptor XPutBackEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XPutBackEvent$MH = RuntimeHelper.downcallHandle(
+        "XPutBackEvent",
+        constants$44.XPutBackEvent$FUNC
     );
 }
 

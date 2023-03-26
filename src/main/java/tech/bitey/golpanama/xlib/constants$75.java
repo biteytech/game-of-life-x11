@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$75 {
+final class constants$75 {
 
-    static final FunctionDescriptor XDestroyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDestroyRegion$MH = RuntimeHelper.downcallHandle(
-        "XDestroyRegion",
-        constants$75.XDestroyRegion$FUNC
-    );
-    static final FunctionDescriptor XEmptyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XEmptyRegion$MH = RuntimeHelper.downcallHandle(
-        "XEmptyRegion",
-        constants$75.XEmptyRegion$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$75() {}
     static final FunctionDescriptor XEqualRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
@@ -59,6 +47,26 @@ class constants$75 {
     static final MethodHandle XGetIconSizes$MH = RuntimeHelper.downcallHandle(
         "XGetIconSizes",
         constants$75.XGetIconSizes$FUNC
+    );
+    static final FunctionDescriptor XGetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetNormalHints$MH = RuntimeHelper.downcallHandle(
+        "XGetNormalHints",
+        constants$75.XGetNormalHints$FUNC
+    );
+    static final FunctionDescriptor XGetRGBColormaps$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XGetRGBColormaps$MH = RuntimeHelper.downcallHandle(
+        "XGetRGBColormaps",
+        constants$75.XGetRGBColormaps$FUNC
     );
 }
 

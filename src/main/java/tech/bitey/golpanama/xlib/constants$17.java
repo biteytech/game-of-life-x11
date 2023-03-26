@@ -7,28 +7,25 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$17 {
+final class constants$17 {
 
-    static final FunctionDescriptor XEventMaskOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XEventMaskOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XEventMaskOfScreen",
-        constants$17.XEventMaskOfScreen$FUNC
-    );
-    static final FunctionDescriptor XScreenNumberOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XScreenNumberOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XScreenNumberOfScreen",
-        constants$17.XScreenNumberOfScreen$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$17() {}
     static final FunctionDescriptor XErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XErrorHandler$MH = RuntimeHelper.downcallHandle(
-        constants$17.XErrorHandler$FUNC
+    static final FunctionDescriptor XErrorHandler_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XErrorHandler_UP$MH = RuntimeHelper.upcallHandle(XErrorHandler.class, "apply", constants$17.XErrorHandler_UP$FUNC);
+    static final FunctionDescriptor XErrorHandler_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XErrorHandler_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$17.XErrorHandler_DOWN$FUNC
     );
     static final FunctionDescriptor XSetErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
@@ -39,6 +36,23 @@ class constants$17 {
     );
     static final FunctionDescriptor XIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
+    );
+    static final FunctionDescriptor XIOErrorHandler_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XIOErrorHandler_UP$MH = RuntimeHelper.upcallHandle(XIOErrorHandler.class, "apply", constants$17.XIOErrorHandler_UP$FUNC);
+    static final FunctionDescriptor XIOErrorHandler_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XIOErrorHandler_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$17.XIOErrorHandler_DOWN$FUNC
+    );
+    static final FunctionDescriptor XSetIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSetIOErrorHandler$MH = RuntimeHelper.downcallHandle(
+        "XSetIOErrorHandler",
+        constants$17.XSetIOErrorHandler$FUNC
     );
 }
 

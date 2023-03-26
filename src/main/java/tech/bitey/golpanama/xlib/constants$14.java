@@ -7,23 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$14 {
+final class constants$14 {
 
-    static final FunctionDescriptor XDefaultVisual$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDefaultVisual$MH = RuntimeHelper.downcallHandle(
-        "XDefaultVisual",
-        constants$14.XDefaultVisual$FUNC
-    );
-    static final FunctionDescriptor XDefaultVisualOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDefaultVisualOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XDefaultVisualOfScreen",
-        constants$14.XDefaultVisualOfScreen$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$14() {}
     static final FunctionDescriptor XDefaultGC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
@@ -54,6 +41,18 @@ class constants$14 {
     static final MethodHandle XWhitePixel$MH = RuntimeHelper.downcallHandle(
         "XWhitePixel",
         constants$14.XWhitePixel$FUNC
+    );
+    static final FunctionDescriptor XAllPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT);
+    static final MethodHandle XAllPlanes$MH = RuntimeHelper.downcallHandle(
+        "XAllPlanes",
+        constants$14.XAllPlanes$FUNC
+    );
+    static final FunctionDescriptor XBlackPixelOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XBlackPixelOfScreen$MH = RuntimeHelper.downcallHandle(
+        "XBlackPixelOfScreen",
+        constants$14.XBlackPixelOfScreen$FUNC
     );
 }
 

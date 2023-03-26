@@ -7,14 +7,16 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$89 {
+final class constants$89 {
 
-    static final MemorySegment XNPreeditStartCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditStartCallback");
-    static final MemorySegment XNPreeditDoneCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditDoneCallback");
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$89() {}
     static final MemorySegment XNPreeditDrawCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditDrawCallback");
     static final MemorySegment XNPreeditCaretCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditCaretCallback");
     static final MemorySegment XNPreeditStateNotifyCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditStateNotifyCallback");
     static final MemorySegment XNPreeditAttributes$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditAttributes");
+    static final MemorySegment XNStatusStartCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusStartCallback");
+    static final MemorySegment XNStatusDoneCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusDoneCallback");
 }
 
 

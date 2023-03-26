@@ -7,9 +7,19 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int extension;
+ *     int major_opcode;
+ *     int first_event;
+ *     int first_error;
+ * };
+ * }
+ */
 public class XExtCodes {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("extension"),
         Constants$root.C_INT$LAYOUT.withName("major_opcode"),
         Constants$root.C_INT$LAYOUT.withName("first_event"),
@@ -22,10 +32,22 @@ public class XExtCodes {
     public static VarHandle extension$VH() {
         return XExtCodes.extension$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int extension;
+     * }
+     */
     public static int extension$get(MemorySegment seg) {
         return (int)XExtCodes.extension$VH.get(seg);
     }
-    public static void extension$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int extension;
+     * }
+     */
+    public static void extension$set(MemorySegment seg, int x) {
         XExtCodes.extension$VH.set(seg, x);
     }
     public static int extension$get(MemorySegment seg, long index) {
@@ -38,10 +60,22 @@ public class XExtCodes {
     public static VarHandle major_opcode$VH() {
         return XExtCodes.major_opcode$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int major_opcode;
+     * }
+     */
     public static int major_opcode$get(MemorySegment seg) {
         return (int)XExtCodes.major_opcode$VH.get(seg);
     }
-    public static void major_opcode$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int major_opcode;
+     * }
+     */
+    public static void major_opcode$set(MemorySegment seg, int x) {
         XExtCodes.major_opcode$VH.set(seg, x);
     }
     public static int major_opcode$get(MemorySegment seg, long index) {
@@ -54,10 +88,22 @@ public class XExtCodes {
     public static VarHandle first_event$VH() {
         return XExtCodes.first_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int first_event;
+     * }
+     */
     public static int first_event$get(MemorySegment seg) {
         return (int)XExtCodes.first_event$VH.get(seg);
     }
-    public static void first_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int first_event;
+     * }
+     */
+    public static void first_event$set(MemorySegment seg, int x) {
         XExtCodes.first_event$VH.set(seg, x);
     }
     public static int first_event$get(MemorySegment seg, long index) {
@@ -70,10 +116,22 @@ public class XExtCodes {
     public static VarHandle first_error$VH() {
         return XExtCodes.first_error$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int first_error;
+     * }
+     */
     public static int first_error$get(MemorySegment seg) {
         return (int)XExtCodes.first_error$VH.get(seg);
     }
-    public static void first_error$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int first_error;
+     * }
+     */
+    public static void first_error$set(MemorySegment seg, int x) {
         XExtCodes.first_error$VH.set(seg, x);
     }
     public static int first_error$get(MemorySegment seg, long index) {
@@ -84,10 +142,10 @@ public class XExtCodes {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

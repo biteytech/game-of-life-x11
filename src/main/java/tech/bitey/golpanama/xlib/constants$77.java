@@ -7,25 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$77 {
+final class constants$77 {
 
-    static final FunctionDescriptor XGetWMClientMachine$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWMClientMachine$MH = RuntimeHelper.downcallHandle(
-        "XGetWMClientMachine",
-        constants$77.XGetWMClientMachine$FUNC
-    );
-    static final FunctionDescriptor XGetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetWMHints$MH = RuntimeHelper.downcallHandle(
-        "XGetWMHints",
-        constants$77.XGetWMHints$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$77() {}
     static final FunctionDescriptor XGetWMIconName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -64,6 +49,24 @@ class constants$77 {
     static final MethodHandle XGetWMSizeHints$MH = RuntimeHelper.downcallHandle(
         "XGetWMSizeHints",
         constants$77.XGetWMSizeHints$FUNC
+    );
+    static final FunctionDescriptor XGetZoomHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetZoomHints$MH = RuntimeHelper.downcallHandle(
+        "XGetZoomHints",
+        constants$77.XGetZoomHints$FUNC
+    );
+    static final FunctionDescriptor XIntersectRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XIntersectRegion$MH = RuntimeHelper.downcallHandle(
+        "XIntersectRegion",
+        constants$77.XIntersectRegion$FUNC
     );
 }
 

@@ -7,9 +7,27 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Window parent;
+ *     Window window;
+ *     int x;
+ *     int y;
+ *     int width;
+ *     int height;
+ *     int border_width;
+ *     int override_redirect;
+ * };
+ * }
+ */
 public class XCreateWindowEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -32,10 +50,22 @@ public class XCreateWindowEvent {
     public static VarHandle type$VH() {
         return XCreateWindowEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XCreateWindowEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -48,10 +78,22 @@ public class XCreateWindowEvent {
     public static VarHandle serial$VH() {
         return XCreateWindowEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XCreateWindowEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XCreateWindowEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -64,10 +106,22 @@ public class XCreateWindowEvent {
     public static VarHandle send_event$VH() {
         return XCreateWindowEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XCreateWindowEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -80,26 +134,50 @@ public class XCreateWindowEvent {
     public static VarHandle display$VH() {
         return XCreateWindowEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XCreateWindowEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XCreateWindowEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XCreateWindowEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XCreateWindowEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XCreateWindowEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XCreateWindowEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle parent$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("parent"));
     public static VarHandle parent$VH() {
         return XCreateWindowEvent.parent$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window parent;
+     * }
+     */
     public static long parent$get(MemorySegment seg) {
         return (long)XCreateWindowEvent.parent$VH.get(seg);
     }
-    public static void parent$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window parent;
+     * }
+     */
+    public static void parent$set(MemorySegment seg, long x) {
         XCreateWindowEvent.parent$VH.set(seg, x);
     }
     public static long parent$get(MemorySegment seg, long index) {
@@ -112,10 +190,22 @@ public class XCreateWindowEvent {
     public static VarHandle window$VH() {
         return XCreateWindowEvent.window$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
     public static long window$get(MemorySegment seg) {
         return (long)XCreateWindowEvent.window$VH.get(seg);
     }
-    public static void window$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
+    public static void window$set(MemorySegment seg, long x) {
         XCreateWindowEvent.window$VH.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
@@ -128,10 +218,22 @@ public class XCreateWindowEvent {
     public static VarHandle x$VH() {
         return XCreateWindowEvent.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
     public static int x$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, int x) {
         XCreateWindowEvent.x$VH.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
@@ -144,10 +246,22 @@ public class XCreateWindowEvent {
     public static VarHandle y$VH() {
         return XCreateWindowEvent.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
     public static int y$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, int x) {
         XCreateWindowEvent.y$VH.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
@@ -160,10 +274,22 @@ public class XCreateWindowEvent {
     public static VarHandle width$VH() {
         return XCreateWindowEvent.width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int width;
+     * }
+     */
     public static int width$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.width$VH.get(seg);
     }
-    public static void width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int width;
+     * }
+     */
+    public static void width$set(MemorySegment seg, int x) {
         XCreateWindowEvent.width$VH.set(seg, x);
     }
     public static int width$get(MemorySegment seg, long index) {
@@ -176,10 +302,22 @@ public class XCreateWindowEvent {
     public static VarHandle height$VH() {
         return XCreateWindowEvent.height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int height;
+     * }
+     */
     public static int height$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.height$VH.get(seg);
     }
-    public static void height$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int height;
+     * }
+     */
+    public static void height$set(MemorySegment seg, int x) {
         XCreateWindowEvent.height$VH.set(seg, x);
     }
     public static int height$get(MemorySegment seg, long index) {
@@ -192,10 +330,22 @@ public class XCreateWindowEvent {
     public static VarHandle border_width$VH() {
         return XCreateWindowEvent.border_width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int border_width;
+     * }
+     */
     public static int border_width$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.border_width$VH.get(seg);
     }
-    public static void border_width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int border_width;
+     * }
+     */
+    public static void border_width$set(MemorySegment seg, int x) {
         XCreateWindowEvent.border_width$VH.set(seg, x);
     }
     public static int border_width$get(MemorySegment seg, long index) {
@@ -208,10 +358,22 @@ public class XCreateWindowEvent {
     public static VarHandle override_redirect$VH() {
         return XCreateWindowEvent.override_redirect$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int override_redirect;
+     * }
+     */
     public static int override_redirect$get(MemorySegment seg) {
         return (int)XCreateWindowEvent.override_redirect$VH.get(seg);
     }
-    public static void override_redirect$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int override_redirect;
+     * }
+     */
+    public static void override_redirect$set(MemorySegment seg, int x) {
         XCreateWindowEvent.override_redirect$VH.set(seg, x);
     }
     public static int override_redirect$get(MemorySegment seg, long index) {
@@ -222,10 +384,10 @@ public class XCreateWindowEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

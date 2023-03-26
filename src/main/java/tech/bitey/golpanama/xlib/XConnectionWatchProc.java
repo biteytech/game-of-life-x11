@@ -7,17 +7,22 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * void (*XConnectionWatchProc)(struct _XDisplay*,char*,int,int,char**);
+ * }
+ */
 public interface XConnectionWatchProc {
 
-    void apply(java.lang.foreign.MemoryAddress _x0, java.lang.foreign.MemoryAddress _x1, int _x2, int _x3, java.lang.foreign.MemoryAddress _x4);
-    static MemorySegment allocate(XConnectionWatchProc fi, MemorySession session) {
-        return RuntimeHelper.upcallStub(XConnectionWatchProc.class, fi, constants$71.XConnectionWatchProc$FUNC, session);
+    void apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1, int _x2, int _x3, java.lang.foreign.MemorySegment _x4);
+    static MemorySegment allocate(XConnectionWatchProc fi, SegmentScope scope) {
+        return RuntimeHelper.upcallStub(constants$71.XConnectionWatchProc_UP$MH, fi, constants$71.XConnectionWatchProc$FUNC, scope);
     }
-    static XConnectionWatchProc ofAddress(MemoryAddress addr, MemorySession session) {
-        MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
-        return (java.lang.foreign.MemoryAddress __x0, java.lang.foreign.MemoryAddress __x1, int __x2, int __x3, java.lang.foreign.MemoryAddress __x4) -> {
+    static XConnectionWatchProc ofAddress(MemorySegment addr, SegmentScope scope) {
+        MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+        return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1, int __x2, int __x3, java.lang.foreign.MemorySegment __x4) -> {
             try {
-                constants$71.XConnectionWatchProc$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, (java.lang.foreign.Addressable)__x1, __x2, __x3, (java.lang.foreign.Addressable)__x4);
+                constants$71.XConnectionWatchProc_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2, __x3, __x4);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

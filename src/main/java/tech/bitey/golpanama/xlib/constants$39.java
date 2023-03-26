@@ -7,33 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$39 {
+final class constants$39 {
 
-    static final FunctionDescriptor XGetWindowAttributes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWindowAttributes$MH = RuntimeHelper.downcallHandle(
-        "XGetWindowAttributes",
-        constants$39.XGetWindowAttributes$FUNC
-    );
-    static final FunctionDescriptor XGrabButton$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGrabButton$MH = RuntimeHelper.downcallHandle(
-        "XGrabButton",
-        constants$39.XGrabButton$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$39() {}
     static final FunctionDescriptor XGrabKey$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT,
@@ -80,6 +57,20 @@ class constants$39 {
     static final MethodHandle XGrabServer$MH = RuntimeHelper.downcallHandle(
         "XGrabServer",
         constants$39.XGrabServer$FUNC
+    );
+    static final FunctionDescriptor XHeightMMOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XHeightMMOfScreen$MH = RuntimeHelper.downcallHandle(
+        "XHeightMMOfScreen",
+        constants$39.XHeightMMOfScreen$FUNC
+    );
+    static final FunctionDescriptor XHeightOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XHeightOfScreen$MH = RuntimeHelper.downcallHandle(
+        "XHeightOfScreen",
+        constants$39.XHeightOfScreen$FUNC
     );
 }
 

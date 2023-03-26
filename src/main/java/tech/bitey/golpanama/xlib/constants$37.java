@@ -7,27 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$37 {
+final class constants$37 {
 
-    static final FunctionDescriptor XGetErrorText$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGetErrorText$MH = RuntimeHelper.downcallHandle(
-        "XGetErrorText",
-        constants$37.XGetErrorText$FUNC
-    );
-    static final FunctionDescriptor XGetFontProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetFontProperty$MH = RuntimeHelper.downcallHandle(
-        "XGetFontProperty",
-        constants$37.XGetFontProperty$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$37() {}
     static final FunctionDescriptor XGetGCValues$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -70,6 +53,24 @@ class constants$37 {
     static final MethodHandle XGetInputFocus$MH = RuntimeHelper.downcallHandle(
         "XGetInputFocus",
         constants$37.XGetInputFocus$FUNC
+    );
+    static final FunctionDescriptor XGetKeyboardControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetKeyboardControl$MH = RuntimeHelper.downcallHandle(
+        "XGetKeyboardControl",
+        constants$37.XGetKeyboardControl$FUNC
+    );
+    static final FunctionDescriptor XGetPointerControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetPointerControl$MH = RuntimeHelper.downcallHandle(
+        "XGetPointerControl",
+        constants$37.XGetPointerControl$FUNC
     );
 }
 

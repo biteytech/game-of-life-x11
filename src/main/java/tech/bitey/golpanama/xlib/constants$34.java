@@ -7,32 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$34 {
+final class constants$34 {
 
-    static final FunctionDescriptor XFillRectangle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFillRectangle$MH = RuntimeHelper.downcallHandle(
-        "XFillRectangle",
-        constants$34.XFillRectangle$FUNC
-    );
-    static final FunctionDescriptor XFillRectangles$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFillRectangles$MH = RuntimeHelper.downcallHandle(
-        "XFillRectangles",
-        constants$34.XFillRectangles$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$34() {}
     static final FunctionDescriptor XFlush$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -62,6 +40,25 @@ class constants$34 {
     static final MethodHandle XFreeColormap$MH = RuntimeHelper.downcallHandle(
         "XFreeColormap",
         constants$34.XFreeColormap$FUNC
+    );
+    static final FunctionDescriptor XFreeColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XFreeColors$MH = RuntimeHelper.downcallHandle(
+        "XFreeColors",
+        constants$34.XFreeColors$FUNC
+    );
+    static final FunctionDescriptor XFreeCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XFreeCursor$MH = RuntimeHelper.downcallHandle(
+        "XFreeCursor",
+        constants$34.XFreeCursor$FUNC
     );
 }
 

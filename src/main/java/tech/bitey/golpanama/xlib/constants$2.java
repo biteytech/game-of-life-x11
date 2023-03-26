@@ -7,42 +7,68 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$2 {
+final class constants$2 {
 
-    static final FunctionDescriptor XICProc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$2() {}
+    static final FunctionDescriptor XGetMotionEvents$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XICProc$MH = RuntimeHelper.downcallHandle(
-        constants$2.XICProc$FUNC
+    static final MethodHandle XGetMotionEvents$MH = RuntimeHelper.downcallHandle(
+        "XGetMotionEvents",
+        constants$2.XGetMotionEvents$FUNC
     );
-    static final FunctionDescriptor XIDProc$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor XDeleteModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_CHAR$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XDeleteModifiermapEntry$MH = RuntimeHelper.downcallHandle(
+        "XDeleteModifiermapEntry",
+        constants$2.XDeleteModifiermapEntry$FUNC
+    );
+    static final FunctionDescriptor XGetModifierMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XIDProc$MH = RuntimeHelper.downcallHandle(
-        constants$2.XIDProc$FUNC
+    static final MethodHandle XGetModifierMapping$MH = RuntimeHelper.downcallHandle(
+        "XGetModifierMapping",
+        constants$2.XGetModifierMapping$FUNC
     );
-    static final  OfInt _Xdebug$LAYOUT = Constants$root.C_INT$LAYOUT;
-    static final VarHandle _Xdebug$VH = constants$2._Xdebug$LAYOUT.varHandle();
-    static final MemorySegment _Xdebug$SEGMENT = RuntimeHelper.lookupGlobalVariable("_Xdebug", constants$2._Xdebug$LAYOUT);
-    static final FunctionDescriptor XLoadQueryFont$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XInsertModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+        Constants$root.C_CHAR$LAYOUT,
+        Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle XLoadQueryFont$MH = RuntimeHelper.downcallHandle(
-        "XLoadQueryFont",
-        constants$2.XLoadQueryFont$FUNC
+    static final MethodHandle XInsertModifiermapEntry$MH = RuntimeHelper.downcallHandle(
+        "XInsertModifiermapEntry",
+        constants$2.XInsertModifiermapEntry$FUNC
     );
-    static final FunctionDescriptor XQueryFont$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor XNewModifiermap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XNewModifiermap$MH = RuntimeHelper.downcallHandle(
+        "XNewModifiermap",
+        constants$2.XNewModifiermap$FUNC
+    );
+    static final FunctionDescriptor XCreateImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle XQueryFont$MH = RuntimeHelper.downcallHandle(
-        "XQueryFont",
-        constants$2.XQueryFont$FUNC
+    static final MethodHandle XCreateImage$MH = RuntimeHelper.downcallHandle(
+        "XCreateImage",
+        constants$2.XCreateImage$FUNC
     );
 }
 

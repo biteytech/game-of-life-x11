@@ -7,9 +7,19 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     char* chars;
+ *     int nchars;
+ *     int delta;
+ *     Font font;
+ * };
+ * }
+ */
 public class XTextItem {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_POINTER$LAYOUT.withName("chars"),
         Constants$root.C_INT$LAYOUT.withName("nchars"),
         Constants$root.C_INT$LAYOUT.withName("delta"),
@@ -22,26 +32,50 @@ public class XTextItem {
     public static VarHandle chars$VH() {
         return XTextItem.chars$VH;
     }
-    public static MemoryAddress chars$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XTextItem.chars$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * char* chars;
+     * }
+     */
+    public static MemorySegment chars$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XTextItem.chars$VH.get(seg);
     }
-    public static void chars$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * char* chars;
+     * }
+     */
+    public static void chars$set(MemorySegment seg, MemorySegment x) {
         XTextItem.chars$VH.set(seg, x);
     }
-    public static MemoryAddress chars$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XTextItem.chars$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment chars$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XTextItem.chars$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void chars$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void chars$set(MemorySegment seg, long index, MemorySegment x) {
         XTextItem.chars$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle nchars$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("nchars"));
     public static VarHandle nchars$VH() {
         return XTextItem.nchars$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int nchars;
+     * }
+     */
     public static int nchars$get(MemorySegment seg) {
         return (int)XTextItem.nchars$VH.get(seg);
     }
-    public static void nchars$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int nchars;
+     * }
+     */
+    public static void nchars$set(MemorySegment seg, int x) {
         XTextItem.nchars$VH.set(seg, x);
     }
     public static int nchars$get(MemorySegment seg, long index) {
@@ -54,10 +88,22 @@ public class XTextItem {
     public static VarHandle delta$VH() {
         return XTextItem.delta$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int delta;
+     * }
+     */
     public static int delta$get(MemorySegment seg) {
         return (int)XTextItem.delta$VH.get(seg);
     }
-    public static void delta$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int delta;
+     * }
+     */
+    public static void delta$set(MemorySegment seg, int x) {
         XTextItem.delta$VH.set(seg, x);
     }
     public static int delta$get(MemorySegment seg, long index) {
@@ -70,10 +116,22 @@ public class XTextItem {
     public static VarHandle font$VH() {
         return XTextItem.font$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Font font;
+     * }
+     */
     public static long font$get(MemorySegment seg) {
         return (long)XTextItem.font$VH.get(seg);
     }
-    public static void font$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Font font;
+     * }
+     */
+    public static void font$set(MemorySegment seg, long x) {
         XTextItem.font$VH.set(seg, x);
     }
     public static long font$get(MemorySegment seg, long index) {
@@ -84,10 +142,10 @@ public class XTextItem {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

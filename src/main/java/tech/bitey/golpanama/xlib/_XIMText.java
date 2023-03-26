@@ -7,9 +7,19 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct _XIMText {
+ *     unsigned short length;
+ *     XIMFeedback* feedback;
+ *     int encoding_is_wchar;
+ *     union  string;
+ * };
+ * }
+ */
 public class _XIMText {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_SHORT$LAYOUT.withName("length"),
         MemoryLayout.paddingLayout(48),
         Constants$root.C_POINTER$LAYOUT.withName("feedback"),
@@ -27,10 +37,22 @@ public class _XIMText {
     public static VarHandle length$VH() {
         return _XIMText.length$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned short length;
+     * }
+     */
     public static short length$get(MemorySegment seg) {
         return (short)_XIMText.length$VH.get(seg);
     }
-    public static void length$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned short length;
+     * }
+     */
+    public static void length$set(MemorySegment seg, short x) {
         _XIMText.length$VH.set(seg, x);
     }
     public static short length$get(MemorySegment seg, long index) {
@@ -43,26 +65,50 @@ public class _XIMText {
     public static VarHandle feedback$VH() {
         return _XIMText.feedback$VH;
     }
-    public static MemoryAddress feedback$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)_XIMText.feedback$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XIMFeedback* feedback;
+     * }
+     */
+    public static MemorySegment feedback$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)_XIMText.feedback$VH.get(seg);
     }
-    public static void feedback$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XIMFeedback* feedback;
+     * }
+     */
+    public static void feedback$set(MemorySegment seg, MemorySegment x) {
         _XIMText.feedback$VH.set(seg, x);
     }
-    public static MemoryAddress feedback$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)_XIMText.feedback$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment feedback$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)_XIMText.feedback$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void feedback$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void feedback$set(MemorySegment seg, long index, MemorySegment x) {
         _XIMText.feedback$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle encoding_is_wchar$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("encoding_is_wchar"));
     public static VarHandle encoding_is_wchar$VH() {
         return _XIMText.encoding_is_wchar$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int encoding_is_wchar;
+     * }
+     */
     public static int encoding_is_wchar$get(MemorySegment seg) {
         return (int)_XIMText.encoding_is_wchar$VH.get(seg);
     }
-    public static void encoding_is_wchar$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int encoding_is_wchar;
+     * }
+     */
+    public static void encoding_is_wchar$set(MemorySegment seg, int x) {
         _XIMText.encoding_is_wchar$VH.set(seg, x);
     }
     public static int encoding_is_wchar$get(MemorySegment seg, long index) {
@@ -71,9 +117,19 @@ public class _XIMText {
     public static void encoding_is_wchar$set(MemorySegment seg, long index, int x) {
         _XIMText.encoding_is_wchar$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    public static class string {
+    /**
+     * {@snippet :
+     * union {
+     *     char* multi_byte;
+     *     wchar_t* wide_char;
+     * };
+     * }
+     */
+    public static final class string {
 
-        static final  GroupLayout string$union$LAYOUT = MemoryLayout.unionLayout(
+        // Suppresses default constructor, ensuring non-instantiability.
+        private string() {}
+        static final UnionLayout string$union$LAYOUT = MemoryLayout.unionLayout(
             Constants$root.C_POINTER$LAYOUT.withName("multi_byte"),
             Constants$root.C_POINTER$LAYOUT.withName("wide_char")
         );
@@ -84,40 +140,64 @@ public class _XIMText {
         public static VarHandle multi_byte$VH() {
             return string.multi_byte$VH;
         }
-        public static MemoryAddress multi_byte$get(MemorySegment seg) {
-            return (java.lang.foreign.MemoryAddress)string.multi_byte$VH.get(seg);
+        /**
+         * Getter for field:
+         * {@snippet :
+         * char* multi_byte;
+         * }
+         */
+        public static MemorySegment multi_byte$get(MemorySegment seg) {
+            return (java.lang.foreign.MemorySegment)string.multi_byte$VH.get(seg);
         }
-        public static void multi_byte$set( MemorySegment seg, MemoryAddress x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * char* multi_byte;
+         * }
+         */
+        public static void multi_byte$set(MemorySegment seg, MemorySegment x) {
             string.multi_byte$VH.set(seg, x);
         }
-        public static MemoryAddress multi_byte$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemoryAddress)string.multi_byte$VH.get(seg.asSlice(index*sizeof()));
+        public static MemorySegment multi_byte$get(MemorySegment seg, long index) {
+            return (java.lang.foreign.MemorySegment)string.multi_byte$VH.get(seg.asSlice(index*sizeof()));
         }
-        public static void multi_byte$set(MemorySegment seg, long index, MemoryAddress x) {
+        public static void multi_byte$set(MemorySegment seg, long index, MemorySegment x) {
             string.multi_byte$VH.set(seg.asSlice(index*sizeof()), x);
         }
         static final VarHandle wide_char$VH = string$union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("wide_char"));
         public static VarHandle wide_char$VH() {
             return string.wide_char$VH;
         }
-        public static MemoryAddress wide_char$get(MemorySegment seg) {
-            return (java.lang.foreign.MemoryAddress)string.wide_char$VH.get(seg);
+        /**
+         * Getter for field:
+         * {@snippet :
+         * wchar_t* wide_char;
+         * }
+         */
+        public static MemorySegment wide_char$get(MemorySegment seg) {
+            return (java.lang.foreign.MemorySegment)string.wide_char$VH.get(seg);
         }
-        public static void wide_char$set( MemorySegment seg, MemoryAddress x) {
+        /**
+         * Setter for field:
+         * {@snippet :
+         * wchar_t* wide_char;
+         * }
+         */
+        public static void wide_char$set(MemorySegment seg, MemorySegment x) {
             string.wide_char$VH.set(seg, x);
         }
-        public static MemoryAddress wide_char$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemoryAddress)string.wide_char$VH.get(seg.asSlice(index*sizeof()));
+        public static MemorySegment wide_char$get(MemorySegment seg, long index) {
+            return (java.lang.foreign.MemorySegment)string.wide_char$VH.get(seg.asSlice(index*sizeof()));
         }
-        public static void wide_char$set(MemorySegment seg, long index, MemoryAddress x) {
+        public static void wide_char$set(MemorySegment seg, long index, MemorySegment x) {
             string.wide_char$VH.set(seg.asSlice(index*sizeof()), x);
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-        public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+        public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+        public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
     }
 
     public static MemorySegment string$slice(MemorySegment seg) {
@@ -125,10 +205,10 @@ public class _XIMText {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,17 +7,22 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * int (*XErrorHandler)(struct _XDisplay*,struct *);
+ * }
+ */
 public interface XErrorHandler {
 
-    int apply(java.lang.foreign.MemoryAddress _x0, java.lang.foreign.MemoryAddress _x1);
-    static MemorySegment allocate(XErrorHandler fi, MemorySession session) {
-        return RuntimeHelper.upcallStub(XErrorHandler.class, fi, constants$17.XErrorHandler$FUNC, session);
+    int apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1);
+    static MemorySegment allocate(XErrorHandler fi, SegmentScope scope) {
+        return RuntimeHelper.upcallStub(constants$17.XErrorHandler_UP$MH, fi, constants$17.XErrorHandler$FUNC, scope);
     }
-    static XErrorHandler ofAddress(MemoryAddress addr, MemorySession session) {
-        MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
-        return (java.lang.foreign.MemoryAddress __x0, java.lang.foreign.MemoryAddress __x1) -> {
+    static XErrorHandler ofAddress(MemorySegment addr, SegmentScope scope) {
+        MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+        return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1) -> {
             try {
-                return (int)constants$17.XErrorHandler$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0, (java.lang.foreign.Addressable)__x1);
+                return (int)constants$17.XErrorHandler_DOWN$MH.invokeExact(symbol, __x0, __x1);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

@@ -7,9 +7,19 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct _XExtData {
+ *     int number;
+ *     struct _XExtData* next;
+ *     int (*free_private)(struct _XExtData*);
+ *     XPointer private_data;
+ * };
+ * }
+ */
 public class _XExtData {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("number"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_POINTER$LAYOUT.withName("next"),
@@ -23,10 +33,22 @@ public class _XExtData {
     public static VarHandle number$VH() {
         return _XExtData.number$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int number;
+     * }
+     */
     public static int number$get(MemorySegment seg) {
         return (int)_XExtData.number$VH.get(seg);
     }
-    public static void number$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int number;
+     * }
+     */
+    public static void number$set(MemorySegment seg, int x) {
         _XExtData.number$VH.set(seg, x);
     }
     public static int number$get(MemorySegment seg, long index) {
@@ -39,35 +61,59 @@ public class _XExtData {
     public static VarHandle next$VH() {
         return _XExtData.next$VH;
     }
-    public static MemoryAddress next$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)_XExtData.next$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * struct _XExtData* next;
+     * }
+     */
+    public static MemorySegment next$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)_XExtData.next$VH.get(seg);
     }
-    public static void next$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * struct _XExtData* next;
+     * }
+     */
+    public static void next$set(MemorySegment seg, MemorySegment x) {
         _XExtData.next$VH.set(seg, x);
     }
-    public static MemoryAddress next$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)_XExtData.next$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment next$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)_XExtData.next$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void next$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void next$set(MemorySegment seg, long index, MemorySegment x) {
         _XExtData.next$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final FunctionDescriptor free_private$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle free_private$MH = RuntimeHelper.downcallHandle(
-        _XExtData.free_private$FUNC
+    static final FunctionDescriptor free_private_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
+    static final MethodHandle free_private_UP$MH = RuntimeHelper.upcallHandle(free_private.class, "apply", _XExtData.free_private_UP$FUNC);
+    static final FunctionDescriptor free_private_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle free_private_DOWN$MH = RuntimeHelper.downcallHandle(
+        _XExtData.free_private_DOWN$FUNC
+    );
+    /**
+     * {@snippet :
+ * int (*free_private)(struct _XExtData*);
+     * }
+     */
     public interface free_private {
 
-        int apply(java.lang.foreign.MemoryAddress _x0);
-        static MemorySegment allocate(free_private fi, MemorySession session) {
-            return RuntimeHelper.upcallStub(free_private.class, fi, _XExtData.free_private$FUNC, session);
+        int apply(java.lang.foreign.MemorySegment _x0);
+        static MemorySegment allocate(free_private fi, SegmentScope scope) {
+            return RuntimeHelper.upcallStub(_XExtData.free_private_UP$MH, fi, _XExtData.free_private$FUNC, scope);
         }
-        static free_private ofAddress(MemoryAddress addr, MemorySession session) {
-            MemorySegment symbol = MemorySegment.ofAddress(addr, 0, session);
-            return (java.lang.foreign.MemoryAddress __x0) -> {
+        static free_private ofAddress(MemorySegment addr, SegmentScope scope) {
+            MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+            return (java.lang.foreign.MemorySegment __x0) -> {
                 try {
-                    return (int)_XExtData.free_private$MH.invokeExact((Addressable)symbol, (java.lang.foreign.Addressable)__x0);
+                    return (int)_XExtData.free_private_DOWN$MH.invokeExact(symbol, __x0);
                 } catch (Throwable ex$) {
                     throw new AssertionError("should not reach here", ex$);
                 }
@@ -79,43 +125,67 @@ public class _XExtData {
     public static VarHandle free_private$VH() {
         return _XExtData.free_private$VH;
     }
-    public static MemoryAddress free_private$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)_XExtData.free_private$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int (*free_private)(struct _XExtData*);
+     * }
+     */
+    public static MemorySegment free_private$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)_XExtData.free_private$VH.get(seg);
     }
-    public static void free_private$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int (*free_private)(struct _XExtData*);
+     * }
+     */
+    public static void free_private$set(MemorySegment seg, MemorySegment x) {
         _XExtData.free_private$VH.set(seg, x);
     }
-    public static MemoryAddress free_private$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)_XExtData.free_private$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment free_private$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)_XExtData.free_private$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void free_private$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void free_private$set(MemorySegment seg, long index, MemorySegment x) {
         _XExtData.free_private$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    public static free_private free_private (MemorySegment segment, MemorySession session) {
-        return free_private.ofAddress(free_private$get(segment), session);
+    public static free_private free_private(MemorySegment segment, SegmentScope scope) {
+        return free_private.ofAddress(free_private$get(segment), scope);
     }
     static final VarHandle private_data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("private_data"));
     public static VarHandle private_data$VH() {
         return _XExtData.private_data$VH;
     }
-    public static MemoryAddress private_data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)_XExtData.private_data$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XPointer private_data;
+     * }
+     */
+    public static MemorySegment private_data$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)_XExtData.private_data$VH.get(seg);
     }
-    public static void private_data$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XPointer private_data;
+     * }
+     */
+    public static void private_data$set(MemorySegment seg, MemorySegment x) {
         _XExtData.private_data$VH.set(seg, x);
     }
-    public static MemoryAddress private_data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)_XExtData.private_data$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment private_data$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)_XExtData.private_data$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void private_data$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void private_data$set(MemorySegment seg, long index, MemorySegment x) {
         _XExtData.private_data$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,8 +7,15 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-public class XIMPreeditCaretCallbackStruct extends _XIMPreeditCaretCallbackStruct {
+/**
+ * {@snippet :
+ * typedef struct _XIMPreeditCaretCallbackStruct XIMPreeditCaretCallbackStruct;
+ * }
+ */
+public final class XIMPreeditCaretCallbackStruct extends _XIMPreeditCaretCallbackStruct {
 
+    // Suppresses default constructor, ensuring non-instantiability.
+    private XIMPreeditCaretCallbackStruct() {}
 }
 
 

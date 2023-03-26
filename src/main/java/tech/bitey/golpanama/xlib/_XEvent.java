@@ -7,9 +7,50 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * union _XEvent {
+ *     int type;
+ *     XAnyEvent xany;
+ *     XKeyEvent xkey;
+ *     XButtonEvent xbutton;
+ *     XMotionEvent xmotion;
+ *     XCrossingEvent xcrossing;
+ *     XFocusChangeEvent xfocus;
+ *     XExposeEvent xexpose;
+ *     XGraphicsExposeEvent xgraphicsexpose;
+ *     XNoExposeEvent xnoexpose;
+ *     XVisibilityEvent xvisibility;
+ *     XCreateWindowEvent xcreatewindow;
+ *     XDestroyWindowEvent xdestroywindow;
+ *     XUnmapEvent xunmap;
+ *     XMapEvent xmap;
+ *     XMapRequestEvent xmaprequest;
+ *     XReparentEvent xreparent;
+ *     XConfigureEvent xconfigure;
+ *     XGravityEvent xgravity;
+ *     XResizeRequestEvent xresizerequest;
+ *     XConfigureRequestEvent xconfigurerequest;
+ *     XCirculateEvent xcirculate;
+ *     XCirculateRequestEvent xcirculaterequest;
+ *     XPropertyEvent xproperty;
+ *     XSelectionClearEvent xselectionclear;
+ *     XSelectionRequestEvent xselectionrequest;
+ *     XSelectionEvent xselection;
+ *     XColormapEvent xcolormap;
+ *     XClientMessageEvent xclient;
+ *     XMappingEvent xmapping;
+ *     XErrorEvent xerror;
+ *     XKeymapEvent xkeymap;
+ *     XGenericEvent xgeneric;
+ *     XGenericEventCookie xcookie;
+ *     long pad[24];
+ * };
+ * }
+ */
 public class _XEvent {
 
-    static final  GroupLayout $union$LAYOUT = MemoryLayout.unionLayout(
+    static final UnionLayout $union$LAYOUT = MemoryLayout.unionLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.structLayout(
             Constants$root.C_INT$LAYOUT.withName("type"),
@@ -475,10 +516,22 @@ public class _XEvent {
     public static VarHandle type$VH() {
         return _XEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)_XEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         _XEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -591,10 +644,10 @@ public class _XEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,14 +7,16 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$86 {
+final class constants$86 {
 
-    static final MemorySegment XNBaseFontName$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("baseFontName");
-    static final MemorySegment XNOMAutomatic$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("omAutomatic");
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$86() {}
     static final MemorySegment XNMissingCharSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("missingCharSet");
     static final MemorySegment XNDefaultString$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("defaultString");
     static final MemorySegment XNOrientation$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("orientation");
     static final MemorySegment XNDirectionalDependentDrawing$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("directionalDependentDrawing");
+    static final MemorySegment XNContextualDrawing$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("contextualDrawing");
+    static final MemorySegment XNFontInfo$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("fontInfo");
 }
 
 

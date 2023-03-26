@@ -7,32 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$48 {
+final class constants$48 {
 
-    static final FunctionDescriptor XReadBitmapFileData$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XReadBitmapFileData$MH = RuntimeHelper.downcallHandle(
-        "XReadBitmapFileData",
-        constants$48.XReadBitmapFileData$FUNC
-    );
-    static final FunctionDescriptor XRebindKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRebindKeysym$MH = RuntimeHelper.downcallHandle(
-        "XRebindKeysym",
-        constants$48.XRebindKeysym$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$48() {}
     static final FunctionDescriptor XRecolorCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -65,6 +43,26 @@ class constants$48 {
     static final MethodHandle XRemoveHost$MH = RuntimeHelper.downcallHandle(
         "XRemoveHost",
         constants$48.XRemoveHost$FUNC
+    );
+    static final FunctionDescriptor XRemoveHosts$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XRemoveHosts$MH = RuntimeHelper.downcallHandle(
+        "XRemoveHosts",
+        constants$48.XRemoveHosts$FUNC
+    );
+    static final FunctionDescriptor XReparentWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XReparentWindow$MH = RuntimeHelper.downcallHandle(
+        "XReparentWindow",
+        constants$48.XReparentWindow$FUNC
     );
 }
 

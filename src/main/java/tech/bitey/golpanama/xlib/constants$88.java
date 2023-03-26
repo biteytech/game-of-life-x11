@@ -7,14 +7,16 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$88 {
+final class constants$88 {
 
-    static final MemorySegment XNFocusWindow$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("focusWindow");
-    static final MemorySegment XNResourceName$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resourceName");
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$88() {}
     static final MemorySegment XNResourceClass$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resourceClass");
     static final MemorySegment XNGeometryCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("geometryCallback");
     static final MemorySegment XNDestroyCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("destroyCallback");
     static final MemorySegment XNFilterEvents$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("filterEvents");
+    static final MemorySegment XNPreeditStartCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditStartCallback");
+    static final MemorySegment XNPreeditDoneCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditDoneCallback");
 }
 
 

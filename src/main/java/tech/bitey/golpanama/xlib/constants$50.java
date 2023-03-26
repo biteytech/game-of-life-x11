@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$50 {
+final class constants$50 {
 
-    static final FunctionDescriptor XRotateWindowProperties$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRotateWindowProperties$MH = RuntimeHelper.downcallHandle(
-        "XRotateWindowProperties",
-        constants$50.XRotateWindowProperties$FUNC
-    );
-    static final FunctionDescriptor XScreenCount$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XScreenCount$MH = RuntimeHelper.downcallHandle(
-        "XScreenCount",
-        constants$50.XScreenCount$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$50() {}
     static final FunctionDescriptor XSelectInput$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -63,6 +47,24 @@ class constants$50 {
     static final MethodHandle XSetArcMode$MH = RuntimeHelper.downcallHandle(
         "XSetArcMode",
         constants$50.XSetArcMode$FUNC
+    );
+    static final FunctionDescriptor XSetBackground$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetBackground$MH = RuntimeHelper.downcallHandle(
+        "XSetBackground",
+        constants$50.XSetBackground$FUNC
+    );
+    static final FunctionDescriptor XSetClipMask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XSetClipMask$MH = RuntimeHelper.downcallHandle(
+        "XSetClipMask",
+        constants$50.XSetClipMask$FUNC
     );
 }
 

@@ -7,9 +7,23 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     XExtData* ext_data;
+ *     VisualID visualid;
+ *     int class;
+ *     unsigned long red_mask;
+ *     unsigned long green_mask;
+ *     unsigned long blue_mask;
+ *     int bits_per_rgb;
+ *     int map_entries;
+ * };
+ * }
+ */
 public class Visual {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_POINTER$LAYOUT.withName("ext_data"),
         Constants$root.C_LONG_LONG$LAYOUT.withName("visualid"),
         Constants$root.C_INT$LAYOUT.withName("class"),
@@ -27,26 +41,50 @@ public class Visual {
     public static VarHandle ext_data$VH() {
         return Visual.ext_data$VH;
     }
-    public static MemoryAddress ext_data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)Visual.ext_data$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XExtData* ext_data;
+     * }
+     */
+    public static MemorySegment ext_data$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)Visual.ext_data$VH.get(seg);
     }
-    public static void ext_data$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XExtData* ext_data;
+     * }
+     */
+    public static void ext_data$set(MemorySegment seg, MemorySegment x) {
         Visual.ext_data$VH.set(seg, x);
     }
-    public static MemoryAddress ext_data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)Visual.ext_data$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment ext_data$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)Visual.ext_data$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void ext_data$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void ext_data$set(MemorySegment seg, long index, MemorySegment x) {
         Visual.ext_data$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle visualid$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("visualid"));
     public static VarHandle visualid$VH() {
         return Visual.visualid$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * VisualID visualid;
+     * }
+     */
     public static long visualid$get(MemorySegment seg) {
         return (long)Visual.visualid$VH.get(seg);
     }
-    public static void visualid$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * VisualID visualid;
+     * }
+     */
+    public static void visualid$set(MemorySegment seg, long x) {
         Visual.visualid$VH.set(seg, x);
     }
     public static long visualid$get(MemorySegment seg, long index) {
@@ -59,10 +97,22 @@ public class Visual {
     public static VarHandle class_$VH() {
         return Visual.class_$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int class;
+     * }
+     */
     public static int class_$get(MemorySegment seg) {
         return (int)Visual.class_$VH.get(seg);
     }
-    public static void class_$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int class;
+     * }
+     */
+    public static void class_$set(MemorySegment seg, int x) {
         Visual.class_$VH.set(seg, x);
     }
     public static int class_$get(MemorySegment seg, long index) {
@@ -75,10 +125,22 @@ public class Visual {
     public static VarHandle red_mask$VH() {
         return Visual.red_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long red_mask;
+     * }
+     */
     public static long red_mask$get(MemorySegment seg) {
         return (long)Visual.red_mask$VH.get(seg);
     }
-    public static void red_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long red_mask;
+     * }
+     */
+    public static void red_mask$set(MemorySegment seg, long x) {
         Visual.red_mask$VH.set(seg, x);
     }
     public static long red_mask$get(MemorySegment seg, long index) {
@@ -91,10 +153,22 @@ public class Visual {
     public static VarHandle green_mask$VH() {
         return Visual.green_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long green_mask;
+     * }
+     */
     public static long green_mask$get(MemorySegment seg) {
         return (long)Visual.green_mask$VH.get(seg);
     }
-    public static void green_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long green_mask;
+     * }
+     */
+    public static void green_mask$set(MemorySegment seg, long x) {
         Visual.green_mask$VH.set(seg, x);
     }
     public static long green_mask$get(MemorySegment seg, long index) {
@@ -107,10 +181,22 @@ public class Visual {
     public static VarHandle blue_mask$VH() {
         return Visual.blue_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long blue_mask;
+     * }
+     */
     public static long blue_mask$get(MemorySegment seg) {
         return (long)Visual.blue_mask$VH.get(seg);
     }
-    public static void blue_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long blue_mask;
+     * }
+     */
+    public static void blue_mask$set(MemorySegment seg, long x) {
         Visual.blue_mask$VH.set(seg, x);
     }
     public static long blue_mask$get(MemorySegment seg, long index) {
@@ -123,10 +209,22 @@ public class Visual {
     public static VarHandle bits_per_rgb$VH() {
         return Visual.bits_per_rgb$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int bits_per_rgb;
+     * }
+     */
     public static int bits_per_rgb$get(MemorySegment seg) {
         return (int)Visual.bits_per_rgb$VH.get(seg);
     }
-    public static void bits_per_rgb$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int bits_per_rgb;
+     * }
+     */
+    public static void bits_per_rgb$set(MemorySegment seg, int x) {
         Visual.bits_per_rgb$VH.set(seg, x);
     }
     public static int bits_per_rgb$get(MemorySegment seg, long index) {
@@ -139,10 +237,22 @@ public class Visual {
     public static VarHandle map_entries$VH() {
         return Visual.map_entries$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int map_entries;
+     * }
+     */
     public static int map_entries$get(MemorySegment seg) {
         return (int)Visual.map_entries$VH.get(seg);
     }
-    public static void map_entries$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int map_entries;
+     * }
+     */
+    public static void map_entries$set(MemorySegment seg, int x) {
         Visual.map_entries$VH.set(seg, x);
     }
     public static int map_entries$get(MemorySegment seg, long index) {
@@ -153,10 +263,10 @@ public class Visual {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

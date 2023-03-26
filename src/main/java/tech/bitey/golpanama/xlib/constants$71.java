@@ -7,27 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$71 {
+final class constants$71 {
 
-    static final FunctionDescriptor Xutf8LookupString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8LookupString$MH = RuntimeHelper.downcallHandle(
-        "Xutf8LookupString",
-        constants$71.Xutf8LookupString$FUNC
-    );
-    static final FunctionDescriptor XVaCreateNestedList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XVaCreateNestedList$MH = RuntimeHelper.downcallHandleVariadic(
-        "XVaCreateNestedList",
-        constants$71.XVaCreateNestedList$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$71() {}
     static final FunctionDescriptor XRegisterIMInstantiateCallback$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -59,8 +42,40 @@ class constants$71 {
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XConnectionWatchProc$MH = RuntimeHelper.downcallHandle(
-        constants$71.XConnectionWatchProc$FUNC
+    static final FunctionDescriptor XConnectionWatchProc_UP$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XConnectionWatchProc_UP$MH = RuntimeHelper.upcallHandle(XConnectionWatchProc.class, "apply", constants$71.XConnectionWatchProc_UP$FUNC);
+    static final FunctionDescriptor XConnectionWatchProc_DOWN$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XConnectionWatchProc_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$71.XConnectionWatchProc_DOWN$FUNC
+    );
+    static final FunctionDescriptor XInternalConnectionNumbers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XInternalConnectionNumbers$MH = RuntimeHelper.downcallHandle(
+        "XInternalConnectionNumbers",
+        constants$71.XInternalConnectionNumbers$FUNC
+    );
+    static final FunctionDescriptor XProcessInternalConnection$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XProcessInternalConnection$MH = RuntimeHelper.downcallHandle(
+        "XProcessInternalConnection",
+        constants$71.XProcessInternalConnection$FUNC
     );
 }
 

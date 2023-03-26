@@ -7,9 +7,25 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     Colormap colormap;
+ *     unsigned long red_max;
+ *     unsigned long red_mult;
+ *     unsigned long green_max;
+ *     unsigned long green_mult;
+ *     unsigned long blue_max;
+ *     unsigned long blue_mult;
+ *     unsigned long base_pixel;
+ *     VisualID visualid;
+ *     XID killid;
+ * };
+ * }
+ */
 public class XStandardColormap {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_LONG_LONG$LAYOUT.withName("colormap"),
         Constants$root.C_LONG_LONG$LAYOUT.withName("red_max"),
         Constants$root.C_LONG_LONG$LAYOUT.withName("red_mult"),
@@ -28,10 +44,22 @@ public class XStandardColormap {
     public static VarHandle colormap$VH() {
         return XStandardColormap.colormap$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Colormap colormap;
+     * }
+     */
     public static long colormap$get(MemorySegment seg) {
         return (long)XStandardColormap.colormap$VH.get(seg);
     }
-    public static void colormap$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Colormap colormap;
+     * }
+     */
+    public static void colormap$set(MemorySegment seg, long x) {
         XStandardColormap.colormap$VH.set(seg, x);
     }
     public static long colormap$get(MemorySegment seg, long index) {
@@ -44,10 +72,22 @@ public class XStandardColormap {
     public static VarHandle red_max$VH() {
         return XStandardColormap.red_max$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long red_max;
+     * }
+     */
     public static long red_max$get(MemorySegment seg) {
         return (long)XStandardColormap.red_max$VH.get(seg);
     }
-    public static void red_max$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long red_max;
+     * }
+     */
+    public static void red_max$set(MemorySegment seg, long x) {
         XStandardColormap.red_max$VH.set(seg, x);
     }
     public static long red_max$get(MemorySegment seg, long index) {
@@ -60,10 +100,22 @@ public class XStandardColormap {
     public static VarHandle red_mult$VH() {
         return XStandardColormap.red_mult$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long red_mult;
+     * }
+     */
     public static long red_mult$get(MemorySegment seg) {
         return (long)XStandardColormap.red_mult$VH.get(seg);
     }
-    public static void red_mult$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long red_mult;
+     * }
+     */
+    public static void red_mult$set(MemorySegment seg, long x) {
         XStandardColormap.red_mult$VH.set(seg, x);
     }
     public static long red_mult$get(MemorySegment seg, long index) {
@@ -76,10 +128,22 @@ public class XStandardColormap {
     public static VarHandle green_max$VH() {
         return XStandardColormap.green_max$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long green_max;
+     * }
+     */
     public static long green_max$get(MemorySegment seg) {
         return (long)XStandardColormap.green_max$VH.get(seg);
     }
-    public static void green_max$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long green_max;
+     * }
+     */
+    public static void green_max$set(MemorySegment seg, long x) {
         XStandardColormap.green_max$VH.set(seg, x);
     }
     public static long green_max$get(MemorySegment seg, long index) {
@@ -92,10 +156,22 @@ public class XStandardColormap {
     public static VarHandle green_mult$VH() {
         return XStandardColormap.green_mult$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long green_mult;
+     * }
+     */
     public static long green_mult$get(MemorySegment seg) {
         return (long)XStandardColormap.green_mult$VH.get(seg);
     }
-    public static void green_mult$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long green_mult;
+     * }
+     */
+    public static void green_mult$set(MemorySegment seg, long x) {
         XStandardColormap.green_mult$VH.set(seg, x);
     }
     public static long green_mult$get(MemorySegment seg, long index) {
@@ -108,10 +184,22 @@ public class XStandardColormap {
     public static VarHandle blue_max$VH() {
         return XStandardColormap.blue_max$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long blue_max;
+     * }
+     */
     public static long blue_max$get(MemorySegment seg) {
         return (long)XStandardColormap.blue_max$VH.get(seg);
     }
-    public static void blue_max$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long blue_max;
+     * }
+     */
+    public static void blue_max$set(MemorySegment seg, long x) {
         XStandardColormap.blue_max$VH.set(seg, x);
     }
     public static long blue_max$get(MemorySegment seg, long index) {
@@ -124,10 +212,22 @@ public class XStandardColormap {
     public static VarHandle blue_mult$VH() {
         return XStandardColormap.blue_mult$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long blue_mult;
+     * }
+     */
     public static long blue_mult$get(MemorySegment seg) {
         return (long)XStandardColormap.blue_mult$VH.get(seg);
     }
-    public static void blue_mult$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long blue_mult;
+     * }
+     */
+    public static void blue_mult$set(MemorySegment seg, long x) {
         XStandardColormap.blue_mult$VH.set(seg, x);
     }
     public static long blue_mult$get(MemorySegment seg, long index) {
@@ -140,10 +240,22 @@ public class XStandardColormap {
     public static VarHandle base_pixel$VH() {
         return XStandardColormap.base_pixel$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long base_pixel;
+     * }
+     */
     public static long base_pixel$get(MemorySegment seg) {
         return (long)XStandardColormap.base_pixel$VH.get(seg);
     }
-    public static void base_pixel$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long base_pixel;
+     * }
+     */
+    public static void base_pixel$set(MemorySegment seg, long x) {
         XStandardColormap.base_pixel$VH.set(seg, x);
     }
     public static long base_pixel$get(MemorySegment seg, long index) {
@@ -156,10 +268,22 @@ public class XStandardColormap {
     public static VarHandle visualid$VH() {
         return XStandardColormap.visualid$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * VisualID visualid;
+     * }
+     */
     public static long visualid$get(MemorySegment seg) {
         return (long)XStandardColormap.visualid$VH.get(seg);
     }
-    public static void visualid$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * VisualID visualid;
+     * }
+     */
+    public static void visualid$set(MemorySegment seg, long x) {
         XStandardColormap.visualid$VH.set(seg, x);
     }
     public static long visualid$get(MemorySegment seg, long index) {
@@ -172,10 +296,22 @@ public class XStandardColormap {
     public static VarHandle killid$VH() {
         return XStandardColormap.killid$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XID killid;
+     * }
+     */
     public static long killid$get(MemorySegment seg) {
         return (long)XStandardColormap.killid$VH.get(seg);
     }
-    public static void killid$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XID killid;
+     * }
+     */
+    public static void killid$set(MemorySegment seg, long x) {
         XStandardColormap.killid$VH.set(seg, x);
     }
     public static long killid$get(MemorySegment seg, long index) {
@@ -186,10 +322,10 @@ public class XStandardColormap {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

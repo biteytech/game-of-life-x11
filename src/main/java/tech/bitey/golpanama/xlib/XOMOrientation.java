@@ -7,9 +7,17 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int num_orientation;
+ *     XOrientation* orientation;
+ * };
+ * }
+ */
 public class XOMOrientation {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("num_orientation"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_POINTER$LAYOUT.withName("orientation")
@@ -21,10 +29,22 @@ public class XOMOrientation {
     public static VarHandle num_orientation$VH() {
         return XOMOrientation.num_orientation$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int num_orientation;
+     * }
+     */
     public static int num_orientation$get(MemorySegment seg) {
         return (int)XOMOrientation.num_orientation$VH.get(seg);
     }
-    public static void num_orientation$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int num_orientation;
+     * }
+     */
+    public static void num_orientation$set(MemorySegment seg, int x) {
         XOMOrientation.num_orientation$VH.set(seg, x);
     }
     public static int num_orientation$get(MemorySegment seg, long index) {
@@ -37,24 +57,36 @@ public class XOMOrientation {
     public static VarHandle orientation$VH() {
         return XOMOrientation.orientation$VH;
     }
-    public static MemoryAddress orientation$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XOMOrientation.orientation$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XOrientation* orientation;
+     * }
+     */
+    public static MemorySegment orientation$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XOMOrientation.orientation$VH.get(seg);
     }
-    public static void orientation$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XOrientation* orientation;
+     * }
+     */
+    public static void orientation$set(MemorySegment seg, MemorySegment x) {
         XOMOrientation.orientation$VH.set(seg, x);
     }
-    public static MemoryAddress orientation$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XOMOrientation.orientation$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment orientation$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XOMOrientation.orientation$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void orientation$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void orientation$set(MemorySegment seg, long index, MemorySegment x) {
         XOMOrientation.orientation$VH.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

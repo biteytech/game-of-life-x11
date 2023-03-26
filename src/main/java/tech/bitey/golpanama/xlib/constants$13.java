@@ -7,23 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$13 {
+final class constants$13 {
 
-    static final FunctionDescriptor XAddExtension$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAddExtension$MH = RuntimeHelper.downcallHandle(
-        "XAddExtension",
-        constants$13.XAddExtension$FUNC
-    );
-    static final FunctionDescriptor XFindOnExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFindOnExtensionList$MH = RuntimeHelper.downcallHandle(
-        "XFindOnExtensionList",
-        constants$13.XFindOnExtensionList$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$13() {}
     static final FunctionDescriptor XEHeadOfExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         MemoryLayout.unionLayout(
             Constants$root.C_POINTER$LAYOUT.withName("display"),
@@ -59,6 +46,21 @@ class constants$13 {
     static final MethodHandle XRootWindowOfScreen$MH = RuntimeHelper.downcallHandle(
         "XRootWindowOfScreen",
         constants$13.XRootWindowOfScreen$FUNC
+    );
+    static final FunctionDescriptor XDefaultVisual$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XDefaultVisual$MH = RuntimeHelper.downcallHandle(
+        "XDefaultVisual",
+        constants$13.XDefaultVisual$FUNC
+    );
+    static final FunctionDescriptor XDefaultVisualOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDefaultVisualOfScreen$MH = RuntimeHelper.downcallHandle(
+        "XDefaultVisualOfScreen",
+        constants$13.XDefaultVisualOfScreen$FUNC
     );
 }
 

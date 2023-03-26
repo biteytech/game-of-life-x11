@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$59 {
+final class constants$59 {
 
-    static final FunctionDescriptor XUngrabKeyboard$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUngrabKeyboard$MH = RuntimeHelper.downcallHandle(
-        "XUngrabKeyboard",
-        constants$59.XUngrabKeyboard$FUNC
-    );
-    static final FunctionDescriptor XUngrabPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUngrabPointer$MH = RuntimeHelper.downcallHandle(
-        "XUngrabPointer",
-        constants$59.XUngrabPointer$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$59() {}
     static final FunctionDescriptor XUngrabServer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -55,6 +41,21 @@ class constants$59 {
     static final MethodHandle XUnmapSubwindows$MH = RuntimeHelper.downcallHandle(
         "XUnmapSubwindows",
         constants$59.XUnmapSubwindows$FUNC
+    );
+    static final FunctionDescriptor XUnmapWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XUnmapWindow$MH = RuntimeHelper.downcallHandle(
+        "XUnmapWindow",
+        constants$59.XUnmapWindow$FUNC
+    );
+    static final FunctionDescriptor XVendorRelease$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XVendorRelease$MH = RuntimeHelper.downcallHandle(
+        "XVendorRelease",
+        constants$59.XVendorRelease$FUNC
     );
 }
 

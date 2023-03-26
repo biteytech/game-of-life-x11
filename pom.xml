@@ -7,7 +7,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<javafx.version>18.0.1</javafx.version>
+		<javafx.version>20</javafx.version>
 		<package>${project.groupId}.${project.artifactId}</package>
 		<pattern>gosper_glider_gun</pattern>
 	</properties>
@@ -17,9 +17,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version>
+				<version>3.11.0</version>
 				<configuration>
-					<release>19</release>
+					<release>20</release>
 					<compilerArgs>--enable-preview</compilerArgs>
 				</configuration>
 			</plugin>
@@ -40,7 +40,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.1.0</version>
 				<configuration>
 					<executable>${env.JAVA_HOME}/bin/java</executable>
 					<arguments>

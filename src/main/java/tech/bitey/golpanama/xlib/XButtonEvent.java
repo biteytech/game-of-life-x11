@@ -7,9 +7,30 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Window window;
+ *     Window root;
+ *     Window subwindow;
+ *     Time time;
+ *     int x;
+ *     int y;
+ *     int x_root;
+ *     int y_root;
+ *     unsigned int state;
+ *     unsigned int button;
+ *     int same_screen;
+ * };
+ * }
+ */
 public class XButtonEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -36,10 +57,22 @@ public class XButtonEvent {
     public static VarHandle type$VH() {
         return XButtonEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XButtonEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XButtonEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -52,10 +85,22 @@ public class XButtonEvent {
     public static VarHandle serial$VH() {
         return XButtonEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XButtonEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XButtonEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -68,10 +113,22 @@ public class XButtonEvent {
     public static VarHandle send_event$VH() {
         return XButtonEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XButtonEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XButtonEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -84,26 +141,50 @@ public class XButtonEvent {
     public static VarHandle display$VH() {
         return XButtonEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XButtonEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XButtonEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XButtonEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XButtonEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XButtonEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XButtonEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
         return XButtonEvent.window$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
     public static long window$get(MemorySegment seg) {
         return (long)XButtonEvent.window$VH.get(seg);
     }
-    public static void window$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
+    public static void window$set(MemorySegment seg, long x) {
         XButtonEvent.window$VH.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
@@ -116,10 +197,22 @@ public class XButtonEvent {
     public static VarHandle root$VH() {
         return XButtonEvent.root$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window root;
+     * }
+     */
     public static long root$get(MemorySegment seg) {
         return (long)XButtonEvent.root$VH.get(seg);
     }
-    public static void root$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window root;
+     * }
+     */
+    public static void root$set(MemorySegment seg, long x) {
         XButtonEvent.root$VH.set(seg, x);
     }
     public static long root$get(MemorySegment seg, long index) {
@@ -132,10 +225,22 @@ public class XButtonEvent {
     public static VarHandle subwindow$VH() {
         return XButtonEvent.subwindow$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window subwindow;
+     * }
+     */
     public static long subwindow$get(MemorySegment seg) {
         return (long)XButtonEvent.subwindow$VH.get(seg);
     }
-    public static void subwindow$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window subwindow;
+     * }
+     */
+    public static void subwindow$set(MemorySegment seg, long x) {
         XButtonEvent.subwindow$VH.set(seg, x);
     }
     public static long subwindow$get(MemorySegment seg, long index) {
@@ -148,10 +253,22 @@ public class XButtonEvent {
     public static VarHandle time$VH() {
         return XButtonEvent.time$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Time time;
+     * }
+     */
     public static long time$get(MemorySegment seg) {
         return (long)XButtonEvent.time$VH.get(seg);
     }
-    public static void time$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Time time;
+     * }
+     */
+    public static void time$set(MemorySegment seg, long x) {
         XButtonEvent.time$VH.set(seg, x);
     }
     public static long time$get(MemorySegment seg, long index) {
@@ -164,10 +281,22 @@ public class XButtonEvent {
     public static VarHandle x$VH() {
         return XButtonEvent.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
     public static int x$get(MemorySegment seg) {
         return (int)XButtonEvent.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, int x) {
         XButtonEvent.x$VH.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
@@ -180,10 +309,22 @@ public class XButtonEvent {
     public static VarHandle y$VH() {
         return XButtonEvent.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
     public static int y$get(MemorySegment seg) {
         return (int)XButtonEvent.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, int x) {
         XButtonEvent.y$VH.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
@@ -196,10 +337,22 @@ public class XButtonEvent {
     public static VarHandle x_root$VH() {
         return XButtonEvent.x_root$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x_root;
+     * }
+     */
     public static int x_root$get(MemorySegment seg) {
         return (int)XButtonEvent.x_root$VH.get(seg);
     }
-    public static void x_root$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x_root;
+     * }
+     */
+    public static void x_root$set(MemorySegment seg, int x) {
         XButtonEvent.x_root$VH.set(seg, x);
     }
     public static int x_root$get(MemorySegment seg, long index) {
@@ -212,10 +365,22 @@ public class XButtonEvent {
     public static VarHandle y_root$VH() {
         return XButtonEvent.y_root$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y_root;
+     * }
+     */
     public static int y_root$get(MemorySegment seg) {
         return (int)XButtonEvent.y_root$VH.get(seg);
     }
-    public static void y_root$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y_root;
+     * }
+     */
+    public static void y_root$set(MemorySegment seg, int x) {
         XButtonEvent.y_root$VH.set(seg, x);
     }
     public static int y_root$get(MemorySegment seg, long index) {
@@ -228,10 +393,22 @@ public class XButtonEvent {
     public static VarHandle state$VH() {
         return XButtonEvent.state$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned int state;
+     * }
+     */
     public static int state$get(MemorySegment seg) {
         return (int)XButtonEvent.state$VH.get(seg);
     }
-    public static void state$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned int state;
+     * }
+     */
+    public static void state$set(MemorySegment seg, int x) {
         XButtonEvent.state$VH.set(seg, x);
     }
     public static int state$get(MemorySegment seg, long index) {
@@ -244,10 +421,22 @@ public class XButtonEvent {
     public static VarHandle button$VH() {
         return XButtonEvent.button$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned int button;
+     * }
+     */
     public static int button$get(MemorySegment seg) {
         return (int)XButtonEvent.button$VH.get(seg);
     }
-    public static void button$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned int button;
+     * }
+     */
+    public static void button$set(MemorySegment seg, int x) {
         XButtonEvent.button$VH.set(seg, x);
     }
     public static int button$get(MemorySegment seg, long index) {
@@ -260,10 +449,22 @@ public class XButtonEvent {
     public static VarHandle same_screen$VH() {
         return XButtonEvent.same_screen$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int same_screen;
+     * }
+     */
     public static int same_screen$get(MemorySegment seg) {
         return (int)XButtonEvent.same_screen$VH.get(seg);
     }
-    public static void same_screen$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int same_screen;
+     * }
+     */
+    public static void same_screen$set(MemorySegment seg, int x) {
         XButtonEvent.same_screen$VH.set(seg, x);
     }
     public static int same_screen$get(MemorySegment seg, long index) {
@@ -274,10 +475,10 @@ public class XButtonEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

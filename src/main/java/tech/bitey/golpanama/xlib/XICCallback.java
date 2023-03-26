@@ -7,9 +7,17 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     XPointer client_data;
+ *     XICProc callback;
+ * };
+ * }
+ */
 public class XICCallback {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_POINTER$LAYOUT.withName("client_data"),
         Constants$root.C_POINTER$LAYOUT.withName("callback")
     );
@@ -20,43 +28,67 @@ public class XICCallback {
     public static VarHandle client_data$VH() {
         return XICCallback.client_data$VH;
     }
-    public static MemoryAddress client_data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XICCallback.client_data$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XPointer client_data;
+     * }
+     */
+    public static MemorySegment client_data$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XICCallback.client_data$VH.get(seg);
     }
-    public static void client_data$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XPointer client_data;
+     * }
+     */
+    public static void client_data$set(MemorySegment seg, MemorySegment x) {
         XICCallback.client_data$VH.set(seg, x);
     }
-    public static MemoryAddress client_data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XICCallback.client_data$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment client_data$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XICCallback.client_data$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void client_data$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void client_data$set(MemorySegment seg, long index, MemorySegment x) {
         XICCallback.client_data$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle callback$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("callback"));
     public static VarHandle callback$VH() {
         return XICCallback.callback$VH;
     }
-    public static MemoryAddress callback$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XICCallback.callback$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * XICProc callback;
+     * }
+     */
+    public static MemorySegment callback$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XICCallback.callback$VH.get(seg);
     }
-    public static void callback$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * XICProc callback;
+     * }
+     */
+    public static void callback$set(MemorySegment seg, MemorySegment x) {
         XICCallback.callback$VH.set(seg, x);
     }
-    public static MemoryAddress callback$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XICCallback.callback$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment callback$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XICCallback.callback$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void callback$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void callback$set(MemorySegment seg, long index, MemorySegment x) {
         XICCallback.callback$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    public static XICProc callback (MemorySegment segment, MemorySession session) {
-        return XICProc.ofAddress(callback$get(segment), session);
+    public static XICProc callback(MemorySegment segment, SegmentScope scope) {
+        return XICProc.ofAddress(callback$get(segment), scope);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

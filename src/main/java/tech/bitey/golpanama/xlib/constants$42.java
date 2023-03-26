@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$42 {
+final class constants$42 {
 
-    static final FunctionDescriptor XMapSubwindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XMapSubwindows$MH = RuntimeHelper.downcallHandle(
-        "XMapSubwindows",
-        constants$42.XMapSubwindows$FUNC
-    );
-    static final FunctionDescriptor XMapWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XMapWindow$MH = RuntimeHelper.downcallHandle(
-        "XMapWindow",
-        constants$42.XMapWindow$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$42() {}
     static final FunctionDescriptor XMaskEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -59,6 +45,24 @@ class constants$42 {
     static final MethodHandle XMoveResizeWindow$MH = RuntimeHelper.downcallHandle(
         "XMoveResizeWindow",
         constants$42.XMoveResizeWindow$FUNC
+    );
+    static final FunctionDescriptor XMoveWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XMoveWindow$MH = RuntimeHelper.downcallHandle(
+        "XMoveWindow",
+        constants$42.XMoveWindow$FUNC
+    );
+    static final FunctionDescriptor XNextEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XNextEvent$MH = RuntimeHelper.downcallHandle(
+        "XNextEvent",
+        constants$42.XNextEvent$FUNC
     );
 }
 

@@ -7,9 +7,17 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     unsigned char byte1;
+ *     unsigned char byte2;
+ * };
+ * }
+ */
 public class XChar2b {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_CHAR$LAYOUT.withName("byte1"),
         Constants$root.C_CHAR$LAYOUT.withName("byte2")
     );
@@ -20,10 +28,22 @@ public class XChar2b {
     public static VarHandle byte1$VH() {
         return XChar2b.byte1$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned char byte1;
+     * }
+     */
     public static byte byte1$get(MemorySegment seg) {
         return (byte)XChar2b.byte1$VH.get(seg);
     }
-    public static void byte1$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned char byte1;
+     * }
+     */
+    public static void byte1$set(MemorySegment seg, byte x) {
         XChar2b.byte1$VH.set(seg, x);
     }
     public static byte byte1$get(MemorySegment seg, long index) {
@@ -36,10 +56,22 @@ public class XChar2b {
     public static VarHandle byte2$VH() {
         return XChar2b.byte2$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned char byte2;
+     * }
+     */
     public static byte byte2$get(MemorySegment seg) {
         return (byte)XChar2b.byte2$VH.get(seg);
     }
-    public static void byte2$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned char byte2;
+     * }
+     */
+    public static void byte2$set(MemorySegment seg, byte x) {
         XChar2b.byte2$VH.set(seg, x);
     }
     public static byte byte2$get(MemorySegment seg, long index) {
@@ -50,10 +82,10 @@ public class XChar2b {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

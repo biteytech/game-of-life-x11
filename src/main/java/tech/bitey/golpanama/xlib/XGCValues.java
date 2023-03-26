@@ -7,9 +7,38 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int function;
+ *     unsigned long plane_mask;
+ *     unsigned long foreground;
+ *     unsigned long background;
+ *     int line_width;
+ *     int line_style;
+ *     int cap_style;
+ *     int join_style;
+ *     int fill_style;
+ *     int fill_rule;
+ *     int arc_mode;
+ *     Pixmap tile;
+ *     Pixmap stipple;
+ *     int ts_x_origin;
+ *     int ts_y_origin;
+ *     Font font;
+ *     int subwindow_mode;
+ *     int graphics_exposures;
+ *     int clip_x_origin;
+ *     int clip_y_origin;
+ *     Pixmap clip_mask;
+ *     int dash_offset;
+ *     char dashes;
+ * };
+ * }
+ */
 public class XGCValues {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("function"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("plane_mask"),
@@ -44,10 +73,22 @@ public class XGCValues {
     public static VarHandle function$VH() {
         return XGCValues.function$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int function;
+     * }
+     */
     public static int function$get(MemorySegment seg) {
         return (int)XGCValues.function$VH.get(seg);
     }
-    public static void function$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int function;
+     * }
+     */
+    public static void function$set(MemorySegment seg, int x) {
         XGCValues.function$VH.set(seg, x);
     }
     public static int function$get(MemorySegment seg, long index) {
@@ -60,10 +101,22 @@ public class XGCValues {
     public static VarHandle plane_mask$VH() {
         return XGCValues.plane_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long plane_mask;
+     * }
+     */
     public static long plane_mask$get(MemorySegment seg) {
         return (long)XGCValues.plane_mask$VH.get(seg);
     }
-    public static void plane_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long plane_mask;
+     * }
+     */
+    public static void plane_mask$set(MemorySegment seg, long x) {
         XGCValues.plane_mask$VH.set(seg, x);
     }
     public static long plane_mask$get(MemorySegment seg, long index) {
@@ -76,10 +129,22 @@ public class XGCValues {
     public static VarHandle foreground$VH() {
         return XGCValues.foreground$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long foreground;
+     * }
+     */
     public static long foreground$get(MemorySegment seg) {
         return (long)XGCValues.foreground$VH.get(seg);
     }
-    public static void foreground$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long foreground;
+     * }
+     */
+    public static void foreground$set(MemorySegment seg, long x) {
         XGCValues.foreground$VH.set(seg, x);
     }
     public static long foreground$get(MemorySegment seg, long index) {
@@ -92,10 +157,22 @@ public class XGCValues {
     public static VarHandle background$VH() {
         return XGCValues.background$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long background;
+     * }
+     */
     public static long background$get(MemorySegment seg) {
         return (long)XGCValues.background$VH.get(seg);
     }
-    public static void background$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long background;
+     * }
+     */
+    public static void background$set(MemorySegment seg, long x) {
         XGCValues.background$VH.set(seg, x);
     }
     public static long background$get(MemorySegment seg, long index) {
@@ -108,10 +185,22 @@ public class XGCValues {
     public static VarHandle line_width$VH() {
         return XGCValues.line_width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int line_width;
+     * }
+     */
     public static int line_width$get(MemorySegment seg) {
         return (int)XGCValues.line_width$VH.get(seg);
     }
-    public static void line_width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int line_width;
+     * }
+     */
+    public static void line_width$set(MemorySegment seg, int x) {
         XGCValues.line_width$VH.set(seg, x);
     }
     public static int line_width$get(MemorySegment seg, long index) {
@@ -124,10 +213,22 @@ public class XGCValues {
     public static VarHandle line_style$VH() {
         return XGCValues.line_style$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int line_style;
+     * }
+     */
     public static int line_style$get(MemorySegment seg) {
         return (int)XGCValues.line_style$VH.get(seg);
     }
-    public static void line_style$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int line_style;
+     * }
+     */
+    public static void line_style$set(MemorySegment seg, int x) {
         XGCValues.line_style$VH.set(seg, x);
     }
     public static int line_style$get(MemorySegment seg, long index) {
@@ -140,10 +241,22 @@ public class XGCValues {
     public static VarHandle cap_style$VH() {
         return XGCValues.cap_style$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int cap_style;
+     * }
+     */
     public static int cap_style$get(MemorySegment seg) {
         return (int)XGCValues.cap_style$VH.get(seg);
     }
-    public static void cap_style$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int cap_style;
+     * }
+     */
+    public static void cap_style$set(MemorySegment seg, int x) {
         XGCValues.cap_style$VH.set(seg, x);
     }
     public static int cap_style$get(MemorySegment seg, long index) {
@@ -156,10 +269,22 @@ public class XGCValues {
     public static VarHandle join_style$VH() {
         return XGCValues.join_style$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int join_style;
+     * }
+     */
     public static int join_style$get(MemorySegment seg) {
         return (int)XGCValues.join_style$VH.get(seg);
     }
-    public static void join_style$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int join_style;
+     * }
+     */
+    public static void join_style$set(MemorySegment seg, int x) {
         XGCValues.join_style$VH.set(seg, x);
     }
     public static int join_style$get(MemorySegment seg, long index) {
@@ -172,10 +297,22 @@ public class XGCValues {
     public static VarHandle fill_style$VH() {
         return XGCValues.fill_style$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int fill_style;
+     * }
+     */
     public static int fill_style$get(MemorySegment seg) {
         return (int)XGCValues.fill_style$VH.get(seg);
     }
-    public static void fill_style$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int fill_style;
+     * }
+     */
+    public static void fill_style$set(MemorySegment seg, int x) {
         XGCValues.fill_style$VH.set(seg, x);
     }
     public static int fill_style$get(MemorySegment seg, long index) {
@@ -188,10 +325,22 @@ public class XGCValues {
     public static VarHandle fill_rule$VH() {
         return XGCValues.fill_rule$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int fill_rule;
+     * }
+     */
     public static int fill_rule$get(MemorySegment seg) {
         return (int)XGCValues.fill_rule$VH.get(seg);
     }
-    public static void fill_rule$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int fill_rule;
+     * }
+     */
+    public static void fill_rule$set(MemorySegment seg, int x) {
         XGCValues.fill_rule$VH.set(seg, x);
     }
     public static int fill_rule$get(MemorySegment seg, long index) {
@@ -204,10 +353,22 @@ public class XGCValues {
     public static VarHandle arc_mode$VH() {
         return XGCValues.arc_mode$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int arc_mode;
+     * }
+     */
     public static int arc_mode$get(MemorySegment seg) {
         return (int)XGCValues.arc_mode$VH.get(seg);
     }
-    public static void arc_mode$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int arc_mode;
+     * }
+     */
+    public static void arc_mode$set(MemorySegment seg, int x) {
         XGCValues.arc_mode$VH.set(seg, x);
     }
     public static int arc_mode$get(MemorySegment seg, long index) {
@@ -220,10 +381,22 @@ public class XGCValues {
     public static VarHandle tile$VH() {
         return XGCValues.tile$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Pixmap tile;
+     * }
+     */
     public static long tile$get(MemorySegment seg) {
         return (long)XGCValues.tile$VH.get(seg);
     }
-    public static void tile$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Pixmap tile;
+     * }
+     */
+    public static void tile$set(MemorySegment seg, long x) {
         XGCValues.tile$VH.set(seg, x);
     }
     public static long tile$get(MemorySegment seg, long index) {
@@ -236,10 +409,22 @@ public class XGCValues {
     public static VarHandle stipple$VH() {
         return XGCValues.stipple$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Pixmap stipple;
+     * }
+     */
     public static long stipple$get(MemorySegment seg) {
         return (long)XGCValues.stipple$VH.get(seg);
     }
-    public static void stipple$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Pixmap stipple;
+     * }
+     */
+    public static void stipple$set(MemorySegment seg, long x) {
         XGCValues.stipple$VH.set(seg, x);
     }
     public static long stipple$get(MemorySegment seg, long index) {
@@ -252,10 +437,22 @@ public class XGCValues {
     public static VarHandle ts_x_origin$VH() {
         return XGCValues.ts_x_origin$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int ts_x_origin;
+     * }
+     */
     public static int ts_x_origin$get(MemorySegment seg) {
         return (int)XGCValues.ts_x_origin$VH.get(seg);
     }
-    public static void ts_x_origin$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int ts_x_origin;
+     * }
+     */
+    public static void ts_x_origin$set(MemorySegment seg, int x) {
         XGCValues.ts_x_origin$VH.set(seg, x);
     }
     public static int ts_x_origin$get(MemorySegment seg, long index) {
@@ -268,10 +465,22 @@ public class XGCValues {
     public static VarHandle ts_y_origin$VH() {
         return XGCValues.ts_y_origin$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int ts_y_origin;
+     * }
+     */
     public static int ts_y_origin$get(MemorySegment seg) {
         return (int)XGCValues.ts_y_origin$VH.get(seg);
     }
-    public static void ts_y_origin$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int ts_y_origin;
+     * }
+     */
+    public static void ts_y_origin$set(MemorySegment seg, int x) {
         XGCValues.ts_y_origin$VH.set(seg, x);
     }
     public static int ts_y_origin$get(MemorySegment seg, long index) {
@@ -284,10 +493,22 @@ public class XGCValues {
     public static VarHandle font$VH() {
         return XGCValues.font$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Font font;
+     * }
+     */
     public static long font$get(MemorySegment seg) {
         return (long)XGCValues.font$VH.get(seg);
     }
-    public static void font$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Font font;
+     * }
+     */
+    public static void font$set(MemorySegment seg, long x) {
         XGCValues.font$VH.set(seg, x);
     }
     public static long font$get(MemorySegment seg, long index) {
@@ -300,10 +521,22 @@ public class XGCValues {
     public static VarHandle subwindow_mode$VH() {
         return XGCValues.subwindow_mode$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int subwindow_mode;
+     * }
+     */
     public static int subwindow_mode$get(MemorySegment seg) {
         return (int)XGCValues.subwindow_mode$VH.get(seg);
     }
-    public static void subwindow_mode$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int subwindow_mode;
+     * }
+     */
+    public static void subwindow_mode$set(MemorySegment seg, int x) {
         XGCValues.subwindow_mode$VH.set(seg, x);
     }
     public static int subwindow_mode$get(MemorySegment seg, long index) {
@@ -316,10 +549,22 @@ public class XGCValues {
     public static VarHandle graphics_exposures$VH() {
         return XGCValues.graphics_exposures$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int graphics_exposures;
+     * }
+     */
     public static int graphics_exposures$get(MemorySegment seg) {
         return (int)XGCValues.graphics_exposures$VH.get(seg);
     }
-    public static void graphics_exposures$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int graphics_exposures;
+     * }
+     */
+    public static void graphics_exposures$set(MemorySegment seg, int x) {
         XGCValues.graphics_exposures$VH.set(seg, x);
     }
     public static int graphics_exposures$get(MemorySegment seg, long index) {
@@ -332,10 +577,22 @@ public class XGCValues {
     public static VarHandle clip_x_origin$VH() {
         return XGCValues.clip_x_origin$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int clip_x_origin;
+     * }
+     */
     public static int clip_x_origin$get(MemorySegment seg) {
         return (int)XGCValues.clip_x_origin$VH.get(seg);
     }
-    public static void clip_x_origin$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int clip_x_origin;
+     * }
+     */
+    public static void clip_x_origin$set(MemorySegment seg, int x) {
         XGCValues.clip_x_origin$VH.set(seg, x);
     }
     public static int clip_x_origin$get(MemorySegment seg, long index) {
@@ -348,10 +605,22 @@ public class XGCValues {
     public static VarHandle clip_y_origin$VH() {
         return XGCValues.clip_y_origin$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int clip_y_origin;
+     * }
+     */
     public static int clip_y_origin$get(MemorySegment seg) {
         return (int)XGCValues.clip_y_origin$VH.get(seg);
     }
-    public static void clip_y_origin$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int clip_y_origin;
+     * }
+     */
+    public static void clip_y_origin$set(MemorySegment seg, int x) {
         XGCValues.clip_y_origin$VH.set(seg, x);
     }
     public static int clip_y_origin$get(MemorySegment seg, long index) {
@@ -364,10 +633,22 @@ public class XGCValues {
     public static VarHandle clip_mask$VH() {
         return XGCValues.clip_mask$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Pixmap clip_mask;
+     * }
+     */
     public static long clip_mask$get(MemorySegment seg) {
         return (long)XGCValues.clip_mask$VH.get(seg);
     }
-    public static void clip_mask$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Pixmap clip_mask;
+     * }
+     */
+    public static void clip_mask$set(MemorySegment seg, long x) {
         XGCValues.clip_mask$VH.set(seg, x);
     }
     public static long clip_mask$get(MemorySegment seg, long index) {
@@ -380,10 +661,22 @@ public class XGCValues {
     public static VarHandle dash_offset$VH() {
         return XGCValues.dash_offset$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int dash_offset;
+     * }
+     */
     public static int dash_offset$get(MemorySegment seg) {
         return (int)XGCValues.dash_offset$VH.get(seg);
     }
-    public static void dash_offset$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int dash_offset;
+     * }
+     */
+    public static void dash_offset$set(MemorySegment seg, int x) {
         XGCValues.dash_offset$VH.set(seg, x);
     }
     public static int dash_offset$get(MemorySegment seg, long index) {
@@ -396,10 +689,22 @@ public class XGCValues {
     public static VarHandle dashes$VH() {
         return XGCValues.dashes$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * char dashes;
+     * }
+     */
     public static byte dashes$get(MemorySegment seg) {
         return (byte)XGCValues.dashes$VH.get(seg);
     }
-    public static void dashes$set( MemorySegment seg, byte x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * char dashes;
+     * }
+     */
+    public static void dashes$set(MemorySegment seg, byte x) {
         XGCValues.dashes$VH.set(seg, x);
     }
     public static byte dashes$get(MemorySegment seg, long index) {
@@ -410,10 +715,10 @@ public class XGCValues {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

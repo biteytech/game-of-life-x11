@@ -7,23 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$36 {
+final class constants$36 {
 
-    static final FunctionDescriptor XFreeFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFreeFontPath$MH = RuntimeHelper.downcallHandle(
-        "XFreeFontPath",
-        constants$36.XFreeFontPath$FUNC
-    );
-    static final FunctionDescriptor XFreeGC$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFreeGC$MH = RuntimeHelper.downcallHandle(
-        "XFreeGC",
-        constants$36.XFreeGC$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$36() {}
     static final FunctionDescriptor XFreeModifiermap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -69,6 +56,25 @@ class constants$36 {
     static final MethodHandle XGetErrorDatabaseText$MH = RuntimeHelper.downcallHandle(
         "XGetErrorDatabaseText",
         constants$36.XGetErrorDatabaseText$FUNC
+    );
+    static final FunctionDescriptor XGetErrorText$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XGetErrorText$MH = RuntimeHelper.downcallHandle(
+        "XGetErrorText",
+        constants$36.XGetErrorText$FUNC
+    );
+    static final FunctionDescriptor XGetFontProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGetFontProperty$MH = RuntimeHelper.downcallHandle(
+        "XGetFontProperty",
+        constants$36.XGetFontProperty$FUNC
     );
 }
 

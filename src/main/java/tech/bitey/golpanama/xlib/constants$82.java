@@ -7,33 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$82 {
+final class constants$82 {
 
-    static final FunctionDescriptor Xutf8SetWMProperties$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8SetWMProperties$MH = RuntimeHelper.downcallHandle(
-        "Xutf8SetWMProperties",
-        constants$82.Xutf8SetWMProperties$FUNC
-    );
-    static final FunctionDescriptor XSetWMSizeHints$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWMSizeHints$MH = RuntimeHelper.downcallHandle(
-        "XSetWMSizeHints",
-        constants$82.XSetWMSizeHints$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$82() {}
     static final FunctionDescriptor XSetRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -70,6 +47,24 @@ class constants$82 {
     static final MethodHandle XShrinkRegion$MH = RuntimeHelper.downcallHandle(
         "XShrinkRegion",
         constants$82.XShrinkRegion$FUNC
+    );
+    static final FunctionDescriptor XStringListToTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XStringListToTextProperty$MH = RuntimeHelper.downcallHandle(
+        "XStringListToTextProperty",
+        constants$82.XStringListToTextProperty$FUNC
+    );
+    static final FunctionDescriptor XSubtractRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XSubtractRegion$MH = RuntimeHelper.downcallHandle(
+        "XSubtractRegion",
+        constants$82.XSubtractRegion$FUNC
     );
 }
 

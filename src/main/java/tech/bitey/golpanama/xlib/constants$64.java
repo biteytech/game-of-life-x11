@@ -7,22 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$64 {
+final class constants$64 {
 
-    static final FunctionDescriptor XLocaleOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLocaleOfFontSet$MH = RuntimeHelper.downcallHandle(
-        "XLocaleOfFontSet",
-        constants$64.XLocaleOfFontSet$FUNC
-    );
-    static final FunctionDescriptor XContextDependentDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XContextDependentDrawing$MH = RuntimeHelper.downcallHandle(
-        "XContextDependentDrawing",
-        constants$64.XContextDependentDrawing$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$64() {}
     static final FunctionDescriptor XDirectionalDependentDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -52,6 +40,24 @@ class constants$64 {
     static final MethodHandle XmbTextEscapement$MH = RuntimeHelper.downcallHandle(
         "XmbTextEscapement",
         constants$64.XmbTextEscapement$FUNC
+    );
+    static final FunctionDescriptor XwcTextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XwcTextEscapement$MH = RuntimeHelper.downcallHandle(
+        "XwcTextEscapement",
+        constants$64.XwcTextEscapement$FUNC
+    );
+    static final FunctionDescriptor Xutf8TextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle Xutf8TextEscapement$MH = RuntimeHelper.downcallHandle(
+        "Xutf8TextEscapement",
+        constants$64.Xutf8TextEscapement$FUNC
     );
 }
 

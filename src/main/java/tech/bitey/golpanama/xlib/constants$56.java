@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$56 {
+final class constants$56 {
 
-    static final FunctionDescriptor XSetWindowBorderPixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWindowBorderPixmap$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowBorderPixmap",
-        constants$56.XSetWindowBorderPixmap$FUNC
-    );
-    static final FunctionDescriptor XSetWindowBorderWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetWindowBorderWidth$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowBorderWidth",
-        constants$56.XSetWindowBorderWidth$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$56() {}
     static final FunctionDescriptor XSetWindowColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -63,6 +47,25 @@ class constants$56 {
     static final MethodHandle XStoreColor$MH = RuntimeHelper.downcallHandle(
         "XStoreColor",
         constants$56.XStoreColor$FUNC
+    );
+    static final FunctionDescriptor XStoreColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle XStoreColors$MH = RuntimeHelper.downcallHandle(
+        "XStoreColors",
+        constants$56.XStoreColors$FUNC
+    );
+    static final FunctionDescriptor XStoreName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XStoreName$MH = RuntimeHelper.downcallHandle(
+        "XStoreName",
+        constants$56.XStoreName$FUNC
     );
 }
 

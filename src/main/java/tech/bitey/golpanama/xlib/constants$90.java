@@ -7,14 +7,16 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$90 {
+final class constants$90 {
 
-    static final MemorySegment XNStatusStartCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusStartCallback");
-    static final MemorySegment XNStatusDoneCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusDoneCallback");
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$90() {}
     static final MemorySegment XNStatusDrawCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusDrawCallback");
     static final MemorySegment XNStatusAttributes$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusAttributes");
     static final MemorySegment XNArea$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("area");
     static final MemorySegment XNAreaNeeded$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("areaNeeded");
+    static final MemorySegment XNSpotLocation$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("spotLocation");
+    static final MemorySegment XNColormap$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("colorMap");
 }
 
 

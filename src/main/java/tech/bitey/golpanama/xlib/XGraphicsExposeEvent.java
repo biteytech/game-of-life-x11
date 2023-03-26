@@ -7,9 +7,27 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Drawable drawable;
+ *     int x;
+ *     int y;
+ *     int width;
+ *     int height;
+ *     int count;
+ *     int major_code;
+ *     int minor_code;
+ * };
+ * }
+ */
 public class XGraphicsExposeEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -33,10 +51,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle type$VH() {
         return XGraphicsExposeEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -49,10 +79,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle serial$VH() {
         return XGraphicsExposeEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XGraphicsExposeEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XGraphicsExposeEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -65,10 +107,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle send_event$VH() {
         return XGraphicsExposeEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -81,26 +135,50 @@ public class XGraphicsExposeEvent {
     public static VarHandle display$VH() {
         return XGraphicsExposeEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XGraphicsExposeEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XGraphicsExposeEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XGraphicsExposeEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XGraphicsExposeEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XGraphicsExposeEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XGraphicsExposeEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle drawable$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("drawable"));
     public static VarHandle drawable$VH() {
         return XGraphicsExposeEvent.drawable$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Drawable drawable;
+     * }
+     */
     public static long drawable$get(MemorySegment seg) {
         return (long)XGraphicsExposeEvent.drawable$VH.get(seg);
     }
-    public static void drawable$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Drawable drawable;
+     * }
+     */
+    public static void drawable$set(MemorySegment seg, long x) {
         XGraphicsExposeEvent.drawable$VH.set(seg, x);
     }
     public static long drawable$get(MemorySegment seg, long index) {
@@ -113,10 +191,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle x$VH() {
         return XGraphicsExposeEvent.x$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
     public static int x$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.x$VH.get(seg);
     }
-    public static void x$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int x;
+     * }
+     */
+    public static void x$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.x$VH.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
@@ -129,10 +219,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle y$VH() {
         return XGraphicsExposeEvent.y$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
     public static int y$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.y$VH.get(seg);
     }
-    public static void y$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int y;
+     * }
+     */
+    public static void y$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.y$VH.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
@@ -145,10 +247,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle width$VH() {
         return XGraphicsExposeEvent.width$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int width;
+     * }
+     */
     public static int width$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.width$VH.get(seg);
     }
-    public static void width$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int width;
+     * }
+     */
+    public static void width$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.width$VH.set(seg, x);
     }
     public static int width$get(MemorySegment seg, long index) {
@@ -161,10 +275,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle height$VH() {
         return XGraphicsExposeEvent.height$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int height;
+     * }
+     */
     public static int height$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.height$VH.get(seg);
     }
-    public static void height$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int height;
+     * }
+     */
+    public static void height$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.height$VH.set(seg, x);
     }
     public static int height$get(MemorySegment seg, long index) {
@@ -177,10 +303,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle count$VH() {
         return XGraphicsExposeEvent.count$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int count;
+     * }
+     */
     public static int count$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.count$VH.get(seg);
     }
-    public static void count$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int count;
+     * }
+     */
+    public static void count$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.count$VH.set(seg, x);
     }
     public static int count$get(MemorySegment seg, long index) {
@@ -193,10 +331,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle major_code$VH() {
         return XGraphicsExposeEvent.major_code$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int major_code;
+     * }
+     */
     public static int major_code$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.major_code$VH.get(seg);
     }
-    public static void major_code$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int major_code;
+     * }
+     */
+    public static void major_code$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.major_code$VH.set(seg, x);
     }
     public static int major_code$get(MemorySegment seg, long index) {
@@ -209,10 +359,22 @@ public class XGraphicsExposeEvent {
     public static VarHandle minor_code$VH() {
         return XGraphicsExposeEvent.minor_code$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int minor_code;
+     * }
+     */
     public static int minor_code$get(MemorySegment seg) {
         return (int)XGraphicsExposeEvent.minor_code$VH.get(seg);
     }
-    public static void minor_code$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int minor_code;
+     * }
+     */
+    public static void minor_code$set(MemorySegment seg, int x) {
         XGraphicsExposeEvent.minor_code$VH.set(seg, x);
     }
     public static int minor_code$get(MemorySegment seg, long index) {
@@ -223,10 +385,10 @@ public class XGraphicsExposeEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,9 +7,19 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     short x1;
+ *     short y1;
+ *     short x2;
+ *     short y2;
+ * };
+ * }
+ */
 public class XSegment {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_SHORT$LAYOUT.withName("x1"),
         Constants$root.C_SHORT$LAYOUT.withName("y1"),
         Constants$root.C_SHORT$LAYOUT.withName("x2"),
@@ -22,10 +32,22 @@ public class XSegment {
     public static VarHandle x1$VH() {
         return XSegment.x1$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short x1;
+     * }
+     */
     public static short x1$get(MemorySegment seg) {
         return (short)XSegment.x1$VH.get(seg);
     }
-    public static void x1$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short x1;
+     * }
+     */
+    public static void x1$set(MemorySegment seg, short x) {
         XSegment.x1$VH.set(seg, x);
     }
     public static short x1$get(MemorySegment seg, long index) {
@@ -38,10 +60,22 @@ public class XSegment {
     public static VarHandle y1$VH() {
         return XSegment.y1$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short y1;
+     * }
+     */
     public static short y1$get(MemorySegment seg) {
         return (short)XSegment.y1$VH.get(seg);
     }
-    public static void y1$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short y1;
+     * }
+     */
+    public static void y1$set(MemorySegment seg, short x) {
         XSegment.y1$VH.set(seg, x);
     }
     public static short y1$get(MemorySegment seg, long index) {
@@ -54,10 +88,22 @@ public class XSegment {
     public static VarHandle x2$VH() {
         return XSegment.x2$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short x2;
+     * }
+     */
     public static short x2$get(MemorySegment seg) {
         return (short)XSegment.x2$VH.get(seg);
     }
-    public static void x2$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short x2;
+     * }
+     */
+    public static void x2$set(MemorySegment seg, short x) {
         XSegment.x2$VH.set(seg, x);
     }
     public static short x2$get(MemorySegment seg, long index) {
@@ -70,10 +116,22 @@ public class XSegment {
     public static VarHandle y2$VH() {
         return XSegment.y2$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * short y2;
+     * }
+     */
     public static short y2$get(MemorySegment seg) {
         return (short)XSegment.y2$VH.get(seg);
     }
-    public static void y2$set( MemorySegment seg, short x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * short y2;
+     * }
+     */
+    public static void y2$set(MemorySegment seg, short x) {
         XSegment.y2$VH.set(seg, x);
     }
     public static short y2$get(MemorySegment seg, long index) {
@@ -84,10 +142,10 @@ public class XSegment {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

@@ -7,36 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$27 {
+final class constants$27 {
 
-    static final FunctionDescriptor XConvertSelection$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XConvertSelection$MH = RuntimeHelper.downcallHandle(
-        "XConvertSelection",
-        constants$27.XConvertSelection$FUNC
-    );
-    static final FunctionDescriptor XCopyArea$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCopyArea$MH = RuntimeHelper.downcallHandle(
-        "XCopyArea",
-        constants$27.XCopyArea$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$27() {}
     static final FunctionDescriptor XCopyGC$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -78,6 +52,22 @@ class constants$27 {
     static final MethodHandle XDefaultDepthOfScreen$MH = RuntimeHelper.downcallHandle(
         "XDefaultDepthOfScreen",
         constants$27.XDefaultDepthOfScreen$FUNC
+    );
+    static final FunctionDescriptor XDefaultScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XDefaultScreen$MH = RuntimeHelper.downcallHandle(
+        "XDefaultScreen",
+        constants$27.XDefaultScreen$FUNC
+    );
+    static final FunctionDescriptor XDefineCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XDefineCursor$MH = RuntimeHelper.downcallHandle(
+        "XDefineCursor",
+        constants$27.XDefineCursor$FUNC
     );
 }
 

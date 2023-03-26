@@ -7,24 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$20 {
+final class constants$20 {
 
-    static final FunctionDescriptor XFreeStringList$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFreeStringList$MH = RuntimeHelper.downcallHandle(
-        "XFreeStringList",
-        constants$20.XFreeStringList$FUNC
-    );
-    static final FunctionDescriptor XSetTransientForHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetTransientForHint$MH = RuntimeHelper.downcallHandle(
-        "XSetTransientForHint",
-        constants$20.XSetTransientForHint$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$20() {}
     static final FunctionDescriptor XActivateScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
@@ -56,6 +42,23 @@ class constants$20 {
     static final MethodHandle XAddToExtensionList$MH = RuntimeHelper.downcallHandle(
         "XAddToExtensionList",
         constants$20.XAddToExtensionList$FUNC
+    );
+    static final FunctionDescriptor XAddToSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XAddToSaveSet$MH = RuntimeHelper.downcallHandle(
+        "XAddToSaveSet",
+        constants$20.XAddToSaveSet$FUNC
+    );
+    static final FunctionDescriptor XAllocColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XAllocColor$MH = RuntimeHelper.downcallHandle(
+        "XAllocColor",
+        constants$20.XAllocColor$FUNC
     );
 }
 

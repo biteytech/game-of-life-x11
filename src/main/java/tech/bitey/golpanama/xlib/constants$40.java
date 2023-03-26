@@ -7,29 +7,28 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$40 {
+final class constants$40 {
 
-    static final FunctionDescriptor XHeightMMOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XHeightMMOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XHeightMMOfScreen",
-        constants$40.XHeightMMOfScreen$FUNC
-    );
-    static final FunctionDescriptor XHeightOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XHeightOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XHeightOfScreen",
-        constants$40.XHeightOfScreen$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$40() {}
     static final FunctionDescriptor XIfEvent$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle XIfEvent$x0$MH = RuntimeHelper.downcallHandle(
-        constants$40.XIfEvent$x0$FUNC
+    static final FunctionDescriptor XIfEvent$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XIfEvent$x0_UP$MH = RuntimeHelper.upcallHandle(XIfEvent$x0.class, "apply", constants$40.XIfEvent$x0_UP$FUNC);
+    static final FunctionDescriptor XIfEvent$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XIfEvent$x0_DOWN$MH = RuntimeHelper.downcallHandle(
+        constants$40.XIfEvent$x0_DOWN$FUNC
     );
     static final FunctionDescriptor XIfEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
@@ -47,6 +46,22 @@ class constants$40 {
     static final MethodHandle XImageByteOrder$MH = RuntimeHelper.downcallHandle(
         "XImageByteOrder",
         constants$40.XImageByteOrder$FUNC
+    );
+    static final FunctionDescriptor XInstallColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XInstallColormap$MH = RuntimeHelper.downcallHandle(
+        "XInstallColormap",
+        constants$40.XInstallColormap$FUNC
+    );
+    static final FunctionDescriptor XKeysymToKeycode$FUNC = FunctionDescriptor.of(Constants$root.C_CHAR$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle XKeysymToKeycode$MH = RuntimeHelper.downcallHandle(
+        "XKeysymToKeycode",
+        constants$40.XKeysymToKeycode$FUNC
     );
 }
 

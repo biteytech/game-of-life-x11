@@ -7,9 +7,23 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Window window;
+ *     Atom message_type;
+ *     int format;
+ *     union  data;
+ * };
+ * }
+ */
 public class XClientMessageEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -33,10 +47,22 @@ public class XClientMessageEvent {
     public static VarHandle type$VH() {
         return XClientMessageEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XClientMessageEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XClientMessageEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -49,10 +75,22 @@ public class XClientMessageEvent {
     public static VarHandle serial$VH() {
         return XClientMessageEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XClientMessageEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XClientMessageEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -65,10 +103,22 @@ public class XClientMessageEvent {
     public static VarHandle send_event$VH() {
         return XClientMessageEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XClientMessageEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XClientMessageEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -81,26 +131,50 @@ public class XClientMessageEvent {
     public static VarHandle display$VH() {
         return XClientMessageEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XClientMessageEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XClientMessageEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XClientMessageEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XClientMessageEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XClientMessageEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XClientMessageEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
         return XClientMessageEvent.window$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
     public static long window$get(MemorySegment seg) {
         return (long)XClientMessageEvent.window$VH.get(seg);
     }
-    public static void window$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Window window;
+     * }
+     */
+    public static void window$set(MemorySegment seg, long x) {
         XClientMessageEvent.window$VH.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
@@ -113,10 +187,22 @@ public class XClientMessageEvent {
     public static VarHandle message_type$VH() {
         return XClientMessageEvent.message_type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Atom message_type;
+     * }
+     */
     public static long message_type$get(MemorySegment seg) {
         return (long)XClientMessageEvent.message_type$VH.get(seg);
     }
-    public static void message_type$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Atom message_type;
+     * }
+     */
+    public static void message_type$set(MemorySegment seg, long x) {
         XClientMessageEvent.message_type$VH.set(seg, x);
     }
     public static long message_type$get(MemorySegment seg, long index) {
@@ -129,10 +215,22 @@ public class XClientMessageEvent {
     public static VarHandle format$VH() {
         return XClientMessageEvent.format$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int format;
+     * }
+     */
     public static int format$get(MemorySegment seg) {
         return (int)XClientMessageEvent.format$VH.get(seg);
     }
-    public static void format$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int format;
+     * }
+     */
+    public static void format$set(MemorySegment seg, int x) {
         XClientMessageEvent.format$VH.set(seg, x);
     }
     public static int format$get(MemorySegment seg, long index) {
@@ -141,9 +239,20 @@ public class XClientMessageEvent {
     public static void format$set(MemorySegment seg, long index, int x) {
         XClientMessageEvent.format$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    public static class data {
+    /**
+     * {@snippet :
+     * union {
+     *     char b[20];
+     *     short s[10];
+     *     long l[5];
+     * };
+     * }
+     */
+    public static final class data {
 
-        static final  GroupLayout data$union$LAYOUT = MemoryLayout.unionLayout(
+        // Suppresses default constructor, ensuring non-instantiability.
+        private data() {}
+        static final UnionLayout data$union$LAYOUT = MemoryLayout.unionLayout(
             MemoryLayout.sequenceLayout(20, Constants$root.C_CHAR$LAYOUT).withName("b"),
             MemoryLayout.sequenceLayout(10, Constants$root.C_SHORT$LAYOUT).withName("s"),
             MemoryLayout.sequenceLayout(5, Constants$root.C_LONG_LONG$LAYOUT).withName("l")
@@ -162,10 +271,10 @@ public class XClientMessageEvent {
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-        public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+        public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+        public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
     }
 
     public static MemorySegment data$slice(MemorySegment seg) {
@@ -173,10 +282,10 @@ public class XClientMessageEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

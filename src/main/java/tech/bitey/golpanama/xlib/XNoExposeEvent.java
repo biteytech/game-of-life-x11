@@ -7,9 +7,22 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
+/**
+ * {@snippet :
+ * struct {
+ *     int type;
+ *     unsigned long serial;
+ *     int send_event;
+ *     Display* display;
+ *     Drawable drawable;
+ *     int major_code;
+ *     int minor_code;
+ * };
+ * }
+ */
 public class XNoExposeEvent {
 
-    static final  GroupLayout $struct$LAYOUT = MemoryLayout.structLayout(
+    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
         Constants$root.C_INT$LAYOUT.withName("type"),
         MemoryLayout.paddingLayout(32),
         Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
@@ -27,10 +40,22 @@ public class XNoExposeEvent {
     public static VarHandle type$VH() {
         return XNoExposeEvent.type$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
     public static int type$get(MemorySegment seg) {
         return (int)XNoExposeEvent.type$VH.get(seg);
     }
-    public static void type$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int type;
+     * }
+     */
+    public static void type$set(MemorySegment seg, int x) {
         XNoExposeEvent.type$VH.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
@@ -43,10 +68,22 @@ public class XNoExposeEvent {
     public static VarHandle serial$VH() {
         return XNoExposeEvent.serial$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
     public static long serial$get(MemorySegment seg) {
         return (long)XNoExposeEvent.serial$VH.get(seg);
     }
-    public static void serial$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * unsigned long serial;
+     * }
+     */
+    public static void serial$set(MemorySegment seg, long x) {
         XNoExposeEvent.serial$VH.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
@@ -59,10 +96,22 @@ public class XNoExposeEvent {
     public static VarHandle send_event$VH() {
         return XNoExposeEvent.send_event$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
     public static int send_event$get(MemorySegment seg) {
         return (int)XNoExposeEvent.send_event$VH.get(seg);
     }
-    public static void send_event$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int send_event;
+     * }
+     */
+    public static void send_event$set(MemorySegment seg, int x) {
         XNoExposeEvent.send_event$VH.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
@@ -75,26 +124,50 @@ public class XNoExposeEvent {
     public static VarHandle display$VH() {
         return XNoExposeEvent.display$VH;
     }
-    public static MemoryAddress display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemoryAddress)XNoExposeEvent.display$VH.get(seg);
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static MemorySegment display$get(MemorySegment seg) {
+        return (java.lang.foreign.MemorySegment)XNoExposeEvent.display$VH.get(seg);
     }
-    public static void display$set( MemorySegment seg, MemoryAddress x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Display* display;
+     * }
+     */
+    public static void display$set(MemorySegment seg, MemorySegment x) {
         XNoExposeEvent.display$VH.set(seg, x);
     }
-    public static MemoryAddress display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemoryAddress)XNoExposeEvent.display$VH.get(seg.asSlice(index*sizeof()));
+    public static MemorySegment display$get(MemorySegment seg, long index) {
+        return (java.lang.foreign.MemorySegment)XNoExposeEvent.display$VH.get(seg.asSlice(index*sizeof()));
     }
-    public static void display$set(MemorySegment seg, long index, MemoryAddress x) {
+    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
         XNoExposeEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle drawable$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("drawable"));
     public static VarHandle drawable$VH() {
         return XNoExposeEvent.drawable$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * Drawable drawable;
+     * }
+     */
     public static long drawable$get(MemorySegment seg) {
         return (long)XNoExposeEvent.drawable$VH.get(seg);
     }
-    public static void drawable$set( MemorySegment seg, long x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * Drawable drawable;
+     * }
+     */
+    public static void drawable$set(MemorySegment seg, long x) {
         XNoExposeEvent.drawable$VH.set(seg, x);
     }
     public static long drawable$get(MemorySegment seg, long index) {
@@ -107,10 +180,22 @@ public class XNoExposeEvent {
     public static VarHandle major_code$VH() {
         return XNoExposeEvent.major_code$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int major_code;
+     * }
+     */
     public static int major_code$get(MemorySegment seg) {
         return (int)XNoExposeEvent.major_code$VH.get(seg);
     }
-    public static void major_code$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int major_code;
+     * }
+     */
+    public static void major_code$set(MemorySegment seg, int x) {
         XNoExposeEvent.major_code$VH.set(seg, x);
     }
     public static int major_code$get(MemorySegment seg, long index) {
@@ -123,10 +208,22 @@ public class XNoExposeEvent {
     public static VarHandle minor_code$VH() {
         return XNoExposeEvent.minor_code$VH;
     }
+    /**
+     * Getter for field:
+     * {@snippet :
+     * int minor_code;
+     * }
+     */
     public static int minor_code$get(MemorySegment seg) {
         return (int)XNoExposeEvent.minor_code$VH.get(seg);
     }
-    public static void minor_code$set( MemorySegment seg, int x) {
+    /**
+     * Setter for field:
+     * {@snippet :
+     * int minor_code;
+     * }
+     */
+    public static void minor_code$set(MemorySegment seg, int x) {
         XNoExposeEvent.minor_code$VH.set(seg, x);
     }
     public static int minor_code$get(MemorySegment seg, long index) {
@@ -137,10 +234,10 @@ public class XNoExposeEvent {
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(int len, SegmentAllocator allocator) {
+    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemoryAddress addr, MemorySession session) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, session); }
+    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
 }
 
 

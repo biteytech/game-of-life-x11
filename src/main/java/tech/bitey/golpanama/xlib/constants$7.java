@@ -7,26 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-class constants$7 {
+final class constants$7 {
 
-    static final FunctionDescriptor XCopyColormapAndFree$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XCopyColormapAndFree$MH = RuntimeHelper.downcallHandle(
-        "XCopyColormapAndFree",
-        constants$7.XCopyColormapAndFree$FUNC
-    );
-    static final FunctionDescriptor XCreateColormap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCreateColormap$MH = RuntimeHelper.downcallHandle(
-        "XCreateColormap",
-        constants$7.XCreateColormap$FUNC
-    );
+    // Suppresses default constructor, ensuring non-instantiability.
+    private constants$7() {}
     static final FunctionDescriptor XCreatePixmapCursor$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
@@ -68,6 +52,23 @@ class constants$7 {
     static final MethodHandle XLoadFont$MH = RuntimeHelper.downcallHandle(
         "XLoadFont",
         constants$7.XLoadFont$FUNC
+    );
+    static final FunctionDescriptor XCreateGC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XCreateGC$MH = RuntimeHelper.downcallHandle(
+        "XCreateGC",
+        constants$7.XCreateGC$FUNC
+    );
+    static final FunctionDescriptor XGContextFromGC$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle XGContextFromGC$MH = RuntimeHelper.downcallHandle(
+        "XGContextFromGC",
+        constants$7.XGContextFromGC$FUNC
     );
 }
 
