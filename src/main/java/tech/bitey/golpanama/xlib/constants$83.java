@@ -11,65 +11,12 @@ final class constants$83 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$83() {}
-    static final FunctionDescriptor XmbTextListToTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbTextListToTextProperty$MH = RuntimeHelper.downcallHandle(
-        "XmbTextListToTextProperty",
-        constants$83.XmbTextListToTextProperty$FUNC
-    );
-    static final FunctionDescriptor XwcTextListToTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcTextListToTextProperty$MH = RuntimeHelper.downcallHandle(
-        "XwcTextListToTextProperty",
-        constants$83.XwcTextListToTextProperty$FUNC
-    );
-    static final FunctionDescriptor Xutf8TextListToTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8TextListToTextProperty$MH = RuntimeHelper.downcallHandle(
-        "Xutf8TextListToTextProperty",
-        constants$83.Xutf8TextListToTextProperty$FUNC
-    );
-    static final FunctionDescriptor XwcFreeStringList$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcFreeStringList$MH = RuntimeHelper.downcallHandle(
-        "XwcFreeStringList",
-        constants$83.XwcFreeStringList$FUNC
-    );
-    static final FunctionDescriptor XTextPropertyToStringList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XTextPropertyToStringList$MH = RuntimeHelper.downcallHandle(
-        "XTextPropertyToStringList",
-        constants$83.XTextPropertyToStringList$FUNC
-    );
-    static final FunctionDescriptor XmbTextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbTextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
-        "XmbTextPropertyToTextList",
-        constants$83.XmbTextPropertyToTextList$FUNC
-    );
+    static final VarHandle const$0 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$1 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("parent"));
+    static final VarHandle const$2 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$3 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$4 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$5 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("width"));
 }
 
 

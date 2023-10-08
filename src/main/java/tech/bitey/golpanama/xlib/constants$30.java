@@ -11,79 +11,16 @@ final class constants$30 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$30() {}
-    static final FunctionDescriptor XDisplayWidthMM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayWidthMM$MH = RuntimeHelper.downcallHandle(
-        "XDisplayWidthMM",
-        constants$30.XDisplayWidthMM$FUNC
-    );
-    static final FunctionDescriptor XDrawArc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawArc$MH = RuntimeHelper.downcallHandle(
-        "XDrawArc",
-        constants$30.XDrawArc$FUNC
-    );
-    static final FunctionDescriptor XDrawArcs$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawArcs$MH = RuntimeHelper.downcallHandle(
-        "XDrawArcs",
-        constants$30.XDrawArcs$FUNC
-    );
-    static final FunctionDescriptor XDrawImageString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawImageString$MH = RuntimeHelper.downcallHandle(
-        "XDrawImageString",
-        constants$30.XDrawImageString$FUNC
-    );
-    static final FunctionDescriptor XDrawImageString16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawImageString16$MH = RuntimeHelper.downcallHandle(
-        "XDrawImageString16",
-        constants$30.XDrawImageString16$FUNC
-    );
-    static final FunctionDescriptor XDrawLine$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawLine$MH = RuntimeHelper.downcallHandle(
-        "XDrawLine",
-        constants$30.XDrawLine$FUNC
-    );
+    static final VarHandle const$0 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("do_not_propagate_mask"));
+    static final VarHandle const$1 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("override_redirect"));
+    static final VarHandle const$2 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("screen"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("family"),
+        JAVA_INT.withName("length"),
+        RuntimeHelper.POINTER.withName("address")
+    ).withName("");
+    static final VarHandle const$4 = constants$30.const$3.varHandle(MemoryLayout.PathElement.groupElement("family"));
+    static final VarHandle const$5 = constants$30.const$3.varHandle(MemoryLayout.PathElement.groupElement("length"));
 }
 
 

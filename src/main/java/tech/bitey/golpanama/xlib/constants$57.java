@@ -11,69 +11,12 @@ final class constants$57 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$57() {}
-    static final FunctionDescriptor XStoreNamedColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XStoreNamedColor$MH = RuntimeHelper.downcallHandle(
-        "XStoreNamedColor",
-        constants$57.XStoreNamedColor$FUNC
-    );
-    static final FunctionDescriptor XSync$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSync$MH = RuntimeHelper.downcallHandle(
-        "XSync",
-        constants$57.XSync$FUNC
-    );
-    static final FunctionDescriptor XTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XTextExtents$MH = RuntimeHelper.downcallHandle(
-        "XTextExtents",
-        constants$57.XTextExtents$FUNC
-    );
-    static final FunctionDescriptor XTextExtents16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XTextExtents16$MH = RuntimeHelper.downcallHandle(
-        "XTextExtents16",
-        constants$57.XTextExtents16$FUNC
-    );
-    static final FunctionDescriptor XTextWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XTextWidth$MH = RuntimeHelper.downcallHandle(
-        "XTextWidth",
-        constants$57.XTextWidth$FUNC
-    );
-    static final FunctionDescriptor XTextWidth16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XTextWidth16$MH = RuntimeHelper.downcallHandle(
-        "XTextWidth16",
-        constants$57.XTextWidth16$FUNC
-    );
+    static final VarHandle const$0 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$1 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$2 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("root"));
+    static final VarHandle const$3 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("subwindow"));
+    static final VarHandle const$4 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final VarHandle const$5 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
 
 

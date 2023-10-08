@@ -11,48 +11,12 @@ final class constants$62 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$62() {}
-    static final FunctionDescriptor XLocaleOfOM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLocaleOfOM$MH = RuntimeHelper.downcallHandle(
-        "XLocaleOfOM",
-        constants$62.XLocaleOfOM$FUNC
-    );
-    static final FunctionDescriptor XCreateOC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCreateOC$MH = RuntimeHelper.downcallHandleVariadic(
-        "XCreateOC",
-        constants$62.XCreateOC$FUNC
-    );
-    static final FunctionDescriptor XDestroyOC$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDestroyOC$MH = RuntimeHelper.downcallHandle(
-        "XDestroyOC",
-        constants$62.XDestroyOC$FUNC
-    );
-    static final FunctionDescriptor XOMOfOC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XOMOfOC$MH = RuntimeHelper.downcallHandle(
-        "XOMOfOC",
-        constants$62.XOMOfOC$FUNC
-    );
-    static final FunctionDescriptor XSetOCValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetOCValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XSetOCValues",
-        constants$62.XSetOCValues$FUNC
-    );
-    static final FunctionDescriptor XGetOCValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetOCValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XGetOCValues",
-        constants$62.XGetOCValues$FUNC
-    );
+    static final VarHandle const$0 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$1 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$2 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$3 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$4 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$5 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("y"));
 }
 
 

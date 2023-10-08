@@ -19,19 +19,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class _XIMPreeditDrawCallbackStruct {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("caret"),
-        Constants$root.C_INT$LAYOUT.withName("chg_first"),
-        Constants$root.C_INT$LAYOUT.withName("chg_length"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("text")
-    ).withName("_XIMPreeditDrawCallbackStruct");
     public static MemoryLayout $LAYOUT() {
-        return _XIMPreeditDrawCallbackStruct.$struct$LAYOUT;
+        return constants$119.const$1;
     }
-    static final VarHandle caret$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("caret"));
     public static VarHandle caret$VH() {
-        return _XIMPreeditDrawCallbackStruct.caret$VH;
+        return constants$119.const$2;
     }
     /**
      * Getter for field:
@@ -40,7 +32,7 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static int caret$get(MemorySegment seg) {
-        return (int)_XIMPreeditDrawCallbackStruct.caret$VH.get(seg);
+        return (int)constants$119.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -49,17 +41,16 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static void caret$set(MemorySegment seg, int x) {
-        _XIMPreeditDrawCallbackStruct.caret$VH.set(seg, x);
+        constants$119.const$2.set(seg, x);
     }
     public static int caret$get(MemorySegment seg, long index) {
-        return (int)_XIMPreeditDrawCallbackStruct.caret$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$119.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void caret$set(MemorySegment seg, long index, int x) {
-        _XIMPreeditDrawCallbackStruct.caret$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$119.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle chg_first$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("chg_first"));
     public static VarHandle chg_first$VH() {
-        return _XIMPreeditDrawCallbackStruct.chg_first$VH;
+        return constants$119.const$3;
     }
     /**
      * Getter for field:
@@ -68,7 +59,7 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static int chg_first$get(MemorySegment seg) {
-        return (int)_XIMPreeditDrawCallbackStruct.chg_first$VH.get(seg);
+        return (int)constants$119.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -77,17 +68,16 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static void chg_first$set(MemorySegment seg, int x) {
-        _XIMPreeditDrawCallbackStruct.chg_first$VH.set(seg, x);
+        constants$119.const$3.set(seg, x);
     }
     public static int chg_first$get(MemorySegment seg, long index) {
-        return (int)_XIMPreeditDrawCallbackStruct.chg_first$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$119.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void chg_first$set(MemorySegment seg, long index, int x) {
-        _XIMPreeditDrawCallbackStruct.chg_first$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$119.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle chg_length$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("chg_length"));
     public static VarHandle chg_length$VH() {
-        return _XIMPreeditDrawCallbackStruct.chg_length$VH;
+        return constants$119.const$4;
     }
     /**
      * Getter for field:
@@ -96,7 +86,7 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static int chg_length$get(MemorySegment seg) {
-        return (int)_XIMPreeditDrawCallbackStruct.chg_length$VH.get(seg);
+        return (int)constants$119.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -105,17 +95,16 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static void chg_length$set(MemorySegment seg, int x) {
-        _XIMPreeditDrawCallbackStruct.chg_length$VH.set(seg, x);
+        constants$119.const$4.set(seg, x);
     }
     public static int chg_length$get(MemorySegment seg, long index) {
-        return (int)_XIMPreeditDrawCallbackStruct.chg_length$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$119.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void chg_length$set(MemorySegment seg, long index, int x) {
-        _XIMPreeditDrawCallbackStruct.chg_length$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$119.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle text$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("text"));
     public static VarHandle text$VH() {
-        return _XIMPreeditDrawCallbackStruct.text$VH;
+        return constants$119.const$5;
     }
     /**
      * Getter for field:
@@ -124,7 +113,7 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static MemorySegment text$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)_XIMPreeditDrawCallbackStruct.text$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$119.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -133,20 +122,20 @@ public class _XIMPreeditDrawCallbackStruct {
      * }
      */
     public static void text$set(MemorySegment seg, MemorySegment x) {
-        _XIMPreeditDrawCallbackStruct.text$VH.set(seg, x);
+        constants$119.const$5.set(seg, x);
     }
     public static MemorySegment text$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)_XIMPreeditDrawCallbackStruct.text$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$119.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void text$set(MemorySegment seg, long index, MemorySegment x) {
-        _XIMPreeditDrawCallbackStruct.text$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$119.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

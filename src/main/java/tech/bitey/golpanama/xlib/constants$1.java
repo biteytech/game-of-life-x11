@@ -11,51 +11,33 @@ final class constants$1 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$1() {}
-    static final FunctionDescriptor XICProc_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+    static final VarHandle const$0 = constants$0.const$5.varHandle(MemoryLayout.PathElement.groupElement("tv_sec"));
+    static final VarHandle const$1 = constants$0.const$5.varHandle(MemoryLayout.PathElement.groupElement("tv_nsec"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_LONG).withName("__fds_bits")
+    ).withName("");
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
-    static final MethodHandle XICProc_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$1.XICProc_DOWN$FUNC
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "select",
+        constants$1.const$3
     );
-    static final FunctionDescriptor XIDProc$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
-    static final FunctionDescriptor XIDProc_UP$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIDProc_UP$MH = RuntimeHelper.upcallHandle(XIDProc.class, "apply", constants$1.XIDProc_UP$FUNC);
-    static final FunctionDescriptor XIDProc_DOWN$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIDProc_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$1.XIDProc_DOWN$FUNC
-    );
-    static final OfInt _Xdebug$LAYOUT = Constants$root.C_INT$LAYOUT;
-    static final VarHandle _Xdebug$VH = constants$1._Xdebug$LAYOUT.varHandle();
-    static final MemorySegment _Xdebug$SEGMENT = RuntimeHelper.lookupGlobalVariable("_Xdebug", constants$1._Xdebug$LAYOUT);
-    static final FunctionDescriptor XLoadQueryFont$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLoadQueryFont$MH = RuntimeHelper.downcallHandle(
-        "XLoadQueryFont",
-        constants$1.XLoadQueryFont$FUNC
-    );
-    static final FunctionDescriptor XQueryFont$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XQueryFont$MH = RuntimeHelper.downcallHandle(
-        "XQueryFont",
-        constants$1.XQueryFont$FUNC
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "pselect",
+        constants$1.const$5
     );
 }
 

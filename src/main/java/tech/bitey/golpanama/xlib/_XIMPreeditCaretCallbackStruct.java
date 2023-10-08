@@ -18,17 +18,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class _XIMPreeditCaretCallbackStruct {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("position"),
-        Constants$root.C_INT$LAYOUT.withName("direction"),
-        Constants$root.C_INT$LAYOUT.withName("style")
-    ).withName("_XIMPreeditCaretCallbackStruct");
     public static MemoryLayout $LAYOUT() {
-        return _XIMPreeditCaretCallbackStruct.$struct$LAYOUT;
+        return constants$120.const$0;
     }
-    static final VarHandle position$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("position"));
     public static VarHandle position$VH() {
-        return _XIMPreeditCaretCallbackStruct.position$VH;
+        return constants$120.const$1;
     }
     /**
      * Getter for field:
@@ -37,7 +31,7 @@ public class _XIMPreeditCaretCallbackStruct {
      * }
      */
     public static int position$get(MemorySegment seg) {
-        return (int)_XIMPreeditCaretCallbackStruct.position$VH.get(seg);
+        return (int)constants$120.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -46,17 +40,16 @@ public class _XIMPreeditCaretCallbackStruct {
      * }
      */
     public static void position$set(MemorySegment seg, int x) {
-        _XIMPreeditCaretCallbackStruct.position$VH.set(seg, x);
+        constants$120.const$1.set(seg, x);
     }
     public static int position$get(MemorySegment seg, long index) {
-        return (int)_XIMPreeditCaretCallbackStruct.position$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$120.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void position$set(MemorySegment seg, long index, int x) {
-        _XIMPreeditCaretCallbackStruct.position$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$120.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle direction$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("direction"));
     public static VarHandle direction$VH() {
-        return _XIMPreeditCaretCallbackStruct.direction$VH;
+        return constants$120.const$2;
     }
     /**
      * Getter for field:
@@ -65,7 +58,7 @@ public class _XIMPreeditCaretCallbackStruct {
      * }
      */
     public static int direction$get(MemorySegment seg) {
-        return (int)_XIMPreeditCaretCallbackStruct.direction$VH.get(seg);
+        return (int)constants$120.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -74,17 +67,16 @@ public class _XIMPreeditCaretCallbackStruct {
      * }
      */
     public static void direction$set(MemorySegment seg, int x) {
-        _XIMPreeditCaretCallbackStruct.direction$VH.set(seg, x);
+        constants$120.const$2.set(seg, x);
     }
     public static int direction$get(MemorySegment seg, long index) {
-        return (int)_XIMPreeditCaretCallbackStruct.direction$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$120.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void direction$set(MemorySegment seg, long index, int x) {
-        _XIMPreeditCaretCallbackStruct.direction$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$120.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle style$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("style"));
     public static VarHandle style$VH() {
-        return _XIMPreeditCaretCallbackStruct.style$VH;
+        return constants$120.const$3;
     }
     /**
      * Getter for field:
@@ -93,7 +85,7 @@ public class _XIMPreeditCaretCallbackStruct {
      * }
      */
     public static int style$get(MemorySegment seg) {
-        return (int)_XIMPreeditCaretCallbackStruct.style$VH.get(seg);
+        return (int)constants$120.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -102,20 +94,20 @@ public class _XIMPreeditCaretCallbackStruct {
      * }
      */
     public static void style$set(MemorySegment seg, int x) {
-        _XIMPreeditCaretCallbackStruct.style$VH.set(seg, x);
+        constants$120.const$3.set(seg, x);
     }
     public static int style$get(MemorySegment seg, long index) {
-        return (int)_XIMPreeditCaretCallbackStruct.style$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$120.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void style$set(MemorySegment seg, long index, int x) {
-        _XIMPreeditCaretCallbackStruct.style$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$120.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

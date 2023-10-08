@@ -11,55 +11,28 @@ final class constants$63 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$63() {}
-    static final FunctionDescriptor XCreateFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCreateFontSet$MH = RuntimeHelper.downcallHandle(
-        "XCreateFontSet",
-        constants$63.XCreateFontSet$FUNC
-    );
-    static final FunctionDescriptor XFreeFontSet$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFreeFontSet$MH = RuntimeHelper.downcallHandle(
-        "XFreeFontSet",
-        constants$63.XFreeFontSet$FUNC
-    );
-    static final FunctionDescriptor XFontsOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFontsOfFontSet$MH = RuntimeHelper.downcallHandle(
-        "XFontsOfFontSet",
-        constants$63.XFontsOfFontSet$FUNC
-    );
-    static final FunctionDescriptor XBaseFontNameListOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XBaseFontNameListOfFontSet$MH = RuntimeHelper.downcallHandle(
-        "XBaseFontNameListOfFontSet",
-        constants$63.XBaseFontNameListOfFontSet$FUNC
-    );
-    static final FunctionDescriptor XLocaleOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLocaleOfFontSet$MH = RuntimeHelper.downcallHandle(
-        "XLocaleOfFontSet",
-        constants$63.XLocaleOfFontSet$FUNC
-    );
-    static final FunctionDescriptor XContextDependentDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XContextDependentDrawing$MH = RuntimeHelper.downcallHandle(
-        "XContextDependentDrawing",
-        constants$63.XContextDependentDrawing$FUNC
-    );
+    static final VarHandle const$0 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$1 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final VarHandle const$2 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("count"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("drawable"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("count"),
+        JAVA_INT.withName("major_code"),
+        JAVA_INT.withName("minor_code"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$4 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("serial"));
 }
 
 

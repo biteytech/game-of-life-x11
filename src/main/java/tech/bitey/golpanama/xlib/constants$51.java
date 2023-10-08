@@ -11,67 +11,31 @@ final class constants$51 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$51() {}
-    static final FunctionDescriptor XSetClipOrigin$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetClipOrigin$MH = RuntimeHelper.downcallHandle(
-        "XSetClipOrigin",
-        constants$51.XSetClipOrigin$FUNC
-    );
-    static final FunctionDescriptor XSetClipRectangles$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetClipRectangles$MH = RuntimeHelper.downcallHandle(
-        "XSetClipRectangles",
-        constants$51.XSetClipRectangles$FUNC
-    );
-    static final FunctionDescriptor XSetCloseDownMode$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetCloseDownMode$MH = RuntimeHelper.downcallHandle(
-        "XSetCloseDownMode",
-        constants$51.XSetCloseDownMode$FUNC
-    );
-    static final FunctionDescriptor XSetCommand$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetCommand$MH = RuntimeHelper.downcallHandle(
-        "XSetCommand",
-        constants$51.XSetCommand$FUNC
-    );
-    static final FunctionDescriptor XSetDashes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetDashes$MH = RuntimeHelper.downcallHandle(
-        "XSetDashes",
-        constants$51.XSetDashes$FUNC
-    );
-    static final FunctionDescriptor XSetFillRule$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetFillRule$MH = RuntimeHelper.downcallHandle(
-        "XSetFillRule",
-        constants$51.XSetFillRule$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("root"),
+        JAVA_LONG.withName("subwindow"),
+        JAVA_LONG.withName("time"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("x_root"),
+        JAVA_INT.withName("y_root"),
+        JAVA_INT.withName("state"),
+        JAVA_INT.withName("button"),
+        JAVA_INT.withName("same_screen"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$1 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$3 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$4 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$5 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("window"));
 }
 
 

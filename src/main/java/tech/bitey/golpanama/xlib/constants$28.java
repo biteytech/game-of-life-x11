@@ -11,52 +11,12 @@ final class constants$28 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$28() {}
-    static final FunctionDescriptor XDeleteProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XDeleteProperty$MH = RuntimeHelper.downcallHandle(
-        "XDeleteProperty",
-        constants$28.XDeleteProperty$FUNC
-    );
-    static final FunctionDescriptor XDestroyWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XDestroyWindow$MH = RuntimeHelper.downcallHandle(
-        "XDestroyWindow",
-        constants$28.XDestroyWindow$FUNC
-    );
-    static final FunctionDescriptor XDestroySubwindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XDestroySubwindows$MH = RuntimeHelper.downcallHandle(
-        "XDestroySubwindows",
-        constants$28.XDestroySubwindows$FUNC
-    );
-    static final FunctionDescriptor XDoesBackingStore$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDoesBackingStore$MH = RuntimeHelper.downcallHandle(
-        "XDoesBackingStore",
-        constants$28.XDoesBackingStore$FUNC
-    );
-    static final FunctionDescriptor XDoesSaveUnders$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDoesSaveUnders$MH = RuntimeHelper.downcallHandle(
-        "XDoesSaveUnders",
-        constants$28.XDoesSaveUnders$FUNC
-    );
-    static final FunctionDescriptor XDisableAccessControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisableAccessControl$MH = RuntimeHelper.downcallHandle(
-        "XDisableAccessControl",
-        constants$28.XDisableAccessControl$FUNC
-    );
+    static final VarHandle const$0 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("class"));
+    static final VarHandle const$1 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("bit_gravity"));
+    static final VarHandle const$2 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("win_gravity"));
+    static final VarHandle const$3 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("backing_store"));
+    static final VarHandle const$4 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("backing_planes"));
+    static final VarHandle const$5 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("backing_pixel"));
 }
 
 

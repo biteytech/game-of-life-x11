@@ -11,62 +11,33 @@ final class constants$56 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$56() {}
-    static final FunctionDescriptor XSetWindowColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWindowColormap$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowColormap",
-        constants$56.XSetWindowColormap$FUNC
-    );
-    static final FunctionDescriptor XStoreBuffer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XStoreBuffer$MH = RuntimeHelper.downcallHandle(
-        "XStoreBuffer",
-        constants$56.XStoreBuffer$FUNC
-    );
-    static final FunctionDescriptor XStoreBytes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XStoreBytes$MH = RuntimeHelper.downcallHandle(
-        "XStoreBytes",
-        constants$56.XStoreBytes$FUNC
-    );
-    static final FunctionDescriptor XStoreColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XStoreColor$MH = RuntimeHelper.downcallHandle(
-        "XStoreColor",
-        constants$56.XStoreColor$FUNC
-    );
-    static final FunctionDescriptor XStoreColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XStoreColors$MH = RuntimeHelper.downcallHandle(
-        "XStoreColors",
-        constants$56.XStoreColors$FUNC
-    );
-    static final FunctionDescriptor XStoreName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XStoreName$MH = RuntimeHelper.downcallHandle(
-        "XStoreName",
-        constants$56.XStoreName$FUNC
-    );
+    static final VarHandle const$0 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("is_hint"));
+    static final VarHandle const$1 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("same_screen"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("root"),
+        JAVA_LONG.withName("subwindow"),
+        JAVA_LONG.withName("time"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("x_root"),
+        JAVA_INT.withName("y_root"),
+        JAVA_INT.withName("mode"),
+        JAVA_INT.withName("detail"),
+        JAVA_INT.withName("same_screen"),
+        JAVA_INT.withName("focus"),
+        JAVA_INT.withName("state"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$3 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$5 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
 }
 
 

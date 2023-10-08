@@ -17,16 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XICCallback {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_POINTER$LAYOUT.withName("client_data"),
-        Constants$root.C_POINTER$LAYOUT.withName("callback")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XICCallback.$struct$LAYOUT;
+        return constants$114.const$4;
     }
-    static final VarHandle client_data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("client_data"));
     public static VarHandle client_data$VH() {
-        return XICCallback.client_data$VH;
+        return constants$115.const$1;
     }
     /**
      * Getter for field:
@@ -35,7 +30,7 @@ public class XICCallback {
      * }
      */
     public static MemorySegment client_data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XICCallback.client_data$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$115.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -44,17 +39,16 @@ public class XICCallback {
      * }
      */
     public static void client_data$set(MemorySegment seg, MemorySegment x) {
-        XICCallback.client_data$VH.set(seg, x);
+        constants$115.const$1.set(seg, x);
     }
     public static MemorySegment client_data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XICCallback.client_data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$115.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void client_data$set(MemorySegment seg, long index, MemorySegment x) {
-        XICCallback.client_data$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$115.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle callback$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("callback"));
     public static VarHandle callback$VH() {
-        return XICCallback.callback$VH;
+        return constants$115.const$2;
     }
     /**
      * Getter for field:
@@ -63,7 +57,7 @@ public class XICCallback {
      * }
      */
     public static MemorySegment callback$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XICCallback.callback$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$115.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -72,15 +66,15 @@ public class XICCallback {
      * }
      */
     public static void callback$set(MemorySegment seg, MemorySegment x) {
-        XICCallback.callback$VH.set(seg, x);
+        constants$115.const$2.set(seg, x);
     }
     public static MemorySegment callback$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XICCallback.callback$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$115.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void callback$set(MemorySegment seg, long index, MemorySegment x) {
-        XICCallback.callback$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$115.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    public static XICProc callback(MemorySegment segment, SegmentScope scope) {
+    public static XICProc callback(MemorySegment segment, Arena scope) {
         return XICProc.ofAddress(callback$get(segment), scope);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
@@ -88,7 +82,7 @@ public class XICCallback {
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

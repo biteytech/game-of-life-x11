@@ -17,16 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XFontProp {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_LONG_LONG$LAYOUT.withName("name"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("card32")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XFontProp.$struct$LAYOUT;
+        return constants$104.const$5;
     }
-    static final VarHandle name$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("name"));
     public static VarHandle name$VH() {
-        return XFontProp.name$VH;
+        return constants$105.const$0;
     }
     /**
      * Getter for field:
@@ -35,7 +30,7 @@ public class XFontProp {
      * }
      */
     public static long name$get(MemorySegment seg) {
-        return (long)XFontProp.name$VH.get(seg);
+        return (long)constants$105.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -44,17 +39,16 @@ public class XFontProp {
      * }
      */
     public static void name$set(MemorySegment seg, long x) {
-        XFontProp.name$VH.set(seg, x);
+        constants$105.const$0.set(seg, x);
     }
     public static long name$get(MemorySegment seg, long index) {
-        return (long)XFontProp.name$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$105.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void name$set(MemorySegment seg, long index, long x) {
-        XFontProp.name$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$105.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle card32$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("card32"));
     public static VarHandle card32$VH() {
-        return XFontProp.card32$VH;
+        return constants$105.const$1;
     }
     /**
      * Getter for field:
@@ -63,7 +57,7 @@ public class XFontProp {
      * }
      */
     public static long card32$get(MemorySegment seg) {
-        return (long)XFontProp.card32$VH.get(seg);
+        return (long)constants$105.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -72,20 +66,20 @@ public class XFontProp {
      * }
      */
     public static void card32$set(MemorySegment seg, long x) {
-        XFontProp.card32$VH.set(seg, x);
+        constants$105.const$1.set(seg, x);
     }
     public static long card32$get(MemorySegment seg, long index) {
-        return (long)XFontProp.card32$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$105.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void card32$set(MemorySegment seg, long index, long x) {
-        XFontProp.card32$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$105.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

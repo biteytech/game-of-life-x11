@@ -11,12 +11,12 @@ final class constants$88 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$88() {}
-    static final MemorySegment XNResourceClass$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resourceClass");
-    static final MemorySegment XNGeometryCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("geometryCallback");
-    static final MemorySegment XNDestroyCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("destroyCallback");
-    static final MemorySegment XNFilterEvents$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("filterEvents");
-    static final MemorySegment XNPreeditStartCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditStartCallback");
-    static final MemorySegment XNPreeditDoneCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditDoneCallback");
+    static final VarHandle const$0 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$1 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$2 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$3 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("atom"));
+    static final VarHandle const$4 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final VarHandle const$5 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("state"));
 }
 
 

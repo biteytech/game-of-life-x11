@@ -11,65 +11,24 @@ final class constants$2 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$2() {}
-    static final FunctionDescriptor XGetMotionEvents$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetMotionEvents$MH = RuntimeHelper.downcallHandle(
-        "XGetMotionEvents",
-        constants$2.XGetMotionEvents$FUNC
-    );
-    static final FunctionDescriptor XDeleteModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDeleteModifiermapEntry$MH = RuntimeHelper.downcallHandle(
-        "XDeleteModifiermapEntry",
-        constants$2.XDeleteModifiermapEntry$FUNC
-    );
-    static final FunctionDescriptor XGetModifierMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetModifierMapping$MH = RuntimeHelper.downcallHandle(
-        "XGetModifierMapping",
-        constants$2.XGetModifierMapping$FUNC
-    );
-    static final FunctionDescriptor XInsertModifiermapEntry$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XInsertModifiermapEntry$MH = RuntimeHelper.downcallHandle(
-        "XInsertModifiermapEntry",
-        constants$2.XInsertModifiermapEntry$FUNC
-    );
-    static final FunctionDescriptor XNewModifiermap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XNewModifiermap$MH = RuntimeHelper.downcallHandle(
-        "XNewModifiermap",
-        constants$2.XNewModifiermap$FUNC
-    );
-    static final FunctionDescriptor XCreateImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCreateImage$MH = RuntimeHelper.downcallHandle(
-        "XCreateImage",
-        constants$2.XCreateImage$FUNC
-    );
+    static final UnionLayout const$0 = MemoryLayout.unionLayout(
+        JAVA_LONG.withName("__value64"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("__low"),
+            JAVA_INT.withName("__high")
+        ).withName("__value32")
+    ).withName("");
+    static final VarHandle const$1 = constants$2.const$0.varHandle(MemoryLayout.PathElement.groupElement("__value64"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("__low"),
+        JAVA_INT.withName("__high")
+    ).withName("");
+    static final VarHandle const$3 = constants$2.const$2.varHandle(MemoryLayout.PathElement.groupElement("__low"));
+    static final VarHandle const$4 = constants$2.const$2.varHandle(MemoryLayout.PathElement.groupElement("__high"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("__prev"),
+        RuntimeHelper.POINTER.withName("__next")
+    ).withName("__pthread_internal_list");
 }
 
 

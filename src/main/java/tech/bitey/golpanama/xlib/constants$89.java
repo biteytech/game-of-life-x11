@@ -11,12 +11,22 @@ final class constants$89 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$89() {}
-    static final MemorySegment XNPreeditDrawCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditDrawCallback");
-    static final MemorySegment XNPreeditCaretCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditCaretCallback");
-    static final MemorySegment XNPreeditStateNotifyCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditStateNotifyCallback");
-    static final MemorySegment XNPreeditAttributes$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditAttributes");
-    static final MemorySegment XNStatusStartCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusStartCallback");
-    static final MemorySegment XNStatusDoneCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("statusDoneCallback");
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("selection"),
+        JAVA_LONG.withName("time")
+    ).withName("");
+    static final VarHandle const$1 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$3 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$4 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$5 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("window"));
 }
 
 

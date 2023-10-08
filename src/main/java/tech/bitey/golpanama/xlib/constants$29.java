@@ -11,55 +11,12 @@ final class constants$29 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$29() {}
-    static final FunctionDescriptor XDisplayCells$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayCells$MH = RuntimeHelper.downcallHandle(
-        "XDisplayCells",
-        constants$29.XDisplayCells$FUNC
-    );
-    static final FunctionDescriptor XDisplayHeight$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayHeight$MH = RuntimeHelper.downcallHandle(
-        "XDisplayHeight",
-        constants$29.XDisplayHeight$FUNC
-    );
-    static final FunctionDescriptor XDisplayHeightMM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayHeightMM$MH = RuntimeHelper.downcallHandle(
-        "XDisplayHeightMM",
-        constants$29.XDisplayHeightMM$FUNC
-    );
-    static final FunctionDescriptor XDisplayKeycodes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayKeycodes$MH = RuntimeHelper.downcallHandle(
-        "XDisplayKeycodes",
-        constants$29.XDisplayKeycodes$FUNC
-    );
-    static final FunctionDescriptor XDisplayPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayPlanes$MH = RuntimeHelper.downcallHandle(
-        "XDisplayPlanes",
-        constants$29.XDisplayPlanes$FUNC
-    );
-    static final FunctionDescriptor XDisplayWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDisplayWidth$MH = RuntimeHelper.downcallHandle(
-        "XDisplayWidth",
-        constants$29.XDisplayWidth$FUNC
-    );
+    static final VarHandle const$0 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("save_under"));
+    static final VarHandle const$1 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("colormap"));
+    static final VarHandle const$2 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("map_installed"));
+    static final VarHandle const$3 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("map_state"));
+    static final VarHandle const$4 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("all_event_masks"));
+    static final VarHandle const$5 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("your_event_mask"));
 }
 
 

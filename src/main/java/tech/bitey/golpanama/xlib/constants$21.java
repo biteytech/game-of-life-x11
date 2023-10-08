@@ -11,70 +11,12 @@ final class constants$21 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$21() {}
-    static final FunctionDescriptor XAllocColorCells$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XAllocColorCells$MH = RuntimeHelper.downcallHandle(
-        "XAllocColorCells",
-        constants$21.XAllocColorCells$FUNC
-    );
-    static final FunctionDescriptor XAllocColorPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAllocColorPlanes$MH = RuntimeHelper.downcallHandle(
-        "XAllocColorPlanes",
-        constants$21.XAllocColorPlanes$FUNC
-    );
-    static final FunctionDescriptor XAllocNamedColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAllocNamedColor$MH = RuntimeHelper.downcallHandle(
-        "XAllocNamedColor",
-        constants$21.XAllocNamedColor$FUNC
-    );
-    static final FunctionDescriptor XAllowEvents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XAllowEvents$MH = RuntimeHelper.downcallHandle(
-        "XAllowEvents",
-        constants$21.XAllowEvents$FUNC
-    );
-    static final FunctionDescriptor XAutoRepeatOff$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAutoRepeatOff$MH = RuntimeHelper.downcallHandle(
-        "XAutoRepeatOff",
-        constants$21.XAutoRepeatOff$FUNC
-    );
-    static final FunctionDescriptor XAutoRepeatOn$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAutoRepeatOn$MH = RuntimeHelper.downcallHandle(
-        "XAutoRepeatOn",
-        constants$21.XAutoRepeatOn$FUNC
-    );
+    static final VarHandle const$0 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("depths"));
+    static final VarHandle const$1 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("root_depth"));
+    static final VarHandle const$2 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("root_visual"));
+    static final VarHandle const$3 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("default_gc"));
+    static final VarHandle const$4 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("cmap"));
+    static final VarHandle const$5 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("white_pixel"));
 }
 
 

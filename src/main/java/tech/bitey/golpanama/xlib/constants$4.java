@@ -11,56 +11,12 @@ final class constants$4 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$4() {}
-    static final FunctionDescriptor XFetchBuffer$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFetchBuffer$MH = RuntimeHelper.downcallHandle(
-        "XFetchBuffer",
-        constants$4.XFetchBuffer$FUNC
-    );
-    static final FunctionDescriptor XGetAtomName$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetAtomName$MH = RuntimeHelper.downcallHandle(
-        "XGetAtomName",
-        constants$4.XGetAtomName$FUNC
-    );
-    static final FunctionDescriptor XGetAtomNames$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetAtomNames$MH = RuntimeHelper.downcallHandle(
-        "XGetAtomNames",
-        constants$4.XGetAtomNames$FUNC
-    );
-    static final FunctionDescriptor XGetDefault$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetDefault$MH = RuntimeHelper.downcallHandle(
-        "XGetDefault",
-        constants$4.XGetDefault$FUNC
-    );
-    static final FunctionDescriptor XDisplayName$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayName$MH = RuntimeHelper.downcallHandle(
-        "XDisplayName",
-        constants$4.XDisplayName$FUNC
-    );
-    static final FunctionDescriptor XKeysymToString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XKeysymToString$MH = RuntimeHelper.downcallHandle(
-        "XKeysymToString",
-        constants$4.XKeysymToString$FUNC
-    );
+    static final VarHandle const$0 = constants$3.const$4.varHandle(MemoryLayout.PathElement.groupElement("__count"));
+    static final VarHandle const$1 = constants$3.const$4.varHandle(MemoryLayout.PathElement.groupElement("__owner"));
+    static final VarHandle const$2 = constants$3.const$4.varHandle(MemoryLayout.PathElement.groupElement("__nusers"));
+    static final VarHandle const$3 = constants$3.const$4.varHandle(MemoryLayout.PathElement.groupElement("__kind"));
+    static final VarHandle const$4 = constants$3.const$4.varHandle(MemoryLayout.PathElement.groupElement("__spins"));
+    static final VarHandle const$5 = constants$3.const$4.varHandle(MemoryLayout.PathElement.groupElement("__elision"));
 }
 
 

@@ -16,15 +16,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class _XIMPreeditStateNotifyCallbackStruct {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_LONG_LONG$LAYOUT.withName("state")
-    ).withName("_XIMPreeditStateNotifyCallbackStruct");
     public static MemoryLayout $LAYOUT() {
-        return _XIMPreeditStateNotifyCallbackStruct.$struct$LAYOUT;
+        return constants$116.const$4;
     }
-    static final VarHandle state$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("state"));
     public static VarHandle state$VH() {
-        return _XIMPreeditStateNotifyCallbackStruct.state$VH;
+        return constants$116.const$5;
     }
     /**
      * Getter for field:
@@ -33,7 +29,7 @@ public class _XIMPreeditStateNotifyCallbackStruct {
      * }
      */
     public static long state$get(MemorySegment seg) {
-        return (long)_XIMPreeditStateNotifyCallbackStruct.state$VH.get(seg);
+        return (long)constants$116.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -42,20 +38,20 @@ public class _XIMPreeditStateNotifyCallbackStruct {
      * }
      */
     public static void state$set(MemorySegment seg, long x) {
-        _XIMPreeditStateNotifyCallbackStruct.state$VH.set(seg, x);
+        constants$116.const$5.set(seg, x);
     }
     public static long state$get(MemorySegment seg, long index) {
-        return (long)_XIMPreeditStateNotifyCallbackStruct.state$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$116.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void state$set(MemorySegment seg, long index, long x) {
-        _XIMPreeditStateNotifyCallbackStruct.state$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$116.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

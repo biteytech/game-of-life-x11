@@ -11,49 +11,12 @@ final class constants$16 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$16() {}
-    static final FunctionDescriptor XDefaultColormapOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDefaultColormapOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XDefaultColormapOfScreen",
-        constants$16.XDefaultColormapOfScreen$FUNC
-    );
-    static final FunctionDescriptor XDisplayOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XDisplayOfScreen",
-        constants$16.XDisplayOfScreen$FUNC
-    );
-    static final FunctionDescriptor XScreenOfDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XScreenOfDisplay$MH = RuntimeHelper.downcallHandle(
-        "XScreenOfDisplay",
-        constants$16.XScreenOfDisplay$FUNC
-    );
-    static final FunctionDescriptor XDefaultScreenOfDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDefaultScreenOfDisplay$MH = RuntimeHelper.downcallHandle(
-        "XDefaultScreenOfDisplay",
-        constants$16.XDefaultScreenOfDisplay$FUNC
-    );
-    static final FunctionDescriptor XEventMaskOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XEventMaskOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XEventMaskOfScreen",
-        constants$16.XEventMaskOfScreen$FUNC
-    );
-    static final FunctionDescriptor XScreenNumberOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XScreenNumberOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XScreenNumberOfScreen",
-        constants$16.XScreenNumberOfScreen$FUNC
-    );
+    static final VarHandle const$0 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("font"));
+    static final VarHandle const$1 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("subwindow_mode"));
+    static final VarHandle const$2 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("graphics_exposures"));
+    static final VarHandle const$3 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("clip_x_origin"));
+    static final VarHandle const$4 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("clip_y_origin"));
+    static final VarHandle const$5 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("clip_mask"));
 }
 
 

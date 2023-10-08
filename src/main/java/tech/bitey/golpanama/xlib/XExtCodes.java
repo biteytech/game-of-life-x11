@@ -19,18 +19,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XExtCodes {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("extension"),
-        Constants$root.C_INT$LAYOUT.withName("major_opcode"),
-        Constants$root.C_INT$LAYOUT.withName("first_event"),
-        Constants$root.C_INT$LAYOUT.withName("first_error")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XExtCodes.$struct$LAYOUT;
+        return constants$11.const$5;
     }
-    static final VarHandle extension$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("extension"));
     public static VarHandle extension$VH() {
-        return XExtCodes.extension$VH;
+        return constants$12.const$0;
     }
     /**
      * Getter for field:
@@ -39,7 +32,7 @@ public class XExtCodes {
      * }
      */
     public static int extension$get(MemorySegment seg) {
-        return (int)XExtCodes.extension$VH.get(seg);
+        return (int)constants$12.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -48,17 +41,16 @@ public class XExtCodes {
      * }
      */
     public static void extension$set(MemorySegment seg, int x) {
-        XExtCodes.extension$VH.set(seg, x);
+        constants$12.const$0.set(seg, x);
     }
     public static int extension$get(MemorySegment seg, long index) {
-        return (int)XExtCodes.extension$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$12.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void extension$set(MemorySegment seg, long index, int x) {
-        XExtCodes.extension$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$12.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle major_opcode$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("major_opcode"));
     public static VarHandle major_opcode$VH() {
-        return XExtCodes.major_opcode$VH;
+        return constants$12.const$1;
     }
     /**
      * Getter for field:
@@ -67,7 +59,7 @@ public class XExtCodes {
      * }
      */
     public static int major_opcode$get(MemorySegment seg) {
-        return (int)XExtCodes.major_opcode$VH.get(seg);
+        return (int)constants$12.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -76,17 +68,16 @@ public class XExtCodes {
      * }
      */
     public static void major_opcode$set(MemorySegment seg, int x) {
-        XExtCodes.major_opcode$VH.set(seg, x);
+        constants$12.const$1.set(seg, x);
     }
     public static int major_opcode$get(MemorySegment seg, long index) {
-        return (int)XExtCodes.major_opcode$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$12.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void major_opcode$set(MemorySegment seg, long index, int x) {
-        XExtCodes.major_opcode$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$12.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle first_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("first_event"));
     public static VarHandle first_event$VH() {
-        return XExtCodes.first_event$VH;
+        return constants$12.const$2;
     }
     /**
      * Getter for field:
@@ -95,7 +86,7 @@ public class XExtCodes {
      * }
      */
     public static int first_event$get(MemorySegment seg) {
-        return (int)XExtCodes.first_event$VH.get(seg);
+        return (int)constants$12.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -104,17 +95,16 @@ public class XExtCodes {
      * }
      */
     public static void first_event$set(MemorySegment seg, int x) {
-        XExtCodes.first_event$VH.set(seg, x);
+        constants$12.const$2.set(seg, x);
     }
     public static int first_event$get(MemorySegment seg, long index) {
-        return (int)XExtCodes.first_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$12.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void first_event$set(MemorySegment seg, long index, int x) {
-        XExtCodes.first_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$12.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle first_error$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("first_error"));
     public static VarHandle first_error$VH() {
-        return XExtCodes.first_error$VH;
+        return constants$12.const$3;
     }
     /**
      * Getter for field:
@@ -123,7 +113,7 @@ public class XExtCodes {
      * }
      */
     public static int first_error$get(MemorySegment seg) {
-        return (int)XExtCodes.first_error$VH.get(seg);
+        return (int)constants$12.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -132,20 +122,20 @@ public class XExtCodes {
      * }
      */
     public static void first_error$set(MemorySegment seg, int x) {
-        XExtCodes.first_error$VH.set(seg, x);
+        constants$12.const$3.set(seg, x);
     }
     public static int first_error$get(MemorySegment seg, long index) {
-        return (int)XExtCodes.first_error$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$12.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void first_error$set(MemorySegment seg, long index, int x) {
-        XExtCodes.first_error$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$12.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

@@ -11,12 +11,12 @@ final class constants$85 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$85() {}
-    static final MemorySegment __FD_ZERO_STOS$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stosq");
-    static final MemorySegment NULL$ADDR = MemorySegment.ofAddress(0L);
-    static final MemorySegment XNRequiredCharSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("requiredCharSet");
-    static final MemorySegment XNQueryOrientation$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryOrientation");
-    static final MemorySegment XNBaseFontName$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("baseFontName");
-    static final MemorySegment XNOMAutomatic$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("omAutomatic");
+    static final VarHandle const$0 = constants$84.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$1 = constants$84.const$5.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$2 = constants$84.const$5.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$3 = constants$84.const$5.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$4 = constants$84.const$5.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$5 = constants$84.const$5.varHandle(MemoryLayout.PathElement.groupElement("window"));
 }
 
 

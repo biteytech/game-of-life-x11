@@ -11,6 +11,54 @@ public class Xlib_h_2 extends Xlib_h_1 {
 
     /**
      * {@snippet :
+     * #define XK_braille_dots_3467 16787564
+     * }
+     */
+    public static int XK_braille_dots_3467() {
+        return (int)16787564L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_13467 16787565
+     * }
+     */
+    public static int XK_braille_dots_13467() {
+        return (int)16787565L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_23467 16787566
+     * }
+     */
+    public static int XK_braille_dots_23467() {
+        return (int)16787566L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_123467 16787567
+     * }
+     */
+    public static int XK_braille_dots_123467() {
+        return (int)16787567L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_567 16787568
+     * }
+     */
+    public static int XK_braille_dots_567() {
+        return (int)16787568L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_braille_dots_1567 16787569
+     * }
+     */
+    public static int XK_braille_dots_1567() {
+        return (int)16787569L;
+    }
+    /**
+     * {@snippet :
      * #define XK_braille_dots_2567 16787570
      * }
      */
@@ -2070,609 +2118,615 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * typedef unsigned char __u_char;
      * }
      */
-    public static final OfByte __u_char = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte __u_char = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef unsigned short __u_short;
      * }
      */
-    public static final OfShort __u_short = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort __u_short = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned int __u_int;
      * }
      */
-    public static final OfInt __u_int = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __u_int = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned long __u_long;
      * }
      */
-    public static final OfLong __u_long = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __u_long = JAVA_LONG;
     /**
      * {@snippet :
      * typedef signed char __int8_t;
      * }
      */
-    public static final OfByte __int8_t = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte __int8_t = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef unsigned char __uint8_t;
      * }
      */
-    public static final OfByte __uint8_t = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte __uint8_t = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef short __int16_t;
      * }
      */
-    public static final OfShort __int16_t = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort __int16_t = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned short __uint16_t;
      * }
      */
-    public static final OfShort __uint16_t = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort __uint16_t = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef int __int32_t;
      * }
      */
-    public static final OfInt __int32_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __int32_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned int __uint32_t;
      * }
      */
-    public static final OfInt __uint32_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __uint32_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long __int64_t;
      * }
      */
-    public static final OfLong __int64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __int64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __uint64_t;
      * }
      */
-    public static final OfLong __uint64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __uint64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef signed char __int_least8_t;
      * }
      */
-    public static final OfByte __int_least8_t = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte __int_least8_t = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef unsigned char __uint_least8_t;
      * }
      */
-    public static final OfByte __uint_least8_t = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte __uint_least8_t = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef short __int_least16_t;
      * }
      */
-    public static final OfShort __int_least16_t = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort __int_least16_t = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned short __uint_least16_t;
      * }
      */
-    public static final OfShort __uint_least16_t = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort __uint_least16_t = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef int __int_least32_t;
      * }
      */
-    public static final OfInt __int_least32_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __int_least32_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned int __uint_least32_t;
      * }
      */
-    public static final OfInt __uint_least32_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __uint_least32_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long __int_least64_t;
      * }
      */
-    public static final OfLong __int_least64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __int_least64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __uint_least64_t;
      * }
      */
-    public static final OfLong __uint_least64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __uint_least64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __quad_t;
      * }
      */
-    public static final OfLong __quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __quad_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __u_quad_t;
      * }
      */
-    public static final OfLong __u_quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __u_quad_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __intmax_t;
      * }
      */
-    public static final OfLong __intmax_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __intmax_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __uintmax_t;
      * }
      */
-    public static final OfLong __uintmax_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __uintmax_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __dev_t;
      * }
      */
-    public static final OfLong __dev_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __dev_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int __uid_t;
      * }
      */
-    public static final OfInt __uid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __uid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned int __gid_t;
      * }
      */
-    public static final OfInt __gid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __gid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned long __ino_t;
      * }
      */
-    public static final OfLong __ino_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __ino_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __ino64_t;
      * }
      */
-    public static final OfLong __ino64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __ino64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int __mode_t;
      * }
      */
-    public static final OfInt __mode_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __mode_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned long __nlink_t;
      * }
      */
-    public static final OfLong __nlink_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __nlink_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __off_t;
      * }
      */
-    public static final OfLong __off_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __off_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __off64_t;
      * }
      */
-    public static final OfLong __off64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __off64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef int __pid_t;
      * }
      */
-    public static final OfInt __pid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __pid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long __clock_t;
      * }
      */
-    public static final OfLong __clock_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __clock_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __rlim_t;
      * }
      */
-    public static final OfLong __rlim_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __rlim_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __rlim64_t;
      * }
      */
-    public static final OfLong __rlim64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __rlim64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int __id_t;
      * }
      */
-    public static final OfInt __id_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __id_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long __time_t;
      * }
      */
-    public static final OfLong __time_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __time_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int __useconds_t;
      * }
      */
-    public static final OfInt __useconds_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __useconds_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long __suseconds_t;
      * }
      */
-    public static final OfLong __suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __suseconds_t = JAVA_LONG;
+    /**
+     * {@snippet :
+     * typedef long __suseconds64_t;
+     * }
+     */
+    public static final OfLong __suseconds64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef int __daddr_t;
      * }
      */
-    public static final OfInt __daddr_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __daddr_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef int __key_t;
      * }
      */
-    public static final OfInt __key_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __key_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef int __clockid_t;
      * }
      */
-    public static final OfInt __clockid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __clockid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef void* __timer_t;
      * }
      */
-    public static final OfAddress __timer_t = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout __timer_t = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef long __blksize_t;
      * }
      */
-    public static final OfLong __blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __blksize_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __blkcnt_t;
      * }
      */
-    public static final OfLong __blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __blkcnt_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __blkcnt64_t;
      * }
      */
-    public static final OfLong __blkcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __blkcnt64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __fsblkcnt_t;
      * }
      */
-    public static final OfLong __fsblkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __fsblkcnt_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __fsblkcnt64_t;
      * }
      */
-    public static final OfLong __fsblkcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __fsblkcnt64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __fsfilcnt_t;
      * }
      */
-    public static final OfLong __fsfilcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __fsfilcnt_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __fsfilcnt64_t;
      * }
      */
-    public static final OfLong __fsfilcnt64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __fsfilcnt64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __fsword_t;
      * }
      */
-    public static final OfLong __fsword_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __fsword_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __ssize_t;
      * }
      */
-    public static final OfLong __ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __ssize_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __syscall_slong_t;
      * }
      */
-    public static final OfLong __syscall_slong_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __syscall_slong_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long __syscall_ulong_t;
      * }
      */
-    public static final OfLong __syscall_ulong_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __syscall_ulong_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __loff_t;
      * }
      */
-    public static final OfLong __loff_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __loff_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef char* __caddr_t;
      * }
      */
-    public static final OfAddress __caddr_t = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout __caddr_t = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef long __intptr_t;
      * }
      */
-    public static final OfLong __intptr_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __intptr_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int __socklen_t;
      * }
      */
-    public static final OfInt __socklen_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __socklen_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef int __sig_atomic_t;
      * }
      */
-    public static final OfInt __sig_atomic_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt __sig_atomic_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned char u_char;
      * }
      */
-    public static final OfByte u_char = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte u_char = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef unsigned short u_short;
      * }
      */
-    public static final OfShort u_short = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort u_short = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned int u_int;
      * }
      */
-    public static final OfInt u_int = Constants$root.C_INT$LAYOUT;
+    public static final OfInt u_int = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned long u_long;
      * }
      */
-    public static final OfLong u_long = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong u_long = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long quad_t;
      * }
      */
-    public static final OfLong quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong quad_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long u_quad_t;
      * }
      */
-    public static final OfLong u_quad_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong u_quad_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long loff_t;
      * }
      */
-    public static final OfLong loff_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong loff_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long ino_t;
      * }
      */
-    public static final OfLong ino_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong ino_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long dev_t;
      * }
      */
-    public static final OfLong dev_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong dev_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int gid_t;
      * }
      */
-    public static final OfInt gid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt gid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned int mode_t;
      * }
      */
-    public static final OfInt mode_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt mode_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned long nlink_t;
      * }
      */
-    public static final OfLong nlink_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong nlink_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int uid_t;
      * }
      */
-    public static final OfInt uid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt uid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long off_t;
      * }
      */
-    public static final OfLong off_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong off_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef int pid_t;
      * }
      */
-    public static final OfInt pid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt pid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned int id_t;
      * }
      */
-    public static final OfInt id_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt id_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long ssize_t;
      * }
      */
-    public static final OfLong ssize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong ssize_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef int daddr_t;
      * }
      */
-    public static final OfInt daddr_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt daddr_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef char* caddr_t;
      * }
      */
-    public static final OfAddress caddr_t = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout caddr_t = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef int key_t;
      * }
      */
-    public static final OfInt key_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt key_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long clock_t;
      * }
      */
-    public static final OfLong clock_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong clock_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef int clockid_t;
      * }
      */
-    public static final OfInt clockid_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt clockid_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long time_t;
      * }
      */
-    public static final OfLong time_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong time_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef void* timer_t;
      * }
      */
-    public static final OfAddress timer_t = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout timer_t = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef unsigned long size_t;
      * }
      */
-    public static final OfLong size_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong size_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long ulong;
      * }
      */
-    public static final OfLong ulong = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong ulong = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned short ushort;
      * }
      */
-    public static final OfShort ushort = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort ushort = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned int uint;
      * }
      */
-    public static final OfInt uint = Constants$root.C_INT$LAYOUT;
+    public static final OfInt uint = JAVA_INT;
     /**
      * {@snippet :
      * typedef signed char int8_t;
      * }
      */
-    public static final OfByte int8_t = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte int8_t = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef short int16_t;
      * }
      */
-    public static final OfShort int16_t = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort int16_t = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef int int32_t;
      * }
      */
-    public static final OfInt int32_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt int32_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef long int64_t;
      * }
      */
-    public static final OfLong int64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong int64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned char u_int8_t;
      * }
      */
-    public static final OfByte u_int8_t = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte u_int8_t = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef unsigned short u_int16_t;
      * }
      */
-    public static final OfShort u_int16_t = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort u_int16_t = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned int u_int32_t;
      * }
      */
-    public static final OfInt u_int32_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt u_int32_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned long u_int64_t;
      * }
      */
-    public static final OfLong u_int64_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong u_int64_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long register_t;
      * }
      */
-    public static final OfLong register_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong register_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long suseconds_t;
      * }
      */
-    public static final OfLong suseconds_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong suseconds_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long __fd_mask;
      * }
      */
-    public static final OfLong __fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong __fd_mask = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long fd_mask;
      * }
      */
-    public static final OfLong fd_mask = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong fd_mask = JAVA_LONG;
     public static MethodHandle select$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.select$MH,"select");
+        return RuntimeHelper.requireNonNull(constants$1.const$4,"select");
     }
     /**
      * {@snippet :
@@ -2688,7 +2742,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle pselect$MH() {
-        return RuntimeHelper.requireNonNull(constants$0.pselect$MH,"pselect");
+        return RuntimeHelper.requireNonNull(constants$1.const$6,"pselect");
     }
     /**
      * {@snippet :
@@ -2708,147 +2762,159 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * typedef long blksize_t;
      * }
      */
-    public static final OfLong blksize_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong blksize_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef long blkcnt_t;
      * }
      */
-    public static final OfLong blkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong blkcnt_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long fsblkcnt_t;
      * }
      */
-    public static final OfLong fsblkcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong fsblkcnt_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long fsfilcnt_t;
      * }
      */
-    public static final OfLong fsfilcnt_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong fsfilcnt_t = JAVA_LONG;
+    /**
+     * {@snippet :
+     * typedef unsigned int __tss_t;
+     * }
+     */
+    public static final OfInt __tss_t = JAVA_INT;
+    /**
+     * {@snippet :
+     * typedef unsigned long __thrd_t;
+     * }
+     */
+    public static final OfLong __thrd_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long pthread_t;
      * }
      */
-    public static final OfLong pthread_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong pthread_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned int pthread_key_t;
      * }
      */
-    public static final OfInt pthread_key_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt pthread_key_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef int pthread_once_t;
      * }
      */
-    public static final OfInt pthread_once_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt pthread_once_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef int pthread_spinlock_t;
      * }
      */
-    public static final OfInt pthread_spinlock_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt pthread_spinlock_t = JAVA_INT;
     /**
      * {@snippet :
      * typedef unsigned long XID;
      * }
      */
-    public static final OfLong XID = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong XID = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Mask;
      * }
      */
-    public static final OfLong Mask = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Mask = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Atom;
      * }
      */
-    public static final OfLong Atom = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Atom = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long VisualID;
      * }
      */
-    public static final OfLong VisualID = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong VisualID = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Time;
      * }
      */
-    public static final OfLong Time = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Time = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Window;
      * }
      */
-    public static final OfLong Window = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Window = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Drawable;
      * }
      */
-    public static final OfLong Drawable = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Drawable = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Font;
      * }
      */
-    public static final OfLong Font = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Font = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Pixmap;
      * }
      */
-    public static final OfLong Pixmap = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Pixmap = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Cursor;
      * }
      */
-    public static final OfLong Cursor = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Cursor = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long Colormap;
      * }
      */
-    public static final OfLong Colormap = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong Colormap = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long GContext;
      * }
      */
-    public static final OfLong GContext = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong GContext = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long KeySym;
      * }
      */
-    public static final OfLong KeySym = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong KeySym = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned char KeyCode;
      * }
      */
-    public static final OfByte KeyCode = Constants$root.C_CHAR$LAYOUT;
+    public static final OfByte KeyCode = JAVA_BYTE;
     /**
      * {@snippet :
      * typedef long ptrdiff_t;
      * }
      */
-    public static final OfLong ptrdiff_t = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong ptrdiff_t = JAVA_LONG;
     /**
      * {@snippet :
      * typedef int wchar_t;
      * }
      */
-    public static final OfInt wchar_t = Constants$root.C_INT$LAYOUT;
+    public static final OfInt wchar_t = JAVA_INT;
     public static MethodHandle _Xmblen$MH() {
-        return RuntimeHelper.requireNonNull(constants$0._Xmblen$MH,"_Xmblen");
+        return RuntimeHelper.requireNonNull(constants$10.const$2,"_Xmblen");
     }
     /**
      * {@snippet :
@@ -2868,37 +2934,37 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * typedef char* XPointer;
      * }
      */
-    public static final OfAddress XPointer = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout XPointer = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef struct _XGC* GC;
      * }
      */
-    public static final OfAddress GC = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout GC = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef struct * _XPrivDisplay;
      * }
      */
-    public static final OfAddress _XPrivDisplay = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout _XPrivDisplay = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef struct _XOM* XOM;
      * }
      */
-    public static final OfAddress XOM = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout XOM = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef struct _XOC* XOC;
      * }
      */
-    public static final OfAddress XOC = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout XOC = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef struct _XOC* XFontSet;
      * }
      */
-    public static final OfAddress XFontSet = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout XFontSet = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * enum .XOMOrientation_LTR_TTB = 0;
@@ -2944,67 +3010,67 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * typedef struct _XIM* XIM;
      * }
      */
-    public static final OfAddress XIM = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout XIM = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef struct _XIC* XIC;
      * }
      */
-    public static final OfAddress XIC = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout XIC = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef unsigned long XIMStyle;
      * }
      */
-    public static final OfLong XIMStyle = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong XIMStyle = JAVA_LONG;
     /**
      * {@snippet :
      * typedef void* XVaNestedList;
      * }
      */
-    public static final OfAddress XVaNestedList = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout XVaNestedList = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef unsigned long XIMFeedback;
      * }
      */
-    public static final OfLong XIMFeedback = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong XIMFeedback = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long XIMPreeditState;
      * }
      */
-    public static final OfLong XIMPreeditState = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong XIMPreeditState = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long XIMResetState;
      * }
      */
-    public static final OfLong XIMResetState = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong XIMResetState = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned long XIMStringConversionFeedback;
      * }
      */
-    public static final OfLong XIMStringConversionFeedback = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong XIMStringConversionFeedback = JAVA_LONG;
     /**
      * {@snippet :
      * typedef unsigned short XIMStringConversionPosition;
      * }
      */
-    public static final OfShort XIMStringConversionPosition = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort XIMStringConversionPosition = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned short XIMStringConversionType;
      * }
      */
-    public static final OfShort XIMStringConversionType = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort XIMStringConversionType = JAVA_SHORT;
     /**
      * {@snippet :
      * typedef unsigned short XIMStringConversionOperation;
      * }
      */
-    public static final OfShort XIMStringConversionOperation = Constants$root.C_SHORT$LAYOUT;
+    public static final OfShort XIMStringConversionOperation = JAVA_SHORT;
     /**
      * {@snippet :
      * enum .XIMForwardChar = 0;
@@ -3146,15 +3212,15 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * typedef unsigned long XIMHotKeyState;
      * }
      */
-    public static final OfLong XIMHotKeyState = Constants$root.C_LONG_LONG$LAYOUT;
+    public static final OfLong XIMHotKeyState = JAVA_LONG;
     public static MemoryLayout _Xdebug$LAYOUT() {
-        return constants$1._Xdebug$LAYOUT;
+        return JAVA_INT;
     }
     public static VarHandle _Xdebug$VH() {
-        return constants$1._Xdebug$VH;
+        return constants$123.const$1;
     }
     public static MemorySegment _Xdebug$SEGMENT() {
-        return RuntimeHelper.requireNonNull(constants$1._Xdebug$SEGMENT,"_Xdebug");
+        return RuntimeHelper.requireNonNull(constants$123.const$2,"_Xdebug");
     }
     /**
      * Getter for variable:
@@ -3163,7 +3229,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * }
      */
     public static int _Xdebug$get() {
-        return (int) constants$1._Xdebug$VH.get(RuntimeHelper.requireNonNull(constants$1._Xdebug$SEGMENT, "_Xdebug"));
+        return (int) constants$123.const$1.get(RuntimeHelper.requireNonNull(constants$123.const$2, "_Xdebug"));
     }
     /**
      * Setter for variable:
@@ -3172,10 +3238,10 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * }
      */
     public static void _Xdebug$set(int x) {
-        constants$1._Xdebug$VH.set(RuntimeHelper.requireNonNull(constants$1._Xdebug$SEGMENT, "_Xdebug"), x);
+        constants$123.const$1.set(RuntimeHelper.requireNonNull(constants$123.const$2, "_Xdebug"), x);
     }
     public static MethodHandle XLoadQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.XLoadQueryFont$MH,"XLoadQueryFont");
+        return RuntimeHelper.requireNonNull(constants$123.const$4,"XLoadQueryFont");
     }
     /**
      * {@snippet :
@@ -3191,7 +3257,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.XQueryFont$MH,"XQueryFont");
+        return RuntimeHelper.requireNonNull(constants$123.const$6,"XQueryFont");
     }
     /**
      * {@snippet :
@@ -3207,7 +3273,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetMotionEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XGetMotionEvents$MH,"XGetMotionEvents");
+        return RuntimeHelper.requireNonNull(constants$124.const$1,"XGetMotionEvents");
     }
     /**
      * {@snippet :
@@ -3223,7 +3289,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDeleteModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XDeleteModifiermapEntry$MH,"XDeleteModifiermapEntry");
+        return RuntimeHelper.requireNonNull(constants$124.const$3,"XDeleteModifiermapEntry");
     }
     /**
      * {@snippet :
@@ -3239,7 +3305,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetModifierMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XGetModifierMapping$MH,"XGetModifierMapping");
+        return RuntimeHelper.requireNonNull(constants$124.const$5,"XGetModifierMapping");
     }
     /**
      * {@snippet :
@@ -3255,7 +3321,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInsertModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XInsertModifiermapEntry$MH,"XInsertModifiermapEntry");
+        return RuntimeHelper.requireNonNull(constants$125.const$0,"XInsertModifiermapEntry");
     }
     /**
      * {@snippet :
@@ -3271,7 +3337,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XNewModifiermap$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XNewModifiermap$MH,"XNewModifiermap");
+        return RuntimeHelper.requireNonNull(constants$125.const$2,"XNewModifiermap");
     }
     /**
      * {@snippet :
@@ -3287,7 +3353,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$2.XCreateImage$MH,"XCreateImage");
+        return RuntimeHelper.requireNonNull(constants$125.const$3,"XCreateImage");
     }
     /**
      * {@snippet :
@@ -3303,7 +3369,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInitImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XInitImage$MH,"XInitImage");
+        return RuntimeHelper.requireNonNull(constants$125.const$4,"XInitImage");
     }
     /**
      * {@snippet :
@@ -3319,7 +3385,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XGetImage$MH,"XGetImage");
+        return RuntimeHelper.requireNonNull(constants$125.const$6,"XGetImage");
     }
     /**
      * {@snippet :
@@ -3335,7 +3401,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetSubImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XGetSubImage$MH,"XGetSubImage");
+        return RuntimeHelper.requireNonNull(constants$126.const$1,"XGetSubImage");
     }
     /**
      * {@snippet :
@@ -3351,7 +3417,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XOpenDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XOpenDisplay$MH,"XOpenDisplay");
+        return RuntimeHelper.requireNonNull(constants$126.const$2,"XOpenDisplay");
     }
     /**
      * {@snippet :
@@ -3367,7 +3433,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XrmInitialize$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XrmInitialize$MH,"XrmInitialize");
+        return RuntimeHelper.requireNonNull(constants$126.const$4,"XrmInitialize");
     }
     /**
      * {@snippet :
@@ -3383,7 +3449,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFetchBytes$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.XFetchBytes$MH,"XFetchBytes");
+        return RuntimeHelper.requireNonNull(constants$126.const$5,"XFetchBytes");
     }
     /**
      * {@snippet :
@@ -3399,7 +3465,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFetchBuffer$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XFetchBuffer$MH,"XFetchBuffer");
+        return RuntimeHelper.requireNonNull(constants$127.const$1,"XFetchBuffer");
     }
     /**
      * {@snippet :
@@ -3415,7 +3481,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetAtomName$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XGetAtomName$MH,"XGetAtomName");
+        return RuntimeHelper.requireNonNull(constants$127.const$2,"XGetAtomName");
     }
     /**
      * {@snippet :
@@ -3431,7 +3497,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetAtomNames$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XGetAtomNames$MH,"XGetAtomNames");
+        return RuntimeHelper.requireNonNull(constants$127.const$4,"XGetAtomNames");
     }
     /**
      * {@snippet :
@@ -3447,7 +3513,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetDefault$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XGetDefault$MH,"XGetDefault");
+        return RuntimeHelper.requireNonNull(constants$127.const$6,"XGetDefault");
     }
     /**
      * {@snippet :
@@ -3463,7 +3529,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayName$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XDisplayName$MH,"XDisplayName");
+        return RuntimeHelper.requireNonNull(constants$128.const$0,"XDisplayName");
     }
     /**
      * {@snippet :
@@ -3479,7 +3545,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XKeysymToString$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.XKeysymToString$MH,"XKeysymToString");
+        return RuntimeHelper.requireNonNull(constants$128.const$2,"XKeysymToString");
     }
     /**
      * {@snippet :
@@ -3495,7 +3561,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSynchronize$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.XSynchronize$MH,"XSynchronize");
+        return RuntimeHelper.requireNonNull(constants$128.const$5,"XSynchronize");
     }
     /**
      * {@snippet :
@@ -3511,7 +3577,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetAfterFunction$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XSetAfterFunction$MH,"XSetAfterFunction");
+        return RuntimeHelper.requireNonNull(constants$129.const$2,"XSetAfterFunction");
     }
     /**
      * {@snippet :
@@ -3527,7 +3593,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInternAtom$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XInternAtom$MH,"XInternAtom");
+        return RuntimeHelper.requireNonNull(constants$129.const$4,"XInternAtom");
     }
     /**
      * {@snippet :
@@ -3543,7 +3609,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInternAtoms$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XInternAtoms$MH,"XInternAtoms");
+        return RuntimeHelper.requireNonNull(constants$129.const$6,"XInternAtoms");
     }
     /**
      * {@snippet :
@@ -3559,7 +3625,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCopyColormapAndFree$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XCopyColormapAndFree$MH,"XCopyColormapAndFree");
+        return RuntimeHelper.requireNonNull(constants$130.const$1,"XCopyColormapAndFree");
     }
     /**
      * {@snippet :
@@ -3575,7 +3641,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.XCreateColormap$MH,"XCreateColormap");
+        return RuntimeHelper.requireNonNull(constants$130.const$3,"XCreateColormap");
     }
     /**
      * {@snippet :
@@ -3591,7 +3657,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreatePixmapCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreatePixmapCursor$MH,"XCreatePixmapCursor");
+        return RuntimeHelper.requireNonNull(constants$130.const$5,"XCreatePixmapCursor");
     }
     /**
      * {@snippet :
@@ -3607,7 +3673,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateGlyphCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreateGlyphCursor$MH,"XCreateGlyphCursor");
+        return RuntimeHelper.requireNonNull(constants$131.const$1,"XCreateGlyphCursor");
     }
     /**
      * {@snippet :
@@ -3623,7 +3689,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateFontCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreateFontCursor$MH,"XCreateFontCursor");
+        return RuntimeHelper.requireNonNull(constants$131.const$3,"XCreateFontCursor");
     }
     /**
      * {@snippet :
@@ -3639,7 +3705,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLoadFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XLoadFont$MH,"XLoadFont");
+        return RuntimeHelper.requireNonNull(constants$131.const$5,"XLoadFont");
     }
     /**
      * {@snippet :
@@ -3655,7 +3721,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XCreateGC$MH,"XCreateGC");
+        return RuntimeHelper.requireNonNull(constants$132.const$1,"XCreateGC");
     }
     /**
      * {@snippet :
@@ -3671,7 +3737,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGContextFromGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.XGContextFromGC$MH,"XGContextFromGC");
+        return RuntimeHelper.requireNonNull(constants$132.const$3,"XGContextFromGC");
     }
     /**
      * {@snippet :
@@ -3687,7 +3753,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFlushGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XFlushGC$MH,"XFlushGC");
+        return RuntimeHelper.requireNonNull(constants$132.const$5,"XFlushGC");
     }
     /**
      * {@snippet :
@@ -3703,7 +3769,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreatePixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreatePixmap$MH,"XCreatePixmap");
+        return RuntimeHelper.requireNonNull(constants$133.const$1,"XCreatePixmap");
     }
     /**
      * {@snippet :
@@ -3719,7 +3785,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateBitmapFromData$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreateBitmapFromData$MH,"XCreateBitmapFromData");
+        return RuntimeHelper.requireNonNull(constants$133.const$3,"XCreateBitmapFromData");
     }
     /**
      * {@snippet :
@@ -3735,7 +3801,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreatePixmapFromBitmapData$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreatePixmapFromBitmapData$MH,"XCreatePixmapFromBitmapData");
+        return RuntimeHelper.requireNonNull(constants$133.const$5,"XCreatePixmapFromBitmapData");
     }
     /**
      * {@snippet :
@@ -3751,7 +3817,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateSimpleWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XCreateSimpleWindow$MH,"XCreateSimpleWindow");
+        return RuntimeHelper.requireNonNull(constants$134.const$1,"XCreateSimpleWindow");
     }
     /**
      * {@snippet :
@@ -3767,7 +3833,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetSelectionOwner$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.XGetSelectionOwner$MH,"XGetSelectionOwner");
+        return RuntimeHelper.requireNonNull(constants$134.const$2,"XGetSelectionOwner");
     }
     /**
      * {@snippet :
@@ -3783,7 +3849,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XCreateWindow$MH,"XCreateWindow");
+        return RuntimeHelper.requireNonNull(constants$134.const$4,"XCreateWindow");
     }
     /**
      * {@snippet :
@@ -3799,7 +3865,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XListInstalledColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XListInstalledColormaps$MH,"XListInstalledColormaps");
+        return RuntimeHelper.requireNonNull(constants$134.const$6,"XListInstalledColormaps");
     }
     /**
      * {@snippet :
@@ -3815,7 +3881,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XListFonts$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XListFonts$MH,"XListFonts");
+        return RuntimeHelper.requireNonNull(constants$135.const$1,"XListFonts");
     }
     /**
      * {@snippet :
@@ -3831,7 +3897,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XListFontsWithInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XListFontsWithInfo$MH,"XListFontsWithInfo");
+        return RuntimeHelper.requireNonNull(constants$135.const$3,"XListFontsWithInfo");
     }
     /**
      * {@snippet :
@@ -3847,7 +3913,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XGetFontPath$MH,"XGetFontPath");
+        return RuntimeHelper.requireNonNull(constants$135.const$4,"XGetFontPath");
     }
     /**
      * {@snippet :
@@ -3863,7 +3929,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XListExtensions$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.XListExtensions$MH,"XListExtensions");
+        return RuntimeHelper.requireNonNull(constants$135.const$5,"XListExtensions");
     }
     /**
      * {@snippet :
@@ -3879,7 +3945,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XListProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XListProperties$MH,"XListProperties");
+        return RuntimeHelper.requireNonNull(constants$136.const$0,"XListProperties");
     }
     /**
      * {@snippet :
@@ -3895,7 +3961,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XListHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XListHosts$MH,"XListHosts");
+        return RuntimeHelper.requireNonNull(constants$136.const$1,"XListHosts");
     }
     /**
      * {@snippet :
@@ -3911,7 +3977,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XKeycodeToKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XKeycodeToKeysym$MH,"XKeycodeToKeysym");
+        return RuntimeHelper.requireNonNull(constants$136.const$3,"XKeycodeToKeysym");
     }
     /**
      * {@snippet :
@@ -3927,7 +3993,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLookupKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XLookupKeysym$MH,"XLookupKeysym");
+        return RuntimeHelper.requireNonNull(constants$136.const$4,"XLookupKeysym");
     }
     /**
      * {@snippet :
@@ -3943,7 +4009,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XGetKeyboardMapping$MH,"XGetKeyboardMapping");
+        return RuntimeHelper.requireNonNull(constants$136.const$6,"XGetKeyboardMapping");
     }
     /**
      * {@snippet :
@@ -3959,7 +4025,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStringToKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.XStringToKeysym$MH,"XStringToKeysym");
+        return RuntimeHelper.requireNonNull(constants$137.const$0,"XStringToKeysym");
     }
     /**
      * {@snippet :
@@ -3975,7 +4041,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMaxRequestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XMaxRequestSize$MH,"XMaxRequestSize");
+        return RuntimeHelper.requireNonNull(constants$137.const$1,"XMaxRequestSize");
     }
     /**
      * {@snippet :
@@ -3991,7 +4057,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XExtendedMaxRequestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XExtendedMaxRequestSize$MH,"XExtendedMaxRequestSize");
+        return RuntimeHelper.requireNonNull(constants$137.const$2,"XExtendedMaxRequestSize");
     }
     /**
      * {@snippet :
@@ -4007,7 +4073,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XResourceManagerString$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XResourceManagerString$MH,"XResourceManagerString");
+        return RuntimeHelper.requireNonNull(constants$137.const$3,"XResourceManagerString");
     }
     /**
      * {@snippet :
@@ -4023,7 +4089,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XScreenResourceString$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XScreenResourceString$MH,"XScreenResourceString");
+        return RuntimeHelper.requireNonNull(constants$137.const$4,"XScreenResourceString");
     }
     /**
      * {@snippet :
@@ -4039,7 +4105,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayMotionBufferSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XDisplayMotionBufferSize$MH,"XDisplayMotionBufferSize");
+        return RuntimeHelper.requireNonNull(constants$137.const$5,"XDisplayMotionBufferSize");
     }
     /**
      * {@snippet :
@@ -4055,7 +4121,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XVisualIDFromVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.XVisualIDFromVisual$MH,"XVisualIDFromVisual");
+        return RuntimeHelper.requireNonNull(constants$138.const$0,"XVisualIDFromVisual");
     }
     /**
      * {@snippet :
@@ -4071,7 +4137,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInitThreads$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XInitThreads$MH,"XInitThreads");
+        return RuntimeHelper.requireNonNull(constants$138.const$2,"XInitThreads");
     }
     /**
      * {@snippet :
@@ -4087,7 +4153,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLockDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XLockDisplay$MH,"XLockDisplay");
+        return RuntimeHelper.requireNonNull(constants$138.const$4,"XLockDisplay");
     }
     /**
      * {@snippet :
@@ -4103,7 +4169,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnlockDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XUnlockDisplay$MH,"XUnlockDisplay");
+        return RuntimeHelper.requireNonNull(constants$138.const$5,"XUnlockDisplay");
     }
     /**
      * {@snippet :
@@ -4119,7 +4185,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInitExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XInitExtension$MH,"XInitExtension");
+        return RuntimeHelper.requireNonNull(constants$139.const$0,"XInitExtension");
     }
     /**
      * {@snippet :
@@ -4135,7 +4201,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAddExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XAddExtension$MH,"XAddExtension");
+        return RuntimeHelper.requireNonNull(constants$139.const$1,"XAddExtension");
     }
     /**
      * {@snippet :
@@ -4151,7 +4217,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFindOnExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.XFindOnExtensionList$MH,"XFindOnExtensionList");
+        return RuntimeHelper.requireNonNull(constants$139.const$2,"XFindOnExtensionList");
     }
     /**
      * {@snippet :
@@ -4167,7 +4233,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XEHeadOfExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XEHeadOfExtensionList$MH,"XEHeadOfExtensionList");
+        return RuntimeHelper.requireNonNull(constants$139.const$4,"XEHeadOfExtensionList");
     }
     /**
      * {@snippet :
@@ -4183,7 +4249,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRootWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XRootWindow$MH,"XRootWindow");
+        return RuntimeHelper.requireNonNull(constants$139.const$5,"XRootWindow");
     }
     /**
      * {@snippet :
@@ -4199,7 +4265,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultRootWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XDefaultRootWindow$MH,"XDefaultRootWindow");
+        return RuntimeHelper.requireNonNull(constants$140.const$0,"XDefaultRootWindow");
     }
     /**
      * {@snippet :
@@ -4215,7 +4281,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRootWindowOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XRootWindowOfScreen$MH,"XRootWindowOfScreen");
+        return RuntimeHelper.requireNonNull(constants$140.const$1,"XRootWindowOfScreen");
     }
     /**
      * {@snippet :
@@ -4231,7 +4297,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XDefaultVisual$MH,"XDefaultVisual");
+        return RuntimeHelper.requireNonNull(constants$140.const$2,"XDefaultVisual");
     }
     /**
      * {@snippet :
@@ -4247,7 +4313,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultVisualOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.XDefaultVisualOfScreen$MH,"XDefaultVisualOfScreen");
+        return RuntimeHelper.requireNonNull(constants$140.const$3,"XDefaultVisualOfScreen");
     }
     /**
      * {@snippet :
@@ -4263,7 +4329,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultGC$MH,"XDefaultGC");
+        return RuntimeHelper.requireNonNull(constants$140.const$4,"XDefaultGC");
     }
     /**
      * {@snippet :
@@ -4279,7 +4345,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultGCOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XDefaultGCOfScreen$MH,"XDefaultGCOfScreen");
+        return RuntimeHelper.requireNonNull(constants$140.const$5,"XDefaultGCOfScreen");
     }
     /**
      * {@snippet :
@@ -4295,7 +4361,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XBlackPixel$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XBlackPixel$MH,"XBlackPixel");
+        return RuntimeHelper.requireNonNull(constants$141.const$0,"XBlackPixel");
     }
     /**
      * {@snippet :
@@ -4311,7 +4377,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWhitePixel$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XWhitePixel$MH,"XWhitePixel");
+        return RuntimeHelper.requireNonNull(constants$141.const$1,"XWhitePixel");
     }
     /**
      * {@snippet :
@@ -4327,7 +4393,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XAllPlanes$MH,"XAllPlanes");
+        return RuntimeHelper.requireNonNull(constants$141.const$3,"XAllPlanes");
     }
     /**
      * {@snippet :
@@ -4343,7 +4409,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XBlackPixelOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.XBlackPixelOfScreen$MH,"XBlackPixelOfScreen");
+        return RuntimeHelper.requireNonNull(constants$141.const$4,"XBlackPixelOfScreen");
     }
     /**
      * {@snippet :
@@ -4359,7 +4425,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWhitePixelOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XWhitePixelOfScreen$MH,"XWhitePixelOfScreen");
+        return RuntimeHelper.requireNonNull(constants$141.const$5,"XWhitePixelOfScreen");
     }
     /**
      * {@snippet :
@@ -4375,7 +4441,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XNextRequest$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XNextRequest$MH,"XNextRequest");
+        return RuntimeHelper.requireNonNull(constants$142.const$0,"XNextRequest");
     }
     /**
      * {@snippet :
@@ -4391,7 +4457,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLastKnownRequestProcessed$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XLastKnownRequestProcessed$MH,"XLastKnownRequestProcessed");
+        return RuntimeHelper.requireNonNull(constants$142.const$1,"XLastKnownRequestProcessed");
     }
     /**
      * {@snippet :
@@ -4407,7 +4473,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XServerVendor$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XServerVendor$MH,"XServerVendor");
+        return RuntimeHelper.requireNonNull(constants$142.const$2,"XServerVendor");
     }
     /**
      * {@snippet :
@@ -4423,7 +4489,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayString$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XDisplayString$MH,"XDisplayString");
+        return RuntimeHelper.requireNonNull(constants$142.const$3,"XDisplayString");
     }
     /**
      * {@snippet :
@@ -4439,7 +4505,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.XDefaultColormap$MH,"XDefaultColormap");
+        return RuntimeHelper.requireNonNull(constants$142.const$4,"XDefaultColormap");
     }
     /**
      * {@snippet :
@@ -4455,7 +4521,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultColormapOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDefaultColormapOfScreen$MH,"XDefaultColormapOfScreen");
+        return RuntimeHelper.requireNonNull(constants$142.const$5,"XDefaultColormapOfScreen");
     }
     /**
      * {@snippet :
@@ -4471,7 +4537,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDisplayOfScreen$MH,"XDisplayOfScreen");
+        return RuntimeHelper.requireNonNull(constants$143.const$0,"XDisplayOfScreen");
     }
     /**
      * {@snippet :
@@ -4487,7 +4553,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XScreenOfDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XScreenOfDisplay$MH,"XScreenOfDisplay");
+        return RuntimeHelper.requireNonNull(constants$143.const$1,"XScreenOfDisplay");
     }
     /**
      * {@snippet :
@@ -4503,7 +4569,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultScreenOfDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XDefaultScreenOfDisplay$MH,"XDefaultScreenOfDisplay");
+        return RuntimeHelper.requireNonNull(constants$143.const$2,"XDefaultScreenOfDisplay");
     }
     /**
      * {@snippet :
@@ -4519,7 +4585,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XEventMaskOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XEventMaskOfScreen$MH,"XEventMaskOfScreen");
+        return RuntimeHelper.requireNonNull(constants$143.const$3,"XEventMaskOfScreen");
     }
     /**
      * {@snippet :
@@ -4535,7 +4601,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XScreenNumberOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.XScreenNumberOfScreen$MH,"XScreenNumberOfScreen");
+        return RuntimeHelper.requireNonNull(constants$143.const$4,"XScreenNumberOfScreen");
     }
     /**
      * {@snippet :
@@ -4551,7 +4617,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetErrorHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.XSetErrorHandler$MH,"XSetErrorHandler");
+        return RuntimeHelper.requireNonNull(constants$144.const$2,"XSetErrorHandler");
     }
     /**
      * {@snippet :
@@ -4567,7 +4633,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetIOErrorHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.XSetIOErrorHandler$MH,"XSetIOErrorHandler");
+        return RuntimeHelper.requireNonNull(constants$144.const$4,"XSetIOErrorHandler");
     }
     /**
      * {@snippet :
@@ -4582,8 +4648,24 @@ public class Xlib_h_2 extends Xlib_h_1 {
             throw new AssertionError("should not reach here", ex$);
         }
     }
+    public static MethodHandle XSetIOErrorExitHandler$MH() {
+        return RuntimeHelper.requireNonNull(constants$145.const$1,"XSetIOErrorExitHandler");
+    }
+    /**
+     * {@snippet :
+     * void XSetIOErrorExitHandler(Display*, XIOErrorExitHandler, void*);
+     * }
+     */
+    public static void XSetIOErrorExitHandler(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
+        var mh$ = XSetIOErrorExitHandler$MH();
+        try {
+            mh$.invokeExact(x0, x1, x2);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
     public static MethodHandle XListPixmapFormats$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XListPixmapFormats$MH,"XListPixmapFormats");
+        return RuntimeHelper.requireNonNull(constants$145.const$2,"XListPixmapFormats");
     }
     /**
      * {@snippet :
@@ -4599,7 +4681,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XListDepths$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XListDepths$MH,"XListDepths");
+        return RuntimeHelper.requireNonNull(constants$145.const$4,"XListDepths");
     }
     /**
      * {@snippet :
@@ -4615,7 +4697,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XReconfigureWMWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XReconfigureWMWindow$MH,"XReconfigureWMWindow");
+        return RuntimeHelper.requireNonNull(constants$145.const$6,"XReconfigureWMWindow");
     }
     /**
      * {@snippet :
@@ -4631,7 +4713,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMProtocols$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XGetWMProtocols$MH,"XGetWMProtocols");
+        return RuntimeHelper.requireNonNull(constants$146.const$1,"XGetWMProtocols");
     }
     /**
      * {@snippet :
@@ -4647,7 +4729,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMProtocols$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XSetWMProtocols$MH,"XSetWMProtocols");
+        return RuntimeHelper.requireNonNull(constants$146.const$3,"XSetWMProtocols");
     }
     /**
      * {@snippet :
@@ -4663,7 +4745,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XIconifyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.XIconifyWindow$MH,"XIconifyWindow");
+        return RuntimeHelper.requireNonNull(constants$146.const$5,"XIconifyWindow");
     }
     /**
      * {@snippet :
@@ -4679,7 +4761,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWithdrawWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XWithdrawWindow$MH,"XWithdrawWindow");
+        return RuntimeHelper.requireNonNull(constants$147.const$0,"XWithdrawWindow");
     }
     /**
      * {@snippet :
@@ -4695,7 +4777,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetCommand$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XGetCommand$MH,"XGetCommand");
+        return RuntimeHelper.requireNonNull(constants$147.const$1,"XGetCommand");
     }
     /**
      * {@snippet :
@@ -4711,7 +4793,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMColormapWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XGetWMColormapWindows$MH,"XGetWMColormapWindows");
+        return RuntimeHelper.requireNonNull(constants$147.const$2,"XGetWMColormapWindows");
     }
     /**
      * {@snippet :
@@ -4727,7 +4809,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMColormapWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XSetWMColormapWindows$MH,"XSetWMColormapWindows");
+        return RuntimeHelper.requireNonNull(constants$147.const$3,"XSetWMColormapWindows");
     }
     /**
      * {@snippet :
@@ -4743,7 +4825,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XFreeStringList$MH,"XFreeStringList");
+        return RuntimeHelper.requireNonNull(constants$147.const$4,"XFreeStringList");
     }
     /**
      * {@snippet :
@@ -4759,7 +4841,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetTransientForHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.XSetTransientForHint$MH,"XSetTransientForHint");
+        return RuntimeHelper.requireNonNull(constants$147.const$6,"XSetTransientForHint");
     }
     /**
      * {@snippet :
@@ -4775,7 +4857,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XActivateScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XActivateScreenSaver$MH,"XActivateScreenSaver");
+        return RuntimeHelper.requireNonNull(constants$148.const$0,"XActivateScreenSaver");
     }
     /**
      * {@snippet :
@@ -4791,7 +4873,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAddHost$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAddHost$MH,"XAddHost");
+        return RuntimeHelper.requireNonNull(constants$148.const$1,"XAddHost");
     }
     /**
      * {@snippet :
@@ -4807,7 +4889,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAddHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAddHosts$MH,"XAddHosts");
+        return RuntimeHelper.requireNonNull(constants$148.const$3,"XAddHosts");
     }
     /**
      * {@snippet :
@@ -4823,7 +4905,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAddToExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAddToExtensionList$MH,"XAddToExtensionList");
+        return RuntimeHelper.requireNonNull(constants$148.const$4,"XAddToExtensionList");
     }
     /**
      * {@snippet :
@@ -4839,7 +4921,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAddToSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAddToSaveSet$MH,"XAddToSaveSet");
+        return RuntimeHelper.requireNonNull(constants$148.const$5,"XAddToSaveSet");
     }
     /**
      * {@snippet :
@@ -4855,7 +4937,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.XAllocColor$MH,"XAllocColor");
+        return RuntimeHelper.requireNonNull(constants$149.const$1,"XAllocColor");
     }
     /**
      * {@snippet :
@@ -4871,7 +4953,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocColorCells$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocColorCells$MH,"XAllocColorCells");
+        return RuntimeHelper.requireNonNull(constants$149.const$3,"XAllocColorCells");
     }
     /**
      * {@snippet :
@@ -4887,7 +4969,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocColorPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocColorPlanes$MH,"XAllocColorPlanes");
+        return RuntimeHelper.requireNonNull(constants$149.const$5,"XAllocColorPlanes");
     }
     /**
      * {@snippet :
@@ -4903,7 +4985,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocNamedColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllocNamedColor$MH,"XAllocNamedColor");
+        return RuntimeHelper.requireNonNull(constants$150.const$1,"XAllocNamedColor");
     }
     /**
      * {@snippet :
@@ -4919,7 +5001,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllowEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAllowEvents$MH,"XAllowEvents");
+        return RuntimeHelper.requireNonNull(constants$150.const$3,"XAllowEvents");
     }
     /**
      * {@snippet :
@@ -4935,7 +5017,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAutoRepeatOff$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAutoRepeatOff$MH,"XAutoRepeatOff");
+        return RuntimeHelper.requireNonNull(constants$150.const$4,"XAutoRepeatOff");
     }
     /**
      * {@snippet :
@@ -4951,7 +5033,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAutoRepeatOn$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.XAutoRepeatOn$MH,"XAutoRepeatOn");
+        return RuntimeHelper.requireNonNull(constants$150.const$5,"XAutoRepeatOn");
     }
     /**
      * {@snippet :
@@ -4967,7 +5049,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XBell$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBell$MH,"XBell");
+        return RuntimeHelper.requireNonNull(constants$151.const$0,"XBell");
     }
     /**
      * {@snippet :
@@ -4983,7 +5065,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XBitmapBitOrder$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBitmapBitOrder$MH,"XBitmapBitOrder");
+        return RuntimeHelper.requireNonNull(constants$151.const$1,"XBitmapBitOrder");
     }
     /**
      * {@snippet :
@@ -4999,7 +5081,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XBitmapPad$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBitmapPad$MH,"XBitmapPad");
+        return RuntimeHelper.requireNonNull(constants$151.const$2,"XBitmapPad");
     }
     /**
      * {@snippet :
@@ -5015,7 +5097,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XBitmapUnit$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XBitmapUnit$MH,"XBitmapUnit");
+        return RuntimeHelper.requireNonNull(constants$151.const$3,"XBitmapUnit");
     }
     /**
      * {@snippet :
@@ -5031,7 +5113,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCellsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XCellsOfScreen$MH,"XCellsOfScreen");
+        return RuntimeHelper.requireNonNull(constants$151.const$4,"XCellsOfScreen");
     }
     /**
      * {@snippet :
@@ -5047,7 +5129,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangeActivePointerGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.XChangeActivePointerGrab$MH,"XChangeActivePointerGrab");
+        return RuntimeHelper.requireNonNull(constants$151.const$6,"XChangeActivePointerGrab");
     }
     /**
      * {@snippet :
@@ -5063,7 +5145,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangeGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeGC$MH,"XChangeGC");
+        return RuntimeHelper.requireNonNull(constants$152.const$1,"XChangeGC");
     }
     /**
      * {@snippet :
@@ -5079,7 +5161,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangeKeyboardControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardControl$MH,"XChangeKeyboardControl");
+        return RuntimeHelper.requireNonNull(constants$152.const$2,"XChangeKeyboardControl");
     }
     /**
      * {@snippet :
@@ -5095,7 +5177,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangeKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeKeyboardMapping$MH,"XChangeKeyboardMapping");
+        return RuntimeHelper.requireNonNull(constants$152.const$4,"XChangeKeyboardMapping");
     }
     /**
      * {@snippet :
@@ -5111,7 +5193,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangePointerControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangePointerControl$MH,"XChangePointerControl");
+        return RuntimeHelper.requireNonNull(constants$152.const$6,"XChangePointerControl");
     }
     /**
      * {@snippet :
@@ -5127,7 +5209,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangeProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeProperty$MH,"XChangeProperty");
+        return RuntimeHelper.requireNonNull(constants$153.const$1,"XChangeProperty");
     }
     /**
      * {@snippet :
@@ -5143,7 +5225,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangeSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.XChangeSaveSet$MH,"XChangeSaveSet");
+        return RuntimeHelper.requireNonNull(constants$153.const$2,"XChangeSaveSet");
     }
     /**
      * {@snippet :
@@ -5159,7 +5241,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XChangeWindowAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XChangeWindowAttributes$MH,"XChangeWindowAttributes");
+        return RuntimeHelper.requireNonNull(constants$153.const$4,"XChangeWindowAttributes");
     }
     /**
      * {@snippet :
@@ -5175,7 +5257,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCheckIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XCheckIfEvent$MH,"XCheckIfEvent");
+        return RuntimeHelper.requireNonNull(constants$154.const$1,"XCheckIfEvent");
     }
     /**
      * {@snippet :
@@ -5191,7 +5273,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCheckMaskEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XCheckMaskEvent$MH,"XCheckMaskEvent");
+        return RuntimeHelper.requireNonNull(constants$154.const$2,"XCheckMaskEvent");
     }
     /**
      * {@snippet :
@@ -5207,7 +5289,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCheckTypedEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.XCheckTypedEvent$MH,"XCheckTypedEvent");
+        return RuntimeHelper.requireNonNull(constants$154.const$4,"XCheckTypedEvent");
     }
     /**
      * {@snippet :
@@ -5223,7 +5305,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCheckTypedWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckTypedWindowEvent$MH,"XCheckTypedWindowEvent");
+        return RuntimeHelper.requireNonNull(constants$154.const$6,"XCheckTypedWindowEvent");
     }
     /**
      * {@snippet :
@@ -5239,7 +5321,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCheckWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCheckWindowEvent$MH,"XCheckWindowEvent");
+        return RuntimeHelper.requireNonNull(constants$155.const$0,"XCheckWindowEvent");
     }
     /**
      * {@snippet :
@@ -5255,7 +5337,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCirculateSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindows$MH,"XCirculateSubwindows");
+        return RuntimeHelper.requireNonNull(constants$155.const$1,"XCirculateSubwindows");
     }
     /**
      * {@snippet :
@@ -5271,7 +5353,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCirculateSubwindowsDown$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsDown$MH,"XCirculateSubwindowsDown");
+        return RuntimeHelper.requireNonNull(constants$155.const$2,"XCirculateSubwindowsDown");
     }
     /**
      * {@snippet :
@@ -5287,7 +5369,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCirculateSubwindowsUp$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XCirculateSubwindowsUp$MH,"XCirculateSubwindowsUp");
+        return RuntimeHelper.requireNonNull(constants$155.const$3,"XCirculateSubwindowsUp");
     }
     /**
      * {@snippet :
@@ -5303,7 +5385,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XClearArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.XClearArea$MH,"XClearArea");
+        return RuntimeHelper.requireNonNull(constants$155.const$5,"XClearArea");
     }
     /**
      * {@snippet :
@@ -5319,7 +5401,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XClearWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XClearWindow$MH,"XClearWindow");
+        return RuntimeHelper.requireNonNull(constants$156.const$0,"XClearWindow");
     }
     /**
      * {@snippet :
@@ -5335,7 +5417,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCloseDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XCloseDisplay$MH,"XCloseDisplay");
+        return RuntimeHelper.requireNonNull(constants$156.const$1,"XCloseDisplay");
     }
     /**
      * {@snippet :
@@ -5351,7 +5433,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XConfigureWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XConfigureWindow$MH,"XConfigureWindow");
+        return RuntimeHelper.requireNonNull(constants$156.const$2,"XConfigureWindow");
     }
     /**
      * {@snippet :
@@ -5367,7 +5449,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XConnectionNumber$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XConnectionNumber$MH,"XConnectionNumber");
+        return RuntimeHelper.requireNonNull(constants$156.const$3,"XConnectionNumber");
     }
     /**
      * {@snippet :
@@ -5383,7 +5465,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XConvertSelection$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XConvertSelection$MH,"XConvertSelection");
+        return RuntimeHelper.requireNonNull(constants$156.const$5,"XConvertSelection");
     }
     /**
      * {@snippet :
@@ -5399,7 +5481,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCopyArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.XCopyArea$MH,"XCopyArea");
+        return RuntimeHelper.requireNonNull(constants$157.const$1,"XCopyArea");
     }
     /**
      * {@snippet :
@@ -5415,7 +5497,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCopyGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XCopyGC$MH,"XCopyGC");
+        return RuntimeHelper.requireNonNull(constants$157.const$2,"XCopyGC");
     }
     /**
      * {@snippet :
@@ -5431,7 +5513,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCopyPlane$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XCopyPlane$MH,"XCopyPlane");
+        return RuntimeHelper.requireNonNull(constants$157.const$4,"XCopyPlane");
     }
     /**
      * {@snippet :
@@ -5447,7 +5529,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultDepth$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XDefaultDepth$MH,"XDefaultDepth");
+        return RuntimeHelper.requireNonNull(constants$157.const$5,"XDefaultDepth");
     }
     /**
      * {@snippet :
@@ -5463,7 +5545,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultDepthOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XDefaultDepthOfScreen$MH,"XDefaultDepthOfScreen");
+        return RuntimeHelper.requireNonNull(constants$158.const$0,"XDefaultDepthOfScreen");
     }
     /**
      * {@snippet :
@@ -5479,7 +5561,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XDefaultScreen$MH,"XDefaultScreen");
+        return RuntimeHelper.requireNonNull(constants$158.const$1,"XDefaultScreen");
     }
     /**
      * {@snippet :
@@ -5495,7 +5577,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefineCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.XDefineCursor$MH,"XDefineCursor");
+        return RuntimeHelper.requireNonNull(constants$158.const$2,"XDefineCursor");
     }
     /**
      * {@snippet :
@@ -5511,7 +5593,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDeleteProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDeleteProperty$MH,"XDeleteProperty");
+        return RuntimeHelper.requireNonNull(constants$158.const$3,"XDeleteProperty");
     }
     /**
      * {@snippet :
@@ -5527,7 +5609,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDestroyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDestroyWindow$MH,"XDestroyWindow");
+        return RuntimeHelper.requireNonNull(constants$158.const$4,"XDestroyWindow");
     }
     /**
      * {@snippet :
@@ -5543,7 +5625,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDestroySubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDestroySubwindows$MH,"XDestroySubwindows");
+        return RuntimeHelper.requireNonNull(constants$158.const$5,"XDestroySubwindows");
     }
     /**
      * {@snippet :
@@ -5559,7 +5641,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDoesBackingStore$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDoesBackingStore$MH,"XDoesBackingStore");
+        return RuntimeHelper.requireNonNull(constants$159.const$0,"XDoesBackingStore");
     }
     /**
      * {@snippet :
@@ -5575,7 +5657,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDoesSaveUnders$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDoesSaveUnders$MH,"XDoesSaveUnders");
+        return RuntimeHelper.requireNonNull(constants$159.const$1,"XDoesSaveUnders");
     }
     /**
      * {@snippet :
@@ -5591,7 +5673,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.XDisableAccessControl$MH,"XDisableAccessControl");
+        return RuntimeHelper.requireNonNull(constants$159.const$2,"XDisableAccessControl");
     }
     /**
      * {@snippet :
@@ -5607,7 +5689,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayCells$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayCells$MH,"XDisplayCells");
+        return RuntimeHelper.requireNonNull(constants$159.const$3,"XDisplayCells");
     }
     /**
      * {@snippet :
@@ -5623,7 +5705,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayHeight$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayHeight$MH,"XDisplayHeight");
+        return RuntimeHelper.requireNonNull(constants$159.const$4,"XDisplayHeight");
     }
     /**
      * {@snippet :
@@ -5639,7 +5721,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayHeightMM$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayHeightMM$MH,"XDisplayHeightMM");
+        return RuntimeHelper.requireNonNull(constants$159.const$5,"XDisplayHeightMM");
     }
     /**
      * {@snippet :
@@ -5655,7 +5737,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayKeycodes$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayKeycodes$MH,"XDisplayKeycodes");
+        return RuntimeHelper.requireNonNull(constants$160.const$0,"XDisplayKeycodes");
     }
     /**
      * {@snippet :
@@ -5671,7 +5753,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayPlanes$MH,"XDisplayPlanes");
+        return RuntimeHelper.requireNonNull(constants$160.const$1,"XDisplayPlanes");
     }
     /**
      * {@snippet :
@@ -5687,7 +5769,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.XDisplayWidth$MH,"XDisplayWidth");
+        return RuntimeHelper.requireNonNull(constants$160.const$2,"XDisplayWidth");
     }
     /**
      * {@snippet :
@@ -5703,7 +5785,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayWidthMM$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDisplayWidthMM$MH,"XDisplayWidthMM");
+        return RuntimeHelper.requireNonNull(constants$160.const$3,"XDisplayWidthMM");
     }
     /**
      * {@snippet :
@@ -5719,7 +5801,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawArc$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawArc$MH,"XDrawArc");
+        return RuntimeHelper.requireNonNull(constants$160.const$5,"XDrawArc");
     }
     /**
      * {@snippet :
@@ -5735,7 +5817,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawArcs$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawArcs$MH,"XDrawArcs");
+        return RuntimeHelper.requireNonNull(constants$161.const$1,"XDrawArcs");
     }
     /**
      * {@snippet :
@@ -5751,7 +5833,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawImageString$MH,"XDrawImageString");
+        return RuntimeHelper.requireNonNull(constants$161.const$3,"XDrawImageString");
     }
     /**
      * {@snippet :
@@ -5767,7 +5849,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawImageString16$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawImageString16$MH,"XDrawImageString16");
+        return RuntimeHelper.requireNonNull(constants$161.const$4,"XDrawImageString16");
     }
     /**
      * {@snippet :
@@ -5783,7 +5865,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.XDrawLine$MH,"XDrawLine");
+        return RuntimeHelper.requireNonNull(constants$161.const$6,"XDrawLine");
     }
     /**
      * {@snippet :
@@ -5799,7 +5881,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawLines$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawLines$MH,"XDrawLines");
+        return RuntimeHelper.requireNonNull(constants$162.const$1,"XDrawLines");
     }
     /**
      * {@snippet :
@@ -5815,7 +5897,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawPoint$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawPoint$MH,"XDrawPoint");
+        return RuntimeHelper.requireNonNull(constants$162.const$3,"XDrawPoint");
     }
     /**
      * {@snippet :
@@ -5831,7 +5913,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawPoints$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawPoints$MH,"XDrawPoints");
+        return RuntimeHelper.requireNonNull(constants$162.const$4,"XDrawPoints");
     }
     /**
      * {@snippet :
@@ -5847,7 +5929,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawRectangle$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawRectangle$MH,"XDrawRectangle");
+        return RuntimeHelper.requireNonNull(constants$162.const$5,"XDrawRectangle");
     }
     /**
      * {@snippet :
@@ -5863,7 +5945,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawRectangles$MH,"XDrawRectangles");
+        return RuntimeHelper.requireNonNull(constants$163.const$0,"XDrawRectangles");
     }
     /**
      * {@snippet :
@@ -5879,7 +5961,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawSegments$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.XDrawSegments$MH,"XDrawSegments");
+        return RuntimeHelper.requireNonNull(constants$163.const$1,"XDrawSegments");
     }
     /**
      * {@snippet :
@@ -5895,7 +5977,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawString$MH,"XDrawString");
+        return RuntimeHelper.requireNonNull(constants$163.const$2,"XDrawString");
     }
     /**
      * {@snippet :
@@ -5911,7 +5993,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawString16$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawString16$MH,"XDrawString16");
+        return RuntimeHelper.requireNonNull(constants$163.const$3,"XDrawString16");
     }
     /**
      * {@snippet :
@@ -5927,7 +6009,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawText$MH,"XDrawText");
+        return RuntimeHelper.requireNonNull(constants$163.const$4,"XDrawText");
     }
     /**
      * {@snippet :
@@ -5943,7 +6025,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDrawText16$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XDrawText16$MH,"XDrawText16");
+        return RuntimeHelper.requireNonNull(constants$163.const$5,"XDrawText16");
     }
     /**
      * {@snippet :
@@ -5959,7 +6041,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XEnableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XEnableAccessControl$MH,"XEnableAccessControl");
+        return RuntimeHelper.requireNonNull(constants$164.const$0,"XEnableAccessControl");
     }
     /**
      * {@snippet :
@@ -5975,7 +6057,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XEventsQueued$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.XEventsQueued$MH,"XEventsQueued");
+        return RuntimeHelper.requireNonNull(constants$164.const$1,"XEventsQueued");
     }
     /**
      * {@snippet :
@@ -5991,7 +6073,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFetchName$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFetchName$MH,"XFetchName");
+        return RuntimeHelper.requireNonNull(constants$164.const$2,"XFetchName");
     }
     /**
      * {@snippet :
@@ -6007,7 +6089,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFillArc$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillArc$MH,"XFillArc");
+        return RuntimeHelper.requireNonNull(constants$164.const$3,"XFillArc");
     }
     /**
      * {@snippet :
@@ -6023,7 +6105,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFillArcs$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillArcs$MH,"XFillArcs");
+        return RuntimeHelper.requireNonNull(constants$164.const$4,"XFillArcs");
     }
     /**
      * {@snippet :
@@ -6039,7 +6121,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFillPolygon$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillPolygon$MH,"XFillPolygon");
+        return RuntimeHelper.requireNonNull(constants$164.const$6,"XFillPolygon");
     }
     /**
      * {@snippet :
@@ -6055,7 +6137,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFillRectangle$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillRectangle$MH,"XFillRectangle");
+        return RuntimeHelper.requireNonNull(constants$165.const$0,"XFillRectangle");
     }
     /**
      * {@snippet :
@@ -6071,7 +6153,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFillRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.XFillRectangles$MH,"XFillRectangles");
+        return RuntimeHelper.requireNonNull(constants$165.const$1,"XFillRectangles");
     }
     /**
      * {@snippet :
@@ -6087,7 +6169,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFlush$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFlush$MH,"XFlush");
+        return RuntimeHelper.requireNonNull(constants$165.const$2,"XFlush");
     }
     /**
      * {@snippet :
@@ -6103,7 +6185,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XForceScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XForceScreenSaver$MH,"XForceScreenSaver");
+        return RuntimeHelper.requireNonNull(constants$165.const$3,"XForceScreenSaver");
     }
     /**
      * {@snippet :
@@ -6119,7 +6201,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFree$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFree$MH,"XFree");
+        return RuntimeHelper.requireNonNull(constants$165.const$4,"XFree");
     }
     /**
      * {@snippet :
@@ -6135,7 +6217,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFreeColormap$MH,"XFreeColormap");
+        return RuntimeHelper.requireNonNull(constants$165.const$5,"XFreeColormap");
     }
     /**
      * {@snippet :
@@ -6151,7 +6233,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFreeColors$MH,"XFreeColors");
+        return RuntimeHelper.requireNonNull(constants$166.const$1,"XFreeColors");
     }
     /**
      * {@snippet :
@@ -6167,7 +6249,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.XFreeCursor$MH,"XFreeCursor");
+        return RuntimeHelper.requireNonNull(constants$166.const$2,"XFreeCursor");
     }
     /**
      * {@snippet :
@@ -6183,7 +6265,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeExtensionList$MH,"XFreeExtensionList");
+        return RuntimeHelper.requireNonNull(constants$166.const$3,"XFreeExtensionList");
     }
     /**
      * {@snippet :
@@ -6199,7 +6281,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeFont$MH,"XFreeFont");
+        return RuntimeHelper.requireNonNull(constants$166.const$4,"XFreeFont");
     }
     /**
      * {@snippet :
@@ -6215,7 +6297,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeFontInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeFontInfo$MH,"XFreeFontInfo");
+        return RuntimeHelper.requireNonNull(constants$166.const$5,"XFreeFontInfo");
     }
     /**
      * {@snippet :
@@ -6231,7 +6313,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeFontNames$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeFontNames$MH,"XFreeFontNames");
+        return RuntimeHelper.requireNonNull(constants$167.const$0,"XFreeFontNames");
     }
     /**
      * {@snippet :
@@ -6247,7 +6329,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeFontPath$MH,"XFreeFontPath");
+        return RuntimeHelper.requireNonNull(constants$167.const$1,"XFreeFontPath");
     }
     /**
      * {@snippet :
@@ -6263,7 +6345,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.XFreeGC$MH,"XFreeGC");
+        return RuntimeHelper.requireNonNull(constants$167.const$2,"XFreeGC");
     }
     /**
      * {@snippet :
@@ -6279,7 +6361,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeModifiermap$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreeModifiermap$MH,"XFreeModifiermap");
+        return RuntimeHelper.requireNonNull(constants$167.const$3,"XFreeModifiermap");
     }
     /**
      * {@snippet :
@@ -6295,7 +6377,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreePixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XFreePixmap$MH,"XFreePixmap");
+        return RuntimeHelper.requireNonNull(constants$167.const$4,"XFreePixmap");
     }
     /**
      * {@snippet :
@@ -6311,7 +6393,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XGeometry$MH,"XGeometry");
+        return RuntimeHelper.requireNonNull(constants$167.const$6,"XGeometry");
     }
     /**
      * {@snippet :
@@ -6327,7 +6409,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetErrorDatabaseText$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XGetErrorDatabaseText$MH,"XGetErrorDatabaseText");
+        return RuntimeHelper.requireNonNull(constants$168.const$1,"XGetErrorDatabaseText");
     }
     /**
      * {@snippet :
@@ -6343,7 +6425,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetErrorText$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XGetErrorText$MH,"XGetErrorText");
+        return RuntimeHelper.requireNonNull(constants$168.const$3,"XGetErrorText");
     }
     /**
      * {@snippet :
@@ -6359,7 +6441,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetFontProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.XGetFontProperty$MH,"XGetFontProperty");
+        return RuntimeHelper.requireNonNull(constants$168.const$4,"XGetFontProperty");
     }
     /**
      * {@snippet :
@@ -6375,7 +6457,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetGCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetGCValues$MH,"XGetGCValues");
+        return RuntimeHelper.requireNonNull(constants$168.const$5,"XGetGCValues");
     }
     /**
      * {@snippet :
@@ -6391,7 +6473,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetGeometry$MH,"XGetGeometry");
+        return RuntimeHelper.requireNonNull(constants$169.const$1,"XGetGeometry");
     }
     /**
      * {@snippet :
@@ -6407,7 +6489,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetIconName$MH,"XGetIconName");
+        return RuntimeHelper.requireNonNull(constants$169.const$2,"XGetIconName");
     }
     /**
      * {@snippet :
@@ -6423,7 +6505,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetInputFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetInputFocus$MH,"XGetInputFocus");
+        return RuntimeHelper.requireNonNull(constants$169.const$3,"XGetInputFocus");
     }
     /**
      * {@snippet :
@@ -6439,7 +6521,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetKeyboardControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetKeyboardControl$MH,"XGetKeyboardControl");
+        return RuntimeHelper.requireNonNull(constants$169.const$4,"XGetKeyboardControl");
     }
     /**
      * {@snippet :
@@ -6455,7 +6537,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetPointerControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$37.XGetPointerControl$MH,"XGetPointerControl");
+        return RuntimeHelper.requireNonNull(constants$169.const$5,"XGetPointerControl");
     }
     /**
      * {@snippet :
@@ -6471,7 +6553,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetPointerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetPointerMapping$MH,"XGetPointerMapping");
+        return RuntimeHelper.requireNonNull(constants$170.const$0,"XGetPointerMapping");
     }
     /**
      * {@snippet :
@@ -6487,7 +6569,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetScreenSaver$MH,"XGetScreenSaver");
+        return RuntimeHelper.requireNonNull(constants$170.const$2,"XGetScreenSaver");
     }
     /**
      * {@snippet :
@@ -6503,7 +6585,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetTransientForHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetTransientForHint$MH,"XGetTransientForHint");
+        return RuntimeHelper.requireNonNull(constants$170.const$3,"XGetTransientForHint");
     }
     /**
      * {@snippet :
@@ -6519,7 +6601,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWindowProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetWindowProperty$MH,"XGetWindowProperty");
+        return RuntimeHelper.requireNonNull(constants$170.const$5,"XGetWindowProperty");
     }
     /**
      * {@snippet :
@@ -6535,7 +6617,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWindowAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGetWindowAttributes$MH,"XGetWindowAttributes");
+        return RuntimeHelper.requireNonNull(constants$171.const$0,"XGetWindowAttributes");
     }
     /**
      * {@snippet :
@@ -6551,7 +6633,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGrabButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$38.XGrabButton$MH,"XGrabButton");
+        return RuntimeHelper.requireNonNull(constants$171.const$2,"XGrabButton");
     }
     /**
      * {@snippet :
@@ -6567,7 +6649,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGrabKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabKey$MH,"XGrabKey");
+        return RuntimeHelper.requireNonNull(constants$171.const$4,"XGrabKey");
     }
     /**
      * {@snippet :
@@ -6583,7 +6665,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGrabKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabKeyboard$MH,"XGrabKeyboard");
+        return RuntimeHelper.requireNonNull(constants$171.const$6,"XGrabKeyboard");
     }
     /**
      * {@snippet :
@@ -6599,7 +6681,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGrabPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabPointer$MH,"XGrabPointer");
+        return RuntimeHelper.requireNonNull(constants$172.const$1,"XGrabPointer");
     }
     /**
      * {@snippet :
@@ -6615,7 +6697,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGrabServer$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XGrabServer$MH,"XGrabServer");
+        return RuntimeHelper.requireNonNull(constants$172.const$2,"XGrabServer");
     }
     /**
      * {@snippet :
@@ -6631,7 +6713,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XHeightMMOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XHeightMMOfScreen$MH,"XHeightMMOfScreen");
+        return RuntimeHelper.requireNonNull(constants$172.const$3,"XHeightMMOfScreen");
     }
     /**
      * {@snippet :
@@ -6647,7 +6729,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XHeightOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$39.XHeightOfScreen$MH,"XHeightOfScreen");
+        return RuntimeHelper.requireNonNull(constants$172.const$4,"XHeightOfScreen");
     }
     /**
      * {@snippet :
@@ -6663,7 +6745,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XIfEvent$MH,"XIfEvent");
+        return RuntimeHelper.requireNonNull(constants$173.const$0,"XIfEvent");
     }
     /**
      * {@snippet :
@@ -6679,7 +6761,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XImageByteOrder$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XImageByteOrder$MH,"XImageByteOrder");
+        return RuntimeHelper.requireNonNull(constants$173.const$1,"XImageByteOrder");
     }
     /**
      * {@snippet :
@@ -6695,7 +6777,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInstallColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XInstallColormap$MH,"XInstallColormap");
+        return RuntimeHelper.requireNonNull(constants$173.const$2,"XInstallColormap");
     }
     /**
      * {@snippet :
@@ -6711,7 +6793,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XKeysymToKeycode$MH() {
-        return RuntimeHelper.requireNonNull(constants$40.XKeysymToKeycode$MH,"XKeysymToKeycode");
+        return RuntimeHelper.requireNonNull(constants$173.const$4,"XKeysymToKeycode");
     }
     /**
      * {@snippet :
@@ -6727,7 +6809,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XKillClient$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XKillClient$MH,"XKillClient");
+        return RuntimeHelper.requireNonNull(constants$173.const$5,"XKillClient");
     }
     /**
      * {@snippet :
@@ -6743,7 +6825,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLookupColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XLookupColor$MH,"XLookupColor");
+        return RuntimeHelper.requireNonNull(constants$174.const$0,"XLookupColor");
     }
     /**
      * {@snippet :
@@ -6759,7 +6841,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLowerWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XLowerWindow$MH,"XLowerWindow");
+        return RuntimeHelper.requireNonNull(constants$174.const$1,"XLowerWindow");
     }
     /**
      * {@snippet :
@@ -6775,7 +6857,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMapRaised$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XMapRaised$MH,"XMapRaised");
+        return RuntimeHelper.requireNonNull(constants$174.const$2,"XMapRaised");
     }
     /**
      * {@snippet :
@@ -6791,7 +6873,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMapSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XMapSubwindows$MH,"XMapSubwindows");
+        return RuntimeHelper.requireNonNull(constants$174.const$3,"XMapSubwindows");
     }
     /**
      * {@snippet :
@@ -6807,7 +6889,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$41.XMapWindow$MH,"XMapWindow");
+        return RuntimeHelper.requireNonNull(constants$174.const$4,"XMapWindow");
     }
     /**
      * {@snippet :
@@ -6823,7 +6905,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMaskEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMaskEvent$MH,"XMaskEvent");
+        return RuntimeHelper.requireNonNull(constants$174.const$5,"XMaskEvent");
     }
     /**
      * {@snippet :
@@ -6839,7 +6921,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMaxCmapsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMaxCmapsOfScreen$MH,"XMaxCmapsOfScreen");
+        return RuntimeHelper.requireNonNull(constants$175.const$0,"XMaxCmapsOfScreen");
     }
     /**
      * {@snippet :
@@ -6855,7 +6937,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMinCmapsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMinCmapsOfScreen$MH,"XMinCmapsOfScreen");
+        return RuntimeHelper.requireNonNull(constants$175.const$1,"XMinCmapsOfScreen");
     }
     /**
      * {@snippet :
@@ -6871,7 +6953,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMoveResizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMoveResizeWindow$MH,"XMoveResizeWindow");
+        return RuntimeHelper.requireNonNull(constants$175.const$3,"XMoveResizeWindow");
     }
     /**
      * {@snippet :
@@ -6887,7 +6969,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMoveWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XMoveWindow$MH,"XMoveWindow");
+        return RuntimeHelper.requireNonNull(constants$175.const$5,"XMoveWindow");
     }
     /**
      * {@snippet :
@@ -6903,7 +6985,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XNextEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.XNextEvent$MH,"XNextEvent");
+        return RuntimeHelper.requireNonNull(constants$176.const$0,"XNextEvent");
     }
     /**
      * {@snippet :
@@ -6919,7 +7001,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XNoOp$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XNoOp$MH,"XNoOp");
+        return RuntimeHelper.requireNonNull(constants$176.const$1,"XNoOp");
     }
     /**
      * {@snippet :
@@ -6935,7 +7017,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XParseColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XParseColor$MH,"XParseColor");
+        return RuntimeHelper.requireNonNull(constants$176.const$2,"XParseColor");
     }
     /**
      * {@snippet :
@@ -6951,7 +7033,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XParseGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XParseGeometry$MH,"XParseGeometry");
+        return RuntimeHelper.requireNonNull(constants$176.const$3,"XParseGeometry");
     }
     /**
      * {@snippet :
@@ -6967,7 +7049,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPeekEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.XPeekEvent$MH,"XPeekEvent");
+        return RuntimeHelper.requireNonNull(constants$176.const$4,"XPeekEvent");
     }
     /**
      * {@snippet :
@@ -6983,7 +7065,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPeekIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XPeekIfEvent$MH,"XPeekIfEvent");
+        return RuntimeHelper.requireNonNull(constants$177.const$0,"XPeekIfEvent");
     }
     /**
      * {@snippet :
@@ -6999,7 +7081,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPending$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XPending$MH,"XPending");
+        return RuntimeHelper.requireNonNull(constants$177.const$1,"XPending");
     }
     /**
      * {@snippet :
@@ -7015,7 +7097,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPlanesOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XPlanesOfScreen$MH,"XPlanesOfScreen");
+        return RuntimeHelper.requireNonNull(constants$177.const$2,"XPlanesOfScreen");
     }
     /**
      * {@snippet :
@@ -7031,7 +7113,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XProtocolRevision$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XProtocolRevision$MH,"XProtocolRevision");
+        return RuntimeHelper.requireNonNull(constants$177.const$3,"XProtocolRevision");
     }
     /**
      * {@snippet :
@@ -7047,7 +7129,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XProtocolVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XProtocolVersion$MH,"XProtocolVersion");
+        return RuntimeHelper.requireNonNull(constants$177.const$4,"XProtocolVersion");
     }
     /**
      * {@snippet :
@@ -7063,7 +7145,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPutBackEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.XPutBackEvent$MH,"XPutBackEvent");
+        return RuntimeHelper.requireNonNull(constants$177.const$5,"XPutBackEvent");
     }
     /**
      * {@snippet :
@@ -7079,7 +7161,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPutImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XPutImage$MH,"XPutImage");
+        return RuntimeHelper.requireNonNull(constants$178.const$1,"XPutImage");
     }
     /**
      * {@snippet :
@@ -7095,7 +7177,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQLength$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQLength$MH,"XQLength");
+        return RuntimeHelper.requireNonNull(constants$178.const$2,"XQLength");
     }
     /**
      * {@snippet :
@@ -7111,7 +7193,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryBestCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQueryBestCursor$MH,"XQueryBestCursor");
+        return RuntimeHelper.requireNonNull(constants$178.const$4,"XQueryBestCursor");
     }
     /**
      * {@snippet :
@@ -7127,7 +7209,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryBestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQueryBestSize$MH,"XQueryBestSize");
+        return RuntimeHelper.requireNonNull(constants$178.const$6,"XQueryBestSize");
     }
     /**
      * {@snippet :
@@ -7143,7 +7225,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryBestStipple$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQueryBestStipple$MH,"XQueryBestStipple");
+        return RuntimeHelper.requireNonNull(constants$179.const$0,"XQueryBestStipple");
     }
     /**
      * {@snippet :
@@ -7159,7 +7241,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryBestTile$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.XQueryBestTile$MH,"XQueryBestTile");
+        return RuntimeHelper.requireNonNull(constants$179.const$1,"XQueryBestTile");
     }
     /**
      * {@snippet :
@@ -7175,7 +7257,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryColor$MH,"XQueryColor");
+        return RuntimeHelper.requireNonNull(constants$179.const$2,"XQueryColor");
     }
     /**
      * {@snippet :
@@ -7191,7 +7273,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryColors$MH,"XQueryColors");
+        return RuntimeHelper.requireNonNull(constants$179.const$3,"XQueryColors");
     }
     /**
      * {@snippet :
@@ -7207,7 +7289,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryExtension$MH,"XQueryExtension");
+        return RuntimeHelper.requireNonNull(constants$179.const$4,"XQueryExtension");
     }
     /**
      * {@snippet :
@@ -7223,7 +7305,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryKeymap$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryKeymap$MH,"XQueryKeymap");
+        return RuntimeHelper.requireNonNull(constants$179.const$5,"XQueryKeymap");
     }
     /**
      * {@snippet :
@@ -7239,7 +7321,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryPointer$MH,"XQueryPointer");
+        return RuntimeHelper.requireNonNull(constants$180.const$0,"XQueryPointer");
     }
     /**
      * {@snippet :
@@ -7255,7 +7337,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.XQueryTextExtents$MH,"XQueryTextExtents");
+        return RuntimeHelper.requireNonNull(constants$180.const$2,"XQueryTextExtents");
     }
     /**
      * {@snippet :
@@ -7271,7 +7353,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryTextExtents16$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryTextExtents16$MH,"XQueryTextExtents16");
+        return RuntimeHelper.requireNonNull(constants$180.const$3,"XQueryTextExtents16");
     }
     /**
      * {@snippet :
@@ -7287,7 +7369,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XQueryTree$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XQueryTree$MH,"XQueryTree");
+        return RuntimeHelper.requireNonNull(constants$180.const$5,"XQueryTree");
     }
     /**
      * {@snippet :
@@ -7303,7 +7385,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRaiseWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XRaiseWindow$MH,"XRaiseWindow");
+        return RuntimeHelper.requireNonNull(constants$181.const$0,"XRaiseWindow");
     }
     /**
      * {@snippet :
@@ -7319,7 +7401,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XReadBitmapFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XReadBitmapFile$MH,"XReadBitmapFile");
+        return RuntimeHelper.requireNonNull(constants$181.const$2,"XReadBitmapFile");
     }
     /**
      * {@snippet :
@@ -7335,7 +7417,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XReadBitmapFileData$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XReadBitmapFileData$MH,"XReadBitmapFileData");
+        return RuntimeHelper.requireNonNull(constants$181.const$4,"XReadBitmapFileData");
     }
     /**
      * {@snippet :
@@ -7351,7 +7433,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRebindKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.XRebindKeysym$MH,"XRebindKeysym");
+        return RuntimeHelper.requireNonNull(constants$181.const$6,"XRebindKeysym");
     }
     /**
      * {@snippet :
@@ -7367,7 +7449,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRecolorCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRecolorCursor$MH,"XRecolorCursor");
+        return RuntimeHelper.requireNonNull(constants$182.const$0,"XRecolorCursor");
     }
     /**
      * {@snippet :
@@ -7383,7 +7465,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRefreshKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRefreshKeyboardMapping$MH,"XRefreshKeyboardMapping");
+        return RuntimeHelper.requireNonNull(constants$182.const$1,"XRefreshKeyboardMapping");
     }
     /**
      * {@snippet :
@@ -7399,7 +7481,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRemoveFromSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRemoveFromSaveSet$MH,"XRemoveFromSaveSet");
+        return RuntimeHelper.requireNonNull(constants$182.const$2,"XRemoveFromSaveSet");
     }
     /**
      * {@snippet :
@@ -7415,7 +7497,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRemoveHost$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRemoveHost$MH,"XRemoveHost");
+        return RuntimeHelper.requireNonNull(constants$182.const$3,"XRemoveHost");
     }
     /**
      * {@snippet :
@@ -7431,7 +7513,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRemoveHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XRemoveHosts$MH,"XRemoveHosts");
+        return RuntimeHelper.requireNonNull(constants$182.const$4,"XRemoveHosts");
     }
     /**
      * {@snippet :
@@ -7447,7 +7529,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XReparentWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$48.XReparentWindow$MH,"XReparentWindow");
+        return RuntimeHelper.requireNonNull(constants$182.const$6,"XReparentWindow");
     }
     /**
      * {@snippet :
@@ -7463,7 +7545,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XResetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XResetScreenSaver$MH,"XResetScreenSaver");
+        return RuntimeHelper.requireNonNull(constants$183.const$0,"XResetScreenSaver");
     }
     /**
      * {@snippet :
@@ -7479,7 +7561,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XResizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XResizeWindow$MH,"XResizeWindow");
+        return RuntimeHelper.requireNonNull(constants$183.const$1,"XResizeWindow");
     }
     /**
      * {@snippet :
@@ -7495,7 +7577,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRestackWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XRestackWindows$MH,"XRestackWindows");
+        return RuntimeHelper.requireNonNull(constants$183.const$2,"XRestackWindows");
     }
     /**
      * {@snippet :
@@ -7511,7 +7593,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRotateBuffers$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XRotateBuffers$MH,"XRotateBuffers");
+        return RuntimeHelper.requireNonNull(constants$183.const$3,"XRotateBuffers");
     }
     /**
      * {@snippet :
@@ -7527,7 +7609,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRotateWindowProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XRotateWindowProperties$MH,"XRotateWindowProperties");
+        return RuntimeHelper.requireNonNull(constants$183.const$4,"XRotateWindowProperties");
     }
     /**
      * {@snippet :
@@ -7543,7 +7625,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XScreenCount$MH() {
-        return RuntimeHelper.requireNonNull(constants$49.XScreenCount$MH,"XScreenCount");
+        return RuntimeHelper.requireNonNull(constants$183.const$5,"XScreenCount");
     }
     /**
      * {@snippet :
@@ -7559,7 +7641,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSelectInput$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSelectInput$MH,"XSelectInput");
+        return RuntimeHelper.requireNonNull(constants$184.const$0,"XSelectInput");
     }
     /**
      * {@snippet :
@@ -7575,7 +7657,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSendEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSendEvent$MH,"XSendEvent");
+        return RuntimeHelper.requireNonNull(constants$184.const$2,"XSendEvent");
     }
     /**
      * {@snippet :
@@ -7591,7 +7673,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSetAccessControl$MH,"XSetAccessControl");
+        return RuntimeHelper.requireNonNull(constants$184.const$3,"XSetAccessControl");
     }
     /**
      * {@snippet :
@@ -7607,7 +7689,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetArcMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSetArcMode$MH,"XSetArcMode");
+        return RuntimeHelper.requireNonNull(constants$184.const$4,"XSetArcMode");
     }
     /**
      * {@snippet :
@@ -7623,7 +7705,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetBackground$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSetBackground$MH,"XSetBackground");
+        return RuntimeHelper.requireNonNull(constants$184.const$6,"XSetBackground");
     }
     /**
      * {@snippet :
@@ -7639,7 +7721,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetClipMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$50.XSetClipMask$MH,"XSetClipMask");
+        return RuntimeHelper.requireNonNull(constants$185.const$0,"XSetClipMask");
     }
     /**
      * {@snippet :
@@ -7655,7 +7737,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetClipOrigin$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetClipOrigin$MH,"XSetClipOrigin");
+        return RuntimeHelper.requireNonNull(constants$185.const$2,"XSetClipOrigin");
     }
     /**
      * {@snippet :
@@ -7671,7 +7753,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetClipRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetClipRectangles$MH,"XSetClipRectangles");
+        return RuntimeHelper.requireNonNull(constants$185.const$4,"XSetClipRectangles");
     }
     /**
      * {@snippet :
@@ -7687,7 +7769,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetCloseDownMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetCloseDownMode$MH,"XSetCloseDownMode");
+        return RuntimeHelper.requireNonNull(constants$185.const$5,"XSetCloseDownMode");
     }
     /**
      * {@snippet :
@@ -7703,7 +7785,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetCommand$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetCommand$MH,"XSetCommand");
+        return RuntimeHelper.requireNonNull(constants$186.const$0,"XSetCommand");
     }
     /**
      * {@snippet :
@@ -7719,7 +7801,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetDashes$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetDashes$MH,"XSetDashes");
+        return RuntimeHelper.requireNonNull(constants$186.const$2,"XSetDashes");
     }
     /**
      * {@snippet :
@@ -7735,7 +7817,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetFillRule$MH() {
-        return RuntimeHelper.requireNonNull(constants$51.XSetFillRule$MH,"XSetFillRule");
+        return RuntimeHelper.requireNonNull(constants$186.const$3,"XSetFillRule");
     }
     /**
      * {@snippet :
@@ -7751,7 +7833,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetFillStyle$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFillStyle$MH,"XSetFillStyle");
+        return RuntimeHelper.requireNonNull(constants$186.const$4,"XSetFillStyle");
     }
     /**
      * {@snippet :
@@ -7767,7 +7849,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFont$MH,"XSetFont");
+        return RuntimeHelper.requireNonNull(constants$186.const$5,"XSetFont");
     }
     /**
      * {@snippet :
@@ -7783,7 +7865,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFontPath$MH,"XSetFontPath");
+        return RuntimeHelper.requireNonNull(constants$187.const$0,"XSetFontPath");
     }
     /**
      * {@snippet :
@@ -7799,7 +7881,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetForeground$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetForeground$MH,"XSetForeground");
+        return RuntimeHelper.requireNonNull(constants$187.const$1,"XSetForeground");
     }
     /**
      * {@snippet :
@@ -7815,7 +7897,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetFunction$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetFunction$MH,"XSetFunction");
+        return RuntimeHelper.requireNonNull(constants$187.const$2,"XSetFunction");
     }
     /**
      * {@snippet :
@@ -7831,7 +7913,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetGraphicsExposures$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.XSetGraphicsExposures$MH,"XSetGraphicsExposures");
+        return RuntimeHelper.requireNonNull(constants$187.const$3,"XSetGraphicsExposures");
     }
     /**
      * {@snippet :
@@ -7847,7 +7929,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetIconName$MH,"XSetIconName");
+        return RuntimeHelper.requireNonNull(constants$187.const$4,"XSetIconName");
     }
     /**
      * {@snippet :
@@ -7863,7 +7945,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetInputFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetInputFocus$MH,"XSetInputFocus");
+        return RuntimeHelper.requireNonNull(constants$187.const$6,"XSetInputFocus");
     }
     /**
      * {@snippet :
@@ -7879,7 +7961,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetLineAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetLineAttributes$MH,"XSetLineAttributes");
+        return RuntimeHelper.requireNonNull(constants$188.const$1,"XSetLineAttributes");
     }
     /**
      * {@snippet :
@@ -7895,7 +7977,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetModifierMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetModifierMapping$MH,"XSetModifierMapping");
+        return RuntimeHelper.requireNonNull(constants$188.const$2,"XSetModifierMapping");
     }
     /**
      * {@snippet :
@@ -7911,7 +7993,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetPlaneMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetPlaneMask$MH,"XSetPlaneMask");
+        return RuntimeHelper.requireNonNull(constants$188.const$3,"XSetPlaneMask");
     }
     /**
      * {@snippet :
@@ -7927,7 +8009,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetPointerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.XSetPointerMapping$MH,"XSetPointerMapping");
+        return RuntimeHelper.requireNonNull(constants$188.const$4,"XSetPointerMapping");
     }
     /**
      * {@snippet :
@@ -7943,7 +8025,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetScreenSaver$MH,"XSetScreenSaver");
+        return RuntimeHelper.requireNonNull(constants$188.const$6,"XSetScreenSaver");
     }
     /**
      * {@snippet :
@@ -7959,7 +8041,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetSelectionOwner$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetSelectionOwner$MH,"XSetSelectionOwner");
+        return RuntimeHelper.requireNonNull(constants$189.const$1,"XSetSelectionOwner");
     }
     /**
      * {@snippet :
@@ -7975,7 +8057,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetState$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetState$MH,"XSetState");
+        return RuntimeHelper.requireNonNull(constants$189.const$3,"XSetState");
     }
     /**
      * {@snippet :
@@ -7991,7 +8073,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetStipple$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetStipple$MH,"XSetStipple");
+        return RuntimeHelper.requireNonNull(constants$189.const$4,"XSetStipple");
     }
     /**
      * {@snippet :
@@ -8007,7 +8089,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetSubwindowMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetSubwindowMode$MH,"XSetSubwindowMode");
+        return RuntimeHelper.requireNonNull(constants$189.const$5,"XSetSubwindowMode");
     }
     /**
      * {@snippet :
@@ -8023,7 +8105,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetTSOrigin$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.XSetTSOrigin$MH,"XSetTSOrigin");
+        return RuntimeHelper.requireNonNull(constants$190.const$0,"XSetTSOrigin");
     }
     /**
      * {@snippet :
@@ -8039,7 +8121,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetTile$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetTile$MH,"XSetTile");
+        return RuntimeHelper.requireNonNull(constants$190.const$1,"XSetTile");
     }
     /**
      * {@snippet :
@@ -8055,7 +8137,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWindowBackground$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackground$MH,"XSetWindowBackground");
+        return RuntimeHelper.requireNonNull(constants$190.const$2,"XSetWindowBackground");
     }
     /**
      * {@snippet :
@@ -8071,7 +8153,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWindowBackgroundPixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBackgroundPixmap$MH,"XSetWindowBackgroundPixmap");
+        return RuntimeHelper.requireNonNull(constants$190.const$3,"XSetWindowBackgroundPixmap");
     }
     /**
      * {@snippet :
@@ -8087,7 +8169,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWindowBorder$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorder$MH,"XSetWindowBorder");
+        return RuntimeHelper.requireNonNull(constants$190.const$4,"XSetWindowBorder");
     }
     /**
      * {@snippet :
@@ -8103,7 +8185,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWindowBorderPixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorderPixmap$MH,"XSetWindowBorderPixmap");
+        return RuntimeHelper.requireNonNull(constants$190.const$5,"XSetWindowBorderPixmap");
     }
     /**
      * {@snippet :
@@ -8119,7 +8201,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWindowBorderWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.XSetWindowBorderWidth$MH,"XSetWindowBorderWidth");
+        return RuntimeHelper.requireNonNull(constants$191.const$0,"XSetWindowBorderWidth");
     }
     /**
      * {@snippet :
@@ -8135,7 +8217,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWindowColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XSetWindowColormap$MH,"XSetWindowColormap");
+        return RuntimeHelper.requireNonNull(constants$191.const$1,"XSetWindowColormap");
     }
     /**
      * {@snippet :
@@ -8151,7 +8233,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStoreBuffer$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreBuffer$MH,"XStoreBuffer");
+        return RuntimeHelper.requireNonNull(constants$191.const$2,"XStoreBuffer");
     }
     /**
      * {@snippet :
@@ -8167,7 +8249,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStoreBytes$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreBytes$MH,"XStoreBytes");
+        return RuntimeHelper.requireNonNull(constants$191.const$3,"XStoreBytes");
     }
     /**
      * {@snippet :
@@ -8183,7 +8265,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStoreColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreColor$MH,"XStoreColor");
+        return RuntimeHelper.requireNonNull(constants$191.const$4,"XStoreColor");
     }
     /**
      * {@snippet :
@@ -8199,7 +8281,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStoreColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreColors$MH,"XStoreColors");
+        return RuntimeHelper.requireNonNull(constants$191.const$5,"XStoreColors");
     }
     /**
      * {@snippet :
@@ -8215,7 +8297,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStoreName$MH() {
-        return RuntimeHelper.requireNonNull(constants$56.XStoreName$MH,"XStoreName");
+        return RuntimeHelper.requireNonNull(constants$192.const$0,"XStoreName");
     }
     /**
      * {@snippet :
@@ -8231,7 +8313,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStoreNamedColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XStoreNamedColor$MH,"XStoreNamedColor");
+        return RuntimeHelper.requireNonNull(constants$192.const$2,"XStoreNamedColor");
     }
     /**
      * {@snippet :
@@ -8247,7 +8329,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSync$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XSync$MH,"XSync");
+        return RuntimeHelper.requireNonNull(constants$192.const$3,"XSync");
     }
     /**
      * {@snippet :
@@ -8263,7 +8345,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XTextExtents$MH,"XTextExtents");
+        return RuntimeHelper.requireNonNull(constants$192.const$5,"XTextExtents");
     }
     /**
      * {@snippet :
@@ -8279,7 +8361,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XTextExtents16$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XTextExtents16$MH,"XTextExtents16");
+        return RuntimeHelper.requireNonNull(constants$193.const$0,"XTextExtents16");
     }
     /**
      * {@snippet :
@@ -8295,7 +8377,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XTextWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XTextWidth$MH,"XTextWidth");
+        return RuntimeHelper.requireNonNull(constants$193.const$1,"XTextWidth");
     }
     /**
      * {@snippet :
@@ -8311,7 +8393,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XTextWidth16$MH() {
-        return RuntimeHelper.requireNonNull(constants$57.XTextWidth16$MH,"XTextWidth16");
+        return RuntimeHelper.requireNonNull(constants$193.const$2,"XTextWidth16");
     }
     /**
      * {@snippet :
@@ -8327,7 +8409,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XTranslateCoordinates$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XTranslateCoordinates$MH,"XTranslateCoordinates");
+        return RuntimeHelper.requireNonNull(constants$193.const$4,"XTranslateCoordinates");
     }
     /**
      * {@snippet :
@@ -8343,7 +8425,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUndefineCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUndefineCursor$MH,"XUndefineCursor");
+        return RuntimeHelper.requireNonNull(constants$193.const$5,"XUndefineCursor");
     }
     /**
      * {@snippet :
@@ -8359,7 +8441,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUngrabButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUngrabButton$MH,"XUngrabButton");
+        return RuntimeHelper.requireNonNull(constants$194.const$0,"XUngrabButton");
     }
     /**
      * {@snippet :
@@ -8375,7 +8457,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUngrabKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUngrabKey$MH,"XUngrabKey");
+        return RuntimeHelper.requireNonNull(constants$194.const$1,"XUngrabKey");
     }
     /**
      * {@snippet :
@@ -8391,7 +8473,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUngrabKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUngrabKeyboard$MH,"XUngrabKeyboard");
+        return RuntimeHelper.requireNonNull(constants$194.const$2,"XUngrabKeyboard");
     }
     /**
      * {@snippet :
@@ -8407,7 +8489,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUngrabPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.XUngrabPointer$MH,"XUngrabPointer");
+        return RuntimeHelper.requireNonNull(constants$194.const$3,"XUngrabPointer");
     }
     /**
      * {@snippet :
@@ -8423,7 +8505,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUngrabServer$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUngrabServer$MH,"XUngrabServer");
+        return RuntimeHelper.requireNonNull(constants$194.const$4,"XUngrabServer");
     }
     /**
      * {@snippet :
@@ -8439,7 +8521,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUninstallColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUninstallColormap$MH,"XUninstallColormap");
+        return RuntimeHelper.requireNonNull(constants$194.const$5,"XUninstallColormap");
     }
     /**
      * {@snippet :
@@ -8455,7 +8537,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnloadFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUnloadFont$MH,"XUnloadFont");
+        return RuntimeHelper.requireNonNull(constants$195.const$0,"XUnloadFont");
     }
     /**
      * {@snippet :
@@ -8471,7 +8553,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnmapSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUnmapSubwindows$MH,"XUnmapSubwindows");
+        return RuntimeHelper.requireNonNull(constants$195.const$1,"XUnmapSubwindows");
     }
     /**
      * {@snippet :
@@ -8487,7 +8569,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnmapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XUnmapWindow$MH,"XUnmapWindow");
+        return RuntimeHelper.requireNonNull(constants$195.const$2,"XUnmapWindow");
     }
     /**
      * {@snippet :
@@ -8503,7 +8585,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XVendorRelease$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.XVendorRelease$MH,"XVendorRelease");
+        return RuntimeHelper.requireNonNull(constants$195.const$3,"XVendorRelease");
     }
     /**
      * {@snippet :
@@ -8519,7 +8601,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWarpPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWarpPointer$MH,"XWarpPointer");
+        return RuntimeHelper.requireNonNull(constants$195.const$5,"XWarpPointer");
     }
     /**
      * {@snippet :
@@ -8535,7 +8617,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWidthMMOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWidthMMOfScreen$MH,"XWidthMMOfScreen");
+        return RuntimeHelper.requireNonNull(constants$196.const$0,"XWidthMMOfScreen");
     }
     /**
      * {@snippet :
@@ -8551,7 +8633,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWidthOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWidthOfScreen$MH,"XWidthOfScreen");
+        return RuntimeHelper.requireNonNull(constants$196.const$1,"XWidthOfScreen");
     }
     /**
      * {@snippet :
@@ -8567,7 +8649,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWindowEvent$MH,"XWindowEvent");
+        return RuntimeHelper.requireNonNull(constants$196.const$2,"XWindowEvent");
     }
     /**
      * {@snippet :
@@ -8583,7 +8665,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWriteBitmapFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XWriteBitmapFile$MH,"XWriteBitmapFile");
+        return RuntimeHelper.requireNonNull(constants$196.const$4,"XWriteBitmapFile");
     }
     /**
      * {@snippet :
@@ -8599,7 +8681,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSupportsLocale$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.XSupportsLocale$MH,"XSupportsLocale");
+        return RuntimeHelper.requireNonNull(constants$196.const$5,"XSupportsLocale");
     }
     /**
      * {@snippet :
@@ -8615,7 +8697,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetLocaleModifiers$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XSetLocaleModifiers$MH,"XSetLocaleModifiers");
+        return RuntimeHelper.requireNonNull(constants$197.const$0,"XSetLocaleModifiers");
     }
     /**
      * {@snippet :
@@ -8631,7 +8713,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XOpenOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XOpenOM$MH,"XOpenOM");
+        return RuntimeHelper.requireNonNull(constants$197.const$2,"XOpenOM");
     }
     /**
      * {@snippet :
@@ -8647,7 +8729,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCloseOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XCloseOM$MH,"XCloseOM");
+        return RuntimeHelper.requireNonNull(constants$197.const$3,"XCloseOM");
     }
     /**
      * {@snippet :
@@ -8663,7 +8745,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetOMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XSetOMValues$MH,"XSetOMValues");
+        return RuntimeHelper.requireNonNull(constants$197.const$4,"XSetOMValues");
     }
     /**
      * {@snippet :
@@ -8679,7 +8761,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetOMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XGetOMValues$MH,"XGetOMValues");
+        return RuntimeHelper.requireNonNull(constants$197.const$5,"XGetOMValues");
     }
     /**
      * {@snippet :
@@ -8695,7 +8777,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayOfOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$61.XDisplayOfOM$MH,"XDisplayOfOM");
+        return RuntimeHelper.requireNonNull(constants$198.const$0,"XDisplayOfOM");
     }
     /**
      * {@snippet :
@@ -8711,7 +8793,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLocaleOfOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XLocaleOfOM$MH,"XLocaleOfOM");
+        return RuntimeHelper.requireNonNull(constants$198.const$1,"XLocaleOfOM");
     }
     /**
      * {@snippet :
@@ -8727,7 +8809,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XCreateOC$MH,"XCreateOC");
+        return RuntimeHelper.requireNonNull(constants$198.const$2,"XCreateOC");
     }
     /**
      * {@snippet :
@@ -8743,7 +8825,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDestroyOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XDestroyOC$MH,"XDestroyOC");
+        return RuntimeHelper.requireNonNull(constants$198.const$3,"XDestroyOC");
     }
     /**
      * {@snippet :
@@ -8759,7 +8841,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XOMOfOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XOMOfOC$MH,"XOMOfOC");
+        return RuntimeHelper.requireNonNull(constants$198.const$4,"XOMOfOC");
     }
     /**
      * {@snippet :
@@ -8775,7 +8857,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XSetOCValues$MH,"XSetOCValues");
+        return RuntimeHelper.requireNonNull(constants$198.const$5,"XSetOCValues");
     }
     /**
      * {@snippet :
@@ -8791,7 +8873,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$62.XGetOCValues$MH,"XGetOCValues");
+        return RuntimeHelper.requireNonNull(constants$199.const$0,"XGetOCValues");
     }
     /**
      * {@snippet :
@@ -8807,7 +8889,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XCreateFontSet$MH,"XCreateFontSet");
+        return RuntimeHelper.requireNonNull(constants$199.const$2,"XCreateFontSet");
     }
     /**
      * {@snippet :
@@ -8823,7 +8905,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XFreeFontSet$MH,"XFreeFontSet");
+        return RuntimeHelper.requireNonNull(constants$199.const$3,"XFreeFontSet");
     }
     /**
      * {@snippet :
@@ -8839,7 +8921,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFontsOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XFontsOfFontSet$MH,"XFontsOfFontSet");
+        return RuntimeHelper.requireNonNull(constants$199.const$4,"XFontsOfFontSet");
     }
     /**
      * {@snippet :
@@ -8855,7 +8937,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XBaseFontNameListOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XBaseFontNameListOfFontSet$MH,"XBaseFontNameListOfFontSet");
+        return RuntimeHelper.requireNonNull(constants$199.const$5,"XBaseFontNameListOfFontSet");
     }
     /**
      * {@snippet :
@@ -8871,7 +8953,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLocaleOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XLocaleOfFontSet$MH,"XLocaleOfFontSet");
+        return RuntimeHelper.requireNonNull(constants$200.const$0,"XLocaleOfFontSet");
     }
     /**
      * {@snippet :
@@ -8887,7 +8969,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XContextDependentDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.XContextDependentDrawing$MH,"XContextDependentDrawing");
+        return RuntimeHelper.requireNonNull(constants$200.const$1,"XContextDependentDrawing");
     }
     /**
      * {@snippet :
@@ -8903,7 +8985,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDirectionalDependentDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XDirectionalDependentDrawing$MH,"XDirectionalDependentDrawing");
+        return RuntimeHelper.requireNonNull(constants$200.const$2,"XDirectionalDependentDrawing");
     }
     /**
      * {@snippet :
@@ -8919,7 +9001,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XContextualDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XContextualDrawing$MH,"XContextualDrawing");
+        return RuntimeHelper.requireNonNull(constants$200.const$3,"XContextualDrawing");
     }
     /**
      * {@snippet :
@@ -8935,7 +9017,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XExtentsOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XExtentsOfFontSet$MH,"XExtentsOfFontSet");
+        return RuntimeHelper.requireNonNull(constants$200.const$4,"XExtentsOfFontSet");
     }
     /**
      * {@snippet :
@@ -8951,7 +9033,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbTextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XmbTextEscapement$MH,"XmbTextEscapement");
+        return RuntimeHelper.requireNonNull(constants$200.const$5,"XmbTextEscapement");
     }
     /**
      * {@snippet :
@@ -8967,7 +9049,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcTextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.XwcTextEscapement$MH,"XwcTextEscapement");
+        return RuntimeHelper.requireNonNull(constants$201.const$0,"XwcTextEscapement");
     }
     /**
      * {@snippet :
@@ -8983,7 +9065,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8TextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.Xutf8TextEscapement$MH,"Xutf8TextEscapement");
+        return RuntimeHelper.requireNonNull(constants$201.const$1,"Xutf8TextEscapement");
     }
     /**
      * {@snippet :
@@ -8999,7 +9081,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XmbTextExtents$MH,"XmbTextExtents");
+        return RuntimeHelper.requireNonNull(constants$201.const$3,"XmbTextExtents");
     }
     /**
      * {@snippet :
@@ -9015,7 +9097,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XwcTextExtents$MH,"XwcTextExtents");
+        return RuntimeHelper.requireNonNull(constants$201.const$4,"XwcTextExtents");
     }
     /**
      * {@snippet :
@@ -9031,7 +9113,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8TextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.Xutf8TextExtents$MH,"Xutf8TextExtents");
+        return RuntimeHelper.requireNonNull(constants$201.const$5,"Xutf8TextExtents");
     }
     /**
      * {@snippet :
@@ -9047,7 +9129,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbTextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XmbTextPerCharExtents$MH,"XmbTextPerCharExtents");
+        return RuntimeHelper.requireNonNull(constants$202.const$1,"XmbTextPerCharExtents");
     }
     /**
      * {@snippet :
@@ -9063,7 +9145,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcTextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.XwcTextPerCharExtents$MH,"XwcTextPerCharExtents");
+        return RuntimeHelper.requireNonNull(constants$202.const$2,"XwcTextPerCharExtents");
     }
     /**
      * {@snippet :
@@ -9079,7 +9161,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8TextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.Xutf8TextPerCharExtents$MH,"Xutf8TextPerCharExtents");
+        return RuntimeHelper.requireNonNull(constants$202.const$3,"Xutf8TextPerCharExtents");
     }
     /**
      * {@snippet :
@@ -9095,7 +9177,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XmbDrawText$MH,"XmbDrawText");
+        return RuntimeHelper.requireNonNull(constants$202.const$5,"XmbDrawText");
     }
     /**
      * {@snippet :
@@ -9111,7 +9193,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XwcDrawText$MH,"XwcDrawText");
+        return RuntimeHelper.requireNonNull(constants$203.const$0,"XwcDrawText");
     }
     /**
      * {@snippet :
@@ -9127,7 +9209,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8DrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.Xutf8DrawText$MH,"Xutf8DrawText");
+        return RuntimeHelper.requireNonNull(constants$203.const$1,"Xutf8DrawText");
     }
     /**
      * {@snippet :
@@ -9143,7 +9225,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XmbDrawString$MH,"XmbDrawString");
+        return RuntimeHelper.requireNonNull(constants$203.const$3,"XmbDrawString");
     }
     /**
      * {@snippet :
@@ -9159,7 +9241,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.XwcDrawString$MH,"XwcDrawString");
+        return RuntimeHelper.requireNonNull(constants$203.const$4,"XwcDrawString");
     }
     /**
      * {@snippet :
@@ -9175,7 +9257,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8DrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.Xutf8DrawString$MH,"Xutf8DrawString");
+        return RuntimeHelper.requireNonNull(constants$203.const$5,"Xutf8DrawString");
     }
     /**
      * {@snippet :
@@ -9191,7 +9273,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XmbDrawImageString$MH,"XmbDrawImageString");
+        return RuntimeHelper.requireNonNull(constants$204.const$0,"XmbDrawImageString");
     }
     /**
      * {@snippet :
@@ -9207,7 +9289,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XwcDrawImageString$MH,"XwcDrawImageString");
+        return RuntimeHelper.requireNonNull(constants$204.const$1,"XwcDrawImageString");
     }
     /**
      * {@snippet :
@@ -9223,7 +9305,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8DrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.Xutf8DrawImageString$MH,"Xutf8DrawImageString");
+        return RuntimeHelper.requireNonNull(constants$204.const$2,"Xutf8DrawImageString");
     }
     /**
      * {@snippet :
@@ -9239,7 +9321,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XOpenIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XOpenIM$MH,"XOpenIM");
+        return RuntimeHelper.requireNonNull(constants$204.const$3,"XOpenIM");
     }
     /**
      * {@snippet :
@@ -9255,7 +9337,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCloseIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XCloseIM$MH,"XCloseIM");
+        return RuntimeHelper.requireNonNull(constants$204.const$4,"XCloseIM");
     }
     /**
      * {@snippet :
@@ -9271,7 +9353,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetIMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.XGetIMValues$MH,"XGetIMValues");
+        return RuntimeHelper.requireNonNull(constants$204.const$5,"XGetIMValues");
     }
     /**
      * {@snippet :
@@ -9287,7 +9369,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetIMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XSetIMValues$MH,"XSetIMValues");
+        return RuntimeHelper.requireNonNull(constants$205.const$0,"XSetIMValues");
     }
     /**
      * {@snippet :
@@ -9303,7 +9385,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDisplayOfIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XDisplayOfIM$MH,"XDisplayOfIM");
+        return RuntimeHelper.requireNonNull(constants$205.const$1,"XDisplayOfIM");
     }
     /**
      * {@snippet :
@@ -9319,7 +9401,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLocaleOfIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XLocaleOfIM$MH,"XLocaleOfIM");
+        return RuntimeHelper.requireNonNull(constants$205.const$2,"XLocaleOfIM");
     }
     /**
      * {@snippet :
@@ -9335,7 +9417,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XCreateIC$MH,"XCreateIC");
+        return RuntimeHelper.requireNonNull(constants$205.const$3,"XCreateIC");
     }
     /**
      * {@snippet :
@@ -9351,7 +9433,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDestroyIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XDestroyIC$MH,"XDestroyIC");
+        return RuntimeHelper.requireNonNull(constants$205.const$4,"XDestroyIC");
     }
     /**
      * {@snippet :
@@ -9367,7 +9449,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetICFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.XSetICFocus$MH,"XSetICFocus");
+        return RuntimeHelper.requireNonNull(constants$205.const$5,"XSetICFocus");
     }
     /**
      * {@snippet :
@@ -9383,7 +9465,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnsetICFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XUnsetICFocus$MH,"XUnsetICFocus");
+        return RuntimeHelper.requireNonNull(constants$206.const$0,"XUnsetICFocus");
     }
     /**
      * {@snippet :
@@ -9399,7 +9481,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XwcResetIC$MH,"XwcResetIC");
+        return RuntimeHelper.requireNonNull(constants$206.const$1,"XwcResetIC");
     }
     /**
      * {@snippet :
@@ -9415,7 +9497,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XmbResetIC$MH,"XmbResetIC");
+        return RuntimeHelper.requireNonNull(constants$206.const$2,"XmbResetIC");
     }
     /**
      * {@snippet :
@@ -9431,7 +9513,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8ResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.Xutf8ResetIC$MH,"Xutf8ResetIC");
+        return RuntimeHelper.requireNonNull(constants$206.const$3,"Xutf8ResetIC");
     }
     /**
      * {@snippet :
@@ -9447,7 +9529,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XSetICValues$MH,"XSetICValues");
+        return RuntimeHelper.requireNonNull(constants$206.const$4,"XSetICValues");
     }
     /**
      * {@snippet :
@@ -9463,7 +9545,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.XGetICValues$MH,"XGetICValues");
+        return RuntimeHelper.requireNonNull(constants$206.const$5,"XGetICValues");
     }
     /**
      * {@snippet :
@@ -9479,7 +9561,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XIMOfIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XIMOfIC$MH,"XIMOfIC");
+        return RuntimeHelper.requireNonNull(constants$207.const$0,"XIMOfIC");
     }
     /**
      * {@snippet :
@@ -9495,7 +9577,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFilterEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XFilterEvent$MH,"XFilterEvent");
+        return RuntimeHelper.requireNonNull(constants$207.const$1,"XFilterEvent");
     }
     /**
      * {@snippet :
@@ -9511,7 +9593,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XmbLookupString$MH,"XmbLookupString");
+        return RuntimeHelper.requireNonNull(constants$207.const$3,"XmbLookupString");
     }
     /**
      * {@snippet :
@@ -9527,7 +9609,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XwcLookupString$MH,"XwcLookupString");
+        return RuntimeHelper.requireNonNull(constants$207.const$4,"XwcLookupString");
     }
     /**
      * {@snippet :
@@ -9543,7 +9625,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8LookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.Xutf8LookupString$MH,"Xutf8LookupString");
+        return RuntimeHelper.requireNonNull(constants$207.const$5,"Xutf8LookupString");
     }
     /**
      * {@snippet :
@@ -9559,7 +9641,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XVaCreateNestedList$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.XVaCreateNestedList$MH,"XVaCreateNestedList");
+        return RuntimeHelper.requireNonNull(constants$208.const$0,"XVaCreateNestedList");
     }
     /**
      * {@snippet :
@@ -9575,7 +9657,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRegisterIMInstantiateCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XRegisterIMInstantiateCallback$MH,"XRegisterIMInstantiateCallback");
+        return RuntimeHelper.requireNonNull(constants$208.const$1,"XRegisterIMInstantiateCallback");
     }
     /**
      * {@snippet :
@@ -9591,7 +9673,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnregisterIMInstantiateCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XUnregisterIMInstantiateCallback$MH,"XUnregisterIMInstantiateCallback");
+        return RuntimeHelper.requireNonNull(constants$208.const$2,"XUnregisterIMInstantiateCallback");
     }
     /**
      * {@snippet :
@@ -9607,7 +9689,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XInternalConnectionNumbers$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XInternalConnectionNumbers$MH,"XInternalConnectionNumbers");
+        return RuntimeHelper.requireNonNull(constants$209.const$0,"XInternalConnectionNumbers");
     }
     /**
      * {@snippet :
@@ -9623,7 +9705,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XProcessInternalConnection$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.XProcessInternalConnection$MH,"XProcessInternalConnection");
+        return RuntimeHelper.requireNonNull(constants$209.const$2,"XProcessInternalConnection");
     }
     /**
      * {@snippet :
@@ -9639,7 +9721,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAddConnectionWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XAddConnectionWatch$MH,"XAddConnectionWatch");
+        return RuntimeHelper.requireNonNull(constants$209.const$3,"XAddConnectionWatch");
     }
     /**
      * {@snippet :
@@ -9655,7 +9737,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRemoveConnectionWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XRemoveConnectionWatch$MH,"XRemoveConnectionWatch");
+        return RuntimeHelper.requireNonNull(constants$209.const$4,"XRemoveConnectionWatch");
     }
     /**
      * {@snippet :
@@ -9671,7 +9753,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetAuthorization$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XSetAuthorization$MH,"XSetAuthorization");
+        return RuntimeHelper.requireNonNull(constants$209.const$6,"XSetAuthorization");
     }
     /**
      * {@snippet :
@@ -9687,7 +9769,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle _Xmbtowc$MH() {
-        return RuntimeHelper.requireNonNull(constants$72._Xmbtowc$MH,"_Xmbtowc");
+        return RuntimeHelper.requireNonNull(constants$210.const$0,"_Xmbtowc");
     }
     /**
      * {@snippet :
@@ -9703,7 +9785,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle _Xwctomb$MH() {
-        return RuntimeHelper.requireNonNull(constants$72._Xwctomb$MH,"_Xwctomb");
+        return RuntimeHelper.requireNonNull(constants$210.const$1,"_Xwctomb");
     }
     /**
      * {@snippet :
@@ -9719,7 +9801,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetEventData$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.XGetEventData$MH,"XGetEventData");
+        return RuntimeHelper.requireNonNull(constants$210.const$2,"XGetEventData");
     }
     /**
      * {@snippet :
@@ -9735,7 +9817,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFreeEventData$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XFreeEventData$MH,"XFreeEventData");
+        return RuntimeHelper.requireNonNull(constants$210.const$3,"XFreeEventData");
     }
     /**
      * {@snippet :
@@ -9795,15 +9877,15 @@ public class Xlib_h_2 extends Xlib_h_1 {
      * typedef struct _XRegion* Region;
      * }
      */
-    public static final OfAddress Region = Constants$root.C_POINTER$LAYOUT;
+    public static final AddressLayout Region = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * typedef int XContext;
      * }
      */
-    public static final OfInt XContext = Constants$root.C_INT$LAYOUT;
+    public static final OfInt XContext = JAVA_INT;
     public static MethodHandle XAllocClassHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XAllocClassHint$MH,"XAllocClassHint");
+        return RuntimeHelper.requireNonNull(constants$222.const$3,"XAllocClassHint");
     }
     /**
      * {@snippet :
@@ -9819,7 +9901,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocIconSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XAllocIconSize$MH,"XAllocIconSize");
+        return RuntimeHelper.requireNonNull(constants$222.const$4,"XAllocIconSize");
     }
     /**
      * {@snippet :
@@ -9835,7 +9917,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XAllocSizeHints$MH,"XAllocSizeHints");
+        return RuntimeHelper.requireNonNull(constants$222.const$5,"XAllocSizeHints");
     }
     /**
      * {@snippet :
@@ -9851,7 +9933,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocStandardColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XAllocStandardColormap$MH,"XAllocStandardColormap");
+        return RuntimeHelper.requireNonNull(constants$223.const$0,"XAllocStandardColormap");
     }
     /**
      * {@snippet :
@@ -9867,7 +9949,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XAllocWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.XAllocWMHints$MH,"XAllocWMHints");
+        return RuntimeHelper.requireNonNull(constants$223.const$1,"XAllocWMHints");
     }
     /**
      * {@snippet :
@@ -9883,7 +9965,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XClipBox$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XClipBox$MH,"XClipBox");
+        return RuntimeHelper.requireNonNull(constants$223.const$2,"XClipBox");
     }
     /**
      * {@snippet :
@@ -9899,7 +9981,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XCreateRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XCreateRegion$MH,"XCreateRegion");
+        return RuntimeHelper.requireNonNull(constants$223.const$3,"XCreateRegion");
     }
     /**
      * {@snippet :
@@ -9915,7 +9997,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDefaultString$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XDefaultString$MH,"XDefaultString");
+        return RuntimeHelper.requireNonNull(constants$223.const$4,"XDefaultString");
     }
     /**
      * {@snippet :
@@ -9931,7 +10013,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDeleteContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XDeleteContext$MH,"XDeleteContext");
+        return RuntimeHelper.requireNonNull(constants$223.const$5,"XDeleteContext");
     }
     /**
      * {@snippet :
@@ -9947,7 +10029,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XDestroyRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XDestroyRegion$MH,"XDestroyRegion");
+        return RuntimeHelper.requireNonNull(constants$224.const$0,"XDestroyRegion");
     }
     /**
      * {@snippet :
@@ -9963,7 +10045,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XEmptyRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.XEmptyRegion$MH,"XEmptyRegion");
+        return RuntimeHelper.requireNonNull(constants$224.const$1,"XEmptyRegion");
     }
     /**
      * {@snippet :
@@ -9979,7 +10061,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XEqualRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XEqualRegion$MH,"XEqualRegion");
+        return RuntimeHelper.requireNonNull(constants$224.const$2,"XEqualRegion");
     }
     /**
      * {@snippet :
@@ -9995,7 +10077,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XFindContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XFindContext$MH,"XFindContext");
+        return RuntimeHelper.requireNonNull(constants$224.const$3,"XFindContext");
     }
     /**
      * {@snippet :
@@ -10011,7 +10093,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetClassHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XGetClassHint$MH,"XGetClassHint");
+        return RuntimeHelper.requireNonNull(constants$224.const$4,"XGetClassHint");
     }
     /**
      * {@snippet :
@@ -10027,7 +10109,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetIconSizes$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XGetIconSizes$MH,"XGetIconSizes");
+        return RuntimeHelper.requireNonNull(constants$224.const$5,"XGetIconSizes");
     }
     /**
      * {@snippet :
@@ -10043,7 +10125,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XGetNormalHints$MH,"XGetNormalHints");
+        return RuntimeHelper.requireNonNull(constants$225.const$0,"XGetNormalHints");
     }
     /**
      * {@snippet :
@@ -10059,7 +10141,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetRGBColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.XGetRGBColormaps$MH,"XGetRGBColormaps");
+        return RuntimeHelper.requireNonNull(constants$225.const$2,"XGetRGBColormaps");
     }
     /**
      * {@snippet :
@@ -10075,7 +10157,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetSizeHints$MH,"XGetSizeHints");
+        return RuntimeHelper.requireNonNull(constants$225.const$4,"XGetSizeHints");
     }
     /**
      * {@snippet :
@@ -10091,7 +10173,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetStandardColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetStandardColormap$MH,"XGetStandardColormap");
+        return RuntimeHelper.requireNonNull(constants$225.const$5,"XGetStandardColormap");
     }
     /**
      * {@snippet :
@@ -10107,7 +10189,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetTextProperty$MH,"XGetTextProperty");
+        return RuntimeHelper.requireNonNull(constants$226.const$0,"XGetTextProperty");
     }
     /**
      * {@snippet :
@@ -10123,7 +10205,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetVisualInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetVisualInfo$MH,"XGetVisualInfo");
+        return RuntimeHelper.requireNonNull(constants$226.const$2,"XGetVisualInfo");
     }
     /**
      * {@snippet :
@@ -10139,7 +10221,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMClientMachine$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetWMClientMachine$MH,"XGetWMClientMachine");
+        return RuntimeHelper.requireNonNull(constants$226.const$3,"XGetWMClientMachine");
     }
     /**
      * {@snippet :
@@ -10155,7 +10237,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.XGetWMHints$MH,"XGetWMHints");
+        return RuntimeHelper.requireNonNull(constants$226.const$4,"XGetWMHints");
     }
     /**
      * {@snippet :
@@ -10171,7 +10253,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XGetWMIconName$MH,"XGetWMIconName");
+        return RuntimeHelper.requireNonNull(constants$226.const$5,"XGetWMIconName");
     }
     /**
      * {@snippet :
@@ -10187,7 +10269,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMName$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XGetWMName$MH,"XGetWMName");
+        return RuntimeHelper.requireNonNull(constants$227.const$0,"XGetWMName");
     }
     /**
      * {@snippet :
@@ -10203,7 +10285,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XGetWMNormalHints$MH,"XGetWMNormalHints");
+        return RuntimeHelper.requireNonNull(constants$227.const$1,"XGetWMNormalHints");
     }
     /**
      * {@snippet :
@@ -10219,7 +10301,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetWMSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XGetWMSizeHints$MH,"XGetWMSizeHints");
+        return RuntimeHelper.requireNonNull(constants$227.const$2,"XGetWMSizeHints");
     }
     /**
      * {@snippet :
@@ -10235,7 +10317,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XGetZoomHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XGetZoomHints$MH,"XGetZoomHints");
+        return RuntimeHelper.requireNonNull(constants$227.const$3,"XGetZoomHints");
     }
     /**
      * {@snippet :
@@ -10251,7 +10333,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XIntersectRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.XIntersectRegion$MH,"XIntersectRegion");
+        return RuntimeHelper.requireNonNull(constants$227.const$4,"XIntersectRegion");
     }
     /**
      * {@snippet :
@@ -10267,7 +10349,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XConvertCase$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XConvertCase$MH,"XConvertCase");
+        return RuntimeHelper.requireNonNull(constants$227.const$6,"XConvertCase");
     }
     /**
      * {@snippet :
@@ -10283,7 +10365,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XLookupString$MH,"XLookupString");
+        return RuntimeHelper.requireNonNull(constants$228.const$0,"XLookupString");
     }
     /**
      * {@snippet :
@@ -10299,7 +10381,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XMatchVisualInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XMatchVisualInfo$MH,"XMatchVisualInfo");
+        return RuntimeHelper.requireNonNull(constants$228.const$2,"XMatchVisualInfo");
     }
     /**
      * {@snippet :
@@ -10315,7 +10397,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XOffsetRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XOffsetRegion$MH,"XOffsetRegion");
+        return RuntimeHelper.requireNonNull(constants$228.const$4,"XOffsetRegion");
     }
     /**
      * {@snippet :
@@ -10331,7 +10413,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPointInRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XPointInRegion$MH,"XPointInRegion");
+        return RuntimeHelper.requireNonNull(constants$228.const$5,"XPointInRegion");
     }
     /**
      * {@snippet :
@@ -10347,7 +10429,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XPolygonRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.XPolygonRegion$MH,"XPolygonRegion");
+        return RuntimeHelper.requireNonNull(constants$229.const$1,"XPolygonRegion");
     }
     /**
      * {@snippet :
@@ -10363,7 +10445,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XRectInRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XRectInRegion$MH,"XRectInRegion");
+        return RuntimeHelper.requireNonNull(constants$229.const$2,"XRectInRegion");
     }
     /**
      * {@snippet :
@@ -10379,7 +10461,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSaveContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XSaveContext$MH,"XSaveContext");
+        return RuntimeHelper.requireNonNull(constants$229.const$3,"XSaveContext");
     }
     /**
      * {@snippet :
@@ -10395,7 +10477,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetClassHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XSetClassHint$MH,"XSetClassHint");
+        return RuntimeHelper.requireNonNull(constants$229.const$4,"XSetClassHint");
     }
     /**
      * {@snippet :
@@ -10411,7 +10493,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetIconSizes$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XSetIconSizes$MH,"XSetIconSizes");
+        return RuntimeHelper.requireNonNull(constants$229.const$5,"XSetIconSizes");
     }
     /**
      * {@snippet :
@@ -10427,7 +10509,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XSetNormalHints$MH,"XSetNormalHints");
+        return RuntimeHelper.requireNonNull(constants$230.const$0,"XSetNormalHints");
     }
     /**
      * {@snippet :
@@ -10443,7 +10525,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetRGBColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.XSetRGBColormaps$MH,"XSetRGBColormaps");
+        return RuntimeHelper.requireNonNull(constants$230.const$2,"XSetRGBColormaps");
     }
     /**
      * {@snippet :
@@ -10459,7 +10541,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetSizeHints$MH,"XSetSizeHints");
+        return RuntimeHelper.requireNonNull(constants$230.const$3,"XSetSizeHints");
     }
     /**
      * {@snippet :
@@ -10475,7 +10557,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetStandardProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetStandardProperties$MH,"XSetStandardProperties");
+        return RuntimeHelper.requireNonNull(constants$230.const$5,"XSetStandardProperties");
     }
     /**
      * {@snippet :
@@ -10491,7 +10573,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetTextProperty$MH,"XSetTextProperty");
+        return RuntimeHelper.requireNonNull(constants$231.const$1,"XSetTextProperty");
     }
     /**
      * {@snippet :
@@ -10507,7 +10589,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMClientMachine$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetWMClientMachine$MH,"XSetWMClientMachine");
+        return RuntimeHelper.requireNonNull(constants$231.const$3,"XSetWMClientMachine");
     }
     /**
      * {@snippet :
@@ -10523,7 +10605,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetWMHints$MH,"XSetWMHints");
+        return RuntimeHelper.requireNonNull(constants$231.const$4,"XSetWMHints");
     }
     /**
      * {@snippet :
@@ -10539,7 +10621,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.XSetWMIconName$MH,"XSetWMIconName");
+        return RuntimeHelper.requireNonNull(constants$231.const$5,"XSetWMIconName");
     }
     /**
      * {@snippet :
@@ -10555,7 +10637,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMName$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.XSetWMName$MH,"XSetWMName");
+        return RuntimeHelper.requireNonNull(constants$232.const$0,"XSetWMName");
     }
     /**
      * {@snippet :
@@ -10571,7 +10653,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.XSetWMNormalHints$MH,"XSetWMNormalHints");
+        return RuntimeHelper.requireNonNull(constants$232.const$1,"XSetWMNormalHints");
     }
     /**
      * {@snippet :
@@ -10587,7 +10669,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.XSetWMProperties$MH,"XSetWMProperties");
+        return RuntimeHelper.requireNonNull(constants$232.const$3,"XSetWMProperties");
     }
     /**
      * {@snippet :
@@ -10603,7 +10685,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbSetWMProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.XmbSetWMProperties$MH,"XmbSetWMProperties");
+        return RuntimeHelper.requireNonNull(constants$232.const$4,"XmbSetWMProperties");
     }
     /**
      * {@snippet :
@@ -10619,7 +10701,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8SetWMProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.Xutf8SetWMProperties$MH,"Xutf8SetWMProperties");
+        return RuntimeHelper.requireNonNull(constants$232.const$5,"Xutf8SetWMProperties");
     }
     /**
      * {@snippet :
@@ -10635,7 +10717,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetWMSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.XSetWMSizeHints$MH,"XSetWMSizeHints");
+        return RuntimeHelper.requireNonNull(constants$233.const$0,"XSetWMSizeHints");
     }
     /**
      * {@snippet :
@@ -10651,7 +10733,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.XSetRegion$MH,"XSetRegion");
+        return RuntimeHelper.requireNonNull(constants$233.const$1,"XSetRegion");
     }
     /**
      * {@snippet :
@@ -10667,7 +10749,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetStandardColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.XSetStandardColormap$MH,"XSetStandardColormap");
+        return RuntimeHelper.requireNonNull(constants$233.const$2,"XSetStandardColormap");
     }
     /**
      * {@snippet :
@@ -10683,7 +10765,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSetZoomHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.XSetZoomHints$MH,"XSetZoomHints");
+        return RuntimeHelper.requireNonNull(constants$233.const$3,"XSetZoomHints");
     }
     /**
      * {@snippet :
@@ -10699,7 +10781,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XShrinkRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.XShrinkRegion$MH,"XShrinkRegion");
+        return RuntimeHelper.requireNonNull(constants$233.const$4,"XShrinkRegion");
     }
     /**
      * {@snippet :
@@ -10715,7 +10797,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XStringListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.XStringListToTextProperty$MH,"XStringListToTextProperty");
+        return RuntimeHelper.requireNonNull(constants$233.const$5,"XStringListToTextProperty");
     }
     /**
      * {@snippet :
@@ -10731,7 +10813,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XSubtractRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.XSubtractRegion$MH,"XSubtractRegion");
+        return RuntimeHelper.requireNonNull(constants$234.const$0,"XSubtractRegion");
     }
     /**
      * {@snippet :
@@ -10747,7 +10829,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbTextListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.XmbTextListToTextProperty$MH,"XmbTextListToTextProperty");
+        return RuntimeHelper.requireNonNull(constants$234.const$1,"XmbTextListToTextProperty");
     }
     /**
      * {@snippet :
@@ -10763,7 +10845,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcTextListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.XwcTextListToTextProperty$MH,"XwcTextListToTextProperty");
+        return RuntimeHelper.requireNonNull(constants$234.const$2,"XwcTextListToTextProperty");
     }
     /**
      * {@snippet :
@@ -10779,7 +10861,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8TextListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.Xutf8TextListToTextProperty$MH,"Xutf8TextListToTextProperty");
+        return RuntimeHelper.requireNonNull(constants$234.const$3,"Xutf8TextListToTextProperty");
     }
     /**
      * {@snippet :
@@ -10795,7 +10877,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcFreeStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.XwcFreeStringList$MH,"XwcFreeStringList");
+        return RuntimeHelper.requireNonNull(constants$234.const$4,"XwcFreeStringList");
     }
     /**
      * {@snippet :
@@ -10811,7 +10893,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XTextPropertyToStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.XTextPropertyToStringList$MH,"XTextPropertyToStringList");
+        return RuntimeHelper.requireNonNull(constants$234.const$5,"XTextPropertyToStringList");
     }
     /**
      * {@snippet :
@@ -10827,7 +10909,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XmbTextPropertyToTextList$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.XmbTextPropertyToTextList$MH,"XmbTextPropertyToTextList");
+        return RuntimeHelper.requireNonNull(constants$235.const$0,"XmbTextPropertyToTextList");
     }
     /**
      * {@snippet :
@@ -10843,7 +10925,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XwcTextPropertyToTextList$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.XwcTextPropertyToTextList$MH,"XwcTextPropertyToTextList");
+        return RuntimeHelper.requireNonNull(constants$235.const$1,"XwcTextPropertyToTextList");
     }
     /**
      * {@snippet :
@@ -10859,7 +10941,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle Xutf8TextPropertyToTextList$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.Xutf8TextPropertyToTextList$MH,"Xutf8TextPropertyToTextList");
+        return RuntimeHelper.requireNonNull(constants$235.const$2,"Xutf8TextPropertyToTextList");
     }
     /**
      * {@snippet :
@@ -10875,7 +10957,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnionRectWithRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.XUnionRectWithRegion$MH,"XUnionRectWithRegion");
+        return RuntimeHelper.requireNonNull(constants$235.const$3,"XUnionRectWithRegion");
     }
     /**
      * {@snippet :
@@ -10891,7 +10973,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XUnionRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.XUnionRegion$MH,"XUnionRegion");
+        return RuntimeHelper.requireNonNull(constants$235.const$4,"XUnionRegion");
     }
     /**
      * {@snippet :
@@ -10907,7 +10989,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XWMGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.XWMGeometry$MH,"XWMGeometry");
+        return RuntimeHelper.requireNonNull(constants$235.const$6,"XWMGeometry");
     }
     /**
      * {@snippet :
@@ -10923,7 +11005,7 @@ public class Xlib_h_2 extends Xlib_h_1 {
         }
     }
     public static MethodHandle XXorRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.XXorRegion$MH,"XXorRegion");
+        return RuntimeHelper.requireNonNull(constants$236.const$0,"XXorRegion");
     }
     /**
      * {@snippet :
@@ -10948,19 +11030,35 @@ public class Xlib_h_2 extends Xlib_h_1 {
     }
     /**
      * {@snippet :
-     * #define __STDC_ISO_10646__ 201706
-     * }
-     */
-    public static long __STDC_ISO_10646__() {
-        return 201706L;
-    }
-    /**
-     * {@snippet :
      * #define __TIMESIZE 64
      * }
      */
     public static int __TIMESIZE() {
         return (int)64L;
+    }
+    /**
+     * {@snippet :
+     * #define __STDC_IEC_60559_BFP__ 201404
+     * }
+     */
+    public static long __STDC_IEC_60559_BFP__() {
+        return 201404L;
+    }
+    /**
+     * {@snippet :
+     * #define __STDC_IEC_60559_COMPLEX__ 201404
+     * }
+     */
+    public static long __STDC_IEC_60559_COMPLEX__() {
+        return 201404L;
+    }
+    /**
+     * {@snippet :
+     * #define __STDC_ISO_10646__ 201706
+     * }
+     */
+    public static long __STDC_ISO_10646__() {
+        return 201706L;
     }
     /**
      * {@snippet :
@@ -11009,14 +11107,6 @@ public class Xlib_h_2 extends Xlib_h_1 {
      */
     public static int BYTE_ORDER() {
         return (int)1234L;
-    }
-    /**
-     * {@snippet :
-     * #define __FD_ZERO_STOS "stosq"
-     * }
-     */
-    public static MemorySegment __FD_ZERO_STOS() {
-        return constants$85.__FD_ZERO_STOS$SEGMENT;
     }
     /**
      * {@snippet :
@@ -11529,94 +11619,6 @@ public class Xlib_h_2 extends Xlib_h_1 {
      */
     public static long CWBitGravity() {
         return 16L;
-    }
-    /**
-     * {@snippet :
-     * #define CWWinGravity 32
-     * }
-     */
-    public static long CWWinGravity() {
-        return 32L;
-    }
-    /**
-     * {@snippet :
-     * #define CWBackingStore 64
-     * }
-     */
-    public static long CWBackingStore() {
-        return 64L;
-    }
-    /**
-     * {@snippet :
-     * #define CWBackingPlanes 128
-     * }
-     */
-    public static long CWBackingPlanes() {
-        return 128L;
-    }
-    /**
-     * {@snippet :
-     * #define CWBackingPixel 256
-     * }
-     */
-    public static long CWBackingPixel() {
-        return 256L;
-    }
-    /**
-     * {@snippet :
-     * #define CWOverrideRedirect 512
-     * }
-     */
-    public static long CWOverrideRedirect() {
-        return 512L;
-    }
-    /**
-     * {@snippet :
-     * #define CWSaveUnder 1024
-     * }
-     */
-    public static long CWSaveUnder() {
-        return 1024L;
-    }
-    /**
-     * {@snippet :
-     * #define CWEventMask 2048
-     * }
-     */
-    public static long CWEventMask() {
-        return 2048L;
-    }
-    /**
-     * {@snippet :
-     * #define CWDontPropagate 4096
-     * }
-     */
-    public static long CWDontPropagate() {
-        return 4096L;
-    }
-    /**
-     * {@snippet :
-     * #define CWColormap 8192
-     * }
-     */
-    public static long CWColormap() {
-        return 8192L;
-    }
-    /**
-     * {@snippet :
-     * #define CWCursor 16384
-     * }
-     */
-    public static long CWCursor() {
-        return 16384L;
-    }
-    /**
-     * {@snippet :
-     * #define CWX 1
-     * }
-     */
-    public static int CWX() {
-        return (int)1L;
     }
 }
 

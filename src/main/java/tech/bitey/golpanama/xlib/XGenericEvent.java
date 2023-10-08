@@ -21,22 +21,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XGenericEvent {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("type"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
-        Constants$root.C_INT$LAYOUT.withName("send_event"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_INT$LAYOUT.withName("extension"),
-        Constants$root.C_INT$LAYOUT.withName("evtype")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XGenericEvent.$struct$LAYOUT;
+        return constants$100.const$4;
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XGenericEvent.type$VH;
+        return constants$100.const$5;
     }
     /**
      * Getter for field:
@@ -45,7 +34,7 @@ public class XGenericEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)XGenericEvent.type$VH.get(seg);
+        return (int)constants$100.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -54,17 +43,16 @@ public class XGenericEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        XGenericEvent.type$VH.set(seg, x);
+        constants$100.const$5.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)XGenericEvent.type$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$100.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        XGenericEvent.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$100.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle serial$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("serial"));
     public static VarHandle serial$VH() {
-        return XGenericEvent.serial$VH;
+        return constants$101.const$0;
     }
     /**
      * Getter for field:
@@ -73,7 +61,7 @@ public class XGenericEvent {
      * }
      */
     public static long serial$get(MemorySegment seg) {
-        return (long)XGenericEvent.serial$VH.get(seg);
+        return (long)constants$101.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -82,17 +70,16 @@ public class XGenericEvent {
      * }
      */
     public static void serial$set(MemorySegment seg, long x) {
-        XGenericEvent.serial$VH.set(seg, x);
+        constants$101.const$0.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
-        return (long)XGenericEvent.serial$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$101.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void serial$set(MemorySegment seg, long index, long x) {
-        XGenericEvent.serial$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$101.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle send_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
     public static VarHandle send_event$VH() {
-        return XGenericEvent.send_event$VH;
+        return constants$101.const$1;
     }
     /**
      * Getter for field:
@@ -101,7 +88,7 @@ public class XGenericEvent {
      * }
      */
     public static int send_event$get(MemorySegment seg) {
-        return (int)XGenericEvent.send_event$VH.get(seg);
+        return (int)constants$101.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -110,17 +97,16 @@ public class XGenericEvent {
      * }
      */
     public static void send_event$set(MemorySegment seg, int x) {
-        XGenericEvent.send_event$VH.set(seg, x);
+        constants$101.const$1.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
-        return (int)XGenericEvent.send_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$101.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void send_event$set(MemorySegment seg, long index, int x) {
-        XGenericEvent.send_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$101.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle display$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XGenericEvent.display$VH;
+        return constants$101.const$2;
     }
     /**
      * Getter for field:
@@ -129,7 +115,7 @@ public class XGenericEvent {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XGenericEvent.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$101.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -138,17 +124,16 @@ public class XGenericEvent {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XGenericEvent.display$VH.set(seg, x);
+        constants$101.const$2.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XGenericEvent.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$101.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XGenericEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$101.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle extension$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("extension"));
     public static VarHandle extension$VH() {
-        return XGenericEvent.extension$VH;
+        return constants$101.const$3;
     }
     /**
      * Getter for field:
@@ -157,7 +142,7 @@ public class XGenericEvent {
      * }
      */
     public static int extension$get(MemorySegment seg) {
-        return (int)XGenericEvent.extension$VH.get(seg);
+        return (int)constants$101.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -166,17 +151,16 @@ public class XGenericEvent {
      * }
      */
     public static void extension$set(MemorySegment seg, int x) {
-        XGenericEvent.extension$VH.set(seg, x);
+        constants$101.const$3.set(seg, x);
     }
     public static int extension$get(MemorySegment seg, long index) {
-        return (int)XGenericEvent.extension$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$101.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void extension$set(MemorySegment seg, long index, int x) {
-        XGenericEvent.extension$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$101.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle evtype$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("evtype"));
     public static VarHandle evtype$VH() {
-        return XGenericEvent.evtype$VH;
+        return constants$101.const$4;
     }
     /**
      * Getter for field:
@@ -185,7 +169,7 @@ public class XGenericEvent {
      * }
      */
     public static int evtype$get(MemorySegment seg) {
-        return (int)XGenericEvent.evtype$VH.get(seg);
+        return (int)constants$101.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -194,20 +178,20 @@ public class XGenericEvent {
      * }
      */
     public static void evtype$set(MemorySegment seg, int x) {
-        XGenericEvent.evtype$VH.set(seg, x);
+        constants$101.const$4.set(seg, x);
     }
     public static int evtype$get(MemorySegment seg, long index) {
-        return (int)XGenericEvent.evtype$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$101.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void evtype$set(MemorySegment seg, long index, int x) {
-        XGenericEvent.evtype$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$101.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

@@ -11,47 +11,26 @@ final class constants$5 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$5() {}
-    static final FunctionDescriptor XSynchronize$return$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XSynchronize$return_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSynchronize$return_UP$MH = RuntimeHelper.upcallHandle(XSynchronize$return.class, "apply", constants$5.XSynchronize$return_UP$FUNC);
-    static final FunctionDescriptor XSynchronize$return_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSynchronize$return_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$5.XSynchronize$return_DOWN$FUNC
-    );
-    static final FunctionDescriptor XSynchronize$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSynchronize$MH = RuntimeHelper.downcallHandle(
-        "XSynchronize",
-        constants$5.XSynchronize$FUNC
-    );
-    static final FunctionDescriptor XSetAfterFunction$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XSetAfterFunction$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetAfterFunction$x0_UP$MH = RuntimeHelper.upcallHandle(XSetAfterFunction$x0.class, "apply", constants$5.XSetAfterFunction$x0_UP$FUNC);
-    static final FunctionDescriptor XSetAfterFunction$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetAfterFunction$x0_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$5.XSetAfterFunction$x0_DOWN$FUNC
-    );
-    static final FunctionDescriptor XSetAfterFunction$return$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XSetAfterFunction$return_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetAfterFunction$return_UP$MH = RuntimeHelper.upcallHandle(XSetAfterFunction$return.class, "apply", constants$5.XSetAfterFunction$return_UP$FUNC);
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("__readers"),
+        JAVA_INT.withName("__writers"),
+        JAVA_INT.withName("__wrphase_futex"),
+        JAVA_INT.withName("__writers_futex"),
+        JAVA_INT.withName("__pad3"),
+        JAVA_INT.withName("__pad4"),
+        JAVA_INT.withName("__cur_writer"),
+        JAVA_INT.withName("__shared"),
+        JAVA_BYTE.withName("__rwelision"),
+        MemoryLayout.sequenceLayout(7, JAVA_BYTE).withName("__pad1"),
+        JAVA_LONG.withName("__pad2"),
+        JAVA_INT.withName("__flags"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("__pthread_rwlock_arch_t");
+    static final VarHandle const$1 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__readers"));
+    static final VarHandle const$2 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__writers"));
+    static final VarHandle const$3 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__wrphase_futex"));
+    static final VarHandle const$4 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__writers_futex"));
+    static final VarHandle const$5 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__pad3"));
 }
 
 

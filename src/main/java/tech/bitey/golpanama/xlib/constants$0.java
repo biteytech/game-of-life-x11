@@ -11,67 +11,22 @@ final class constants$0 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$0() {}
-    static final FunctionDescriptor select$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle select$MH = RuntimeHelper.downcallHandle(
-        "select",
-        constants$0.select$FUNC
-    );
-    static final FunctionDescriptor pselect$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle pselect$MH = RuntimeHelper.downcallHandle(
-        "pselect",
-        constants$0.pselect$FUNC
-    );
-    static final FunctionDescriptor _Xmblen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle _Xmblen$MH = RuntimeHelper.downcallHandle(
-        "_Xmblen",
-        constants$0._Xmblen$FUNC
-    );
-    static final FunctionDescriptor XIMProc$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XIMProc_UP$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIMProc_UP$MH = RuntimeHelper.upcallHandle(XIMProc.class, "apply", constants$0.XIMProc_UP$FUNC);
-    static final FunctionDescriptor XIMProc_DOWN$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIMProc_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$0.XIMProc_DOWN$FUNC
-    );
-    static final FunctionDescriptor XICProc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XICProc_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XICProc_UP$MH = RuntimeHelper.upcallHandle(XICProc.class, "apply", constants$0.XICProc_UP$FUNC);
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(2, JAVA_INT).withName("__val")
+    ).withName("");
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_LONG).withName("__val")
+    ).withName("");
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_LONG.withName("tv_sec"),
+        JAVA_LONG.withName("tv_usec")
+    ).withName("timeval");
+    static final VarHandle const$3 = constants$0.const$2.varHandle(MemoryLayout.PathElement.groupElement("tv_sec"));
+    static final VarHandle const$4 = constants$0.const$2.varHandle(MemoryLayout.PathElement.groupElement("tv_usec"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_LONG.withName("tv_sec"),
+        JAVA_LONG.withName("tv_nsec")
+    ).withName("timespec");
 }
 
 

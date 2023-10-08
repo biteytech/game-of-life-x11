@@ -15,14 +15,14 @@ import static java.lang.foreign.ValueLayout.*;
 public interface XErrorHandler {
 
     int apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1);
-    static MemorySegment allocate(XErrorHandler fi, SegmentScope scope) {
-        return RuntimeHelper.upcallStub(constants$17.XErrorHandler_UP$MH, fi, constants$17.XErrorHandler$FUNC, scope);
+    static MemorySegment allocate(XErrorHandler fi, Arena scope) {
+        return RuntimeHelper.upcallStub(constants$144.const$0, fi, constants$143.const$5, scope);
     }
-    static XErrorHandler ofAddress(MemorySegment addr, SegmentScope scope) {
-        MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+    static XErrorHandler ofAddress(MemorySegment addr, Arena arena) {
+        MemorySegment symbol = addr.reinterpret(arena, null);
         return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1) -> {
             try {
-                return (int)constants$17.XErrorHandler_DOWN$MH.invokeExact(symbol, __x0, __x1);
+                return (int)constants$144.const$1.invokeExact(symbol, __x0, __x1);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

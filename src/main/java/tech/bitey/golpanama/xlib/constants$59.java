@@ -11,52 +11,22 @@ final class constants$59 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$59() {}
-    static final FunctionDescriptor XUngrabServer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XUngrabServer$MH = RuntimeHelper.downcallHandle(
-        "XUngrabServer",
-        constants$59.XUngrabServer$FUNC
-    );
-    static final FunctionDescriptor XUninstallColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUninstallColormap$MH = RuntimeHelper.downcallHandle(
-        "XUninstallColormap",
-        constants$59.XUninstallColormap$FUNC
-    );
-    static final FunctionDescriptor XUnloadFont$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUnloadFont$MH = RuntimeHelper.downcallHandle(
-        "XUnloadFont",
-        constants$59.XUnloadFont$FUNC
-    );
-    static final FunctionDescriptor XUnmapSubwindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUnmapSubwindows$MH = RuntimeHelper.downcallHandle(
-        "XUnmapSubwindows",
-        constants$59.XUnmapSubwindows$FUNC
-    );
-    static final FunctionDescriptor XUnmapWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUnmapWindow$MH = RuntimeHelper.downcallHandle(
-        "XUnmapWindow",
-        constants$59.XUnmapWindow$FUNC
-    );
-    static final FunctionDescriptor XVendorRelease$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XVendorRelease$MH = RuntimeHelper.downcallHandle(
-        "XVendorRelease",
-        constants$59.XVendorRelease$FUNC
-    );
+    static final VarHandle const$0 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("focus"));
+    static final VarHandle const$1 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("mode"),
+        JAVA_INT.withName("detail")
+    ).withName("");
+    static final VarHandle const$3 = constants$59.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$59.const$2.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$5 = constants$59.const$2.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
 }
 
 

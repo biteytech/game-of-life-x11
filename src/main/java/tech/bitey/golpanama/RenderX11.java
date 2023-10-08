@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 biteytech@protonmail.com
+ * Copyright 2023 biteytech@protonmail.com
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ public class RenderX11 implements Render {
 		win = Xlib_h.XCreateSimpleWindow(display, Xlib_h.XDefaultRootWindow(display), 0, 0, WIDTH_PX, HEIGHT_PX, 0,
 				black, white);
 
-		try (Arena offHeap = Arena.openConfined()) {
+		try (Arena offHeap = Arena.ofConfined()) {
 			MemorySegment gameOfLife = offHeap.allocateUtf8String("Game of Life");
 			Xlib_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
 
@@ -68,7 +68,7 @@ public class RenderX11 implements Render {
 	@Override
 	public void drawGrid() {
 		// set light gray color
-		try (Arena offHeap = Arena.openConfined()) {
+		try (Arena offHeap = Arena.ofConfined()) {
 			long cmap = Xlib_h.XDefaultColormap(display, 0);
 			MemorySegment near_color = XColor.allocate(offHeap), true_color = XColor.allocate(offHeap);
 			MemorySegment lightGray = offHeap.allocateUtf8String("Light Gray");

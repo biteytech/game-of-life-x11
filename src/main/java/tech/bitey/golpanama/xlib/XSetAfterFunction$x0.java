@@ -15,14 +15,14 @@ import static java.lang.foreign.ValueLayout.*;
 public interface XSetAfterFunction$x0 {
 
     int apply(java.lang.foreign.MemorySegment _x0);
-    static MemorySegment allocate(XSetAfterFunction$x0 fi, SegmentScope scope) {
-        return RuntimeHelper.upcallStub(constants$5.XSetAfterFunction$x0_UP$MH, fi, constants$5.XSetAfterFunction$x0$FUNC, scope);
+    static MemorySegment allocate(XSetAfterFunction$x0 fi, Arena scope) {
+        return RuntimeHelper.upcallStub(constants$129.const$0, fi, constants$11.const$0, scope);
     }
-    static XSetAfterFunction$x0 ofAddress(MemorySegment addr, SegmentScope scope) {
-        MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+    static XSetAfterFunction$x0 ofAddress(MemorySegment addr, Arena arena) {
+        MemorySegment symbol = addr.reinterpret(arena, null);
         return (java.lang.foreign.MemorySegment __x0) -> {
             try {
-                return (int)constants$5.XSetAfterFunction$x0_DOWN$MH.invokeExact(symbol, __x0);
+                return (int)constants$11.const$2.invokeExact(symbol, __x0);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

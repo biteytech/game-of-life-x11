@@ -11,64 +11,12 @@ final class constants$58 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$58() {}
-    static final FunctionDescriptor XTranslateCoordinates$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XTranslateCoordinates$MH = RuntimeHelper.downcallHandle(
-        "XTranslateCoordinates",
-        constants$58.XTranslateCoordinates$FUNC
-    );
-    static final FunctionDescriptor XUndefineCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUndefineCursor$MH = RuntimeHelper.downcallHandle(
-        "XUndefineCursor",
-        constants$58.XUndefineCursor$FUNC
-    );
-    static final FunctionDescriptor XUngrabButton$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUngrabButton$MH = RuntimeHelper.downcallHandle(
-        "XUngrabButton",
-        constants$58.XUngrabButton$FUNC
-    );
-    static final FunctionDescriptor XUngrabKey$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUngrabKey$MH = RuntimeHelper.downcallHandle(
-        "XUngrabKey",
-        constants$58.XUngrabKey$FUNC
-    );
-    static final FunctionDescriptor XUngrabKeyboard$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUngrabKeyboard$MH = RuntimeHelper.downcallHandle(
-        "XUngrabKeyboard",
-        constants$58.XUngrabKeyboard$FUNC
-    );
-    static final FunctionDescriptor XUngrabPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XUngrabPointer$MH = RuntimeHelper.downcallHandle(
-        "XUngrabPointer",
-        constants$58.XUngrabPointer$FUNC
-    );
+    static final VarHandle const$0 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$1 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("x_root"));
+    static final VarHandle const$2 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("y_root"));
+    static final VarHandle const$3 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("mode"));
+    static final VarHandle const$4 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("detail"));
+    static final VarHandle const$5 = constants$56.const$2.varHandle(MemoryLayout.PathElement.groupElement("same_screen"));
 }
 
 

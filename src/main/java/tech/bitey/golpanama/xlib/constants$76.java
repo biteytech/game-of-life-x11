@@ -11,63 +11,12 @@ final class constants$76 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$76() {}
-    static final FunctionDescriptor XGetSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetSizeHints$MH = RuntimeHelper.downcallHandle(
-        "XGetSizeHints",
-        constants$76.XGetSizeHints$FUNC
-    );
-    static final FunctionDescriptor XGetStandardColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetStandardColormap$MH = RuntimeHelper.downcallHandle(
-        "XGetStandardColormap",
-        constants$76.XGetStandardColormap$FUNC
-    );
-    static final FunctionDescriptor XGetTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetTextProperty$MH = RuntimeHelper.downcallHandle(
-        "XGetTextProperty",
-        constants$76.XGetTextProperty$FUNC
-    );
-    static final FunctionDescriptor XGetVisualInfo$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetVisualInfo$MH = RuntimeHelper.downcallHandle(
-        "XGetVisualInfo",
-        constants$76.XGetVisualInfo$FUNC
-    );
-    static final FunctionDescriptor XGetWMClientMachine$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWMClientMachine$MH = RuntimeHelper.downcallHandle(
-        "XGetWMClientMachine",
-        constants$76.XGetWMClientMachine$FUNC
-    );
-    static final FunctionDescriptor XGetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetWMHints$MH = RuntimeHelper.downcallHandle(
-        "XGetWMHints",
-        constants$76.XGetWMHints$FUNC
-    );
+    static final VarHandle const$0 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$1 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$2 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$3 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("parent"));
+    static final VarHandle const$4 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$5 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("y"));
 }
 
 

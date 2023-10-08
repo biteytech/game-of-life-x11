@@ -11,12 +11,12 @@ final class constants$91 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$91() {}
-    static final MemorySegment XNStdColormap$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stdColorMap");
-    static final MemorySegment XNForeground$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("foreground");
-    static final MemorySegment XNBackground$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("background");
-    static final MemorySegment XNBackgroundPixmap$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("backgroundPixmap");
-    static final MemorySegment XNFontSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("fontSet");
-    static final MemorySegment XNLineSpace$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("lineSpace");
+    static final VarHandle const$0 = constants$90.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$1 = constants$90.const$2.varHandle(MemoryLayout.PathElement.groupElement("owner"));
+    static final VarHandle const$2 = constants$90.const$2.varHandle(MemoryLayout.PathElement.groupElement("requestor"));
+    static final VarHandle const$3 = constants$90.const$2.varHandle(MemoryLayout.PathElement.groupElement("selection"));
+    static final VarHandle const$4 = constants$90.const$2.varHandle(MemoryLayout.PathElement.groupElement("target"));
+    static final VarHandle const$5 = constants$90.const$2.varHandle(MemoryLayout.PathElement.groupElement("property"));
 }
 
 

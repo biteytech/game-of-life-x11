@@ -11,59 +11,23 @@ final class constants$72 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$72() {}
-    static final FunctionDescriptor XAddConnectionWatch$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAddConnectionWatch$MH = RuntimeHelper.downcallHandle(
-        "XAddConnectionWatch",
-        constants$72.XAddConnectionWatch$FUNC
-    );
-    static final FunctionDescriptor XRemoveConnectionWatch$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XRemoveConnectionWatch$MH = RuntimeHelper.downcallHandle(
-        "XRemoveConnectionWatch",
-        constants$72.XRemoveConnectionWatch$FUNC
-    );
-    static final FunctionDescriptor XSetAuthorization$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetAuthorization$MH = RuntimeHelper.downcallHandle(
-        "XSetAuthorization",
-        constants$72.XSetAuthorization$FUNC
-    );
-    static final FunctionDescriptor _Xmbtowc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle _Xmbtowc$MH = RuntimeHelper.downcallHandle(
-        "_Xmbtowc",
-        constants$72._Xmbtowc$FUNC
-    );
-    static final FunctionDescriptor _Xwctomb$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle _Xwctomb$MH = RuntimeHelper.downcallHandle(
-        "_Xwctomb",
-        constants$72._Xwctomb$FUNC
-    );
-    static final FunctionDescriptor XGetEventData$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetEventData$MH = RuntimeHelper.downcallHandle(
-        "XGetEventData",
-        constants$72.XGetEventData$FUNC
-    );
+    static final VarHandle const$0 = constants$71.const$3.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$1 = constants$71.const$3.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$2 = constants$71.const$3.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$3 = constants$71.const$3.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$4 = constants$71.const$3.varHandle(MemoryLayout.PathElement.groupElement("from_configure"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("event"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("override_redirect"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
 }
 
 

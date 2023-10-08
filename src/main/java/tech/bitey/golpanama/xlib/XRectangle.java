@@ -19,18 +19,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XRectangle {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_SHORT$LAYOUT.withName("x"),
-        Constants$root.C_SHORT$LAYOUT.withName("y"),
-        Constants$root.C_SHORT$LAYOUT.withName("width"),
-        Constants$root.C_SHORT$LAYOUT.withName("height")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XRectangle.$struct$LAYOUT;
+        return constants$42.const$3;
     }
-    static final VarHandle x$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("x"));
     public static VarHandle x$VH() {
-        return XRectangle.x$VH;
+        return constants$42.const$4;
     }
     /**
      * Getter for field:
@@ -39,7 +32,7 @@ public class XRectangle {
      * }
      */
     public static short x$get(MemorySegment seg) {
-        return (short)XRectangle.x$VH.get(seg);
+        return (short)constants$42.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -48,17 +41,16 @@ public class XRectangle {
      * }
      */
     public static void x$set(MemorySegment seg, short x) {
-        XRectangle.x$VH.set(seg, x);
+        constants$42.const$4.set(seg, x);
     }
     public static short x$get(MemorySegment seg, long index) {
-        return (short)XRectangle.x$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$42.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, short x) {
-        XRectangle.x$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$42.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle y$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("y"));
     public static VarHandle y$VH() {
-        return XRectangle.y$VH;
+        return constants$42.const$5;
     }
     /**
      * Getter for field:
@@ -67,7 +59,7 @@ public class XRectangle {
      * }
      */
     public static short y$get(MemorySegment seg) {
-        return (short)XRectangle.y$VH.get(seg);
+        return (short)constants$42.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -76,17 +68,16 @@ public class XRectangle {
      * }
      */
     public static void y$set(MemorySegment seg, short x) {
-        XRectangle.y$VH.set(seg, x);
+        constants$42.const$5.set(seg, x);
     }
     public static short y$get(MemorySegment seg, long index) {
-        return (short)XRectangle.y$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$42.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, short x) {
-        XRectangle.y$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$42.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("width"));
     public static VarHandle width$VH() {
-        return XRectangle.width$VH;
+        return constants$43.const$0;
     }
     /**
      * Getter for field:
@@ -95,7 +86,7 @@ public class XRectangle {
      * }
      */
     public static short width$get(MemorySegment seg) {
-        return (short)XRectangle.width$VH.get(seg);
+        return (short)constants$43.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -104,17 +95,16 @@ public class XRectangle {
      * }
      */
     public static void width$set(MemorySegment seg, short x) {
-        XRectangle.width$VH.set(seg, x);
+        constants$43.const$0.set(seg, x);
     }
     public static short width$get(MemorySegment seg, long index) {
-        return (short)XRectangle.width$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$43.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void width$set(MemorySegment seg, long index, short x) {
-        XRectangle.width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$43.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle height$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("height"));
     public static VarHandle height$VH() {
-        return XRectangle.height$VH;
+        return constants$43.const$1;
     }
     /**
      * Getter for field:
@@ -123,7 +113,7 @@ public class XRectangle {
      * }
      */
     public static short height$get(MemorySegment seg) {
-        return (short)XRectangle.height$VH.get(seg);
+        return (short)constants$43.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -132,20 +122,20 @@ public class XRectangle {
      * }
      */
     public static void height$set(MemorySegment seg, short x) {
-        XRectangle.height$VH.set(seg, x);
+        constants$43.const$1.set(seg, x);
     }
     public static short height$get(MemorySegment seg, long index) {
-        return (short)XRectangle.height$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$43.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void height$set(MemorySegment seg, long index, short x) {
-        XRectangle.height$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$43.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

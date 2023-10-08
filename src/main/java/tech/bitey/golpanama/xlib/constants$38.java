@@ -2,87 +2,32 @@
 
 package tech.bitey.golpanama.xlib;
 
+import static java.lang.foreign.ValueLayout.JAVA_INT;
+import static java.lang.foreign.ValueLayout.JAVA_LONG;
+
+import java.lang.foreign.FunctionDescriptor;
+import java.lang.foreign.MemoryLayout;
+import java.lang.foreign.StructLayout;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
-import java.lang.foreign.*;
-import static java.lang.foreign.ValueLayout.*;
+
+import tech.bitey.golpanama.xlib._XImage.funcs;
+
 final class constants$38 {
 
-    // Suppresses default constructor, ensuring non-instantiability.
-    private constants$38() {}
-    static final FunctionDescriptor XGetPointerMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGetPointerMapping$MH = RuntimeHelper.downcallHandle(
-        "XGetPointerMapping",
-        constants$38.XGetPointerMapping$FUNC
-    );
-    static final FunctionDescriptor XGetScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetScreenSaver$MH = RuntimeHelper.downcallHandle(
-        "XGetScreenSaver",
-        constants$38.XGetScreenSaver$FUNC
-    );
-    static final FunctionDescriptor XGetTransientForHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetTransientForHint$MH = RuntimeHelper.downcallHandle(
-        "XGetTransientForHint",
-        constants$38.XGetTransientForHint$FUNC
-    );
-    static final FunctionDescriptor XGetWindowProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWindowProperty$MH = RuntimeHelper.downcallHandle(
-        "XGetWindowProperty",
-        constants$38.XGetWindowProperty$FUNC
-    );
-    static final FunctionDescriptor XGetWindowAttributes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWindowAttributes$MH = RuntimeHelper.downcallHandle(
-        "XGetWindowAttributes",
-        constants$38.XGetWindowAttributes$FUNC
-    );
-    static final FunctionDescriptor XGrabButton$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGrabButton$MH = RuntimeHelper.downcallHandle(
-        "XGrabButton",
-        constants$38.XGrabButton$FUNC
-    );
+	// Suppresses default constructor, ensuring non-instantiability.
+	private constants$38() {
+	}
+
+	static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT, RuntimeHelper.POINTER, JAVA_LONG);
+	static final MethodHandle const$1 = RuntimeHelper.upcallHandle(funcs.add_pixel.class, "apply",
+			constants$38.const$0);
+	static final MethodHandle const$2 = RuntimeHelper.downcallHandle(constants$38.const$0);
+	static final VarHandle const$3 = constants$34.const$5.varHandle(MemoryLayout.PathElement.groupElement("add_pixel"));
+	static final StructLayout const$4 = MemoryLayout
+			.structLayout(JAVA_INT.withName("x"), JAVA_INT.withName("y"), JAVA_INT.withName("width"),
+					JAVA_INT.withName("height"), JAVA_INT.withName("border_width"), MemoryLayout.paddingLayout(4),
+					JAVA_LONG.withName("sibling"), JAVA_INT.withName("stack_mode"), MemoryLayout.paddingLayout(4))
+			.withName("");
+	static final VarHandle const$5 = constants$38.const$4.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
-
-

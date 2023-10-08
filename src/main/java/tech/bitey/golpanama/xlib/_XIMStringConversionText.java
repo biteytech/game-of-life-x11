@@ -19,23 +19,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class _XIMStringConversionText {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_SHORT$LAYOUT.withName("length"),
-        MemoryLayout.paddingLayout(48),
-        Constants$root.C_POINTER$LAYOUT.withName("feedback"),
-        Constants$root.C_INT$LAYOUT.withName("encoding_is_wchar"),
-        MemoryLayout.paddingLayout(32),
-        MemoryLayout.unionLayout(
-            Constants$root.C_POINTER$LAYOUT.withName("mbs"),
-            Constants$root.C_POINTER$LAYOUT.withName("wcs")
-        ).withName("string")
-    ).withName("_XIMStringConversionText");
     public static MemoryLayout $LAYOUT() {
-        return _XIMStringConversionText.$struct$LAYOUT;
+        return constants$117.const$0;
     }
-    static final VarHandle length$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("length"));
     public static VarHandle length$VH() {
-        return _XIMStringConversionText.length$VH;
+        return constants$117.const$1;
     }
     /**
      * Getter for field:
@@ -44,7 +32,7 @@ public class _XIMStringConversionText {
      * }
      */
     public static short length$get(MemorySegment seg) {
-        return (short)_XIMStringConversionText.length$VH.get(seg);
+        return (short)constants$117.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -53,17 +41,16 @@ public class _XIMStringConversionText {
      * }
      */
     public static void length$set(MemorySegment seg, short x) {
-        _XIMStringConversionText.length$VH.set(seg, x);
+        constants$117.const$1.set(seg, x);
     }
     public static short length$get(MemorySegment seg, long index) {
-        return (short)_XIMStringConversionText.length$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$117.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void length$set(MemorySegment seg, long index, short x) {
-        _XIMStringConversionText.length$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$117.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle feedback$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("feedback"));
     public static VarHandle feedback$VH() {
-        return _XIMStringConversionText.feedback$VH;
+        return constants$117.const$2;
     }
     /**
      * Getter for field:
@@ -72,7 +59,7 @@ public class _XIMStringConversionText {
      * }
      */
     public static MemorySegment feedback$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)_XIMStringConversionText.feedback$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$117.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -81,17 +68,16 @@ public class _XIMStringConversionText {
      * }
      */
     public static void feedback$set(MemorySegment seg, MemorySegment x) {
-        _XIMStringConversionText.feedback$VH.set(seg, x);
+        constants$117.const$2.set(seg, x);
     }
     public static MemorySegment feedback$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)_XIMStringConversionText.feedback$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$117.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void feedback$set(MemorySegment seg, long index, MemorySegment x) {
-        _XIMStringConversionText.feedback$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$117.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle encoding_is_wchar$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("encoding_is_wchar"));
     public static VarHandle encoding_is_wchar$VH() {
-        return _XIMStringConversionText.encoding_is_wchar$VH;
+        return constants$117.const$3;
     }
     /**
      * Getter for field:
@@ -100,7 +86,7 @@ public class _XIMStringConversionText {
      * }
      */
     public static int encoding_is_wchar$get(MemorySegment seg) {
-        return (int)_XIMStringConversionText.encoding_is_wchar$VH.get(seg);
+        return (int)constants$117.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -109,13 +95,13 @@ public class _XIMStringConversionText {
      * }
      */
     public static void encoding_is_wchar$set(MemorySegment seg, int x) {
-        _XIMStringConversionText.encoding_is_wchar$VH.set(seg, x);
+        constants$117.const$3.set(seg, x);
     }
     public static int encoding_is_wchar$get(MemorySegment seg, long index) {
-        return (int)_XIMStringConversionText.encoding_is_wchar$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$117.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void encoding_is_wchar$set(MemorySegment seg, long index, int x) {
-        _XIMStringConversionText.encoding_is_wchar$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$117.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     /**
      * {@snippet :
@@ -129,16 +115,11 @@ public class _XIMStringConversionText {
 
         // Suppresses default constructor, ensuring non-instantiability.
         private string() {}
-        static final UnionLayout string$union$LAYOUT = MemoryLayout.unionLayout(
-            Constants$root.C_POINTER$LAYOUT.withName("mbs"),
-            Constants$root.C_POINTER$LAYOUT.withName("wcs")
-        );
         public static MemoryLayout $LAYOUT() {
-            return string.string$union$LAYOUT;
+            return constants$117.const$4;
         }
-        static final VarHandle mbs$VH = string$union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("mbs"));
         public static VarHandle mbs$VH() {
-            return string.mbs$VH;
+            return constants$117.const$5;
         }
         /**
          * Getter for field:
@@ -147,7 +128,7 @@ public class _XIMStringConversionText {
          * }
          */
         public static MemorySegment mbs$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)string.mbs$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$117.const$5.get(seg);
         }
         /**
          * Setter for field:
@@ -156,17 +137,16 @@ public class _XIMStringConversionText {
          * }
          */
         public static void mbs$set(MemorySegment seg, MemorySegment x) {
-            string.mbs$VH.set(seg, x);
+            constants$117.const$5.set(seg, x);
         }
         public static MemorySegment mbs$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)string.mbs$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$117.const$5.get(seg.asSlice(index*sizeof()));
         }
         public static void mbs$set(MemorySegment seg, long index, MemorySegment x) {
-            string.mbs$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$117.const$5.set(seg.asSlice(index*sizeof()), x);
         }
-        static final VarHandle wcs$VH = string$union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("wcs"));
         public static VarHandle wcs$VH() {
-            return string.wcs$VH;
+            return constants$118.const$0;
         }
         /**
          * Getter for field:
@@ -175,7 +155,7 @@ public class _XIMStringConversionText {
          * }
          */
         public static MemorySegment wcs$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)string.wcs$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$118.const$0.get(seg);
         }
         /**
          * Setter for field:
@@ -184,20 +164,20 @@ public class _XIMStringConversionText {
          * }
          */
         public static void wcs$set(MemorySegment seg, MemorySegment x) {
-            string.wcs$VH.set(seg, x);
+            constants$118.const$0.set(seg, x);
         }
         public static MemorySegment wcs$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)string.wcs$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$118.const$0.get(seg.asSlice(index*sizeof()));
         }
         public static void wcs$set(MemorySegment seg, long index, MemorySegment x) {
-            string.wcs$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$118.const$0.set(seg.asSlice(index*sizeof()), x);
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
         public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
         public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+        public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
     }
 
     public static MemorySegment string$slice(MemorySegment seg) {
@@ -208,7 +188,7 @@ public class _XIMStringConversionText {
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

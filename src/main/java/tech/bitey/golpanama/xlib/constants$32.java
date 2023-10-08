@@ -11,73 +11,38 @@ final class constants$32 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$32() {}
-    static final FunctionDescriptor XDrawString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawString$MH = RuntimeHelper.downcallHandle(
-        "XDrawString",
-        constants$32.XDrawString$FUNC
-    );
-    static final FunctionDescriptor XDrawString16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawString16$MH = RuntimeHelper.downcallHandle(
-        "XDrawString16",
-        constants$32.XDrawString16$FUNC
-    );
-    static final FunctionDescriptor XDrawText$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawText$MH = RuntimeHelper.downcallHandle(
-        "XDrawText",
-        constants$32.XDrawText$FUNC
-    );
-    static final FunctionDescriptor XDrawText16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawText16$MH = RuntimeHelper.downcallHandle(
-        "XDrawText16",
-        constants$32.XDrawText16$FUNC
-    );
-    static final FunctionDescriptor XEnableAccessControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XEnableAccessControl$MH = RuntimeHelper.downcallHandle(
-        "XEnableAccessControl",
-        constants$32.XEnableAccessControl$FUNC
-    );
-    static final FunctionDescriptor XEventsQueued$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XEventsQueued$MH = RuntimeHelper.downcallHandle(
-        "XEventsQueued",
-        constants$32.XEventsQueued$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("xoffset"),
+        JAVA_INT.withName("format"),
+        RuntimeHelper.POINTER.withName("data"),
+        JAVA_INT.withName("byte_order"),
+        JAVA_INT.withName("bitmap_unit"),
+        JAVA_INT.withName("bitmap_bit_order"),
+        JAVA_INT.withName("bitmap_pad"),
+        JAVA_INT.withName("depth"),
+        JAVA_INT.withName("bytes_per_line"),
+        JAVA_INT.withName("bits_per_pixel"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("red_mask"),
+        JAVA_LONG.withName("green_mask"),
+        JAVA_LONG.withName("blue_mask"),
+        RuntimeHelper.POINTER.withName("obdata"),
+        MemoryLayout.structLayout(
+            RuntimeHelper.POINTER.withName("create_image"),
+            RuntimeHelper.POINTER.withName("destroy_image"),
+            RuntimeHelper.POINTER.withName("get_pixel"),
+            RuntimeHelper.POINTER.withName("put_pixel"),
+            RuntimeHelper.POINTER.withName("sub_image"),
+            RuntimeHelper.POINTER.withName("add_pixel")
+        ).withName("f")
+    ).withName("_XImage");
+    static final VarHandle const$1 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$2 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final VarHandle const$3 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("xoffset"));
+    static final VarHandle const$4 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("format"));
+    static final VarHandle const$5 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("data"));
 }
 
 

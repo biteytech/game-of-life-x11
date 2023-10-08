@@ -17,19 +17,14 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class pthread_mutexattr_t {
 
-    static final UnionLayout $union$LAYOUT = MemoryLayout.unionLayout(
-        MemoryLayout.sequenceLayout(4, Constants$root.C_CHAR$LAYOUT).withName("__size"),
-        Constants$root.C_INT$LAYOUT.withName("__align")
-    );
     public static MemoryLayout $LAYOUT() {
-        return pthread_mutexattr_t.$union$LAYOUT;
+        return constants$7.const$5;
     }
     public static MemorySegment __size$slice(MemorySegment seg) {
         return seg.asSlice(0, 4);
     }
-    static final VarHandle __align$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("__align"));
     public static VarHandle __align$VH() {
-        return pthread_mutexattr_t.__align$VH;
+        return constants$8.const$0;
     }
     /**
      * Getter for field:
@@ -38,7 +33,7 @@ public class pthread_mutexattr_t {
      * }
      */
     public static int __align$get(MemorySegment seg) {
-        return (int)pthread_mutexattr_t.__align$VH.get(seg);
+        return (int)constants$8.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -47,20 +42,20 @@ public class pthread_mutexattr_t {
      * }
      */
     public static void __align$set(MemorySegment seg, int x) {
-        pthread_mutexattr_t.__align$VH.set(seg, x);
+        constants$8.const$0.set(seg, x);
     }
     public static int __align$get(MemorySegment seg, long index) {
-        return (int)pthread_mutexattr_t.__align$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$8.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void __align$set(MemorySegment seg, long index, int x) {
-        pthread_mutexattr_t.__align$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$8.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

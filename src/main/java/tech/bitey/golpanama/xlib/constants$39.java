@@ -11,67 +11,12 @@ final class constants$39 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$39() {}
-    static final FunctionDescriptor XGrabKey$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGrabKey$MH = RuntimeHelper.downcallHandle(
-        "XGrabKey",
-        constants$39.XGrabKey$FUNC
-    );
-    static final FunctionDescriptor XGrabKeyboard$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGrabKeyboard$MH = RuntimeHelper.downcallHandle(
-        "XGrabKeyboard",
-        constants$39.XGrabKeyboard$FUNC
-    );
-    static final FunctionDescriptor XGrabPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGrabPointer$MH = RuntimeHelper.downcallHandle(
-        "XGrabPointer",
-        constants$39.XGrabPointer$FUNC
-    );
-    static final FunctionDescriptor XGrabServer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGrabServer$MH = RuntimeHelper.downcallHandle(
-        "XGrabServer",
-        constants$39.XGrabServer$FUNC
-    );
-    static final FunctionDescriptor XHeightMMOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XHeightMMOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XHeightMMOfScreen",
-        constants$39.XHeightMMOfScreen$FUNC
-    );
-    static final FunctionDescriptor XHeightOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XHeightOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XHeightOfScreen",
-        constants$39.XHeightOfScreen$FUNC
-    );
+    static final VarHandle const$0 = constants$38.const$4.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$1 = constants$38.const$4.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$2 = constants$38.const$4.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final VarHandle const$3 = constants$38.const$4.varHandle(MemoryLayout.PathElement.groupElement("border_width"));
+    static final VarHandle const$4 = constants$38.const$4.varHandle(MemoryLayout.PathElement.groupElement("sibling"));
+    static final VarHandle const$5 = constants$38.const$4.varHandle(MemoryLayout.PathElement.groupElement("stack_mode"));
 }
 
 

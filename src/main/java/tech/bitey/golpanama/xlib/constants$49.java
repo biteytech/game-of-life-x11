@@ -11,58 +11,12 @@ final class constants$49 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$49() {}
-    static final FunctionDescriptor XResetScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XResetScreenSaver$MH = RuntimeHelper.downcallHandle(
-        "XResetScreenSaver",
-        constants$49.XResetScreenSaver$FUNC
-    );
-    static final FunctionDescriptor XResizeWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XResizeWindow$MH = RuntimeHelper.downcallHandle(
-        "XResizeWindow",
-        constants$49.XResizeWindow$FUNC
-    );
-    static final FunctionDescriptor XRestackWindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRestackWindows$MH = RuntimeHelper.downcallHandle(
-        "XRestackWindows",
-        constants$49.XRestackWindows$FUNC
-    );
-    static final FunctionDescriptor XRotateBuffers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRotateBuffers$MH = RuntimeHelper.downcallHandle(
-        "XRotateBuffers",
-        constants$49.XRotateBuffers$FUNC
-    );
-    static final FunctionDescriptor XRotateWindowProperties$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRotateWindowProperties$MH = RuntimeHelper.downcallHandle(
-        "XRotateWindowProperties",
-        constants$49.XRotateWindowProperties$FUNC
-    );
-    static final FunctionDescriptor XScreenCount$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XScreenCount$MH = RuntimeHelper.downcallHandle(
-        "XScreenCount",
-        constants$49.XScreenCount$FUNC
-    );
+    static final VarHandle const$0 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$1 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$2 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("root"));
+    static final VarHandle const$3 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("subwindow"));
+    static final VarHandle const$4 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final VarHandle const$5 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
 
 

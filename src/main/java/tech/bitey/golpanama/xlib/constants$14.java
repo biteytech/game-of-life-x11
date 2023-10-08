@@ -11,49 +11,12 @@ final class constants$14 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$14() {}
-    static final FunctionDescriptor XDefaultGC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDefaultGC$MH = RuntimeHelper.downcallHandle(
-        "XDefaultGC",
-        constants$14.XDefaultGC$FUNC
-    );
-    static final FunctionDescriptor XDefaultGCOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDefaultGCOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XDefaultGCOfScreen",
-        constants$14.XDefaultGCOfScreen$FUNC
-    );
-    static final FunctionDescriptor XBlackPixel$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XBlackPixel$MH = RuntimeHelper.downcallHandle(
-        "XBlackPixel",
-        constants$14.XBlackPixel$FUNC
-    );
-    static final FunctionDescriptor XWhitePixel$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XWhitePixel$MH = RuntimeHelper.downcallHandle(
-        "XWhitePixel",
-        constants$14.XWhitePixel$FUNC
-    );
-    static final FunctionDescriptor XAllPlanes$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT);
-    static final MethodHandle XAllPlanes$MH = RuntimeHelper.downcallHandle(
-        "XAllPlanes",
-        constants$14.XAllPlanes$FUNC
-    );
-    static final FunctionDescriptor XBlackPixelOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XBlackPixelOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XBlackPixelOfScreen",
-        constants$14.XBlackPixelOfScreen$FUNC
-    );
+    static final VarHandle const$0 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("background"));
+    static final VarHandle const$1 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("line_width"));
+    static final VarHandle const$2 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("line_style"));
+    static final VarHandle const$3 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("cap_style"));
+    static final VarHandle const$4 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("join_style"));
+    static final VarHandle const$5 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("fill_style"));
 }
 
 

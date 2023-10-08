@@ -22,23 +22,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XWindowChanges {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("x"),
-        Constants$root.C_INT$LAYOUT.withName("y"),
-        Constants$root.C_INT$LAYOUT.withName("width"),
-        Constants$root.C_INT$LAYOUT.withName("height"),
-        Constants$root.C_INT$LAYOUT.withName("border_width"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("sibling"),
-        Constants$root.C_INT$LAYOUT.withName("stack_mode"),
-        MemoryLayout.paddingLayout(32)
-    );
     public static MemoryLayout $LAYOUT() {
-        return XWindowChanges.$struct$LAYOUT;
+        return constants$38.const$4;
     }
-    static final VarHandle x$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("x"));
     public static VarHandle x$VH() {
-        return XWindowChanges.x$VH;
+        return constants$38.const$5;
     }
     /**
      * Getter for field:
@@ -47,7 +35,7 @@ public class XWindowChanges {
      * }
      */
     public static int x$get(MemorySegment seg) {
-        return (int)XWindowChanges.x$VH.get(seg);
+        return (int)constants$38.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -56,17 +44,16 @@ public class XWindowChanges {
      * }
      */
     public static void x$set(MemorySegment seg, int x) {
-        XWindowChanges.x$VH.set(seg, x);
+        constants$38.const$5.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
-        return (int)XWindowChanges.x$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$38.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, int x) {
-        XWindowChanges.x$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle y$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("y"));
     public static VarHandle y$VH() {
-        return XWindowChanges.y$VH;
+        return constants$39.const$0;
     }
     /**
      * Getter for field:
@@ -75,7 +62,7 @@ public class XWindowChanges {
      * }
      */
     public static int y$get(MemorySegment seg) {
-        return (int)XWindowChanges.y$VH.get(seg);
+        return (int)constants$39.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -84,17 +71,16 @@ public class XWindowChanges {
      * }
      */
     public static void y$set(MemorySegment seg, int x) {
-        XWindowChanges.y$VH.set(seg, x);
+        constants$39.const$0.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
-        return (int)XWindowChanges.y$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$39.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, int x) {
-        XWindowChanges.y$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("width"));
     public static VarHandle width$VH() {
-        return XWindowChanges.width$VH;
+        return constants$39.const$1;
     }
     /**
      * Getter for field:
@@ -103,7 +89,7 @@ public class XWindowChanges {
      * }
      */
     public static int width$get(MemorySegment seg) {
-        return (int)XWindowChanges.width$VH.get(seg);
+        return (int)constants$39.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -112,17 +98,16 @@ public class XWindowChanges {
      * }
      */
     public static void width$set(MemorySegment seg, int x) {
-        XWindowChanges.width$VH.set(seg, x);
+        constants$39.const$1.set(seg, x);
     }
     public static int width$get(MemorySegment seg, long index) {
-        return (int)XWindowChanges.width$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$39.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void width$set(MemorySegment seg, long index, int x) {
-        XWindowChanges.width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle height$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("height"));
     public static VarHandle height$VH() {
-        return XWindowChanges.height$VH;
+        return constants$39.const$2;
     }
     /**
      * Getter for field:
@@ -131,7 +116,7 @@ public class XWindowChanges {
      * }
      */
     public static int height$get(MemorySegment seg) {
-        return (int)XWindowChanges.height$VH.get(seg);
+        return (int)constants$39.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -140,17 +125,16 @@ public class XWindowChanges {
      * }
      */
     public static void height$set(MemorySegment seg, int x) {
-        XWindowChanges.height$VH.set(seg, x);
+        constants$39.const$2.set(seg, x);
     }
     public static int height$get(MemorySegment seg, long index) {
-        return (int)XWindowChanges.height$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$39.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void height$set(MemorySegment seg, long index, int x) {
-        XWindowChanges.height$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle border_width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("border_width"));
     public static VarHandle border_width$VH() {
-        return XWindowChanges.border_width$VH;
+        return constants$39.const$3;
     }
     /**
      * Getter for field:
@@ -159,7 +143,7 @@ public class XWindowChanges {
      * }
      */
     public static int border_width$get(MemorySegment seg) {
-        return (int)XWindowChanges.border_width$VH.get(seg);
+        return (int)constants$39.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -168,17 +152,16 @@ public class XWindowChanges {
      * }
      */
     public static void border_width$set(MemorySegment seg, int x) {
-        XWindowChanges.border_width$VH.set(seg, x);
+        constants$39.const$3.set(seg, x);
     }
     public static int border_width$get(MemorySegment seg, long index) {
-        return (int)XWindowChanges.border_width$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$39.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void border_width$set(MemorySegment seg, long index, int x) {
-        XWindowChanges.border_width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle sibling$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("sibling"));
     public static VarHandle sibling$VH() {
-        return XWindowChanges.sibling$VH;
+        return constants$39.const$4;
     }
     /**
      * Getter for field:
@@ -187,7 +170,7 @@ public class XWindowChanges {
      * }
      */
     public static long sibling$get(MemorySegment seg) {
-        return (long)XWindowChanges.sibling$VH.get(seg);
+        return (long)constants$39.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -196,17 +179,16 @@ public class XWindowChanges {
      * }
      */
     public static void sibling$set(MemorySegment seg, long x) {
-        XWindowChanges.sibling$VH.set(seg, x);
+        constants$39.const$4.set(seg, x);
     }
     public static long sibling$get(MemorySegment seg, long index) {
-        return (long)XWindowChanges.sibling$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$39.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void sibling$set(MemorySegment seg, long index, long x) {
-        XWindowChanges.sibling$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle stack_mode$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("stack_mode"));
     public static VarHandle stack_mode$VH() {
-        return XWindowChanges.stack_mode$VH;
+        return constants$39.const$5;
     }
     /**
      * Getter for field:
@@ -215,7 +197,7 @@ public class XWindowChanges {
      * }
      */
     public static int stack_mode$get(MemorySegment seg) {
-        return (int)XWindowChanges.stack_mode$VH.get(seg);
+        return (int)constants$39.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -224,20 +206,20 @@ public class XWindowChanges {
      * }
      */
     public static void stack_mode$set(MemorySegment seg, int x) {
-        XWindowChanges.stack_mode$VH.set(seg, x);
+        constants$39.const$5.set(seg, x);
     }
     public static int stack_mode$get(MemorySegment seg, long index) {
-        return (int)XWindowChanges.stack_mode$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$39.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void stack_mode$set(MemorySegment seg, long index, int x) {
-        XWindowChanges.stack_mode$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

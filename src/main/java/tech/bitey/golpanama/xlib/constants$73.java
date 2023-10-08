@@ -11,39 +11,12 @@ final class constants$73 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$73() {}
-    static final FunctionDescriptor XFreeEventData$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFreeEventData$MH = RuntimeHelper.downcallHandle(
-        "XFreeEventData",
-        constants$73.XFreeEventData$FUNC
-    );
-    static final FunctionDescriptor XAllocClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XAllocClassHint$MH = RuntimeHelper.downcallHandle(
-        "XAllocClassHint",
-        constants$73.XAllocClassHint$FUNC
-    );
-    static final FunctionDescriptor XAllocIconSize$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XAllocIconSize$MH = RuntimeHelper.downcallHandle(
-        "XAllocIconSize",
-        constants$73.XAllocIconSize$FUNC
-    );
-    static final FunctionDescriptor XAllocSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XAllocSizeHints$MH = RuntimeHelper.downcallHandle(
-        "XAllocSizeHints",
-        constants$73.XAllocSizeHints$FUNC
-    );
-    static final FunctionDescriptor XAllocStandardColormap$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XAllocStandardColormap$MH = RuntimeHelper.downcallHandle(
-        "XAllocStandardColormap",
-        constants$73.XAllocStandardColormap$FUNC
-    );
-    static final FunctionDescriptor XAllocWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XAllocWMHints$MH = RuntimeHelper.downcallHandle(
-        "XAllocWMHints",
-        constants$73.XAllocWMHints$FUNC
-    );
+    static final VarHandle const$0 = constants$72.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$1 = constants$72.const$5.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$2 = constants$72.const$5.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$3 = constants$72.const$5.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$4 = constants$72.const$5.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$5 = constants$72.const$5.varHandle(MemoryLayout.PathElement.groupElement("window"));
 }
 
 

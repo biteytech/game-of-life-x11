@@ -11,60 +11,12 @@ final class constants$55 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$55() {}
-    static final FunctionDescriptor XSetTile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetTile$MH = RuntimeHelper.downcallHandle(
-        "XSetTile",
-        constants$55.XSetTile$FUNC
-    );
-    static final FunctionDescriptor XSetWindowBackground$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWindowBackground$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowBackground",
-        constants$55.XSetWindowBackground$FUNC
-    );
-    static final FunctionDescriptor XSetWindowBackgroundPixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWindowBackgroundPixmap$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowBackgroundPixmap",
-        constants$55.XSetWindowBackgroundPixmap$FUNC
-    );
-    static final FunctionDescriptor XSetWindowBorder$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWindowBorder$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowBorder",
-        constants$55.XSetWindowBorder$FUNC
-    );
-    static final FunctionDescriptor XSetWindowBorderPixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWindowBorderPixmap$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowBorderPixmap",
-        constants$55.XSetWindowBorderPixmap$FUNC
-    );
-    static final FunctionDescriptor XSetWindowBorderWidth$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetWindowBorderWidth$MH = RuntimeHelper.downcallHandle(
-        "XSetWindowBorderWidth",
-        constants$55.XSetWindowBorderWidth$FUNC
-    );
+    static final VarHandle const$0 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final VarHandle const$1 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$2 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$3 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("x_root"));
+    static final VarHandle const$4 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("y_root"));
+    static final VarHandle const$5 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("state"));
 }
 
 

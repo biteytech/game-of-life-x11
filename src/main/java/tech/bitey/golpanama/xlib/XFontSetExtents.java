@@ -17,22 +17,8 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XFontSetExtents {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        MemoryLayout.structLayout(
-            Constants$root.C_SHORT$LAYOUT.withName("x"),
-            Constants$root.C_SHORT$LAYOUT.withName("y"),
-            Constants$root.C_SHORT$LAYOUT.withName("width"),
-            Constants$root.C_SHORT$LAYOUT.withName("height")
-        ).withName("max_ink_extent"),
-        MemoryLayout.structLayout(
-            Constants$root.C_SHORT$LAYOUT.withName("x"),
-            Constants$root.C_SHORT$LAYOUT.withName("y"),
-            Constants$root.C_SHORT$LAYOUT.withName("width"),
-            Constants$root.C_SHORT$LAYOUT.withName("height")
-        ).withName("max_logical_extent")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XFontSetExtents.$struct$LAYOUT;
+        return constants$110.const$2;
     }
     public static MemorySegment max_ink_extent$slice(MemorySegment seg) {
         return seg.asSlice(0, 8);
@@ -45,7 +31,7 @@ public class XFontSetExtents {
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

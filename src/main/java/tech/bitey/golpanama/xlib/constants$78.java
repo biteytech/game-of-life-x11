@@ -11,64 +11,12 @@ final class constants$78 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$78() {}
-    static final FunctionDescriptor XConvertCase$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XConvertCase$MH = RuntimeHelper.downcallHandle(
-        "XConvertCase",
-        constants$78.XConvertCase$FUNC
-    );
-    static final FunctionDescriptor XLookupString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLookupString$MH = RuntimeHelper.downcallHandle(
-        "XLookupString",
-        constants$78.XLookupString$FUNC
-    );
-    static final FunctionDescriptor XMatchVisualInfo$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XMatchVisualInfo$MH = RuntimeHelper.downcallHandle(
-        "XMatchVisualInfo",
-        constants$78.XMatchVisualInfo$FUNC
-    );
-    static final FunctionDescriptor XOffsetRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XOffsetRegion$MH = RuntimeHelper.downcallHandle(
-        "XOffsetRegion",
-        constants$78.XOffsetRegion$FUNC
-    );
-    static final FunctionDescriptor XPointInRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XPointInRegion$MH = RuntimeHelper.downcallHandle(
-        "XPointInRegion",
-        constants$78.XPointInRegion$FUNC
-    );
-    static final FunctionDescriptor XPolygonRegion$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XPolygonRegion$MH = RuntimeHelper.downcallHandle(
-        "XPolygonRegion",
-        constants$78.XPolygonRegion$FUNC
-    );
+    static final VarHandle const$0 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$1 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$2 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$3 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$4 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$5 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("height"));
 }
 
 

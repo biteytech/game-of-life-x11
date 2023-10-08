@@ -11,57 +11,17 @@ final class constants$41 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$41() {}
-    static final FunctionDescriptor XKillClient$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XKillClient$MH = RuntimeHelper.downcallHandle(
-        "XKillClient",
-        constants$41.XKillClient$FUNC
-    );
-    static final FunctionDescriptor XLookupColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLookupColor$MH = RuntimeHelper.downcallHandle(
-        "XLookupColor",
-        constants$41.XLookupColor$FUNC
-    );
-    static final FunctionDescriptor XLowerWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XLowerWindow$MH = RuntimeHelper.downcallHandle(
-        "XLowerWindow",
-        constants$41.XLowerWindow$FUNC
-    );
-    static final FunctionDescriptor XMapRaised$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XMapRaised$MH = RuntimeHelper.downcallHandle(
-        "XMapRaised",
-        constants$41.XMapRaised$FUNC
-    );
-    static final FunctionDescriptor XMapSubwindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XMapSubwindows$MH = RuntimeHelper.downcallHandle(
-        "XMapSubwindows",
-        constants$41.XMapSubwindows$FUNC
-    );
-    static final FunctionDescriptor XMapWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XMapWindow$MH = RuntimeHelper.downcallHandle(
-        "XMapWindow",
-        constants$41.XMapWindow$FUNC
-    );
+    static final VarHandle const$0 = constants$40.const$0.varHandle(MemoryLayout.PathElement.groupElement("pad"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_SHORT.withName("x1"),
+        JAVA_SHORT.withName("y1"),
+        JAVA_SHORT.withName("x2"),
+        JAVA_SHORT.withName("y2")
+    ).withName("");
+    static final VarHandle const$2 = constants$41.const$1.varHandle(MemoryLayout.PathElement.groupElement("x1"));
+    static final VarHandle const$3 = constants$41.const$1.varHandle(MemoryLayout.PathElement.groupElement("y1"));
+    static final VarHandle const$4 = constants$41.const$1.varHandle(MemoryLayout.PathElement.groupElement("x2"));
+    static final VarHandle const$5 = constants$41.const$1.varHandle(MemoryLayout.PathElement.groupElement("y2"));
 }
 
 

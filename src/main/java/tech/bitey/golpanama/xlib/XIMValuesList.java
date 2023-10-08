@@ -17,17 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XIMValuesList {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_SHORT$LAYOUT.withName("count_values"),
-        MemoryLayout.paddingLayout(48),
-        Constants$root.C_POINTER$LAYOUT.withName("supported_values")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XIMValuesList.$struct$LAYOUT;
+        return constants$122.const$4;
     }
-    static final VarHandle count_values$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("count_values"));
     public static VarHandle count_values$VH() {
-        return XIMValuesList.count_values$VH;
+        return constants$122.const$5;
     }
     /**
      * Getter for field:
@@ -36,7 +30,7 @@ public class XIMValuesList {
      * }
      */
     public static short count_values$get(MemorySegment seg) {
-        return (short)XIMValuesList.count_values$VH.get(seg);
+        return (short)constants$122.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -45,17 +39,16 @@ public class XIMValuesList {
      * }
      */
     public static void count_values$set(MemorySegment seg, short x) {
-        XIMValuesList.count_values$VH.set(seg, x);
+        constants$122.const$5.set(seg, x);
     }
     public static short count_values$get(MemorySegment seg, long index) {
-        return (short)XIMValuesList.count_values$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$122.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void count_values$set(MemorySegment seg, long index, short x) {
-        XIMValuesList.count_values$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$122.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle supported_values$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("supported_values"));
     public static VarHandle supported_values$VH() {
-        return XIMValuesList.supported_values$VH;
+        return constants$123.const$0;
     }
     /**
      * Getter for field:
@@ -64,7 +57,7 @@ public class XIMValuesList {
      * }
      */
     public static MemorySegment supported_values$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XIMValuesList.supported_values$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$123.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -73,20 +66,20 @@ public class XIMValuesList {
      * }
      */
     public static void supported_values$set(MemorySegment seg, MemorySegment x) {
-        XIMValuesList.supported_values$VH.set(seg, x);
+        constants$123.const$0.set(seg, x);
     }
     public static MemorySegment supported_values$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XIMValuesList.supported_values$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$123.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void supported_values$set(MemorySegment seg, long index, MemorySegment x) {
-        XIMValuesList.supported_values$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$123.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

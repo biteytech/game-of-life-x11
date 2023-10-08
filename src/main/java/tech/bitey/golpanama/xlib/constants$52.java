@@ -11,60 +11,12 @@ final class constants$52 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$52() {}
-    static final FunctionDescriptor XSetFillStyle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetFillStyle$MH = RuntimeHelper.downcallHandle(
-        "XSetFillStyle",
-        constants$52.XSetFillStyle$FUNC
-    );
-    static final FunctionDescriptor XSetFont$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetFont$MH = RuntimeHelper.downcallHandle(
-        "XSetFont",
-        constants$52.XSetFont$FUNC
-    );
-    static final FunctionDescriptor XSetFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetFontPath$MH = RuntimeHelper.downcallHandle(
-        "XSetFontPath",
-        constants$52.XSetFontPath$FUNC
-    );
-    static final FunctionDescriptor XSetForeground$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetForeground$MH = RuntimeHelper.downcallHandle(
-        "XSetForeground",
-        constants$52.XSetForeground$FUNC
-    );
-    static final FunctionDescriptor XSetFunction$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetFunction$MH = RuntimeHelper.downcallHandle(
-        "XSetFunction",
-        constants$52.XSetFunction$FUNC
-    );
-    static final FunctionDescriptor XSetGraphicsExposures$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetGraphicsExposures$MH = RuntimeHelper.downcallHandle(
-        "XSetGraphicsExposures",
-        constants$52.XSetGraphicsExposures$FUNC
-    );
+    static final VarHandle const$0 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("root"));
+    static final VarHandle const$1 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("subwindow"));
+    static final VarHandle const$2 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final VarHandle const$3 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$4 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$5 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("x_root"));
 }
 
 

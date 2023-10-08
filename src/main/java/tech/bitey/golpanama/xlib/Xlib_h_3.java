@@ -11,6 +11,94 @@ public class Xlib_h_3 extends Xlib_h_2 {
 
     /**
      * {@snippet :
+     * #define CWWinGravity 32
+     * }
+     */
+    public static long CWWinGravity() {
+        return 32L;
+    }
+    /**
+     * {@snippet :
+     * #define CWBackingStore 64
+     * }
+     */
+    public static long CWBackingStore() {
+        return 64L;
+    }
+    /**
+     * {@snippet :
+     * #define CWBackingPlanes 128
+     * }
+     */
+    public static long CWBackingPlanes() {
+        return 128L;
+    }
+    /**
+     * {@snippet :
+     * #define CWBackingPixel 256
+     * }
+     */
+    public static long CWBackingPixel() {
+        return 256L;
+    }
+    /**
+     * {@snippet :
+     * #define CWOverrideRedirect 512
+     * }
+     */
+    public static long CWOverrideRedirect() {
+        return 512L;
+    }
+    /**
+     * {@snippet :
+     * #define CWSaveUnder 1024
+     * }
+     */
+    public static long CWSaveUnder() {
+        return 1024L;
+    }
+    /**
+     * {@snippet :
+     * #define CWEventMask 2048
+     * }
+     */
+    public static long CWEventMask() {
+        return 2048L;
+    }
+    /**
+     * {@snippet :
+     * #define CWDontPropagate 4096
+     * }
+     */
+    public static long CWDontPropagate() {
+        return 4096L;
+    }
+    /**
+     * {@snippet :
+     * #define CWColormap 8192
+     * }
+     */
+    public static long CWColormap() {
+        return 8192L;
+    }
+    /**
+     * {@snippet :
+     * #define CWCursor 16384
+     * }
+     */
+    public static long CWCursor() {
+        return 16384L;
+    }
+    /**
+     * {@snippet :
+     * #define CWX 1
+     * }
+     */
+    public static int CWX() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
      * #define CWY 2
      * }
      */
@@ -335,7 +423,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment NULL() {
-        return constants$85.NULL$ADDR;
+        return constants$236.const$1;
     }
     /**
      * {@snippet :
@@ -351,7 +439,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNRequiredCharSet() {
-        return constants$85.XNRequiredCharSet$SEGMENT;
+        return constants$236.const$2;
     }
     /**
      * {@snippet :
@@ -359,7 +447,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNQueryOrientation() {
-        return constants$85.XNQueryOrientation$SEGMENT;
+        return constants$236.const$3;
     }
     /**
      * {@snippet :
@@ -367,7 +455,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNBaseFontName() {
-        return constants$85.XNBaseFontName$SEGMENT;
+        return constants$236.const$4;
     }
     /**
      * {@snippet :
@@ -375,7 +463,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNOMAutomatic() {
-        return constants$85.XNOMAutomatic$SEGMENT;
+        return constants$236.const$5;
     }
     /**
      * {@snippet :
@@ -383,7 +471,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNMissingCharSet() {
-        return constants$86.XNMissingCharSet$SEGMENT;
+        return constants$237.const$0;
     }
     /**
      * {@snippet :
@@ -391,7 +479,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNDefaultString() {
-        return constants$86.XNDefaultString$SEGMENT;
+        return constants$237.const$1;
     }
     /**
      * {@snippet :
@@ -399,7 +487,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNOrientation() {
-        return constants$86.XNOrientation$SEGMENT;
+        return constants$237.const$2;
     }
     /**
      * {@snippet :
@@ -407,7 +495,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNDirectionalDependentDrawing() {
-        return constants$86.XNDirectionalDependentDrawing$SEGMENT;
+        return constants$237.const$3;
     }
     /**
      * {@snippet :
@@ -415,7 +503,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNContextualDrawing() {
-        return constants$86.XNContextualDrawing$SEGMENT;
+        return constants$237.const$4;
     }
     /**
      * {@snippet :
@@ -423,7 +511,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNFontInfo() {
-        return constants$86.XNFontInfo$SEGMENT;
+        return constants$237.const$5;
     }
     /**
      * {@snippet :
@@ -503,7 +591,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNVaNestedList() {
-        return constants$87.XNVaNestedList$SEGMENT;
+        return constants$238.const$0;
     }
     /**
      * {@snippet :
@@ -511,7 +599,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNQueryInputStyle() {
-        return constants$87.XNQueryInputStyle$SEGMENT;
+        return constants$238.const$1;
     }
     /**
      * {@snippet :
@@ -519,7 +607,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNClientWindow() {
-        return constants$87.XNClientWindow$SEGMENT;
+        return constants$238.const$2;
     }
     /**
      * {@snippet :
@@ -527,7 +615,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNInputStyle() {
-        return constants$87.XNInputStyle$SEGMENT;
+        return constants$238.const$3;
     }
     /**
      * {@snippet :
@@ -535,7 +623,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNFocusWindow() {
-        return constants$87.XNFocusWindow$SEGMENT;
+        return constants$238.const$4;
     }
     /**
      * {@snippet :
@@ -543,7 +631,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNResourceName() {
-        return constants$87.XNResourceName$SEGMENT;
+        return constants$238.const$5;
     }
     /**
      * {@snippet :
@@ -551,7 +639,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNResourceClass() {
-        return constants$88.XNResourceClass$SEGMENT;
+        return constants$239.const$0;
     }
     /**
      * {@snippet :
@@ -559,7 +647,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNGeometryCallback() {
-        return constants$88.XNGeometryCallback$SEGMENT;
+        return constants$239.const$1;
     }
     /**
      * {@snippet :
@@ -567,7 +655,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNDestroyCallback() {
-        return constants$88.XNDestroyCallback$SEGMENT;
+        return constants$239.const$2;
     }
     /**
      * {@snippet :
@@ -575,7 +663,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNFilterEvents() {
-        return constants$88.XNFilterEvents$SEGMENT;
+        return constants$239.const$3;
     }
     /**
      * {@snippet :
@@ -583,7 +671,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNPreeditStartCallback() {
-        return constants$88.XNPreeditStartCallback$SEGMENT;
+        return constants$239.const$4;
     }
     /**
      * {@snippet :
@@ -591,7 +679,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNPreeditDoneCallback() {
-        return constants$88.XNPreeditDoneCallback$SEGMENT;
+        return constants$239.const$5;
     }
     /**
      * {@snippet :
@@ -599,7 +687,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNPreeditDrawCallback() {
-        return constants$89.XNPreeditDrawCallback$SEGMENT;
+        return constants$240.const$0;
     }
     /**
      * {@snippet :
@@ -607,7 +695,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNPreeditCaretCallback() {
-        return constants$89.XNPreeditCaretCallback$SEGMENT;
+        return constants$240.const$1;
     }
     /**
      * {@snippet :
@@ -615,7 +703,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNPreeditStateNotifyCallback() {
-        return constants$89.XNPreeditStateNotifyCallback$SEGMENT;
+        return constants$240.const$2;
     }
     /**
      * {@snippet :
@@ -623,7 +711,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNPreeditAttributes() {
-        return constants$89.XNPreeditAttributes$SEGMENT;
+        return constants$240.const$3;
     }
     /**
      * {@snippet :
@@ -631,7 +719,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNStatusStartCallback() {
-        return constants$89.XNStatusStartCallback$SEGMENT;
+        return constants$240.const$4;
     }
     /**
      * {@snippet :
@@ -639,7 +727,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNStatusDoneCallback() {
-        return constants$89.XNStatusDoneCallback$SEGMENT;
+        return constants$240.const$5;
     }
     /**
      * {@snippet :
@@ -647,7 +735,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNStatusDrawCallback() {
-        return constants$90.XNStatusDrawCallback$SEGMENT;
+        return constants$241.const$0;
     }
     /**
      * {@snippet :
@@ -655,7 +743,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNStatusAttributes() {
-        return constants$90.XNStatusAttributes$SEGMENT;
+        return constants$241.const$1;
     }
     /**
      * {@snippet :
@@ -663,7 +751,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNArea() {
-        return constants$90.XNArea$SEGMENT;
+        return constants$241.const$2;
     }
     /**
      * {@snippet :
@@ -671,7 +759,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNAreaNeeded() {
-        return constants$90.XNAreaNeeded$SEGMENT;
+        return constants$241.const$3;
     }
     /**
      * {@snippet :
@@ -679,7 +767,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNSpotLocation() {
-        return constants$90.XNSpotLocation$SEGMENT;
+        return constants$241.const$4;
     }
     /**
      * {@snippet :
@@ -687,7 +775,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNColormap() {
-        return constants$90.XNColormap$SEGMENT;
+        return constants$241.const$5;
     }
     /**
      * {@snippet :
@@ -695,7 +783,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNStdColormap() {
-        return constants$91.XNStdColormap$SEGMENT;
+        return constants$242.const$0;
     }
     /**
      * {@snippet :
@@ -703,7 +791,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNForeground() {
-        return constants$91.XNForeground$SEGMENT;
+        return constants$242.const$1;
     }
     /**
      * {@snippet :
@@ -711,7 +799,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNBackground() {
-        return constants$91.XNBackground$SEGMENT;
+        return constants$242.const$2;
     }
     /**
      * {@snippet :
@@ -719,7 +807,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNBackgroundPixmap() {
-        return constants$91.XNBackgroundPixmap$SEGMENT;
+        return constants$242.const$3;
     }
     /**
      * {@snippet :
@@ -727,7 +815,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNFontSet() {
-        return constants$91.XNFontSet$SEGMENT;
+        return constants$242.const$4;
     }
     /**
      * {@snippet :
@@ -735,7 +823,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNLineSpace() {
-        return constants$91.XNLineSpace$SEGMENT;
+        return constants$242.const$5;
     }
     /**
      * {@snippet :
@@ -743,7 +831,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNCursor() {
-        return constants$92.XNCursor$SEGMENT;
+        return constants$243.const$0;
     }
     /**
      * {@snippet :
@@ -751,7 +839,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNQueryIMValuesList() {
-        return constants$92.XNQueryIMValuesList$SEGMENT;
+        return constants$243.const$1;
     }
     /**
      * {@snippet :
@@ -759,7 +847,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNQueryICValuesList() {
-        return constants$92.XNQueryICValuesList$SEGMENT;
+        return constants$243.const$2;
     }
     /**
      * {@snippet :
@@ -767,7 +855,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNVisiblePosition() {
-        return constants$92.XNVisiblePosition$SEGMENT;
+        return constants$243.const$3;
     }
     /**
      * {@snippet :
@@ -775,7 +863,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNR6PreeditCallback() {
-        return constants$92.XNR6PreeditCallback$SEGMENT;
+        return constants$243.const$4;
     }
     /**
      * {@snippet :
@@ -783,7 +871,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNStringConversionCallback() {
-        return constants$92.XNStringConversionCallback$SEGMENT;
+        return constants$243.const$5;
     }
     /**
      * {@snippet :
@@ -791,7 +879,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNStringConversion() {
-        return constants$93.XNStringConversion$SEGMENT;
+        return constants$244.const$0;
     }
     /**
      * {@snippet :
@@ -799,7 +887,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNResetState() {
-        return constants$93.XNResetState$SEGMENT;
+        return constants$244.const$1;
     }
     /**
      * {@snippet :
@@ -807,7 +895,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNHotKey() {
-        return constants$93.XNHotKey$SEGMENT;
+        return constants$244.const$2;
     }
     /**
      * {@snippet :
@@ -815,7 +903,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNHotKeyState() {
-        return constants$93.XNHotKeyState$SEGMENT;
+        return constants$244.const$3;
     }
     /**
      * {@snippet :
@@ -823,7 +911,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNPreeditState() {
-        return constants$93.XNPreeditState$SEGMENT;
+        return constants$244.const$4;
     }
     /**
      * {@snippet :
@@ -831,7 +919,7 @@ public class Xlib_h_3 extends Xlib_h_2 {
      * }
      */
     public static MemorySegment XNSeparatorofNestedList() {
-        return constants$93.XNSeparatorofNestedList$SEGMENT;
+        return constants$244.const$5;
     }
     /**
      * {@snippet :

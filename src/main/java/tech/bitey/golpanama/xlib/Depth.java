@@ -18,17 +18,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class Depth {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("depth"),
-        Constants$root.C_INT$LAYOUT.withName("nvisuals"),
-        Constants$root.C_POINTER$LAYOUT.withName("visuals")
-    );
     public static MemoryLayout $LAYOUT() {
-        return Depth.$struct$LAYOUT;
+        return constants$18.const$5;
     }
-    static final VarHandle depth$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("depth"));
     public static VarHandle depth$VH() {
-        return Depth.depth$VH;
+        return constants$19.const$0;
     }
     /**
      * Getter for field:
@@ -37,7 +31,7 @@ public class Depth {
      * }
      */
     public static int depth$get(MemorySegment seg) {
-        return (int)Depth.depth$VH.get(seg);
+        return (int)constants$19.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -46,17 +40,16 @@ public class Depth {
      * }
      */
     public static void depth$set(MemorySegment seg, int x) {
-        Depth.depth$VH.set(seg, x);
+        constants$19.const$0.set(seg, x);
     }
     public static int depth$get(MemorySegment seg, long index) {
-        return (int)Depth.depth$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$19.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void depth$set(MemorySegment seg, long index, int x) {
-        Depth.depth$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$19.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle nvisuals$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("nvisuals"));
     public static VarHandle nvisuals$VH() {
-        return Depth.nvisuals$VH;
+        return constants$19.const$1;
     }
     /**
      * Getter for field:
@@ -65,7 +58,7 @@ public class Depth {
      * }
      */
     public static int nvisuals$get(MemorySegment seg) {
-        return (int)Depth.nvisuals$VH.get(seg);
+        return (int)constants$19.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -74,17 +67,16 @@ public class Depth {
      * }
      */
     public static void nvisuals$set(MemorySegment seg, int x) {
-        Depth.nvisuals$VH.set(seg, x);
+        constants$19.const$1.set(seg, x);
     }
     public static int nvisuals$get(MemorySegment seg, long index) {
-        return (int)Depth.nvisuals$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$19.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void nvisuals$set(MemorySegment seg, long index, int x) {
-        Depth.nvisuals$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$19.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle visuals$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("visuals"));
     public static VarHandle visuals$VH() {
-        return Depth.visuals$VH;
+        return constants$19.const$2;
     }
     /**
      * Getter for field:
@@ -93,7 +85,7 @@ public class Depth {
      * }
      */
     public static MemorySegment visuals$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)Depth.visuals$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$19.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -102,20 +94,20 @@ public class Depth {
      * }
      */
     public static void visuals$set(MemorySegment seg, MemorySegment x) {
-        Depth.visuals$VH.set(seg, x);
+        constants$19.const$2.set(seg, x);
     }
     public static MemorySegment visuals$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)Depth.visuals$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$19.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void visuals$set(MemorySegment seg, long index, MemorySegment x) {
-        Depth.visuals$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$19.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

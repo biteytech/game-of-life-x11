@@ -11,71 +11,37 @@ final class constants$23 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$23() {}
-    static final FunctionDescriptor XChangeGC$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XChangeGC$MH = RuntimeHelper.downcallHandle(
-        "XChangeGC",
-        constants$23.XChangeGC$FUNC
-    );
-    static final FunctionDescriptor XChangeKeyboardControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XChangeKeyboardControl$MH = RuntimeHelper.downcallHandle(
-        "XChangeKeyboardControl",
-        constants$23.XChangeKeyboardControl$FUNC
-    );
-    static final FunctionDescriptor XChangeKeyboardMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XChangeKeyboardMapping$MH = RuntimeHelper.downcallHandle(
-        "XChangeKeyboardMapping",
-        constants$23.XChangeKeyboardMapping$FUNC
-    );
-    static final FunctionDescriptor XChangePointerControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XChangePointerControl$MH = RuntimeHelper.downcallHandle(
-        "XChangePointerControl",
-        constants$23.XChangePointerControl$FUNC
-    );
-    static final FunctionDescriptor XChangeProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XChangeProperty$MH = RuntimeHelper.downcallHandle(
-        "XChangeProperty",
-        constants$23.XChangeProperty$FUNC
-    );
-    static final FunctionDescriptor XChangeSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XChangeSaveSet$MH = RuntimeHelper.downcallHandle(
-        "XChangeSaveSet",
-        constants$23.XChangeSaveSet$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("ext_data"),
+        JAVA_INT.withName("depth"),
+        JAVA_INT.withName("bits_per_pixel"),
+        JAVA_INT.withName("scanline_pad"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$1 = constants$23.const$0.varHandle(MemoryLayout.PathElement.groupElement("ext_data"));
+    static final VarHandle const$2 = constants$23.const$0.varHandle(MemoryLayout.PathElement.groupElement("depth"));
+    static final VarHandle const$3 = constants$23.const$0.varHandle(MemoryLayout.PathElement.groupElement("bits_per_pixel"));
+    static final VarHandle const$4 = constants$23.const$0.varHandle(MemoryLayout.PathElement.groupElement("scanline_pad"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_LONG.withName("background_pixmap"),
+        JAVA_LONG.withName("background_pixel"),
+        JAVA_LONG.withName("border_pixmap"),
+        JAVA_LONG.withName("border_pixel"),
+        JAVA_INT.withName("bit_gravity"),
+        JAVA_INT.withName("win_gravity"),
+        JAVA_INT.withName("backing_store"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("backing_planes"),
+        JAVA_LONG.withName("backing_pixel"),
+        JAVA_INT.withName("save_under"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("event_mask"),
+        JAVA_LONG.withName("do_not_propagate_mask"),
+        JAVA_INT.withName("override_redirect"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("colormap"),
+        JAVA_LONG.withName("cursor")
+    ).withName("");
 }
 
 

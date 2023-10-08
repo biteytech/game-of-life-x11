@@ -11,51 +11,26 @@ final class constants$61 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$61() {}
-    static final FunctionDescriptor XSetLocaleModifiers$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetLocaleModifiers$MH = RuntimeHelper.downcallHandle(
-        "XSetLocaleModifiers",
-        constants$61.XSetLocaleModifiers$FUNC
-    );
-    static final FunctionDescriptor XOpenOM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XOpenOM$MH = RuntimeHelper.downcallHandle(
-        "XOpenOM",
-        constants$61.XOpenOM$FUNC
-    );
-    static final FunctionDescriptor XCloseOM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCloseOM$MH = RuntimeHelper.downcallHandle(
-        "XCloseOM",
-        constants$61.XCloseOM$FUNC
-    );
-    static final FunctionDescriptor XSetOMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetOMValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XSetOMValues",
-        constants$61.XSetOMValues$FUNC
-    );
-    static final FunctionDescriptor XGetOMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetOMValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XGetOMValues",
-        constants$61.XGetOMValues$FUNC
-    );
-    static final FunctionDescriptor XDisplayOfOM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayOfOM$MH = RuntimeHelper.downcallHandle(
-        "XDisplayOfOM",
-        constants$61.XDisplayOfOM$FUNC
-    );
+    static final VarHandle const$0 = constants$60.const$4.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$1 = constants$60.const$4.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$2 = constants$60.const$4.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$3 = constants$60.const$4.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("count"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$5 = constants$61.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

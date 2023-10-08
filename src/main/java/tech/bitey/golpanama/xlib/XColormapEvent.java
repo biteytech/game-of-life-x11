@@ -23,24 +23,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XColormapEvent {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("type"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
-        Constants$root.C_INT$LAYOUT.withName("send_event"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("window"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("colormap"),
-        Constants$root.C_INT$LAYOUT.withName("new"),
-        Constants$root.C_INT$LAYOUT.withName("state")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XColormapEvent.$struct$LAYOUT;
+        return constants$93.const$5;
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XColormapEvent.type$VH;
+        return constants$94.const$0;
     }
     /**
      * Getter for field:
@@ -49,7 +36,7 @@ public class XColormapEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)XColormapEvent.type$VH.get(seg);
+        return (int)constants$94.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -58,17 +45,16 @@ public class XColormapEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        XColormapEvent.type$VH.set(seg, x);
+        constants$94.const$0.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)XColormapEvent.type$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$94.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        XColormapEvent.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$94.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle serial$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("serial"));
     public static VarHandle serial$VH() {
-        return XColormapEvent.serial$VH;
+        return constants$94.const$1;
     }
     /**
      * Getter for field:
@@ -77,7 +63,7 @@ public class XColormapEvent {
      * }
      */
     public static long serial$get(MemorySegment seg) {
-        return (long)XColormapEvent.serial$VH.get(seg);
+        return (long)constants$94.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -86,17 +72,16 @@ public class XColormapEvent {
      * }
      */
     public static void serial$set(MemorySegment seg, long x) {
-        XColormapEvent.serial$VH.set(seg, x);
+        constants$94.const$1.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
-        return (long)XColormapEvent.serial$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$94.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void serial$set(MemorySegment seg, long index, long x) {
-        XColormapEvent.serial$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$94.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle send_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
     public static VarHandle send_event$VH() {
-        return XColormapEvent.send_event$VH;
+        return constants$94.const$2;
     }
     /**
      * Getter for field:
@@ -105,7 +90,7 @@ public class XColormapEvent {
      * }
      */
     public static int send_event$get(MemorySegment seg) {
-        return (int)XColormapEvent.send_event$VH.get(seg);
+        return (int)constants$94.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -114,17 +99,16 @@ public class XColormapEvent {
      * }
      */
     public static void send_event$set(MemorySegment seg, int x) {
-        XColormapEvent.send_event$VH.set(seg, x);
+        constants$94.const$2.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
-        return (int)XColormapEvent.send_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$94.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void send_event$set(MemorySegment seg, long index, int x) {
-        XColormapEvent.send_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$94.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle display$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XColormapEvent.display$VH;
+        return constants$94.const$3;
     }
     /**
      * Getter for field:
@@ -133,7 +117,7 @@ public class XColormapEvent {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XColormapEvent.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$94.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -142,17 +126,16 @@ public class XColormapEvent {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XColormapEvent.display$VH.set(seg, x);
+        constants$94.const$3.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XColormapEvent.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$94.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XColormapEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$94.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
-        return XColormapEvent.window$VH;
+        return constants$94.const$4;
     }
     /**
      * Getter for field:
@@ -161,7 +144,7 @@ public class XColormapEvent {
      * }
      */
     public static long window$get(MemorySegment seg) {
-        return (long)XColormapEvent.window$VH.get(seg);
+        return (long)constants$94.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -170,17 +153,16 @@ public class XColormapEvent {
      * }
      */
     public static void window$set(MemorySegment seg, long x) {
-        XColormapEvent.window$VH.set(seg, x);
+        constants$94.const$4.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
-        return (long)XColormapEvent.window$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$94.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void window$set(MemorySegment seg, long index, long x) {
-        XColormapEvent.window$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$94.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle colormap$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("colormap"));
     public static VarHandle colormap$VH() {
-        return XColormapEvent.colormap$VH;
+        return constants$94.const$5;
     }
     /**
      * Getter for field:
@@ -189,7 +171,7 @@ public class XColormapEvent {
      * }
      */
     public static long colormap$get(MemorySegment seg) {
-        return (long)XColormapEvent.colormap$VH.get(seg);
+        return (long)constants$94.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -198,17 +180,16 @@ public class XColormapEvent {
      * }
      */
     public static void colormap$set(MemorySegment seg, long x) {
-        XColormapEvent.colormap$VH.set(seg, x);
+        constants$94.const$5.set(seg, x);
     }
     public static long colormap$get(MemorySegment seg, long index) {
-        return (long)XColormapEvent.colormap$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$94.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void colormap$set(MemorySegment seg, long index, long x) {
-        XColormapEvent.colormap$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$94.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle new_$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("new"));
     public static VarHandle new_$VH() {
-        return XColormapEvent.new_$VH;
+        return constants$95.const$0;
     }
     /**
      * Getter for field:
@@ -217,7 +198,7 @@ public class XColormapEvent {
      * }
      */
     public static int new_$get(MemorySegment seg) {
-        return (int)XColormapEvent.new_$VH.get(seg);
+        return (int)constants$95.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -226,17 +207,16 @@ public class XColormapEvent {
      * }
      */
     public static void new_$set(MemorySegment seg, int x) {
-        XColormapEvent.new_$VH.set(seg, x);
+        constants$95.const$0.set(seg, x);
     }
     public static int new_$get(MemorySegment seg, long index) {
-        return (int)XColormapEvent.new_$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$95.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void new_$set(MemorySegment seg, long index, int x) {
-        XColormapEvent.new_$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$95.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle state$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("state"));
     public static VarHandle state$VH() {
-        return XColormapEvent.state$VH;
+        return constants$95.const$1;
     }
     /**
      * Getter for field:
@@ -245,7 +225,7 @@ public class XColormapEvent {
      * }
      */
     public static int state$get(MemorySegment seg) {
-        return (int)XColormapEvent.state$VH.get(seg);
+        return (int)constants$95.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -254,20 +234,20 @@ public class XColormapEvent {
      * }
      */
     public static void state$set(MemorySegment seg, int x) {
-        XColormapEvent.state$VH.set(seg, x);
+        constants$95.const$1.set(seg, x);
     }
     public static int state$get(MemorySegment seg, long index) {
-        return (int)XColormapEvent.state$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$95.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void state$set(MemorySegment seg, long index, int x) {
-        XColormapEvent.state$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$95.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

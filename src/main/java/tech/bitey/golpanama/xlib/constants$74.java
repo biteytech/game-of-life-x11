@@ -11,47 +11,21 @@ final class constants$74 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$74() {}
-    static final FunctionDescriptor XClipBox$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XClipBox$MH = RuntimeHelper.downcallHandle(
-        "XClipBox",
-        constants$74.XClipBox$FUNC
-    );
-    static final FunctionDescriptor XCreateRegion$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XCreateRegion$MH = RuntimeHelper.downcallHandle(
-        "XCreateRegion",
-        constants$74.XCreateRegion$FUNC
-    );
-    static final FunctionDescriptor XDefaultString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle XDefaultString$MH = RuntimeHelper.downcallHandle(
-        "XDefaultString",
-        constants$74.XDefaultString$FUNC
-    );
-    static final FunctionDescriptor XDeleteContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDeleteContext$MH = RuntimeHelper.downcallHandle(
-        "XDeleteContext",
-        constants$74.XDeleteContext$FUNC
-    );
-    static final FunctionDescriptor XDestroyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDestroyRegion$MH = RuntimeHelper.downcallHandle(
-        "XDestroyRegion",
-        constants$74.XDestroyRegion$FUNC
-    );
-    static final FunctionDescriptor XEmptyRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XEmptyRegion$MH = RuntimeHelper.downcallHandle(
-        "XEmptyRegion",
-        constants$74.XEmptyRegion$FUNC
-    );
+    static final VarHandle const$0 = constants$72.const$5.varHandle(MemoryLayout.PathElement.groupElement("override_redirect"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("parent"),
+        JAVA_LONG.withName("window")
+    ).withName("");
+    static final VarHandle const$2 = constants$74.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$74.const$1.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$4 = constants$74.const$1.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$5 = constants$74.const$1.varHandle(MemoryLayout.PathElement.groupElement("display"));
 }
 
 

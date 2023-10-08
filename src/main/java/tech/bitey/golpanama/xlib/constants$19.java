@@ -11,61 +11,35 @@ final class constants$19 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$19() {}
-    static final FunctionDescriptor XWithdrawWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XWithdrawWindow$MH = RuntimeHelper.downcallHandle(
-        "XWithdrawWindow",
-        constants$19.XWithdrawWindow$FUNC
-    );
-    static final FunctionDescriptor XGetCommand$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetCommand$MH = RuntimeHelper.downcallHandle(
-        "XGetCommand",
-        constants$19.XGetCommand$FUNC
-    );
-    static final FunctionDescriptor XGetWMColormapWindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWMColormapWindows$MH = RuntimeHelper.downcallHandle(
-        "XGetWMColormapWindows",
-        constants$19.XGetWMColormapWindows$FUNC
-    );
-    static final FunctionDescriptor XSetWMColormapWindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetWMColormapWindows$MH = RuntimeHelper.downcallHandle(
-        "XSetWMColormapWindows",
-        constants$19.XSetWMColormapWindows$FUNC
-    );
-    static final FunctionDescriptor XFreeStringList$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFreeStringList$MH = RuntimeHelper.downcallHandle(
-        "XFreeStringList",
-        constants$19.XFreeStringList$FUNC
-    );
-    static final FunctionDescriptor XSetTransientForHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetTransientForHint$MH = RuntimeHelper.downcallHandle(
-        "XSetTransientForHint",
-        constants$19.XSetTransientForHint$FUNC
-    );
+    static final VarHandle const$0 = constants$18.const$5.varHandle(MemoryLayout.PathElement.groupElement("depth"));
+    static final VarHandle const$1 = constants$18.const$5.varHandle(MemoryLayout.PathElement.groupElement("nvisuals"));
+    static final VarHandle const$2 = constants$18.const$5.varHandle(MemoryLayout.PathElement.groupElement("visuals"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("ext_data"),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("root"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("mwidth"),
+        JAVA_INT.withName("mheight"),
+        JAVA_INT.withName("ndepths"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("depths"),
+        JAVA_INT.withName("root_depth"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("root_visual"),
+        RuntimeHelper.POINTER.withName("default_gc"),
+        JAVA_LONG.withName("cmap"),
+        JAVA_LONG.withName("white_pixel"),
+        JAVA_LONG.withName("black_pixel"),
+        JAVA_INT.withName("max_maps"),
+        JAVA_INT.withName("min_maps"),
+        JAVA_INT.withName("backing_store"),
+        JAVA_INT.withName("save_unders"),
+        JAVA_LONG.withName("root_input_mask")
+    ).withName("");
+    static final VarHandle const$4 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("ext_data"));
+    static final VarHandle const$5 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("display"));
 }
 
 

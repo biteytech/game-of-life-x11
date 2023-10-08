@@ -11,12 +11,23 @@ final class constants$93 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$93() {}
-    static final MemorySegment XNStringConversion$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stringConversion");
-    static final MemorySegment XNResetState$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resetState");
-    static final MemorySegment XNHotKey$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("hotKey");
-    static final MemorySegment XNHotKeyState$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("hotKeyState");
-    static final MemorySegment XNPreeditState$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("preeditState");
-    static final MemorySegment XNSeparatorofNestedList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("separatorofNestedList");
+    static final VarHandle const$0 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("requestor"));
+    static final VarHandle const$1 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("selection"));
+    static final VarHandle const$2 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("target"));
+    static final VarHandle const$3 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("property"));
+    static final VarHandle const$4 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("colormap"),
+        JAVA_INT.withName("new"),
+        JAVA_INT.withName("state")
+    ).withName("");
 }
 
 

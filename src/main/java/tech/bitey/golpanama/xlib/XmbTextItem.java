@@ -19,18 +19,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XmbTextItem {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_POINTER$LAYOUT.withName("chars"),
-        Constants$root.C_INT$LAYOUT.withName("nchars"),
-        Constants$root.C_INT$LAYOUT.withName("delta"),
-        Constants$root.C_POINTER$LAYOUT.withName("font_set")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XmbTextItem.$struct$LAYOUT;
+        return constants$110.const$3;
     }
-    static final VarHandle chars$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("chars"));
     public static VarHandle chars$VH() {
-        return XmbTextItem.chars$VH;
+        return constants$110.const$4;
     }
     /**
      * Getter for field:
@@ -39,7 +32,7 @@ public class XmbTextItem {
      * }
      */
     public static MemorySegment chars$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XmbTextItem.chars$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$110.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -48,17 +41,16 @@ public class XmbTextItem {
      * }
      */
     public static void chars$set(MemorySegment seg, MemorySegment x) {
-        XmbTextItem.chars$VH.set(seg, x);
+        constants$110.const$4.set(seg, x);
     }
     public static MemorySegment chars$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XmbTextItem.chars$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$110.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void chars$set(MemorySegment seg, long index, MemorySegment x) {
-        XmbTextItem.chars$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$110.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle nchars$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("nchars"));
     public static VarHandle nchars$VH() {
-        return XmbTextItem.nchars$VH;
+        return constants$110.const$5;
     }
     /**
      * Getter for field:
@@ -67,7 +59,7 @@ public class XmbTextItem {
      * }
      */
     public static int nchars$get(MemorySegment seg) {
-        return (int)XmbTextItem.nchars$VH.get(seg);
+        return (int)constants$110.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -76,17 +68,16 @@ public class XmbTextItem {
      * }
      */
     public static void nchars$set(MemorySegment seg, int x) {
-        XmbTextItem.nchars$VH.set(seg, x);
+        constants$110.const$5.set(seg, x);
     }
     public static int nchars$get(MemorySegment seg, long index) {
-        return (int)XmbTextItem.nchars$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$110.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void nchars$set(MemorySegment seg, long index, int x) {
-        XmbTextItem.nchars$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$110.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle delta$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("delta"));
     public static VarHandle delta$VH() {
-        return XmbTextItem.delta$VH;
+        return constants$111.const$0;
     }
     /**
      * Getter for field:
@@ -95,7 +86,7 @@ public class XmbTextItem {
      * }
      */
     public static int delta$get(MemorySegment seg) {
-        return (int)XmbTextItem.delta$VH.get(seg);
+        return (int)constants$111.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -104,17 +95,16 @@ public class XmbTextItem {
      * }
      */
     public static void delta$set(MemorySegment seg, int x) {
-        XmbTextItem.delta$VH.set(seg, x);
+        constants$111.const$0.set(seg, x);
     }
     public static int delta$get(MemorySegment seg, long index) {
-        return (int)XmbTextItem.delta$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$111.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void delta$set(MemorySegment seg, long index, int x) {
-        XmbTextItem.delta$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$111.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle font_set$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("font_set"));
     public static VarHandle font_set$VH() {
-        return XmbTextItem.font_set$VH;
+        return constants$111.const$1;
     }
     /**
      * Getter for field:
@@ -123,7 +113,7 @@ public class XmbTextItem {
      * }
      */
     public static MemorySegment font_set$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XmbTextItem.font_set$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$111.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -132,20 +122,20 @@ public class XmbTextItem {
      * }
      */
     public static void font_set$set(MemorySegment seg, MemorySegment x) {
-        XmbTextItem.font_set$VH.set(seg, x);
+        constants$111.const$1.set(seg, x);
     }
     public static MemorySegment font_set$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XmbTextItem.font_set$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$111.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void font_set$set(MemorySegment seg, long index, MemorySegment x) {
-        XmbTextItem.font_set$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$111.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

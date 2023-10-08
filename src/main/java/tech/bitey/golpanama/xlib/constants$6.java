@@ -11,58 +11,12 @@ final class constants$6 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$6() {}
-    static final FunctionDescriptor XSetAfterFunction$return_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetAfterFunction$return_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$6.XSetAfterFunction$return_DOWN$FUNC
-    );
-    static final FunctionDescriptor XSetAfterFunction$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetAfterFunction$MH = RuntimeHelper.downcallHandle(
-        "XSetAfterFunction",
-        constants$6.XSetAfterFunction$FUNC
-    );
-    static final FunctionDescriptor XInternAtom$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XInternAtom$MH = RuntimeHelper.downcallHandle(
-        "XInternAtom",
-        constants$6.XInternAtom$FUNC
-    );
-    static final FunctionDescriptor XInternAtoms$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XInternAtoms$MH = RuntimeHelper.downcallHandle(
-        "XInternAtoms",
-        constants$6.XInternAtoms$FUNC
-    );
-    static final FunctionDescriptor XCopyColormapAndFree$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XCopyColormapAndFree$MH = RuntimeHelper.downcallHandle(
-        "XCopyColormapAndFree",
-        constants$6.XCopyColormapAndFree$FUNC
-    );
-    static final FunctionDescriptor XCreateColormap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCreateColormap$MH = RuntimeHelper.downcallHandle(
-        "XCreateColormap",
-        constants$6.XCreateColormap$FUNC
-    );
+    static final VarHandle const$0 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__pad4"));
+    static final VarHandle const$1 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__cur_writer"));
+    static final VarHandle const$2 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__shared"));
+    static final VarHandle const$3 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__rwelision"));
+    static final VarHandle const$4 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__pad2"));
+    static final VarHandle const$5 = constants$5.const$0.varHandle(MemoryLayout.PathElement.groupElement("__flags"));
 }
 
 

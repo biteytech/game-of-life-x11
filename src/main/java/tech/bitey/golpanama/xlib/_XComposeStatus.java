@@ -17,17 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class _XComposeStatus {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_POINTER$LAYOUT.withName("compose_ptr"),
-        Constants$root.C_INT$LAYOUT.withName("chars_matched"),
-        MemoryLayout.paddingLayout(32)
-    ).withName("_XComposeStatus");
     public static MemoryLayout $LAYOUT() {
-        return _XComposeStatus.$struct$LAYOUT;
+        return constants$218.const$1;
     }
-    static final VarHandle compose_ptr$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("compose_ptr"));
     public static VarHandle compose_ptr$VH() {
-        return _XComposeStatus.compose_ptr$VH;
+        return constants$218.const$2;
     }
     /**
      * Getter for field:
@@ -36,7 +30,7 @@ public class _XComposeStatus {
      * }
      */
     public static MemorySegment compose_ptr$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)_XComposeStatus.compose_ptr$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$218.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -45,17 +39,16 @@ public class _XComposeStatus {
      * }
      */
     public static void compose_ptr$set(MemorySegment seg, MemorySegment x) {
-        _XComposeStatus.compose_ptr$VH.set(seg, x);
+        constants$218.const$2.set(seg, x);
     }
     public static MemorySegment compose_ptr$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)_XComposeStatus.compose_ptr$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$218.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void compose_ptr$set(MemorySegment seg, long index, MemorySegment x) {
-        _XComposeStatus.compose_ptr$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$218.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle chars_matched$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("chars_matched"));
     public static VarHandle chars_matched$VH() {
-        return _XComposeStatus.chars_matched$VH;
+        return constants$218.const$3;
     }
     /**
      * Getter for field:
@@ -64,7 +57,7 @@ public class _XComposeStatus {
      * }
      */
     public static int chars_matched$get(MemorySegment seg) {
-        return (int)_XComposeStatus.chars_matched$VH.get(seg);
+        return (int)constants$218.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -73,20 +66,20 @@ public class _XComposeStatus {
      * }
      */
     public static void chars_matched$set(MemorySegment seg, int x) {
-        _XComposeStatus.chars_matched$VH.set(seg, x);
+        constants$218.const$3.set(seg, x);
     }
     public static int chars_matched$get(MemorySegment seg, long index) {
-        return (int)_XComposeStatus.chars_matched$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$218.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void chars_matched$set(MemorySegment seg, long index, int x) {
-        _XComposeStatus.chars_matched$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$218.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

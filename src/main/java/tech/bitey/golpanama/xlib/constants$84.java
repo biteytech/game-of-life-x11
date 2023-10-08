@@ -11,70 +11,23 @@ final class constants$84 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$84() {}
-    static final FunctionDescriptor XwcTextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcTextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
-        "XwcTextPropertyToTextList",
-        constants$84.XwcTextPropertyToTextList$FUNC
-    );
-    static final FunctionDescriptor Xutf8TextPropertyToTextList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8TextPropertyToTextList$MH = RuntimeHelper.downcallHandle(
-        "Xutf8TextPropertyToTextList",
-        constants$84.Xutf8TextPropertyToTextList$FUNC
-    );
-    static final FunctionDescriptor XUnionRectWithRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XUnionRectWithRegion$MH = RuntimeHelper.downcallHandle(
-        "XUnionRectWithRegion",
-        constants$84.XUnionRectWithRegion$FUNC
-    );
-    static final FunctionDescriptor XUnionRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XUnionRegion$MH = RuntimeHelper.downcallHandle(
-        "XUnionRegion",
-        constants$84.XUnionRegion$FUNC
-    );
-    static final FunctionDescriptor XWMGeometry$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XWMGeometry$MH = RuntimeHelper.downcallHandle(
-        "XWMGeometry",
-        constants$84.XWMGeometry$FUNC
-    );
-    static final FunctionDescriptor XXorRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XXorRegion$MH = RuntimeHelper.downcallHandle(
-        "XXorRegion",
-        constants$84.XXorRegion$FUNC
-    );
+    static final VarHandle const$0 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final VarHandle const$1 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("border_width"));
+    static final VarHandle const$2 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("above"));
+    static final VarHandle const$3 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("detail"));
+    static final VarHandle const$4 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("value_mask"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("event"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("place"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
 }
 
 

@@ -2,80 +2,30 @@
 
 package tech.bitey.golpanama.xlib;
 
+import static java.lang.foreign.ValueLayout.JAVA_INT;
+import static java.lang.foreign.ValueLayout.JAVA_LONG;
+
+import java.lang.foreign.FunctionDescriptor;
+import java.lang.foreign.MemoryLayout;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
-import java.lang.foreign.*;
-import static java.lang.foreign.ValueLayout.*;
+
+import tech.bitey.golpanama.xlib._XImage.funcs;
+
 final class constants$36 {
 
-    // Suppresses default constructor, ensuring non-instantiability.
-    private constants$36() {}
-    static final FunctionDescriptor XFreeModifiermap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFreeModifiermap$MH = RuntimeHelper.downcallHandle(
-        "XFreeModifiermap",
-        constants$36.XFreeModifiermap$FUNC
-    );
-    static final FunctionDescriptor XFreePixmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XFreePixmap$MH = RuntimeHelper.downcallHandle(
-        "XFreePixmap",
-        constants$36.XFreePixmap$FUNC
-    );
-    static final FunctionDescriptor XGeometry$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGeometry$MH = RuntimeHelper.downcallHandle(
-        "XGeometry",
-        constants$36.XGeometry$FUNC
-    );
-    static final FunctionDescriptor XGetErrorDatabaseText$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGetErrorDatabaseText$MH = RuntimeHelper.downcallHandle(
-        "XGetErrorDatabaseText",
-        constants$36.XGetErrorDatabaseText$FUNC
-    );
-    static final FunctionDescriptor XGetErrorText$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGetErrorText$MH = RuntimeHelper.downcallHandle(
-        "XGetErrorText",
-        constants$36.XGetErrorText$FUNC
-    );
-    static final FunctionDescriptor XGetFontProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetFontProperty$MH = RuntimeHelper.downcallHandle(
-        "XGetFontProperty",
-        constants$36.XGetFontProperty$FUNC
-    );
+	// Suppresses default constructor, ensuring non-instantiability.
+	private constants$36() {
+	}
+
+	static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_LONG, RuntimeHelper.POINTER, JAVA_INT,
+			JAVA_INT);
+	static final MethodHandle const$1 = RuntimeHelper.upcallHandle(funcs.get_pixel.class, "apply",
+			constants$36.const$0);
+	static final MethodHandle const$2 = RuntimeHelper.downcallHandle(constants$36.const$0);
+	static final VarHandle const$3 = constants$34.const$5.varHandle(MemoryLayout.PathElement.groupElement("get_pixel"));
+	static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT, RuntimeHelper.POINTER, JAVA_INT, JAVA_INT,
+			JAVA_LONG);
+	static final MethodHandle const$5 = RuntimeHelper.upcallHandle(funcs.put_pixel.class, "apply",
+			constants$36.const$4);
 }
-
-

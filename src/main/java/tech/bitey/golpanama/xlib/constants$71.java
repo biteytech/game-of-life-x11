@@ -11,72 +11,23 @@ final class constants$71 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$71() {}
-    static final FunctionDescriptor XRegisterIMInstantiateCallback$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XRegisterIMInstantiateCallback$MH = RuntimeHelper.downcallHandle(
-        "XRegisterIMInstantiateCallback",
-        constants$71.XRegisterIMInstantiateCallback$FUNC
-    );
-    static final FunctionDescriptor XUnregisterIMInstantiateCallback$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XUnregisterIMInstantiateCallback$MH = RuntimeHelper.downcallHandle(
-        "XUnregisterIMInstantiateCallback",
-        constants$71.XUnregisterIMInstantiateCallback$FUNC
-    );
-    static final FunctionDescriptor XConnectionWatchProc$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XConnectionWatchProc_UP$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XConnectionWatchProc_UP$MH = RuntimeHelper.upcallHandle(XConnectionWatchProc.class, "apply", constants$71.XConnectionWatchProc_UP$FUNC);
-    static final FunctionDescriptor XConnectionWatchProc_DOWN$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XConnectionWatchProc_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$71.XConnectionWatchProc_DOWN$FUNC
-    );
-    static final FunctionDescriptor XInternalConnectionNumbers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XInternalConnectionNumbers$MH = RuntimeHelper.downcallHandle(
-        "XInternalConnectionNumbers",
-        constants$71.XInternalConnectionNumbers$FUNC
-    );
-    static final FunctionDescriptor XProcessInternalConnection$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XProcessInternalConnection$MH = RuntimeHelper.downcallHandle(
-        "XProcessInternalConnection",
-        constants$71.XProcessInternalConnection$FUNC
-    );
+    static final VarHandle const$0 = constants$70.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$1 = constants$70.const$2.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$2 = constants$70.const$2.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("event"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("from_configure"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$4 = constants$71.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$71.const$3.varHandle(MemoryLayout.PathElement.groupElement("serial"));
 }
 
 

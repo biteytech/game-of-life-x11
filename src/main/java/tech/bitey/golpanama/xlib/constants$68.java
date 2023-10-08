@@ -11,48 +11,27 @@ final class constants$68 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$68() {}
-    static final FunctionDescriptor XSetIMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetIMValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XSetIMValues",
-        constants$68.XSetIMValues$FUNC
-    );
-    static final FunctionDescriptor XDisplayOfIM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayOfIM$MH = RuntimeHelper.downcallHandle(
-        "XDisplayOfIM",
-        constants$68.XDisplayOfIM$FUNC
-    );
-    static final FunctionDescriptor XLocaleOfIM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLocaleOfIM$MH = RuntimeHelper.downcallHandle(
-        "XLocaleOfIM",
-        constants$68.XLocaleOfIM$FUNC
-    );
-    static final FunctionDescriptor XCreateIC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCreateIC$MH = RuntimeHelper.downcallHandleVariadic(
-        "XCreateIC",
-        constants$68.XCreateIC$FUNC
-    );
-    static final FunctionDescriptor XDestroyIC$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDestroyIC$MH = RuntimeHelper.downcallHandle(
-        "XDestroyIC",
-        constants$68.XDestroyIC$FUNC
-    );
-    static final FunctionDescriptor XSetICFocus$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetICFocus$MH = RuntimeHelper.downcallHandle(
-        "XSetICFocus",
-        constants$68.XSetICFocus$FUNC
-    );
+    static final VarHandle const$0 = constants$67.const$0.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("parent"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("border_width"),
+        JAVA_INT.withName("override_redirect")
+    ).withName("");
+    static final VarHandle const$2 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$4 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$5 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("display"));
 }
 
 

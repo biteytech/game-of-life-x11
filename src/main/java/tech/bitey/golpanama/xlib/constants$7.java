@@ -11,65 +11,37 @@ final class constants$7 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$7() {}
-    static final FunctionDescriptor XCreatePixmapCursor$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCreatePixmapCursor$MH = RuntimeHelper.downcallHandle(
-        "XCreatePixmapCursor",
-        constants$7.XCreatePixmapCursor$FUNC
-    );
-    static final FunctionDescriptor XCreateGlyphCursor$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCreateGlyphCursor$MH = RuntimeHelper.downcallHandle(
-        "XCreateGlyphCursor",
-        constants$7.XCreateGlyphCursor$FUNC
-    );
-    static final FunctionDescriptor XCreateFontCursor$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCreateFontCursor$MH = RuntimeHelper.downcallHandle(
-        "XCreateFontCursor",
-        constants$7.XCreateFontCursor$FUNC
-    );
-    static final FunctionDescriptor XLoadFont$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLoadFont$MH = RuntimeHelper.downcallHandle(
-        "XLoadFont",
-        constants$7.XLoadFont$FUNC
-    );
-    static final FunctionDescriptor XCreateGC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCreateGC$MH = RuntimeHelper.downcallHandle(
-        "XCreateGC",
-        constants$7.XCreateGC$FUNC
-    );
-    static final FunctionDescriptor XGContextFromGC$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGContextFromGC$MH = RuntimeHelper.downcallHandle(
-        "XGContextFromGC",
-        constants$7.XGContextFromGC$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        MemoryLayout.unionLayout(
+            JAVA_LONG.withName("__value64"),
+            MemoryLayout.structLayout(
+                JAVA_INT.withName("__low"),
+                JAVA_INT.withName("__high")
+            ).withName("__value32")
+        ).withName("__wseq"),
+        MemoryLayout.unionLayout(
+            JAVA_LONG.withName("__value64"),
+            MemoryLayout.structLayout(
+                JAVA_INT.withName("__low"),
+                JAVA_INT.withName("__high")
+            ).withName("__value32")
+        ).withName("__g1_start"),
+        MemoryLayout.sequenceLayout(2, JAVA_INT).withName("__g_refs"),
+        MemoryLayout.sequenceLayout(2, JAVA_INT).withName("__g_size"),
+        JAVA_INT.withName("__g1_orig_size"),
+        JAVA_INT.withName("__wrefs"),
+        MemoryLayout.sequenceLayout(2, JAVA_INT).withName("__g_signals")
+    ).withName("__pthread_cond_s");
+    static final VarHandle const$1 = constants$7.const$0.varHandle(MemoryLayout.PathElement.groupElement("__g1_orig_size"));
+    static final VarHandle const$2 = constants$7.const$0.varHandle(MemoryLayout.PathElement.groupElement("__wrefs"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("__data")
+    ).withName("");
+    static final VarHandle const$4 = constants$7.const$3.varHandle(MemoryLayout.PathElement.groupElement("__data"));
+    static final UnionLayout const$5 = MemoryLayout.unionLayout(
+        MemoryLayout.sequenceLayout(4, JAVA_BYTE).withName("__size"),
+        JAVA_INT.withName("__align")
+    ).withName("");
 }
 
 

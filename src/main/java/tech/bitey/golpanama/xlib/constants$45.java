@@ -11,78 +11,12 @@ final class constants$45 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$45() {}
-    static final FunctionDescriptor XPutImage$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XPutImage$MH = RuntimeHelper.downcallHandle(
-        "XPutImage",
-        constants$45.XPutImage$FUNC
-    );
-    static final FunctionDescriptor XQLength$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQLength$MH = RuntimeHelper.downcallHandle(
-        "XQLength",
-        constants$45.XQLength$FUNC
-    );
-    static final FunctionDescriptor XQueryBestCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryBestCursor$MH = RuntimeHelper.downcallHandle(
-        "XQueryBestCursor",
-        constants$45.XQueryBestCursor$FUNC
-    );
-    static final FunctionDescriptor XQueryBestSize$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryBestSize$MH = RuntimeHelper.downcallHandle(
-        "XQueryBestSize",
-        constants$45.XQueryBestSize$FUNC
-    );
-    static final FunctionDescriptor XQueryBestStipple$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryBestStipple$MH = RuntimeHelper.downcallHandle(
-        "XQueryBestStipple",
-        constants$45.XQueryBestStipple$FUNC
-    );
-    static final FunctionDescriptor XQueryBestTile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryBestTile$MH = RuntimeHelper.downcallHandle(
-        "XQueryBestTile",
-        constants$45.XQueryBestTile$FUNC
-    );
+    static final VarHandle const$0 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("bell_pitch"));
+    static final VarHandle const$1 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("bell_duration"));
+    static final VarHandle const$2 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("led"));
+    static final VarHandle const$3 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("led_mode"));
+    static final VarHandle const$4 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("key"));
+    static final VarHandle const$5 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("auto_repeat_mode"));
 }
 
 

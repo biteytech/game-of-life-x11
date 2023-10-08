@@ -11,70 +11,37 @@ final class constants$9 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$9() {}
-    static final FunctionDescriptor XCreateWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCreateWindow$MH = RuntimeHelper.downcallHandle(
-        "XCreateWindow",
-        constants$9.XCreateWindow$FUNC
-    );
-    static final FunctionDescriptor XListInstalledColormaps$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListInstalledColormaps$MH = RuntimeHelper.downcallHandle(
-        "XListInstalledColormaps",
-        constants$9.XListInstalledColormaps$FUNC
-    );
-    static final FunctionDescriptor XListFonts$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListFonts$MH = RuntimeHelper.downcallHandle(
-        "XListFonts",
-        constants$9.XListFonts$FUNC
-    );
-    static final FunctionDescriptor XListFontsWithInfo$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListFontsWithInfo$MH = RuntimeHelper.downcallHandle(
-        "XListFontsWithInfo",
-        constants$9.XListFontsWithInfo$FUNC
-    );
-    static final FunctionDescriptor XGetFontPath$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetFontPath$MH = RuntimeHelper.downcallHandle(
-        "XGetFontPath",
-        constants$9.XGetFontPath$FUNC
-    );
-    static final FunctionDescriptor XListExtensions$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListExtensions$MH = RuntimeHelper.downcallHandle(
-        "XListExtensions",
-        constants$9.XListExtensions$FUNC
-    );
+    static final VarHandle const$0 = constants$8.const$5.varHandle(MemoryLayout.PathElement.groupElement("__align"));
+    static final UnionLayout const$1 = MemoryLayout.unionLayout(
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("__readers"),
+            JAVA_INT.withName("__writers"),
+            JAVA_INT.withName("__wrphase_futex"),
+            JAVA_INT.withName("__writers_futex"),
+            JAVA_INT.withName("__pad3"),
+            JAVA_INT.withName("__pad4"),
+            JAVA_INT.withName("__cur_writer"),
+            JAVA_INT.withName("__shared"),
+            JAVA_BYTE.withName("__rwelision"),
+            MemoryLayout.sequenceLayout(7, JAVA_BYTE).withName("__pad1"),
+            JAVA_LONG.withName("__pad2"),
+            JAVA_INT.withName("__flags"),
+            MemoryLayout.paddingLayout(4)
+        ).withName("__data"),
+        MemoryLayout.sequenceLayout(56, JAVA_BYTE).withName("__size"),
+        JAVA_LONG.withName("__align")
+    ).withName("");
+    static final VarHandle const$2 = constants$9.const$1.varHandle(MemoryLayout.PathElement.groupElement("__align"));
+    static final UnionLayout const$3 = MemoryLayout.unionLayout(
+        MemoryLayout.sequenceLayout(8, JAVA_BYTE).withName("__size"),
+        JAVA_LONG.withName("__align")
+    ).withName("");
+    static final VarHandle const$4 = constants$9.const$3.varHandle(MemoryLayout.PathElement.groupElement("__align"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_LONG.withName("__clang_max_align_nonce1"),
+        MemoryLayout.paddingLayout(8),
+        MemoryLayout.paddingLayout(16).withName("__clang_max_align_nonce2")
+    ).withName("");
 }
 
 

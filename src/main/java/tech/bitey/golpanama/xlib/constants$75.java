@@ -11,63 +11,26 @@ final class constants$75 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$75() {}
-    static final FunctionDescriptor XEqualRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XEqualRegion$MH = RuntimeHelper.downcallHandle(
-        "XEqualRegion",
-        constants$75.XEqualRegion$FUNC
-    );
-    static final FunctionDescriptor XFindContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFindContext$MH = RuntimeHelper.downcallHandle(
-        "XFindContext",
-        constants$75.XFindContext$FUNC
-    );
-    static final FunctionDescriptor XGetClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetClassHint$MH = RuntimeHelper.downcallHandle(
-        "XGetClassHint",
-        constants$75.XGetClassHint$FUNC
-    );
-    static final FunctionDescriptor XGetIconSizes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetIconSizes$MH = RuntimeHelper.downcallHandle(
-        "XGetIconSizes",
-        constants$75.XGetIconSizes$FUNC
-    );
-    static final FunctionDescriptor XGetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetNormalHints$MH = RuntimeHelper.downcallHandle(
-        "XGetNormalHints",
-        constants$75.XGetNormalHints$FUNC
-    );
-    static final FunctionDescriptor XGetRGBColormaps$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetRGBColormaps$MH = RuntimeHelper.downcallHandle(
-        "XGetRGBColormaps",
-        constants$75.XGetRGBColormaps$FUNC
-    );
+    static final VarHandle const$0 = constants$74.const$1.varHandle(MemoryLayout.PathElement.groupElement("parent"));
+    static final VarHandle const$1 = constants$74.const$1.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("event"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("parent"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("override_redirect"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$3 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$5 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
 }
 
 

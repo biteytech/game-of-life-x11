@@ -19,18 +19,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XServerInterpretedAddress {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("typelength"),
-        Constants$root.C_INT$LAYOUT.withName("valuelength"),
-        Constants$root.C_POINTER$LAYOUT.withName("type"),
-        Constants$root.C_POINTER$LAYOUT.withName("value")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XServerInterpretedAddress.$struct$LAYOUT;
+        return constants$31.const$1;
     }
-    static final VarHandle typelength$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("typelength"));
     public static VarHandle typelength$VH() {
-        return XServerInterpretedAddress.typelength$VH;
+        return constants$31.const$2;
     }
     /**
      * Getter for field:
@@ -39,7 +32,7 @@ public class XServerInterpretedAddress {
      * }
      */
     public static int typelength$get(MemorySegment seg) {
-        return (int)XServerInterpretedAddress.typelength$VH.get(seg);
+        return (int)constants$31.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -48,17 +41,16 @@ public class XServerInterpretedAddress {
      * }
      */
     public static void typelength$set(MemorySegment seg, int x) {
-        XServerInterpretedAddress.typelength$VH.set(seg, x);
+        constants$31.const$2.set(seg, x);
     }
     public static int typelength$get(MemorySegment seg, long index) {
-        return (int)XServerInterpretedAddress.typelength$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$31.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void typelength$set(MemorySegment seg, long index, int x) {
-        XServerInterpretedAddress.typelength$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$31.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle valuelength$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("valuelength"));
     public static VarHandle valuelength$VH() {
-        return XServerInterpretedAddress.valuelength$VH;
+        return constants$31.const$3;
     }
     /**
      * Getter for field:
@@ -67,7 +59,7 @@ public class XServerInterpretedAddress {
      * }
      */
     public static int valuelength$get(MemorySegment seg) {
-        return (int)XServerInterpretedAddress.valuelength$VH.get(seg);
+        return (int)constants$31.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -76,17 +68,16 @@ public class XServerInterpretedAddress {
      * }
      */
     public static void valuelength$set(MemorySegment seg, int x) {
-        XServerInterpretedAddress.valuelength$VH.set(seg, x);
+        constants$31.const$3.set(seg, x);
     }
     public static int valuelength$get(MemorySegment seg, long index) {
-        return (int)XServerInterpretedAddress.valuelength$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$31.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void valuelength$set(MemorySegment seg, long index, int x) {
-        XServerInterpretedAddress.valuelength$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$31.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XServerInterpretedAddress.type$VH;
+        return constants$31.const$4;
     }
     /**
      * Getter for field:
@@ -95,7 +86,7 @@ public class XServerInterpretedAddress {
      * }
      */
     public static MemorySegment type$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XServerInterpretedAddress.type$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$31.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -104,17 +95,16 @@ public class XServerInterpretedAddress {
      * }
      */
     public static void type$set(MemorySegment seg, MemorySegment x) {
-        XServerInterpretedAddress.type$VH.set(seg, x);
+        constants$31.const$4.set(seg, x);
     }
     public static MemorySegment type$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XServerInterpretedAddress.type$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$31.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, MemorySegment x) {
-        XServerInterpretedAddress.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$31.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle value$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("value"));
     public static VarHandle value$VH() {
-        return XServerInterpretedAddress.value$VH;
+        return constants$31.const$5;
     }
     /**
      * Getter for field:
@@ -123,7 +113,7 @@ public class XServerInterpretedAddress {
      * }
      */
     public static MemorySegment value$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XServerInterpretedAddress.value$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$31.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -132,20 +122,20 @@ public class XServerInterpretedAddress {
      * }
      */
     public static void value$set(MemorySegment seg, MemorySegment x) {
-        XServerInterpretedAddress.value$VH.set(seg, x);
+        constants$31.const$5.set(seg, x);
     }
     public static MemorySegment value$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XServerInterpretedAddress.value$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$31.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void value$set(MemorySegment seg, long index, MemorySegment x) {
-        XServerInterpretedAddress.value$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$31.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

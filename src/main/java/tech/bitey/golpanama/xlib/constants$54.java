@@ -11,67 +11,12 @@ final class constants$54 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$54() {}
-    static final FunctionDescriptor XSetScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetScreenSaver$MH = RuntimeHelper.downcallHandle(
-        "XSetScreenSaver",
-        constants$54.XSetScreenSaver$FUNC
-    );
-    static final FunctionDescriptor XSetSelectionOwner$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetSelectionOwner$MH = RuntimeHelper.downcallHandle(
-        "XSetSelectionOwner",
-        constants$54.XSetSelectionOwner$FUNC
-    );
-    static final FunctionDescriptor XSetState$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetState$MH = RuntimeHelper.downcallHandle(
-        "XSetState",
-        constants$54.XSetState$FUNC
-    );
-    static final FunctionDescriptor XSetStipple$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetStipple$MH = RuntimeHelper.downcallHandle(
-        "XSetStipple",
-        constants$54.XSetStipple$FUNC
-    );
-    static final FunctionDescriptor XSetSubwindowMode$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetSubwindowMode$MH = RuntimeHelper.downcallHandle(
-        "XSetSubwindowMode",
-        constants$54.XSetSubwindowMode$FUNC
-    );
-    static final FunctionDescriptor XSetTSOrigin$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetTSOrigin$MH = RuntimeHelper.downcallHandle(
-        "XSetTSOrigin",
-        constants$54.XSetTSOrigin$FUNC
-    );
+    static final VarHandle const$0 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$1 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$2 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$3 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$4 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("root"));
+    static final VarHandle const$5 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("subwindow"));
 }
 
 

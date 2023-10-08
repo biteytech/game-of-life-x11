@@ -11,63 +11,30 @@ final class constants$77 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$77() {}
-    static final FunctionDescriptor XGetWMIconName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWMIconName$MH = RuntimeHelper.downcallHandle(
-        "XGetWMIconName",
-        constants$77.XGetWMIconName$FUNC
-    );
-    static final FunctionDescriptor XGetWMName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWMName$MH = RuntimeHelper.downcallHandle(
-        "XGetWMName",
-        constants$77.XGetWMName$FUNC
-    );
-    static final FunctionDescriptor XGetWMNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWMNormalHints$MH = RuntimeHelper.downcallHandle(
-        "XGetWMNormalHints",
-        constants$77.XGetWMNormalHints$FUNC
-    );
-    static final FunctionDescriptor XGetWMSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XGetWMSizeHints$MH = RuntimeHelper.downcallHandle(
-        "XGetWMSizeHints",
-        constants$77.XGetWMSizeHints$FUNC
-    );
-    static final FunctionDescriptor XGetZoomHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetZoomHints$MH = RuntimeHelper.downcallHandle(
-        "XGetZoomHints",
-        constants$77.XGetZoomHints$FUNC
-    );
-    static final FunctionDescriptor XIntersectRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIntersectRegion$MH = RuntimeHelper.downcallHandle(
-        "XIntersectRegion",
-        constants$77.XIntersectRegion$FUNC
-    );
+    static final VarHandle const$0 = constants$75.const$2.varHandle(MemoryLayout.PathElement.groupElement("override_redirect"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("event"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("border_width"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("above"),
+        JAVA_INT.withName("override_redirect"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$2 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$4 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$5 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("display"));
 }
 
 

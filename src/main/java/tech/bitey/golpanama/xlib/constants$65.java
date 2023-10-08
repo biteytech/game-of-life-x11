@@ -11,84 +11,22 @@ final class constants$65 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$65() {}
-    static final FunctionDescriptor XmbTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbTextExtents$MH = RuntimeHelper.downcallHandle(
-        "XmbTextExtents",
-        constants$65.XmbTextExtents$FUNC
-    );
-    static final FunctionDescriptor XwcTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcTextExtents$MH = RuntimeHelper.downcallHandle(
-        "XwcTextExtents",
-        constants$65.XwcTextExtents$FUNC
-    );
-    static final FunctionDescriptor Xutf8TextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8TextExtents$MH = RuntimeHelper.downcallHandle(
-        "Xutf8TextExtents",
-        constants$65.Xutf8TextExtents$FUNC
-    );
-    static final FunctionDescriptor XmbTextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbTextPerCharExtents$MH = RuntimeHelper.downcallHandle(
-        "XmbTextPerCharExtents",
-        constants$65.XmbTextPerCharExtents$FUNC
-    );
-    static final FunctionDescriptor XwcTextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcTextPerCharExtents$MH = RuntimeHelper.downcallHandle(
-        "XwcTextPerCharExtents",
-        constants$65.XwcTextPerCharExtents$FUNC
-    );
-    static final FunctionDescriptor Xutf8TextPerCharExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8TextPerCharExtents$MH = RuntimeHelper.downcallHandle(
-        "Xutf8TextPerCharExtents",
-        constants$65.Xutf8TextPerCharExtents$FUNC
-    );
+    static final VarHandle const$0 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final VarHandle const$1 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("count"));
+    static final VarHandle const$2 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("major_code"));
+    static final VarHandle const$3 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("minor_code"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("drawable"),
+        JAVA_INT.withName("major_code"),
+        JAVA_INT.withName("minor_code")
+    ).withName("");
+    static final VarHandle const$5 = constants$65.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

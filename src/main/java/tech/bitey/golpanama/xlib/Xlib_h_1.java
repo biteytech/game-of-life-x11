@@ -11,6 +11,14 @@ public class Xlib_h_1 {
 
     /**
      * {@snippet :
+     * #define XK_kana_ya 1196
+     * }
+     */
+    public static int XK_kana_ya() {
+        return (int)1196L;
+    }
+    /**
+     * {@snippet :
      * #define XK_kana_yu 1197
      * }
      */
@@ -6659,6 +6667,46 @@ public class Xlib_h_1 {
     }
     /**
      * {@snippet :
+     * #define XK_combining_tilde 16777987
+     * }
+     */
+    public static int XK_combining_tilde() {
+        return (int)16777987L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_combining_grave 16777984
+     * }
+     */
+    public static int XK_combining_grave() {
+        return (int)16777984L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_combining_acute 16777985
+     * }
+     */
+    public static int XK_combining_acute() {
+        return (int)16777985L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_combining_hook 16777993
+     * }
+     */
+    public static int XK_combining_hook() {
+        return (int)16777993L;
+    }
+    /**
+     * {@snippet :
+     * #define XK_combining_belowdot 16778019
+     * }
+     */
+    public static int XK_combining_belowdot() {
+        return (int)16778019L;
+    }
+    /**
+     * {@snippet :
      * #define XK_EcuSign 16785568
      * }
      */
@@ -7960,54 +8008,6 @@ public class Xlib_h_1 {
      */
     public static int XK_braille_dots_12467() {
         return (int)16787563L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braille_dots_3467 16787564
-     * }
-     */
-    public static int XK_braille_dots_3467() {
-        return (int)16787564L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braille_dots_13467 16787565
-     * }
-     */
-    public static int XK_braille_dots_13467() {
-        return (int)16787565L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braille_dots_23467 16787566
-     * }
-     */
-    public static int XK_braille_dots_23467() {
-        return (int)16787566L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braille_dots_123467 16787567
-     * }
-     */
-    public static int XK_braille_dots_123467() {
-        return (int)16787567L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braille_dots_567 16787568
-     * }
-     */
-    public static int XK_braille_dots_567() {
-        return (int)16787568L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braille_dots_1567 16787569
-     * }
-     */
-    public static int XK_braille_dots_1567() {
-        return (int)16787569L;
     }
 }
 

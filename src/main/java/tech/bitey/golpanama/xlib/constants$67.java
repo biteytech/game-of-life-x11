@@ -11,72 +11,22 @@ final class constants$67 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$67() {}
-    static final FunctionDescriptor XmbDrawImageString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XmbDrawImageString$MH = RuntimeHelper.downcallHandle(
-        "XmbDrawImageString",
-        constants$67.XmbDrawImageString$FUNC
-    );
-    static final FunctionDescriptor XwcDrawImageString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XwcDrawImageString$MH = RuntimeHelper.downcallHandle(
-        "XwcDrawImageString",
-        constants$67.XwcDrawImageString$FUNC
-    );
-    static final FunctionDescriptor Xutf8DrawImageString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle Xutf8DrawImageString$MH = RuntimeHelper.downcallHandle(
-        "Xutf8DrawImageString",
-        constants$67.Xutf8DrawImageString$FUNC
-    );
-    static final FunctionDescriptor XOpenIM$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XOpenIM$MH = RuntimeHelper.downcallHandle(
-        "XOpenIM",
-        constants$67.XOpenIM$FUNC
-    );
-    static final FunctionDescriptor XCloseIM$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCloseIM$MH = RuntimeHelper.downcallHandle(
-        "XCloseIM",
-        constants$67.XCloseIM$FUNC
-    );
-    static final FunctionDescriptor XGetIMValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetIMValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XGetIMValues",
-        constants$67.XGetIMValues$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("state"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$1 = constants$67.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$67.const$0.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$3 = constants$67.const$0.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$4 = constants$67.const$0.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$5 = constants$67.const$0.varHandle(MemoryLayout.PathElement.groupElement("window"));
 }
 
 

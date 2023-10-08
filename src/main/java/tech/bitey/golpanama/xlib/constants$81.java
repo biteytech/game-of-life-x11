@@ -11,79 +11,22 @@ final class constants$81 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$81() {}
-    static final FunctionDescriptor XSetWMName$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMName$MH = RuntimeHelper.downcallHandle(
-        "XSetWMName",
-        constants$81.XSetWMName$FUNC
-    );
-    static final FunctionDescriptor XSetWMNormalHints$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMNormalHints$MH = RuntimeHelper.downcallHandle(
-        "XSetWMNormalHints",
-        constants$81.XSetWMNormalHints$FUNC
-    );
-    static final FunctionDescriptor XSetWMProperties$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMProperties$MH = RuntimeHelper.downcallHandle(
-        "XSetWMProperties",
-        constants$81.XSetWMProperties$FUNC
-    );
-    static final FunctionDescriptor XmbSetWMProperties$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbSetWMProperties$MH = RuntimeHelper.downcallHandle(
-        "XmbSetWMProperties",
-        constants$81.XmbSetWMProperties$FUNC
-    );
-    static final FunctionDescriptor Xutf8SetWMProperties$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8SetWMProperties$MH = RuntimeHelper.downcallHandle(
-        "Xutf8SetWMProperties",
-        constants$81.Xutf8SetWMProperties$FUNC
-    );
-    static final FunctionDescriptor XSetWMSizeHints$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetWMSizeHints$MH = RuntimeHelper.downcallHandle(
-        "XSetWMSizeHints",
-        constants$81.XSetWMSizeHints$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height")
+    ).withName("");
+    static final VarHandle const$1 = constants$81.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$81.const$0.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$3 = constants$81.const$0.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$4 = constants$81.const$0.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$5 = constants$81.const$0.varHandle(MemoryLayout.PathElement.groupElement("window"));
 }
 
 

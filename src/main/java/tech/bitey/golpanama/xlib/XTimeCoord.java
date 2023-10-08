@@ -18,18 +18,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XTimeCoord {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_LONG_LONG$LAYOUT.withName("time"),
-        Constants$root.C_SHORT$LAYOUT.withName("x"),
-        Constants$root.C_SHORT$LAYOUT.withName("y"),
-        MemoryLayout.paddingLayout(32)
-    );
     public static MemoryLayout $LAYOUT() {
-        return XTimeCoord.$struct$LAYOUT;
+        return constants$47.const$1;
     }
-    static final VarHandle time$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("time"));
     public static VarHandle time$VH() {
-        return XTimeCoord.time$VH;
+        return constants$47.const$2;
     }
     /**
      * Getter for field:
@@ -38,7 +31,7 @@ public class XTimeCoord {
      * }
      */
     public static long time$get(MemorySegment seg) {
-        return (long)XTimeCoord.time$VH.get(seg);
+        return (long)constants$47.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -47,17 +40,16 @@ public class XTimeCoord {
      * }
      */
     public static void time$set(MemorySegment seg, long x) {
-        XTimeCoord.time$VH.set(seg, x);
+        constants$47.const$2.set(seg, x);
     }
     public static long time$get(MemorySegment seg, long index) {
-        return (long)XTimeCoord.time$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$47.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void time$set(MemorySegment seg, long index, long x) {
-        XTimeCoord.time$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$47.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle x$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("x"));
     public static VarHandle x$VH() {
-        return XTimeCoord.x$VH;
+        return constants$47.const$3;
     }
     /**
      * Getter for field:
@@ -66,7 +58,7 @@ public class XTimeCoord {
      * }
      */
     public static short x$get(MemorySegment seg) {
-        return (short)XTimeCoord.x$VH.get(seg);
+        return (short)constants$47.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -75,17 +67,16 @@ public class XTimeCoord {
      * }
      */
     public static void x$set(MemorySegment seg, short x) {
-        XTimeCoord.x$VH.set(seg, x);
+        constants$47.const$3.set(seg, x);
     }
     public static short x$get(MemorySegment seg, long index) {
-        return (short)XTimeCoord.x$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$47.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, short x) {
-        XTimeCoord.x$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$47.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle y$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("y"));
     public static VarHandle y$VH() {
-        return XTimeCoord.y$VH;
+        return constants$47.const$4;
     }
     /**
      * Getter for field:
@@ -94,7 +85,7 @@ public class XTimeCoord {
      * }
      */
     public static short y$get(MemorySegment seg) {
-        return (short)XTimeCoord.y$VH.get(seg);
+        return (short)constants$47.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -103,20 +94,20 @@ public class XTimeCoord {
      * }
      */
     public static void y$set(MemorySegment seg, short x) {
-        XTimeCoord.y$VH.set(seg, x);
+        constants$47.const$4.set(seg, x);
     }
     public static short y$get(MemorySegment seg, long index) {
-        return (short)XTimeCoord.y$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$47.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, short x) {
-        XTimeCoord.y$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$47.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

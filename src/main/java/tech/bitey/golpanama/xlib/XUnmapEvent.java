@@ -22,24 +22,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XUnmapEvent {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("type"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
-        Constants$root.C_INT$LAYOUT.withName("send_event"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("event"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("window"),
-        Constants$root.C_INT$LAYOUT.withName("from_configure"),
-        MemoryLayout.paddingLayout(32)
-    );
     public static MemoryLayout $LAYOUT() {
-        return XUnmapEvent.$struct$LAYOUT;
+        return constants$71.const$3;
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XUnmapEvent.type$VH;
+        return constants$71.const$4;
     }
     /**
      * Getter for field:
@@ -48,7 +35,7 @@ public class XUnmapEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)XUnmapEvent.type$VH.get(seg);
+        return (int)constants$71.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -57,17 +44,16 @@ public class XUnmapEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        XUnmapEvent.type$VH.set(seg, x);
+        constants$71.const$4.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)XUnmapEvent.type$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$71.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        XUnmapEvent.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$71.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle serial$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("serial"));
     public static VarHandle serial$VH() {
-        return XUnmapEvent.serial$VH;
+        return constants$71.const$5;
     }
     /**
      * Getter for field:
@@ -76,7 +62,7 @@ public class XUnmapEvent {
      * }
      */
     public static long serial$get(MemorySegment seg) {
-        return (long)XUnmapEvent.serial$VH.get(seg);
+        return (long)constants$71.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -85,17 +71,16 @@ public class XUnmapEvent {
      * }
      */
     public static void serial$set(MemorySegment seg, long x) {
-        XUnmapEvent.serial$VH.set(seg, x);
+        constants$71.const$5.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
-        return (long)XUnmapEvent.serial$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$71.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void serial$set(MemorySegment seg, long index, long x) {
-        XUnmapEvent.serial$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$71.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle send_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
     public static VarHandle send_event$VH() {
-        return XUnmapEvent.send_event$VH;
+        return constants$72.const$0;
     }
     /**
      * Getter for field:
@@ -104,7 +89,7 @@ public class XUnmapEvent {
      * }
      */
     public static int send_event$get(MemorySegment seg) {
-        return (int)XUnmapEvent.send_event$VH.get(seg);
+        return (int)constants$72.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -113,17 +98,16 @@ public class XUnmapEvent {
      * }
      */
     public static void send_event$set(MemorySegment seg, int x) {
-        XUnmapEvent.send_event$VH.set(seg, x);
+        constants$72.const$0.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
-        return (int)XUnmapEvent.send_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$72.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void send_event$set(MemorySegment seg, long index, int x) {
-        XUnmapEvent.send_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$72.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle display$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XUnmapEvent.display$VH;
+        return constants$72.const$1;
     }
     /**
      * Getter for field:
@@ -132,7 +116,7 @@ public class XUnmapEvent {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XUnmapEvent.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$72.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -141,17 +125,16 @@ public class XUnmapEvent {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XUnmapEvent.display$VH.set(seg, x);
+        constants$72.const$1.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XUnmapEvent.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$72.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XUnmapEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$72.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("event"));
     public static VarHandle event$VH() {
-        return XUnmapEvent.event$VH;
+        return constants$72.const$2;
     }
     /**
      * Getter for field:
@@ -160,7 +143,7 @@ public class XUnmapEvent {
      * }
      */
     public static long event$get(MemorySegment seg) {
-        return (long)XUnmapEvent.event$VH.get(seg);
+        return (long)constants$72.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -169,17 +152,16 @@ public class XUnmapEvent {
      * }
      */
     public static void event$set(MemorySegment seg, long x) {
-        XUnmapEvent.event$VH.set(seg, x);
+        constants$72.const$2.set(seg, x);
     }
     public static long event$get(MemorySegment seg, long index) {
-        return (long)XUnmapEvent.event$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$72.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void event$set(MemorySegment seg, long index, long x) {
-        XUnmapEvent.event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$72.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
-        return XUnmapEvent.window$VH;
+        return constants$72.const$3;
     }
     /**
      * Getter for field:
@@ -188,7 +170,7 @@ public class XUnmapEvent {
      * }
      */
     public static long window$get(MemorySegment seg) {
-        return (long)XUnmapEvent.window$VH.get(seg);
+        return (long)constants$72.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -197,17 +179,16 @@ public class XUnmapEvent {
      * }
      */
     public static void window$set(MemorySegment seg, long x) {
-        XUnmapEvent.window$VH.set(seg, x);
+        constants$72.const$3.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
-        return (long)XUnmapEvent.window$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$72.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void window$set(MemorySegment seg, long index, long x) {
-        XUnmapEvent.window$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$72.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle from_configure$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("from_configure"));
     public static VarHandle from_configure$VH() {
-        return XUnmapEvent.from_configure$VH;
+        return constants$72.const$4;
     }
     /**
      * Getter for field:
@@ -216,7 +197,7 @@ public class XUnmapEvent {
      * }
      */
     public static int from_configure$get(MemorySegment seg) {
-        return (int)XUnmapEvent.from_configure$VH.get(seg);
+        return (int)constants$72.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -225,20 +206,20 @@ public class XUnmapEvent {
      * }
      */
     public static void from_configure$set(MemorySegment seg, int x) {
-        XUnmapEvent.from_configure$VH.set(seg, x);
+        constants$72.const$4.set(seg, x);
     }
     public static int from_configure$get(MemorySegment seg, long index) {
-        return (int)XUnmapEvent.from_configure$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$72.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void from_configure$set(MemorySegment seg, long index, int x) {
-        XUnmapEvent.from_configure$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$72.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

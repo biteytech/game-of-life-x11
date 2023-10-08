@@ -11,73 +11,21 @@ final class constants$46 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$46() {}
-    static final FunctionDescriptor XQueryColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryColor$MH = RuntimeHelper.downcallHandle(
-        "XQueryColor",
-        constants$46.XQueryColor$FUNC
-    );
-    static final FunctionDescriptor XQueryColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XQueryColors$MH = RuntimeHelper.downcallHandle(
-        "XQueryColors",
-        constants$46.XQueryColors$FUNC
-    );
-    static final FunctionDescriptor XQueryExtension$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryExtension$MH = RuntimeHelper.downcallHandle(
-        "XQueryExtension",
-        constants$46.XQueryExtension$FUNC
-    );
-    static final FunctionDescriptor XQueryKeymap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryKeymap$MH = RuntimeHelper.downcallHandle(
-        "XQueryKeymap",
-        constants$46.XQueryKeymap$FUNC
-    );
-    static final FunctionDescriptor XQueryPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryPointer$MH = RuntimeHelper.downcallHandle(
-        "XQueryPointer",
-        constants$46.XQueryPointer$FUNC
-    );
-    static final FunctionDescriptor XQueryTextExtents$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryTextExtents$MH = RuntimeHelper.downcallHandle(
-        "XQueryTextExtents",
-        constants$46.XQueryTextExtents$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("key_click_percent"),
+        JAVA_INT.withName("bell_percent"),
+        JAVA_INT.withName("bell_pitch"),
+        JAVA_INT.withName("bell_duration"),
+        JAVA_LONG.withName("led_mask"),
+        JAVA_INT.withName("global_auto_repeat"),
+        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("auto_repeats"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$1 = constants$46.const$0.varHandle(MemoryLayout.PathElement.groupElement("key_click_percent"));
+    static final VarHandle const$2 = constants$46.const$0.varHandle(MemoryLayout.PathElement.groupElement("bell_percent"));
+    static final VarHandle const$3 = constants$46.const$0.varHandle(MemoryLayout.PathElement.groupElement("bell_pitch"));
+    static final VarHandle const$4 = constants$46.const$0.varHandle(MemoryLayout.PathElement.groupElement("bell_duration"));
+    static final VarHandle const$5 = constants$46.const$0.varHandle(MemoryLayout.PathElement.groupElement("led_mask"));
 }
 
 

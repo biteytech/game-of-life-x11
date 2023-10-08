@@ -11,55 +11,19 @@ final class constants$34 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$34() {}
-    static final FunctionDescriptor XFlush$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFlush$MH = RuntimeHelper.downcallHandle(
-        "XFlush",
-        constants$34.XFlush$FUNC
-    );
-    static final FunctionDescriptor XForceScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XForceScreenSaver$MH = RuntimeHelper.downcallHandle(
-        "XForceScreenSaver",
-        constants$34.XForceScreenSaver$FUNC
-    );
-    static final FunctionDescriptor XFree$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFree$MH = RuntimeHelper.downcallHandle(
-        "XFree",
-        constants$34.XFree$FUNC
-    );
-    static final FunctionDescriptor XFreeColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XFreeColormap$MH = RuntimeHelper.downcallHandle(
-        "XFreeColormap",
-        constants$34.XFreeColormap$FUNC
-    );
-    static final FunctionDescriptor XFreeColors$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XFreeColors$MH = RuntimeHelper.downcallHandle(
-        "XFreeColors",
-        constants$34.XFreeColors$FUNC
-    );
-    static final FunctionDescriptor XFreeCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XFreeCursor$MH = RuntimeHelper.downcallHandle(
-        "XFreeCursor",
-        constants$34.XFreeCursor$FUNC
-    );
+    static final VarHandle const$0 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("bits_per_pixel"));
+    static final VarHandle const$1 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("red_mask"));
+    static final VarHandle const$2 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("green_mask"));
+    static final VarHandle const$3 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("blue_mask"));
+    static final VarHandle const$4 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("obdata"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("create_image"),
+        RuntimeHelper.POINTER.withName("destroy_image"),
+        RuntimeHelper.POINTER.withName("get_pixel"),
+        RuntimeHelper.POINTER.withName("put_pixel"),
+        RuntimeHelper.POINTER.withName("sub_image"),
+        RuntimeHelper.POINTER.withName("add_pixel")
+    ).withName("funcs");
 }
 
 

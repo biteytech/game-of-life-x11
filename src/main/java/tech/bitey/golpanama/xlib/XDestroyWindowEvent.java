@@ -21,22 +21,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XDestroyWindowEvent {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("type"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
-        Constants$root.C_INT$LAYOUT.withName("send_event"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("event"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("window")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XDestroyWindowEvent.$struct$LAYOUT;
+        return constants$70.const$2;
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XDestroyWindowEvent.type$VH;
+        return constants$70.const$3;
     }
     /**
      * Getter for field:
@@ -45,7 +34,7 @@ public class XDestroyWindowEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)XDestroyWindowEvent.type$VH.get(seg);
+        return (int)constants$70.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -54,17 +43,16 @@ public class XDestroyWindowEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        XDestroyWindowEvent.type$VH.set(seg, x);
+        constants$70.const$3.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)XDestroyWindowEvent.type$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$70.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        XDestroyWindowEvent.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$70.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle serial$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("serial"));
     public static VarHandle serial$VH() {
-        return XDestroyWindowEvent.serial$VH;
+        return constants$70.const$4;
     }
     /**
      * Getter for field:
@@ -73,7 +61,7 @@ public class XDestroyWindowEvent {
      * }
      */
     public static long serial$get(MemorySegment seg) {
-        return (long)XDestroyWindowEvent.serial$VH.get(seg);
+        return (long)constants$70.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -82,17 +70,16 @@ public class XDestroyWindowEvent {
      * }
      */
     public static void serial$set(MemorySegment seg, long x) {
-        XDestroyWindowEvent.serial$VH.set(seg, x);
+        constants$70.const$4.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
-        return (long)XDestroyWindowEvent.serial$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$70.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void serial$set(MemorySegment seg, long index, long x) {
-        XDestroyWindowEvent.serial$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$70.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle send_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
     public static VarHandle send_event$VH() {
-        return XDestroyWindowEvent.send_event$VH;
+        return constants$70.const$5;
     }
     /**
      * Getter for field:
@@ -101,7 +88,7 @@ public class XDestroyWindowEvent {
      * }
      */
     public static int send_event$get(MemorySegment seg) {
-        return (int)XDestroyWindowEvent.send_event$VH.get(seg);
+        return (int)constants$70.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -110,17 +97,16 @@ public class XDestroyWindowEvent {
      * }
      */
     public static void send_event$set(MemorySegment seg, int x) {
-        XDestroyWindowEvent.send_event$VH.set(seg, x);
+        constants$70.const$5.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
-        return (int)XDestroyWindowEvent.send_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$70.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void send_event$set(MemorySegment seg, long index, int x) {
-        XDestroyWindowEvent.send_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$70.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle display$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XDestroyWindowEvent.display$VH;
+        return constants$71.const$0;
     }
     /**
      * Getter for field:
@@ -129,7 +115,7 @@ public class XDestroyWindowEvent {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XDestroyWindowEvent.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$71.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -138,17 +124,16 @@ public class XDestroyWindowEvent {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XDestroyWindowEvent.display$VH.set(seg, x);
+        constants$71.const$0.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XDestroyWindowEvent.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$71.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XDestroyWindowEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$71.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("event"));
     public static VarHandle event$VH() {
-        return XDestroyWindowEvent.event$VH;
+        return constants$71.const$1;
     }
     /**
      * Getter for field:
@@ -157,7 +142,7 @@ public class XDestroyWindowEvent {
      * }
      */
     public static long event$get(MemorySegment seg) {
-        return (long)XDestroyWindowEvent.event$VH.get(seg);
+        return (long)constants$71.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -166,17 +151,16 @@ public class XDestroyWindowEvent {
      * }
      */
     public static void event$set(MemorySegment seg, long x) {
-        XDestroyWindowEvent.event$VH.set(seg, x);
+        constants$71.const$1.set(seg, x);
     }
     public static long event$get(MemorySegment seg, long index) {
-        return (long)XDestroyWindowEvent.event$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$71.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void event$set(MemorySegment seg, long index, long x) {
-        XDestroyWindowEvent.event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$71.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
-        return XDestroyWindowEvent.window$VH;
+        return constants$71.const$2;
     }
     /**
      * Getter for field:
@@ -185,7 +169,7 @@ public class XDestroyWindowEvent {
      * }
      */
     public static long window$get(MemorySegment seg) {
-        return (long)XDestroyWindowEvent.window$VH.get(seg);
+        return (long)constants$71.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -194,20 +178,20 @@ public class XDestroyWindowEvent {
      * }
      */
     public static void window$set(MemorySegment seg, long x) {
-        XDestroyWindowEvent.window$VH.set(seg, x);
+        constants$71.const$2.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
-        return (long)XDestroyWindowEvent.window$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$71.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void window$set(MemorySegment seg, long index, long x) {
-        XDestroyWindowEvent.window$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$71.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

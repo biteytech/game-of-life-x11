@@ -11,76 +11,17 @@ final class constants$31 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$31() {}
-    static final FunctionDescriptor XDrawLines$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawLines$MH = RuntimeHelper.downcallHandle(
-        "XDrawLines",
-        constants$31.XDrawLines$FUNC
-    );
-    static final FunctionDescriptor XDrawPoint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawPoint$MH = RuntimeHelper.downcallHandle(
-        "XDrawPoint",
-        constants$31.XDrawPoint$FUNC
-    );
-    static final FunctionDescriptor XDrawPoints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawPoints$MH = RuntimeHelper.downcallHandle(
-        "XDrawPoints",
-        constants$31.XDrawPoints$FUNC
-    );
-    static final FunctionDescriptor XDrawRectangle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawRectangle$MH = RuntimeHelper.downcallHandle(
-        "XDrawRectangle",
-        constants$31.XDrawRectangle$FUNC
-    );
-    static final FunctionDescriptor XDrawRectangles$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawRectangles$MH = RuntimeHelper.downcallHandle(
-        "XDrawRectangles",
-        constants$31.XDrawRectangles$FUNC
-    );
-    static final FunctionDescriptor XDrawSegments$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDrawSegments$MH = RuntimeHelper.downcallHandle(
-        "XDrawSegments",
-        constants$31.XDrawSegments$FUNC
-    );
+    static final VarHandle const$0 = constants$30.const$3.varHandle(MemoryLayout.PathElement.groupElement("address"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("typelength"),
+        JAVA_INT.withName("valuelength"),
+        RuntimeHelper.POINTER.withName("type"),
+        RuntimeHelper.POINTER.withName("value")
+    ).withName("");
+    static final VarHandle const$2 = constants$31.const$1.varHandle(MemoryLayout.PathElement.groupElement("typelength"));
+    static final VarHandle const$3 = constants$31.const$1.varHandle(MemoryLayout.PathElement.groupElement("valuelength"));
+    static final VarHandle const$4 = constants$31.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$31.const$1.varHandle(MemoryLayout.PathElement.groupElement("value"));
 }
 
 

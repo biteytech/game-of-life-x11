@@ -17,17 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XOMOrientation {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("num_orientation"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("orientation")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XOMOrientation.$struct$LAYOUT;
+        return constants$111.const$5;
     }
-    static final VarHandle num_orientation$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("num_orientation"));
     public static VarHandle num_orientation$VH() {
-        return XOMOrientation.num_orientation$VH;
+        return constants$112.const$0;
     }
     /**
      * Getter for field:
@@ -36,7 +30,7 @@ public class XOMOrientation {
      * }
      */
     public static int num_orientation$get(MemorySegment seg) {
-        return (int)XOMOrientation.num_orientation$VH.get(seg);
+        return (int)constants$112.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -45,17 +39,16 @@ public class XOMOrientation {
      * }
      */
     public static void num_orientation$set(MemorySegment seg, int x) {
-        XOMOrientation.num_orientation$VH.set(seg, x);
+        constants$112.const$0.set(seg, x);
     }
     public static int num_orientation$get(MemorySegment seg, long index) {
-        return (int)XOMOrientation.num_orientation$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$112.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void num_orientation$set(MemorySegment seg, long index, int x) {
-        XOMOrientation.num_orientation$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$112.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle orientation$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("orientation"));
     public static VarHandle orientation$VH() {
-        return XOMOrientation.orientation$VH;
+        return constants$112.const$1;
     }
     /**
      * Getter for field:
@@ -64,7 +57,7 @@ public class XOMOrientation {
      * }
      */
     public static MemorySegment orientation$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XOMOrientation.orientation$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$112.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -73,20 +66,20 @@ public class XOMOrientation {
      * }
      */
     public static void orientation$set(MemorySegment seg, MemorySegment x) {
-        XOMOrientation.orientation$VH.set(seg, x);
+        constants$112.const$1.set(seg, x);
     }
     public static MemorySegment orientation$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XOMOrientation.orientation$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$112.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void orientation$set(MemorySegment seg, long index, MemorySegment x) {
-        XOMOrientation.orientation$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$112.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

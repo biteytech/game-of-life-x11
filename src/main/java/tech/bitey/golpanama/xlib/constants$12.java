@@ -11,48 +11,16 @@ final class constants$12 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$12() {}
-    static final FunctionDescriptor XInitThreads$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
-    static final MethodHandle XInitThreads$MH = RuntimeHelper.downcallHandle(
-        "XInitThreads",
-        constants$12.XInitThreads$FUNC
-    );
-    static final FunctionDescriptor XLockDisplay$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLockDisplay$MH = RuntimeHelper.downcallHandle(
-        "XLockDisplay",
-        constants$12.XLockDisplay$FUNC
-    );
-    static final FunctionDescriptor XUnlockDisplay$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XUnlockDisplay$MH = RuntimeHelper.downcallHandle(
-        "XUnlockDisplay",
-        constants$12.XUnlockDisplay$FUNC
-    );
-    static final FunctionDescriptor XInitExtension$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XInitExtension$MH = RuntimeHelper.downcallHandle(
-        "XInitExtension",
-        constants$12.XInitExtension$FUNC
-    );
-    static final FunctionDescriptor XAddExtension$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAddExtension$MH = RuntimeHelper.downcallHandle(
-        "XAddExtension",
-        constants$12.XAddExtension$FUNC
-    );
-    static final FunctionDescriptor XFindOnExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFindOnExtensionList$MH = RuntimeHelper.downcallHandle(
-        "XFindOnExtensionList",
-        constants$12.XFindOnExtensionList$FUNC
-    );
+    static final VarHandle const$0 = constants$11.const$5.varHandle(MemoryLayout.PathElement.groupElement("extension"));
+    static final VarHandle const$1 = constants$11.const$5.varHandle(MemoryLayout.PathElement.groupElement("major_opcode"));
+    static final VarHandle const$2 = constants$11.const$5.varHandle(MemoryLayout.PathElement.groupElement("first_event"));
+    static final VarHandle const$3 = constants$11.const$5.varHandle(MemoryLayout.PathElement.groupElement("first_error"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("depth"),
+        JAVA_INT.withName("bits_per_pixel"),
+        JAVA_INT.withName("scanline_pad")
+    ).withName("");
+    static final VarHandle const$5 = constants$12.const$4.varHandle(MemoryLayout.PathElement.groupElement("depth"));
 }
 
 

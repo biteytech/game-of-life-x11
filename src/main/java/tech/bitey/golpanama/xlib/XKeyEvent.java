@@ -30,32 +30,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XKeyEvent {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("type"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
-        Constants$root.C_INT$LAYOUT.withName("send_event"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("window"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("root"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("subwindow"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("time"),
-        Constants$root.C_INT$LAYOUT.withName("x"),
-        Constants$root.C_INT$LAYOUT.withName("y"),
-        Constants$root.C_INT$LAYOUT.withName("x_root"),
-        Constants$root.C_INT$LAYOUT.withName("y_root"),
-        Constants$root.C_INT$LAYOUT.withName("state"),
-        Constants$root.C_INT$LAYOUT.withName("keycode"),
-        Constants$root.C_INT$LAYOUT.withName("same_screen"),
-        MemoryLayout.paddingLayout(32)
-    );
     public static MemoryLayout $LAYOUT() {
-        return XKeyEvent.$struct$LAYOUT;
+        return constants$48.const$2;
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XKeyEvent.type$VH;
+        return constants$48.const$3;
     }
     /**
      * Getter for field:
@@ -64,7 +43,7 @@ public class XKeyEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)XKeyEvent.type$VH.get(seg);
+        return (int)constants$48.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -73,17 +52,16 @@ public class XKeyEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        XKeyEvent.type$VH.set(seg, x);
+        constants$48.const$3.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.type$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$48.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$48.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle serial$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("serial"));
     public static VarHandle serial$VH() {
-        return XKeyEvent.serial$VH;
+        return constants$48.const$4;
     }
     /**
      * Getter for field:
@@ -92,7 +70,7 @@ public class XKeyEvent {
      * }
      */
     public static long serial$get(MemorySegment seg) {
-        return (long)XKeyEvent.serial$VH.get(seg);
+        return (long)constants$48.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -101,17 +79,16 @@ public class XKeyEvent {
      * }
      */
     public static void serial$set(MemorySegment seg, long x) {
-        XKeyEvent.serial$VH.set(seg, x);
+        constants$48.const$4.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
-        return (long)XKeyEvent.serial$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$48.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void serial$set(MemorySegment seg, long index, long x) {
-        XKeyEvent.serial$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$48.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle send_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
     public static VarHandle send_event$VH() {
-        return XKeyEvent.send_event$VH;
+        return constants$48.const$5;
     }
     /**
      * Getter for field:
@@ -120,7 +97,7 @@ public class XKeyEvent {
      * }
      */
     public static int send_event$get(MemorySegment seg) {
-        return (int)XKeyEvent.send_event$VH.get(seg);
+        return (int)constants$48.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -129,17 +106,16 @@ public class XKeyEvent {
      * }
      */
     public static void send_event$set(MemorySegment seg, int x) {
-        XKeyEvent.send_event$VH.set(seg, x);
+        constants$48.const$5.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.send_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$48.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void send_event$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.send_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$48.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle display$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XKeyEvent.display$VH;
+        return constants$49.const$0;
     }
     /**
      * Getter for field:
@@ -148,7 +124,7 @@ public class XKeyEvent {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XKeyEvent.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$49.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -157,17 +133,16 @@ public class XKeyEvent {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XKeyEvent.display$VH.set(seg, x);
+        constants$49.const$0.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XKeyEvent.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$49.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XKeyEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle window$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("window"));
     public static VarHandle window$VH() {
-        return XKeyEvent.window$VH;
+        return constants$49.const$1;
     }
     /**
      * Getter for field:
@@ -176,7 +151,7 @@ public class XKeyEvent {
      * }
      */
     public static long window$get(MemorySegment seg) {
-        return (long)XKeyEvent.window$VH.get(seg);
+        return (long)constants$49.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -185,17 +160,16 @@ public class XKeyEvent {
      * }
      */
     public static void window$set(MemorySegment seg, long x) {
-        XKeyEvent.window$VH.set(seg, x);
+        constants$49.const$1.set(seg, x);
     }
     public static long window$get(MemorySegment seg, long index) {
-        return (long)XKeyEvent.window$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$49.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void window$set(MemorySegment seg, long index, long x) {
-        XKeyEvent.window$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle root$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("root"));
     public static VarHandle root$VH() {
-        return XKeyEvent.root$VH;
+        return constants$49.const$2;
     }
     /**
      * Getter for field:
@@ -204,7 +178,7 @@ public class XKeyEvent {
      * }
      */
     public static long root$get(MemorySegment seg) {
-        return (long)XKeyEvent.root$VH.get(seg);
+        return (long)constants$49.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -213,17 +187,16 @@ public class XKeyEvent {
      * }
      */
     public static void root$set(MemorySegment seg, long x) {
-        XKeyEvent.root$VH.set(seg, x);
+        constants$49.const$2.set(seg, x);
     }
     public static long root$get(MemorySegment seg, long index) {
-        return (long)XKeyEvent.root$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$49.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void root$set(MemorySegment seg, long index, long x) {
-        XKeyEvent.root$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle subwindow$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("subwindow"));
     public static VarHandle subwindow$VH() {
-        return XKeyEvent.subwindow$VH;
+        return constants$49.const$3;
     }
     /**
      * Getter for field:
@@ -232,7 +205,7 @@ public class XKeyEvent {
      * }
      */
     public static long subwindow$get(MemorySegment seg) {
-        return (long)XKeyEvent.subwindow$VH.get(seg);
+        return (long)constants$49.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -241,17 +214,16 @@ public class XKeyEvent {
      * }
      */
     public static void subwindow$set(MemorySegment seg, long x) {
-        XKeyEvent.subwindow$VH.set(seg, x);
+        constants$49.const$3.set(seg, x);
     }
     public static long subwindow$get(MemorySegment seg, long index) {
-        return (long)XKeyEvent.subwindow$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$49.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void subwindow$set(MemorySegment seg, long index, long x) {
-        XKeyEvent.subwindow$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle time$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("time"));
     public static VarHandle time$VH() {
-        return XKeyEvent.time$VH;
+        return constants$49.const$4;
     }
     /**
      * Getter for field:
@@ -260,7 +232,7 @@ public class XKeyEvent {
      * }
      */
     public static long time$get(MemorySegment seg) {
-        return (long)XKeyEvent.time$VH.get(seg);
+        return (long)constants$49.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -269,17 +241,16 @@ public class XKeyEvent {
      * }
      */
     public static void time$set(MemorySegment seg, long x) {
-        XKeyEvent.time$VH.set(seg, x);
+        constants$49.const$4.set(seg, x);
     }
     public static long time$get(MemorySegment seg, long index) {
-        return (long)XKeyEvent.time$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$49.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void time$set(MemorySegment seg, long index, long x) {
-        XKeyEvent.time$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle x$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("x"));
     public static VarHandle x$VH() {
-        return XKeyEvent.x$VH;
+        return constants$49.const$5;
     }
     /**
      * Getter for field:
@@ -288,7 +259,7 @@ public class XKeyEvent {
      * }
      */
     public static int x$get(MemorySegment seg) {
-        return (int)XKeyEvent.x$VH.get(seg);
+        return (int)constants$49.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -297,17 +268,16 @@ public class XKeyEvent {
      * }
      */
     public static void x$set(MemorySegment seg, int x) {
-        XKeyEvent.x$VH.set(seg, x);
+        constants$49.const$5.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.x$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$49.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.x$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle y$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("y"));
     public static VarHandle y$VH() {
-        return XKeyEvent.y$VH;
+        return constants$50.const$0;
     }
     /**
      * Getter for field:
@@ -316,7 +286,7 @@ public class XKeyEvent {
      * }
      */
     public static int y$get(MemorySegment seg) {
-        return (int)XKeyEvent.y$VH.get(seg);
+        return (int)constants$50.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -325,17 +295,16 @@ public class XKeyEvent {
      * }
      */
     public static void y$set(MemorySegment seg, int x) {
-        XKeyEvent.y$VH.set(seg, x);
+        constants$50.const$0.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.y$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.y$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle x_root$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("x_root"));
     public static VarHandle x_root$VH() {
-        return XKeyEvent.x_root$VH;
+        return constants$50.const$1;
     }
     /**
      * Getter for field:
@@ -344,7 +313,7 @@ public class XKeyEvent {
      * }
      */
     public static int x_root$get(MemorySegment seg) {
-        return (int)XKeyEvent.x_root$VH.get(seg);
+        return (int)constants$50.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -353,17 +322,16 @@ public class XKeyEvent {
      * }
      */
     public static void x_root$set(MemorySegment seg, int x) {
-        XKeyEvent.x_root$VH.set(seg, x);
+        constants$50.const$1.set(seg, x);
     }
     public static int x_root$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.x_root$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void x_root$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.x_root$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle y_root$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("y_root"));
     public static VarHandle y_root$VH() {
-        return XKeyEvent.y_root$VH;
+        return constants$50.const$2;
     }
     /**
      * Getter for field:
@@ -372,7 +340,7 @@ public class XKeyEvent {
      * }
      */
     public static int y_root$get(MemorySegment seg) {
-        return (int)XKeyEvent.y_root$VH.get(seg);
+        return (int)constants$50.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -381,17 +349,16 @@ public class XKeyEvent {
      * }
      */
     public static void y_root$set(MemorySegment seg, int x) {
-        XKeyEvent.y_root$VH.set(seg, x);
+        constants$50.const$2.set(seg, x);
     }
     public static int y_root$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.y_root$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void y_root$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.y_root$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle state$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("state"));
     public static VarHandle state$VH() {
-        return XKeyEvent.state$VH;
+        return constants$50.const$3;
     }
     /**
      * Getter for field:
@@ -400,7 +367,7 @@ public class XKeyEvent {
      * }
      */
     public static int state$get(MemorySegment seg) {
-        return (int)XKeyEvent.state$VH.get(seg);
+        return (int)constants$50.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -409,17 +376,16 @@ public class XKeyEvent {
      * }
      */
     public static void state$set(MemorySegment seg, int x) {
-        XKeyEvent.state$VH.set(seg, x);
+        constants$50.const$3.set(seg, x);
     }
     public static int state$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.state$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void state$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.state$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle keycode$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("keycode"));
     public static VarHandle keycode$VH() {
-        return XKeyEvent.keycode$VH;
+        return constants$50.const$4;
     }
     /**
      * Getter for field:
@@ -428,7 +394,7 @@ public class XKeyEvent {
      * }
      */
     public static int keycode$get(MemorySegment seg) {
-        return (int)XKeyEvent.keycode$VH.get(seg);
+        return (int)constants$50.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -437,17 +403,16 @@ public class XKeyEvent {
      * }
      */
     public static void keycode$set(MemorySegment seg, int x) {
-        XKeyEvent.keycode$VH.set(seg, x);
+        constants$50.const$4.set(seg, x);
     }
     public static int keycode$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.keycode$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void keycode$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.keycode$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle same_screen$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("same_screen"));
     public static VarHandle same_screen$VH() {
-        return XKeyEvent.same_screen$VH;
+        return constants$50.const$5;
     }
     /**
      * Getter for field:
@@ -456,7 +421,7 @@ public class XKeyEvent {
      * }
      */
     public static int same_screen$get(MemorySegment seg) {
-        return (int)XKeyEvent.same_screen$VH.get(seg);
+        return (int)constants$50.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -465,20 +430,20 @@ public class XKeyEvent {
      * }
      */
     public static void same_screen$set(MemorySegment seg, int x) {
-        XKeyEvent.same_screen$VH.set(seg, x);
+        constants$50.const$5.set(seg, x);
     }
     public static int same_screen$get(MemorySegment seg, long index) {
-        return (int)XKeyEvent.same_screen$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void same_screen$set(MemorySegment seg, long index, int x) {
-        XKeyEvent.same_screen$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

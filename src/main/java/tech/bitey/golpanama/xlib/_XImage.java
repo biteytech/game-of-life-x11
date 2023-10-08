@@ -32,39 +32,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class _XImage {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("width"),
-        Constants$root.C_INT$LAYOUT.withName("height"),
-        Constants$root.C_INT$LAYOUT.withName("xoffset"),
-        Constants$root.C_INT$LAYOUT.withName("format"),
-        Constants$root.C_POINTER$LAYOUT.withName("data"),
-        Constants$root.C_INT$LAYOUT.withName("byte_order"),
-        Constants$root.C_INT$LAYOUT.withName("bitmap_unit"),
-        Constants$root.C_INT$LAYOUT.withName("bitmap_bit_order"),
-        Constants$root.C_INT$LAYOUT.withName("bitmap_pad"),
-        Constants$root.C_INT$LAYOUT.withName("depth"),
-        Constants$root.C_INT$LAYOUT.withName("bytes_per_line"),
-        Constants$root.C_INT$LAYOUT.withName("bits_per_pixel"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("red_mask"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("green_mask"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("blue_mask"),
-        Constants$root.C_POINTER$LAYOUT.withName("obdata"),
-        MemoryLayout.structLayout(
-            Constants$root.C_POINTER$LAYOUT.withName("create_image"),
-            Constants$root.C_POINTER$LAYOUT.withName("destroy_image"),
-            Constants$root.C_POINTER$LAYOUT.withName("get_pixel"),
-            Constants$root.C_POINTER$LAYOUT.withName("put_pixel"),
-            Constants$root.C_POINTER$LAYOUT.withName("sub_image"),
-            Constants$root.C_POINTER$LAYOUT.withName("add_pixel")
-        ).withName("f")
-    ).withName("_XImage");
     public static MemoryLayout $LAYOUT() {
-        return _XImage.$struct$LAYOUT;
+        return constants$32.const$0;
     }
-    static final VarHandle width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("width"));
     public static VarHandle width$VH() {
-        return _XImage.width$VH;
+        return constants$32.const$1;
     }
     /**
      * Getter for field:
@@ -73,7 +45,7 @@ public class _XImage {
      * }
      */
     public static int width$get(MemorySegment seg) {
-        return (int)_XImage.width$VH.get(seg);
+        return (int)constants$32.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -82,17 +54,16 @@ public class _XImage {
      * }
      */
     public static void width$set(MemorySegment seg, int x) {
-        _XImage.width$VH.set(seg, x);
+        constants$32.const$1.set(seg, x);
     }
     public static int width$get(MemorySegment seg, long index) {
-        return (int)_XImage.width$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$32.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void width$set(MemorySegment seg, long index, int x) {
-        _XImage.width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$32.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle height$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("height"));
     public static VarHandle height$VH() {
-        return _XImage.height$VH;
+        return constants$32.const$2;
     }
     /**
      * Getter for field:
@@ -101,7 +72,7 @@ public class _XImage {
      * }
      */
     public static int height$get(MemorySegment seg) {
-        return (int)_XImage.height$VH.get(seg);
+        return (int)constants$32.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -110,17 +81,16 @@ public class _XImage {
      * }
      */
     public static void height$set(MemorySegment seg, int x) {
-        _XImage.height$VH.set(seg, x);
+        constants$32.const$2.set(seg, x);
     }
     public static int height$get(MemorySegment seg, long index) {
-        return (int)_XImage.height$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$32.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void height$set(MemorySegment seg, long index, int x) {
-        _XImage.height$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$32.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle xoffset$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("xoffset"));
     public static VarHandle xoffset$VH() {
-        return _XImage.xoffset$VH;
+        return constants$32.const$3;
     }
     /**
      * Getter for field:
@@ -129,7 +99,7 @@ public class _XImage {
      * }
      */
     public static int xoffset$get(MemorySegment seg) {
-        return (int)_XImage.xoffset$VH.get(seg);
+        return (int)constants$32.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -138,17 +108,16 @@ public class _XImage {
      * }
      */
     public static void xoffset$set(MemorySegment seg, int x) {
-        _XImage.xoffset$VH.set(seg, x);
+        constants$32.const$3.set(seg, x);
     }
     public static int xoffset$get(MemorySegment seg, long index) {
-        return (int)_XImage.xoffset$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$32.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void xoffset$set(MemorySegment seg, long index, int x) {
-        _XImage.xoffset$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$32.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle format$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("format"));
     public static VarHandle format$VH() {
-        return _XImage.format$VH;
+        return constants$32.const$4;
     }
     /**
      * Getter for field:
@@ -157,7 +126,7 @@ public class _XImage {
      * }
      */
     public static int format$get(MemorySegment seg) {
-        return (int)_XImage.format$VH.get(seg);
+        return (int)constants$32.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -166,17 +135,16 @@ public class _XImage {
      * }
      */
     public static void format$set(MemorySegment seg, int x) {
-        _XImage.format$VH.set(seg, x);
+        constants$32.const$4.set(seg, x);
     }
     public static int format$get(MemorySegment seg, long index) {
-        return (int)_XImage.format$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$32.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void format$set(MemorySegment seg, long index, int x) {
-        _XImage.format$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$32.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("data"));
     public static VarHandle data$VH() {
-        return _XImage.data$VH;
+        return constants$32.const$5;
     }
     /**
      * Getter for field:
@@ -185,7 +153,7 @@ public class _XImage {
      * }
      */
     public static MemorySegment data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)_XImage.data$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$32.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -194,17 +162,16 @@ public class _XImage {
      * }
      */
     public static void data$set(MemorySegment seg, MemorySegment x) {
-        _XImage.data$VH.set(seg, x);
+        constants$32.const$5.set(seg, x);
     }
     public static MemorySegment data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)_XImage.data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$32.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void data$set(MemorySegment seg, long index, MemorySegment x) {
-        _XImage.data$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$32.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle byte_order$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("byte_order"));
     public static VarHandle byte_order$VH() {
-        return _XImage.byte_order$VH;
+        return constants$33.const$0;
     }
     /**
      * Getter for field:
@@ -213,7 +180,7 @@ public class _XImage {
      * }
      */
     public static int byte_order$get(MemorySegment seg) {
-        return (int)_XImage.byte_order$VH.get(seg);
+        return (int)constants$33.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -222,17 +189,16 @@ public class _XImage {
      * }
      */
     public static void byte_order$set(MemorySegment seg, int x) {
-        _XImage.byte_order$VH.set(seg, x);
+        constants$33.const$0.set(seg, x);
     }
     public static int byte_order$get(MemorySegment seg, long index) {
-        return (int)_XImage.byte_order$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$33.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void byte_order$set(MemorySegment seg, long index, int x) {
-        _XImage.byte_order$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$33.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bitmap_unit$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bitmap_unit"));
     public static VarHandle bitmap_unit$VH() {
-        return _XImage.bitmap_unit$VH;
+        return constants$33.const$1;
     }
     /**
      * Getter for field:
@@ -241,7 +207,7 @@ public class _XImage {
      * }
      */
     public static int bitmap_unit$get(MemorySegment seg) {
-        return (int)_XImage.bitmap_unit$VH.get(seg);
+        return (int)constants$33.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -250,17 +216,16 @@ public class _XImage {
      * }
      */
     public static void bitmap_unit$set(MemorySegment seg, int x) {
-        _XImage.bitmap_unit$VH.set(seg, x);
+        constants$33.const$1.set(seg, x);
     }
     public static int bitmap_unit$get(MemorySegment seg, long index) {
-        return (int)_XImage.bitmap_unit$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$33.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void bitmap_unit$set(MemorySegment seg, long index, int x) {
-        _XImage.bitmap_unit$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$33.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bitmap_bit_order$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bitmap_bit_order"));
     public static VarHandle bitmap_bit_order$VH() {
-        return _XImage.bitmap_bit_order$VH;
+        return constants$33.const$2;
     }
     /**
      * Getter for field:
@@ -269,7 +234,7 @@ public class _XImage {
      * }
      */
     public static int bitmap_bit_order$get(MemorySegment seg) {
-        return (int)_XImage.bitmap_bit_order$VH.get(seg);
+        return (int)constants$33.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -278,17 +243,16 @@ public class _XImage {
      * }
      */
     public static void bitmap_bit_order$set(MemorySegment seg, int x) {
-        _XImage.bitmap_bit_order$VH.set(seg, x);
+        constants$33.const$2.set(seg, x);
     }
     public static int bitmap_bit_order$get(MemorySegment seg, long index) {
-        return (int)_XImage.bitmap_bit_order$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$33.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void bitmap_bit_order$set(MemorySegment seg, long index, int x) {
-        _XImage.bitmap_bit_order$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$33.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bitmap_pad$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bitmap_pad"));
     public static VarHandle bitmap_pad$VH() {
-        return _XImage.bitmap_pad$VH;
+        return constants$33.const$3;
     }
     /**
      * Getter for field:
@@ -297,7 +261,7 @@ public class _XImage {
      * }
      */
     public static int bitmap_pad$get(MemorySegment seg) {
-        return (int)_XImage.bitmap_pad$VH.get(seg);
+        return (int)constants$33.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -306,17 +270,16 @@ public class _XImage {
      * }
      */
     public static void bitmap_pad$set(MemorySegment seg, int x) {
-        _XImage.bitmap_pad$VH.set(seg, x);
+        constants$33.const$3.set(seg, x);
     }
     public static int bitmap_pad$get(MemorySegment seg, long index) {
-        return (int)_XImage.bitmap_pad$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$33.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void bitmap_pad$set(MemorySegment seg, long index, int x) {
-        _XImage.bitmap_pad$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$33.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle depth$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("depth"));
     public static VarHandle depth$VH() {
-        return _XImage.depth$VH;
+        return constants$33.const$4;
     }
     /**
      * Getter for field:
@@ -325,7 +288,7 @@ public class _XImage {
      * }
      */
     public static int depth$get(MemorySegment seg) {
-        return (int)_XImage.depth$VH.get(seg);
+        return (int)constants$33.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -334,17 +297,16 @@ public class _XImage {
      * }
      */
     public static void depth$set(MemorySegment seg, int x) {
-        _XImage.depth$VH.set(seg, x);
+        constants$33.const$4.set(seg, x);
     }
     public static int depth$get(MemorySegment seg, long index) {
-        return (int)_XImage.depth$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$33.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void depth$set(MemorySegment seg, long index, int x) {
-        _XImage.depth$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$33.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bytes_per_line$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bytes_per_line"));
     public static VarHandle bytes_per_line$VH() {
-        return _XImage.bytes_per_line$VH;
+        return constants$33.const$5;
     }
     /**
      * Getter for field:
@@ -353,7 +315,7 @@ public class _XImage {
      * }
      */
     public static int bytes_per_line$get(MemorySegment seg) {
-        return (int)_XImage.bytes_per_line$VH.get(seg);
+        return (int)constants$33.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -362,17 +324,16 @@ public class _XImage {
      * }
      */
     public static void bytes_per_line$set(MemorySegment seg, int x) {
-        _XImage.bytes_per_line$VH.set(seg, x);
+        constants$33.const$5.set(seg, x);
     }
     public static int bytes_per_line$get(MemorySegment seg, long index) {
-        return (int)_XImage.bytes_per_line$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$33.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void bytes_per_line$set(MemorySegment seg, long index, int x) {
-        _XImage.bytes_per_line$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$33.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bits_per_pixel$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bits_per_pixel"));
     public static VarHandle bits_per_pixel$VH() {
-        return _XImage.bits_per_pixel$VH;
+        return constants$34.const$0;
     }
     /**
      * Getter for field:
@@ -381,7 +342,7 @@ public class _XImage {
      * }
      */
     public static int bits_per_pixel$get(MemorySegment seg) {
-        return (int)_XImage.bits_per_pixel$VH.get(seg);
+        return (int)constants$34.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -390,17 +351,16 @@ public class _XImage {
      * }
      */
     public static void bits_per_pixel$set(MemorySegment seg, int x) {
-        _XImage.bits_per_pixel$VH.set(seg, x);
+        constants$34.const$0.set(seg, x);
     }
     public static int bits_per_pixel$get(MemorySegment seg, long index) {
-        return (int)_XImage.bits_per_pixel$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$34.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void bits_per_pixel$set(MemorySegment seg, long index, int x) {
-        _XImage.bits_per_pixel$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$34.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle red_mask$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("red_mask"));
     public static VarHandle red_mask$VH() {
-        return _XImage.red_mask$VH;
+        return constants$34.const$1;
     }
     /**
      * Getter for field:
@@ -409,7 +369,7 @@ public class _XImage {
      * }
      */
     public static long red_mask$get(MemorySegment seg) {
-        return (long)_XImage.red_mask$VH.get(seg);
+        return (long)constants$34.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -418,17 +378,16 @@ public class _XImage {
      * }
      */
     public static void red_mask$set(MemorySegment seg, long x) {
-        _XImage.red_mask$VH.set(seg, x);
+        constants$34.const$1.set(seg, x);
     }
     public static long red_mask$get(MemorySegment seg, long index) {
-        return (long)_XImage.red_mask$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$34.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void red_mask$set(MemorySegment seg, long index, long x) {
-        _XImage.red_mask$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$34.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle green_mask$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("green_mask"));
     public static VarHandle green_mask$VH() {
-        return _XImage.green_mask$VH;
+        return constants$34.const$2;
     }
     /**
      * Getter for field:
@@ -437,7 +396,7 @@ public class _XImage {
      * }
      */
     public static long green_mask$get(MemorySegment seg) {
-        return (long)_XImage.green_mask$VH.get(seg);
+        return (long)constants$34.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -446,17 +405,16 @@ public class _XImage {
      * }
      */
     public static void green_mask$set(MemorySegment seg, long x) {
-        _XImage.green_mask$VH.set(seg, x);
+        constants$34.const$2.set(seg, x);
     }
     public static long green_mask$get(MemorySegment seg, long index) {
-        return (long)_XImage.green_mask$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$34.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void green_mask$set(MemorySegment seg, long index, long x) {
-        _XImage.green_mask$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$34.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle blue_mask$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("blue_mask"));
     public static VarHandle blue_mask$VH() {
-        return _XImage.blue_mask$VH;
+        return constants$34.const$3;
     }
     /**
      * Getter for field:
@@ -465,7 +423,7 @@ public class _XImage {
      * }
      */
     public static long blue_mask$get(MemorySegment seg) {
-        return (long)_XImage.blue_mask$VH.get(seg);
+        return (long)constants$34.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -474,17 +432,16 @@ public class _XImage {
      * }
      */
     public static void blue_mask$set(MemorySegment seg, long x) {
-        _XImage.blue_mask$VH.set(seg, x);
+        constants$34.const$3.set(seg, x);
     }
     public static long blue_mask$get(MemorySegment seg, long index) {
-        return (long)_XImage.blue_mask$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$34.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void blue_mask$set(MemorySegment seg, long index, long x) {
-        _XImage.blue_mask$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$34.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle obdata$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("obdata"));
     public static VarHandle obdata$VH() {
-        return _XImage.obdata$VH;
+        return constants$34.const$4;
     }
     /**
      * Getter for field:
@@ -493,7 +450,7 @@ public class _XImage {
      * }
      */
     public static MemorySegment obdata$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)_XImage.obdata$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$34.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -502,13 +459,13 @@ public class _XImage {
      * }
      */
     public static void obdata$set(MemorySegment seg, MemorySegment x) {
-        _XImage.obdata$VH.set(seg, x);
+        constants$34.const$4.set(seg, x);
     }
     public static MemorySegment obdata$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)_XImage.obdata$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$34.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void obdata$set(MemorySegment seg, long index, MemorySegment x) {
-        _XImage.obdata$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$34.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     /**
      * {@snippet :
@@ -526,57 +483,9 @@ public class _XImage {
 
         // Suppresses default constructor, ensuring non-instantiability.
         private funcs() {}
-        static final StructLayout funcs$struct$LAYOUT = MemoryLayout.structLayout(
-            Constants$root.C_POINTER$LAYOUT.withName("create_image"),
-            Constants$root.C_POINTER$LAYOUT.withName("destroy_image"),
-            Constants$root.C_POINTER$LAYOUT.withName("get_pixel"),
-            Constants$root.C_POINTER$LAYOUT.withName("put_pixel"),
-            Constants$root.C_POINTER$LAYOUT.withName("sub_image"),
-            Constants$root.C_POINTER$LAYOUT.withName("add_pixel")
-        ).withName("funcs");
         public static MemoryLayout $LAYOUT() {
-            return funcs.funcs$struct$LAYOUT;
+            return constants$34.const$5;
         }
-        static final FunctionDescriptor create_image$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final FunctionDescriptor create_image_UP$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final MethodHandle create_image_UP$MH = RuntimeHelper.upcallHandle(create_image.class, "apply", funcs.create_image_UP$FUNC);
-        static final FunctionDescriptor create_image_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final MethodHandle create_image_DOWN$MH = RuntimeHelper.downcallHandle(
-            funcs.create_image_DOWN$FUNC
-        );
         /**
          * {@snippet :
  * struct _XImage* (*create_image)(struct _XDisplay*,Visual*,unsigned int,int,int,char*,unsigned int,unsigned int,int,int);
@@ -585,14 +494,14 @@ public class _XImage {
         public interface create_image {
 
             java.lang.foreign.MemorySegment apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1, int _x2, int _x3, int _x4, java.lang.foreign.MemorySegment _x5, int _x6, int _x7, int _x8, int _x9);
-            static MemorySegment allocate(create_image fi, SegmentScope scope) {
-                return RuntimeHelper.upcallStub(funcs.create_image_UP$MH, fi, funcs.create_image$FUNC, scope);
+            static MemorySegment allocate(create_image fi, Arena scope) {
+                return RuntimeHelper.upcallStub(constants$35.const$1, fi, constants$35.const$0, scope);
             }
-            static create_image ofAddress(MemorySegment addr, SegmentScope scope) {
-                MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+            static create_image ofAddress(MemorySegment addr, Arena arena) {
+                MemorySegment symbol = addr.reinterpret(arena, null);
                 return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1, int __x2, int __x3, int __x4, java.lang.foreign.MemorySegment __x5, int __x6, int __x7, int __x8, int __x9) -> {
                     try {
-                        return (java.lang.foreign.MemorySegment)funcs.create_image_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2, __x3, __x4, __x5, __x6, __x7, __x8, __x9);
+                        return (java.lang.foreign.MemorySegment)constants$35.const$2.invokeExact(symbol, __x0, __x1, __x2, __x3, __x4, __x5, __x6, __x7, __x8, __x9);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -600,9 +509,8 @@ public class _XImage {
             }
         }
 
-        static final VarHandle create_image$VH = funcs$struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("create_image"));
         public static VarHandle create_image$VH() {
-            return funcs.create_image$VH;
+            return constants$35.const$3;
         }
         /**
          * Getter for field:
@@ -611,7 +519,7 @@ public class _XImage {
          * }
          */
         public static MemorySegment create_image$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)funcs.create_image$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$35.const$3.get(seg);
         }
         /**
          * Setter for field:
@@ -620,30 +528,17 @@ public class _XImage {
          * }
          */
         public static void create_image$set(MemorySegment seg, MemorySegment x) {
-            funcs.create_image$VH.set(seg, x);
+            constants$35.const$3.set(seg, x);
         }
         public static MemorySegment create_image$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)funcs.create_image$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$35.const$3.get(seg.asSlice(index*sizeof()));
         }
         public static void create_image$set(MemorySegment seg, long index, MemorySegment x) {
-            funcs.create_image$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$35.const$3.set(seg.asSlice(index*sizeof()), x);
         }
-        public static create_image create_image(MemorySegment segment, SegmentScope scope) {
+        public static create_image create_image(MemorySegment segment, Arena scope) {
             return create_image.ofAddress(create_image$get(segment), scope);
         }
-        static final FunctionDescriptor destroy_image$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT
-        );
-        static final FunctionDescriptor destroy_image_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT
-        );
-        static final MethodHandle destroy_image_UP$MH = RuntimeHelper.upcallHandle(destroy_image.class, "apply", funcs.destroy_image_UP$FUNC);
-        static final FunctionDescriptor destroy_image_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT
-        );
-        static final MethodHandle destroy_image_DOWN$MH = RuntimeHelper.downcallHandle(
-            funcs.destroy_image_DOWN$FUNC
-        );
         /**
          * {@snippet :
  * int (*destroy_image)(struct _XImage*);
@@ -652,14 +547,14 @@ public class _XImage {
         public interface destroy_image {
 
             int apply(java.lang.foreign.MemorySegment _x0);
-            static MemorySegment allocate(destroy_image fi, SegmentScope scope) {
-                return RuntimeHelper.upcallStub(funcs.destroy_image_UP$MH, fi, funcs.destroy_image$FUNC, scope);
+            static MemorySegment allocate(destroy_image fi, Arena scope) {
+                return RuntimeHelper.upcallStub(constants$35.const$4, fi, constants$11.const$0, scope);
             }
-            static destroy_image ofAddress(MemorySegment addr, SegmentScope scope) {
-                MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+            static destroy_image ofAddress(MemorySegment addr, Arena arena) {
+                MemorySegment symbol = addr.reinterpret(arena, null);
                 return (java.lang.foreign.MemorySegment __x0) -> {
                     try {
-                        return (int)funcs.destroy_image_DOWN$MH.invokeExact(symbol, __x0);
+                        return (int)constants$11.const$2.invokeExact(symbol, __x0);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -667,9 +562,8 @@ public class _XImage {
             }
         }
 
-        static final VarHandle destroy_image$VH = funcs$struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("destroy_image"));
         public static VarHandle destroy_image$VH() {
-            return funcs.destroy_image$VH;
+            return constants$35.const$5;
         }
         /**
          * Getter for field:
@@ -678,7 +572,7 @@ public class _XImage {
          * }
          */
         public static MemorySegment destroy_image$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)funcs.destroy_image$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$35.const$5.get(seg);
         }
         /**
          * Setter for field:
@@ -687,36 +581,17 @@ public class _XImage {
          * }
          */
         public static void destroy_image$set(MemorySegment seg, MemorySegment x) {
-            funcs.destroy_image$VH.set(seg, x);
+            constants$35.const$5.set(seg, x);
         }
         public static MemorySegment destroy_image$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)funcs.destroy_image$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$35.const$5.get(seg.asSlice(index*sizeof()));
         }
         public static void destroy_image$set(MemorySegment seg, long index, MemorySegment x) {
-            funcs.destroy_image$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$35.const$5.set(seg.asSlice(index*sizeof()), x);
         }
-        public static destroy_image destroy_image(MemorySegment segment, SegmentScope scope) {
+        public static destroy_image destroy_image(MemorySegment segment, Arena scope) {
             return destroy_image.ofAddress(destroy_image$get(segment), scope);
         }
-        static final FunctionDescriptor get_pixel$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final FunctionDescriptor get_pixel_UP$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final MethodHandle get_pixel_UP$MH = RuntimeHelper.upcallHandle(get_pixel.class, "apply", funcs.get_pixel_UP$FUNC);
-        static final FunctionDescriptor get_pixel_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final MethodHandle get_pixel_DOWN$MH = RuntimeHelper.downcallHandle(
-            funcs.get_pixel_DOWN$FUNC
-        );
         /**
          * {@snippet :
  * unsigned long (*get_pixel)(struct _XImage*,int,int);
@@ -725,14 +600,14 @@ public class _XImage {
         public interface get_pixel {
 
             long apply(java.lang.foreign.MemorySegment _x0, int _x1, int _x2);
-            static MemorySegment allocate(get_pixel fi, SegmentScope scope) {
-                return RuntimeHelper.upcallStub(funcs.get_pixel_UP$MH, fi, funcs.get_pixel$FUNC, scope);
+            static MemorySegment allocate(get_pixel fi, Arena scope) {
+                return RuntimeHelper.upcallStub(constants$36.const$1, fi, constants$36.const$0, scope);
             }
-            static get_pixel ofAddress(MemorySegment addr, SegmentScope scope) {
-                MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+            static get_pixel ofAddress(MemorySegment addr, Arena arena) {
+                MemorySegment symbol = addr.reinterpret(arena, null);
                 return (java.lang.foreign.MemorySegment __x0, int __x1, int __x2) -> {
                     try {
-                        return (long)funcs.get_pixel_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2);
+                        return (long)constants$36.const$2.invokeExact(symbol, __x0, __x1, __x2);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -740,9 +615,8 @@ public class _XImage {
             }
         }
 
-        static final VarHandle get_pixel$VH = funcs$struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("get_pixel"));
         public static VarHandle get_pixel$VH() {
-            return funcs.get_pixel$VH;
+            return constants$36.const$3;
         }
         /**
          * Getter for field:
@@ -751,7 +625,7 @@ public class _XImage {
          * }
          */
         public static MemorySegment get_pixel$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)funcs.get_pixel$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$36.const$3.get(seg);
         }
         /**
          * Setter for field:
@@ -760,39 +634,17 @@ public class _XImage {
          * }
          */
         public static void get_pixel$set(MemorySegment seg, MemorySegment x) {
-            funcs.get_pixel$VH.set(seg, x);
+            constants$36.const$3.set(seg, x);
         }
         public static MemorySegment get_pixel$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)funcs.get_pixel$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$36.const$3.get(seg.asSlice(index*sizeof()));
         }
         public static void get_pixel$set(MemorySegment seg, long index, MemorySegment x) {
-            funcs.get_pixel$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$36.const$3.set(seg.asSlice(index*sizeof()), x);
         }
-        public static get_pixel get_pixel(MemorySegment segment, SegmentScope scope) {
+        public static get_pixel get_pixel(MemorySegment segment, Arena scope) {
             return get_pixel.ofAddress(get_pixel$get(segment), scope);
         }
-        static final FunctionDescriptor put_pixel$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_LONG_LONG$LAYOUT
-        );
-        static final FunctionDescriptor put_pixel_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_LONG_LONG$LAYOUT
-        );
-        static final MethodHandle put_pixel_UP$MH = RuntimeHelper.upcallHandle(put_pixel.class, "apply", funcs.put_pixel_UP$FUNC);
-        static final FunctionDescriptor put_pixel_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_LONG_LONG$LAYOUT
-        );
-        static final MethodHandle put_pixel_DOWN$MH = RuntimeHelper.downcallHandle(
-            funcs.put_pixel_DOWN$FUNC
-        );
         /**
          * {@snippet :
  * int (*put_pixel)(struct _XImage*,int,int,unsigned long);
@@ -801,14 +653,14 @@ public class _XImage {
         public interface put_pixel {
 
             int apply(java.lang.foreign.MemorySegment _x0, int _x1, int _x2, long _x3);
-            static MemorySegment allocate(put_pixel fi, SegmentScope scope) {
-                return RuntimeHelper.upcallStub(funcs.put_pixel_UP$MH, fi, funcs.put_pixel$FUNC, scope);
+            static MemorySegment allocate(put_pixel fi, Arena scope) {
+                return RuntimeHelper.upcallStub(constants$36.const$5, fi, constants$36.const$4, scope);
             }
-            static put_pixel ofAddress(MemorySegment addr, SegmentScope scope) {
-                MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+            static put_pixel ofAddress(MemorySegment addr, Arena arena) {
+                MemorySegment symbol = addr.reinterpret(arena, null);
                 return (java.lang.foreign.MemorySegment __x0, int __x1, int __x2, long __x3) -> {
                     try {
-                        return (int)funcs.put_pixel_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2, __x3);
+                        return (int)constants$37.const$0.invokeExact(symbol, __x0, __x1, __x2, __x3);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -816,9 +668,8 @@ public class _XImage {
             }
         }
 
-        static final VarHandle put_pixel$VH = funcs$struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("put_pixel"));
         public static VarHandle put_pixel$VH() {
-            return funcs.put_pixel$VH;
+            return constants$37.const$1;
         }
         /**
          * Getter for field:
@@ -827,7 +678,7 @@ public class _XImage {
          * }
          */
         public static MemorySegment put_pixel$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)funcs.put_pixel$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$37.const$1.get(seg);
         }
         /**
          * Setter for field:
@@ -836,42 +687,17 @@ public class _XImage {
          * }
          */
         public static void put_pixel$set(MemorySegment seg, MemorySegment x) {
-            funcs.put_pixel$VH.set(seg, x);
+            constants$37.const$1.set(seg, x);
         }
         public static MemorySegment put_pixel$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)funcs.put_pixel$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$37.const$1.get(seg.asSlice(index*sizeof()));
         }
         public static void put_pixel$set(MemorySegment seg, long index, MemorySegment x) {
-            funcs.put_pixel$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$37.const$1.set(seg.asSlice(index*sizeof()), x);
         }
-        public static put_pixel put_pixel(MemorySegment segment, SegmentScope scope) {
+        public static put_pixel put_pixel(MemorySegment segment, Arena scope) {
             return put_pixel.ofAddress(put_pixel$get(segment), scope);
         }
-        static final FunctionDescriptor sub_image$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final FunctionDescriptor sub_image_UP$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final MethodHandle sub_image_UP$MH = RuntimeHelper.upcallHandle(sub_image.class, "apply", funcs.sub_image_UP$FUNC);
-        static final FunctionDescriptor sub_image_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT,
-            Constants$root.C_INT$LAYOUT
-        );
-        static final MethodHandle sub_image_DOWN$MH = RuntimeHelper.downcallHandle(
-            funcs.sub_image_DOWN$FUNC
-        );
         /**
          * {@snippet :
  * struct _XImage* (*sub_image)(struct _XImage*,int,int,unsigned int,unsigned int);
@@ -880,14 +706,14 @@ public class _XImage {
         public interface sub_image {
 
             java.lang.foreign.MemorySegment apply(java.lang.foreign.MemorySegment _x0, int _x1, int _x2, int _x3, int _x4);
-            static MemorySegment allocate(sub_image fi, SegmentScope scope) {
-                return RuntimeHelper.upcallStub(funcs.sub_image_UP$MH, fi, funcs.sub_image$FUNC, scope);
+            static MemorySegment allocate(sub_image fi, Arena scope) {
+                return RuntimeHelper.upcallStub(constants$37.const$3, fi, constants$37.const$2, scope);
             }
-            static sub_image ofAddress(MemorySegment addr, SegmentScope scope) {
-                MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+            static sub_image ofAddress(MemorySegment addr, Arena arena) {
+                MemorySegment symbol = addr.reinterpret(arena, null);
                 return (java.lang.foreign.MemorySegment __x0, int __x1, int __x2, int __x3, int __x4) -> {
                     try {
-                        return (java.lang.foreign.MemorySegment)funcs.sub_image_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2, __x3, __x4);
+                        return (java.lang.foreign.MemorySegment)constants$37.const$4.invokeExact(symbol, __x0, __x1, __x2, __x3, __x4);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -895,9 +721,8 @@ public class _XImage {
             }
         }
 
-        static final VarHandle sub_image$VH = funcs$struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("sub_image"));
         public static VarHandle sub_image$VH() {
-            return funcs.sub_image$VH;
+            return constants$37.const$5;
         }
         /**
          * Getter for field:
@@ -906,7 +731,7 @@ public class _XImage {
          * }
          */
         public static MemorySegment sub_image$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)funcs.sub_image$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$37.const$5.get(seg);
         }
         /**
          * Setter for field:
@@ -915,33 +740,17 @@ public class _XImage {
          * }
          */
         public static void sub_image$set(MemorySegment seg, MemorySegment x) {
-            funcs.sub_image$VH.set(seg, x);
+            constants$37.const$5.set(seg, x);
         }
         public static MemorySegment sub_image$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)funcs.sub_image$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$37.const$5.get(seg.asSlice(index*sizeof()));
         }
         public static void sub_image$set(MemorySegment seg, long index, MemorySegment x) {
-            funcs.sub_image$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$37.const$5.set(seg.asSlice(index*sizeof()), x);
         }
-        public static sub_image sub_image(MemorySegment segment, SegmentScope scope) {
+        public static sub_image sub_image(MemorySegment segment, Arena scope) {
             return sub_image.ofAddress(sub_image$get(segment), scope);
         }
-        static final FunctionDescriptor add_pixel$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_LONG_LONG$LAYOUT
-        );
-        static final FunctionDescriptor add_pixel_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_LONG_LONG$LAYOUT
-        );
-        static final MethodHandle add_pixel_UP$MH = RuntimeHelper.upcallHandle(add_pixel.class, "apply", funcs.add_pixel_UP$FUNC);
-        static final FunctionDescriptor add_pixel_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-            Constants$root.C_POINTER$LAYOUT,
-            Constants$root.C_LONG_LONG$LAYOUT
-        );
-        static final MethodHandle add_pixel_DOWN$MH = RuntimeHelper.downcallHandle(
-            funcs.add_pixel_DOWN$FUNC
-        );
         /**
          * {@snippet :
  * int (*add_pixel)(struct _XImage*,long);
@@ -950,14 +759,14 @@ public class _XImage {
         public interface add_pixel {
 
             int apply(java.lang.foreign.MemorySegment _x0, long _x1);
-            static MemorySegment allocate(add_pixel fi, SegmentScope scope) {
-                return RuntimeHelper.upcallStub(funcs.add_pixel_UP$MH, fi, funcs.add_pixel$FUNC, scope);
+            static MemorySegment allocate(add_pixel fi, Arena scope) {
+                return RuntimeHelper.upcallStub(constants$38.const$1, fi, constants$38.const$0, scope);
             }
-            static add_pixel ofAddress(MemorySegment addr, SegmentScope scope) {
-                MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+            static add_pixel ofAddress(MemorySegment addr, Arena arena) {
+                MemorySegment symbol = addr.reinterpret(arena, null);
                 return (java.lang.foreign.MemorySegment __x0, long __x1) -> {
                     try {
-                        return (int)funcs.add_pixel_DOWN$MH.invokeExact(symbol, __x0, __x1);
+                        return (int)constants$38.const$2.invokeExact(symbol, __x0, __x1);
                     } catch (Throwable ex$) {
                         throw new AssertionError("should not reach here", ex$);
                     }
@@ -965,9 +774,8 @@ public class _XImage {
             }
         }
 
-        static final VarHandle add_pixel$VH = funcs$struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("add_pixel"));
         public static VarHandle add_pixel$VH() {
-            return funcs.add_pixel$VH;
+            return constants$38.const$3;
         }
         /**
          * Getter for field:
@@ -976,7 +784,7 @@ public class _XImage {
          * }
          */
         public static MemorySegment add_pixel$get(MemorySegment seg) {
-            return (java.lang.foreign.MemorySegment)funcs.add_pixel$VH.get(seg);
+            return (java.lang.foreign.MemorySegment)constants$38.const$3.get(seg);
         }
         /**
          * Setter for field:
@@ -985,15 +793,15 @@ public class _XImage {
          * }
          */
         public static void add_pixel$set(MemorySegment seg, MemorySegment x) {
-            funcs.add_pixel$VH.set(seg, x);
+            constants$38.const$3.set(seg, x);
         }
         public static MemorySegment add_pixel$get(MemorySegment seg, long index) {
-            return (java.lang.foreign.MemorySegment)funcs.add_pixel$VH.get(seg.asSlice(index*sizeof()));
+            return (java.lang.foreign.MemorySegment)constants$38.const$3.get(seg.asSlice(index*sizeof()));
         }
         public static void add_pixel$set(MemorySegment seg, long index, MemorySegment x) {
-            funcs.add_pixel$VH.set(seg.asSlice(index*sizeof()), x);
+            constants$38.const$3.set(seg.asSlice(index*sizeof()), x);
         }
-        public static add_pixel add_pixel(MemorySegment segment, SegmentScope scope) {
+        public static add_pixel add_pixel(MemorySegment segment, Arena scope) {
             return add_pixel.ofAddress(add_pixel$get(segment), scope);
         }
         public static long sizeof() { return $LAYOUT().byteSize(); }
@@ -1001,7 +809,7 @@ public class _XImage {
         public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
             return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
         }
-        public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+        public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
     }
 
     public static MemorySegment f$slice(MemorySegment seg) {
@@ -1012,7 +820,7 @@ public class _XImage {
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

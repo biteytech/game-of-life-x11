@@ -11,12 +11,24 @@ final class constants$87 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$87() {}
-    static final MemorySegment XNVaNestedList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("XNVaNestedList");
-    static final MemorySegment XNQueryInputStyle$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryInputStyle");
-    static final MemorySegment XNClientWindow$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("clientWindow");
-    static final MemorySegment XNInputStyle$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("inputStyle");
-    static final MemorySegment XNFocusWindow$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("focusWindow");
-    static final MemorySegment XNResourceName$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("resourceName");
+    static final VarHandle const$0 = constants$86.const$1.varHandle(MemoryLayout.PathElement.groupElement("parent"));
+    static final VarHandle const$1 = constants$86.const$1.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$2 = constants$86.const$1.varHandle(MemoryLayout.PathElement.groupElement("place"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("atom"),
+        JAVA_LONG.withName("time"),
+        JAVA_INT.withName("state"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$4 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$87.const$3.varHandle(MemoryLayout.PathElement.groupElement("serial"));
 }
 
 

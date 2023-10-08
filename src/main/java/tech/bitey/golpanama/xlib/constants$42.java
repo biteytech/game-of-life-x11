@@ -11,59 +11,20 @@ final class constants$42 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$42() {}
-    static final FunctionDescriptor XMaskEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XMaskEvent$MH = RuntimeHelper.downcallHandle(
-        "XMaskEvent",
-        constants$42.XMaskEvent$FUNC
-    );
-    static final FunctionDescriptor XMaxCmapsOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XMaxCmapsOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XMaxCmapsOfScreen",
-        constants$42.XMaxCmapsOfScreen$FUNC
-    );
-    static final FunctionDescriptor XMinCmapsOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XMinCmapsOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XMinCmapsOfScreen",
-        constants$42.XMinCmapsOfScreen$FUNC
-    );
-    static final FunctionDescriptor XMoveResizeWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XMoveResizeWindow$MH = RuntimeHelper.downcallHandle(
-        "XMoveResizeWindow",
-        constants$42.XMoveResizeWindow$FUNC
-    );
-    static final FunctionDescriptor XMoveWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XMoveWindow$MH = RuntimeHelper.downcallHandle(
-        "XMoveWindow",
-        constants$42.XMoveWindow$FUNC
-    );
-    static final FunctionDescriptor XNextEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XNextEvent$MH = RuntimeHelper.downcallHandle(
-        "XNextEvent",
-        constants$42.XNextEvent$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_SHORT.withName("x"),
+        JAVA_SHORT.withName("y")
+    ).withName("");
+    static final VarHandle const$1 = constants$42.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$2 = constants$42.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_SHORT.withName("x"),
+        JAVA_SHORT.withName("y"),
+        JAVA_SHORT.withName("width"),
+        JAVA_SHORT.withName("height")
+    ).withName("");
+    static final VarHandle const$4 = constants$42.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$5 = constants$42.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
 }
 
 

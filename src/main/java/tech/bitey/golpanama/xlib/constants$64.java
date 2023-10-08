@@ -11,54 +11,12 @@ final class constants$64 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$64() {}
-    static final FunctionDescriptor XDirectionalDependentDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDirectionalDependentDrawing$MH = RuntimeHelper.downcallHandle(
-        "XDirectionalDependentDrawing",
-        constants$64.XDirectionalDependentDrawing$FUNC
-    );
-    static final FunctionDescriptor XContextualDrawing$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XContextualDrawing$MH = RuntimeHelper.downcallHandle(
-        "XContextualDrawing",
-        constants$64.XContextualDrawing$FUNC
-    );
-    static final FunctionDescriptor XExtentsOfFontSet$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XExtentsOfFontSet$MH = RuntimeHelper.downcallHandle(
-        "XExtentsOfFontSet",
-        constants$64.XExtentsOfFontSet$FUNC
-    );
-    static final FunctionDescriptor XmbTextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XmbTextEscapement$MH = RuntimeHelper.downcallHandle(
-        "XmbTextEscapement",
-        constants$64.XmbTextEscapement$FUNC
-    );
-    static final FunctionDescriptor XwcTextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XwcTextEscapement$MH = RuntimeHelper.downcallHandle(
-        "XwcTextEscapement",
-        constants$64.XwcTextEscapement$FUNC
-    );
-    static final FunctionDescriptor Xutf8TextEscapement$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle Xutf8TextEscapement$MH = RuntimeHelper.downcallHandle(
-        "Xutf8TextEscapement",
-        constants$64.Xutf8TextEscapement$FUNC
-    );
+    static final VarHandle const$0 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$1 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$2 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("drawable"));
+    static final VarHandle const$3 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$4 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$5 = constants$63.const$3.varHandle(MemoryLayout.PathElement.groupElement("width"));
 }
 
 

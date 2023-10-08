@@ -17,16 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XPoint {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_SHORT$LAYOUT.withName("x"),
-        Constants$root.C_SHORT$LAYOUT.withName("y")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XPoint.$struct$LAYOUT;
+        return constants$42.const$0;
     }
-    static final VarHandle x$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("x"));
     public static VarHandle x$VH() {
-        return XPoint.x$VH;
+        return constants$42.const$1;
     }
     /**
      * Getter for field:
@@ -35,7 +30,7 @@ public class XPoint {
      * }
      */
     public static short x$get(MemorySegment seg) {
-        return (short)XPoint.x$VH.get(seg);
+        return (short)constants$42.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -44,17 +39,16 @@ public class XPoint {
      * }
      */
     public static void x$set(MemorySegment seg, short x) {
-        XPoint.x$VH.set(seg, x);
+        constants$42.const$1.set(seg, x);
     }
     public static short x$get(MemorySegment seg, long index) {
-        return (short)XPoint.x$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$42.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, short x) {
-        XPoint.x$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$42.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle y$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("y"));
     public static VarHandle y$VH() {
-        return XPoint.y$VH;
+        return constants$42.const$2;
     }
     /**
      * Getter for field:
@@ -63,7 +57,7 @@ public class XPoint {
      * }
      */
     public static short y$get(MemorySegment seg) {
-        return (short)XPoint.y$VH.get(seg);
+        return (short)constants$42.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -72,20 +66,20 @@ public class XPoint {
      * }
      */
     public static void y$set(MemorySegment seg, short x) {
-        XPoint.y$VH.set(seg, x);
+        constants$42.const$2.set(seg, x);
     }
     public static short y$get(MemorySegment seg, long index) {
-        return (short)XPoint.y$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$42.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, short x) {
-        XPoint.y$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$42.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

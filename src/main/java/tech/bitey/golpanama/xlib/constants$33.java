@@ -11,78 +11,12 @@ final class constants$33 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$33() {}
-    static final FunctionDescriptor XFetchName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFetchName$MH = RuntimeHelper.downcallHandle(
-        "XFetchName",
-        constants$33.XFetchName$FUNC
-    );
-    static final FunctionDescriptor XFillArc$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFillArc$MH = RuntimeHelper.downcallHandle(
-        "XFillArc",
-        constants$33.XFillArc$FUNC
-    );
-    static final FunctionDescriptor XFillArcs$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFillArcs$MH = RuntimeHelper.downcallHandle(
-        "XFillArcs",
-        constants$33.XFillArcs$FUNC
-    );
-    static final FunctionDescriptor XFillPolygon$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFillPolygon$MH = RuntimeHelper.downcallHandle(
-        "XFillPolygon",
-        constants$33.XFillPolygon$FUNC
-    );
-    static final FunctionDescriptor XFillRectangle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFillRectangle$MH = RuntimeHelper.downcallHandle(
-        "XFillRectangle",
-        constants$33.XFillRectangle$FUNC
-    );
-    static final FunctionDescriptor XFillRectangles$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XFillRectangles$MH = RuntimeHelper.downcallHandle(
-        "XFillRectangles",
-        constants$33.XFillRectangles$FUNC
-    );
+    static final VarHandle const$0 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("byte_order"));
+    static final VarHandle const$1 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("bitmap_unit"));
+    static final VarHandle const$2 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("bitmap_bit_order"));
+    static final VarHandle const$3 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("bitmap_pad"));
+    static final VarHandle const$4 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("depth"));
+    static final VarHandle const$5 = constants$32.const$0.varHandle(MemoryLayout.PathElement.groupElement("bytes_per_line"));
 }
 
 

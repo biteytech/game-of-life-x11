@@ -11,87 +11,12 @@ final class constants$66 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$66() {}
-    static final FunctionDescriptor XmbDrawText$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XmbDrawText$MH = RuntimeHelper.downcallHandle(
-        "XmbDrawText",
-        constants$66.XmbDrawText$FUNC
-    );
-    static final FunctionDescriptor XwcDrawText$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XwcDrawText$MH = RuntimeHelper.downcallHandle(
-        "XwcDrawText",
-        constants$66.XwcDrawText$FUNC
-    );
-    static final FunctionDescriptor Xutf8DrawText$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle Xutf8DrawText$MH = RuntimeHelper.downcallHandle(
-        "Xutf8DrawText",
-        constants$66.Xutf8DrawText$FUNC
-    );
-    static final FunctionDescriptor XmbDrawString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XmbDrawString$MH = RuntimeHelper.downcallHandle(
-        "XmbDrawString",
-        constants$66.XmbDrawString$FUNC
-    );
-    static final FunctionDescriptor XwcDrawString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XwcDrawString$MH = RuntimeHelper.downcallHandle(
-        "XwcDrawString",
-        constants$66.XwcDrawString$FUNC
-    );
-    static final FunctionDescriptor Xutf8DrawString$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle Xutf8DrawString$MH = RuntimeHelper.downcallHandle(
-        "Xutf8DrawString",
-        constants$66.Xutf8DrawString$FUNC
-    );
+    static final VarHandle const$0 = constants$65.const$4.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$1 = constants$65.const$4.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$2 = constants$65.const$4.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$3 = constants$65.const$4.varHandle(MemoryLayout.PathElement.groupElement("drawable"));
+    static final VarHandle const$4 = constants$65.const$4.varHandle(MemoryLayout.PathElement.groupElement("major_code"));
+    static final VarHandle const$5 = constants$65.const$4.varHandle(MemoryLayout.PathElement.groupElement("minor_code"));
 }
 
 

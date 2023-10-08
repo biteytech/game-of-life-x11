@@ -15,14 +15,14 @@ import static java.lang.foreign.ValueLayout.*;
 public interface XConnectionWatchProc {
 
     void apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1, int _x2, int _x3, java.lang.foreign.MemorySegment _x4);
-    static MemorySegment allocate(XConnectionWatchProc fi, SegmentScope scope) {
-        return RuntimeHelper.upcallStub(constants$71.XConnectionWatchProc_UP$MH, fi, constants$71.XConnectionWatchProc$FUNC, scope);
+    static MemorySegment allocate(XConnectionWatchProc fi, Arena scope) {
+        return RuntimeHelper.upcallStub(constants$208.const$4, fi, constants$208.const$3, scope);
     }
-    static XConnectionWatchProc ofAddress(MemorySegment addr, SegmentScope scope) {
-        MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+    static XConnectionWatchProc ofAddress(MemorySegment addr, Arena arena) {
+        MemorySegment symbol = addr.reinterpret(arena, null);
         return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1, int __x2, int __x3, java.lang.foreign.MemorySegment __x4) -> {
             try {
-                constants$71.XConnectionWatchProc_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2, __x3, __x4);
+                constants$208.const$5.invokeExact(symbol, __x0, __x1, __x2, __x3, __x4);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

@@ -11,59 +11,31 @@ final class constants$48 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$48() {}
-    static final FunctionDescriptor XRecolorCursor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XRecolorCursor$MH = RuntimeHelper.downcallHandle(
-        "XRecolorCursor",
-        constants$48.XRecolorCursor$FUNC
-    );
-    static final FunctionDescriptor XRefreshKeyboardMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XRefreshKeyboardMapping$MH = RuntimeHelper.downcallHandle(
-        "XRefreshKeyboardMapping",
-        constants$48.XRefreshKeyboardMapping$FUNC
-    );
-    static final FunctionDescriptor XRemoveFromSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XRemoveFromSaveSet$MH = RuntimeHelper.downcallHandle(
-        "XRemoveFromSaveSet",
-        constants$48.XRemoveFromSaveSet$FUNC
-    );
-    static final FunctionDescriptor XRemoveHost$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XRemoveHost$MH = RuntimeHelper.downcallHandle(
-        "XRemoveHost",
-        constants$48.XRemoveHost$FUNC
-    );
-    static final FunctionDescriptor XRemoveHosts$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRemoveHosts$MH = RuntimeHelper.downcallHandle(
-        "XRemoveHosts",
-        constants$48.XRemoveHosts$FUNC
-    );
-    static final FunctionDescriptor XReparentWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XReparentWindow$MH = RuntimeHelper.downcallHandle(
-        "XReparentWindow",
-        constants$48.XReparentWindow$FUNC
-    );
+    static final VarHandle const$0 = constants$47.const$5.varHandle(MemoryLayout.PathElement.groupElement("max_keypermod"));
+    static final VarHandle const$1 = constants$47.const$5.varHandle(MemoryLayout.PathElement.groupElement("modifiermap"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("root"),
+        JAVA_LONG.withName("subwindow"),
+        JAVA_LONG.withName("time"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("x_root"),
+        JAVA_INT.withName("y_root"),
+        JAVA_INT.withName("state"),
+        JAVA_INT.withName("keycode"),
+        JAVA_INT.withName("same_screen"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$3 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$5 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
 }
 
 

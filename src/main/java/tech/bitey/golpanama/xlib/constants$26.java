@@ -11,66 +11,38 @@ final class constants$26 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$26() {}
-    static final FunctionDescriptor XClearWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XClearWindow$MH = RuntimeHelper.downcallHandle(
-        "XClearWindow",
-        constants$26.XClearWindow$FUNC
-    );
-    static final FunctionDescriptor XCloseDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCloseDisplay$MH = RuntimeHelper.downcallHandle(
-        "XCloseDisplay",
-        constants$26.XCloseDisplay$FUNC
-    );
-    static final FunctionDescriptor XConfigureWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XConfigureWindow$MH = RuntimeHelper.downcallHandle(
-        "XConfigureWindow",
-        constants$26.XConfigureWindow$FUNC
-    );
-    static final FunctionDescriptor XConnectionNumber$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XConnectionNumber$MH = RuntimeHelper.downcallHandle(
-        "XConnectionNumber",
-        constants$26.XConnectionNumber$FUNC
-    );
-    static final FunctionDescriptor XConvertSelection$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XConvertSelection$MH = RuntimeHelper.downcallHandle(
-        "XConvertSelection",
-        constants$26.XConvertSelection$FUNC
-    );
-    static final FunctionDescriptor XCopyArea$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCopyArea$MH = RuntimeHelper.downcallHandle(
-        "XCopyArea",
-        constants$26.XCopyArea$FUNC
-    );
+    static final VarHandle const$0 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("override_redirect"));
+    static final VarHandle const$1 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("colormap"));
+    static final VarHandle const$2 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("cursor"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("border_width"),
+        JAVA_INT.withName("depth"),
+        RuntimeHelper.POINTER.withName("visual"),
+        JAVA_LONG.withName("root"),
+        JAVA_INT.withName("class"),
+        JAVA_INT.withName("bit_gravity"),
+        JAVA_INT.withName("win_gravity"),
+        JAVA_INT.withName("backing_store"),
+        JAVA_LONG.withName("backing_planes"),
+        JAVA_LONG.withName("backing_pixel"),
+        JAVA_INT.withName("save_under"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("colormap"),
+        JAVA_INT.withName("map_installed"),
+        JAVA_INT.withName("map_state"),
+        JAVA_LONG.withName("all_event_masks"),
+        JAVA_LONG.withName("your_event_mask"),
+        JAVA_LONG.withName("do_not_propagate_mask"),
+        JAVA_INT.withName("override_redirect"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("screen")
+    ).withName("");
+    static final VarHandle const$4 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$5 = constants$26.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
 }
 
 

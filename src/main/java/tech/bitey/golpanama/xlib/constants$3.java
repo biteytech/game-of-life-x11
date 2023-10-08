@@ -11,64 +11,26 @@ final class constants$3 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$3() {}
-    static final FunctionDescriptor XInitImage$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XInitImage$MH = RuntimeHelper.downcallHandle(
-        "XInitImage",
-        constants$3.XInitImage$FUNC
-    );
-    static final FunctionDescriptor XGetImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGetImage$MH = RuntimeHelper.downcallHandle(
-        "XGetImage",
-        constants$3.XGetImage$FUNC
-    );
-    static final FunctionDescriptor XGetSubImage$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XGetSubImage$MH = RuntimeHelper.downcallHandle(
-        "XGetSubImage",
-        constants$3.XGetSubImage$FUNC
-    );
-    static final FunctionDescriptor XOpenDisplay$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XOpenDisplay$MH = RuntimeHelper.downcallHandle(
-        "XOpenDisplay",
-        constants$3.XOpenDisplay$FUNC
-    );
-    static final FunctionDescriptor XrmInitialize$FUNC = FunctionDescriptor.ofVoid();
-    static final MethodHandle XrmInitialize$MH = RuntimeHelper.downcallHandle(
-        "XrmInitialize",
-        constants$3.XrmInitialize$FUNC
-    );
-    static final FunctionDescriptor XFetchBytes$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XFetchBytes$MH = RuntimeHelper.downcallHandle(
-        "XFetchBytes",
-        constants$3.XFetchBytes$FUNC
-    );
+    static final VarHandle const$0 = constants$2.const$5.varHandle(MemoryLayout.PathElement.groupElement("__prev"));
+    static final VarHandle const$1 = constants$2.const$5.varHandle(MemoryLayout.PathElement.groupElement("__next"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("__next")
+    ).withName("__pthread_internal_slist");
+    static final VarHandle const$3 = constants$3.const$2.varHandle(MemoryLayout.PathElement.groupElement("__next"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("__lock"),
+        JAVA_INT.withName("__count"),
+        JAVA_INT.withName("__owner"),
+        JAVA_INT.withName("__nusers"),
+        JAVA_INT.withName("__kind"),
+        JAVA_SHORT.withName("__spins"),
+        JAVA_SHORT.withName("__elision"),
+        MemoryLayout.structLayout(
+            RuntimeHelper.POINTER.withName("__prev"),
+            RuntimeHelper.POINTER.withName("__next")
+        ).withName("__list")
+    ).withName("__pthread_mutex_s");
+    static final VarHandle const$5 = constants$3.const$4.varHandle(MemoryLayout.PathElement.groupElement("__lock"));
 }
 
 

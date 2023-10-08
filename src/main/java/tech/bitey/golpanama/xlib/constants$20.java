@@ -11,55 +11,12 @@ final class constants$20 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$20() {}
-    static final FunctionDescriptor XActivateScreenSaver$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XActivateScreenSaver$MH = RuntimeHelper.downcallHandle(
-        "XActivateScreenSaver",
-        constants$20.XActivateScreenSaver$FUNC
-    );
-    static final FunctionDescriptor XAddHost$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAddHost$MH = RuntimeHelper.downcallHandle(
-        "XAddHost",
-        constants$20.XAddHost$FUNC
-    );
-    static final FunctionDescriptor XAddHosts$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XAddHosts$MH = RuntimeHelper.downcallHandle(
-        "XAddHosts",
-        constants$20.XAddHosts$FUNC
-    );
-    static final FunctionDescriptor XAddToExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAddToExtensionList$MH = RuntimeHelper.downcallHandle(
-        "XAddToExtensionList",
-        constants$20.XAddToExtensionList$FUNC
-    );
-    static final FunctionDescriptor XAddToSaveSet$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XAddToSaveSet$MH = RuntimeHelper.downcallHandle(
-        "XAddToSaveSet",
-        constants$20.XAddToSaveSet$FUNC
-    );
-    static final FunctionDescriptor XAllocColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XAllocColor$MH = RuntimeHelper.downcallHandle(
-        "XAllocColor",
-        constants$20.XAllocColor$FUNC
-    );
+    static final VarHandle const$0 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("root"));
+    static final VarHandle const$1 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$2 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final VarHandle const$3 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("mwidth"));
+    static final VarHandle const$4 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("mheight"));
+    static final VarHandle const$5 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("ndepths"));
 }
 
 

@@ -11,49 +11,22 @@ final class constants$17 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$17() {}
-    static final FunctionDescriptor XErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XErrorHandler_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XErrorHandler_UP$MH = RuntimeHelper.upcallHandle(XErrorHandler.class, "apply", constants$17.XErrorHandler_UP$FUNC);
-    static final FunctionDescriptor XErrorHandler_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XErrorHandler_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$17.XErrorHandler_DOWN$FUNC
-    );
-    static final FunctionDescriptor XSetErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetErrorHandler$MH = RuntimeHelper.downcallHandle(
-        "XSetErrorHandler",
-        constants$17.XSetErrorHandler$FUNC
-    );
-    static final FunctionDescriptor XIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XIOErrorHandler_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIOErrorHandler_UP$MH = RuntimeHelper.upcallHandle(XIOErrorHandler.class, "apply", constants$17.XIOErrorHandler_UP$FUNC);
-    static final FunctionDescriptor XIOErrorHandler_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIOErrorHandler_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$17.XIOErrorHandler_DOWN$FUNC
-    );
-    static final FunctionDescriptor XSetIOErrorHandler$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetIOErrorHandler$MH = RuntimeHelper.downcallHandle(
-        "XSetIOErrorHandler",
-        constants$17.XSetIOErrorHandler$FUNC
-    );
+    static final VarHandle const$0 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("dash_offset"));
+    static final VarHandle const$1 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("dashes"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("ext_data"),
+        JAVA_LONG.withName("visualid"),
+        JAVA_INT.withName("class"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("red_mask"),
+        JAVA_LONG.withName("green_mask"),
+        JAVA_LONG.withName("blue_mask"),
+        JAVA_INT.withName("bits_per_rgb"),
+        JAVA_INT.withName("map_entries")
+    ).withName("");
+    static final VarHandle const$3 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("ext_data"));
+    static final VarHandle const$4 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("visualid"));
+    static final VarHandle const$5 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("class"));
 }
 
 

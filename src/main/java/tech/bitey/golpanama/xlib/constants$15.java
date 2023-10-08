@@ -11,49 +11,12 @@ final class constants$15 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$15() {}
-    static final FunctionDescriptor XWhitePixelOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XWhitePixelOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XWhitePixelOfScreen",
-        constants$15.XWhitePixelOfScreen$FUNC
-    );
-    static final FunctionDescriptor XNextRequest$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XNextRequest$MH = RuntimeHelper.downcallHandle(
-        "XNextRequest",
-        constants$15.XNextRequest$FUNC
-    );
-    static final FunctionDescriptor XLastKnownRequestProcessed$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XLastKnownRequestProcessed$MH = RuntimeHelper.downcallHandle(
-        "XLastKnownRequestProcessed",
-        constants$15.XLastKnownRequestProcessed$FUNC
-    );
-    static final FunctionDescriptor XServerVendor$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XServerVendor$MH = RuntimeHelper.downcallHandle(
-        "XServerVendor",
-        constants$15.XServerVendor$FUNC
-    );
-    static final FunctionDescriptor XDisplayString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayString$MH = RuntimeHelper.downcallHandle(
-        "XDisplayString",
-        constants$15.XDisplayString$FUNC
-    );
-    static final FunctionDescriptor XDefaultColormap$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDefaultColormap$MH = RuntimeHelper.downcallHandle(
-        "XDefaultColormap",
-        constants$15.XDefaultColormap$FUNC
-    );
+    static final VarHandle const$0 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("fill_rule"));
+    static final VarHandle const$1 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("arc_mode"));
+    static final VarHandle const$2 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("tile"));
+    static final VarHandle const$3 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("stipple"));
+    static final VarHandle const$4 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("ts_x_origin"));
+    static final VarHandle const$5 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("ts_y_origin"));
 }
 
 

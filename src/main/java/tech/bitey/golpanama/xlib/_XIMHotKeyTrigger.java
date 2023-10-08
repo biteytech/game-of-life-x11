@@ -18,17 +18,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class _XIMHotKeyTrigger {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_LONG_LONG$LAYOUT.withName("keysym"),
-        Constants$root.C_INT$LAYOUT.withName("modifier"),
-        Constants$root.C_INT$LAYOUT.withName("modifier_mask")
-    ).withName("_XIMHotKeyTrigger");
     public static MemoryLayout $LAYOUT() {
-        return _XIMHotKeyTrigger.$struct$LAYOUT;
+        return constants$121.const$3;
     }
-    static final VarHandle keysym$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("keysym"));
     public static VarHandle keysym$VH() {
-        return _XIMHotKeyTrigger.keysym$VH;
+        return constants$121.const$4;
     }
     /**
      * Getter for field:
@@ -37,7 +31,7 @@ public class _XIMHotKeyTrigger {
      * }
      */
     public static long keysym$get(MemorySegment seg) {
-        return (long)_XIMHotKeyTrigger.keysym$VH.get(seg);
+        return (long)constants$121.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -46,17 +40,16 @@ public class _XIMHotKeyTrigger {
      * }
      */
     public static void keysym$set(MemorySegment seg, long x) {
-        _XIMHotKeyTrigger.keysym$VH.set(seg, x);
+        constants$121.const$4.set(seg, x);
     }
     public static long keysym$get(MemorySegment seg, long index) {
-        return (long)_XIMHotKeyTrigger.keysym$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$121.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void keysym$set(MemorySegment seg, long index, long x) {
-        _XIMHotKeyTrigger.keysym$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$121.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle modifier$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("modifier"));
     public static VarHandle modifier$VH() {
-        return _XIMHotKeyTrigger.modifier$VH;
+        return constants$121.const$5;
     }
     /**
      * Getter for field:
@@ -65,7 +58,7 @@ public class _XIMHotKeyTrigger {
      * }
      */
     public static int modifier$get(MemorySegment seg) {
-        return (int)_XIMHotKeyTrigger.modifier$VH.get(seg);
+        return (int)constants$121.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -74,17 +67,16 @@ public class _XIMHotKeyTrigger {
      * }
      */
     public static void modifier$set(MemorySegment seg, int x) {
-        _XIMHotKeyTrigger.modifier$VH.set(seg, x);
+        constants$121.const$5.set(seg, x);
     }
     public static int modifier$get(MemorySegment seg, long index) {
-        return (int)_XIMHotKeyTrigger.modifier$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$121.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void modifier$set(MemorySegment seg, long index, int x) {
-        _XIMHotKeyTrigger.modifier$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$121.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle modifier_mask$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("modifier_mask"));
     public static VarHandle modifier_mask$VH() {
-        return _XIMHotKeyTrigger.modifier_mask$VH;
+        return constants$122.const$0;
     }
     /**
      * Getter for field:
@@ -93,7 +85,7 @@ public class _XIMHotKeyTrigger {
      * }
      */
     public static int modifier_mask$get(MemorySegment seg) {
-        return (int)_XIMHotKeyTrigger.modifier_mask$VH.get(seg);
+        return (int)constants$122.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -102,20 +94,20 @@ public class _XIMHotKeyTrigger {
      * }
      */
     public static void modifier_mask$set(MemorySegment seg, int x) {
-        _XIMHotKeyTrigger.modifier_mask$VH.set(seg, x);
+        constants$122.const$0.set(seg, x);
     }
     public static int modifier_mask$get(MemorySegment seg, long index) {
-        return (int)_XIMHotKeyTrigger.modifier_mask$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$122.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void modifier_mask$set(MemorySegment seg, long index, int x) {
-        _XIMHotKeyTrigger.modifier_mask$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$122.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

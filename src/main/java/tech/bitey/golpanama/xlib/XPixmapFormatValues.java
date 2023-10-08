@@ -18,17 +18,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XPixmapFormatValues {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("depth"),
-        Constants$root.C_INT$LAYOUT.withName("bits_per_pixel"),
-        Constants$root.C_INT$LAYOUT.withName("scanline_pad")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XPixmapFormatValues.$struct$LAYOUT;
+        return constants$12.const$4;
     }
-    static final VarHandle depth$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("depth"));
     public static VarHandle depth$VH() {
-        return XPixmapFormatValues.depth$VH;
+        return constants$12.const$5;
     }
     /**
      * Getter for field:
@@ -37,7 +31,7 @@ public class XPixmapFormatValues {
      * }
      */
     public static int depth$get(MemorySegment seg) {
-        return (int)XPixmapFormatValues.depth$VH.get(seg);
+        return (int)constants$12.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -46,17 +40,16 @@ public class XPixmapFormatValues {
      * }
      */
     public static void depth$set(MemorySegment seg, int x) {
-        XPixmapFormatValues.depth$VH.set(seg, x);
+        constants$12.const$5.set(seg, x);
     }
     public static int depth$get(MemorySegment seg, long index) {
-        return (int)XPixmapFormatValues.depth$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$12.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void depth$set(MemorySegment seg, long index, int x) {
-        XPixmapFormatValues.depth$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$12.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bits_per_pixel$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bits_per_pixel"));
     public static VarHandle bits_per_pixel$VH() {
-        return XPixmapFormatValues.bits_per_pixel$VH;
+        return constants$13.const$0;
     }
     /**
      * Getter for field:
@@ -65,7 +58,7 @@ public class XPixmapFormatValues {
      * }
      */
     public static int bits_per_pixel$get(MemorySegment seg) {
-        return (int)XPixmapFormatValues.bits_per_pixel$VH.get(seg);
+        return (int)constants$13.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -74,17 +67,16 @@ public class XPixmapFormatValues {
      * }
      */
     public static void bits_per_pixel$set(MemorySegment seg, int x) {
-        XPixmapFormatValues.bits_per_pixel$VH.set(seg, x);
+        constants$13.const$0.set(seg, x);
     }
     public static int bits_per_pixel$get(MemorySegment seg, long index) {
-        return (int)XPixmapFormatValues.bits_per_pixel$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$13.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void bits_per_pixel$set(MemorySegment seg, long index, int x) {
-        XPixmapFormatValues.bits_per_pixel$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$13.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle scanline_pad$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("scanline_pad"));
     public static VarHandle scanline_pad$VH() {
-        return XPixmapFormatValues.scanline_pad$VH;
+        return constants$13.const$1;
     }
     /**
      * Getter for field:
@@ -93,7 +85,7 @@ public class XPixmapFormatValues {
      * }
      */
     public static int scanline_pad$get(MemorySegment seg) {
-        return (int)XPixmapFormatValues.scanline_pad$VH.get(seg);
+        return (int)constants$13.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -102,20 +94,20 @@ public class XPixmapFormatValues {
      * }
      */
     public static void scanline_pad$set(MemorySegment seg, int x) {
-        XPixmapFormatValues.scanline_pad$VH.set(seg, x);
+        constants$13.const$1.set(seg, x);
     }
     public static int scanline_pad$get(MemorySegment seg, long index) {
-        return (int)XPixmapFormatValues.scanline_pad$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$13.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void scanline_pad$set(MemorySegment seg, long index, int x) {
-        XPixmapFormatValues.scanline_pad$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$13.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

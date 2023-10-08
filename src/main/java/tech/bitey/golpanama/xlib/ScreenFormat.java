@@ -19,19 +19,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class ScreenFormat {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_POINTER$LAYOUT.withName("ext_data"),
-        Constants$root.C_INT$LAYOUT.withName("depth"),
-        Constants$root.C_INT$LAYOUT.withName("bits_per_pixel"),
-        Constants$root.C_INT$LAYOUT.withName("scanline_pad"),
-        MemoryLayout.paddingLayout(32)
-    );
     public static MemoryLayout $LAYOUT() {
-        return ScreenFormat.$struct$LAYOUT;
+        return constants$23.const$0;
     }
-    static final VarHandle ext_data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("ext_data"));
     public static VarHandle ext_data$VH() {
-        return ScreenFormat.ext_data$VH;
+        return constants$23.const$1;
     }
     /**
      * Getter for field:
@@ -40,7 +32,7 @@ public class ScreenFormat {
      * }
      */
     public static MemorySegment ext_data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)ScreenFormat.ext_data$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$23.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -49,17 +41,16 @@ public class ScreenFormat {
      * }
      */
     public static void ext_data$set(MemorySegment seg, MemorySegment x) {
-        ScreenFormat.ext_data$VH.set(seg, x);
+        constants$23.const$1.set(seg, x);
     }
     public static MemorySegment ext_data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)ScreenFormat.ext_data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$23.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void ext_data$set(MemorySegment seg, long index, MemorySegment x) {
-        ScreenFormat.ext_data$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$23.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle depth$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("depth"));
     public static VarHandle depth$VH() {
-        return ScreenFormat.depth$VH;
+        return constants$23.const$2;
     }
     /**
      * Getter for field:
@@ -68,7 +59,7 @@ public class ScreenFormat {
      * }
      */
     public static int depth$get(MemorySegment seg) {
-        return (int)ScreenFormat.depth$VH.get(seg);
+        return (int)constants$23.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -77,17 +68,16 @@ public class ScreenFormat {
      * }
      */
     public static void depth$set(MemorySegment seg, int x) {
-        ScreenFormat.depth$VH.set(seg, x);
+        constants$23.const$2.set(seg, x);
     }
     public static int depth$get(MemorySegment seg, long index) {
-        return (int)ScreenFormat.depth$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$23.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void depth$set(MemorySegment seg, long index, int x) {
-        ScreenFormat.depth$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$23.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bits_per_pixel$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bits_per_pixel"));
     public static VarHandle bits_per_pixel$VH() {
-        return ScreenFormat.bits_per_pixel$VH;
+        return constants$23.const$3;
     }
     /**
      * Getter for field:
@@ -96,7 +86,7 @@ public class ScreenFormat {
      * }
      */
     public static int bits_per_pixel$get(MemorySegment seg) {
-        return (int)ScreenFormat.bits_per_pixel$VH.get(seg);
+        return (int)constants$23.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -105,17 +95,16 @@ public class ScreenFormat {
      * }
      */
     public static void bits_per_pixel$set(MemorySegment seg, int x) {
-        ScreenFormat.bits_per_pixel$VH.set(seg, x);
+        constants$23.const$3.set(seg, x);
     }
     public static int bits_per_pixel$get(MemorySegment seg, long index) {
-        return (int)ScreenFormat.bits_per_pixel$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$23.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void bits_per_pixel$set(MemorySegment seg, long index, int x) {
-        ScreenFormat.bits_per_pixel$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$23.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle scanline_pad$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("scanline_pad"));
     public static VarHandle scanline_pad$VH() {
-        return ScreenFormat.scanline_pad$VH;
+        return constants$23.const$4;
     }
     /**
      * Getter for field:
@@ -124,7 +113,7 @@ public class ScreenFormat {
      * }
      */
     public static int scanline_pad$get(MemorySegment seg) {
-        return (int)ScreenFormat.scanline_pad$VH.get(seg);
+        return (int)constants$23.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -133,20 +122,20 @@ public class ScreenFormat {
      * }
      */
     public static void scanline_pad$set(MemorySegment seg, int x) {
-        ScreenFormat.scanline_pad$VH.set(seg, x);
+        constants$23.const$4.set(seg, x);
     }
     public static int scanline_pad$get(MemorySegment seg, long index) {
-        return (int)ScreenFormat.scanline_pad$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$23.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void scanline_pad$set(MemorySegment seg, long index, int x) {
-        ScreenFormat.scanline_pad$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$23.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

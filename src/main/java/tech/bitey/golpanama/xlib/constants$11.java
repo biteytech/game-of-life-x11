@@ -11,48 +11,21 @@ final class constants$11 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$11() {}
-    static final FunctionDescriptor XMaxRequestSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER
     );
-    static final MethodHandle XMaxRequestSize$MH = RuntimeHelper.downcallHandle(
-        "XMaxRequestSize",
-        constants$11.XMaxRequestSize$FUNC
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(_XExtData.free_private.class, "apply", constants$11.const$0);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        constants$11.const$0
     );
-    static final FunctionDescriptor XExtendedMaxRequestSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XExtendedMaxRequestSize$MH = RuntimeHelper.downcallHandle(
-        "XExtendedMaxRequestSize",
-        constants$11.XExtendedMaxRequestSize$FUNC
-    );
-    static final FunctionDescriptor XResourceManagerString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XResourceManagerString$MH = RuntimeHelper.downcallHandle(
-        "XResourceManagerString",
-        constants$11.XResourceManagerString$FUNC
-    );
-    static final FunctionDescriptor XScreenResourceString$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XScreenResourceString$MH = RuntimeHelper.downcallHandle(
-        "XScreenResourceString",
-        constants$11.XScreenResourceString$FUNC
-    );
-    static final FunctionDescriptor XDisplayMotionBufferSize$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDisplayMotionBufferSize$MH = RuntimeHelper.downcallHandle(
-        "XDisplayMotionBufferSize",
-        constants$11.XDisplayMotionBufferSize$FUNC
-    );
-    static final FunctionDescriptor XVisualIDFromVisual$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XVisualIDFromVisual$MH = RuntimeHelper.downcallHandle(
-        "XVisualIDFromVisual",
-        constants$11.XVisualIDFromVisual$FUNC
-    );
+    static final VarHandle const$3 = constants$10.const$3.varHandle(MemoryLayout.PathElement.groupElement("free_private"));
+    static final VarHandle const$4 = constants$10.const$3.varHandle(MemoryLayout.PathElement.groupElement("private_data"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("extension"),
+        JAVA_INT.withName("major_opcode"),
+        JAVA_INT.withName("first_event"),
+        JAVA_INT.withName("first_error")
+    ).withName("");
 }
 
 

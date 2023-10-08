@@ -11,64 +11,12 @@ final class constants$25 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$25() {}
-    static final FunctionDescriptor XCheckTypedWindowEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckTypedWindowEvent$MH = RuntimeHelper.downcallHandle(
-        "XCheckTypedWindowEvent",
-        constants$25.XCheckTypedWindowEvent$FUNC
-    );
-    static final FunctionDescriptor XCheckWindowEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckWindowEvent$MH = RuntimeHelper.downcallHandle(
-        "XCheckWindowEvent",
-        constants$25.XCheckWindowEvent$FUNC
-    );
-    static final FunctionDescriptor XCirculateSubwindows$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XCirculateSubwindows$MH = RuntimeHelper.downcallHandle(
-        "XCirculateSubwindows",
-        constants$25.XCirculateSubwindows$FUNC
-    );
-    static final FunctionDescriptor XCirculateSubwindowsDown$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XCirculateSubwindowsDown$MH = RuntimeHelper.downcallHandle(
-        "XCirculateSubwindowsDown",
-        constants$25.XCirculateSubwindowsDown$FUNC
-    );
-    static final FunctionDescriptor XCirculateSubwindowsUp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XCirculateSubwindowsUp$MH = RuntimeHelper.downcallHandle(
-        "XCirculateSubwindowsUp",
-        constants$25.XCirculateSubwindowsUp$FUNC
-    );
-    static final FunctionDescriptor XClearArea$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XClearArea$MH = RuntimeHelper.downcallHandle(
-        "XClearArea",
-        constants$25.XClearArea$FUNC
-    );
+    static final VarHandle const$0 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("backing_store"));
+    static final VarHandle const$1 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("backing_planes"));
+    static final VarHandle const$2 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("backing_pixel"));
+    static final VarHandle const$3 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("save_under"));
+    static final VarHandle const$4 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("event_mask"));
+    static final VarHandle const$5 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("do_not_propagate_mask"));
 }
 
 

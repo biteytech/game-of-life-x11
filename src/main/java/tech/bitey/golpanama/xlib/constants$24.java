@@ -11,63 +11,12 @@ final class constants$24 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$24() {}
-    static final FunctionDescriptor XChangeWindowAttributes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XChangeWindowAttributes$MH = RuntimeHelper.downcallHandle(
-        "XChangeWindowAttributes",
-        constants$24.XChangeWindowAttributes$FUNC
-    );
-    static final FunctionDescriptor XCheckIfEvent$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XCheckIfEvent$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckIfEvent$x0_UP$MH = RuntimeHelper.upcallHandle(XCheckIfEvent$x0.class, "apply", constants$24.XCheckIfEvent$x0_UP$FUNC);
-    static final FunctionDescriptor XCheckIfEvent$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckIfEvent$x0_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$24.XCheckIfEvent$x0_DOWN$FUNC
-    );
-    static final FunctionDescriptor XCheckIfEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckIfEvent$MH = RuntimeHelper.downcallHandle(
-        "XCheckIfEvent",
-        constants$24.XCheckIfEvent$FUNC
-    );
-    static final FunctionDescriptor XCheckMaskEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckMaskEvent$MH = RuntimeHelper.downcallHandle(
-        "XCheckMaskEvent",
-        constants$24.XCheckMaskEvent$FUNC
-    );
-    static final FunctionDescriptor XCheckTypedEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCheckTypedEvent$MH = RuntimeHelper.downcallHandle(
-        "XCheckTypedEvent",
-        constants$24.XCheckTypedEvent$FUNC
-    );
+    static final VarHandle const$0 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("background_pixmap"));
+    static final VarHandle const$1 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("background_pixel"));
+    static final VarHandle const$2 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("border_pixmap"));
+    static final VarHandle const$3 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("border_pixel"));
+    static final VarHandle const$4 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("bit_gravity"));
+    static final VarHandle const$5 = constants$23.const$5.varHandle(MemoryLayout.PathElement.groupElement("win_gravity"));
 }
 
 

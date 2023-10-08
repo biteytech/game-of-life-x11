@@ -31,44 +31,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XFontStruct {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_POINTER$LAYOUT.withName("ext_data"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("fid"),
-        Constants$root.C_INT$LAYOUT.withName("direction"),
-        Constants$root.C_INT$LAYOUT.withName("min_char_or_byte2"),
-        Constants$root.C_INT$LAYOUT.withName("max_char_or_byte2"),
-        Constants$root.C_INT$LAYOUT.withName("min_byte1"),
-        Constants$root.C_INT$LAYOUT.withName("max_byte1"),
-        Constants$root.C_INT$LAYOUT.withName("all_chars_exist"),
-        Constants$root.C_INT$LAYOUT.withName("default_char"),
-        Constants$root.C_INT$LAYOUT.withName("n_properties"),
-        Constants$root.C_POINTER$LAYOUT.withName("properties"),
-        MemoryLayout.structLayout(
-            Constants$root.C_SHORT$LAYOUT.withName("lbearing"),
-            Constants$root.C_SHORT$LAYOUT.withName("rbearing"),
-            Constants$root.C_SHORT$LAYOUT.withName("width"),
-            Constants$root.C_SHORT$LAYOUT.withName("ascent"),
-            Constants$root.C_SHORT$LAYOUT.withName("descent"),
-            Constants$root.C_SHORT$LAYOUT.withName("attributes")
-        ).withName("min_bounds"),
-        MemoryLayout.structLayout(
-            Constants$root.C_SHORT$LAYOUT.withName("lbearing"),
-            Constants$root.C_SHORT$LAYOUT.withName("rbearing"),
-            Constants$root.C_SHORT$LAYOUT.withName("width"),
-            Constants$root.C_SHORT$LAYOUT.withName("ascent"),
-            Constants$root.C_SHORT$LAYOUT.withName("descent"),
-            Constants$root.C_SHORT$LAYOUT.withName("attributes")
-        ).withName("max_bounds"),
-        Constants$root.C_POINTER$LAYOUT.withName("per_char"),
-        Constants$root.C_INT$LAYOUT.withName("ascent"),
-        Constants$root.C_INT$LAYOUT.withName("descent")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XFontStruct.$struct$LAYOUT;
+        return constants$105.const$2;
     }
-    static final VarHandle ext_data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("ext_data"));
     public static VarHandle ext_data$VH() {
-        return XFontStruct.ext_data$VH;
+        return constants$105.const$3;
     }
     /**
      * Getter for field:
@@ -77,7 +44,7 @@ public class XFontStruct {
      * }
      */
     public static MemorySegment ext_data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XFontStruct.ext_data$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$105.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -86,17 +53,16 @@ public class XFontStruct {
      * }
      */
     public static void ext_data$set(MemorySegment seg, MemorySegment x) {
-        XFontStruct.ext_data$VH.set(seg, x);
+        constants$105.const$3.set(seg, x);
     }
     public static MemorySegment ext_data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XFontStruct.ext_data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$105.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void ext_data$set(MemorySegment seg, long index, MemorySegment x) {
-        XFontStruct.ext_data$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$105.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle fid$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("fid"));
     public static VarHandle fid$VH() {
-        return XFontStruct.fid$VH;
+        return constants$105.const$4;
     }
     /**
      * Getter for field:
@@ -105,7 +71,7 @@ public class XFontStruct {
      * }
      */
     public static long fid$get(MemorySegment seg) {
-        return (long)XFontStruct.fid$VH.get(seg);
+        return (long)constants$105.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -114,17 +80,16 @@ public class XFontStruct {
      * }
      */
     public static void fid$set(MemorySegment seg, long x) {
-        XFontStruct.fid$VH.set(seg, x);
+        constants$105.const$4.set(seg, x);
     }
     public static long fid$get(MemorySegment seg, long index) {
-        return (long)XFontStruct.fid$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$105.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void fid$set(MemorySegment seg, long index, long x) {
-        XFontStruct.fid$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$105.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle direction$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("direction"));
     public static VarHandle direction$VH() {
-        return XFontStruct.direction$VH;
+        return constants$105.const$5;
     }
     /**
      * Getter for field:
@@ -133,7 +98,7 @@ public class XFontStruct {
      * }
      */
     public static int direction$get(MemorySegment seg) {
-        return (int)XFontStruct.direction$VH.get(seg);
+        return (int)constants$105.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -142,17 +107,16 @@ public class XFontStruct {
      * }
      */
     public static void direction$set(MemorySegment seg, int x) {
-        XFontStruct.direction$VH.set(seg, x);
+        constants$105.const$5.set(seg, x);
     }
     public static int direction$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.direction$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$105.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void direction$set(MemorySegment seg, long index, int x) {
-        XFontStruct.direction$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$105.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle min_char_or_byte2$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("min_char_or_byte2"));
     public static VarHandle min_char_or_byte2$VH() {
-        return XFontStruct.min_char_or_byte2$VH;
+        return constants$106.const$0;
     }
     /**
      * Getter for field:
@@ -161,7 +125,7 @@ public class XFontStruct {
      * }
      */
     public static int min_char_or_byte2$get(MemorySegment seg) {
-        return (int)XFontStruct.min_char_or_byte2$VH.get(seg);
+        return (int)constants$106.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -170,17 +134,16 @@ public class XFontStruct {
      * }
      */
     public static void min_char_or_byte2$set(MemorySegment seg, int x) {
-        XFontStruct.min_char_or_byte2$VH.set(seg, x);
+        constants$106.const$0.set(seg, x);
     }
     public static int min_char_or_byte2$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.min_char_or_byte2$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$106.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void min_char_or_byte2$set(MemorySegment seg, long index, int x) {
-        XFontStruct.min_char_or_byte2$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$106.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle max_char_or_byte2$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("max_char_or_byte2"));
     public static VarHandle max_char_or_byte2$VH() {
-        return XFontStruct.max_char_or_byte2$VH;
+        return constants$106.const$1;
     }
     /**
      * Getter for field:
@@ -189,7 +152,7 @@ public class XFontStruct {
      * }
      */
     public static int max_char_or_byte2$get(MemorySegment seg) {
-        return (int)XFontStruct.max_char_or_byte2$VH.get(seg);
+        return (int)constants$106.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -198,17 +161,16 @@ public class XFontStruct {
      * }
      */
     public static void max_char_or_byte2$set(MemorySegment seg, int x) {
-        XFontStruct.max_char_or_byte2$VH.set(seg, x);
+        constants$106.const$1.set(seg, x);
     }
     public static int max_char_or_byte2$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.max_char_or_byte2$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$106.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void max_char_or_byte2$set(MemorySegment seg, long index, int x) {
-        XFontStruct.max_char_or_byte2$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$106.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle min_byte1$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("min_byte1"));
     public static VarHandle min_byte1$VH() {
-        return XFontStruct.min_byte1$VH;
+        return constants$106.const$2;
     }
     /**
      * Getter for field:
@@ -217,7 +179,7 @@ public class XFontStruct {
      * }
      */
     public static int min_byte1$get(MemorySegment seg) {
-        return (int)XFontStruct.min_byte1$VH.get(seg);
+        return (int)constants$106.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -226,17 +188,16 @@ public class XFontStruct {
      * }
      */
     public static void min_byte1$set(MemorySegment seg, int x) {
-        XFontStruct.min_byte1$VH.set(seg, x);
+        constants$106.const$2.set(seg, x);
     }
     public static int min_byte1$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.min_byte1$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$106.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void min_byte1$set(MemorySegment seg, long index, int x) {
-        XFontStruct.min_byte1$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$106.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle max_byte1$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("max_byte1"));
     public static VarHandle max_byte1$VH() {
-        return XFontStruct.max_byte1$VH;
+        return constants$106.const$3;
     }
     /**
      * Getter for field:
@@ -245,7 +206,7 @@ public class XFontStruct {
      * }
      */
     public static int max_byte1$get(MemorySegment seg) {
-        return (int)XFontStruct.max_byte1$VH.get(seg);
+        return (int)constants$106.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -254,17 +215,16 @@ public class XFontStruct {
      * }
      */
     public static void max_byte1$set(MemorySegment seg, int x) {
-        XFontStruct.max_byte1$VH.set(seg, x);
+        constants$106.const$3.set(seg, x);
     }
     public static int max_byte1$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.max_byte1$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$106.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void max_byte1$set(MemorySegment seg, long index, int x) {
-        XFontStruct.max_byte1$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$106.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle all_chars_exist$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("all_chars_exist"));
     public static VarHandle all_chars_exist$VH() {
-        return XFontStruct.all_chars_exist$VH;
+        return constants$106.const$4;
     }
     /**
      * Getter for field:
@@ -273,7 +233,7 @@ public class XFontStruct {
      * }
      */
     public static int all_chars_exist$get(MemorySegment seg) {
-        return (int)XFontStruct.all_chars_exist$VH.get(seg);
+        return (int)constants$106.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -282,17 +242,16 @@ public class XFontStruct {
      * }
      */
     public static void all_chars_exist$set(MemorySegment seg, int x) {
-        XFontStruct.all_chars_exist$VH.set(seg, x);
+        constants$106.const$4.set(seg, x);
     }
     public static int all_chars_exist$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.all_chars_exist$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$106.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void all_chars_exist$set(MemorySegment seg, long index, int x) {
-        XFontStruct.all_chars_exist$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$106.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle default_char$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("default_char"));
     public static VarHandle default_char$VH() {
-        return XFontStruct.default_char$VH;
+        return constants$106.const$5;
     }
     /**
      * Getter for field:
@@ -301,7 +260,7 @@ public class XFontStruct {
      * }
      */
     public static int default_char$get(MemorySegment seg) {
-        return (int)XFontStruct.default_char$VH.get(seg);
+        return (int)constants$106.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -310,17 +269,16 @@ public class XFontStruct {
      * }
      */
     public static void default_char$set(MemorySegment seg, int x) {
-        XFontStruct.default_char$VH.set(seg, x);
+        constants$106.const$5.set(seg, x);
     }
     public static int default_char$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.default_char$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$106.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void default_char$set(MemorySegment seg, long index, int x) {
-        XFontStruct.default_char$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$106.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle n_properties$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("n_properties"));
     public static VarHandle n_properties$VH() {
-        return XFontStruct.n_properties$VH;
+        return constants$107.const$0;
     }
     /**
      * Getter for field:
@@ -329,7 +287,7 @@ public class XFontStruct {
      * }
      */
     public static int n_properties$get(MemorySegment seg) {
-        return (int)XFontStruct.n_properties$VH.get(seg);
+        return (int)constants$107.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -338,17 +296,16 @@ public class XFontStruct {
      * }
      */
     public static void n_properties$set(MemorySegment seg, int x) {
-        XFontStruct.n_properties$VH.set(seg, x);
+        constants$107.const$0.set(seg, x);
     }
     public static int n_properties$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.n_properties$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$107.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void n_properties$set(MemorySegment seg, long index, int x) {
-        XFontStruct.n_properties$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$107.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle properties$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("properties"));
     public static VarHandle properties$VH() {
-        return XFontStruct.properties$VH;
+        return constants$107.const$1;
     }
     /**
      * Getter for field:
@@ -357,7 +314,7 @@ public class XFontStruct {
      * }
      */
     public static MemorySegment properties$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XFontStruct.properties$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$107.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -366,13 +323,13 @@ public class XFontStruct {
      * }
      */
     public static void properties$set(MemorySegment seg, MemorySegment x) {
-        XFontStruct.properties$VH.set(seg, x);
+        constants$107.const$1.set(seg, x);
     }
     public static MemorySegment properties$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XFontStruct.properties$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$107.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void properties$set(MemorySegment seg, long index, MemorySegment x) {
-        XFontStruct.properties$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$107.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static MemorySegment min_bounds$slice(MemorySegment seg) {
         return seg.asSlice(56, 12);
@@ -380,9 +337,8 @@ public class XFontStruct {
     public static MemorySegment max_bounds$slice(MemorySegment seg) {
         return seg.asSlice(68, 12);
     }
-    static final VarHandle per_char$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("per_char"));
     public static VarHandle per_char$VH() {
-        return XFontStruct.per_char$VH;
+        return constants$107.const$2;
     }
     /**
      * Getter for field:
@@ -391,7 +347,7 @@ public class XFontStruct {
      * }
      */
     public static MemorySegment per_char$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XFontStruct.per_char$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$107.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -400,17 +356,16 @@ public class XFontStruct {
      * }
      */
     public static void per_char$set(MemorySegment seg, MemorySegment x) {
-        XFontStruct.per_char$VH.set(seg, x);
+        constants$107.const$2.set(seg, x);
     }
     public static MemorySegment per_char$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XFontStruct.per_char$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$107.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void per_char$set(MemorySegment seg, long index, MemorySegment x) {
-        XFontStruct.per_char$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$107.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle ascent$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("ascent"));
     public static VarHandle ascent$VH() {
-        return XFontStruct.ascent$VH;
+        return constants$107.const$3;
     }
     /**
      * Getter for field:
@@ -419,7 +374,7 @@ public class XFontStruct {
      * }
      */
     public static int ascent$get(MemorySegment seg) {
-        return (int)XFontStruct.ascent$VH.get(seg);
+        return (int)constants$107.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -428,17 +383,16 @@ public class XFontStruct {
      * }
      */
     public static void ascent$set(MemorySegment seg, int x) {
-        XFontStruct.ascent$VH.set(seg, x);
+        constants$107.const$3.set(seg, x);
     }
     public static int ascent$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.ascent$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$107.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void ascent$set(MemorySegment seg, long index, int x) {
-        XFontStruct.ascent$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$107.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle descent$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("descent"));
     public static VarHandle descent$VH() {
-        return XFontStruct.descent$VH;
+        return constants$107.const$4;
     }
     /**
      * Getter for field:
@@ -447,7 +401,7 @@ public class XFontStruct {
      * }
      */
     public static int descent$get(MemorySegment seg) {
-        return (int)XFontStruct.descent$VH.get(seg);
+        return (int)constants$107.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -456,20 +410,20 @@ public class XFontStruct {
      * }
      */
     public static void descent$set(MemorySegment seg, int x) {
-        XFontStruct.descent$VH.set(seg, x);
+        constants$107.const$4.set(seg, x);
     }
     public static int descent$get(MemorySegment seg, long index) {
-        return (int)XFontStruct.descent$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$107.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void descent$set(MemorySegment seg, long index, int x) {
-        XFontStruct.descent$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$107.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

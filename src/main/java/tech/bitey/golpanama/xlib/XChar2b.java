@@ -17,16 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XChar2b {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_CHAR$LAYOUT.withName("byte1"),
-        Constants$root.C_CHAR$LAYOUT.withName("byte2")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XChar2b.$struct$LAYOUT;
+        return constants$108.const$4;
     }
-    static final VarHandle byte1$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("byte1"));
     public static VarHandle byte1$VH() {
-        return XChar2b.byte1$VH;
+        return constants$108.const$5;
     }
     /**
      * Getter for field:
@@ -35,7 +30,7 @@ public class XChar2b {
      * }
      */
     public static byte byte1$get(MemorySegment seg) {
-        return (byte)XChar2b.byte1$VH.get(seg);
+        return (byte)constants$108.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -44,17 +39,16 @@ public class XChar2b {
      * }
      */
     public static void byte1$set(MemorySegment seg, byte x) {
-        XChar2b.byte1$VH.set(seg, x);
+        constants$108.const$5.set(seg, x);
     }
     public static byte byte1$get(MemorySegment seg, long index) {
-        return (byte)XChar2b.byte1$VH.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$108.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void byte1$set(MemorySegment seg, long index, byte x) {
-        XChar2b.byte1$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$108.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle byte2$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("byte2"));
     public static VarHandle byte2$VH() {
-        return XChar2b.byte2$VH;
+        return constants$109.const$0;
     }
     /**
      * Getter for field:
@@ -63,7 +57,7 @@ public class XChar2b {
      * }
      */
     public static byte byte2$get(MemorySegment seg) {
-        return (byte)XChar2b.byte2$VH.get(seg);
+        return (byte)constants$109.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -72,20 +66,20 @@ public class XChar2b {
      * }
      */
     public static void byte2$set(MemorySegment seg, byte x) {
-        XChar2b.byte2$VH.set(seg, x);
+        constants$109.const$0.set(seg, x);
     }
     public static byte byte2$get(MemorySegment seg, long index) {
-        return (byte)XChar2b.byte2$VH.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$109.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void byte2$set(MemorySegment seg, long index, byte x) {
-        XChar2b.byte2$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$109.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

@@ -11,52 +11,21 @@ final class constants$44 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$44() {}
-    static final FunctionDescriptor XPeekIfEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPeekIfEvent$MH = RuntimeHelper.downcallHandle(
-        "XPeekIfEvent",
-        constants$44.XPeekIfEvent$FUNC
-    );
-    static final FunctionDescriptor XPending$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPending$MH = RuntimeHelper.downcallHandle(
-        "XPending",
-        constants$44.XPending$FUNC
-    );
-    static final FunctionDescriptor XPlanesOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPlanesOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XPlanesOfScreen",
-        constants$44.XPlanesOfScreen$FUNC
-    );
-    static final FunctionDescriptor XProtocolRevision$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XProtocolRevision$MH = RuntimeHelper.downcallHandle(
-        "XProtocolRevision",
-        constants$44.XProtocolRevision$FUNC
-    );
-    static final FunctionDescriptor XProtocolVersion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XProtocolVersion$MH = RuntimeHelper.downcallHandle(
-        "XProtocolVersion",
-        constants$44.XProtocolVersion$FUNC
-    );
-    static final FunctionDescriptor XPutBackEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPutBackEvent$MH = RuntimeHelper.downcallHandle(
-        "XPutBackEvent",
-        constants$44.XPutBackEvent$FUNC
-    );
+    static final VarHandle const$0 = constants$43.const$2.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final VarHandle const$1 = constants$43.const$2.varHandle(MemoryLayout.PathElement.groupElement("angle1"));
+    static final VarHandle const$2 = constants$43.const$2.varHandle(MemoryLayout.PathElement.groupElement("angle2"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("key_click_percent"),
+        JAVA_INT.withName("bell_percent"),
+        JAVA_INT.withName("bell_pitch"),
+        JAVA_INT.withName("bell_duration"),
+        JAVA_INT.withName("led"),
+        JAVA_INT.withName("led_mode"),
+        JAVA_INT.withName("key"),
+        JAVA_INT.withName("auto_repeat_mode")
+    ).withName("");
+    static final VarHandle const$4 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("key_click_percent"));
+    static final VarHandle const$5 = constants$44.const$3.varHandle(MemoryLayout.PathElement.groupElement("bell_percent"));
 }
 
 

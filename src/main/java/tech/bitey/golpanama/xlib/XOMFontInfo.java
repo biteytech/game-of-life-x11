@@ -18,18 +18,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XOMFontInfo {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("num_font"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("font_struct_list"),
-        Constants$root.C_POINTER$LAYOUT.withName("font_name_list")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XOMFontInfo.$struct$LAYOUT;
+        return constants$112.const$2;
     }
-    static final VarHandle num_font$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("num_font"));
     public static VarHandle num_font$VH() {
-        return XOMFontInfo.num_font$VH;
+        return constants$112.const$3;
     }
     /**
      * Getter for field:
@@ -38,7 +31,7 @@ public class XOMFontInfo {
      * }
      */
     public static int num_font$get(MemorySegment seg) {
-        return (int)XOMFontInfo.num_font$VH.get(seg);
+        return (int)constants$112.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -47,17 +40,16 @@ public class XOMFontInfo {
      * }
      */
     public static void num_font$set(MemorySegment seg, int x) {
-        XOMFontInfo.num_font$VH.set(seg, x);
+        constants$112.const$3.set(seg, x);
     }
     public static int num_font$get(MemorySegment seg, long index) {
-        return (int)XOMFontInfo.num_font$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$112.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void num_font$set(MemorySegment seg, long index, int x) {
-        XOMFontInfo.num_font$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$112.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle font_struct_list$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("font_struct_list"));
     public static VarHandle font_struct_list$VH() {
-        return XOMFontInfo.font_struct_list$VH;
+        return constants$112.const$4;
     }
     /**
      * Getter for field:
@@ -66,7 +58,7 @@ public class XOMFontInfo {
      * }
      */
     public static MemorySegment font_struct_list$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XOMFontInfo.font_struct_list$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$112.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -75,17 +67,16 @@ public class XOMFontInfo {
      * }
      */
     public static void font_struct_list$set(MemorySegment seg, MemorySegment x) {
-        XOMFontInfo.font_struct_list$VH.set(seg, x);
+        constants$112.const$4.set(seg, x);
     }
     public static MemorySegment font_struct_list$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XOMFontInfo.font_struct_list$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$112.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void font_struct_list$set(MemorySegment seg, long index, MemorySegment x) {
-        XOMFontInfo.font_struct_list$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$112.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle font_name_list$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("font_name_list"));
     public static VarHandle font_name_list$VH() {
-        return XOMFontInfo.font_name_list$VH;
+        return constants$112.const$5;
     }
     /**
      * Getter for field:
@@ -94,7 +85,7 @@ public class XOMFontInfo {
      * }
      */
     public static MemorySegment font_name_list$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XOMFontInfo.font_name_list$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$112.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -103,20 +94,20 @@ public class XOMFontInfo {
      * }
      */
     public static void font_name_list$set(MemorySegment seg, MemorySegment x) {
-        XOMFontInfo.font_name_list$VH.set(seg, x);
+        constants$112.const$5.set(seg, x);
     }
     public static MemorySegment font_name_list$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XOMFontInfo.font_name_list$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$112.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void font_name_list$set(MemorySegment seg, long index, MemorySegment x) {
-        XOMFontInfo.font_name_list$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$112.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

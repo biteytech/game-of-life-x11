@@ -11,63 +11,21 @@ final class constants$60 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$60() {}
-    static final FunctionDescriptor XWarpPointer$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XWarpPointer$MH = RuntimeHelper.downcallHandle(
-        "XWarpPointer",
-        constants$60.XWarpPointer$FUNC
-    );
-    static final FunctionDescriptor XWidthMMOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XWidthMMOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XWidthMMOfScreen",
-        constants$60.XWidthMMOfScreen$FUNC
-    );
-    static final FunctionDescriptor XWidthOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XWidthOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XWidthOfScreen",
-        constants$60.XWidthOfScreen$FUNC
-    );
-    static final FunctionDescriptor XWindowEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XWindowEvent$MH = RuntimeHelper.downcallHandle(
-        "XWindowEvent",
-        constants$60.XWindowEvent$FUNC
-    );
-    static final FunctionDescriptor XWriteBitmapFile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XWriteBitmapFile$MH = RuntimeHelper.downcallHandle(
-        "XWriteBitmapFile",
-        constants$60.XWriteBitmapFile$FUNC
-    );
-    static final FunctionDescriptor XSupportsLocale$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
-    static final MethodHandle XSupportsLocale$MH = RuntimeHelper.downcallHandle(
-        "XSupportsLocale",
-        constants$60.XSupportsLocale$FUNC
-    );
+    static final VarHandle const$0 = constants$59.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$1 = constants$59.const$2.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$2 = constants$59.const$2.varHandle(MemoryLayout.PathElement.groupElement("mode"));
+    static final VarHandle const$3 = constants$59.const$2.varHandle(MemoryLayout.PathElement.groupElement("detail"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("key_vector")
+    ).withName("");
+    static final VarHandle const$5 = constants$60.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

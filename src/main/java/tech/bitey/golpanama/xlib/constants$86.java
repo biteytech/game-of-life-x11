@@ -11,12 +11,23 @@ final class constants$86 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$86() {}
-    static final MemorySegment XNMissingCharSet$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("missingCharSet");
-    static final MemorySegment XNDefaultString$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("defaultString");
-    static final MemorySegment XNOrientation$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("orientation");
-    static final MemorySegment XNDirectionalDependentDrawing$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("directionalDependentDrawing");
-    static final MemorySegment XNContextualDrawing$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("contextualDrawing");
-    static final MemorySegment XNFontInfo$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("fontInfo");
+    static final VarHandle const$0 = constants$84.const$5.varHandle(MemoryLayout.PathElement.groupElement("place"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("parent"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("place"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$2 = constants$86.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$86.const$1.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$4 = constants$86.const$1.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$5 = constants$86.const$1.varHandle(MemoryLayout.PathElement.groupElement("display"));
 }
 
 

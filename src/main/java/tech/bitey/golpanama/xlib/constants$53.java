@@ -11,63 +11,32 @@ final class constants$53 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$53() {}
-    static final FunctionDescriptor XSetIconName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetIconName$MH = RuntimeHelper.downcallHandle(
-        "XSetIconName",
-        constants$53.XSetIconName$FUNC
-    );
-    static final FunctionDescriptor XSetInputFocus$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetInputFocus$MH = RuntimeHelper.downcallHandle(
-        "XSetInputFocus",
-        constants$53.XSetInputFocus$FUNC
-    );
-    static final FunctionDescriptor XSetLineAttributes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetLineAttributes$MH = RuntimeHelper.downcallHandle(
-        "XSetLineAttributes",
-        constants$53.XSetLineAttributes$FUNC
-    );
-    static final FunctionDescriptor XSetModifierMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetModifierMapping$MH = RuntimeHelper.downcallHandle(
-        "XSetModifierMapping",
-        constants$53.XSetModifierMapping$FUNC
-    );
-    static final FunctionDescriptor XSetPlaneMask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetPlaneMask$MH = RuntimeHelper.downcallHandle(
-        "XSetPlaneMask",
-        constants$53.XSetPlaneMask$FUNC
-    );
-    static final FunctionDescriptor XSetPointerMapping$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetPointerMapping$MH = RuntimeHelper.downcallHandle(
-        "XSetPointerMapping",
-        constants$53.XSetPointerMapping$FUNC
-    );
+    static final VarHandle const$0 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("y_root"));
+    static final VarHandle const$1 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final VarHandle const$2 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("button"));
+    static final VarHandle const$3 = constants$51.const$0.varHandle(MemoryLayout.PathElement.groupElement("same_screen"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("window"),
+        JAVA_LONG.withName("root"),
+        JAVA_LONG.withName("subwindow"),
+        JAVA_LONG.withName("time"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("x_root"),
+        JAVA_INT.withName("y_root"),
+        JAVA_INT.withName("state"),
+        JAVA_BYTE.withName("is_hint"),
+        MemoryLayout.paddingLayout(3),
+        JAVA_INT.withName("same_screen"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$5 = constants$53.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

@@ -11,52 +11,12 @@ final class constants$22 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$22() {}
-    static final FunctionDescriptor XBell$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XBell$MH = RuntimeHelper.downcallHandle(
-        "XBell",
-        constants$22.XBell$FUNC
-    );
-    static final FunctionDescriptor XBitmapBitOrder$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XBitmapBitOrder$MH = RuntimeHelper.downcallHandle(
-        "XBitmapBitOrder",
-        constants$22.XBitmapBitOrder$FUNC
-    );
-    static final FunctionDescriptor XBitmapPad$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XBitmapPad$MH = RuntimeHelper.downcallHandle(
-        "XBitmapPad",
-        constants$22.XBitmapPad$FUNC
-    );
-    static final FunctionDescriptor XBitmapUnit$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XBitmapUnit$MH = RuntimeHelper.downcallHandle(
-        "XBitmapUnit",
-        constants$22.XBitmapUnit$FUNC
-    );
-    static final FunctionDescriptor XCellsOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XCellsOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XCellsOfScreen",
-        constants$22.XCellsOfScreen$FUNC
-    );
-    static final FunctionDescriptor XChangeActivePointerGrab$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XChangeActivePointerGrab$MH = RuntimeHelper.downcallHandle(
-        "XChangeActivePointerGrab",
-        constants$22.XChangeActivePointerGrab$FUNC
-    );
+    static final VarHandle const$0 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("black_pixel"));
+    static final VarHandle const$1 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("max_maps"));
+    static final VarHandle const$2 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("min_maps"));
+    static final VarHandle const$3 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("backing_store"));
+    static final VarHandle const$4 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("save_unders"));
+    static final VarHandle const$5 = constants$19.const$3.varHandle(MemoryLayout.PathElement.groupElement("root_input_mask"));
 }
 
 

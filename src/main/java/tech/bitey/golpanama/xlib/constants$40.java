@@ -11,58 +11,19 @@ final class constants$40 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$40() {}
-    static final FunctionDescriptor XIfEvent$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XIfEvent$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIfEvent$x0_UP$MH = RuntimeHelper.upcallHandle(XIfEvent$x0.class, "apply", constants$40.XIfEvent$x0_UP$FUNC);
-    static final FunctionDescriptor XIfEvent$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIfEvent$x0_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$40.XIfEvent$x0_DOWN$FUNC
-    );
-    static final FunctionDescriptor XIfEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIfEvent$MH = RuntimeHelper.downcallHandle(
-        "XIfEvent",
-        constants$40.XIfEvent$FUNC
-    );
-    static final FunctionDescriptor XImageByteOrder$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XImageByteOrder$MH = RuntimeHelper.downcallHandle(
-        "XImageByteOrder",
-        constants$40.XImageByteOrder$FUNC
-    );
-    static final FunctionDescriptor XInstallColormap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XInstallColormap$MH = RuntimeHelper.downcallHandle(
-        "XInstallColormap",
-        constants$40.XInstallColormap$FUNC
-    );
-    static final FunctionDescriptor XKeysymToKeycode$FUNC = FunctionDescriptor.of(Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XKeysymToKeycode$MH = RuntimeHelper.downcallHandle(
-        "XKeysymToKeycode",
-        constants$40.XKeysymToKeycode$FUNC
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_LONG.withName("pixel"),
+        JAVA_SHORT.withName("red"),
+        JAVA_SHORT.withName("green"),
+        JAVA_SHORT.withName("blue"),
+        JAVA_BYTE.withName("flags"),
+        JAVA_BYTE.withName("pad")
+    ).withName("");
+    static final VarHandle const$1 = constants$40.const$0.varHandle(MemoryLayout.PathElement.groupElement("pixel"));
+    static final VarHandle const$2 = constants$40.const$0.varHandle(MemoryLayout.PathElement.groupElement("red"));
+    static final VarHandle const$3 = constants$40.const$0.varHandle(MemoryLayout.PathElement.groupElement("green"));
+    static final VarHandle const$4 = constants$40.const$0.varHandle(MemoryLayout.PathElement.groupElement("blue"));
+    static final VarHandle const$5 = constants$40.const$0.varHandle(MemoryLayout.PathElement.groupElement("flags"));
 }
 
 

@@ -11,66 +11,23 @@ final class constants$79 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$79() {}
-    static final FunctionDescriptor XRectInRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRectInRegion$MH = RuntimeHelper.downcallHandle(
-        "XRectInRegion",
-        constants$79.XRectInRegion$FUNC
-    );
-    static final FunctionDescriptor XSaveContext$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSaveContext$MH = RuntimeHelper.downcallHandle(
-        "XSaveContext",
-        constants$79.XSaveContext$FUNC
-    );
-    static final FunctionDescriptor XSetClassHint$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetClassHint$MH = RuntimeHelper.downcallHandle(
-        "XSetClassHint",
-        constants$79.XSetClassHint$FUNC
-    );
-    static final FunctionDescriptor XSetIconSizes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetIconSizes$MH = RuntimeHelper.downcallHandle(
-        "XSetIconSizes",
-        constants$79.XSetIconSizes$FUNC
-    );
-    static final FunctionDescriptor XSetNormalHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetNormalHints$MH = RuntimeHelper.downcallHandle(
-        "XSetNormalHints",
-        constants$79.XSetNormalHints$FUNC
-    );
-    static final FunctionDescriptor XSetRGBColormaps$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetRGBColormaps$MH = RuntimeHelper.downcallHandle(
-        "XSetRGBColormaps",
-        constants$79.XSetRGBColormaps$FUNC
-    );
+    static final VarHandle const$0 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("border_width"));
+    static final VarHandle const$1 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("above"));
+    static final VarHandle const$2 = constants$77.const$1.varHandle(MemoryLayout.PathElement.groupElement("override_redirect"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("event"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y")
+    ).withName("");
+    static final VarHandle const$4 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("serial"));
 }
 
 

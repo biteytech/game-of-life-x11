@@ -11,63 +11,16 @@ final class constants$18 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$18() {}
-    static final FunctionDescriptor XListPixmapFormats$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListPixmapFormats$MH = RuntimeHelper.downcallHandle(
-        "XListPixmapFormats",
-        constants$18.XListPixmapFormats$FUNC
-    );
-    static final FunctionDescriptor XListDepths$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListDepths$MH = RuntimeHelper.downcallHandle(
-        "XListDepths",
-        constants$18.XListDepths$FUNC
-    );
-    static final FunctionDescriptor XReconfigureWMWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XReconfigureWMWindow$MH = RuntimeHelper.downcallHandle(
-        "XReconfigureWMWindow",
-        constants$18.XReconfigureWMWindow$FUNC
-    );
-    static final FunctionDescriptor XGetWMProtocols$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetWMProtocols$MH = RuntimeHelper.downcallHandle(
-        "XGetWMProtocols",
-        constants$18.XGetWMProtocols$FUNC
-    );
-    static final FunctionDescriptor XSetWMProtocols$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetWMProtocols$MH = RuntimeHelper.downcallHandle(
-        "XSetWMProtocols",
-        constants$18.XSetWMProtocols$FUNC
-    );
-    static final FunctionDescriptor XIconifyWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XIconifyWindow$MH = RuntimeHelper.downcallHandle(
-        "XIconifyWindow",
-        constants$18.XIconifyWindow$FUNC
-    );
+    static final VarHandle const$0 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("red_mask"));
+    static final VarHandle const$1 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("green_mask"));
+    static final VarHandle const$2 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("blue_mask"));
+    static final VarHandle const$3 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("bits_per_rgb"));
+    static final VarHandle const$4 = constants$17.const$2.varHandle(MemoryLayout.PathElement.groupElement("map_entries"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("depth"),
+        JAVA_INT.withName("nvisuals"),
+        RuntimeHelper.POINTER.withName("visuals")
+    ).withName("");
 }
 
 

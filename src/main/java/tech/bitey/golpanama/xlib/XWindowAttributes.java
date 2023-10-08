@@ -38,39 +38,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XWindowAttributes {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("x"),
-        Constants$root.C_INT$LAYOUT.withName("y"),
-        Constants$root.C_INT$LAYOUT.withName("width"),
-        Constants$root.C_INT$LAYOUT.withName("height"),
-        Constants$root.C_INT$LAYOUT.withName("border_width"),
-        Constants$root.C_INT$LAYOUT.withName("depth"),
-        Constants$root.C_POINTER$LAYOUT.withName("visual"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("root"),
-        Constants$root.C_INT$LAYOUT.withName("class"),
-        Constants$root.C_INT$LAYOUT.withName("bit_gravity"),
-        Constants$root.C_INT$LAYOUT.withName("win_gravity"),
-        Constants$root.C_INT$LAYOUT.withName("backing_store"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("backing_planes"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("backing_pixel"),
-        Constants$root.C_INT$LAYOUT.withName("save_under"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("colormap"),
-        Constants$root.C_INT$LAYOUT.withName("map_installed"),
-        Constants$root.C_INT$LAYOUT.withName("map_state"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("all_event_masks"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("your_event_mask"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("do_not_propagate_mask"),
-        Constants$root.C_INT$LAYOUT.withName("override_redirect"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("screen")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XWindowAttributes.$struct$LAYOUT;
+        return constants$26.const$3;
     }
-    static final VarHandle x$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("x"));
     public static VarHandle x$VH() {
-        return XWindowAttributes.x$VH;
+        return constants$26.const$4;
     }
     /**
      * Getter for field:
@@ -79,7 +51,7 @@ public class XWindowAttributes {
      * }
      */
     public static int x$get(MemorySegment seg) {
-        return (int)XWindowAttributes.x$VH.get(seg);
+        return (int)constants$26.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -88,17 +60,16 @@ public class XWindowAttributes {
      * }
      */
     public static void x$set(MemorySegment seg, int x) {
-        XWindowAttributes.x$VH.set(seg, x);
+        constants$26.const$4.set(seg, x);
     }
     public static int x$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.x$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$26.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.x$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$26.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle y$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("y"));
     public static VarHandle y$VH() {
-        return XWindowAttributes.y$VH;
+        return constants$26.const$5;
     }
     /**
      * Getter for field:
@@ -107,7 +78,7 @@ public class XWindowAttributes {
      * }
      */
     public static int y$get(MemorySegment seg) {
-        return (int)XWindowAttributes.y$VH.get(seg);
+        return (int)constants$26.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -116,17 +87,16 @@ public class XWindowAttributes {
      * }
      */
     public static void y$set(MemorySegment seg, int x) {
-        XWindowAttributes.y$VH.set(seg, x);
+        constants$26.const$5.set(seg, x);
     }
     public static int y$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.y$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$26.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.y$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$26.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("width"));
     public static VarHandle width$VH() {
-        return XWindowAttributes.width$VH;
+        return constants$27.const$0;
     }
     /**
      * Getter for field:
@@ -135,7 +105,7 @@ public class XWindowAttributes {
      * }
      */
     public static int width$get(MemorySegment seg) {
-        return (int)XWindowAttributes.width$VH.get(seg);
+        return (int)constants$27.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -144,17 +114,16 @@ public class XWindowAttributes {
      * }
      */
     public static void width$set(MemorySegment seg, int x) {
-        XWindowAttributes.width$VH.set(seg, x);
+        constants$27.const$0.set(seg, x);
     }
     public static int width$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.width$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$27.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void width$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$27.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle height$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("height"));
     public static VarHandle height$VH() {
-        return XWindowAttributes.height$VH;
+        return constants$27.const$1;
     }
     /**
      * Getter for field:
@@ -163,7 +132,7 @@ public class XWindowAttributes {
      * }
      */
     public static int height$get(MemorySegment seg) {
-        return (int)XWindowAttributes.height$VH.get(seg);
+        return (int)constants$27.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -172,17 +141,16 @@ public class XWindowAttributes {
      * }
      */
     public static void height$set(MemorySegment seg, int x) {
-        XWindowAttributes.height$VH.set(seg, x);
+        constants$27.const$1.set(seg, x);
     }
     public static int height$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.height$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$27.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void height$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.height$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$27.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle border_width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("border_width"));
     public static VarHandle border_width$VH() {
-        return XWindowAttributes.border_width$VH;
+        return constants$27.const$2;
     }
     /**
      * Getter for field:
@@ -191,7 +159,7 @@ public class XWindowAttributes {
      * }
      */
     public static int border_width$get(MemorySegment seg) {
-        return (int)XWindowAttributes.border_width$VH.get(seg);
+        return (int)constants$27.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -200,17 +168,16 @@ public class XWindowAttributes {
      * }
      */
     public static void border_width$set(MemorySegment seg, int x) {
-        XWindowAttributes.border_width$VH.set(seg, x);
+        constants$27.const$2.set(seg, x);
     }
     public static int border_width$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.border_width$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$27.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void border_width$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.border_width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$27.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle depth$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("depth"));
     public static VarHandle depth$VH() {
-        return XWindowAttributes.depth$VH;
+        return constants$27.const$3;
     }
     /**
      * Getter for field:
@@ -219,7 +186,7 @@ public class XWindowAttributes {
      * }
      */
     public static int depth$get(MemorySegment seg) {
-        return (int)XWindowAttributes.depth$VH.get(seg);
+        return (int)constants$27.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -228,17 +195,16 @@ public class XWindowAttributes {
      * }
      */
     public static void depth$set(MemorySegment seg, int x) {
-        XWindowAttributes.depth$VH.set(seg, x);
+        constants$27.const$3.set(seg, x);
     }
     public static int depth$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.depth$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$27.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void depth$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.depth$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$27.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle visual$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("visual"));
     public static VarHandle visual$VH() {
-        return XWindowAttributes.visual$VH;
+        return constants$27.const$4;
     }
     /**
      * Getter for field:
@@ -247,7 +213,7 @@ public class XWindowAttributes {
      * }
      */
     public static MemorySegment visual$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XWindowAttributes.visual$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$27.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -256,17 +222,16 @@ public class XWindowAttributes {
      * }
      */
     public static void visual$set(MemorySegment seg, MemorySegment x) {
-        XWindowAttributes.visual$VH.set(seg, x);
+        constants$27.const$4.set(seg, x);
     }
     public static MemorySegment visual$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XWindowAttributes.visual$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$27.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void visual$set(MemorySegment seg, long index, MemorySegment x) {
-        XWindowAttributes.visual$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$27.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle root$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("root"));
     public static VarHandle root$VH() {
-        return XWindowAttributes.root$VH;
+        return constants$27.const$5;
     }
     /**
      * Getter for field:
@@ -275,7 +240,7 @@ public class XWindowAttributes {
      * }
      */
     public static long root$get(MemorySegment seg) {
-        return (long)XWindowAttributes.root$VH.get(seg);
+        return (long)constants$27.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -284,17 +249,16 @@ public class XWindowAttributes {
      * }
      */
     public static void root$set(MemorySegment seg, long x) {
-        XWindowAttributes.root$VH.set(seg, x);
+        constants$27.const$5.set(seg, x);
     }
     public static long root$get(MemorySegment seg, long index) {
-        return (long)XWindowAttributes.root$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$27.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void root$set(MemorySegment seg, long index, long x) {
-        XWindowAttributes.root$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$27.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle class_$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("class"));
     public static VarHandle class_$VH() {
-        return XWindowAttributes.class_$VH;
+        return constants$28.const$0;
     }
     /**
      * Getter for field:
@@ -303,7 +267,7 @@ public class XWindowAttributes {
      * }
      */
     public static int class_$get(MemorySegment seg) {
-        return (int)XWindowAttributes.class_$VH.get(seg);
+        return (int)constants$28.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -312,17 +276,16 @@ public class XWindowAttributes {
      * }
      */
     public static void class_$set(MemorySegment seg, int x) {
-        XWindowAttributes.class_$VH.set(seg, x);
+        constants$28.const$0.set(seg, x);
     }
     public static int class_$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.class_$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$28.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void class_$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.class_$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$28.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle bit_gravity$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("bit_gravity"));
     public static VarHandle bit_gravity$VH() {
-        return XWindowAttributes.bit_gravity$VH;
+        return constants$28.const$1;
     }
     /**
      * Getter for field:
@@ -331,7 +294,7 @@ public class XWindowAttributes {
      * }
      */
     public static int bit_gravity$get(MemorySegment seg) {
-        return (int)XWindowAttributes.bit_gravity$VH.get(seg);
+        return (int)constants$28.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -340,17 +303,16 @@ public class XWindowAttributes {
      * }
      */
     public static void bit_gravity$set(MemorySegment seg, int x) {
-        XWindowAttributes.bit_gravity$VH.set(seg, x);
+        constants$28.const$1.set(seg, x);
     }
     public static int bit_gravity$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.bit_gravity$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$28.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void bit_gravity$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.bit_gravity$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$28.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle win_gravity$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("win_gravity"));
     public static VarHandle win_gravity$VH() {
-        return XWindowAttributes.win_gravity$VH;
+        return constants$28.const$2;
     }
     /**
      * Getter for field:
@@ -359,7 +321,7 @@ public class XWindowAttributes {
      * }
      */
     public static int win_gravity$get(MemorySegment seg) {
-        return (int)XWindowAttributes.win_gravity$VH.get(seg);
+        return (int)constants$28.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -368,17 +330,16 @@ public class XWindowAttributes {
      * }
      */
     public static void win_gravity$set(MemorySegment seg, int x) {
-        XWindowAttributes.win_gravity$VH.set(seg, x);
+        constants$28.const$2.set(seg, x);
     }
     public static int win_gravity$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.win_gravity$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$28.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void win_gravity$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.win_gravity$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$28.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle backing_store$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("backing_store"));
     public static VarHandle backing_store$VH() {
-        return XWindowAttributes.backing_store$VH;
+        return constants$28.const$3;
     }
     /**
      * Getter for field:
@@ -387,7 +348,7 @@ public class XWindowAttributes {
      * }
      */
     public static int backing_store$get(MemorySegment seg) {
-        return (int)XWindowAttributes.backing_store$VH.get(seg);
+        return (int)constants$28.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -396,17 +357,16 @@ public class XWindowAttributes {
      * }
      */
     public static void backing_store$set(MemorySegment seg, int x) {
-        XWindowAttributes.backing_store$VH.set(seg, x);
+        constants$28.const$3.set(seg, x);
     }
     public static int backing_store$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.backing_store$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$28.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void backing_store$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.backing_store$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$28.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle backing_planes$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("backing_planes"));
     public static VarHandle backing_planes$VH() {
-        return XWindowAttributes.backing_planes$VH;
+        return constants$28.const$4;
     }
     /**
      * Getter for field:
@@ -415,7 +375,7 @@ public class XWindowAttributes {
      * }
      */
     public static long backing_planes$get(MemorySegment seg) {
-        return (long)XWindowAttributes.backing_planes$VH.get(seg);
+        return (long)constants$28.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -424,17 +384,16 @@ public class XWindowAttributes {
      * }
      */
     public static void backing_planes$set(MemorySegment seg, long x) {
-        XWindowAttributes.backing_planes$VH.set(seg, x);
+        constants$28.const$4.set(seg, x);
     }
     public static long backing_planes$get(MemorySegment seg, long index) {
-        return (long)XWindowAttributes.backing_planes$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$28.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void backing_planes$set(MemorySegment seg, long index, long x) {
-        XWindowAttributes.backing_planes$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$28.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle backing_pixel$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("backing_pixel"));
     public static VarHandle backing_pixel$VH() {
-        return XWindowAttributes.backing_pixel$VH;
+        return constants$28.const$5;
     }
     /**
      * Getter for field:
@@ -443,7 +402,7 @@ public class XWindowAttributes {
      * }
      */
     public static long backing_pixel$get(MemorySegment seg) {
-        return (long)XWindowAttributes.backing_pixel$VH.get(seg);
+        return (long)constants$28.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -452,17 +411,16 @@ public class XWindowAttributes {
      * }
      */
     public static void backing_pixel$set(MemorySegment seg, long x) {
-        XWindowAttributes.backing_pixel$VH.set(seg, x);
+        constants$28.const$5.set(seg, x);
     }
     public static long backing_pixel$get(MemorySegment seg, long index) {
-        return (long)XWindowAttributes.backing_pixel$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$28.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void backing_pixel$set(MemorySegment seg, long index, long x) {
-        XWindowAttributes.backing_pixel$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$28.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle save_under$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("save_under"));
     public static VarHandle save_under$VH() {
-        return XWindowAttributes.save_under$VH;
+        return constants$29.const$0;
     }
     /**
      * Getter for field:
@@ -471,7 +429,7 @@ public class XWindowAttributes {
      * }
      */
     public static int save_under$get(MemorySegment seg) {
-        return (int)XWindowAttributes.save_under$VH.get(seg);
+        return (int)constants$29.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -480,17 +438,16 @@ public class XWindowAttributes {
      * }
      */
     public static void save_under$set(MemorySegment seg, int x) {
-        XWindowAttributes.save_under$VH.set(seg, x);
+        constants$29.const$0.set(seg, x);
     }
     public static int save_under$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.save_under$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$29.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void save_under$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.save_under$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$29.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle colormap$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("colormap"));
     public static VarHandle colormap$VH() {
-        return XWindowAttributes.colormap$VH;
+        return constants$29.const$1;
     }
     /**
      * Getter for field:
@@ -499,7 +456,7 @@ public class XWindowAttributes {
      * }
      */
     public static long colormap$get(MemorySegment seg) {
-        return (long)XWindowAttributes.colormap$VH.get(seg);
+        return (long)constants$29.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -508,17 +465,16 @@ public class XWindowAttributes {
      * }
      */
     public static void colormap$set(MemorySegment seg, long x) {
-        XWindowAttributes.colormap$VH.set(seg, x);
+        constants$29.const$1.set(seg, x);
     }
     public static long colormap$get(MemorySegment seg, long index) {
-        return (long)XWindowAttributes.colormap$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$29.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void colormap$set(MemorySegment seg, long index, long x) {
-        XWindowAttributes.colormap$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$29.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle map_installed$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("map_installed"));
     public static VarHandle map_installed$VH() {
-        return XWindowAttributes.map_installed$VH;
+        return constants$29.const$2;
     }
     /**
      * Getter for field:
@@ -527,7 +483,7 @@ public class XWindowAttributes {
      * }
      */
     public static int map_installed$get(MemorySegment seg) {
-        return (int)XWindowAttributes.map_installed$VH.get(seg);
+        return (int)constants$29.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -536,17 +492,16 @@ public class XWindowAttributes {
      * }
      */
     public static void map_installed$set(MemorySegment seg, int x) {
-        XWindowAttributes.map_installed$VH.set(seg, x);
+        constants$29.const$2.set(seg, x);
     }
     public static int map_installed$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.map_installed$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$29.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void map_installed$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.map_installed$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$29.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle map_state$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("map_state"));
     public static VarHandle map_state$VH() {
-        return XWindowAttributes.map_state$VH;
+        return constants$29.const$3;
     }
     /**
      * Getter for field:
@@ -555,7 +510,7 @@ public class XWindowAttributes {
      * }
      */
     public static int map_state$get(MemorySegment seg) {
-        return (int)XWindowAttributes.map_state$VH.get(seg);
+        return (int)constants$29.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -564,17 +519,16 @@ public class XWindowAttributes {
      * }
      */
     public static void map_state$set(MemorySegment seg, int x) {
-        XWindowAttributes.map_state$VH.set(seg, x);
+        constants$29.const$3.set(seg, x);
     }
     public static int map_state$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.map_state$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$29.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void map_state$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.map_state$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$29.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle all_event_masks$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("all_event_masks"));
     public static VarHandle all_event_masks$VH() {
-        return XWindowAttributes.all_event_masks$VH;
+        return constants$29.const$4;
     }
     /**
      * Getter for field:
@@ -583,7 +537,7 @@ public class XWindowAttributes {
      * }
      */
     public static long all_event_masks$get(MemorySegment seg) {
-        return (long)XWindowAttributes.all_event_masks$VH.get(seg);
+        return (long)constants$29.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -592,17 +546,16 @@ public class XWindowAttributes {
      * }
      */
     public static void all_event_masks$set(MemorySegment seg, long x) {
-        XWindowAttributes.all_event_masks$VH.set(seg, x);
+        constants$29.const$4.set(seg, x);
     }
     public static long all_event_masks$get(MemorySegment seg, long index) {
-        return (long)XWindowAttributes.all_event_masks$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$29.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void all_event_masks$set(MemorySegment seg, long index, long x) {
-        XWindowAttributes.all_event_masks$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$29.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle your_event_mask$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("your_event_mask"));
     public static VarHandle your_event_mask$VH() {
-        return XWindowAttributes.your_event_mask$VH;
+        return constants$29.const$5;
     }
     /**
      * Getter for field:
@@ -611,7 +564,7 @@ public class XWindowAttributes {
      * }
      */
     public static long your_event_mask$get(MemorySegment seg) {
-        return (long)XWindowAttributes.your_event_mask$VH.get(seg);
+        return (long)constants$29.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -620,17 +573,16 @@ public class XWindowAttributes {
      * }
      */
     public static void your_event_mask$set(MemorySegment seg, long x) {
-        XWindowAttributes.your_event_mask$VH.set(seg, x);
+        constants$29.const$5.set(seg, x);
     }
     public static long your_event_mask$get(MemorySegment seg, long index) {
-        return (long)XWindowAttributes.your_event_mask$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$29.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void your_event_mask$set(MemorySegment seg, long index, long x) {
-        XWindowAttributes.your_event_mask$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$29.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle do_not_propagate_mask$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("do_not_propagate_mask"));
     public static VarHandle do_not_propagate_mask$VH() {
-        return XWindowAttributes.do_not_propagate_mask$VH;
+        return constants$30.const$0;
     }
     /**
      * Getter for field:
@@ -639,7 +591,7 @@ public class XWindowAttributes {
      * }
      */
     public static long do_not_propagate_mask$get(MemorySegment seg) {
-        return (long)XWindowAttributes.do_not_propagate_mask$VH.get(seg);
+        return (long)constants$30.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -648,17 +600,16 @@ public class XWindowAttributes {
      * }
      */
     public static void do_not_propagate_mask$set(MemorySegment seg, long x) {
-        XWindowAttributes.do_not_propagate_mask$VH.set(seg, x);
+        constants$30.const$0.set(seg, x);
     }
     public static long do_not_propagate_mask$get(MemorySegment seg, long index) {
-        return (long)XWindowAttributes.do_not_propagate_mask$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$30.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void do_not_propagate_mask$set(MemorySegment seg, long index, long x) {
-        XWindowAttributes.do_not_propagate_mask$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$30.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle override_redirect$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("override_redirect"));
     public static VarHandle override_redirect$VH() {
-        return XWindowAttributes.override_redirect$VH;
+        return constants$30.const$1;
     }
     /**
      * Getter for field:
@@ -667,7 +618,7 @@ public class XWindowAttributes {
      * }
      */
     public static int override_redirect$get(MemorySegment seg) {
-        return (int)XWindowAttributes.override_redirect$VH.get(seg);
+        return (int)constants$30.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -676,17 +627,16 @@ public class XWindowAttributes {
      * }
      */
     public static void override_redirect$set(MemorySegment seg, int x) {
-        XWindowAttributes.override_redirect$VH.set(seg, x);
+        constants$30.const$1.set(seg, x);
     }
     public static int override_redirect$get(MemorySegment seg, long index) {
-        return (int)XWindowAttributes.override_redirect$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$30.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void override_redirect$set(MemorySegment seg, long index, int x) {
-        XWindowAttributes.override_redirect$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$30.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle screen$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("screen"));
     public static VarHandle screen$VH() {
-        return XWindowAttributes.screen$VH;
+        return constants$30.const$2;
     }
     /**
      * Getter for field:
@@ -695,7 +645,7 @@ public class XWindowAttributes {
      * }
      */
     public static MemorySegment screen$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XWindowAttributes.screen$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$30.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -704,20 +654,20 @@ public class XWindowAttributes {
      * }
      */
     public static void screen$set(MemorySegment seg, MemorySegment x) {
-        XWindowAttributes.screen$VH.set(seg, x);
+        constants$30.const$2.set(seg, x);
     }
     public static MemorySegment screen$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XWindowAttributes.screen$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$30.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void screen$set(MemorySegment seg, long index, MemorySegment x) {
-        XWindowAttributes.screen$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$30.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

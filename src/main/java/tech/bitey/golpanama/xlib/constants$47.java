@@ -11,78 +11,21 @@ final class constants$47 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$47() {}
-    static final FunctionDescriptor XQueryTextExtents16$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryTextExtents16$MH = RuntimeHelper.downcallHandle(
-        "XQueryTextExtents16",
-        constants$47.XQueryTextExtents16$FUNC
-    );
-    static final FunctionDescriptor XQueryTree$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XQueryTree$MH = RuntimeHelper.downcallHandle(
-        "XQueryTree",
-        constants$47.XQueryTree$FUNC
-    );
-    static final FunctionDescriptor XRaiseWindow$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XRaiseWindow$MH = RuntimeHelper.downcallHandle(
-        "XRaiseWindow",
-        constants$47.XRaiseWindow$FUNC
-    );
-    static final FunctionDescriptor XReadBitmapFile$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XReadBitmapFile$MH = RuntimeHelper.downcallHandle(
-        "XReadBitmapFile",
-        constants$47.XReadBitmapFile$FUNC
-    );
-    static final FunctionDescriptor XReadBitmapFileData$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XReadBitmapFileData$MH = RuntimeHelper.downcallHandle(
-        "XReadBitmapFileData",
-        constants$47.XReadBitmapFileData$FUNC
-    );
-    static final FunctionDescriptor XRebindKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRebindKeysym$MH = RuntimeHelper.downcallHandle(
-        "XRebindKeysym",
-        constants$47.XRebindKeysym$FUNC
-    );
+    static final VarHandle const$0 = constants$46.const$0.varHandle(MemoryLayout.PathElement.groupElement("global_auto_repeat"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_LONG.withName("time"),
+        JAVA_SHORT.withName("x"),
+        JAVA_SHORT.withName("y"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("");
+    static final VarHandle const$2 = constants$47.const$1.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final VarHandle const$3 = constants$47.const$1.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$4 = constants$47.const$1.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("max_keypermod"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("modifiermap")
+    ).withName("");
 }
 
 

@@ -16,11 +16,8 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class __fsid_t {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(2, Constants$root.C_INT$LAYOUT).withName("__val")
-    );
     public static MemoryLayout $LAYOUT() {
-        return __fsid_t.$struct$LAYOUT;
+        return constants$0.const$0;
     }
     public static MemorySegment __val$slice(MemorySegment seg) {
         return seg.asSlice(0, 8);
@@ -30,7 +27,7 @@ public class __fsid_t {
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

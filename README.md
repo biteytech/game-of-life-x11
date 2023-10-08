@@ -4,16 +4,16 @@
 
 Inspired by [Game of Life CSP](https://github.com/ebarlas/game-of-life-csp)
 
-**Requires Java 20**
+**Requires Java 21**
 
 Best bet is to run on Linux for X11.
 
 ## Run
 
-Point JAVA_HOME to Java 20.
+Point JAVA_HOME to Java 21.
 
 ```shell
-export JAVA_HOME=...jdk-20...
+export JAVA_HOME=...jdk-21...
 ```
 
 JavaFX version

@@ -11,58 +11,24 @@ final class constants$10 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$10() {}
-    static final FunctionDescriptor XListProperties$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+    static final VarHandle const$0 = constants$9.const$5.varHandle(MemoryLayout.PathElement.groupElement("__clang_max_align_nonce1"));
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
     );
-    static final MethodHandle XListProperties$MH = RuntimeHelper.downcallHandle(
-        "XListProperties",
-        constants$10.XListProperties$FUNC
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "_Xmblen",
+        constants$10.const$1
     );
-    static final FunctionDescriptor XListHosts$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XListHosts$MH = RuntimeHelper.downcallHandle(
-        "XListHosts",
-        constants$10.XListHosts$FUNC
-    );
-    static final FunctionDescriptor XKeycodeToKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XKeycodeToKeysym$MH = RuntimeHelper.downcallHandle(
-        "XKeycodeToKeysym",
-        constants$10.XKeycodeToKeysym$FUNC
-    );
-    static final FunctionDescriptor XLookupKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XLookupKeysym$MH = RuntimeHelper.downcallHandle(
-        "XLookupKeysym",
-        constants$10.XLookupKeysym$FUNC
-    );
-    static final FunctionDescriptor XGetKeyboardMapping$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_CHAR$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetKeyboardMapping$MH = RuntimeHelper.downcallHandle(
-        "XGetKeyboardMapping",
-        constants$10.XGetKeyboardMapping$FUNC
-    );
-    static final FunctionDescriptor XStringToKeysym$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XStringToKeysym$MH = RuntimeHelper.downcallHandle(
-        "XStringToKeysym",
-        constants$10.XStringToKeysym$FUNC
-    );
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("number"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("next"),
+        RuntimeHelper.POINTER.withName("free_private"),
+        RuntimeHelper.POINTER.withName("private_data")
+    ).withName("_XExtData");
+    static final VarHandle const$4 = constants$10.const$3.varHandle(MemoryLayout.PathElement.groupElement("number"));
+    static final VarHandle const$5 = constants$10.const$3.varHandle(MemoryLayout.PathElement.groupElement("next"));
 }
 
 

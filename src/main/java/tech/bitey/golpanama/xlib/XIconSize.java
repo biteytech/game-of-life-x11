@@ -21,20 +21,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XIconSize {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("min_width"),
-        Constants$root.C_INT$LAYOUT.withName("min_height"),
-        Constants$root.C_INT$LAYOUT.withName("max_width"),
-        Constants$root.C_INT$LAYOUT.withName("max_height"),
-        Constants$root.C_INT$LAYOUT.withName("width_inc"),
-        Constants$root.C_INT$LAYOUT.withName("height_inc")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XIconSize.$struct$LAYOUT;
+        return constants$216.const$3;
     }
-    static final VarHandle min_width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("min_width"));
     public static VarHandle min_width$VH() {
-        return XIconSize.min_width$VH;
+        return constants$216.const$4;
     }
     /**
      * Getter for field:
@@ -43,7 +34,7 @@ public class XIconSize {
      * }
      */
     public static int min_width$get(MemorySegment seg) {
-        return (int)XIconSize.min_width$VH.get(seg);
+        return (int)constants$216.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -52,17 +43,16 @@ public class XIconSize {
      * }
      */
     public static void min_width$set(MemorySegment seg, int x) {
-        XIconSize.min_width$VH.set(seg, x);
+        constants$216.const$4.set(seg, x);
     }
     public static int min_width$get(MemorySegment seg, long index) {
-        return (int)XIconSize.min_width$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$216.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void min_width$set(MemorySegment seg, long index, int x) {
-        XIconSize.min_width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$216.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle min_height$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("min_height"));
     public static VarHandle min_height$VH() {
-        return XIconSize.min_height$VH;
+        return constants$216.const$5;
     }
     /**
      * Getter for field:
@@ -71,7 +61,7 @@ public class XIconSize {
      * }
      */
     public static int min_height$get(MemorySegment seg) {
-        return (int)XIconSize.min_height$VH.get(seg);
+        return (int)constants$216.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -80,17 +70,16 @@ public class XIconSize {
      * }
      */
     public static void min_height$set(MemorySegment seg, int x) {
-        XIconSize.min_height$VH.set(seg, x);
+        constants$216.const$5.set(seg, x);
     }
     public static int min_height$get(MemorySegment seg, long index) {
-        return (int)XIconSize.min_height$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$216.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void min_height$set(MemorySegment seg, long index, int x) {
-        XIconSize.min_height$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$216.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle max_width$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("max_width"));
     public static VarHandle max_width$VH() {
-        return XIconSize.max_width$VH;
+        return constants$217.const$0;
     }
     /**
      * Getter for field:
@@ -99,7 +88,7 @@ public class XIconSize {
      * }
      */
     public static int max_width$get(MemorySegment seg) {
-        return (int)XIconSize.max_width$VH.get(seg);
+        return (int)constants$217.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -108,17 +97,16 @@ public class XIconSize {
      * }
      */
     public static void max_width$set(MemorySegment seg, int x) {
-        XIconSize.max_width$VH.set(seg, x);
+        constants$217.const$0.set(seg, x);
     }
     public static int max_width$get(MemorySegment seg, long index) {
-        return (int)XIconSize.max_width$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$217.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void max_width$set(MemorySegment seg, long index, int x) {
-        XIconSize.max_width$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$217.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle max_height$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("max_height"));
     public static VarHandle max_height$VH() {
-        return XIconSize.max_height$VH;
+        return constants$217.const$1;
     }
     /**
      * Getter for field:
@@ -127,7 +115,7 @@ public class XIconSize {
      * }
      */
     public static int max_height$get(MemorySegment seg) {
-        return (int)XIconSize.max_height$VH.get(seg);
+        return (int)constants$217.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -136,17 +124,16 @@ public class XIconSize {
      * }
      */
     public static void max_height$set(MemorySegment seg, int x) {
-        XIconSize.max_height$VH.set(seg, x);
+        constants$217.const$1.set(seg, x);
     }
     public static int max_height$get(MemorySegment seg, long index) {
-        return (int)XIconSize.max_height$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$217.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void max_height$set(MemorySegment seg, long index, int x) {
-        XIconSize.max_height$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$217.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle width_inc$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("width_inc"));
     public static VarHandle width_inc$VH() {
-        return XIconSize.width_inc$VH;
+        return constants$217.const$2;
     }
     /**
      * Getter for field:
@@ -155,7 +142,7 @@ public class XIconSize {
      * }
      */
     public static int width_inc$get(MemorySegment seg) {
-        return (int)XIconSize.width_inc$VH.get(seg);
+        return (int)constants$217.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -164,17 +151,16 @@ public class XIconSize {
      * }
      */
     public static void width_inc$set(MemorySegment seg, int x) {
-        XIconSize.width_inc$VH.set(seg, x);
+        constants$217.const$2.set(seg, x);
     }
     public static int width_inc$get(MemorySegment seg, long index) {
-        return (int)XIconSize.width_inc$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$217.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void width_inc$set(MemorySegment seg, long index, int x) {
-        XIconSize.width_inc$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$217.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle height_inc$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("height_inc"));
     public static VarHandle height_inc$VH() {
-        return XIconSize.height_inc$VH;
+        return constants$217.const$3;
     }
     /**
      * Getter for field:
@@ -183,7 +169,7 @@ public class XIconSize {
      * }
      */
     public static int height_inc$get(MemorySegment seg) {
-        return (int)XIconSize.height_inc$VH.get(seg);
+        return (int)constants$217.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -192,20 +178,20 @@ public class XIconSize {
      * }
      */
     public static void height_inc$set(MemorySegment seg, int x) {
-        XIconSize.height_inc$VH.set(seg, x);
+        constants$217.const$3.set(seg, x);
     }
     public static int height_inc$get(MemorySegment seg, long index) {
-        return (int)XIconSize.height_inc$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$217.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void height_inc$set(MemorySegment seg, long index, int x) {
-        XIconSize.height_inc$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$217.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

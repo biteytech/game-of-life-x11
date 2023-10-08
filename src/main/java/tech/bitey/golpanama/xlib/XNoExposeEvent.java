@@ -22,23 +22,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XNoExposeEvent {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("type"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
-        Constants$root.C_INT$LAYOUT.withName("send_event"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("drawable"),
-        Constants$root.C_INT$LAYOUT.withName("major_code"),
-        Constants$root.C_INT$LAYOUT.withName("minor_code")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XNoExposeEvent.$struct$LAYOUT;
+        return constants$65.const$4;
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XNoExposeEvent.type$VH;
+        return constants$65.const$5;
     }
     /**
      * Getter for field:
@@ -47,7 +35,7 @@ public class XNoExposeEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)XNoExposeEvent.type$VH.get(seg);
+        return (int)constants$65.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -56,17 +44,16 @@ public class XNoExposeEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        XNoExposeEvent.type$VH.set(seg, x);
+        constants$65.const$5.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)XNoExposeEvent.type$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$65.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        XNoExposeEvent.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$65.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle serial$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("serial"));
     public static VarHandle serial$VH() {
-        return XNoExposeEvent.serial$VH;
+        return constants$66.const$0;
     }
     /**
      * Getter for field:
@@ -75,7 +62,7 @@ public class XNoExposeEvent {
      * }
      */
     public static long serial$get(MemorySegment seg) {
-        return (long)XNoExposeEvent.serial$VH.get(seg);
+        return (long)constants$66.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -84,17 +71,16 @@ public class XNoExposeEvent {
      * }
      */
     public static void serial$set(MemorySegment seg, long x) {
-        XNoExposeEvent.serial$VH.set(seg, x);
+        constants$66.const$0.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
-        return (long)XNoExposeEvent.serial$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$66.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void serial$set(MemorySegment seg, long index, long x) {
-        XNoExposeEvent.serial$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$66.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle send_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
     public static VarHandle send_event$VH() {
-        return XNoExposeEvent.send_event$VH;
+        return constants$66.const$1;
     }
     /**
      * Getter for field:
@@ -103,7 +89,7 @@ public class XNoExposeEvent {
      * }
      */
     public static int send_event$get(MemorySegment seg) {
-        return (int)XNoExposeEvent.send_event$VH.get(seg);
+        return (int)constants$66.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -112,17 +98,16 @@ public class XNoExposeEvent {
      * }
      */
     public static void send_event$set(MemorySegment seg, int x) {
-        XNoExposeEvent.send_event$VH.set(seg, x);
+        constants$66.const$1.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
-        return (int)XNoExposeEvent.send_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$66.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void send_event$set(MemorySegment seg, long index, int x) {
-        XNoExposeEvent.send_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$66.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle display$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XNoExposeEvent.display$VH;
+        return constants$66.const$2;
     }
     /**
      * Getter for field:
@@ -131,7 +116,7 @@ public class XNoExposeEvent {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XNoExposeEvent.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$66.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -140,17 +125,16 @@ public class XNoExposeEvent {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XNoExposeEvent.display$VH.set(seg, x);
+        constants$66.const$2.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XNoExposeEvent.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$66.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XNoExposeEvent.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$66.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle drawable$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("drawable"));
     public static VarHandle drawable$VH() {
-        return XNoExposeEvent.drawable$VH;
+        return constants$66.const$3;
     }
     /**
      * Getter for field:
@@ -159,7 +143,7 @@ public class XNoExposeEvent {
      * }
      */
     public static long drawable$get(MemorySegment seg) {
-        return (long)XNoExposeEvent.drawable$VH.get(seg);
+        return (long)constants$66.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -168,17 +152,16 @@ public class XNoExposeEvent {
      * }
      */
     public static void drawable$set(MemorySegment seg, long x) {
-        XNoExposeEvent.drawable$VH.set(seg, x);
+        constants$66.const$3.set(seg, x);
     }
     public static long drawable$get(MemorySegment seg, long index) {
-        return (long)XNoExposeEvent.drawable$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$66.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void drawable$set(MemorySegment seg, long index, long x) {
-        XNoExposeEvent.drawable$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$66.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle major_code$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("major_code"));
     public static VarHandle major_code$VH() {
-        return XNoExposeEvent.major_code$VH;
+        return constants$66.const$4;
     }
     /**
      * Getter for field:
@@ -187,7 +170,7 @@ public class XNoExposeEvent {
      * }
      */
     public static int major_code$get(MemorySegment seg) {
-        return (int)XNoExposeEvent.major_code$VH.get(seg);
+        return (int)constants$66.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -196,17 +179,16 @@ public class XNoExposeEvent {
      * }
      */
     public static void major_code$set(MemorySegment seg, int x) {
-        XNoExposeEvent.major_code$VH.set(seg, x);
+        constants$66.const$4.set(seg, x);
     }
     public static int major_code$get(MemorySegment seg, long index) {
-        return (int)XNoExposeEvent.major_code$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$66.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void major_code$set(MemorySegment seg, long index, int x) {
-        XNoExposeEvent.major_code$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$66.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle minor_code$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("minor_code"));
     public static VarHandle minor_code$VH() {
-        return XNoExposeEvent.minor_code$VH;
+        return constants$66.const$5;
     }
     /**
      * Getter for field:
@@ -215,7 +197,7 @@ public class XNoExposeEvent {
      * }
      */
     public static int minor_code$get(MemorySegment seg) {
-        return (int)XNoExposeEvent.minor_code$VH.get(seg);
+        return (int)constants$66.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -224,20 +206,20 @@ public class XNoExposeEvent {
      * }
      */
     public static void minor_code$set(MemorySegment seg, int x) {
-        XNoExposeEvent.minor_code$VH.set(seg, x);
+        constants$66.const$5.set(seg, x);
     }
     public static int minor_code$get(MemorySegment seg, long index) {
-        return (int)XNoExposeEvent.minor_code$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$66.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void minor_code$set(MemorySegment seg, long index, int x) {
-        XNoExposeEvent.minor_code$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$66.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

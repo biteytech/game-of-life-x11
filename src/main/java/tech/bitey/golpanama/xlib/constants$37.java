@@ -2,76 +2,27 @@
 
 package tech.bitey.golpanama.xlib;
 
+import static java.lang.foreign.ValueLayout.JAVA_INT;
+
+import java.lang.foreign.FunctionDescriptor;
+import java.lang.foreign.MemoryLayout;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
-import java.lang.foreign.*;
-import static java.lang.foreign.ValueLayout.*;
+
+import tech.bitey.golpanama.xlib._XImage.funcs;
+
 final class constants$37 {
 
-    // Suppresses default constructor, ensuring non-instantiability.
-    private constants$37() {}
-    static final FunctionDescriptor XGetGCValues$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetGCValues$MH = RuntimeHelper.downcallHandle(
-        "XGetGCValues",
-        constants$37.XGetGCValues$FUNC
-    );
-    static final FunctionDescriptor XGetGeometry$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetGeometry$MH = RuntimeHelper.downcallHandle(
-        "XGetGeometry",
-        constants$37.XGetGeometry$FUNC
-    );
-    static final FunctionDescriptor XGetIconName$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetIconName$MH = RuntimeHelper.downcallHandle(
-        "XGetIconName",
-        constants$37.XGetIconName$FUNC
-    );
-    static final FunctionDescriptor XGetInputFocus$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetInputFocus$MH = RuntimeHelper.downcallHandle(
-        "XGetInputFocus",
-        constants$37.XGetInputFocus$FUNC
-    );
-    static final FunctionDescriptor XGetKeyboardControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetKeyboardControl$MH = RuntimeHelper.downcallHandle(
-        "XGetKeyboardControl",
-        constants$37.XGetKeyboardControl$FUNC
-    );
-    static final FunctionDescriptor XGetPointerControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetPointerControl$MH = RuntimeHelper.downcallHandle(
-        "XGetPointerControl",
-        constants$37.XGetPointerControl$FUNC
-    );
+	// Suppresses default constructor, ensuring non-instantiability.
+	private constants$37() {
+	}
+
+	static final MethodHandle const$0 = RuntimeHelper.downcallHandle(constants$36.const$4);
+	static final VarHandle const$1 = constants$34.const$5.varHandle(MemoryLayout.PathElement.groupElement("put_pixel"));
+	static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER, RuntimeHelper.POINTER,
+			JAVA_INT, JAVA_INT, JAVA_INT, JAVA_INT);
+	static final MethodHandle const$3 = RuntimeHelper.upcallHandle(funcs.sub_image.class, "apply",
+			constants$37.const$2);
+	static final MethodHandle const$4 = RuntimeHelper.downcallHandle(constants$37.const$2);
+	static final VarHandle const$5 = constants$34.const$5.varHandle(MemoryLayout.PathElement.groupElement("sub_image"));
 }
-
-

@@ -11,61 +11,12 @@ final class constants$50 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$50() {}
-    static final FunctionDescriptor XSelectInput$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSelectInput$MH = RuntimeHelper.downcallHandle(
-        "XSelectInput",
-        constants$50.XSelectInput$FUNC
-    );
-    static final FunctionDescriptor XSendEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSendEvent$MH = RuntimeHelper.downcallHandle(
-        "XSendEvent",
-        constants$50.XSendEvent$FUNC
-    );
-    static final FunctionDescriptor XSetAccessControl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetAccessControl$MH = RuntimeHelper.downcallHandle(
-        "XSetAccessControl",
-        constants$50.XSetAccessControl$FUNC
-    );
-    static final FunctionDescriptor XSetArcMode$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XSetArcMode$MH = RuntimeHelper.downcallHandle(
-        "XSetArcMode",
-        constants$50.XSetArcMode$FUNC
-    );
-    static final FunctionDescriptor XSetBackground$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetBackground$MH = RuntimeHelper.downcallHandle(
-        "XSetBackground",
-        constants$50.XSetBackground$FUNC
-    );
-    static final FunctionDescriptor XSetClipMask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetClipMask$MH = RuntimeHelper.downcallHandle(
-        "XSetClipMask",
-        constants$50.XSetClipMask$FUNC
-    );
+    static final VarHandle const$0 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$1 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("x_root"));
+    static final VarHandle const$2 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("y_root"));
+    static final VarHandle const$3 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final VarHandle const$4 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("keycode"));
+    static final VarHandle const$5 = constants$48.const$2.varHandle(MemoryLayout.PathElement.groupElement("same_screen"));
 }
 
 

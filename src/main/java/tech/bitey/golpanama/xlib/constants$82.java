@@ -11,61 +11,31 @@ final class constants$82 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$82() {}
-    static final FunctionDescriptor XSetRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetRegion$MH = RuntimeHelper.downcallHandle(
-        "XSetRegion",
-        constants$82.XSetRegion$FUNC
-    );
-    static final FunctionDescriptor XSetStandardColormap$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetStandardColormap$MH = RuntimeHelper.downcallHandle(
-        "XSetStandardColormap",
-        constants$82.XSetStandardColormap$FUNC
-    );
-    static final FunctionDescriptor XSetZoomHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetZoomHints$MH = RuntimeHelper.downcallHandle(
-        "XSetZoomHints",
-        constants$82.XSetZoomHints$FUNC
-    );
-    static final FunctionDescriptor XShrinkRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XShrinkRegion$MH = RuntimeHelper.downcallHandle(
-        "XShrinkRegion",
-        constants$82.XShrinkRegion$FUNC
-    );
-    static final FunctionDescriptor XStringListToTextProperty$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XStringListToTextProperty$MH = RuntimeHelper.downcallHandle(
-        "XStringListToTextProperty",
-        constants$82.XStringListToTextProperty$FUNC
-    );
-    static final FunctionDescriptor XSubtractRegion$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSubtractRegion$MH = RuntimeHelper.downcallHandle(
-        "XSubtractRegion",
-        constants$82.XSubtractRegion$FUNC
-    );
+    static final VarHandle const$0 = constants$81.const$0.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$1 = constants$81.const$0.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("parent"),
+        JAVA_LONG.withName("window"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("width"),
+        JAVA_INT.withName("height"),
+        JAVA_INT.withName("border_width"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("above"),
+        JAVA_INT.withName("detail"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("value_mask")
+    ).withName("");
+    static final VarHandle const$3 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$5 = constants$82.const$2.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
 }
 
 

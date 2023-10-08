@@ -11,67 +11,12 @@ final class constants$80 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$80() {}
-    static final FunctionDescriptor XSetSizeHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetSizeHints$MH = RuntimeHelper.downcallHandle(
-        "XSetSizeHints",
-        constants$80.XSetSizeHints$FUNC
-    );
-    static final FunctionDescriptor XSetStandardProperties$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetStandardProperties$MH = RuntimeHelper.downcallHandle(
-        "XSetStandardProperties",
-        constants$80.XSetStandardProperties$FUNC
-    );
-    static final FunctionDescriptor XSetTextProperty$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XSetTextProperty$MH = RuntimeHelper.downcallHandle(
-        "XSetTextProperty",
-        constants$80.XSetTextProperty$FUNC
-    );
-    static final FunctionDescriptor XSetWMClientMachine$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMClientMachine$MH = RuntimeHelper.downcallHandle(
-        "XSetWMClientMachine",
-        constants$80.XSetWMClientMachine$FUNC
-    );
-    static final FunctionDescriptor XSetWMHints$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMHints$MH = RuntimeHelper.downcallHandle(
-        "XSetWMHints",
-        constants$80.XSetWMHints$FUNC
-    );
-    static final FunctionDescriptor XSetWMIconName$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetWMIconName$MH = RuntimeHelper.downcallHandle(
-        "XSetWMIconName",
-        constants$80.XSetWMIconName$FUNC
-    );
+    static final VarHandle const$0 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$1 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$2 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$3 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$4 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$5 = constants$79.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
 }
 
 

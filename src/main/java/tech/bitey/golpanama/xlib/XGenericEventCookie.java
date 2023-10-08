@@ -23,25 +23,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XGenericEventCookie {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_INT$LAYOUT.withName("type"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_LONG_LONG$LAYOUT.withName("serial"),
-        Constants$root.C_INT$LAYOUT.withName("send_event"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_INT$LAYOUT.withName("extension"),
-        Constants$root.C_INT$LAYOUT.withName("evtype"),
-        Constants$root.C_INT$LAYOUT.withName("cookie"),
-        MemoryLayout.paddingLayout(32),
-        Constants$root.C_POINTER$LAYOUT.withName("data")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XGenericEventCookie.$struct$LAYOUT;
+        return constants$101.const$5;
     }
-    static final VarHandle type$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("type"));
     public static VarHandle type$VH() {
-        return XGenericEventCookie.type$VH;
+        return constants$102.const$0;
     }
     /**
      * Getter for field:
@@ -50,7 +36,7 @@ public class XGenericEventCookie {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)XGenericEventCookie.type$VH.get(seg);
+        return (int)constants$102.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -59,17 +45,16 @@ public class XGenericEventCookie {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        XGenericEventCookie.type$VH.set(seg, x);
+        constants$102.const$0.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)XGenericEventCookie.type$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$102.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        XGenericEventCookie.type$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$102.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle serial$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("serial"));
     public static VarHandle serial$VH() {
-        return XGenericEventCookie.serial$VH;
+        return constants$102.const$1;
     }
     /**
      * Getter for field:
@@ -78,7 +63,7 @@ public class XGenericEventCookie {
      * }
      */
     public static long serial$get(MemorySegment seg) {
-        return (long)XGenericEventCookie.serial$VH.get(seg);
+        return (long)constants$102.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -87,17 +72,16 @@ public class XGenericEventCookie {
      * }
      */
     public static void serial$set(MemorySegment seg, long x) {
-        XGenericEventCookie.serial$VH.set(seg, x);
+        constants$102.const$1.set(seg, x);
     }
     public static long serial$get(MemorySegment seg, long index) {
-        return (long)XGenericEventCookie.serial$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$102.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void serial$set(MemorySegment seg, long index, long x) {
-        XGenericEventCookie.serial$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$102.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle send_event$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
     public static VarHandle send_event$VH() {
-        return XGenericEventCookie.send_event$VH;
+        return constants$102.const$2;
     }
     /**
      * Getter for field:
@@ -106,7 +90,7 @@ public class XGenericEventCookie {
      * }
      */
     public static int send_event$get(MemorySegment seg) {
-        return (int)XGenericEventCookie.send_event$VH.get(seg);
+        return (int)constants$102.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -115,17 +99,16 @@ public class XGenericEventCookie {
      * }
      */
     public static void send_event$set(MemorySegment seg, int x) {
-        XGenericEventCookie.send_event$VH.set(seg, x);
+        constants$102.const$2.set(seg, x);
     }
     public static int send_event$get(MemorySegment seg, long index) {
-        return (int)XGenericEventCookie.send_event$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$102.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void send_event$set(MemorySegment seg, long index, int x) {
-        XGenericEventCookie.send_event$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$102.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle display$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XGenericEventCookie.display$VH;
+        return constants$102.const$3;
     }
     /**
      * Getter for field:
@@ -134,7 +117,7 @@ public class XGenericEventCookie {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XGenericEventCookie.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$102.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -143,17 +126,16 @@ public class XGenericEventCookie {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XGenericEventCookie.display$VH.set(seg, x);
+        constants$102.const$3.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XGenericEventCookie.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$102.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XGenericEventCookie.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$102.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle extension$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("extension"));
     public static VarHandle extension$VH() {
-        return XGenericEventCookie.extension$VH;
+        return constants$102.const$4;
     }
     /**
      * Getter for field:
@@ -162,7 +144,7 @@ public class XGenericEventCookie {
      * }
      */
     public static int extension$get(MemorySegment seg) {
-        return (int)XGenericEventCookie.extension$VH.get(seg);
+        return (int)constants$102.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -171,17 +153,16 @@ public class XGenericEventCookie {
      * }
      */
     public static void extension$set(MemorySegment seg, int x) {
-        XGenericEventCookie.extension$VH.set(seg, x);
+        constants$102.const$4.set(seg, x);
     }
     public static int extension$get(MemorySegment seg, long index) {
-        return (int)XGenericEventCookie.extension$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$102.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void extension$set(MemorySegment seg, long index, int x) {
-        XGenericEventCookie.extension$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$102.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle evtype$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("evtype"));
     public static VarHandle evtype$VH() {
-        return XGenericEventCookie.evtype$VH;
+        return constants$102.const$5;
     }
     /**
      * Getter for field:
@@ -190,7 +171,7 @@ public class XGenericEventCookie {
      * }
      */
     public static int evtype$get(MemorySegment seg) {
-        return (int)XGenericEventCookie.evtype$VH.get(seg);
+        return (int)constants$102.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -199,17 +180,16 @@ public class XGenericEventCookie {
      * }
      */
     public static void evtype$set(MemorySegment seg, int x) {
-        XGenericEventCookie.evtype$VH.set(seg, x);
+        constants$102.const$5.set(seg, x);
     }
     public static int evtype$get(MemorySegment seg, long index) {
-        return (int)XGenericEventCookie.evtype$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$102.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void evtype$set(MemorySegment seg, long index, int x) {
-        XGenericEventCookie.evtype$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$102.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle cookie$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("cookie"));
     public static VarHandle cookie$VH() {
-        return XGenericEventCookie.cookie$VH;
+        return constants$103.const$0;
     }
     /**
      * Getter for field:
@@ -218,7 +198,7 @@ public class XGenericEventCookie {
      * }
      */
     public static int cookie$get(MemorySegment seg) {
-        return (int)XGenericEventCookie.cookie$VH.get(seg);
+        return (int)constants$103.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -227,17 +207,16 @@ public class XGenericEventCookie {
      * }
      */
     public static void cookie$set(MemorySegment seg, int x) {
-        XGenericEventCookie.cookie$VH.set(seg, x);
+        constants$103.const$0.set(seg, x);
     }
     public static int cookie$get(MemorySegment seg, long index) {
-        return (int)XGenericEventCookie.cookie$VH.get(seg.asSlice(index*sizeof()));
+        return (int)constants$103.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void cookie$set(MemorySegment seg, long index, int x) {
-        XGenericEventCookie.cookie$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$103.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("data"));
     public static VarHandle data$VH() {
-        return XGenericEventCookie.data$VH;
+        return constants$103.const$1;
     }
     /**
      * Getter for field:
@@ -246,7 +225,7 @@ public class XGenericEventCookie {
      * }
      */
     public static MemorySegment data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XGenericEventCookie.data$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$103.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -255,20 +234,20 @@ public class XGenericEventCookie {
      * }
      */
     public static void data$set(MemorySegment seg, MemorySegment x) {
-        XGenericEventCookie.data$VH.set(seg, x);
+        constants$103.const$1.set(seg, x);
     }
     public static MemorySegment data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XGenericEventCookie.data$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$103.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void data$set(MemorySegment seg, long index, MemorySegment x) {
-        XGenericEventCookie.data$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$103.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

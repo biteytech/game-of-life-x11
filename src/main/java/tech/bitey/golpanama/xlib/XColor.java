@@ -21,20 +21,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XColor {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_LONG_LONG$LAYOUT.withName("pixel"),
-        Constants$root.C_SHORT$LAYOUT.withName("red"),
-        Constants$root.C_SHORT$LAYOUT.withName("green"),
-        Constants$root.C_SHORT$LAYOUT.withName("blue"),
-        Constants$root.C_CHAR$LAYOUT.withName("flags"),
-        Constants$root.C_CHAR$LAYOUT.withName("pad")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XColor.$struct$LAYOUT;
+        return constants$40.const$0;
     }
-    static final VarHandle pixel$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("pixel"));
     public static VarHandle pixel$VH() {
-        return XColor.pixel$VH;
+        return constants$40.const$1;
     }
     /**
      * Getter for field:
@@ -43,7 +34,7 @@ public class XColor {
      * }
      */
     public static long pixel$get(MemorySegment seg) {
-        return (long)XColor.pixel$VH.get(seg);
+        return (long)constants$40.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -52,17 +43,16 @@ public class XColor {
      * }
      */
     public static void pixel$set(MemorySegment seg, long x) {
-        XColor.pixel$VH.set(seg, x);
+        constants$40.const$1.set(seg, x);
     }
     public static long pixel$get(MemorySegment seg, long index) {
-        return (long)XColor.pixel$VH.get(seg.asSlice(index*sizeof()));
+        return (long)constants$40.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void pixel$set(MemorySegment seg, long index, long x) {
-        XColor.pixel$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$1.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle red$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("red"));
     public static VarHandle red$VH() {
-        return XColor.red$VH;
+        return constants$40.const$2;
     }
     /**
      * Getter for field:
@@ -71,7 +61,7 @@ public class XColor {
      * }
      */
     public static short red$get(MemorySegment seg) {
-        return (short)XColor.red$VH.get(seg);
+        return (short)constants$40.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -80,17 +70,16 @@ public class XColor {
      * }
      */
     public static void red$set(MemorySegment seg, short x) {
-        XColor.red$VH.set(seg, x);
+        constants$40.const$2.set(seg, x);
     }
     public static short red$get(MemorySegment seg, long index) {
-        return (short)XColor.red$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$40.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void red$set(MemorySegment seg, long index, short x) {
-        XColor.red$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle green$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("green"));
     public static VarHandle green$VH() {
-        return XColor.green$VH;
+        return constants$40.const$3;
     }
     /**
      * Getter for field:
@@ -99,7 +88,7 @@ public class XColor {
      * }
      */
     public static short green$get(MemorySegment seg) {
-        return (short)XColor.green$VH.get(seg);
+        return (short)constants$40.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -108,17 +97,16 @@ public class XColor {
      * }
      */
     public static void green$set(MemorySegment seg, short x) {
-        XColor.green$VH.set(seg, x);
+        constants$40.const$3.set(seg, x);
     }
     public static short green$get(MemorySegment seg, long index) {
-        return (short)XColor.green$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$40.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void green$set(MemorySegment seg, long index, short x) {
-        XColor.green$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle blue$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("blue"));
     public static VarHandle blue$VH() {
-        return XColor.blue$VH;
+        return constants$40.const$4;
     }
     /**
      * Getter for field:
@@ -127,7 +115,7 @@ public class XColor {
      * }
      */
     public static short blue$get(MemorySegment seg) {
-        return (short)XColor.blue$VH.get(seg);
+        return (short)constants$40.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -136,17 +124,16 @@ public class XColor {
      * }
      */
     public static void blue$set(MemorySegment seg, short x) {
-        XColor.blue$VH.set(seg, x);
+        constants$40.const$4.set(seg, x);
     }
     public static short blue$get(MemorySegment seg, long index) {
-        return (short)XColor.blue$VH.get(seg.asSlice(index*sizeof()));
+        return (short)constants$40.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void blue$set(MemorySegment seg, long index, short x) {
-        XColor.blue$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle flags$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("flags"));
     public static VarHandle flags$VH() {
-        return XColor.flags$VH;
+        return constants$40.const$5;
     }
     /**
      * Getter for field:
@@ -155,7 +142,7 @@ public class XColor {
      * }
      */
     public static byte flags$get(MemorySegment seg) {
-        return (byte)XColor.flags$VH.get(seg);
+        return (byte)constants$40.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -164,17 +151,16 @@ public class XColor {
      * }
      */
     public static void flags$set(MemorySegment seg, byte x) {
-        XColor.flags$VH.set(seg, x);
+        constants$40.const$5.set(seg, x);
     }
     public static byte flags$get(MemorySegment seg, long index) {
-        return (byte)XColor.flags$VH.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$40.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void flags$set(MemorySegment seg, long index, byte x) {
-        XColor.flags$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle pad$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("pad"));
     public static VarHandle pad$VH() {
-        return XColor.pad$VH;
+        return constants$41.const$0;
     }
     /**
      * Getter for field:
@@ -183,7 +169,7 @@ public class XColor {
      * }
      */
     public static byte pad$get(MemorySegment seg) {
-        return (byte)XColor.pad$VH.get(seg);
+        return (byte)constants$41.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -192,20 +178,20 @@ public class XColor {
      * }
      */
     public static void pad$set(MemorySegment seg, byte x) {
-        XColor.pad$VH.set(seg, x);
+        constants$41.const$0.set(seg, x);
     }
     public static byte pad$get(MemorySegment seg, long index) {
-        return (byte)XColor.pad$VH.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$41.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void pad$set(MemorySegment seg, long index, byte x) {
-        XColor.pad$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$41.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

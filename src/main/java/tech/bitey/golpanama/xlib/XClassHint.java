@@ -17,16 +17,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XClassHint {
 
-    static final StructLayout $struct$LAYOUT = MemoryLayout.structLayout(
-        Constants$root.C_POINTER$LAYOUT.withName("res_name"),
-        Constants$root.C_POINTER$LAYOUT.withName("res_class")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XClassHint.$struct$LAYOUT;
+        return constants$217.const$4;
     }
-    static final VarHandle res_name$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("res_name"));
     public static VarHandle res_name$VH() {
-        return XClassHint.res_name$VH;
+        return constants$217.const$5;
     }
     /**
      * Getter for field:
@@ -35,7 +30,7 @@ public class XClassHint {
      * }
      */
     public static MemorySegment res_name$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XClassHint.res_name$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$217.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -44,17 +39,16 @@ public class XClassHint {
      * }
      */
     public static void res_name$set(MemorySegment seg, MemorySegment x) {
-        XClassHint.res_name$VH.set(seg, x);
+        constants$217.const$5.set(seg, x);
     }
     public static MemorySegment res_name$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XClassHint.res_name$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$217.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void res_name$set(MemorySegment seg, long index, MemorySegment x) {
-        XClassHint.res_name$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$217.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle res_class$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("res_class"));
     public static VarHandle res_class$VH() {
-        return XClassHint.res_class$VH;
+        return constants$218.const$0;
     }
     /**
      * Getter for field:
@@ -63,7 +57,7 @@ public class XClassHint {
      * }
      */
     public static MemorySegment res_class$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XClassHint.res_class$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$218.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -72,20 +66,20 @@ public class XClassHint {
      * }
      */
     public static void res_class$set(MemorySegment seg, MemorySegment x) {
-        XClassHint.res_class$VH.set(seg, x);
+        constants$218.const$0.set(seg, x);
     }
     public static MemorySegment res_class$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XClassHint.res_class$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$218.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void res_class$set(MemorySegment seg, long index, MemorySegment x) {
-        XClassHint.res_class$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$218.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

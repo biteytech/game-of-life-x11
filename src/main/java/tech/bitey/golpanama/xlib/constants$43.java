@@ -11,61 +11,19 @@ final class constants$43 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$43() {}
-    static final FunctionDescriptor XNoOp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XNoOp$MH = RuntimeHelper.downcallHandle(
-        "XNoOp",
-        constants$43.XNoOp$FUNC
-    );
-    static final FunctionDescriptor XParseColor$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XParseColor$MH = RuntimeHelper.downcallHandle(
-        "XParseColor",
-        constants$43.XParseColor$FUNC
-    );
-    static final FunctionDescriptor XParseGeometry$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XParseGeometry$MH = RuntimeHelper.downcallHandle(
-        "XParseGeometry",
-        constants$43.XParseGeometry$FUNC
-    );
-    static final FunctionDescriptor XPeekEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPeekEvent$MH = RuntimeHelper.downcallHandle(
-        "XPeekEvent",
-        constants$43.XPeekEvent$FUNC
-    );
-    static final FunctionDescriptor XPeekIfEvent$x0$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final FunctionDescriptor XPeekIfEvent$x0_UP$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPeekIfEvent$x0_UP$MH = RuntimeHelper.upcallHandle(XPeekIfEvent$x0.class, "apply", constants$43.XPeekIfEvent$x0_UP$FUNC);
-    static final FunctionDescriptor XPeekIfEvent$x0_DOWN$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XPeekIfEvent$x0_DOWN$MH = RuntimeHelper.downcallHandle(
-        constants$43.XPeekIfEvent$x0_DOWN$FUNC
-    );
+    static final VarHandle const$0 = constants$42.const$3.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$1 = constants$42.const$3.varHandle(MemoryLayout.PathElement.groupElement("height"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_SHORT.withName("x"),
+        JAVA_SHORT.withName("y"),
+        JAVA_SHORT.withName("width"),
+        JAVA_SHORT.withName("height"),
+        JAVA_SHORT.withName("angle1"),
+        JAVA_SHORT.withName("angle2")
+    ).withName("");
+    static final VarHandle const$3 = constants$43.const$2.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$4 = constants$43.const$2.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$5 = constants$43.const$2.varHandle(MemoryLayout.PathElement.groupElement("width"));
 }
 
 

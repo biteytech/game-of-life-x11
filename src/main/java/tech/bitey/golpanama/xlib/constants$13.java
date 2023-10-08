@@ -11,57 +11,39 @@ final class constants$13 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$13() {}
-    static final FunctionDescriptor XEHeadOfExtensionList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        MemoryLayout.unionLayout(
-            Constants$root.C_POINTER$LAYOUT.withName("display"),
-            Constants$root.C_POINTER$LAYOUT.withName("gc"),
-            Constants$root.C_POINTER$LAYOUT.withName("visual"),
-            Constants$root.C_POINTER$LAYOUT.withName("screen"),
-            Constants$root.C_POINTER$LAYOUT.withName("pixmap_format"),
-            Constants$root.C_POINTER$LAYOUT.withName("font")
-        )
-    );
-    static final MethodHandle XEHeadOfExtensionList$MH = RuntimeHelper.downcallHandle(
-        "XEHeadOfExtensionList",
-        constants$13.XEHeadOfExtensionList$FUNC
-    );
-    static final FunctionDescriptor XRootWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XRootWindow$MH = RuntimeHelper.downcallHandle(
-        "XRootWindow",
-        constants$13.XRootWindow$FUNC
-    );
-    static final FunctionDescriptor XDefaultRootWindow$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDefaultRootWindow$MH = RuntimeHelper.downcallHandle(
-        "XDefaultRootWindow",
-        constants$13.XDefaultRootWindow$FUNC
-    );
-    static final FunctionDescriptor XRootWindowOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XRootWindowOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XRootWindowOfScreen",
-        constants$13.XRootWindowOfScreen$FUNC
-    );
-    static final FunctionDescriptor XDefaultVisual$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XDefaultVisual$MH = RuntimeHelper.downcallHandle(
-        "XDefaultVisual",
-        constants$13.XDefaultVisual$FUNC
-    );
-    static final FunctionDescriptor XDefaultVisualOfScreen$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XDefaultVisualOfScreen$MH = RuntimeHelper.downcallHandle(
-        "XDefaultVisualOfScreen",
-        constants$13.XDefaultVisualOfScreen$FUNC
-    );
+    static final VarHandle const$0 = constants$12.const$4.varHandle(MemoryLayout.PathElement.groupElement("bits_per_pixel"));
+    static final VarHandle const$1 = constants$12.const$4.varHandle(MemoryLayout.PathElement.groupElement("scanline_pad"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("function"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("plane_mask"),
+        JAVA_LONG.withName("foreground"),
+        JAVA_LONG.withName("background"),
+        JAVA_INT.withName("line_width"),
+        JAVA_INT.withName("line_style"),
+        JAVA_INT.withName("cap_style"),
+        JAVA_INT.withName("join_style"),
+        JAVA_INT.withName("fill_style"),
+        JAVA_INT.withName("fill_rule"),
+        JAVA_INT.withName("arc_mode"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("tile"),
+        JAVA_LONG.withName("stipple"),
+        JAVA_INT.withName("ts_x_origin"),
+        JAVA_INT.withName("ts_y_origin"),
+        JAVA_LONG.withName("font"),
+        JAVA_INT.withName("subwindow_mode"),
+        JAVA_INT.withName("graphics_exposures"),
+        JAVA_INT.withName("clip_x_origin"),
+        JAVA_INT.withName("clip_y_origin"),
+        JAVA_LONG.withName("clip_mask"),
+        JAVA_INT.withName("dash_offset"),
+        JAVA_BYTE.withName("dashes"),
+        MemoryLayout.paddingLayout(3)
+    ).withName("");
+    static final VarHandle const$3 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("function"));
+    static final VarHandle const$4 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("plane_mask"));
+    static final VarHandle const$5 = constants$13.const$2.varHandle(MemoryLayout.PathElement.groupElement("foreground"));
 }
 
 

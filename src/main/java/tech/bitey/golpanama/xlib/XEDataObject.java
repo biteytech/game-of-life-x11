@@ -21,20 +21,11 @@ import static java.lang.foreign.ValueLayout.*;
  */
 public class XEDataObject {
 
-    static final UnionLayout $union$LAYOUT = MemoryLayout.unionLayout(
-        Constants$root.C_POINTER$LAYOUT.withName("display"),
-        Constants$root.C_POINTER$LAYOUT.withName("gc"),
-        Constants$root.C_POINTER$LAYOUT.withName("visual"),
-        Constants$root.C_POINTER$LAYOUT.withName("screen"),
-        Constants$root.C_POINTER$LAYOUT.withName("pixmap_format"),
-        Constants$root.C_POINTER$LAYOUT.withName("font")
-    );
     public static MemoryLayout $LAYOUT() {
-        return XEDataObject.$union$LAYOUT;
+        return constants$109.const$1;
     }
-    static final VarHandle display$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("display"));
     public static VarHandle display$VH() {
-        return XEDataObject.display$VH;
+        return constants$109.const$2;
     }
     /**
      * Getter for field:
@@ -43,7 +34,7 @@ public class XEDataObject {
      * }
      */
     public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.display$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$109.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -52,17 +43,16 @@ public class XEDataObject {
      * }
      */
     public static void display$set(MemorySegment seg, MemorySegment x) {
-        XEDataObject.display$VH.set(seg, x);
+        constants$109.const$2.set(seg, x);
     }
     public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.display$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$109.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        XEDataObject.display$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$109.const$2.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle gc$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("gc"));
     public static VarHandle gc$VH() {
-        return XEDataObject.gc$VH;
+        return constants$109.const$3;
     }
     /**
      * Getter for field:
@@ -71,7 +61,7 @@ public class XEDataObject {
      * }
      */
     public static MemorySegment gc$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.gc$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$109.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -80,17 +70,16 @@ public class XEDataObject {
      * }
      */
     public static void gc$set(MemorySegment seg, MemorySegment x) {
-        XEDataObject.gc$VH.set(seg, x);
+        constants$109.const$3.set(seg, x);
     }
     public static MemorySegment gc$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.gc$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$109.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void gc$set(MemorySegment seg, long index, MemorySegment x) {
-        XEDataObject.gc$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$109.const$3.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle visual$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("visual"));
     public static VarHandle visual$VH() {
-        return XEDataObject.visual$VH;
+        return constants$109.const$4;
     }
     /**
      * Getter for field:
@@ -99,7 +88,7 @@ public class XEDataObject {
      * }
      */
     public static MemorySegment visual$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.visual$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$109.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -108,17 +97,16 @@ public class XEDataObject {
      * }
      */
     public static void visual$set(MemorySegment seg, MemorySegment x) {
-        XEDataObject.visual$VH.set(seg, x);
+        constants$109.const$4.set(seg, x);
     }
     public static MemorySegment visual$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.visual$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$109.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void visual$set(MemorySegment seg, long index, MemorySegment x) {
-        XEDataObject.visual$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$109.const$4.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle screen$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("screen"));
     public static VarHandle screen$VH() {
-        return XEDataObject.screen$VH;
+        return constants$109.const$5;
     }
     /**
      * Getter for field:
@@ -127,7 +115,7 @@ public class XEDataObject {
      * }
      */
     public static MemorySegment screen$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.screen$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$109.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -136,17 +124,16 @@ public class XEDataObject {
      * }
      */
     public static void screen$set(MemorySegment seg, MemorySegment x) {
-        XEDataObject.screen$VH.set(seg, x);
+        constants$109.const$5.set(seg, x);
     }
     public static MemorySegment screen$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.screen$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$109.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void screen$set(MemorySegment seg, long index, MemorySegment x) {
-        XEDataObject.screen$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$109.const$5.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle pixmap_format$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("pixmap_format"));
     public static VarHandle pixmap_format$VH() {
-        return XEDataObject.pixmap_format$VH;
+        return constants$110.const$0;
     }
     /**
      * Getter for field:
@@ -155,7 +142,7 @@ public class XEDataObject {
      * }
      */
     public static MemorySegment pixmap_format$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.pixmap_format$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$110.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -164,17 +151,16 @@ public class XEDataObject {
      * }
      */
     public static void pixmap_format$set(MemorySegment seg, MemorySegment x) {
-        XEDataObject.pixmap_format$VH.set(seg, x);
+        constants$110.const$0.set(seg, x);
     }
     public static MemorySegment pixmap_format$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.pixmap_format$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$110.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void pixmap_format$set(MemorySegment seg, long index, MemorySegment x) {
-        XEDataObject.pixmap_format$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$110.const$0.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle font$VH = $union$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("font"));
     public static VarHandle font$VH() {
-        return XEDataObject.font$VH;
+        return constants$110.const$1;
     }
     /**
      * Getter for field:
@@ -183,7 +169,7 @@ public class XEDataObject {
      * }
      */
     public static MemorySegment font$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.font$VH.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$110.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -192,20 +178,20 @@ public class XEDataObject {
      * }
      */
     public static void font$set(MemorySegment seg, MemorySegment x) {
-        XEDataObject.font$VH.set(seg, x);
+        constants$110.const$1.set(seg, x);
     }
     public static MemorySegment font$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)XEDataObject.font$VH.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$110.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void font$set(MemorySegment seg, long index, MemorySegment x) {
-        XEDataObject.font$VH.set(seg.asSlice(index*sizeof()), x);
+        constants$110.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
     public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
         return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
     }
-    public static MemorySegment ofAddress(MemorySegment addr, SegmentScope scope) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, scope); }
+    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
 }
 
 

@@ -11,12 +11,24 @@ final class constants$92 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$92() {}
-    static final MemorySegment XNCursor$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("cursor");
-    static final MemorySegment XNQueryIMValuesList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryIMValuesList");
-    static final MemorySegment XNQueryICValuesList$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("queryICValuesList");
-    static final MemorySegment XNVisiblePosition$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("visiblePosition");
-    static final MemorySegment XNR6PreeditCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("r6PreeditCallback");
-    static final MemorySegment XNStringConversionCallback$SEGMENT = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("stringConversionCallback");
+    static final VarHandle const$0 = constants$90.const$2.varHandle(MemoryLayout.PathElement.groupElement("time"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("requestor"),
+        JAVA_LONG.withName("selection"),
+        JAVA_LONG.withName("target"),
+        JAVA_LONG.withName("property"),
+        JAVA_LONG.withName("time")
+    ).withName("");
+    static final VarHandle const$2 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$4 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
+    static final VarHandle const$5 = constants$92.const$1.varHandle(MemoryLayout.PathElement.groupElement("display"));
 }
 
 

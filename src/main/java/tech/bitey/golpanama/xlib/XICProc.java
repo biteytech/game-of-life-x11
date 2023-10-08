@@ -15,14 +15,14 @@ import static java.lang.foreign.ValueLayout.*;
 public interface XICProc {
 
     int apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1, java.lang.foreign.MemorySegment _x2);
-    static MemorySegment allocate(XICProc fi, SegmentScope scope) {
-        return RuntimeHelper.upcallStub(constants$0.XICProc_UP$MH, fi, constants$0.XICProc$FUNC, scope);
+    static MemorySegment allocate(XICProc fi, Arena scope) {
+        return RuntimeHelper.upcallStub(constants$113.const$4, fi, constants$113.const$3, scope);
     }
-    static XICProc ofAddress(MemorySegment addr, SegmentScope scope) {
-        MemorySegment symbol = MemorySegment.ofAddress(addr.address(), 0, scope);
+    static XICProc ofAddress(MemorySegment addr, Arena arena) {
+        MemorySegment symbol = addr.reinterpret(arena, null);
         return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1, java.lang.foreign.MemorySegment __x2) -> {
             try {
-                return (int)constants$1.XICProc_DOWN$MH.invokeExact(symbol, __x0, __x1, __x2);
+                return (int)constants$113.const$5.invokeExact(symbol, __x0, __x1, __x2);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

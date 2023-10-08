@@ -11,48 +11,12 @@ final class constants$69 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$69() {}
-    static final FunctionDescriptor XUnsetICFocus$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XUnsetICFocus$MH = RuntimeHelper.downcallHandle(
-        "XUnsetICFocus",
-        constants$69.XUnsetICFocus$FUNC
-    );
-    static final FunctionDescriptor XwcResetIC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcResetIC$MH = RuntimeHelper.downcallHandle(
-        "XwcResetIC",
-        constants$69.XwcResetIC$FUNC
-    );
-    static final FunctionDescriptor XmbResetIC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbResetIC$MH = RuntimeHelper.downcallHandle(
-        "XmbResetIC",
-        constants$69.XmbResetIC$FUNC
-    );
-    static final FunctionDescriptor Xutf8ResetIC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8ResetIC$MH = RuntimeHelper.downcallHandle(
-        "Xutf8ResetIC",
-        constants$69.Xutf8ResetIC$FUNC
-    );
-    static final FunctionDescriptor XSetICValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XSetICValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XSetICValues",
-        constants$69.XSetICValues$FUNC
-    );
-    static final FunctionDescriptor XGetICValues$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XGetICValues$MH = RuntimeHelper.downcallHandleVariadic(
-        "XGetICValues",
-        constants$69.XGetICValues$FUNC
-    );
+    static final VarHandle const$0 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("parent"));
+    static final VarHandle const$1 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("window"));
+    static final VarHandle const$2 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$3 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$4 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("width"));
+    static final VarHandle const$5 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("height"));
 }
 
 

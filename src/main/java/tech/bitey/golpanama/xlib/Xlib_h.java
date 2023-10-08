@@ -9,14 +9,14 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 public class Xlib_h extends Xlib_h_3 {
 
-    public static final OfByte C_CHAR = Constants$root.C_CHAR$LAYOUT;
-    public static final OfShort C_SHORT = Constants$root.C_SHORT$LAYOUT;
-    public static final OfInt C_INT = Constants$root.C_INT$LAYOUT;
-    public static final OfLong C_LONG = Constants$root.C_LONG_LONG$LAYOUT;
-    public static final OfLong C_LONG_LONG = Constants$root.C_LONG_LONG$LAYOUT;
-    public static final OfFloat C_FLOAT = Constants$root.C_FLOAT$LAYOUT;
-    public static final OfDouble C_DOUBLE = Constants$root.C_DOUBLE$LAYOUT;
-    public static final OfAddress C_POINTER = Constants$root.C_POINTER$LAYOUT;
+    public static final OfByte C_CHAR = JAVA_BYTE;
+    public static final OfShort C_SHORT = JAVA_SHORT;
+    public static final OfInt C_INT = JAVA_INT;
+    public static final OfLong C_LONG = JAVA_LONG;
+    public static final OfLong C_LONG_LONG = JAVA_LONG;
+    public static final OfFloat C_FLOAT = JAVA_FLOAT;
+    public static final OfDouble C_DOUBLE = JAVA_DOUBLE;
+    public static final AddressLayout C_POINTER = RuntimeHelper.POINTER;
     /**
      * {@snippet :
      * #define XlibSpecificationRelease 6
@@ -155,6 +155,30 @@ public class Xlib_h extends Xlib_h_3 {
     }
     /**
      * {@snippet :
+     * #define __WORDSIZE 64
+     * }
+     */
+    public static int __WORDSIZE() {
+        return (int)64L;
+    }
+    /**
+     * {@snippet :
+     * #define __WORDSIZE_TIME64_COMPAT32 1
+     * }
+     */
+    public static int __WORDSIZE_TIME64_COMPAT32() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * #define __SYSCALL_WORDSIZE 64
+     * }
+     */
+    public static int __SYSCALL_WORDSIZE() {
+        return (int)64L;
+    }
+    /**
+     * {@snippet :
      * #define __USE_MISC 1
      * }
      */
@@ -235,11 +259,11 @@ public class Xlib_h extends Xlib_h_3 {
     }
     /**
      * {@snippet :
-     * #define __GLIBC_MINOR__ 31
+     * #define __GLIBC_MINOR__ 35
      * }
      */
     public static int __GLIBC_MINOR__() {
-        return (int)31L;
+        return (int)35L;
     }
     /**
      * {@snippet :
@@ -259,34 +283,10 @@ public class Xlib_h extends Xlib_h_3 {
     }
     /**
      * {@snippet :
-     * #define __WORDSIZE 64
+     * #define __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI 0
      * }
      */
-    public static int __WORDSIZE() {
-        return (int)64L;
-    }
-    /**
-     * {@snippet :
-     * #define __WORDSIZE_TIME64_COMPAT32 1
-     * }
-     */
-    public static int __WORDSIZE_TIME64_COMPAT32() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __SYSCALL_WORDSIZE 64
-     * }
-     */
-    public static int __SYSCALL_WORDSIZE() {
-        return (int)64L;
-    }
-    /**
-     * {@snippet :
-     * #define __LONG_DOUBLE_USES_FLOAT128 0
-     * }
-     */
-    public static int __LONG_DOUBLE_USES_FLOAT128() {
+    public static int __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI() {
         return (int)0L;
     }
     /**
@@ -343,6 +343,14 @@ public class Xlib_h extends Xlib_h_3 {
      * }
      */
     public static int __STATFS_MATCHES_STATFS64() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * #define __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 1
+     * }
+     */
+    public static int __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64() {
         return (int)1L;
     }
     /**
@@ -8008,14 +8016,6 @@ public class Xlib_h extends Xlib_h_3 {
      */
     public static int XK_kana_o() {
         return (int)1195L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_kana_ya 1196
-     * }
-     */
-    public static int XK_kana_ya() {
-        return (int)1196L;
     }
 }
 

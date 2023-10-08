@@ -11,64 +11,21 @@ final class constants$70 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$70() {}
-    static final FunctionDescriptor XIMOfIC$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XIMOfIC$MH = RuntimeHelper.downcallHandle(
-        "XIMOfIC",
-        constants$70.XIMOfIC$FUNC
-    );
-    static final FunctionDescriptor XFilterEvent$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle XFilterEvent$MH = RuntimeHelper.downcallHandle(
-        "XFilterEvent",
-        constants$70.XFilterEvent$FUNC
-    );
-    static final FunctionDescriptor XmbLookupString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XmbLookupString$MH = RuntimeHelper.downcallHandle(
-        "XmbLookupString",
-        constants$70.XmbLookupString$FUNC
-    );
-    static final FunctionDescriptor XwcLookupString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle XwcLookupString$MH = RuntimeHelper.downcallHandle(
-        "XwcLookupString",
-        constants$70.XwcLookupString$FUNC
-    );
-    static final FunctionDescriptor Xutf8LookupString$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle Xutf8LookupString$MH = RuntimeHelper.downcallHandle(
-        "Xutf8LookupString",
-        constants$70.Xutf8LookupString$FUNC
-    );
-    static final FunctionDescriptor XVaCreateNestedList$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle XVaCreateNestedList$MH = RuntimeHelper.downcallHandleVariadic(
-        "XVaCreateNestedList",
-        constants$70.XVaCreateNestedList$FUNC
-    );
+    static final VarHandle const$0 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("border_width"));
+    static final VarHandle const$1 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("override_redirect"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        MemoryLayout.paddingLayout(4),
+        JAVA_LONG.withName("serial"),
+        JAVA_INT.withName("send_event"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("display"),
+        JAVA_LONG.withName("event"),
+        JAVA_LONG.withName("window")
+    ).withName("");
+    static final VarHandle const$3 = constants$70.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$70.const$2.varHandle(MemoryLayout.PathElement.groupElement("serial"));
+    static final VarHandle const$5 = constants$70.const$2.varHandle(MemoryLayout.PathElement.groupElement("send_event"));
 }
 
 
