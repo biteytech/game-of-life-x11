@@ -2,13 +2,18 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
  *     long flags;
  *     int input;
@@ -19,263 +24,472 @@ import static java.lang.foreign.ValueLayout.*;
  *     int icon_y;
  *     Pixmap icon_mask;
  *     XID window_group;
- * };
+ * }
  * }
  */
 public class XWMHints {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$214.const$0;
+    XWMHints() {
+        // Should not be called directly
     }
-    public static VarHandle flags$VH() {
-        return constants$214.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * long flags;
-     * }
-     */
-    public static long flags$get(MemorySegment seg) {
-        return (long)constants$214.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * long flags;
-     * }
-     */
-    public static void flags$set(MemorySegment seg, long x) {
-        constants$214.const$1.set(seg, x);
-    }
-    public static long flags$get(MemorySegment seg, long index) {
-        return (long)constants$214.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void flags$set(MemorySegment seg, long index, long x) {
-        constants$214.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle input$VH() {
-        return constants$214.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int input;
-     * }
-     */
-    public static int input$get(MemorySegment seg) {
-        return (int)constants$214.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int input;
-     * }
-     */
-    public static void input$set(MemorySegment seg, int x) {
-        constants$214.const$2.set(seg, x);
-    }
-    public static int input$get(MemorySegment seg, long index) {
-        return (int)constants$214.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void input$set(MemorySegment seg, long index, int x) {
-        constants$214.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle initial_state$VH() {
-        return constants$214.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int initial_state;
-     * }
-     */
-    public static int initial_state$get(MemorySegment seg) {
-        return (int)constants$214.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int initial_state;
-     * }
-     */
-    public static void initial_state$set(MemorySegment seg, int x) {
-        constants$214.const$3.set(seg, x);
-    }
-    public static int initial_state$get(MemorySegment seg, long index) {
-        return (int)constants$214.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void initial_state$set(MemorySegment seg, long index, int x) {
-        constants$214.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle icon_pixmap$VH() {
-        return constants$214.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Pixmap icon_pixmap;
-     * }
-     */
-    public static long icon_pixmap$get(MemorySegment seg) {
-        return (long)constants$214.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Pixmap icon_pixmap;
-     * }
-     */
-    public static void icon_pixmap$set(MemorySegment seg, long x) {
-        constants$214.const$4.set(seg, x);
-    }
-    public static long icon_pixmap$get(MemorySegment seg, long index) {
-        return (long)constants$214.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void icon_pixmap$set(MemorySegment seg, long index, long x) {
-        constants$214.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle icon_window$VH() {
-        return constants$214.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Window icon_window;
-     * }
-     */
-    public static long icon_window$get(MemorySegment seg) {
-        return (long)constants$214.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Window icon_window;
-     * }
-     */
-    public static void icon_window$set(MemorySegment seg, long x) {
-        constants$214.const$5.set(seg, x);
-    }
-    public static long icon_window$get(MemorySegment seg, long index) {
-        return (long)constants$214.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void icon_window$set(MemorySegment seg, long index, long x) {
-        constants$214.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle icon_x$VH() {
-        return constants$215.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int icon_x;
-     * }
-     */
-    public static int icon_x$get(MemorySegment seg) {
-        return (int)constants$215.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int icon_x;
-     * }
-     */
-    public static void icon_x$set(MemorySegment seg, int x) {
-        constants$215.const$0.set(seg, x);
-    }
-    public static int icon_x$get(MemorySegment seg, long index) {
-        return (int)constants$215.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void icon_x$set(MemorySegment seg, long index, int x) {
-        constants$215.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle icon_y$VH() {
-        return constants$215.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int icon_y;
-     * }
-     */
-    public static int icon_y$get(MemorySegment seg) {
-        return (int)constants$215.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int icon_y;
-     * }
-     */
-    public static void icon_y$set(MemorySegment seg, int x) {
-        constants$215.const$1.set(seg, x);
-    }
-    public static int icon_y$get(MemorySegment seg, long index) {
-        return (int)constants$215.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void icon_y$set(MemorySegment seg, long index, int x) {
-        constants$215.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle icon_mask$VH() {
-        return constants$215.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Pixmap icon_mask;
-     * }
-     */
-    public static long icon_mask$get(MemorySegment seg) {
-        return (long)constants$215.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Pixmap icon_mask;
-     * }
-     */
-    public static void icon_mask$set(MemorySegment seg, long x) {
-        constants$215.const$2.set(seg, x);
-    }
-    public static long icon_mask$get(MemorySegment seg, long index) {
-        return (long)constants$215.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void icon_mask$set(MemorySegment seg, long index, long x) {
-        constants$215.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle window_group$VH() {
-        return constants$215.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * XID window_group;
-     * }
-     */
-    public static long window_group$get(MemorySegment seg) {
-        return (long)constants$215.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * XID window_group;
-     * }
-     */
-    public static void window_group$set(MemorySegment seg, long x) {
-        constants$215.const$3.set(seg, x);
-    }
-    public static long window_group$get(MemorySegment seg, long index) {
-        return (long)constants$215.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void window_group$set(MemorySegment seg, long index, long x) {
-        constants$215.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_LONG.withName("flags"),
+        Xlib_h.C_INT.withName("input"),
+        Xlib_h.C_INT.withName("initial_state"),
+        Xlib_h.C_LONG.withName("icon_pixmap"),
+        Xlib_h.C_LONG.withName("icon_window"),
+        Xlib_h.C_INT.withName("icon_x"),
+        Xlib_h.C_INT.withName("icon_y"),
+        Xlib_h.C_LONG.withName("icon_mask"),
+        Xlib_h.C_LONG.withName("window_group")
+    ).withName("$anon$119:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfLong flags$LAYOUT = (OfLong)$LAYOUT.select(groupElement("flags"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * long flags
+     * }
+     */
+    public static final OfLong flags$layout() {
+        return flags$LAYOUT;
+    }
+
+    private static final long flags$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * long flags
+     * }
+     */
+    public static final long flags$offset() {
+        return flags$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * long flags
+     * }
+     */
+    public static long flags(MemorySegment struct) {
+        return struct.get(flags$LAYOUT, flags$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * long flags
+     * }
+     */
+    public static void flags(MemorySegment struct, long fieldValue) {
+        struct.set(flags$LAYOUT, flags$OFFSET, fieldValue);
+    }
+
+    private static final OfInt input$LAYOUT = (OfInt)$LAYOUT.select(groupElement("input"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int input
+     * }
+     */
+    public static final OfInt input$layout() {
+        return input$LAYOUT;
+    }
+
+    private static final long input$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int input
+     * }
+     */
+    public static final long input$offset() {
+        return input$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int input
+     * }
+     */
+    public static int input(MemorySegment struct) {
+        return struct.get(input$LAYOUT, input$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int input
+     * }
+     */
+    public static void input(MemorySegment struct, int fieldValue) {
+        struct.set(input$LAYOUT, input$OFFSET, fieldValue);
+    }
+
+    private static final OfInt initial_state$LAYOUT = (OfInt)$LAYOUT.select(groupElement("initial_state"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int initial_state
+     * }
+     */
+    public static final OfInt initial_state$layout() {
+        return initial_state$LAYOUT;
+    }
+
+    private static final long initial_state$OFFSET = 12;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int initial_state
+     * }
+     */
+    public static final long initial_state$offset() {
+        return initial_state$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int initial_state
+     * }
+     */
+    public static int initial_state(MemorySegment struct) {
+        return struct.get(initial_state$LAYOUT, initial_state$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int initial_state
+     * }
+     */
+    public static void initial_state(MemorySegment struct, int fieldValue) {
+        struct.set(initial_state$LAYOUT, initial_state$OFFSET, fieldValue);
+    }
+
+    private static final OfLong icon_pixmap$LAYOUT = (OfLong)$LAYOUT.select(groupElement("icon_pixmap"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Pixmap icon_pixmap
+     * }
+     */
+    public static final OfLong icon_pixmap$layout() {
+        return icon_pixmap$LAYOUT;
+    }
+
+    private static final long icon_pixmap$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Pixmap icon_pixmap
+     * }
+     */
+    public static final long icon_pixmap$offset() {
+        return icon_pixmap$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Pixmap icon_pixmap
+     * }
+     */
+    public static long icon_pixmap(MemorySegment struct) {
+        return struct.get(icon_pixmap$LAYOUT, icon_pixmap$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Pixmap icon_pixmap
+     * }
+     */
+    public static void icon_pixmap(MemorySegment struct, long fieldValue) {
+        struct.set(icon_pixmap$LAYOUT, icon_pixmap$OFFSET, fieldValue);
+    }
+
+    private static final OfLong icon_window$LAYOUT = (OfLong)$LAYOUT.select(groupElement("icon_window"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Window icon_window
+     * }
+     */
+    public static final OfLong icon_window$layout() {
+        return icon_window$LAYOUT;
+    }
+
+    private static final long icon_window$OFFSET = 24;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Window icon_window
+     * }
+     */
+    public static final long icon_window$offset() {
+        return icon_window$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Window icon_window
+     * }
+     */
+    public static long icon_window(MemorySegment struct) {
+        return struct.get(icon_window$LAYOUT, icon_window$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Window icon_window
+     * }
+     */
+    public static void icon_window(MemorySegment struct, long fieldValue) {
+        struct.set(icon_window$LAYOUT, icon_window$OFFSET, fieldValue);
+    }
+
+    private static final OfInt icon_x$LAYOUT = (OfInt)$LAYOUT.select(groupElement("icon_x"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int icon_x
+     * }
+     */
+    public static final OfInt icon_x$layout() {
+        return icon_x$LAYOUT;
+    }
+
+    private static final long icon_x$OFFSET = 32;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int icon_x
+     * }
+     */
+    public static final long icon_x$offset() {
+        return icon_x$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int icon_x
+     * }
+     */
+    public static int icon_x(MemorySegment struct) {
+        return struct.get(icon_x$LAYOUT, icon_x$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int icon_x
+     * }
+     */
+    public static void icon_x(MemorySegment struct, int fieldValue) {
+        struct.set(icon_x$LAYOUT, icon_x$OFFSET, fieldValue);
+    }
+
+    private static final OfInt icon_y$LAYOUT = (OfInt)$LAYOUT.select(groupElement("icon_y"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int icon_y
+     * }
+     */
+    public static final OfInt icon_y$layout() {
+        return icon_y$LAYOUT;
+    }
+
+    private static final long icon_y$OFFSET = 36;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int icon_y
+     * }
+     */
+    public static final long icon_y$offset() {
+        return icon_y$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int icon_y
+     * }
+     */
+    public static int icon_y(MemorySegment struct) {
+        return struct.get(icon_y$LAYOUT, icon_y$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int icon_y
+     * }
+     */
+    public static void icon_y(MemorySegment struct, int fieldValue) {
+        struct.set(icon_y$LAYOUT, icon_y$OFFSET, fieldValue);
+    }
+
+    private static final OfLong icon_mask$LAYOUT = (OfLong)$LAYOUT.select(groupElement("icon_mask"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Pixmap icon_mask
+     * }
+     */
+    public static final OfLong icon_mask$layout() {
+        return icon_mask$LAYOUT;
+    }
+
+    private static final long icon_mask$OFFSET = 40;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Pixmap icon_mask
+     * }
+     */
+    public static final long icon_mask$offset() {
+        return icon_mask$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Pixmap icon_mask
+     * }
+     */
+    public static long icon_mask(MemorySegment struct) {
+        return struct.get(icon_mask$LAYOUT, icon_mask$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Pixmap icon_mask
+     * }
+     */
+    public static void icon_mask(MemorySegment struct, long fieldValue) {
+        struct.set(icon_mask$LAYOUT, icon_mask$OFFSET, fieldValue);
+    }
+
+    private static final OfLong window_group$LAYOUT = (OfLong)$LAYOUT.select(groupElement("window_group"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XID window_group
+     * }
+     */
+    public static final OfLong window_group$layout() {
+        return window_group$LAYOUT;
+    }
+
+    private static final long window_group$OFFSET = 48;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XID window_group
+     * }
+     */
+    public static final long window_group$offset() {
+        return window_group$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XID window_group
+     * }
+     */
+    public static long window_group(MemorySegment struct) {
+        return struct.get(window_group$LAYOUT, window_group$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XID window_group
+     * }
+     */
+    public static void window_group(MemorySegment struct, long fieldValue) {
+        struct.set(window_group$LAYOUT, window_group$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

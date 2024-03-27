@@ -2,112 +2,218 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
  *     int family;
  *     int length;
- *     char* address;
- * };
+ *     char *address;
+ * }
  * }
  */
 public class XHostAddress {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$30.const$3;
+    XHostAddress() {
+        // Should not be called directly
     }
-    public static VarHandle family$VH() {
-        return constants$30.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int family;
-     * }
-     */
-    public static int family$get(MemorySegment seg) {
-        return (int)constants$30.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int family;
-     * }
-     */
-    public static void family$set(MemorySegment seg, int x) {
-        constants$30.const$4.set(seg, x);
-    }
-    public static int family$get(MemorySegment seg, long index) {
-        return (int)constants$30.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void family$set(MemorySegment seg, long index, int x) {
-        constants$30.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle length$VH() {
-        return constants$30.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int length;
-     * }
-     */
-    public static int length$get(MemorySegment seg) {
-        return (int)constants$30.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int length;
-     * }
-     */
-    public static void length$set(MemorySegment seg, int x) {
-        constants$30.const$5.set(seg, x);
-    }
-    public static int length$get(MemorySegment seg, long index) {
-        return (int)constants$30.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void length$set(MemorySegment seg, long index, int x) {
-        constants$30.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle address$VH() {
-        return constants$31.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * char* address;
-     * }
-     */
-    public static MemorySegment address$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$31.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * char* address;
-     * }
-     */
-    public static void address$set(MemorySegment seg, MemorySegment x) {
-        constants$31.const$0.set(seg, x);
-    }
-    public static MemorySegment address$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$31.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void address$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$31.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_INT.withName("family"),
+        Xlib_h.C_INT.withName("length"),
+        Xlib_h.C_POINTER.withName("address")
+    ).withName("$anon$341:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfInt family$LAYOUT = (OfInt)$LAYOUT.select(groupElement("family"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int family
+     * }
+     */
+    public static final OfInt family$layout() {
+        return family$LAYOUT;
+    }
+
+    private static final long family$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int family
+     * }
+     */
+    public static final long family$offset() {
+        return family$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int family
+     * }
+     */
+    public static int family(MemorySegment struct) {
+        return struct.get(family$LAYOUT, family$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int family
+     * }
+     */
+    public static void family(MemorySegment struct, int fieldValue) {
+        struct.set(family$LAYOUT, family$OFFSET, fieldValue);
+    }
+
+    private static final OfInt length$LAYOUT = (OfInt)$LAYOUT.select(groupElement("length"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int length
+     * }
+     */
+    public static final OfInt length$layout() {
+        return length$LAYOUT;
+    }
+
+    private static final long length$OFFSET = 4;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int length
+     * }
+     */
+    public static final long length$offset() {
+        return length$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int length
+     * }
+     */
+    public static int length(MemorySegment struct) {
+        return struct.get(length$LAYOUT, length$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int length
+     * }
+     */
+    public static void length(MemorySegment struct, int fieldValue) {
+        struct.set(length$LAYOUT, length$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout address$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("address"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * char *address
+     * }
+     */
+    public static final AddressLayout address$layout() {
+        return address$LAYOUT;
+    }
+
+    private static final long address$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * char *address
+     * }
+     */
+    public static final long address$offset() {
+        return address$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * char *address
+     * }
+     */
+    public static MemorySegment address(MemorySegment struct) {
+        return struct.get(address$LAYOUT, address$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * char *address
+     * }
+     */
+    public static void address(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(address$LAYOUT, address$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

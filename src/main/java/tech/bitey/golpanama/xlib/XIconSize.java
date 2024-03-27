@@ -2,13 +2,18 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
  *     int min_width;
  *     int min_height;
@@ -16,182 +21,337 @@ import static java.lang.foreign.ValueLayout.*;
  *     int max_height;
  *     int width_inc;
  *     int height_inc;
- * };
+ * }
  * }
  */
 public class XIconSize {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$216.const$3;
+    XIconSize() {
+        // Should not be called directly
     }
-    public static VarHandle min_width$VH() {
-        return constants$216.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int min_width;
-     * }
-     */
-    public static int min_width$get(MemorySegment seg) {
-        return (int)constants$216.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int min_width;
-     * }
-     */
-    public static void min_width$set(MemorySegment seg, int x) {
-        constants$216.const$4.set(seg, x);
-    }
-    public static int min_width$get(MemorySegment seg, long index) {
-        return (int)constants$216.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void min_width$set(MemorySegment seg, long index, int x) {
-        constants$216.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle min_height$VH() {
-        return constants$216.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int min_height;
-     * }
-     */
-    public static int min_height$get(MemorySegment seg) {
-        return (int)constants$216.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int min_height;
-     * }
-     */
-    public static void min_height$set(MemorySegment seg, int x) {
-        constants$216.const$5.set(seg, x);
-    }
-    public static int min_height$get(MemorySegment seg, long index) {
-        return (int)constants$216.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void min_height$set(MemorySegment seg, long index, int x) {
-        constants$216.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle max_width$VH() {
-        return constants$217.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int max_width;
-     * }
-     */
-    public static int max_width$get(MemorySegment seg) {
-        return (int)constants$217.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int max_width;
-     * }
-     */
-    public static void max_width$set(MemorySegment seg, int x) {
-        constants$217.const$0.set(seg, x);
-    }
-    public static int max_width$get(MemorySegment seg, long index) {
-        return (int)constants$217.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void max_width$set(MemorySegment seg, long index, int x) {
-        constants$217.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle max_height$VH() {
-        return constants$217.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int max_height;
-     * }
-     */
-    public static int max_height$get(MemorySegment seg) {
-        return (int)constants$217.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int max_height;
-     * }
-     */
-    public static void max_height$set(MemorySegment seg, int x) {
-        constants$217.const$1.set(seg, x);
-    }
-    public static int max_height$get(MemorySegment seg, long index) {
-        return (int)constants$217.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void max_height$set(MemorySegment seg, long index, int x) {
-        constants$217.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle width_inc$VH() {
-        return constants$217.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int width_inc;
-     * }
-     */
-    public static int width_inc$get(MemorySegment seg) {
-        return (int)constants$217.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int width_inc;
-     * }
-     */
-    public static void width_inc$set(MemorySegment seg, int x) {
-        constants$217.const$2.set(seg, x);
-    }
-    public static int width_inc$get(MemorySegment seg, long index) {
-        return (int)constants$217.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void width_inc$set(MemorySegment seg, long index, int x) {
-        constants$217.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle height_inc$VH() {
-        return constants$217.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int height_inc;
-     * }
-     */
-    public static int height_inc$get(MemorySegment seg) {
-        return (int)constants$217.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int height_inc;
-     * }
-     */
-    public static void height_inc$set(MemorySegment seg, int x) {
-        constants$217.const$3.set(seg, x);
-    }
-    public static int height_inc$get(MemorySegment seg, long index) {
-        return (int)constants$217.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void height_inc$set(MemorySegment seg, long index, int x) {
-        constants$217.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_INT.withName("min_width"),
+        Xlib_h.C_INT.withName("min_height"),
+        Xlib_h.C_INT.withName("max_width"),
+        Xlib_h.C_INT.withName("max_height"),
+        Xlib_h.C_INT.withName("width_inc"),
+        Xlib_h.C_INT.withName("height_inc")
+    ).withName("$anon$183:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfInt min_width$LAYOUT = (OfInt)$LAYOUT.select(groupElement("min_width"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int min_width
+     * }
+     */
+    public static final OfInt min_width$layout() {
+        return min_width$LAYOUT;
+    }
+
+    private static final long min_width$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int min_width
+     * }
+     */
+    public static final long min_width$offset() {
+        return min_width$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int min_width
+     * }
+     */
+    public static int min_width(MemorySegment struct) {
+        return struct.get(min_width$LAYOUT, min_width$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int min_width
+     * }
+     */
+    public static void min_width(MemorySegment struct, int fieldValue) {
+        struct.set(min_width$LAYOUT, min_width$OFFSET, fieldValue);
+    }
+
+    private static final OfInt min_height$LAYOUT = (OfInt)$LAYOUT.select(groupElement("min_height"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int min_height
+     * }
+     */
+    public static final OfInt min_height$layout() {
+        return min_height$LAYOUT;
+    }
+
+    private static final long min_height$OFFSET = 4;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int min_height
+     * }
+     */
+    public static final long min_height$offset() {
+        return min_height$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int min_height
+     * }
+     */
+    public static int min_height(MemorySegment struct) {
+        return struct.get(min_height$LAYOUT, min_height$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int min_height
+     * }
+     */
+    public static void min_height(MemorySegment struct, int fieldValue) {
+        struct.set(min_height$LAYOUT, min_height$OFFSET, fieldValue);
+    }
+
+    private static final OfInt max_width$LAYOUT = (OfInt)$LAYOUT.select(groupElement("max_width"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int max_width
+     * }
+     */
+    public static final OfInt max_width$layout() {
+        return max_width$LAYOUT;
+    }
+
+    private static final long max_width$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int max_width
+     * }
+     */
+    public static final long max_width$offset() {
+        return max_width$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int max_width
+     * }
+     */
+    public static int max_width(MemorySegment struct) {
+        return struct.get(max_width$LAYOUT, max_width$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int max_width
+     * }
+     */
+    public static void max_width(MemorySegment struct, int fieldValue) {
+        struct.set(max_width$LAYOUT, max_width$OFFSET, fieldValue);
+    }
+
+    private static final OfInt max_height$LAYOUT = (OfInt)$LAYOUT.select(groupElement("max_height"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int max_height
+     * }
+     */
+    public static final OfInt max_height$layout() {
+        return max_height$LAYOUT;
+    }
+
+    private static final long max_height$OFFSET = 12;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int max_height
+     * }
+     */
+    public static final long max_height$offset() {
+        return max_height$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int max_height
+     * }
+     */
+    public static int max_height(MemorySegment struct) {
+        return struct.get(max_height$LAYOUT, max_height$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int max_height
+     * }
+     */
+    public static void max_height(MemorySegment struct, int fieldValue) {
+        struct.set(max_height$LAYOUT, max_height$OFFSET, fieldValue);
+    }
+
+    private static final OfInt width_inc$LAYOUT = (OfInt)$LAYOUT.select(groupElement("width_inc"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int width_inc
+     * }
+     */
+    public static final OfInt width_inc$layout() {
+        return width_inc$LAYOUT;
+    }
+
+    private static final long width_inc$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int width_inc
+     * }
+     */
+    public static final long width_inc$offset() {
+        return width_inc$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int width_inc
+     * }
+     */
+    public static int width_inc(MemorySegment struct) {
+        return struct.get(width_inc$LAYOUT, width_inc$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int width_inc
+     * }
+     */
+    public static void width_inc(MemorySegment struct, int fieldValue) {
+        struct.set(width_inc$LAYOUT, width_inc$OFFSET, fieldValue);
+    }
+
+    private static final OfInt height_inc$LAYOUT = (OfInt)$LAYOUT.select(groupElement("height_inc"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int height_inc
+     * }
+     */
+    public static final OfInt height_inc$layout() {
+        return height_inc$LAYOUT;
+    }
+
+    private static final long height_inc$OFFSET = 20;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int height_inc
+     * }
+     */
+    public static final long height_inc$offset() {
+        return height_inc$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int height_inc
+     * }
+     */
+    public static int height_inc(MemorySegment struct) {
+        return struct.get(height_inc$LAYOUT, height_inc$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int height_inc
+     * }
+     */
+    public static void height_inc(MemorySegment struct, int fieldValue) {
+        struct.set(height_inc$LAYOUT, height_inc$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

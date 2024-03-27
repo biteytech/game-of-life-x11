@@ -2,20 +2,27 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
- * typedef struct __pthread_internal_slist __pthread_slist_t;
+ * {@snippet lang=c :
+ * typedef struct __pthread_internal_slist {
+ *     struct __pthread_internal_slist *__next;
+ * } __pthread_slist_t
  * }
  */
-public final class __pthread_slist_t extends __pthread_internal_slist {
+public class __pthread_slist_t extends __pthread_internal_slist {
 
-    // Suppresses default constructor, ensuring non-instantiability.
-    private __pthread_slist_t() {}
+    __pthread_slist_t() {
+        // Should not be called directly
+    }
 }
-
 

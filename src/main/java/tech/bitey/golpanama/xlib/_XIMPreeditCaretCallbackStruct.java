@@ -2,112 +2,218 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct _XIMPreeditCaretCallbackStruct {
  *     int position;
  *     XIMCaretDirection direction;
  *     XIMCaretStyle style;
- * };
+ * }
  * }
  */
 public class _XIMPreeditCaretCallbackStruct {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$120.const$0;
+    _XIMPreeditCaretCallbackStruct() {
+        // Should not be called directly
     }
-    public static VarHandle position$VH() {
-        return constants$120.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int position;
-     * }
-     */
-    public static int position$get(MemorySegment seg) {
-        return (int)constants$120.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int position;
-     * }
-     */
-    public static void position$set(MemorySegment seg, int x) {
-        constants$120.const$1.set(seg, x);
-    }
-    public static int position$get(MemorySegment seg, long index) {
-        return (int)constants$120.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void position$set(MemorySegment seg, long index, int x) {
-        constants$120.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle direction$VH() {
-        return constants$120.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * XIMCaretDirection direction;
-     * }
-     */
-    public static int direction$get(MemorySegment seg) {
-        return (int)constants$120.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * XIMCaretDirection direction;
-     * }
-     */
-    public static void direction$set(MemorySegment seg, int x) {
-        constants$120.const$2.set(seg, x);
-    }
-    public static int direction$get(MemorySegment seg, long index) {
-        return (int)constants$120.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void direction$set(MemorySegment seg, long index, int x) {
-        constants$120.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle style$VH() {
-        return constants$120.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * XIMCaretStyle style;
-     * }
-     */
-    public static int style$get(MemorySegment seg) {
-        return (int)constants$120.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * XIMCaretStyle style;
-     * }
-     */
-    public static void style$set(MemorySegment seg, int x) {
-        constants$120.const$3.set(seg, x);
-    }
-    public static int style$get(MemorySegment seg, long index) {
-        return (int)constants$120.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void style$set(MemorySegment seg, long index, int x) {
-        constants$120.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_INT.withName("position"),
+        Xlib_h.C_INT.withName("direction"),
+        Xlib_h.C_INT.withName("style")
+    ).withName("_XIMPreeditCaretCallbackStruct");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfInt position$LAYOUT = (OfInt)$LAYOUT.select(groupElement("position"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int position
+     * }
+     */
+    public static final OfInt position$layout() {
+        return position$LAYOUT;
+    }
+
+    private static final long position$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int position
+     * }
+     */
+    public static final long position$offset() {
+        return position$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int position
+     * }
+     */
+    public static int position(MemorySegment struct) {
+        return struct.get(position$LAYOUT, position$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int position
+     * }
+     */
+    public static void position(MemorySegment struct, int fieldValue) {
+        struct.set(position$LAYOUT, position$OFFSET, fieldValue);
+    }
+
+    private static final OfInt direction$LAYOUT = (OfInt)$LAYOUT.select(groupElement("direction"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XIMCaretDirection direction
+     * }
+     */
+    public static final OfInt direction$layout() {
+        return direction$LAYOUT;
+    }
+
+    private static final long direction$OFFSET = 4;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XIMCaretDirection direction
+     * }
+     */
+    public static final long direction$offset() {
+        return direction$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XIMCaretDirection direction
+     * }
+     */
+    public static int direction(MemorySegment struct) {
+        return struct.get(direction$LAYOUT, direction$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XIMCaretDirection direction
+     * }
+     */
+    public static void direction(MemorySegment struct, int fieldValue) {
+        struct.set(direction$LAYOUT, direction$OFFSET, fieldValue);
+    }
+
+    private static final OfInt style$LAYOUT = (OfInt)$LAYOUT.select(groupElement("style"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XIMCaretStyle style
+     * }
+     */
+    public static final OfInt style$layout() {
+        return style$LAYOUT;
+    }
+
+    private static final long style$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XIMCaretStyle style
+     * }
+     */
+    public static final long style$offset() {
+        return style$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XIMCaretStyle style
+     * }
+     */
+    public static int style(MemorySegment struct) {
+        return struct.get(style$LAYOUT, style$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XIMCaretStyle style
+     * }
+     */
+    public static void style(MemorySegment struct, int fieldValue) {
+        struct.set(style$LAYOUT, style$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

@@ -2,13 +2,18 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
  *     int key_click_percent;
  *     int bell_percent;
@@ -18,236 +23,427 @@ import static java.lang.foreign.ValueLayout.*;
  *     int led_mode;
  *     int key;
  *     int auto_repeat_mode;
- * };
+ * }
  * }
  */
 public class XKeyboardControl {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$44.const$3;
+    XKeyboardControl() {
+        // Should not be called directly
     }
-    public static VarHandle key_click_percent$VH() {
-        return constants$44.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int key_click_percent;
-     * }
-     */
-    public static int key_click_percent$get(MemorySegment seg) {
-        return (int)constants$44.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int key_click_percent;
-     * }
-     */
-    public static void key_click_percent$set(MemorySegment seg, int x) {
-        constants$44.const$4.set(seg, x);
-    }
-    public static int key_click_percent$get(MemorySegment seg, long index) {
-        return (int)constants$44.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void key_click_percent$set(MemorySegment seg, long index, int x) {
-        constants$44.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle bell_percent$VH() {
-        return constants$44.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int bell_percent;
-     * }
-     */
-    public static int bell_percent$get(MemorySegment seg) {
-        return (int)constants$44.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int bell_percent;
-     * }
-     */
-    public static void bell_percent$set(MemorySegment seg, int x) {
-        constants$44.const$5.set(seg, x);
-    }
-    public static int bell_percent$get(MemorySegment seg, long index) {
-        return (int)constants$44.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void bell_percent$set(MemorySegment seg, long index, int x) {
-        constants$44.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle bell_pitch$VH() {
-        return constants$45.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int bell_pitch;
-     * }
-     */
-    public static int bell_pitch$get(MemorySegment seg) {
-        return (int)constants$45.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int bell_pitch;
-     * }
-     */
-    public static void bell_pitch$set(MemorySegment seg, int x) {
-        constants$45.const$0.set(seg, x);
-    }
-    public static int bell_pitch$get(MemorySegment seg, long index) {
-        return (int)constants$45.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void bell_pitch$set(MemorySegment seg, long index, int x) {
-        constants$45.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle bell_duration$VH() {
-        return constants$45.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int bell_duration;
-     * }
-     */
-    public static int bell_duration$get(MemorySegment seg) {
-        return (int)constants$45.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int bell_duration;
-     * }
-     */
-    public static void bell_duration$set(MemorySegment seg, int x) {
-        constants$45.const$1.set(seg, x);
-    }
-    public static int bell_duration$get(MemorySegment seg, long index) {
-        return (int)constants$45.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void bell_duration$set(MemorySegment seg, long index, int x) {
-        constants$45.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle led$VH() {
-        return constants$45.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int led;
-     * }
-     */
-    public static int led$get(MemorySegment seg) {
-        return (int)constants$45.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int led;
-     * }
-     */
-    public static void led$set(MemorySegment seg, int x) {
-        constants$45.const$2.set(seg, x);
-    }
-    public static int led$get(MemorySegment seg, long index) {
-        return (int)constants$45.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void led$set(MemorySegment seg, long index, int x) {
-        constants$45.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle led_mode$VH() {
-        return constants$45.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int led_mode;
-     * }
-     */
-    public static int led_mode$get(MemorySegment seg) {
-        return (int)constants$45.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int led_mode;
-     * }
-     */
-    public static void led_mode$set(MemorySegment seg, int x) {
-        constants$45.const$3.set(seg, x);
-    }
-    public static int led_mode$get(MemorySegment seg, long index) {
-        return (int)constants$45.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void led_mode$set(MemorySegment seg, long index, int x) {
-        constants$45.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle key$VH() {
-        return constants$45.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int key;
-     * }
-     */
-    public static int key$get(MemorySegment seg) {
-        return (int)constants$45.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int key;
-     * }
-     */
-    public static void key$set(MemorySegment seg, int x) {
-        constants$45.const$4.set(seg, x);
-    }
-    public static int key$get(MemorySegment seg, long index) {
-        return (int)constants$45.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void key$set(MemorySegment seg, long index, int x) {
-        constants$45.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle auto_repeat_mode$VH() {
-        return constants$45.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int auto_repeat_mode;
-     * }
-     */
-    public static int auto_repeat_mode$get(MemorySegment seg) {
-        return (int)constants$45.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int auto_repeat_mode;
-     * }
-     */
-    public static void auto_repeat_mode$set(MemorySegment seg, int x) {
-        constants$45.const$5.set(seg, x);
-    }
-    public static int auto_repeat_mode$get(MemorySegment seg, long index) {
-        return (int)constants$45.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void auto_repeat_mode$set(MemorySegment seg, long index, int x) {
-        constants$45.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_INT.withName("key_click_percent"),
+        Xlib_h.C_INT.withName("bell_percent"),
+        Xlib_h.C_INT.withName("bell_pitch"),
+        Xlib_h.C_INT.withName("bell_duration"),
+        Xlib_h.C_INT.withName("led"),
+        Xlib_h.C_INT.withName("led_mode"),
+        Xlib_h.C_INT.withName("key"),
+        Xlib_h.C_INT.withName("auto_repeat_mode")
+    ).withName("$anon$444:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfInt key_click_percent$LAYOUT = (OfInt)$LAYOUT.select(groupElement("key_click_percent"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int key_click_percent
+     * }
+     */
+    public static final OfInt key_click_percent$layout() {
+        return key_click_percent$LAYOUT;
+    }
+
+    private static final long key_click_percent$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int key_click_percent
+     * }
+     */
+    public static final long key_click_percent$offset() {
+        return key_click_percent$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int key_click_percent
+     * }
+     */
+    public static int key_click_percent(MemorySegment struct) {
+        return struct.get(key_click_percent$LAYOUT, key_click_percent$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int key_click_percent
+     * }
+     */
+    public static void key_click_percent(MemorySegment struct, int fieldValue) {
+        struct.set(key_click_percent$LAYOUT, key_click_percent$OFFSET, fieldValue);
+    }
+
+    private static final OfInt bell_percent$LAYOUT = (OfInt)$LAYOUT.select(groupElement("bell_percent"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int bell_percent
+     * }
+     */
+    public static final OfInt bell_percent$layout() {
+        return bell_percent$LAYOUT;
+    }
+
+    private static final long bell_percent$OFFSET = 4;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int bell_percent
+     * }
+     */
+    public static final long bell_percent$offset() {
+        return bell_percent$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int bell_percent
+     * }
+     */
+    public static int bell_percent(MemorySegment struct) {
+        return struct.get(bell_percent$LAYOUT, bell_percent$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int bell_percent
+     * }
+     */
+    public static void bell_percent(MemorySegment struct, int fieldValue) {
+        struct.set(bell_percent$LAYOUT, bell_percent$OFFSET, fieldValue);
+    }
+
+    private static final OfInt bell_pitch$LAYOUT = (OfInt)$LAYOUT.select(groupElement("bell_pitch"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int bell_pitch
+     * }
+     */
+    public static final OfInt bell_pitch$layout() {
+        return bell_pitch$LAYOUT;
+    }
+
+    private static final long bell_pitch$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int bell_pitch
+     * }
+     */
+    public static final long bell_pitch$offset() {
+        return bell_pitch$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int bell_pitch
+     * }
+     */
+    public static int bell_pitch(MemorySegment struct) {
+        return struct.get(bell_pitch$LAYOUT, bell_pitch$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int bell_pitch
+     * }
+     */
+    public static void bell_pitch(MemorySegment struct, int fieldValue) {
+        struct.set(bell_pitch$LAYOUT, bell_pitch$OFFSET, fieldValue);
+    }
+
+    private static final OfInt bell_duration$LAYOUT = (OfInt)$LAYOUT.select(groupElement("bell_duration"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int bell_duration
+     * }
+     */
+    public static final OfInt bell_duration$layout() {
+        return bell_duration$LAYOUT;
+    }
+
+    private static final long bell_duration$OFFSET = 12;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int bell_duration
+     * }
+     */
+    public static final long bell_duration$offset() {
+        return bell_duration$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int bell_duration
+     * }
+     */
+    public static int bell_duration(MemorySegment struct) {
+        return struct.get(bell_duration$LAYOUT, bell_duration$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int bell_duration
+     * }
+     */
+    public static void bell_duration(MemorySegment struct, int fieldValue) {
+        struct.set(bell_duration$LAYOUT, bell_duration$OFFSET, fieldValue);
+    }
+
+    private static final OfInt led$LAYOUT = (OfInt)$LAYOUT.select(groupElement("led"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int led
+     * }
+     */
+    public static final OfInt led$layout() {
+        return led$LAYOUT;
+    }
+
+    private static final long led$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int led
+     * }
+     */
+    public static final long led$offset() {
+        return led$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int led
+     * }
+     */
+    public static int led(MemorySegment struct) {
+        return struct.get(led$LAYOUT, led$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int led
+     * }
+     */
+    public static void led(MemorySegment struct, int fieldValue) {
+        struct.set(led$LAYOUT, led$OFFSET, fieldValue);
+    }
+
+    private static final OfInt led_mode$LAYOUT = (OfInt)$LAYOUT.select(groupElement("led_mode"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int led_mode
+     * }
+     */
+    public static final OfInt led_mode$layout() {
+        return led_mode$LAYOUT;
+    }
+
+    private static final long led_mode$OFFSET = 20;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int led_mode
+     * }
+     */
+    public static final long led_mode$offset() {
+        return led_mode$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int led_mode
+     * }
+     */
+    public static int led_mode(MemorySegment struct) {
+        return struct.get(led_mode$LAYOUT, led_mode$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int led_mode
+     * }
+     */
+    public static void led_mode(MemorySegment struct, int fieldValue) {
+        struct.set(led_mode$LAYOUT, led_mode$OFFSET, fieldValue);
+    }
+
+    private static final OfInt key$LAYOUT = (OfInt)$LAYOUT.select(groupElement("key"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int key
+     * }
+     */
+    public static final OfInt key$layout() {
+        return key$LAYOUT;
+    }
+
+    private static final long key$OFFSET = 24;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int key
+     * }
+     */
+    public static final long key$offset() {
+        return key$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int key
+     * }
+     */
+    public static int key(MemorySegment struct) {
+        return struct.get(key$LAYOUT, key$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int key
+     * }
+     */
+    public static void key(MemorySegment struct, int fieldValue) {
+        struct.set(key$LAYOUT, key$OFFSET, fieldValue);
+    }
+
+    private static final OfInt auto_repeat_mode$LAYOUT = (OfInt)$LAYOUT.select(groupElement("auto_repeat_mode"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int auto_repeat_mode
+     * }
+     */
+    public static final OfInt auto_repeat_mode$layout() {
+        return auto_repeat_mode$LAYOUT;
+    }
+
+    private static final long auto_repeat_mode$OFFSET = 28;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int auto_repeat_mode
+     * }
+     */
+    public static final long auto_repeat_mode$offset() {
+        return auto_repeat_mode$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int auto_repeat_mode
+     * }
+     */
+    public static int auto_repeat_mode(MemorySegment struct) {
+        return struct.get(auto_repeat_mode$LAYOUT, auto_repeat_mode$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int auto_repeat_mode
+     * }
+     */
+    public static void auto_repeat_mode(MemorySegment struct, int fieldValue) {
+        struct.set(auto_repeat_mode$LAYOUT, auto_repeat_mode$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

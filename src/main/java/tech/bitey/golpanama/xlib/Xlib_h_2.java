@@ -2,11624 +2,9020 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
-import static java.lang.foreign.ValueLayout.*;
-public class Xlib_h_2 extends Xlib_h_1 {
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
 
+import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
+public class Xlib_h_2 extends Xlib_h_3 {
+
+    Xlib_h_2() {
+        // Should not be called directly
+    }
+    private static final int XK_kana_ya = (int)1196L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3467 16787564
+     * {@snippet lang=c :
+     * #define XK_kana_ya 1196
      * }
      */
-    public static int XK_braille_dots_3467() {
-        return (int)16787564L;
+    public static int XK_kana_ya() {
+        return XK_kana_ya;
     }
+    private static final int XK_kana_yu = (int)1197L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13467 16787565
+     * {@snippet lang=c :
+     * #define XK_kana_yu 1197
      * }
      */
-    public static int XK_braille_dots_13467() {
-        return (int)16787565L;
+    public static int XK_kana_yu() {
+        return XK_kana_yu;
     }
+    private static final int XK_kana_yo = (int)1198L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23467 16787566
+     * {@snippet lang=c :
+     * #define XK_kana_yo 1198
      * }
      */
-    public static int XK_braille_dots_23467() {
-        return (int)16787566L;
+    public static int XK_kana_yo() {
+        return XK_kana_yo;
     }
+    private static final int XK_kana_tsu = (int)1199L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123467 16787567
+     * {@snippet lang=c :
+     * #define XK_kana_tsu 1199
      * }
      */
-    public static int XK_braille_dots_123467() {
-        return (int)16787567L;
+    public static int XK_kana_tsu() {
+        return XK_kana_tsu;
     }
+    private static final int XK_kana_tu = (int)1199L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_567 16787568
+     * {@snippet lang=c :
+     * #define XK_kana_tu 1199
      * }
      */
-    public static int XK_braille_dots_567() {
-        return (int)16787568L;
+    public static int XK_kana_tu() {
+        return XK_kana_tu;
     }
+    private static final int XK_prolongedsound = (int)1200L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1567 16787569
+     * {@snippet lang=c :
+     * #define XK_prolongedsound 1200
      * }
      */
-    public static int XK_braille_dots_1567() {
-        return (int)16787569L;
+    public static int XK_prolongedsound() {
+        return XK_prolongedsound;
     }
+    private static final int XK_kana_A = (int)1201L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2567 16787570
+     * {@snippet lang=c :
+     * #define XK_kana_A 1201
      * }
      */
-    public static int XK_braille_dots_2567() {
-        return (int)16787570L;
+    public static int XK_kana_A() {
+        return XK_kana_A;
     }
+    private static final int XK_kana_I = (int)1202L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12567 16787571
+     * {@snippet lang=c :
+     * #define XK_kana_I 1202
      * }
      */
-    public static int XK_braille_dots_12567() {
-        return (int)16787571L;
+    public static int XK_kana_I() {
+        return XK_kana_I;
     }
+    private static final int XK_kana_U = (int)1203L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3567 16787572
+     * {@snippet lang=c :
+     * #define XK_kana_U 1203
      * }
      */
-    public static int XK_braille_dots_3567() {
-        return (int)16787572L;
+    public static int XK_kana_U() {
+        return XK_kana_U;
     }
+    private static final int XK_kana_E = (int)1204L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13567 16787573
+     * {@snippet lang=c :
+     * #define XK_kana_E 1204
      * }
      */
-    public static int XK_braille_dots_13567() {
-        return (int)16787573L;
+    public static int XK_kana_E() {
+        return XK_kana_E;
     }
+    private static final int XK_kana_O = (int)1205L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23567 16787574
+     * {@snippet lang=c :
+     * #define XK_kana_O 1205
      * }
      */
-    public static int XK_braille_dots_23567() {
-        return (int)16787574L;
+    public static int XK_kana_O() {
+        return XK_kana_O;
     }
+    private static final int XK_kana_KA = (int)1206L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123567 16787575
+     * {@snippet lang=c :
+     * #define XK_kana_KA 1206
      * }
      */
-    public static int XK_braille_dots_123567() {
-        return (int)16787575L;
+    public static int XK_kana_KA() {
+        return XK_kana_KA;
     }
+    private static final int XK_kana_KI = (int)1207L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_4567 16787576
+     * {@snippet lang=c :
+     * #define XK_kana_KI 1207
      * }
      */
-    public static int XK_braille_dots_4567() {
-        return (int)16787576L;
+    public static int XK_kana_KI() {
+        return XK_kana_KI;
     }
+    private static final int XK_kana_KU = (int)1208L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_14567 16787577
+     * {@snippet lang=c :
+     * #define XK_kana_KU 1208
      * }
      */
-    public static int XK_braille_dots_14567() {
-        return (int)16787577L;
+    public static int XK_kana_KU() {
+        return XK_kana_KU;
     }
+    private static final int XK_kana_KE = (int)1209L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_24567 16787578
+     * {@snippet lang=c :
+     * #define XK_kana_KE 1209
      * }
      */
-    public static int XK_braille_dots_24567() {
-        return (int)16787578L;
+    public static int XK_kana_KE() {
+        return XK_kana_KE;
     }
+    private static final int XK_kana_KO = (int)1210L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_124567 16787579
+     * {@snippet lang=c :
+     * #define XK_kana_KO 1210
      * }
      */
-    public static int XK_braille_dots_124567() {
-        return (int)16787579L;
+    public static int XK_kana_KO() {
+        return XK_kana_KO;
     }
+    private static final int XK_kana_SA = (int)1211L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_34567 16787580
+     * {@snippet lang=c :
+     * #define XK_kana_SA 1211
      * }
      */
-    public static int XK_braille_dots_34567() {
-        return (int)16787580L;
+    public static int XK_kana_SA() {
+        return XK_kana_SA;
     }
+    private static final int XK_kana_SHI = (int)1212L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_134567 16787581
+     * {@snippet lang=c :
+     * #define XK_kana_SHI 1212
      * }
      */
-    public static int XK_braille_dots_134567() {
-        return (int)16787581L;
+    public static int XK_kana_SHI() {
+        return XK_kana_SHI;
     }
+    private static final int XK_kana_SU = (int)1213L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_234567 16787582
+     * {@snippet lang=c :
+     * #define XK_kana_SU 1213
      * }
      */
-    public static int XK_braille_dots_234567() {
-        return (int)16787582L;
+    public static int XK_kana_SU() {
+        return XK_kana_SU;
     }
+    private static final int XK_kana_SE = (int)1214L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1234567 16787583
+     * {@snippet lang=c :
+     * #define XK_kana_SE 1214
      * }
      */
-    public static int XK_braille_dots_1234567() {
-        return (int)16787583L;
+    public static int XK_kana_SE() {
+        return XK_kana_SE;
     }
+    private static final int XK_kana_SO = (int)1215L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_8 16787584
+     * {@snippet lang=c :
+     * #define XK_kana_SO 1215
      * }
      */
-    public static int XK_braille_dots_8() {
-        return (int)16787584L;
+    public static int XK_kana_SO() {
+        return XK_kana_SO;
     }
+    private static final int XK_kana_TA = (int)1216L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_18 16787585
+     * {@snippet lang=c :
+     * #define XK_kana_TA 1216
      * }
      */
-    public static int XK_braille_dots_18() {
-        return (int)16787585L;
+    public static int XK_kana_TA() {
+        return XK_kana_TA;
     }
+    private static final int XK_kana_CHI = (int)1217L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_28 16787586
+     * {@snippet lang=c :
+     * #define XK_kana_CHI 1217
      * }
      */
-    public static int XK_braille_dots_28() {
-        return (int)16787586L;
+    public static int XK_kana_CHI() {
+        return XK_kana_CHI;
     }
+    private static final int XK_kana_TI = (int)1217L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_128 16787587
+     * {@snippet lang=c :
+     * #define XK_kana_TI 1217
      * }
      */
-    public static int XK_braille_dots_128() {
-        return (int)16787587L;
+    public static int XK_kana_TI() {
+        return XK_kana_TI;
     }
+    private static final int XK_kana_TSU = (int)1218L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_38 16787588
+     * {@snippet lang=c :
+     * #define XK_kana_TSU 1218
      * }
      */
-    public static int XK_braille_dots_38() {
-        return (int)16787588L;
+    public static int XK_kana_TSU() {
+        return XK_kana_TSU;
     }
+    private static final int XK_kana_TU = (int)1218L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_138 16787589
+     * {@snippet lang=c :
+     * #define XK_kana_TU 1218
      * }
      */
-    public static int XK_braille_dots_138() {
-        return (int)16787589L;
+    public static int XK_kana_TU() {
+        return XK_kana_TU;
     }
+    private static final int XK_kana_TE = (int)1219L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_238 16787590
+     * {@snippet lang=c :
+     * #define XK_kana_TE 1219
      * }
      */
-    public static int XK_braille_dots_238() {
-        return (int)16787590L;
+    public static int XK_kana_TE() {
+        return XK_kana_TE;
     }
+    private static final int XK_kana_TO = (int)1220L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1238 16787591
+     * {@snippet lang=c :
+     * #define XK_kana_TO 1220
      * }
      */
-    public static int XK_braille_dots_1238() {
-        return (int)16787591L;
+    public static int XK_kana_TO() {
+        return XK_kana_TO;
     }
+    private static final int XK_kana_NA = (int)1221L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_48 16787592
+     * {@snippet lang=c :
+     * #define XK_kana_NA 1221
      * }
      */
-    public static int XK_braille_dots_48() {
-        return (int)16787592L;
+    public static int XK_kana_NA() {
+        return XK_kana_NA;
     }
+    private static final int XK_kana_NI = (int)1222L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_148 16787593
+     * {@snippet lang=c :
+     * #define XK_kana_NI 1222
      * }
      */
-    public static int XK_braille_dots_148() {
-        return (int)16787593L;
+    public static int XK_kana_NI() {
+        return XK_kana_NI;
     }
+    private static final int XK_kana_NU = (int)1223L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_248 16787594
+     * {@snippet lang=c :
+     * #define XK_kana_NU 1223
      * }
      */
-    public static int XK_braille_dots_248() {
-        return (int)16787594L;
+    public static int XK_kana_NU() {
+        return XK_kana_NU;
     }
+    private static final int XK_kana_NE = (int)1224L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1248 16787595
+     * {@snippet lang=c :
+     * #define XK_kana_NE 1224
      * }
      */
-    public static int XK_braille_dots_1248() {
-        return (int)16787595L;
+    public static int XK_kana_NE() {
+        return XK_kana_NE;
     }
+    private static final int XK_kana_NO = (int)1225L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_348 16787596
+     * {@snippet lang=c :
+     * #define XK_kana_NO 1225
      * }
      */
-    public static int XK_braille_dots_348() {
-        return (int)16787596L;
+    public static int XK_kana_NO() {
+        return XK_kana_NO;
     }
+    private static final int XK_kana_HA = (int)1226L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1348 16787597
+     * {@snippet lang=c :
+     * #define XK_kana_HA 1226
      * }
      */
-    public static int XK_braille_dots_1348() {
-        return (int)16787597L;
+    public static int XK_kana_HA() {
+        return XK_kana_HA;
     }
+    private static final int XK_kana_HI = (int)1227L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2348 16787598
+     * {@snippet lang=c :
+     * #define XK_kana_HI 1227
      * }
      */
-    public static int XK_braille_dots_2348() {
-        return (int)16787598L;
+    public static int XK_kana_HI() {
+        return XK_kana_HI;
     }
+    private static final int XK_kana_FU = (int)1228L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12348 16787599
+     * {@snippet lang=c :
+     * #define XK_kana_FU 1228
      * }
      */
-    public static int XK_braille_dots_12348() {
-        return (int)16787599L;
+    public static int XK_kana_FU() {
+        return XK_kana_FU;
     }
+    private static final int XK_kana_HU = (int)1228L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_58 16787600
+     * {@snippet lang=c :
+     * #define XK_kana_HU 1228
      * }
      */
-    public static int XK_braille_dots_58() {
-        return (int)16787600L;
+    public static int XK_kana_HU() {
+        return XK_kana_HU;
     }
+    private static final int XK_kana_HE = (int)1229L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_158 16787601
+     * {@snippet lang=c :
+     * #define XK_kana_HE 1229
      * }
      */
-    public static int XK_braille_dots_158() {
-        return (int)16787601L;
+    public static int XK_kana_HE() {
+        return XK_kana_HE;
     }
+    private static final int XK_kana_HO = (int)1230L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_258 16787602
+     * {@snippet lang=c :
+     * #define XK_kana_HO 1230
      * }
      */
-    public static int XK_braille_dots_258() {
-        return (int)16787602L;
+    public static int XK_kana_HO() {
+        return XK_kana_HO;
     }
+    private static final int XK_kana_MA = (int)1231L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1258 16787603
+     * {@snippet lang=c :
+     * #define XK_kana_MA 1231
      * }
      */
-    public static int XK_braille_dots_1258() {
-        return (int)16787603L;
+    public static int XK_kana_MA() {
+        return XK_kana_MA;
     }
+    private static final int XK_kana_MI = (int)1232L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_358 16787604
+     * {@snippet lang=c :
+     * #define XK_kana_MI 1232
      * }
      */
-    public static int XK_braille_dots_358() {
-        return (int)16787604L;
+    public static int XK_kana_MI() {
+        return XK_kana_MI;
     }
+    private static final int XK_kana_MU = (int)1233L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1358 16787605
+     * {@snippet lang=c :
+     * #define XK_kana_MU 1233
      * }
      */
-    public static int XK_braille_dots_1358() {
-        return (int)16787605L;
+    public static int XK_kana_MU() {
+        return XK_kana_MU;
     }
+    private static final int XK_kana_ME = (int)1234L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2358 16787606
+     * {@snippet lang=c :
+     * #define XK_kana_ME 1234
      * }
      */
-    public static int XK_braille_dots_2358() {
-        return (int)16787606L;
+    public static int XK_kana_ME() {
+        return XK_kana_ME;
     }
+    private static final int XK_kana_MO = (int)1235L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12358 16787607
+     * {@snippet lang=c :
+     * #define XK_kana_MO 1235
      * }
      */
-    public static int XK_braille_dots_12358() {
-        return (int)16787607L;
+    public static int XK_kana_MO() {
+        return XK_kana_MO;
     }
+    private static final int XK_kana_YA = (int)1236L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_458 16787608
+     * {@snippet lang=c :
+     * #define XK_kana_YA 1236
      * }
      */
-    public static int XK_braille_dots_458() {
-        return (int)16787608L;
+    public static int XK_kana_YA() {
+        return XK_kana_YA;
     }
+    private static final int XK_kana_YU = (int)1237L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1458 16787609
+     * {@snippet lang=c :
+     * #define XK_kana_YU 1237
      * }
      */
-    public static int XK_braille_dots_1458() {
-        return (int)16787609L;
+    public static int XK_kana_YU() {
+        return XK_kana_YU;
     }
+    private static final int XK_kana_YO = (int)1238L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2458 16787610
+     * {@snippet lang=c :
+     * #define XK_kana_YO 1238
      * }
      */
-    public static int XK_braille_dots_2458() {
-        return (int)16787610L;
+    public static int XK_kana_YO() {
+        return XK_kana_YO;
     }
+    private static final int XK_kana_RA = (int)1239L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12458 16787611
+     * {@snippet lang=c :
+     * #define XK_kana_RA 1239
      * }
      */
-    public static int XK_braille_dots_12458() {
-        return (int)16787611L;
+    public static int XK_kana_RA() {
+        return XK_kana_RA;
     }
+    private static final int XK_kana_RI = (int)1240L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3458 16787612
+     * {@snippet lang=c :
+     * #define XK_kana_RI 1240
      * }
      */
-    public static int XK_braille_dots_3458() {
-        return (int)16787612L;
+    public static int XK_kana_RI() {
+        return XK_kana_RI;
     }
+    private static final int XK_kana_RU = (int)1241L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13458 16787613
+     * {@snippet lang=c :
+     * #define XK_kana_RU 1241
      * }
      */
-    public static int XK_braille_dots_13458() {
-        return (int)16787613L;
+    public static int XK_kana_RU() {
+        return XK_kana_RU;
     }
+    private static final int XK_kana_RE = (int)1242L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23458 16787614
+     * {@snippet lang=c :
+     * #define XK_kana_RE 1242
      * }
      */
-    public static int XK_braille_dots_23458() {
-        return (int)16787614L;
+    public static int XK_kana_RE() {
+        return XK_kana_RE;
     }
+    private static final int XK_kana_RO = (int)1243L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123458 16787615
+     * {@snippet lang=c :
+     * #define XK_kana_RO 1243
      * }
      */
-    public static int XK_braille_dots_123458() {
-        return (int)16787615L;
+    public static int XK_kana_RO() {
+        return XK_kana_RO;
     }
+    private static final int XK_kana_WA = (int)1244L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_68 16787616
+     * {@snippet lang=c :
+     * #define XK_kana_WA 1244
      * }
      */
-    public static int XK_braille_dots_68() {
-        return (int)16787616L;
+    public static int XK_kana_WA() {
+        return XK_kana_WA;
     }
+    private static final int XK_kana_N = (int)1245L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_168 16787617
+     * {@snippet lang=c :
+     * #define XK_kana_N 1245
      * }
      */
-    public static int XK_braille_dots_168() {
-        return (int)16787617L;
+    public static int XK_kana_N() {
+        return XK_kana_N;
     }
+    private static final int XK_voicedsound = (int)1246L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_268 16787618
+     * {@snippet lang=c :
+     * #define XK_voicedsound 1246
      * }
      */
-    public static int XK_braille_dots_268() {
-        return (int)16787618L;
+    public static int XK_voicedsound() {
+        return XK_voicedsound;
     }
+    private static final int XK_semivoicedsound = (int)1247L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1268 16787619
+     * {@snippet lang=c :
+     * #define XK_semivoicedsound 1247
      * }
      */
-    public static int XK_braille_dots_1268() {
-        return (int)16787619L;
+    public static int XK_semivoicedsound() {
+        return XK_semivoicedsound;
     }
+    private static final int XK_kana_switch = (int)65406L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_368 16787620
+     * {@snippet lang=c :
+     * #define XK_kana_switch 65406
      * }
      */
-    public static int XK_braille_dots_368() {
-        return (int)16787620L;
+    public static int XK_kana_switch() {
+        return XK_kana_switch;
     }
+    private static final int XK_Farsi_0 = (int)16778992L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1368 16787621
+     * {@snippet lang=c :
+     * #define XK_Farsi_0 16778992
      * }
      */
-    public static int XK_braille_dots_1368() {
-        return (int)16787621L;
+    public static int XK_Farsi_0() {
+        return XK_Farsi_0;
     }
+    private static final int XK_Farsi_1 = (int)16778993L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2368 16787622
+     * {@snippet lang=c :
+     * #define XK_Farsi_1 16778993
      * }
      */
-    public static int XK_braille_dots_2368() {
-        return (int)16787622L;
+    public static int XK_Farsi_1() {
+        return XK_Farsi_1;
     }
+    private static final int XK_Farsi_2 = (int)16778994L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12368 16787623
+     * {@snippet lang=c :
+     * #define XK_Farsi_2 16778994
      * }
      */
-    public static int XK_braille_dots_12368() {
-        return (int)16787623L;
+    public static int XK_Farsi_2() {
+        return XK_Farsi_2;
     }
+    private static final int XK_Farsi_3 = (int)16778995L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_468 16787624
+     * {@snippet lang=c :
+     * #define XK_Farsi_3 16778995
      * }
      */
-    public static int XK_braille_dots_468() {
-        return (int)16787624L;
+    public static int XK_Farsi_3() {
+        return XK_Farsi_3;
     }
+    private static final int XK_Farsi_4 = (int)16778996L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1468 16787625
+     * {@snippet lang=c :
+     * #define XK_Farsi_4 16778996
      * }
      */
-    public static int XK_braille_dots_1468() {
-        return (int)16787625L;
+    public static int XK_Farsi_4() {
+        return XK_Farsi_4;
     }
+    private static final int XK_Farsi_5 = (int)16778997L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2468 16787626
+     * {@snippet lang=c :
+     * #define XK_Farsi_5 16778997
      * }
      */
-    public static int XK_braille_dots_2468() {
-        return (int)16787626L;
+    public static int XK_Farsi_5() {
+        return XK_Farsi_5;
     }
+    private static final int XK_Farsi_6 = (int)16778998L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12468 16787627
+     * {@snippet lang=c :
+     * #define XK_Farsi_6 16778998
      * }
      */
-    public static int XK_braille_dots_12468() {
-        return (int)16787627L;
+    public static int XK_Farsi_6() {
+        return XK_Farsi_6;
     }
+    private static final int XK_Farsi_7 = (int)16778999L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3468 16787628
+     * {@snippet lang=c :
+     * #define XK_Farsi_7 16778999
      * }
      */
-    public static int XK_braille_dots_3468() {
-        return (int)16787628L;
+    public static int XK_Farsi_7() {
+        return XK_Farsi_7;
     }
+    private static final int XK_Farsi_8 = (int)16779000L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13468 16787629
+     * {@snippet lang=c :
+     * #define XK_Farsi_8 16779000
      * }
      */
-    public static int XK_braille_dots_13468() {
-        return (int)16787629L;
+    public static int XK_Farsi_8() {
+        return XK_Farsi_8;
     }
+    private static final int XK_Farsi_9 = (int)16779001L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23468 16787630
+     * {@snippet lang=c :
+     * #define XK_Farsi_9 16779001
      * }
      */
-    public static int XK_braille_dots_23468() {
-        return (int)16787630L;
+    public static int XK_Farsi_9() {
+        return XK_Farsi_9;
     }
+    private static final int XK_Arabic_percent = (int)16778858L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123468 16787631
+     * {@snippet lang=c :
+     * #define XK_Arabic_percent 16778858
      * }
      */
-    public static int XK_braille_dots_123468() {
-        return (int)16787631L;
+    public static int XK_Arabic_percent() {
+        return XK_Arabic_percent;
     }
+    private static final int XK_Arabic_superscript_alef = (int)16778864L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_568 16787632
+     * {@snippet lang=c :
+     * #define XK_Arabic_superscript_alef 16778864
      * }
      */
-    public static int XK_braille_dots_568() {
-        return (int)16787632L;
+    public static int XK_Arabic_superscript_alef() {
+        return XK_Arabic_superscript_alef;
     }
+    private static final int XK_Arabic_tteh = (int)16778873L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1568 16787633
+     * {@snippet lang=c :
+     * #define XK_Arabic_tteh 16778873
      * }
      */
-    public static int XK_braille_dots_1568() {
-        return (int)16787633L;
+    public static int XK_Arabic_tteh() {
+        return XK_Arabic_tteh;
     }
+    private static final int XK_Arabic_peh = (int)16778878L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2568 16787634
+     * {@snippet lang=c :
+     * #define XK_Arabic_peh 16778878
      * }
      */
-    public static int XK_braille_dots_2568() {
-        return (int)16787634L;
+    public static int XK_Arabic_peh() {
+        return XK_Arabic_peh;
     }
+    private static final int XK_Arabic_tcheh = (int)16778886L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12568 16787635
+     * {@snippet lang=c :
+     * #define XK_Arabic_tcheh 16778886
      * }
      */
-    public static int XK_braille_dots_12568() {
-        return (int)16787635L;
+    public static int XK_Arabic_tcheh() {
+        return XK_Arabic_tcheh;
     }
+    private static final int XK_Arabic_ddal = (int)16778888L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3568 16787636
+     * {@snippet lang=c :
+     * #define XK_Arabic_ddal 16778888
      * }
      */
-    public static int XK_braille_dots_3568() {
-        return (int)16787636L;
+    public static int XK_Arabic_ddal() {
+        return XK_Arabic_ddal;
     }
+    private static final int XK_Arabic_rreh = (int)16778897L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13568 16787637
+     * {@snippet lang=c :
+     * #define XK_Arabic_rreh 16778897
      * }
      */
-    public static int XK_braille_dots_13568() {
-        return (int)16787637L;
+    public static int XK_Arabic_rreh() {
+        return XK_Arabic_rreh;
     }
+    private static final int XK_Arabic_comma = (int)1452L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23568 16787638
+     * {@snippet lang=c :
+     * #define XK_Arabic_comma 1452
      * }
      */
-    public static int XK_braille_dots_23568() {
-        return (int)16787638L;
+    public static int XK_Arabic_comma() {
+        return XK_Arabic_comma;
     }
+    private static final int XK_Arabic_fullstop = (int)16778964L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123568 16787639
+     * {@snippet lang=c :
+     * #define XK_Arabic_fullstop 16778964
      * }
      */
-    public static int XK_braille_dots_123568() {
-        return (int)16787639L;
+    public static int XK_Arabic_fullstop() {
+        return XK_Arabic_fullstop;
     }
+    private static final int XK_Arabic_0 = (int)16778848L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_4568 16787640
+     * {@snippet lang=c :
+     * #define XK_Arabic_0 16778848
      * }
      */
-    public static int XK_braille_dots_4568() {
-        return (int)16787640L;
+    public static int XK_Arabic_0() {
+        return XK_Arabic_0;
     }
+    private static final int XK_Arabic_1 = (int)16778849L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_14568 16787641
+     * {@snippet lang=c :
+     * #define XK_Arabic_1 16778849
      * }
      */
-    public static int XK_braille_dots_14568() {
-        return (int)16787641L;
+    public static int XK_Arabic_1() {
+        return XK_Arabic_1;
     }
+    private static final int XK_Arabic_2 = (int)16778850L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_24568 16787642
+     * {@snippet lang=c :
+     * #define XK_Arabic_2 16778850
      * }
      */
-    public static int XK_braille_dots_24568() {
-        return (int)16787642L;
+    public static int XK_Arabic_2() {
+        return XK_Arabic_2;
     }
+    private static final int XK_Arabic_3 = (int)16778851L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_124568 16787643
+     * {@snippet lang=c :
+     * #define XK_Arabic_3 16778851
      * }
      */
-    public static int XK_braille_dots_124568() {
-        return (int)16787643L;
+    public static int XK_Arabic_3() {
+        return XK_Arabic_3;
     }
+    private static final int XK_Arabic_4 = (int)16778852L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_34568 16787644
+     * {@snippet lang=c :
+     * #define XK_Arabic_4 16778852
      * }
      */
-    public static int XK_braille_dots_34568() {
-        return (int)16787644L;
+    public static int XK_Arabic_4() {
+        return XK_Arabic_4;
     }
+    private static final int XK_Arabic_5 = (int)16778853L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_134568 16787645
+     * {@snippet lang=c :
+     * #define XK_Arabic_5 16778853
      * }
      */
-    public static int XK_braille_dots_134568() {
-        return (int)16787645L;
+    public static int XK_Arabic_5() {
+        return XK_Arabic_5;
     }
+    private static final int XK_Arabic_6 = (int)16778854L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_234568 16787646
+     * {@snippet lang=c :
+     * #define XK_Arabic_6 16778854
      * }
      */
-    public static int XK_braille_dots_234568() {
-        return (int)16787646L;
+    public static int XK_Arabic_6() {
+        return XK_Arabic_6;
     }
+    private static final int XK_Arabic_7 = (int)16778855L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1234568 16787647
+     * {@snippet lang=c :
+     * #define XK_Arabic_7 16778855
      * }
      */
-    public static int XK_braille_dots_1234568() {
-        return (int)16787647L;
+    public static int XK_Arabic_7() {
+        return XK_Arabic_7;
     }
+    private static final int XK_Arabic_8 = (int)16778856L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_78 16787648
+     * {@snippet lang=c :
+     * #define XK_Arabic_8 16778856
      * }
      */
-    public static int XK_braille_dots_78() {
-        return (int)16787648L;
+    public static int XK_Arabic_8() {
+        return XK_Arabic_8;
     }
+    private static final int XK_Arabic_9 = (int)16778857L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_178 16787649
+     * {@snippet lang=c :
+     * #define XK_Arabic_9 16778857
      * }
      */
-    public static int XK_braille_dots_178() {
-        return (int)16787649L;
+    public static int XK_Arabic_9() {
+        return XK_Arabic_9;
     }
+    private static final int XK_Arabic_semicolon = (int)1467L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_278 16787650
+     * {@snippet lang=c :
+     * #define XK_Arabic_semicolon 1467
      * }
      */
-    public static int XK_braille_dots_278() {
-        return (int)16787650L;
+    public static int XK_Arabic_semicolon() {
+        return XK_Arabic_semicolon;
     }
+    private static final int XK_Arabic_question_mark = (int)1471L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1278 16787651
+     * {@snippet lang=c :
+     * #define XK_Arabic_question_mark 1471
      * }
      */
-    public static int XK_braille_dots_1278() {
-        return (int)16787651L;
+    public static int XK_Arabic_question_mark() {
+        return XK_Arabic_question_mark;
     }
+    private static final int XK_Arabic_hamza = (int)1473L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_378 16787652
+     * {@snippet lang=c :
+     * #define XK_Arabic_hamza 1473
      * }
      */
-    public static int XK_braille_dots_378() {
-        return (int)16787652L;
+    public static int XK_Arabic_hamza() {
+        return XK_Arabic_hamza;
     }
+    private static final int XK_Arabic_maddaonalef = (int)1474L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1378 16787653
+     * {@snippet lang=c :
+     * #define XK_Arabic_maddaonalef 1474
      * }
      */
-    public static int XK_braille_dots_1378() {
-        return (int)16787653L;
+    public static int XK_Arabic_maddaonalef() {
+        return XK_Arabic_maddaonalef;
     }
+    private static final int XK_Arabic_hamzaonalef = (int)1475L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2378 16787654
+     * {@snippet lang=c :
+     * #define XK_Arabic_hamzaonalef 1475
      * }
      */
-    public static int XK_braille_dots_2378() {
-        return (int)16787654L;
+    public static int XK_Arabic_hamzaonalef() {
+        return XK_Arabic_hamzaonalef;
     }
+    private static final int XK_Arabic_hamzaonwaw = (int)1476L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12378 16787655
+     * {@snippet lang=c :
+     * #define XK_Arabic_hamzaonwaw 1476
      * }
      */
-    public static int XK_braille_dots_12378() {
-        return (int)16787655L;
+    public static int XK_Arabic_hamzaonwaw() {
+        return XK_Arabic_hamzaonwaw;
     }
+    private static final int XK_Arabic_hamzaunderalef = (int)1477L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_478 16787656
+     * {@snippet lang=c :
+     * #define XK_Arabic_hamzaunderalef 1477
      * }
      */
-    public static int XK_braille_dots_478() {
-        return (int)16787656L;
+    public static int XK_Arabic_hamzaunderalef() {
+        return XK_Arabic_hamzaunderalef;
     }
+    private static final int XK_Arabic_hamzaonyeh = (int)1478L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1478 16787657
+     * {@snippet lang=c :
+     * #define XK_Arabic_hamzaonyeh 1478
      * }
      */
-    public static int XK_braille_dots_1478() {
-        return (int)16787657L;
+    public static int XK_Arabic_hamzaonyeh() {
+        return XK_Arabic_hamzaonyeh;
     }
+    private static final int XK_Arabic_alef = (int)1479L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2478 16787658
+     * {@snippet lang=c :
+     * #define XK_Arabic_alef 1479
      * }
      */
-    public static int XK_braille_dots_2478() {
-        return (int)16787658L;
+    public static int XK_Arabic_alef() {
+        return XK_Arabic_alef;
     }
+    private static final int XK_Arabic_beh = (int)1480L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12478 16787659
+     * {@snippet lang=c :
+     * #define XK_Arabic_beh 1480
      * }
      */
-    public static int XK_braille_dots_12478() {
-        return (int)16787659L;
+    public static int XK_Arabic_beh() {
+        return XK_Arabic_beh;
     }
+    private static final int XK_Arabic_tehmarbuta = (int)1481L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3478 16787660
+     * {@snippet lang=c :
+     * #define XK_Arabic_tehmarbuta 1481
      * }
      */
-    public static int XK_braille_dots_3478() {
-        return (int)16787660L;
+    public static int XK_Arabic_tehmarbuta() {
+        return XK_Arabic_tehmarbuta;
     }
+    private static final int XK_Arabic_teh = (int)1482L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13478 16787661
+     * {@snippet lang=c :
+     * #define XK_Arabic_teh 1482
      * }
      */
-    public static int XK_braille_dots_13478() {
-        return (int)16787661L;
+    public static int XK_Arabic_teh() {
+        return XK_Arabic_teh;
     }
+    private static final int XK_Arabic_theh = (int)1483L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23478 16787662
+     * {@snippet lang=c :
+     * #define XK_Arabic_theh 1483
      * }
      */
-    public static int XK_braille_dots_23478() {
-        return (int)16787662L;
+    public static int XK_Arabic_theh() {
+        return XK_Arabic_theh;
     }
+    private static final int XK_Arabic_jeem = (int)1484L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123478 16787663
+     * {@snippet lang=c :
+     * #define XK_Arabic_jeem 1484
      * }
      */
-    public static int XK_braille_dots_123478() {
-        return (int)16787663L;
+    public static int XK_Arabic_jeem() {
+        return XK_Arabic_jeem;
     }
+    private static final int XK_Arabic_hah = (int)1485L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_578 16787664
+     * {@snippet lang=c :
+     * #define XK_Arabic_hah 1485
      * }
      */
-    public static int XK_braille_dots_578() {
-        return (int)16787664L;
+    public static int XK_Arabic_hah() {
+        return XK_Arabic_hah;
     }
+    private static final int XK_Arabic_khah = (int)1486L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1578 16787665
+     * {@snippet lang=c :
+     * #define XK_Arabic_khah 1486
      * }
      */
-    public static int XK_braille_dots_1578() {
-        return (int)16787665L;
+    public static int XK_Arabic_khah() {
+        return XK_Arabic_khah;
     }
+    private static final int XK_Arabic_dal = (int)1487L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2578 16787666
+     * {@snippet lang=c :
+     * #define XK_Arabic_dal 1487
      * }
      */
-    public static int XK_braille_dots_2578() {
-        return (int)16787666L;
+    public static int XK_Arabic_dal() {
+        return XK_Arabic_dal;
     }
+    private static final int XK_Arabic_thal = (int)1488L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12578 16787667
+     * {@snippet lang=c :
+     * #define XK_Arabic_thal 1488
      * }
      */
-    public static int XK_braille_dots_12578() {
-        return (int)16787667L;
+    public static int XK_Arabic_thal() {
+        return XK_Arabic_thal;
     }
+    private static final int XK_Arabic_ra = (int)1489L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3578 16787668
+     * {@snippet lang=c :
+     * #define XK_Arabic_ra 1489
      * }
      */
-    public static int XK_braille_dots_3578() {
-        return (int)16787668L;
+    public static int XK_Arabic_ra() {
+        return XK_Arabic_ra;
     }
+    private static final int XK_Arabic_zain = (int)1490L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13578 16787669
+     * {@snippet lang=c :
+     * #define XK_Arabic_zain 1490
      * }
      */
-    public static int XK_braille_dots_13578() {
-        return (int)16787669L;
+    public static int XK_Arabic_zain() {
+        return XK_Arabic_zain;
     }
+    private static final int XK_Arabic_seen = (int)1491L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23578 16787670
+     * {@snippet lang=c :
+     * #define XK_Arabic_seen 1491
      * }
      */
-    public static int XK_braille_dots_23578() {
-        return (int)16787670L;
+    public static int XK_Arabic_seen() {
+        return XK_Arabic_seen;
     }
+    private static final int XK_Arabic_sheen = (int)1492L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123578 16787671
+     * {@snippet lang=c :
+     * #define XK_Arabic_sheen 1492
      * }
      */
-    public static int XK_braille_dots_123578() {
-        return (int)16787671L;
+    public static int XK_Arabic_sheen() {
+        return XK_Arabic_sheen;
     }
+    private static final int XK_Arabic_sad = (int)1493L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_4578 16787672
+     * {@snippet lang=c :
+     * #define XK_Arabic_sad 1493
      * }
      */
-    public static int XK_braille_dots_4578() {
-        return (int)16787672L;
+    public static int XK_Arabic_sad() {
+        return XK_Arabic_sad;
     }
+    private static final int XK_Arabic_dad = (int)1494L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_14578 16787673
+     * {@snippet lang=c :
+     * #define XK_Arabic_dad 1494
      * }
      */
-    public static int XK_braille_dots_14578() {
-        return (int)16787673L;
+    public static int XK_Arabic_dad() {
+        return XK_Arabic_dad;
     }
+    private static final int XK_Arabic_tah = (int)1495L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_24578 16787674
+     * {@snippet lang=c :
+     * #define XK_Arabic_tah 1495
      * }
      */
-    public static int XK_braille_dots_24578() {
-        return (int)16787674L;
+    public static int XK_Arabic_tah() {
+        return XK_Arabic_tah;
     }
+    private static final int XK_Arabic_zah = (int)1496L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_124578 16787675
+     * {@snippet lang=c :
+     * #define XK_Arabic_zah 1496
      * }
      */
-    public static int XK_braille_dots_124578() {
-        return (int)16787675L;
+    public static int XK_Arabic_zah() {
+        return XK_Arabic_zah;
     }
+    private static final int XK_Arabic_ain = (int)1497L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_34578 16787676
+     * {@snippet lang=c :
+     * #define XK_Arabic_ain 1497
      * }
      */
-    public static int XK_braille_dots_34578() {
-        return (int)16787676L;
+    public static int XK_Arabic_ain() {
+        return XK_Arabic_ain;
     }
+    private static final int XK_Arabic_ghain = (int)1498L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_134578 16787677
+     * {@snippet lang=c :
+     * #define XK_Arabic_ghain 1498
      * }
      */
-    public static int XK_braille_dots_134578() {
-        return (int)16787677L;
+    public static int XK_Arabic_ghain() {
+        return XK_Arabic_ghain;
     }
+    private static final int XK_Arabic_tatweel = (int)1504L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_234578 16787678
+     * {@snippet lang=c :
+     * #define XK_Arabic_tatweel 1504
      * }
      */
-    public static int XK_braille_dots_234578() {
-        return (int)16787678L;
+    public static int XK_Arabic_tatweel() {
+        return XK_Arabic_tatweel;
     }
+    private static final int XK_Arabic_feh = (int)1505L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1234578 16787679
+     * {@snippet lang=c :
+     * #define XK_Arabic_feh 1505
      * }
      */
-    public static int XK_braille_dots_1234578() {
-        return (int)16787679L;
+    public static int XK_Arabic_feh() {
+        return XK_Arabic_feh;
     }
+    private static final int XK_Arabic_qaf = (int)1506L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_678 16787680
+     * {@snippet lang=c :
+     * #define XK_Arabic_qaf 1506
      * }
      */
-    public static int XK_braille_dots_678() {
-        return (int)16787680L;
+    public static int XK_Arabic_qaf() {
+        return XK_Arabic_qaf;
     }
+    private static final int XK_Arabic_kaf = (int)1507L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1678 16787681
+     * {@snippet lang=c :
+     * #define XK_Arabic_kaf 1507
      * }
      */
-    public static int XK_braille_dots_1678() {
-        return (int)16787681L;
+    public static int XK_Arabic_kaf() {
+        return XK_Arabic_kaf;
     }
+    private static final int XK_Arabic_lam = (int)1508L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2678 16787682
+     * {@snippet lang=c :
+     * #define XK_Arabic_lam 1508
      * }
      */
-    public static int XK_braille_dots_2678() {
-        return (int)16787682L;
+    public static int XK_Arabic_lam() {
+        return XK_Arabic_lam;
     }
+    private static final int XK_Arabic_meem = (int)1509L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12678 16787683
+     * {@snippet lang=c :
+     * #define XK_Arabic_meem 1509
      * }
      */
-    public static int XK_braille_dots_12678() {
-        return (int)16787683L;
+    public static int XK_Arabic_meem() {
+        return XK_Arabic_meem;
     }
+    private static final int XK_Arabic_noon = (int)1510L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_3678 16787684
+     * {@snippet lang=c :
+     * #define XK_Arabic_noon 1510
      * }
      */
-    public static int XK_braille_dots_3678() {
-        return (int)16787684L;
+    public static int XK_Arabic_noon() {
+        return XK_Arabic_noon;
     }
+    private static final int XK_Arabic_ha = (int)1511L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_13678 16787685
+     * {@snippet lang=c :
+     * #define XK_Arabic_ha 1511
      * }
      */
-    public static int XK_braille_dots_13678() {
-        return (int)16787685L;
+    public static int XK_Arabic_ha() {
+        return XK_Arabic_ha;
     }
+    private static final int XK_Arabic_heh = (int)1511L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_23678 16787686
+     * {@snippet lang=c :
+     * #define XK_Arabic_heh 1511
      * }
      */
-    public static int XK_braille_dots_23678() {
-        return (int)16787686L;
+    public static int XK_Arabic_heh() {
+        return XK_Arabic_heh;
     }
+    private static final int XK_Arabic_waw = (int)1512L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_123678 16787687
+     * {@snippet lang=c :
+     * #define XK_Arabic_waw 1512
      * }
      */
-    public static int XK_braille_dots_123678() {
-        return (int)16787687L;
+    public static int XK_Arabic_waw() {
+        return XK_Arabic_waw;
     }
+    private static final int XK_Arabic_alefmaksura = (int)1513L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_4678 16787688
+     * {@snippet lang=c :
+     * #define XK_Arabic_alefmaksura 1513
      * }
      */
-    public static int XK_braille_dots_4678() {
-        return (int)16787688L;
+    public static int XK_Arabic_alefmaksura() {
+        return XK_Arabic_alefmaksura;
     }
+    private static final int XK_Arabic_yeh = (int)1514L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_14678 16787689
+     * {@snippet lang=c :
+     * #define XK_Arabic_yeh 1514
      * }
      */
-    public static int XK_braille_dots_14678() {
-        return (int)16787689L;
+    public static int XK_Arabic_yeh() {
+        return XK_Arabic_yeh;
     }
+    private static final int XK_Arabic_fathatan = (int)1515L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_24678 16787690
+     * {@snippet lang=c :
+     * #define XK_Arabic_fathatan 1515
      * }
      */
-    public static int XK_braille_dots_24678() {
-        return (int)16787690L;
+    public static int XK_Arabic_fathatan() {
+        return XK_Arabic_fathatan;
     }
+    private static final int XK_Arabic_dammatan = (int)1516L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_124678 16787691
+     * {@snippet lang=c :
+     * #define XK_Arabic_dammatan 1516
      * }
      */
-    public static int XK_braille_dots_124678() {
-        return (int)16787691L;
+    public static int XK_Arabic_dammatan() {
+        return XK_Arabic_dammatan;
     }
+    private static final int XK_Arabic_kasratan = (int)1517L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_34678 16787692
+     * {@snippet lang=c :
+     * #define XK_Arabic_kasratan 1517
      * }
      */
-    public static int XK_braille_dots_34678() {
-        return (int)16787692L;
+    public static int XK_Arabic_kasratan() {
+        return XK_Arabic_kasratan;
     }
+    private static final int XK_Arabic_fatha = (int)1518L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_134678 16787693
+     * {@snippet lang=c :
+     * #define XK_Arabic_fatha 1518
      * }
      */
-    public static int XK_braille_dots_134678() {
-        return (int)16787693L;
+    public static int XK_Arabic_fatha() {
+        return XK_Arabic_fatha;
     }
+    private static final int XK_Arabic_damma = (int)1519L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_234678 16787694
+     * {@snippet lang=c :
+     * #define XK_Arabic_damma 1519
      * }
      */
-    public static int XK_braille_dots_234678() {
-        return (int)16787694L;
+    public static int XK_Arabic_damma() {
+        return XK_Arabic_damma;
     }
+    private static final int XK_Arabic_kasra = (int)1520L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1234678 16787695
+     * {@snippet lang=c :
+     * #define XK_Arabic_kasra 1520
      * }
      */
-    public static int XK_braille_dots_1234678() {
-        return (int)16787695L;
+    public static int XK_Arabic_kasra() {
+        return XK_Arabic_kasra;
     }
+    private static final int XK_Arabic_shadda = (int)1521L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_5678 16787696
+     * {@snippet lang=c :
+     * #define XK_Arabic_shadda 1521
      * }
      */
-    public static int XK_braille_dots_5678() {
-        return (int)16787696L;
+    public static int XK_Arabic_shadda() {
+        return XK_Arabic_shadda;
     }
+    private static final int XK_Arabic_sukun = (int)1522L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_15678 16787697
+     * {@snippet lang=c :
+     * #define XK_Arabic_sukun 1522
      * }
      */
-    public static int XK_braille_dots_15678() {
-        return (int)16787697L;
+    public static int XK_Arabic_sukun() {
+        return XK_Arabic_sukun;
     }
+    private static final int XK_Arabic_madda_above = (int)16778835L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_25678 16787698
+     * {@snippet lang=c :
+     * #define XK_Arabic_madda_above 16778835
      * }
      */
-    public static int XK_braille_dots_25678() {
-        return (int)16787698L;
+    public static int XK_Arabic_madda_above() {
+        return XK_Arabic_madda_above;
     }
+    private static final int XK_Arabic_hamza_above = (int)16778836L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_125678 16787699
+     * {@snippet lang=c :
+     * #define XK_Arabic_hamza_above 16778836
      * }
      */
-    public static int XK_braille_dots_125678() {
-        return (int)16787699L;
+    public static int XK_Arabic_hamza_above() {
+        return XK_Arabic_hamza_above;
     }
+    private static final int XK_Arabic_hamza_below = (int)16778837L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_35678 16787700
+     * {@snippet lang=c :
+     * #define XK_Arabic_hamza_below 16778837
      * }
      */
-    public static int XK_braille_dots_35678() {
-        return (int)16787700L;
+    public static int XK_Arabic_hamza_below() {
+        return XK_Arabic_hamza_below;
     }
+    private static final int XK_Arabic_jeh = (int)16778904L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_135678 16787701
+     * {@snippet lang=c :
+     * #define XK_Arabic_jeh 16778904
      * }
      */
-    public static int XK_braille_dots_135678() {
-        return (int)16787701L;
+    public static int XK_Arabic_jeh() {
+        return XK_Arabic_jeh;
     }
+    private static final int XK_Arabic_veh = (int)16778916L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_235678 16787702
+     * {@snippet lang=c :
+     * #define XK_Arabic_veh 16778916
      * }
      */
-    public static int XK_braille_dots_235678() {
-        return (int)16787702L;
+    public static int XK_Arabic_veh() {
+        return XK_Arabic_veh;
     }
+    private static final int XK_Arabic_keheh = (int)16778921L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1235678 16787703
+     * {@snippet lang=c :
+     * #define XK_Arabic_keheh 16778921
      * }
      */
-    public static int XK_braille_dots_1235678() {
-        return (int)16787703L;
+    public static int XK_Arabic_keheh() {
+        return XK_Arabic_keheh;
     }
+    private static final int XK_Arabic_gaf = (int)16778927L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_45678 16787704
+     * {@snippet lang=c :
+     * #define XK_Arabic_gaf 16778927
      * }
      */
-    public static int XK_braille_dots_45678() {
-        return (int)16787704L;
+    public static int XK_Arabic_gaf() {
+        return XK_Arabic_gaf;
     }
+    private static final int XK_Arabic_noon_ghunna = (int)16778938L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_145678 16787705
+     * {@snippet lang=c :
+     * #define XK_Arabic_noon_ghunna 16778938
      * }
      */
-    public static int XK_braille_dots_145678() {
-        return (int)16787705L;
+    public static int XK_Arabic_noon_ghunna() {
+        return XK_Arabic_noon_ghunna;
     }
+    private static final int XK_Arabic_heh_doachashmee = (int)16778942L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_245678 16787706
+     * {@snippet lang=c :
+     * #define XK_Arabic_heh_doachashmee 16778942
      * }
      */
-    public static int XK_braille_dots_245678() {
-        return (int)16787706L;
+    public static int XK_Arabic_heh_doachashmee() {
+        return XK_Arabic_heh_doachashmee;
     }
+    private static final int XK_Farsi_yeh = (int)16778956L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1245678 16787707
+     * {@snippet lang=c :
+     * #define XK_Farsi_yeh 16778956
      * }
      */
-    public static int XK_braille_dots_1245678() {
-        return (int)16787707L;
+    public static int XK_Farsi_yeh() {
+        return XK_Farsi_yeh;
     }
+    private static final int XK_Arabic_farsi_yeh = (int)16778956L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_345678 16787708
+     * {@snippet lang=c :
+     * #define XK_Arabic_farsi_yeh 16778956
      * }
      */
-    public static int XK_braille_dots_345678() {
-        return (int)16787708L;
+    public static int XK_Arabic_farsi_yeh() {
+        return XK_Arabic_farsi_yeh;
     }
+    private static final int XK_Arabic_yeh_baree = (int)16778962L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_1345678 16787709
+     * {@snippet lang=c :
+     * #define XK_Arabic_yeh_baree 16778962
      * }
      */
-    public static int XK_braille_dots_1345678() {
-        return (int)16787709L;
+    public static int XK_Arabic_yeh_baree() {
+        return XK_Arabic_yeh_baree;
     }
+    private static final int XK_Arabic_heh_goal = (int)16778945L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_2345678 16787710
+     * {@snippet lang=c :
+     * #define XK_Arabic_heh_goal 16778945
      * }
      */
-    public static int XK_braille_dots_2345678() {
-        return (int)16787710L;
+    public static int XK_Arabic_heh_goal() {
+        return XK_Arabic_heh_goal;
     }
+    private static final int XK_Arabic_switch = (int)65406L;
     /**
-     * {@snippet :
-     * #define XK_braille_dots_12345678 16787711
+     * {@snippet lang=c :
+     * #define XK_Arabic_switch 65406
      * }
      */
-    public static int XK_braille_dots_12345678() {
-        return (int)16787711L;
+    public static int XK_Arabic_switch() {
+        return XK_Arabic_switch;
     }
+    private static final int XK_Cyrillic_GHE_bar = (int)16778386L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ng 16780674
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_GHE_bar 16778386
      * }
      */
-    public static int XK_Sinh_ng() {
-        return (int)16780674L;
+    public static int XK_Cyrillic_GHE_bar() {
+        return XK_Cyrillic_GHE_bar;
     }
+    private static final int XK_Cyrillic_ghe_bar = (int)16778387L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_h2 16780675
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ghe_bar 16778387
      * }
      */
-    public static int XK_Sinh_h2() {
-        return (int)16780675L;
+    public static int XK_Cyrillic_ghe_bar() {
+        return XK_Cyrillic_ghe_bar;
     }
+    private static final int XK_Cyrillic_ZHE_descender = (int)16778390L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_a 16780677
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ZHE_descender 16778390
      * }
      */
-    public static int XK_Sinh_a() {
-        return (int)16780677L;
+    public static int XK_Cyrillic_ZHE_descender() {
+        return XK_Cyrillic_ZHE_descender;
     }
+    private static final int XK_Cyrillic_zhe_descender = (int)16778391L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_aa 16780678
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_zhe_descender 16778391
      * }
      */
-    public static int XK_Sinh_aa() {
-        return (int)16780678L;
+    public static int XK_Cyrillic_zhe_descender() {
+        return XK_Cyrillic_zhe_descender;
     }
+    private static final int XK_Cyrillic_KA_descender = (int)16778394L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ae 16780679
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_KA_descender 16778394
      * }
      */
-    public static int XK_Sinh_ae() {
-        return (int)16780679L;
+    public static int XK_Cyrillic_KA_descender() {
+        return XK_Cyrillic_KA_descender;
     }
+    private static final int XK_Cyrillic_ka_descender = (int)16778395L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_aee 16780680
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ka_descender 16778395
      * }
      */
-    public static int XK_Sinh_aee() {
-        return (int)16780680L;
+    public static int XK_Cyrillic_ka_descender() {
+        return XK_Cyrillic_ka_descender;
     }
+    private static final int XK_Cyrillic_KA_vertstroke = (int)16778396L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_i 16780681
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_KA_vertstroke 16778396
      * }
      */
-    public static int XK_Sinh_i() {
-        return (int)16780681L;
+    public static int XK_Cyrillic_KA_vertstroke() {
+        return XK_Cyrillic_KA_vertstroke;
     }
+    private static final int XK_Cyrillic_ka_vertstroke = (int)16778397L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ii 16780682
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ka_vertstroke 16778397
      * }
      */
-    public static int XK_Sinh_ii() {
-        return (int)16780682L;
+    public static int XK_Cyrillic_ka_vertstroke() {
+        return XK_Cyrillic_ka_vertstroke;
     }
+    private static final int XK_Cyrillic_EN_descender = (int)16778402L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_u 16780683
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_EN_descender 16778402
      * }
      */
-    public static int XK_Sinh_u() {
-        return (int)16780683L;
+    public static int XK_Cyrillic_EN_descender() {
+        return XK_Cyrillic_EN_descender;
     }
+    private static final int XK_Cyrillic_en_descender = (int)16778403L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_uu 16780684
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_en_descender 16778403
      * }
      */
-    public static int XK_Sinh_uu() {
-        return (int)16780684L;
+    public static int XK_Cyrillic_en_descender() {
+        return XK_Cyrillic_en_descender;
     }
+    private static final int XK_Cyrillic_U_straight = (int)16778414L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ri 16780685
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_U_straight 16778414
      * }
      */
-    public static int XK_Sinh_ri() {
-        return (int)16780685L;
+    public static int XK_Cyrillic_U_straight() {
+        return XK_Cyrillic_U_straight;
     }
+    private static final int XK_Cyrillic_u_straight = (int)16778415L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_rii 16780686
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_u_straight 16778415
      * }
      */
-    public static int XK_Sinh_rii() {
-        return (int)16780686L;
+    public static int XK_Cyrillic_u_straight() {
+        return XK_Cyrillic_u_straight;
     }
+    private static final int XK_Cyrillic_U_straight_bar = (int)16778416L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_lu 16780687
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_U_straight_bar 16778416
      * }
      */
-    public static int XK_Sinh_lu() {
-        return (int)16780687L;
+    public static int XK_Cyrillic_U_straight_bar() {
+        return XK_Cyrillic_U_straight_bar;
     }
+    private static final int XK_Cyrillic_u_straight_bar = (int)16778417L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_luu 16780688
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_u_straight_bar 16778417
      * }
      */
-    public static int XK_Sinh_luu() {
-        return (int)16780688L;
+    public static int XK_Cyrillic_u_straight_bar() {
+        return XK_Cyrillic_u_straight_bar;
     }
+    private static final int XK_Cyrillic_HA_descender = (int)16778418L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_e 16780689
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_HA_descender 16778418
      * }
      */
-    public static int XK_Sinh_e() {
-        return (int)16780689L;
+    public static int XK_Cyrillic_HA_descender() {
+        return XK_Cyrillic_HA_descender;
     }
+    private static final int XK_Cyrillic_ha_descender = (int)16778419L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ee 16780690
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ha_descender 16778419
      * }
      */
-    public static int XK_Sinh_ee() {
-        return (int)16780690L;
+    public static int XK_Cyrillic_ha_descender() {
+        return XK_Cyrillic_ha_descender;
     }
+    private static final int XK_Cyrillic_CHE_descender = (int)16778422L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ai 16780691
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_CHE_descender 16778422
      * }
      */
-    public static int XK_Sinh_ai() {
-        return (int)16780691L;
+    public static int XK_Cyrillic_CHE_descender() {
+        return XK_Cyrillic_CHE_descender;
     }
+    private static final int XK_Cyrillic_che_descender = (int)16778423L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_o 16780692
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_che_descender 16778423
      * }
      */
-    public static int XK_Sinh_o() {
-        return (int)16780692L;
+    public static int XK_Cyrillic_che_descender() {
+        return XK_Cyrillic_che_descender;
     }
+    private static final int XK_Cyrillic_CHE_vertstroke = (int)16778424L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_oo 16780693
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_CHE_vertstroke 16778424
      * }
      */
-    public static int XK_Sinh_oo() {
-        return (int)16780693L;
+    public static int XK_Cyrillic_CHE_vertstroke() {
+        return XK_Cyrillic_CHE_vertstroke;
     }
+    private static final int XK_Cyrillic_che_vertstroke = (int)16778425L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_au 16780694
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_che_vertstroke 16778425
      * }
      */
-    public static int XK_Sinh_au() {
-        return (int)16780694L;
+    public static int XK_Cyrillic_che_vertstroke() {
+        return XK_Cyrillic_che_vertstroke;
     }
+    private static final int XK_Cyrillic_SHHA = (int)16778426L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ka 16780698
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_SHHA 16778426
      * }
      */
-    public static int XK_Sinh_ka() {
-        return (int)16780698L;
+    public static int XK_Cyrillic_SHHA() {
+        return XK_Cyrillic_SHHA;
     }
+    private static final int XK_Cyrillic_shha = (int)16778427L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_kha 16780699
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_shha 16778427
      * }
      */
-    public static int XK_Sinh_kha() {
-        return (int)16780699L;
+    public static int XK_Cyrillic_shha() {
+        return XK_Cyrillic_shha;
     }
+    private static final int XK_Cyrillic_SCHWA = (int)16778456L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ga 16780700
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_SCHWA 16778456
      * }
      */
-    public static int XK_Sinh_ga() {
-        return (int)16780700L;
+    public static int XK_Cyrillic_SCHWA() {
+        return XK_Cyrillic_SCHWA;
     }
+    private static final int XK_Cyrillic_schwa = (int)16778457L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_gha 16780701
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_schwa 16778457
      * }
      */
-    public static int XK_Sinh_gha() {
-        return (int)16780701L;
+    public static int XK_Cyrillic_schwa() {
+        return XK_Cyrillic_schwa;
     }
+    private static final int XK_Cyrillic_I_macron = (int)16778466L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ng2 16780702
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_I_macron 16778466
      * }
      */
-    public static int XK_Sinh_ng2() {
-        return (int)16780702L;
+    public static int XK_Cyrillic_I_macron() {
+        return XK_Cyrillic_I_macron;
     }
+    private static final int XK_Cyrillic_i_macron = (int)16778467L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_nga 16780703
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_i_macron 16778467
      * }
      */
-    public static int XK_Sinh_nga() {
-        return (int)16780703L;
+    public static int XK_Cyrillic_i_macron() {
+        return XK_Cyrillic_i_macron;
     }
+    private static final int XK_Cyrillic_O_bar = (int)16778472L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ca 16780704
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_O_bar 16778472
      * }
      */
-    public static int XK_Sinh_ca() {
-        return (int)16780704L;
+    public static int XK_Cyrillic_O_bar() {
+        return XK_Cyrillic_O_bar;
     }
+    private static final int XK_Cyrillic_o_bar = (int)16778473L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_cha 16780705
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_o_bar 16778473
      * }
      */
-    public static int XK_Sinh_cha() {
-        return (int)16780705L;
+    public static int XK_Cyrillic_o_bar() {
+        return XK_Cyrillic_o_bar;
     }
+    private static final int XK_Cyrillic_U_macron = (int)16778478L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ja 16780706
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_U_macron 16778478
      * }
      */
-    public static int XK_Sinh_ja() {
-        return (int)16780706L;
+    public static int XK_Cyrillic_U_macron() {
+        return XK_Cyrillic_U_macron;
     }
+    private static final int XK_Cyrillic_u_macron = (int)16778479L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_jha 16780707
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_u_macron 16778479
      * }
      */
-    public static int XK_Sinh_jha() {
-        return (int)16780707L;
+    public static int XK_Cyrillic_u_macron() {
+        return XK_Cyrillic_u_macron;
     }
+    private static final int XK_Serbian_dje = (int)1697L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_nya 16780708
+     * {@snippet lang=c :
+     * #define XK_Serbian_dje 1697
      * }
      */
-    public static int XK_Sinh_nya() {
-        return (int)16780708L;
+    public static int XK_Serbian_dje() {
+        return XK_Serbian_dje;
     }
+    private static final int XK_Macedonia_gje = (int)1698L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_jnya 16780709
+     * {@snippet lang=c :
+     * #define XK_Macedonia_gje 1698
      * }
      */
-    public static int XK_Sinh_jnya() {
-        return (int)16780709L;
+    public static int XK_Macedonia_gje() {
+        return XK_Macedonia_gje;
     }
+    private static final int XK_Cyrillic_io = (int)1699L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_nja 16780710
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_io 1699
      * }
      */
-    public static int XK_Sinh_nja() {
-        return (int)16780710L;
+    public static int XK_Cyrillic_io() {
+        return XK_Cyrillic_io;
     }
+    private static final int XK_Ukrainian_ie = (int)1700L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_tta 16780711
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_ie 1700
      * }
      */
-    public static int XK_Sinh_tta() {
-        return (int)16780711L;
+    public static int XK_Ukrainian_ie() {
+        return XK_Ukrainian_ie;
     }
+    private static final int XK_Ukranian_je = (int)1700L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ttha 16780712
+     * {@snippet lang=c :
+     * #define XK_Ukranian_je 1700
      * }
      */
-    public static int XK_Sinh_ttha() {
-        return (int)16780712L;
+    public static int XK_Ukranian_je() {
+        return XK_Ukranian_je;
     }
+    private static final int XK_Macedonia_dse = (int)1701L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_dda 16780713
+     * {@snippet lang=c :
+     * #define XK_Macedonia_dse 1701
      * }
      */
-    public static int XK_Sinh_dda() {
-        return (int)16780713L;
+    public static int XK_Macedonia_dse() {
+        return XK_Macedonia_dse;
     }
+    private static final int XK_Ukrainian_i = (int)1702L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ddha 16780714
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_i 1702
      * }
      */
-    public static int XK_Sinh_ddha() {
-        return (int)16780714L;
+    public static int XK_Ukrainian_i() {
+        return XK_Ukrainian_i;
     }
+    private static final int XK_Ukranian_i = (int)1702L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_nna 16780715
+     * {@snippet lang=c :
+     * #define XK_Ukranian_i 1702
      * }
      */
-    public static int XK_Sinh_nna() {
-        return (int)16780715L;
+    public static int XK_Ukranian_i() {
+        return XK_Ukranian_i;
     }
+    private static final int XK_Ukrainian_yi = (int)1703L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ndda 16780716
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_yi 1703
      * }
      */
-    public static int XK_Sinh_ndda() {
-        return (int)16780716L;
+    public static int XK_Ukrainian_yi() {
+        return XK_Ukrainian_yi;
     }
+    private static final int XK_Ukranian_yi = (int)1703L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_tha 16780717
+     * {@snippet lang=c :
+     * #define XK_Ukranian_yi 1703
      * }
      */
-    public static int XK_Sinh_tha() {
-        return (int)16780717L;
+    public static int XK_Ukranian_yi() {
+        return XK_Ukranian_yi;
     }
+    private static final int XK_Cyrillic_je = (int)1704L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_thha 16780718
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_je 1704
      * }
      */
-    public static int XK_Sinh_thha() {
-        return (int)16780718L;
+    public static int XK_Cyrillic_je() {
+        return XK_Cyrillic_je;
     }
+    private static final int XK_Serbian_je = (int)1704L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_dha 16780719
+     * {@snippet lang=c :
+     * #define XK_Serbian_je 1704
      * }
      */
-    public static int XK_Sinh_dha() {
-        return (int)16780719L;
+    public static int XK_Serbian_je() {
+        return XK_Serbian_je;
     }
+    private static final int XK_Cyrillic_lje = (int)1705L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_dhha 16780720
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_lje 1705
      * }
      */
-    public static int XK_Sinh_dhha() {
-        return (int)16780720L;
+    public static int XK_Cyrillic_lje() {
+        return XK_Cyrillic_lje;
     }
+    private static final int XK_Serbian_lje = (int)1705L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_na 16780721
+     * {@snippet lang=c :
+     * #define XK_Serbian_lje 1705
      * }
      */
-    public static int XK_Sinh_na() {
-        return (int)16780721L;
+    public static int XK_Serbian_lje() {
+        return XK_Serbian_lje;
     }
+    private static final int XK_Cyrillic_nje = (int)1706L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ndha 16780723
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_nje 1706
      * }
      */
-    public static int XK_Sinh_ndha() {
-        return (int)16780723L;
+    public static int XK_Cyrillic_nje() {
+        return XK_Cyrillic_nje;
     }
+    private static final int XK_Serbian_nje = (int)1706L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_pa 16780724
+     * {@snippet lang=c :
+     * #define XK_Serbian_nje 1706
      * }
      */
-    public static int XK_Sinh_pa() {
-        return (int)16780724L;
+    public static int XK_Serbian_nje() {
+        return XK_Serbian_nje;
     }
+    private static final int XK_Serbian_tshe = (int)1707L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_pha 16780725
+     * {@snippet lang=c :
+     * #define XK_Serbian_tshe 1707
      * }
      */
-    public static int XK_Sinh_pha() {
-        return (int)16780725L;
+    public static int XK_Serbian_tshe() {
+        return XK_Serbian_tshe;
     }
+    private static final int XK_Macedonia_kje = (int)1708L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ba 16780726
+     * {@snippet lang=c :
+     * #define XK_Macedonia_kje 1708
      * }
      */
-    public static int XK_Sinh_ba() {
-        return (int)16780726L;
+    public static int XK_Macedonia_kje() {
+        return XK_Macedonia_kje;
     }
+    private static final int XK_Ukrainian_ghe_with_upturn = (int)1709L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_bha 16780727
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_ghe_with_upturn 1709
      * }
      */
-    public static int XK_Sinh_bha() {
-        return (int)16780727L;
+    public static int XK_Ukrainian_ghe_with_upturn() {
+        return XK_Ukrainian_ghe_with_upturn;
     }
+    private static final int XK_Byelorussian_shortu = (int)1710L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ma 16780728
+     * {@snippet lang=c :
+     * #define XK_Byelorussian_shortu 1710
      * }
      */
-    public static int XK_Sinh_ma() {
-        return (int)16780728L;
+    public static int XK_Byelorussian_shortu() {
+        return XK_Byelorussian_shortu;
     }
+    private static final int XK_Cyrillic_dzhe = (int)1711L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_mba 16780729
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_dzhe 1711
      * }
      */
-    public static int XK_Sinh_mba() {
-        return (int)16780729L;
+    public static int XK_Cyrillic_dzhe() {
+        return XK_Cyrillic_dzhe;
     }
+    private static final int XK_Serbian_dze = (int)1711L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ya 16780730
+     * {@snippet lang=c :
+     * #define XK_Serbian_dze 1711
      * }
      */
-    public static int XK_Sinh_ya() {
-        return (int)16780730L;
+    public static int XK_Serbian_dze() {
+        return XK_Serbian_dze;
     }
+    private static final int XK_numerosign = (int)1712L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ra 16780731
+     * {@snippet lang=c :
+     * #define XK_numerosign 1712
      * }
      */
-    public static int XK_Sinh_ra() {
-        return (int)16780731L;
+    public static int XK_numerosign() {
+        return XK_numerosign;
     }
+    private static final int XK_Serbian_DJE = (int)1713L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_la 16780733
+     * {@snippet lang=c :
+     * #define XK_Serbian_DJE 1713
      * }
      */
-    public static int XK_Sinh_la() {
-        return (int)16780733L;
+    public static int XK_Serbian_DJE() {
+        return XK_Serbian_DJE;
     }
+    private static final int XK_Macedonia_GJE = (int)1714L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_va 16780736
+     * {@snippet lang=c :
+     * #define XK_Macedonia_GJE 1714
      * }
      */
-    public static int XK_Sinh_va() {
-        return (int)16780736L;
+    public static int XK_Macedonia_GJE() {
+        return XK_Macedonia_GJE;
     }
+    private static final int XK_Cyrillic_IO = (int)1715L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_sha 16780737
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_IO 1715
      * }
      */
-    public static int XK_Sinh_sha() {
-        return (int)16780737L;
+    public static int XK_Cyrillic_IO() {
+        return XK_Cyrillic_IO;
     }
+    private static final int XK_Ukrainian_IE = (int)1716L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ssha 16780738
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_IE 1716
      * }
      */
-    public static int XK_Sinh_ssha() {
-        return (int)16780738L;
+    public static int XK_Ukrainian_IE() {
+        return XK_Ukrainian_IE;
     }
+    private static final int XK_Ukranian_JE = (int)1716L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_sa 16780739
+     * {@snippet lang=c :
+     * #define XK_Ukranian_JE 1716
      * }
      */
-    public static int XK_Sinh_sa() {
-        return (int)16780739L;
+    public static int XK_Ukranian_JE() {
+        return XK_Ukranian_JE;
     }
+    private static final int XK_Macedonia_DSE = (int)1717L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ha 16780740
+     * {@snippet lang=c :
+     * #define XK_Macedonia_DSE 1717
      * }
      */
-    public static int XK_Sinh_ha() {
-        return (int)16780740L;
+    public static int XK_Macedonia_DSE() {
+        return XK_Macedonia_DSE;
     }
+    private static final int XK_Ukrainian_I = (int)1718L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_lla 16780741
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_I 1718
      * }
      */
-    public static int XK_Sinh_lla() {
-        return (int)16780741L;
+    public static int XK_Ukrainian_I() {
+        return XK_Ukrainian_I;
     }
+    private static final int XK_Ukranian_I = (int)1718L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_fa 16780742
+     * {@snippet lang=c :
+     * #define XK_Ukranian_I 1718
      * }
      */
-    public static int XK_Sinh_fa() {
-        return (int)16780742L;
+    public static int XK_Ukranian_I() {
+        return XK_Ukranian_I;
     }
+    private static final int XK_Ukrainian_YI = (int)1719L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_al 16780746
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_YI 1719
      * }
      */
-    public static int XK_Sinh_al() {
-        return (int)16780746L;
+    public static int XK_Ukrainian_YI() {
+        return XK_Ukrainian_YI;
     }
+    private static final int XK_Ukranian_YI = (int)1719L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_aa2 16780751
+     * {@snippet lang=c :
+     * #define XK_Ukranian_YI 1719
      * }
      */
-    public static int XK_Sinh_aa2() {
-        return (int)16780751L;
+    public static int XK_Ukranian_YI() {
+        return XK_Ukranian_YI;
     }
+    private static final int XK_Cyrillic_JE = (int)1720L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ae2 16780752
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_JE 1720
      * }
      */
-    public static int XK_Sinh_ae2() {
-        return (int)16780752L;
+    public static int XK_Cyrillic_JE() {
+        return XK_Cyrillic_JE;
     }
+    private static final int XK_Serbian_JE = (int)1720L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_aee2 16780753
+     * {@snippet lang=c :
+     * #define XK_Serbian_JE 1720
      * }
      */
-    public static int XK_Sinh_aee2() {
-        return (int)16780753L;
+    public static int XK_Serbian_JE() {
+        return XK_Serbian_JE;
     }
+    private static final int XK_Cyrillic_LJE = (int)1721L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_i2 16780754
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_LJE 1721
      * }
      */
-    public static int XK_Sinh_i2() {
-        return (int)16780754L;
+    public static int XK_Cyrillic_LJE() {
+        return XK_Cyrillic_LJE;
     }
+    private static final int XK_Serbian_LJE = (int)1721L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ii2 16780755
+     * {@snippet lang=c :
+     * #define XK_Serbian_LJE 1721
      * }
      */
-    public static int XK_Sinh_ii2() {
-        return (int)16780755L;
+    public static int XK_Serbian_LJE() {
+        return XK_Serbian_LJE;
     }
+    private static final int XK_Cyrillic_NJE = (int)1722L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_u2 16780756
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_NJE 1722
      * }
      */
-    public static int XK_Sinh_u2() {
-        return (int)16780756L;
+    public static int XK_Cyrillic_NJE() {
+        return XK_Cyrillic_NJE;
     }
+    private static final int XK_Serbian_NJE = (int)1722L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_uu2 16780758
+     * {@snippet lang=c :
+     * #define XK_Serbian_NJE 1722
      * }
      */
-    public static int XK_Sinh_uu2() {
-        return (int)16780758L;
+    public static int XK_Serbian_NJE() {
+        return XK_Serbian_NJE;
     }
+    private static final int XK_Serbian_TSHE = (int)1723L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ru2 16780760
+     * {@snippet lang=c :
+     * #define XK_Serbian_TSHE 1723
      * }
      */
-    public static int XK_Sinh_ru2() {
-        return (int)16780760L;
+    public static int XK_Serbian_TSHE() {
+        return XK_Serbian_TSHE;
     }
+    private static final int XK_Macedonia_KJE = (int)1724L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_e2 16780761
+     * {@snippet lang=c :
+     * #define XK_Macedonia_KJE 1724
      * }
      */
-    public static int XK_Sinh_e2() {
-        return (int)16780761L;
+    public static int XK_Macedonia_KJE() {
+        return XK_Macedonia_KJE;
     }
+    private static final int XK_Ukrainian_GHE_WITH_UPTURN = (int)1725L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ee2 16780762
+     * {@snippet lang=c :
+     * #define XK_Ukrainian_GHE_WITH_UPTURN 1725
      * }
      */
-    public static int XK_Sinh_ee2() {
-        return (int)16780762L;
+    public static int XK_Ukrainian_GHE_WITH_UPTURN() {
+        return XK_Ukrainian_GHE_WITH_UPTURN;
     }
+    private static final int XK_Byelorussian_SHORTU = (int)1726L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ai2 16780763
+     * {@snippet lang=c :
+     * #define XK_Byelorussian_SHORTU 1726
      * }
      */
-    public static int XK_Sinh_ai2() {
-        return (int)16780763L;
+    public static int XK_Byelorussian_SHORTU() {
+        return XK_Byelorussian_SHORTU;
     }
+    private static final int XK_Cyrillic_DZHE = (int)1727L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_o2 16780764
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_DZHE 1727
      * }
      */
-    public static int XK_Sinh_o2() {
-        return (int)16780764L;
+    public static int XK_Cyrillic_DZHE() {
+        return XK_Cyrillic_DZHE;
     }
+    private static final int XK_Serbian_DZE = (int)1727L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_oo2 16780765
+     * {@snippet lang=c :
+     * #define XK_Serbian_DZE 1727
      * }
      */
-    public static int XK_Sinh_oo2() {
-        return (int)16780765L;
+    public static int XK_Serbian_DZE() {
+        return XK_Serbian_DZE;
     }
+    private static final int XK_Cyrillic_yu = (int)1728L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_au2 16780766
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_yu 1728
      * }
      */
-    public static int XK_Sinh_au2() {
-        return (int)16780766L;
+    public static int XK_Cyrillic_yu() {
+        return XK_Cyrillic_yu;
     }
+    private static final int XK_Cyrillic_a = (int)1729L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_lu2 16780767
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_a 1729
      * }
      */
-    public static int XK_Sinh_lu2() {
-        return (int)16780767L;
+    public static int XK_Cyrillic_a() {
+        return XK_Cyrillic_a;
     }
+    private static final int XK_Cyrillic_be = (int)1730L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_ruu2 16780786
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_be 1730
      * }
      */
-    public static int XK_Sinh_ruu2() {
-        return (int)16780786L;
+    public static int XK_Cyrillic_be() {
+        return XK_Cyrillic_be;
     }
+    private static final int XK_Cyrillic_tse = (int)1731L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_luu2 16780787
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_tse 1731
      * }
      */
-    public static int XK_Sinh_luu2() {
-        return (int)16780787L;
+    public static int XK_Cyrillic_tse() {
+        return XK_Cyrillic_tse;
     }
+    private static final int XK_Cyrillic_de = (int)1732L;
     /**
-     * {@snippet :
-     * #define XK_Sinh_kunddaliya 16780788
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_de 1732
      * }
      */
-    public static int XK_Sinh_kunddaliya() {
-        return (int)16780788L;
+    public static int XK_Cyrillic_de() {
+        return XK_Cyrillic_de;
     }
+    private static final int XK_Cyrillic_ie = (int)1733L;
     /**
-     * {@snippet :
-     * #define NoValue 0
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ie 1733
      * }
      */
-    public static int NoValue() {
-        return (int)0L;
+    public static int XK_Cyrillic_ie() {
+        return XK_Cyrillic_ie;
     }
+    private static final int XK_Cyrillic_ef = (int)1734L;
     /**
-     * {@snippet :
-     * #define XValue 1
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ef 1734
      * }
      */
-    public static int XValue() {
-        return (int)1L;
+    public static int XK_Cyrillic_ef() {
+        return XK_Cyrillic_ef;
     }
+    private static final int XK_Cyrillic_ghe = (int)1735L;
     /**
-     * {@snippet :
-     * #define YValue 2
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ghe 1735
      * }
      */
-    public static int YValue() {
-        return (int)2L;
+    public static int XK_Cyrillic_ghe() {
+        return XK_Cyrillic_ghe;
     }
+    private static final int XK_Cyrillic_ha = (int)1736L;
     /**
-     * {@snippet :
-     * #define WidthValue 4
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ha 1736
      * }
      */
-    public static int WidthValue() {
-        return (int)4L;
+    public static int XK_Cyrillic_ha() {
+        return XK_Cyrillic_ha;
     }
+    private static final int XK_Cyrillic_i = (int)1737L;
     /**
-     * {@snippet :
-     * #define HeightValue 8
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_i 1737
      * }
      */
-    public static int HeightValue() {
-        return (int)8L;
+    public static int XK_Cyrillic_i() {
+        return XK_Cyrillic_i;
     }
+    private static final int XK_Cyrillic_shorti = (int)1738L;
     /**
-     * {@snippet :
-     * #define AllValues 15
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_shorti 1738
      * }
      */
-    public static int AllValues() {
-        return (int)15L;
+    public static int XK_Cyrillic_shorti() {
+        return XK_Cyrillic_shorti;
     }
+    private static final int XK_Cyrillic_ka = (int)1739L;
     /**
-     * {@snippet :
-     * #define XNegative 16
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ka 1739
      * }
      */
-    public static int XNegative() {
-        return (int)16L;
+    public static int XK_Cyrillic_ka() {
+        return XK_Cyrillic_ka;
     }
+    private static final int XK_Cyrillic_el = (int)1740L;
     /**
-     * {@snippet :
-     * #define YNegative 32
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_el 1740
      * }
      */
-    public static int YNegative() {
-        return (int)32L;
+    public static int XK_Cyrillic_el() {
+        return XK_Cyrillic_el;
     }
+    private static final int XK_Cyrillic_em = (int)1741L;
     /**
-     * {@snippet :
-     * #define WithdrawnState 0
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_em 1741
      * }
      */
-    public static int WithdrawnState() {
-        return (int)0L;
+    public static int XK_Cyrillic_em() {
+        return XK_Cyrillic_em;
     }
+    private static final int XK_Cyrillic_en = (int)1742L;
     /**
-     * {@snippet :
-     * #define NormalState 1
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_en 1742
      * }
      */
-    public static int NormalState() {
-        return (int)1L;
+    public static int XK_Cyrillic_en() {
+        return XK_Cyrillic_en;
     }
+    private static final int XK_Cyrillic_o = (int)1743L;
     /**
-     * {@snippet :
-     * #define IconicState 3
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_o 1743
      * }
      */
-    public static int IconicState() {
-        return (int)3L;
+    public static int XK_Cyrillic_o() {
+        return XK_Cyrillic_o;
     }
+    private static final int XK_Cyrillic_pe = (int)1744L;
     /**
-     * {@snippet :
-     * #define DontCareState 0
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_pe 1744
      * }
      */
-    public static int DontCareState() {
-        return (int)0L;
+    public static int XK_Cyrillic_pe() {
+        return XK_Cyrillic_pe;
     }
+    private static final int XK_Cyrillic_ya = (int)1745L;
     /**
-     * {@snippet :
-     * #define ZoomState 2
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ya 1745
      * }
      */
-    public static int ZoomState() {
-        return (int)2L;
+    public static int XK_Cyrillic_ya() {
+        return XK_Cyrillic_ya;
     }
+    private static final int XK_Cyrillic_er = (int)1746L;
     /**
-     * {@snippet :
-     * #define InactiveState 4
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_er 1746
      * }
      */
-    public static int InactiveState() {
-        return (int)4L;
+    public static int XK_Cyrillic_er() {
+        return XK_Cyrillic_er;
     }
+    private static final int XK_Cyrillic_es = (int)1747L;
     /**
-     * {@snippet :
-     * #define RectangleOut 0
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_es 1747
      * }
      */
-    public static int RectangleOut() {
-        return (int)0L;
+    public static int XK_Cyrillic_es() {
+        return XK_Cyrillic_es;
     }
+    private static final int XK_Cyrillic_te = (int)1748L;
     /**
-     * {@snippet :
-     * #define RectangleIn 1
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_te 1748
      * }
      */
-    public static int RectangleIn() {
-        return (int)1L;
+    public static int XK_Cyrillic_te() {
+        return XK_Cyrillic_te;
     }
+    private static final int XK_Cyrillic_u = (int)1749L;
     /**
-     * {@snippet :
-     * #define RectanglePart 2
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_u 1749
      * }
      */
-    public static int RectanglePart() {
-        return (int)2L;
+    public static int XK_Cyrillic_u() {
+        return XK_Cyrillic_u;
     }
+    private static final int XK_Cyrillic_zhe = (int)1750L;
     /**
-     * {@snippet :
-     * #define VisualNoMask 0
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_zhe 1750
      * }
      */
-    public static int VisualNoMask() {
-        return (int)0L;
+    public static int XK_Cyrillic_zhe() {
+        return XK_Cyrillic_zhe;
     }
+    private static final int XK_Cyrillic_ve = (int)1751L;
     /**
-     * {@snippet :
-     * #define VisualIDMask 1
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ve 1751
      * }
      */
-    public static int VisualIDMask() {
-        return (int)1L;
+    public static int XK_Cyrillic_ve() {
+        return XK_Cyrillic_ve;
     }
+    private static final int XK_Cyrillic_softsign = (int)1752L;
     /**
-     * {@snippet :
-     * #define VisualScreenMask 2
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_softsign 1752
      * }
      */
-    public static int VisualScreenMask() {
-        return (int)2L;
+    public static int XK_Cyrillic_softsign() {
+        return XK_Cyrillic_softsign;
     }
+    private static final int XK_Cyrillic_yeru = (int)1753L;
     /**
-     * {@snippet :
-     * #define VisualDepthMask 4
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_yeru 1753
      * }
      */
-    public static int VisualDepthMask() {
-        return (int)4L;
+    public static int XK_Cyrillic_yeru() {
+        return XK_Cyrillic_yeru;
     }
+    private static final int XK_Cyrillic_ze = (int)1754L;
     /**
-     * {@snippet :
-     * #define VisualClassMask 8
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ze 1754
      * }
      */
-    public static int VisualClassMask() {
-        return (int)8L;
+    public static int XK_Cyrillic_ze() {
+        return XK_Cyrillic_ze;
     }
+    private static final int XK_Cyrillic_sha = (int)1755L;
     /**
-     * {@snippet :
-     * #define VisualRedMaskMask 16
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_sha 1755
      * }
      */
-    public static int VisualRedMaskMask() {
-        return (int)16L;
+    public static int XK_Cyrillic_sha() {
+        return XK_Cyrillic_sha;
     }
+    private static final int XK_Cyrillic_e = (int)1756L;
     /**
-     * {@snippet :
-     * #define VisualGreenMaskMask 32
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_e 1756
      * }
      */
-    public static int VisualGreenMaskMask() {
-        return (int)32L;
+    public static int XK_Cyrillic_e() {
+        return XK_Cyrillic_e;
     }
+    private static final int XK_Cyrillic_shcha = (int)1757L;
     /**
-     * {@snippet :
-     * #define VisualBlueMaskMask 64
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_shcha 1757
      * }
      */
-    public static int VisualBlueMaskMask() {
-        return (int)64L;
+    public static int XK_Cyrillic_shcha() {
+        return XK_Cyrillic_shcha;
     }
+    private static final int XK_Cyrillic_che = (int)1758L;
     /**
-     * {@snippet :
-     * #define VisualColormapSizeMask 128
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_che 1758
      * }
      */
-    public static int VisualColormapSizeMask() {
-        return (int)128L;
+    public static int XK_Cyrillic_che() {
+        return XK_Cyrillic_che;
     }
+    private static final int XK_Cyrillic_hardsign = (int)1759L;
     /**
-     * {@snippet :
-     * #define VisualBitsPerRGBMask 256
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_hardsign 1759
      * }
      */
-    public static int VisualBitsPerRGBMask() {
-        return (int)256L;
+    public static int XK_Cyrillic_hardsign() {
+        return XK_Cyrillic_hardsign;
     }
+    private static final int XK_Cyrillic_YU = (int)1760L;
     /**
-     * {@snippet :
-     * #define VisualAllMask 511
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_YU 1760
      * }
      */
-    public static int VisualAllMask() {
-        return (int)511L;
+    public static int XK_Cyrillic_YU() {
+        return XK_Cyrillic_YU;
     }
+    private static final int XK_Cyrillic_A = (int)1761L;
     /**
-     * {@snippet :
-     * #define BitmapSuccess 0
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_A 1761
      * }
      */
-    public static int BitmapSuccess() {
-        return (int)0L;
+    public static int XK_Cyrillic_A() {
+        return XK_Cyrillic_A;
     }
+    private static final int XK_Cyrillic_BE = (int)1762L;
     /**
-     * {@snippet :
-     * #define BitmapOpenFailed 1
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_BE 1762
      * }
      */
-    public static int BitmapOpenFailed() {
-        return (int)1L;
+    public static int XK_Cyrillic_BE() {
+        return XK_Cyrillic_BE;
     }
+    private static final int XK_Cyrillic_TSE = (int)1763L;
     /**
-     * {@snippet :
-     * #define BitmapFileInvalid 2
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_TSE 1763
      * }
      */
-    public static int BitmapFileInvalid() {
-        return (int)2L;
+    public static int XK_Cyrillic_TSE() {
+        return XK_Cyrillic_TSE;
     }
+    private static final int XK_Cyrillic_DE = (int)1764L;
     /**
-     * {@snippet :
-     * #define BitmapNoMemory 3
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_DE 1764
      * }
      */
-    public static int BitmapNoMemory() {
-        return (int)3L;
+    public static int XK_Cyrillic_DE() {
+        return XK_Cyrillic_DE;
     }
+    private static final int XK_Cyrillic_IE = (int)1765L;
     /**
-     * {@snippet :
-     * #define XCSUCCESS 0
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_IE 1765
      * }
      */
-    public static int XCSUCCESS() {
-        return (int)0L;
+    public static int XK_Cyrillic_IE() {
+        return XK_Cyrillic_IE;
     }
+    private static final int XK_Cyrillic_EF = (int)1766L;
     /**
-     * {@snippet :
-     * #define XCNOMEM 1
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_EF 1766
      * }
      */
-    public static int XCNOMEM() {
-        return (int)1L;
+    public static int XK_Cyrillic_EF() {
+        return XK_Cyrillic_EF;
     }
+    private static final int XK_Cyrillic_GHE = (int)1767L;
     /**
-     * {@snippet :
-     * #define XCNOENT 2
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_GHE 1767
      * }
      */
-    public static int XCNOENT() {
-        return (int)2L;
+    public static int XK_Cyrillic_GHE() {
+        return XK_Cyrillic_GHE;
     }
+    private static final int XK_Cyrillic_HA = (int)1768L;
     /**
-     * {@snippet :
-     * typedef unsigned char __u_char;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_HA 1768
      * }
      */
-    public static final OfByte __u_char = JAVA_BYTE;
+    public static int XK_Cyrillic_HA() {
+        return XK_Cyrillic_HA;
+    }
+    private static final int XK_Cyrillic_I = (int)1769L;
     /**
-     * {@snippet :
-     * typedef unsigned short __u_short;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_I 1769
      * }
      */
-    public static final OfShort __u_short = JAVA_SHORT;
+    public static int XK_Cyrillic_I() {
+        return XK_Cyrillic_I;
+    }
+    private static final int XK_Cyrillic_SHORTI = (int)1770L;
     /**
-     * {@snippet :
-     * typedef unsigned int __u_int;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_SHORTI 1770
      * }
      */
-    public static final OfInt __u_int = JAVA_INT;
+    public static int XK_Cyrillic_SHORTI() {
+        return XK_Cyrillic_SHORTI;
+    }
+    private static final int XK_Cyrillic_KA = (int)1771L;
     /**
-     * {@snippet :
-     * typedef unsigned long __u_long;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_KA 1771
      * }
      */
-    public static final OfLong __u_long = JAVA_LONG;
+    public static int XK_Cyrillic_KA() {
+        return XK_Cyrillic_KA;
+    }
+    private static final int XK_Cyrillic_EL = (int)1772L;
     /**
-     * {@snippet :
-     * typedef signed char __int8_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_EL 1772
      * }
      */
-    public static final OfByte __int8_t = JAVA_BYTE;
+    public static int XK_Cyrillic_EL() {
+        return XK_Cyrillic_EL;
+    }
+    private static final int XK_Cyrillic_EM = (int)1773L;
     /**
-     * {@snippet :
-     * typedef unsigned char __uint8_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_EM 1773
      * }
      */
-    public static final OfByte __uint8_t = JAVA_BYTE;
+    public static int XK_Cyrillic_EM() {
+        return XK_Cyrillic_EM;
+    }
+    private static final int XK_Cyrillic_EN = (int)1774L;
     /**
-     * {@snippet :
-     * typedef short __int16_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_EN 1774
      * }
      */
-    public static final OfShort __int16_t = JAVA_SHORT;
+    public static int XK_Cyrillic_EN() {
+        return XK_Cyrillic_EN;
+    }
+    private static final int XK_Cyrillic_O = (int)1775L;
     /**
-     * {@snippet :
-     * typedef unsigned short __uint16_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_O 1775
      * }
      */
-    public static final OfShort __uint16_t = JAVA_SHORT;
+    public static int XK_Cyrillic_O() {
+        return XK_Cyrillic_O;
+    }
+    private static final int XK_Cyrillic_PE = (int)1776L;
     /**
-     * {@snippet :
-     * typedef int __int32_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_PE 1776
      * }
      */
-    public static final OfInt __int32_t = JAVA_INT;
+    public static int XK_Cyrillic_PE() {
+        return XK_Cyrillic_PE;
+    }
+    private static final int XK_Cyrillic_YA = (int)1777L;
     /**
-     * {@snippet :
-     * typedef unsigned int __uint32_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_YA 1777
      * }
      */
-    public static final OfInt __uint32_t = JAVA_INT;
+    public static int XK_Cyrillic_YA() {
+        return XK_Cyrillic_YA;
+    }
+    private static final int XK_Cyrillic_ER = (int)1778L;
     /**
-     * {@snippet :
-     * typedef long __int64_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ER 1778
      * }
      */
-    public static final OfLong __int64_t = JAVA_LONG;
+    public static int XK_Cyrillic_ER() {
+        return XK_Cyrillic_ER;
+    }
+    private static final int XK_Cyrillic_ES = (int)1779L;
     /**
-     * {@snippet :
-     * typedef unsigned long __uint64_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ES 1779
      * }
      */
-    public static final OfLong __uint64_t = JAVA_LONG;
+    public static int XK_Cyrillic_ES() {
+        return XK_Cyrillic_ES;
+    }
+    private static final int XK_Cyrillic_TE = (int)1780L;
     /**
-     * {@snippet :
-     * typedef signed char __int_least8_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_TE 1780
      * }
      */
-    public static final OfByte __int_least8_t = JAVA_BYTE;
+    public static int XK_Cyrillic_TE() {
+        return XK_Cyrillic_TE;
+    }
+    private static final int XK_Cyrillic_U = (int)1781L;
     /**
-     * {@snippet :
-     * typedef unsigned char __uint_least8_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_U 1781
      * }
      */
-    public static final OfByte __uint_least8_t = JAVA_BYTE;
+    public static int XK_Cyrillic_U() {
+        return XK_Cyrillic_U;
+    }
+    private static final int XK_Cyrillic_ZHE = (int)1782L;
     /**
-     * {@snippet :
-     * typedef short __int_least16_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ZHE 1782
      * }
      */
-    public static final OfShort __int_least16_t = JAVA_SHORT;
+    public static int XK_Cyrillic_ZHE() {
+        return XK_Cyrillic_ZHE;
+    }
+    private static final int XK_Cyrillic_VE = (int)1783L;
     /**
-     * {@snippet :
-     * typedef unsigned short __uint_least16_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_VE 1783
      * }
      */
-    public static final OfShort __uint_least16_t = JAVA_SHORT;
+    public static int XK_Cyrillic_VE() {
+        return XK_Cyrillic_VE;
+    }
+    private static final int XK_Cyrillic_SOFTSIGN = (int)1784L;
     /**
-     * {@snippet :
-     * typedef int __int_least32_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_SOFTSIGN 1784
      * }
      */
-    public static final OfInt __int_least32_t = JAVA_INT;
+    public static int XK_Cyrillic_SOFTSIGN() {
+        return XK_Cyrillic_SOFTSIGN;
+    }
+    private static final int XK_Cyrillic_YERU = (int)1785L;
     /**
-     * {@snippet :
-     * typedef unsigned int __uint_least32_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_YERU 1785
      * }
      */
-    public static final OfInt __uint_least32_t = JAVA_INT;
+    public static int XK_Cyrillic_YERU() {
+        return XK_Cyrillic_YERU;
+    }
+    private static final int XK_Cyrillic_ZE = (int)1786L;
     /**
-     * {@snippet :
-     * typedef long __int_least64_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_ZE 1786
      * }
      */
-    public static final OfLong __int_least64_t = JAVA_LONG;
+    public static int XK_Cyrillic_ZE() {
+        return XK_Cyrillic_ZE;
+    }
+    private static final int XK_Cyrillic_SHA = (int)1787L;
     /**
-     * {@snippet :
-     * typedef unsigned long __uint_least64_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_SHA 1787
      * }
      */
-    public static final OfLong __uint_least64_t = JAVA_LONG;
+    public static int XK_Cyrillic_SHA() {
+        return XK_Cyrillic_SHA;
+    }
+    private static final int XK_Cyrillic_E = (int)1788L;
     /**
-     * {@snippet :
-     * typedef long __quad_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_E 1788
      * }
      */
-    public static final OfLong __quad_t = JAVA_LONG;
+    public static int XK_Cyrillic_E() {
+        return XK_Cyrillic_E;
+    }
+    private static final int XK_Cyrillic_SHCHA = (int)1789L;
     /**
-     * {@snippet :
-     * typedef unsigned long __u_quad_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_SHCHA 1789
      * }
      */
-    public static final OfLong __u_quad_t = JAVA_LONG;
+    public static int XK_Cyrillic_SHCHA() {
+        return XK_Cyrillic_SHCHA;
+    }
+    private static final int XK_Cyrillic_CHE = (int)1790L;
     /**
-     * {@snippet :
-     * typedef long __intmax_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_CHE 1790
      * }
      */
-    public static final OfLong __intmax_t = JAVA_LONG;
+    public static int XK_Cyrillic_CHE() {
+        return XK_Cyrillic_CHE;
+    }
+    private static final int XK_Cyrillic_HARDSIGN = (int)1791L;
     /**
-     * {@snippet :
-     * typedef unsigned long __uintmax_t;
+     * {@snippet lang=c :
+     * #define XK_Cyrillic_HARDSIGN 1791
      * }
      */
-    public static final OfLong __uintmax_t = JAVA_LONG;
+    public static int XK_Cyrillic_HARDSIGN() {
+        return XK_Cyrillic_HARDSIGN;
+    }
+    private static final int XK_Greek_ALPHAaccent = (int)1953L;
     /**
-     * {@snippet :
-     * typedef unsigned long __dev_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_ALPHAaccent 1953
      * }
      */
-    public static final OfLong __dev_t = JAVA_LONG;
+    public static int XK_Greek_ALPHAaccent() {
+        return XK_Greek_ALPHAaccent;
+    }
+    private static final int XK_Greek_EPSILONaccent = (int)1954L;
     /**
-     * {@snippet :
-     * typedef unsigned int __uid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_EPSILONaccent 1954
      * }
      */
-    public static final OfInt __uid_t = JAVA_INT;
+    public static int XK_Greek_EPSILONaccent() {
+        return XK_Greek_EPSILONaccent;
+    }
+    private static final int XK_Greek_ETAaccent = (int)1955L;
     /**
-     * {@snippet :
-     * typedef unsigned int __gid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_ETAaccent 1955
      * }
      */
-    public static final OfInt __gid_t = JAVA_INT;
+    public static int XK_Greek_ETAaccent() {
+        return XK_Greek_ETAaccent;
+    }
+    private static final int XK_Greek_IOTAaccent = (int)1956L;
     /**
-     * {@snippet :
-     * typedef unsigned long __ino_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_IOTAaccent 1956
      * }
      */
-    public static final OfLong __ino_t = JAVA_LONG;
+    public static int XK_Greek_IOTAaccent() {
+        return XK_Greek_IOTAaccent;
+    }
+    private static final int XK_Greek_IOTAdieresis = (int)1957L;
     /**
-     * {@snippet :
-     * typedef unsigned long __ino64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_IOTAdieresis 1957
      * }
      */
-    public static final OfLong __ino64_t = JAVA_LONG;
+    public static int XK_Greek_IOTAdieresis() {
+        return XK_Greek_IOTAdieresis;
+    }
+    private static final int XK_Greek_IOTAdiaeresis = (int)1957L;
     /**
-     * {@snippet :
-     * typedef unsigned int __mode_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_IOTAdiaeresis 1957
      * }
      */
-    public static final OfInt __mode_t = JAVA_INT;
+    public static int XK_Greek_IOTAdiaeresis() {
+        return XK_Greek_IOTAdiaeresis;
+    }
+    private static final int XK_Greek_OMICRONaccent = (int)1959L;
     /**
-     * {@snippet :
-     * typedef unsigned long __nlink_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_OMICRONaccent 1959
      * }
      */
-    public static final OfLong __nlink_t = JAVA_LONG;
+    public static int XK_Greek_OMICRONaccent() {
+        return XK_Greek_OMICRONaccent;
+    }
+    private static final int XK_Greek_UPSILONaccent = (int)1960L;
     /**
-     * {@snippet :
-     * typedef long __off_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_UPSILONaccent 1960
      * }
      */
-    public static final OfLong __off_t = JAVA_LONG;
+    public static int XK_Greek_UPSILONaccent() {
+        return XK_Greek_UPSILONaccent;
+    }
+    private static final int XK_Greek_UPSILONdieresis = (int)1961L;
     /**
-     * {@snippet :
-     * typedef long __off64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_UPSILONdieresis 1961
      * }
      */
-    public static final OfLong __off64_t = JAVA_LONG;
+    public static int XK_Greek_UPSILONdieresis() {
+        return XK_Greek_UPSILONdieresis;
+    }
+    private static final int XK_Greek_OMEGAaccent = (int)1963L;
     /**
-     * {@snippet :
-     * typedef int __pid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_OMEGAaccent 1963
      * }
      */
-    public static final OfInt __pid_t = JAVA_INT;
+    public static int XK_Greek_OMEGAaccent() {
+        return XK_Greek_OMEGAaccent;
+    }
+    private static final int XK_Greek_accentdieresis = (int)1966L;
     /**
-     * {@snippet :
-     * typedef long __clock_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_accentdieresis 1966
      * }
      */
-    public static final OfLong __clock_t = JAVA_LONG;
+    public static int XK_Greek_accentdieresis() {
+        return XK_Greek_accentdieresis;
+    }
+    private static final int XK_Greek_horizbar = (int)1967L;
     /**
-     * {@snippet :
-     * typedef unsigned long __rlim_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_horizbar 1967
      * }
      */
-    public static final OfLong __rlim_t = JAVA_LONG;
+    public static int XK_Greek_horizbar() {
+        return XK_Greek_horizbar;
+    }
+    private static final int XK_Greek_alphaaccent = (int)1969L;
     /**
-     * {@snippet :
-     * typedef unsigned long __rlim64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_alphaaccent 1969
      * }
      */
-    public static final OfLong __rlim64_t = JAVA_LONG;
+    public static int XK_Greek_alphaaccent() {
+        return XK_Greek_alphaaccent;
+    }
+    private static final int XK_Greek_epsilonaccent = (int)1970L;
     /**
-     * {@snippet :
-     * typedef unsigned int __id_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_epsilonaccent 1970
      * }
      */
-    public static final OfInt __id_t = JAVA_INT;
+    public static int XK_Greek_epsilonaccent() {
+        return XK_Greek_epsilonaccent;
+    }
+    private static final int XK_Greek_etaaccent = (int)1971L;
     /**
-     * {@snippet :
-     * typedef long __time_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_etaaccent 1971
      * }
      */
-    public static final OfLong __time_t = JAVA_LONG;
+    public static int XK_Greek_etaaccent() {
+        return XK_Greek_etaaccent;
+    }
+    private static final int XK_Greek_iotaaccent = (int)1972L;
     /**
-     * {@snippet :
-     * typedef unsigned int __useconds_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_iotaaccent 1972
      * }
      */
-    public static final OfInt __useconds_t = JAVA_INT;
+    public static int XK_Greek_iotaaccent() {
+        return XK_Greek_iotaaccent;
+    }
+    private static final int XK_Greek_iotadieresis = (int)1973L;
     /**
-     * {@snippet :
-     * typedef long __suseconds_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_iotadieresis 1973
      * }
      */
-    public static final OfLong __suseconds_t = JAVA_LONG;
+    public static int XK_Greek_iotadieresis() {
+        return XK_Greek_iotadieresis;
+    }
+    private static final int XK_Greek_iotaaccentdieresis = (int)1974L;
     /**
-     * {@snippet :
-     * typedef long __suseconds64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_iotaaccentdieresis 1974
      * }
      */
-    public static final OfLong __suseconds64_t = JAVA_LONG;
+    public static int XK_Greek_iotaaccentdieresis() {
+        return XK_Greek_iotaaccentdieresis;
+    }
+    private static final int XK_Greek_omicronaccent = (int)1975L;
     /**
-     * {@snippet :
-     * typedef int __daddr_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_omicronaccent 1975
      * }
      */
-    public static final OfInt __daddr_t = JAVA_INT;
+    public static int XK_Greek_omicronaccent() {
+        return XK_Greek_omicronaccent;
+    }
+    private static final int XK_Greek_upsilonaccent = (int)1976L;
     /**
-     * {@snippet :
-     * typedef int __key_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_upsilonaccent 1976
      * }
      */
-    public static final OfInt __key_t = JAVA_INT;
+    public static int XK_Greek_upsilonaccent() {
+        return XK_Greek_upsilonaccent;
+    }
+    private static final int XK_Greek_upsilondieresis = (int)1977L;
     /**
-     * {@snippet :
-     * typedef int __clockid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_upsilondieresis 1977
      * }
      */
-    public static final OfInt __clockid_t = JAVA_INT;
+    public static int XK_Greek_upsilondieresis() {
+        return XK_Greek_upsilondieresis;
+    }
+    private static final int XK_Greek_upsilonaccentdieresis = (int)1978L;
     /**
-     * {@snippet :
-     * typedef void* __timer_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_upsilonaccentdieresis 1978
      * }
      */
-    public static final AddressLayout __timer_t = RuntimeHelper.POINTER;
+    public static int XK_Greek_upsilonaccentdieresis() {
+        return XK_Greek_upsilonaccentdieresis;
+    }
+    private static final int XK_Greek_omegaaccent = (int)1979L;
     /**
-     * {@snippet :
-     * typedef long __blksize_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_omegaaccent 1979
      * }
      */
-    public static final OfLong __blksize_t = JAVA_LONG;
+    public static int XK_Greek_omegaaccent() {
+        return XK_Greek_omegaaccent;
+    }
+    private static final int XK_Greek_ALPHA = (int)1985L;
     /**
-     * {@snippet :
-     * typedef long __blkcnt_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_ALPHA 1985
      * }
      */
-    public static final OfLong __blkcnt_t = JAVA_LONG;
+    public static int XK_Greek_ALPHA() {
+        return XK_Greek_ALPHA;
+    }
+    private static final int XK_Greek_BETA = (int)1986L;
     /**
-     * {@snippet :
-     * typedef long __blkcnt64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_BETA 1986
      * }
      */
-    public static final OfLong __blkcnt64_t = JAVA_LONG;
+    public static int XK_Greek_BETA() {
+        return XK_Greek_BETA;
+    }
+    private static final int XK_Greek_GAMMA = (int)1987L;
     /**
-     * {@snippet :
-     * typedef unsigned long __fsblkcnt_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_GAMMA 1987
      * }
      */
-    public static final OfLong __fsblkcnt_t = JAVA_LONG;
+    public static int XK_Greek_GAMMA() {
+        return XK_Greek_GAMMA;
+    }
+    private static final int XK_Greek_DELTA = (int)1988L;
     /**
-     * {@snippet :
-     * typedef unsigned long __fsblkcnt64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_DELTA 1988
      * }
      */
-    public static final OfLong __fsblkcnt64_t = JAVA_LONG;
+    public static int XK_Greek_DELTA() {
+        return XK_Greek_DELTA;
+    }
+    private static final int XK_Greek_EPSILON = (int)1989L;
     /**
-     * {@snippet :
-     * typedef unsigned long __fsfilcnt_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_EPSILON 1989
      * }
      */
-    public static final OfLong __fsfilcnt_t = JAVA_LONG;
+    public static int XK_Greek_EPSILON() {
+        return XK_Greek_EPSILON;
+    }
+    private static final int XK_Greek_ZETA = (int)1990L;
     /**
-     * {@snippet :
-     * typedef unsigned long __fsfilcnt64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_ZETA 1990
      * }
      */
-    public static final OfLong __fsfilcnt64_t = JAVA_LONG;
+    public static int XK_Greek_ZETA() {
+        return XK_Greek_ZETA;
+    }
+    private static final int XK_Greek_ETA = (int)1991L;
     /**
-     * {@snippet :
-     * typedef long __fsword_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_ETA 1991
      * }
      */
-    public static final OfLong __fsword_t = JAVA_LONG;
+    public static int XK_Greek_ETA() {
+        return XK_Greek_ETA;
+    }
+    private static final int XK_Greek_THETA = (int)1992L;
     /**
-     * {@snippet :
-     * typedef long __ssize_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_THETA 1992
      * }
      */
-    public static final OfLong __ssize_t = JAVA_LONG;
+    public static int XK_Greek_THETA() {
+        return XK_Greek_THETA;
+    }
+    private static final int XK_Greek_IOTA = (int)1993L;
     /**
-     * {@snippet :
-     * typedef long __syscall_slong_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_IOTA 1993
      * }
      */
-    public static final OfLong __syscall_slong_t = JAVA_LONG;
+    public static int XK_Greek_IOTA() {
+        return XK_Greek_IOTA;
+    }
+    private static final int XK_Greek_KAPPA = (int)1994L;
     /**
-     * {@snippet :
-     * typedef unsigned long __syscall_ulong_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_KAPPA 1994
      * }
      */
-    public static final OfLong __syscall_ulong_t = JAVA_LONG;
+    public static int XK_Greek_KAPPA() {
+        return XK_Greek_KAPPA;
+    }
+    private static final int XK_Greek_LAMDA = (int)1995L;
     /**
-     * {@snippet :
-     * typedef long __loff_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_LAMDA 1995
      * }
      */
-    public static final OfLong __loff_t = JAVA_LONG;
+    public static int XK_Greek_LAMDA() {
+        return XK_Greek_LAMDA;
+    }
+    private static final int XK_Greek_LAMBDA = (int)1995L;
     /**
-     * {@snippet :
-     * typedef char* __caddr_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_LAMBDA 1995
      * }
      */
-    public static final AddressLayout __caddr_t = RuntimeHelper.POINTER;
+    public static int XK_Greek_LAMBDA() {
+        return XK_Greek_LAMBDA;
+    }
+    private static final int XK_Greek_MU = (int)1996L;
     /**
-     * {@snippet :
-     * typedef long __intptr_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_MU 1996
      * }
      */
-    public static final OfLong __intptr_t = JAVA_LONG;
+    public static int XK_Greek_MU() {
+        return XK_Greek_MU;
+    }
+    private static final int XK_Greek_NU = (int)1997L;
     /**
-     * {@snippet :
-     * typedef unsigned int __socklen_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_NU 1997
      * }
      */
-    public static final OfInt __socklen_t = JAVA_INT;
+    public static int XK_Greek_NU() {
+        return XK_Greek_NU;
+    }
+    private static final int XK_Greek_XI = (int)1998L;
     /**
-     * {@snippet :
-     * typedef int __sig_atomic_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_XI 1998
      * }
      */
-    public static final OfInt __sig_atomic_t = JAVA_INT;
+    public static int XK_Greek_XI() {
+        return XK_Greek_XI;
+    }
+    private static final int XK_Greek_OMICRON = (int)1999L;
     /**
-     * {@snippet :
-     * typedef unsigned char u_char;
+     * {@snippet lang=c :
+     * #define XK_Greek_OMICRON 1999
      * }
      */
-    public static final OfByte u_char = JAVA_BYTE;
+    public static int XK_Greek_OMICRON() {
+        return XK_Greek_OMICRON;
+    }
+    private static final int XK_Greek_PI = (int)2000L;
     /**
-     * {@snippet :
-     * typedef unsigned short u_short;
+     * {@snippet lang=c :
+     * #define XK_Greek_PI 2000
      * }
      */
-    public static final OfShort u_short = JAVA_SHORT;
+    public static int XK_Greek_PI() {
+        return XK_Greek_PI;
+    }
+    private static final int XK_Greek_RHO = (int)2001L;
     /**
-     * {@snippet :
-     * typedef unsigned int u_int;
+     * {@snippet lang=c :
+     * #define XK_Greek_RHO 2001
      * }
      */
-    public static final OfInt u_int = JAVA_INT;
+    public static int XK_Greek_RHO() {
+        return XK_Greek_RHO;
+    }
+    private static final int XK_Greek_SIGMA = (int)2002L;
     /**
-     * {@snippet :
-     * typedef unsigned long u_long;
+     * {@snippet lang=c :
+     * #define XK_Greek_SIGMA 2002
      * }
      */
-    public static final OfLong u_long = JAVA_LONG;
+    public static int XK_Greek_SIGMA() {
+        return XK_Greek_SIGMA;
+    }
+    private static final int XK_Greek_TAU = (int)2004L;
     /**
-     * {@snippet :
-     * typedef long quad_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_TAU 2004
      * }
      */
-    public static final OfLong quad_t = JAVA_LONG;
+    public static int XK_Greek_TAU() {
+        return XK_Greek_TAU;
+    }
+    private static final int XK_Greek_UPSILON = (int)2005L;
     /**
-     * {@snippet :
-     * typedef unsigned long u_quad_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_UPSILON 2005
      * }
      */
-    public static final OfLong u_quad_t = JAVA_LONG;
+    public static int XK_Greek_UPSILON() {
+        return XK_Greek_UPSILON;
+    }
+    private static final int XK_Greek_PHI = (int)2006L;
     /**
-     * {@snippet :
-     * typedef long loff_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_PHI 2006
      * }
      */
-    public static final OfLong loff_t = JAVA_LONG;
+    public static int XK_Greek_PHI() {
+        return XK_Greek_PHI;
+    }
+    private static final int XK_Greek_CHI = (int)2007L;
     /**
-     * {@snippet :
-     * typedef unsigned long ino_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_CHI 2007
      * }
      */
-    public static final OfLong ino_t = JAVA_LONG;
+    public static int XK_Greek_CHI() {
+        return XK_Greek_CHI;
+    }
+    private static final int XK_Greek_PSI = (int)2008L;
     /**
-     * {@snippet :
-     * typedef unsigned long dev_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_PSI 2008
      * }
      */
-    public static final OfLong dev_t = JAVA_LONG;
+    public static int XK_Greek_PSI() {
+        return XK_Greek_PSI;
+    }
+    private static final int XK_Greek_OMEGA = (int)2009L;
     /**
-     * {@snippet :
-     * typedef unsigned int gid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_OMEGA 2009
      * }
      */
-    public static final OfInt gid_t = JAVA_INT;
+    public static int XK_Greek_OMEGA() {
+        return XK_Greek_OMEGA;
+    }
+    private static final int XK_Greek_alpha = (int)2017L;
     /**
-     * {@snippet :
-     * typedef unsigned int mode_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_alpha 2017
      * }
      */
-    public static final OfInt mode_t = JAVA_INT;
+    public static int XK_Greek_alpha() {
+        return XK_Greek_alpha;
+    }
+    private static final int XK_Greek_beta = (int)2018L;
     /**
-     * {@snippet :
-     * typedef unsigned long nlink_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_beta 2018
      * }
      */
-    public static final OfLong nlink_t = JAVA_LONG;
+    public static int XK_Greek_beta() {
+        return XK_Greek_beta;
+    }
+    private static final int XK_Greek_gamma = (int)2019L;
     /**
-     * {@snippet :
-     * typedef unsigned int uid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_gamma 2019
      * }
      */
-    public static final OfInt uid_t = JAVA_INT;
+    public static int XK_Greek_gamma() {
+        return XK_Greek_gamma;
+    }
+    private static final int XK_Greek_delta = (int)2020L;
     /**
-     * {@snippet :
-     * typedef long off_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_delta 2020
      * }
      */
-    public static final OfLong off_t = JAVA_LONG;
+    public static int XK_Greek_delta() {
+        return XK_Greek_delta;
+    }
+    private static final int XK_Greek_epsilon = (int)2021L;
     /**
-     * {@snippet :
-     * typedef int pid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_epsilon 2021
      * }
      */
-    public static final OfInt pid_t = JAVA_INT;
+    public static int XK_Greek_epsilon() {
+        return XK_Greek_epsilon;
+    }
+    private static final int XK_Greek_zeta = (int)2022L;
     /**
-     * {@snippet :
-     * typedef unsigned int id_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_zeta 2022
      * }
      */
-    public static final OfInt id_t = JAVA_INT;
+    public static int XK_Greek_zeta() {
+        return XK_Greek_zeta;
+    }
+    private static final int XK_Greek_eta = (int)2023L;
     /**
-     * {@snippet :
-     * typedef long ssize_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_eta 2023
      * }
      */
-    public static final OfLong ssize_t = JAVA_LONG;
+    public static int XK_Greek_eta() {
+        return XK_Greek_eta;
+    }
+    private static final int XK_Greek_theta = (int)2024L;
     /**
-     * {@snippet :
-     * typedef int daddr_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_theta 2024
      * }
      */
-    public static final OfInt daddr_t = JAVA_INT;
+    public static int XK_Greek_theta() {
+        return XK_Greek_theta;
+    }
+    private static final int XK_Greek_iota = (int)2025L;
     /**
-     * {@snippet :
-     * typedef char* caddr_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_iota 2025
      * }
      */
-    public static final AddressLayout caddr_t = RuntimeHelper.POINTER;
+    public static int XK_Greek_iota() {
+        return XK_Greek_iota;
+    }
+    private static final int XK_Greek_kappa = (int)2026L;
     /**
-     * {@snippet :
-     * typedef int key_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_kappa 2026
      * }
      */
-    public static final OfInt key_t = JAVA_INT;
+    public static int XK_Greek_kappa() {
+        return XK_Greek_kappa;
+    }
+    private static final int XK_Greek_lamda = (int)2027L;
     /**
-     * {@snippet :
-     * typedef long clock_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_lamda 2027
      * }
      */
-    public static final OfLong clock_t = JAVA_LONG;
+    public static int XK_Greek_lamda() {
+        return XK_Greek_lamda;
+    }
+    private static final int XK_Greek_lambda = (int)2027L;
     /**
-     * {@snippet :
-     * typedef int clockid_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_lambda 2027
      * }
      */
-    public static final OfInt clockid_t = JAVA_INT;
+    public static int XK_Greek_lambda() {
+        return XK_Greek_lambda;
+    }
+    private static final int XK_Greek_mu = (int)2028L;
     /**
-     * {@snippet :
-     * typedef long time_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_mu 2028
      * }
      */
-    public static final OfLong time_t = JAVA_LONG;
+    public static int XK_Greek_mu() {
+        return XK_Greek_mu;
+    }
+    private static final int XK_Greek_nu = (int)2029L;
     /**
-     * {@snippet :
-     * typedef void* timer_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_nu 2029
      * }
      */
-    public static final AddressLayout timer_t = RuntimeHelper.POINTER;
+    public static int XK_Greek_nu() {
+        return XK_Greek_nu;
+    }
+    private static final int XK_Greek_xi = (int)2030L;
     /**
-     * {@snippet :
-     * typedef unsigned long size_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_xi 2030
      * }
      */
-    public static final OfLong size_t = JAVA_LONG;
+    public static int XK_Greek_xi() {
+        return XK_Greek_xi;
+    }
+    private static final int XK_Greek_omicron = (int)2031L;
     /**
-     * {@snippet :
-     * typedef unsigned long ulong;
+     * {@snippet lang=c :
+     * #define XK_Greek_omicron 2031
      * }
      */
-    public static final OfLong ulong = JAVA_LONG;
+    public static int XK_Greek_omicron() {
+        return XK_Greek_omicron;
+    }
+    private static final int XK_Greek_pi = (int)2032L;
     /**
-     * {@snippet :
-     * typedef unsigned short ushort;
+     * {@snippet lang=c :
+     * #define XK_Greek_pi 2032
      * }
      */
-    public static final OfShort ushort = JAVA_SHORT;
+    public static int XK_Greek_pi() {
+        return XK_Greek_pi;
+    }
+    private static final int XK_Greek_rho = (int)2033L;
     /**
-     * {@snippet :
-     * typedef unsigned int uint;
+     * {@snippet lang=c :
+     * #define XK_Greek_rho 2033
      * }
      */
-    public static final OfInt uint = JAVA_INT;
+    public static int XK_Greek_rho() {
+        return XK_Greek_rho;
+    }
+    private static final int XK_Greek_sigma = (int)2034L;
     /**
-     * {@snippet :
-     * typedef signed char int8_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_sigma 2034
      * }
      */
-    public static final OfByte int8_t = JAVA_BYTE;
+    public static int XK_Greek_sigma() {
+        return XK_Greek_sigma;
+    }
+    private static final int XK_Greek_finalsmallsigma = (int)2035L;
     /**
-     * {@snippet :
-     * typedef short int16_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_finalsmallsigma 2035
      * }
      */
-    public static final OfShort int16_t = JAVA_SHORT;
+    public static int XK_Greek_finalsmallsigma() {
+        return XK_Greek_finalsmallsigma;
+    }
+    private static final int XK_Greek_tau = (int)2036L;
     /**
-     * {@snippet :
-     * typedef int int32_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_tau 2036
      * }
      */
-    public static final OfInt int32_t = JAVA_INT;
+    public static int XK_Greek_tau() {
+        return XK_Greek_tau;
+    }
+    private static final int XK_Greek_upsilon = (int)2037L;
     /**
-     * {@snippet :
-     * typedef long int64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_upsilon 2037
      * }
      */
-    public static final OfLong int64_t = JAVA_LONG;
+    public static int XK_Greek_upsilon() {
+        return XK_Greek_upsilon;
+    }
+    private static final int XK_Greek_phi = (int)2038L;
     /**
-     * {@snippet :
-     * typedef unsigned char u_int8_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_phi 2038
      * }
      */
-    public static final OfByte u_int8_t = JAVA_BYTE;
+    public static int XK_Greek_phi() {
+        return XK_Greek_phi;
+    }
+    private static final int XK_Greek_chi = (int)2039L;
     /**
-     * {@snippet :
-     * typedef unsigned short u_int16_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_chi 2039
      * }
      */
-    public static final OfShort u_int16_t = JAVA_SHORT;
+    public static int XK_Greek_chi() {
+        return XK_Greek_chi;
+    }
+    private static final int XK_Greek_psi = (int)2040L;
     /**
-     * {@snippet :
-     * typedef unsigned int u_int32_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_psi 2040
      * }
      */
-    public static final OfInt u_int32_t = JAVA_INT;
+    public static int XK_Greek_psi() {
+        return XK_Greek_psi;
+    }
+    private static final int XK_Greek_omega = (int)2041L;
     /**
-     * {@snippet :
-     * typedef unsigned long u_int64_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_omega 2041
      * }
      */
-    public static final OfLong u_int64_t = JAVA_LONG;
+    public static int XK_Greek_omega() {
+        return XK_Greek_omega;
+    }
+    private static final int XK_Greek_switch = (int)65406L;
     /**
-     * {@snippet :
-     * typedef long register_t;
+     * {@snippet lang=c :
+     * #define XK_Greek_switch 65406
      * }
      */
-    public static final OfLong register_t = JAVA_LONG;
+    public static int XK_Greek_switch() {
+        return XK_Greek_switch;
+    }
+    private static final int XK_hebrew_doublelowline = (int)3295L;
     /**
-     * {@snippet :
-     * typedef long suseconds_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_doublelowline 3295
      * }
      */
-    public static final OfLong suseconds_t = JAVA_LONG;
+    public static int XK_hebrew_doublelowline() {
+        return XK_hebrew_doublelowline;
+    }
+    private static final int XK_hebrew_aleph = (int)3296L;
     /**
-     * {@snippet :
-     * typedef long __fd_mask;
+     * {@snippet lang=c :
+     * #define XK_hebrew_aleph 3296
      * }
      */
-    public static final OfLong __fd_mask = JAVA_LONG;
+    public static int XK_hebrew_aleph() {
+        return XK_hebrew_aleph;
+    }
+    private static final int XK_hebrew_bet = (int)3297L;
     /**
-     * {@snippet :
-     * typedef long fd_mask;
+     * {@snippet lang=c :
+     * #define XK_hebrew_bet 3297
      * }
      */
-    public static final OfLong fd_mask = JAVA_LONG;
-    public static MethodHandle select$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.const$4,"select");
+    public static int XK_hebrew_bet() {
+        return XK_hebrew_bet;
     }
+    private static final int XK_hebrew_beth = (int)3297L;
     /**
-     * {@snippet :
-     * int select(int __nfds, fd_set* __readfds, fd_set* __writefds, fd_set* __exceptfds, struct timeval* __timeout);
+     * {@snippet lang=c :
+     * #define XK_hebrew_beth 3297
      * }
      */
-    public static int select(int __nfds, MemorySegment __readfds, MemorySegment __writefds, MemorySegment __exceptfds, MemorySegment __timeout) {
-        var mh$ = select$MH();
-        try {
-            return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_hebrew_beth() {
+        return XK_hebrew_beth;
     }
-    public static MethodHandle pselect$MH() {
-        return RuntimeHelper.requireNonNull(constants$1.const$6,"pselect");
-    }
+    private static final int XK_hebrew_gimel = (int)3298L;
     /**
-     * {@snippet :
-     * int pselect(int __nfds, fd_set* __readfds, fd_set* __writefds, fd_set* __exceptfds, struct timespec* __timeout, const __sigset_t* __sigmask);
+     * {@snippet lang=c :
+     * #define XK_hebrew_gimel 3298
      * }
      */
-    public static int pselect(int __nfds, MemorySegment __readfds, MemorySegment __writefds, MemorySegment __exceptfds, MemorySegment __timeout, MemorySegment __sigmask) {
-        var mh$ = pselect$MH();
-        try {
-            return (int)mh$.invokeExact(__nfds, __readfds, __writefds, __exceptfds, __timeout, __sigmask);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_hebrew_gimel() {
+        return XK_hebrew_gimel;
     }
+    private static final int XK_hebrew_gimmel = (int)3298L;
     /**
-     * {@snippet :
-     * typedef long blksize_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_gimmel 3298
      * }
      */
-    public static final OfLong blksize_t = JAVA_LONG;
+    public static int XK_hebrew_gimmel() {
+        return XK_hebrew_gimmel;
+    }
+    private static final int XK_hebrew_dalet = (int)3299L;
     /**
-     * {@snippet :
-     * typedef long blkcnt_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_dalet 3299
      * }
      */
-    public static final OfLong blkcnt_t = JAVA_LONG;
+    public static int XK_hebrew_dalet() {
+        return XK_hebrew_dalet;
+    }
+    private static final int XK_hebrew_daleth = (int)3299L;
     /**
-     * {@snippet :
-     * typedef unsigned long fsblkcnt_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_daleth 3299
      * }
      */
-    public static final OfLong fsblkcnt_t = JAVA_LONG;
+    public static int XK_hebrew_daleth() {
+        return XK_hebrew_daleth;
+    }
+    private static final int XK_hebrew_he = (int)3300L;
     /**
-     * {@snippet :
-     * typedef unsigned long fsfilcnt_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_he 3300
      * }
      */
-    public static final OfLong fsfilcnt_t = JAVA_LONG;
+    public static int XK_hebrew_he() {
+        return XK_hebrew_he;
+    }
+    private static final int XK_hebrew_waw = (int)3301L;
     /**
-     * {@snippet :
-     * typedef unsigned int __tss_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_waw 3301
      * }
      */
-    public static final OfInt __tss_t = JAVA_INT;
+    public static int XK_hebrew_waw() {
+        return XK_hebrew_waw;
+    }
+    private static final int XK_hebrew_zain = (int)3302L;
     /**
-     * {@snippet :
-     * typedef unsigned long __thrd_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_zain 3302
      * }
      */
-    public static final OfLong __thrd_t = JAVA_LONG;
+    public static int XK_hebrew_zain() {
+        return XK_hebrew_zain;
+    }
+    private static final int XK_hebrew_zayin = (int)3302L;
     /**
-     * {@snippet :
-     * typedef unsigned long pthread_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_zayin 3302
      * }
      */
-    public static final OfLong pthread_t = JAVA_LONG;
+    public static int XK_hebrew_zayin() {
+        return XK_hebrew_zayin;
+    }
+    private static final int XK_hebrew_chet = (int)3303L;
     /**
-     * {@snippet :
-     * typedef unsigned int pthread_key_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_chet 3303
      * }
      */
-    public static final OfInt pthread_key_t = JAVA_INT;
+    public static int XK_hebrew_chet() {
+        return XK_hebrew_chet;
+    }
+    private static final int XK_hebrew_het = (int)3303L;
     /**
-     * {@snippet :
-     * typedef int pthread_once_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_het 3303
      * }
      */
-    public static final OfInt pthread_once_t = JAVA_INT;
+    public static int XK_hebrew_het() {
+        return XK_hebrew_het;
+    }
+    private static final int XK_hebrew_tet = (int)3304L;
     /**
-     * {@snippet :
-     * typedef int pthread_spinlock_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_tet 3304
      * }
      */
-    public static final OfInt pthread_spinlock_t = JAVA_INT;
+    public static int XK_hebrew_tet() {
+        return XK_hebrew_tet;
+    }
+    private static final int XK_hebrew_teth = (int)3304L;
     /**
-     * {@snippet :
-     * typedef unsigned long XID;
+     * {@snippet lang=c :
+     * #define XK_hebrew_teth 3304
      * }
      */
-    public static final OfLong XID = JAVA_LONG;
+    public static int XK_hebrew_teth() {
+        return XK_hebrew_teth;
+    }
+    private static final int XK_hebrew_yod = (int)3305L;
     /**
-     * {@snippet :
-     * typedef unsigned long Mask;
+     * {@snippet lang=c :
+     * #define XK_hebrew_yod 3305
      * }
      */
-    public static final OfLong Mask = JAVA_LONG;
+    public static int XK_hebrew_yod() {
+        return XK_hebrew_yod;
+    }
+    private static final int XK_hebrew_finalkaph = (int)3306L;
     /**
-     * {@snippet :
-     * typedef unsigned long Atom;
+     * {@snippet lang=c :
+     * #define XK_hebrew_finalkaph 3306
      * }
      */
-    public static final OfLong Atom = JAVA_LONG;
+    public static int XK_hebrew_finalkaph() {
+        return XK_hebrew_finalkaph;
+    }
+    private static final int XK_hebrew_kaph = (int)3307L;
     /**
-     * {@snippet :
-     * typedef unsigned long VisualID;
+     * {@snippet lang=c :
+     * #define XK_hebrew_kaph 3307
      * }
      */
-    public static final OfLong VisualID = JAVA_LONG;
+    public static int XK_hebrew_kaph() {
+        return XK_hebrew_kaph;
+    }
+    private static final int XK_hebrew_lamed = (int)3308L;
     /**
-     * {@snippet :
-     * typedef unsigned long Time;
+     * {@snippet lang=c :
+     * #define XK_hebrew_lamed 3308
      * }
      */
-    public static final OfLong Time = JAVA_LONG;
+    public static int XK_hebrew_lamed() {
+        return XK_hebrew_lamed;
+    }
+    private static final int XK_hebrew_finalmem = (int)3309L;
     /**
-     * {@snippet :
-     * typedef unsigned long Window;
+     * {@snippet lang=c :
+     * #define XK_hebrew_finalmem 3309
      * }
      */
-    public static final OfLong Window = JAVA_LONG;
+    public static int XK_hebrew_finalmem() {
+        return XK_hebrew_finalmem;
+    }
+    private static final int XK_hebrew_mem = (int)3310L;
     /**
-     * {@snippet :
-     * typedef unsigned long Drawable;
+     * {@snippet lang=c :
+     * #define XK_hebrew_mem 3310
      * }
      */
-    public static final OfLong Drawable = JAVA_LONG;
+    public static int XK_hebrew_mem() {
+        return XK_hebrew_mem;
+    }
+    private static final int XK_hebrew_finalnun = (int)3311L;
     /**
-     * {@snippet :
-     * typedef unsigned long Font;
+     * {@snippet lang=c :
+     * #define XK_hebrew_finalnun 3311
      * }
      */
-    public static final OfLong Font = JAVA_LONG;
+    public static int XK_hebrew_finalnun() {
+        return XK_hebrew_finalnun;
+    }
+    private static final int XK_hebrew_nun = (int)3312L;
     /**
-     * {@snippet :
-     * typedef unsigned long Pixmap;
+     * {@snippet lang=c :
+     * #define XK_hebrew_nun 3312
      * }
      */
-    public static final OfLong Pixmap = JAVA_LONG;
+    public static int XK_hebrew_nun() {
+        return XK_hebrew_nun;
+    }
+    private static final int XK_hebrew_samech = (int)3313L;
     /**
-     * {@snippet :
-     * typedef unsigned long Cursor;
+     * {@snippet lang=c :
+     * #define XK_hebrew_samech 3313
      * }
      */
-    public static final OfLong Cursor = JAVA_LONG;
+    public static int XK_hebrew_samech() {
+        return XK_hebrew_samech;
+    }
+    private static final int XK_hebrew_samekh = (int)3313L;
     /**
-     * {@snippet :
-     * typedef unsigned long Colormap;
+     * {@snippet lang=c :
+     * #define XK_hebrew_samekh 3313
      * }
      */
-    public static final OfLong Colormap = JAVA_LONG;
+    public static int XK_hebrew_samekh() {
+        return XK_hebrew_samekh;
+    }
+    private static final int XK_hebrew_ayin = (int)3314L;
     /**
-     * {@snippet :
-     * typedef unsigned long GContext;
+     * {@snippet lang=c :
+     * #define XK_hebrew_ayin 3314
      * }
      */
-    public static final OfLong GContext = JAVA_LONG;
+    public static int XK_hebrew_ayin() {
+        return XK_hebrew_ayin;
+    }
+    private static final int XK_hebrew_finalpe = (int)3315L;
     /**
-     * {@snippet :
-     * typedef unsigned long KeySym;
+     * {@snippet lang=c :
+     * #define XK_hebrew_finalpe 3315
      * }
      */
-    public static final OfLong KeySym = JAVA_LONG;
+    public static int XK_hebrew_finalpe() {
+        return XK_hebrew_finalpe;
+    }
+    private static final int XK_hebrew_pe = (int)3316L;
     /**
-     * {@snippet :
-     * typedef unsigned char KeyCode;
+     * {@snippet lang=c :
+     * #define XK_hebrew_pe 3316
      * }
      */
-    public static final OfByte KeyCode = JAVA_BYTE;
+    public static int XK_hebrew_pe() {
+        return XK_hebrew_pe;
+    }
+    private static final int XK_hebrew_finalzade = (int)3317L;
     /**
-     * {@snippet :
-     * typedef long ptrdiff_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_finalzade 3317
      * }
      */
-    public static final OfLong ptrdiff_t = JAVA_LONG;
+    public static int XK_hebrew_finalzade() {
+        return XK_hebrew_finalzade;
+    }
+    private static final int XK_hebrew_finalzadi = (int)3317L;
     /**
-     * {@snippet :
-     * typedef int wchar_t;
+     * {@snippet lang=c :
+     * #define XK_hebrew_finalzadi 3317
      * }
      */
-    public static final OfInt wchar_t = JAVA_INT;
-    public static MethodHandle _Xmblen$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.const$2,"_Xmblen");
+    public static int XK_hebrew_finalzadi() {
+        return XK_hebrew_finalzadi;
     }
+    private static final int XK_hebrew_zade = (int)3318L;
     /**
-     * {@snippet :
-     * int _Xmblen(char* str, int len);
+     * {@snippet lang=c :
+     * #define XK_hebrew_zade 3318
      * }
      */
-    public static int _Xmblen(MemorySegment str, int len) {
-        var mh$ = _Xmblen$MH();
-        try {
-            return (int)mh$.invokeExact(str, len);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_hebrew_zade() {
+        return XK_hebrew_zade;
     }
+    private static final int XK_hebrew_zadi = (int)3318L;
     /**
-     * {@snippet :
-     * typedef char* XPointer;
+     * {@snippet lang=c :
+     * #define XK_hebrew_zadi 3318
      * }
      */
-    public static final AddressLayout XPointer = RuntimeHelper.POINTER;
+    public static int XK_hebrew_zadi() {
+        return XK_hebrew_zadi;
+    }
+    private static final int XK_hebrew_qoph = (int)3319L;
     /**
-     * {@snippet :
-     * typedef struct _XGC* GC;
+     * {@snippet lang=c :
+     * #define XK_hebrew_qoph 3319
      * }
      */
-    public static final AddressLayout GC = RuntimeHelper.POINTER;
+    public static int XK_hebrew_qoph() {
+        return XK_hebrew_qoph;
+    }
+    private static final int XK_hebrew_kuf = (int)3319L;
     /**
-     * {@snippet :
-     * typedef struct * _XPrivDisplay;
+     * {@snippet lang=c :
+     * #define XK_hebrew_kuf 3319
      * }
      */
-    public static final AddressLayout _XPrivDisplay = RuntimeHelper.POINTER;
+    public static int XK_hebrew_kuf() {
+        return XK_hebrew_kuf;
+    }
+    private static final int XK_hebrew_resh = (int)3320L;
     /**
-     * {@snippet :
-     * typedef struct _XOM* XOM;
+     * {@snippet lang=c :
+     * #define XK_hebrew_resh 3320
      * }
      */
-    public static final AddressLayout XOM = RuntimeHelper.POINTER;
+    public static int XK_hebrew_resh() {
+        return XK_hebrew_resh;
+    }
+    private static final int XK_hebrew_shin = (int)3321L;
     /**
-     * {@snippet :
-     * typedef struct _XOC* XOC;
+     * {@snippet lang=c :
+     * #define XK_hebrew_shin 3321
      * }
      */
-    public static final AddressLayout XOC = RuntimeHelper.POINTER;
+    public static int XK_hebrew_shin() {
+        return XK_hebrew_shin;
+    }
+    private static final int XK_hebrew_taw = (int)3322L;
     /**
-     * {@snippet :
-     * typedef struct _XOC* XFontSet;
+     * {@snippet lang=c :
+     * #define XK_hebrew_taw 3322
      * }
      */
-    public static final AddressLayout XFontSet = RuntimeHelper.POINTER;
+    public static int XK_hebrew_taw() {
+        return XK_hebrew_taw;
+    }
+    private static final int XK_hebrew_taf = (int)3322L;
     /**
-     * {@snippet :
-     * enum .XOMOrientation_LTR_TTB = 0;
+     * {@snippet lang=c :
+     * #define XK_hebrew_taf 3322
      * }
      */
-    public static int XOMOrientation_LTR_TTB() {
-        return (int)0L;
+    public static int XK_hebrew_taf() {
+        return XK_hebrew_taf;
     }
+    private static final int XK_Hebrew_switch = (int)65406L;
     /**
-     * {@snippet :
-     * enum .XOMOrientation_RTL_TTB = 1;
+     * {@snippet lang=c :
+     * #define XK_Hebrew_switch 65406
      * }
      */
-    public static int XOMOrientation_RTL_TTB() {
-        return (int)1L;
+    public static int XK_Hebrew_switch() {
+        return XK_Hebrew_switch;
     }
+    private static final int XK_Thai_kokai = (int)3489L;
     /**
-     * {@snippet :
-     * enum .XOMOrientation_TTB_LTR = 2;
+     * {@snippet lang=c :
+     * #define XK_Thai_kokai 3489
      * }
      */
-    public static int XOMOrientation_TTB_LTR() {
-        return (int)2L;
+    public static int XK_Thai_kokai() {
+        return XK_Thai_kokai;
     }
+    private static final int XK_Thai_khokhai = (int)3490L;
     /**
-     * {@snippet :
-     * enum .XOMOrientation_TTB_RTL = 3;
+     * {@snippet lang=c :
+     * #define XK_Thai_khokhai 3490
      * }
      */
-    public static int XOMOrientation_TTB_RTL() {
-        return (int)3L;
+    public static int XK_Thai_khokhai() {
+        return XK_Thai_khokhai;
     }
+    private static final int XK_Thai_khokhuat = (int)3491L;
     /**
-     * {@snippet :
-     * enum .XOMOrientation_Context = 4;
+     * {@snippet lang=c :
+     * #define XK_Thai_khokhuat 3491
      * }
      */
-    public static int XOMOrientation_Context() {
-        return (int)4L;
+    public static int XK_Thai_khokhuat() {
+        return XK_Thai_khokhuat;
     }
+    private static final int XK_Thai_khokhwai = (int)3492L;
     /**
-     * {@snippet :
-     * typedef struct _XIM* XIM;
+     * {@snippet lang=c :
+     * #define XK_Thai_khokhwai 3492
      * }
      */
-    public static final AddressLayout XIM = RuntimeHelper.POINTER;
+    public static int XK_Thai_khokhwai() {
+        return XK_Thai_khokhwai;
+    }
+    private static final int XK_Thai_khokhon = (int)3493L;
     /**
-     * {@snippet :
-     * typedef struct _XIC* XIC;
+     * {@snippet lang=c :
+     * #define XK_Thai_khokhon 3493
      * }
      */
-    public static final AddressLayout XIC = RuntimeHelper.POINTER;
+    public static int XK_Thai_khokhon() {
+        return XK_Thai_khokhon;
+    }
+    private static final int XK_Thai_khorakhang = (int)3494L;
     /**
-     * {@snippet :
-     * typedef unsigned long XIMStyle;
+     * {@snippet lang=c :
+     * #define XK_Thai_khorakhang 3494
      * }
      */
-    public static final OfLong XIMStyle = JAVA_LONG;
+    public static int XK_Thai_khorakhang() {
+        return XK_Thai_khorakhang;
+    }
+    private static final int XK_Thai_ngongu = (int)3495L;
     /**
-     * {@snippet :
-     * typedef void* XVaNestedList;
+     * {@snippet lang=c :
+     * #define XK_Thai_ngongu 3495
      * }
      */
-    public static final AddressLayout XVaNestedList = RuntimeHelper.POINTER;
+    public static int XK_Thai_ngongu() {
+        return XK_Thai_ngongu;
+    }
+    private static final int XK_Thai_chochan = (int)3496L;
     /**
-     * {@snippet :
-     * typedef unsigned long XIMFeedback;
+     * {@snippet lang=c :
+     * #define XK_Thai_chochan 3496
      * }
      */
-    public static final OfLong XIMFeedback = JAVA_LONG;
+    public static int XK_Thai_chochan() {
+        return XK_Thai_chochan;
+    }
+    private static final int XK_Thai_choching = (int)3497L;
     /**
-     * {@snippet :
-     * typedef unsigned long XIMPreeditState;
+     * {@snippet lang=c :
+     * #define XK_Thai_choching 3497
      * }
      */
-    public static final OfLong XIMPreeditState = JAVA_LONG;
+    public static int XK_Thai_choching() {
+        return XK_Thai_choching;
+    }
+    private static final int XK_Thai_chochang = (int)3498L;
     /**
-     * {@snippet :
-     * typedef unsigned long XIMResetState;
+     * {@snippet lang=c :
+     * #define XK_Thai_chochang 3498
      * }
      */
-    public static final OfLong XIMResetState = JAVA_LONG;
+    public static int XK_Thai_chochang() {
+        return XK_Thai_chochang;
+    }
+    private static final int XK_Thai_soso = (int)3499L;
     /**
-     * {@snippet :
-     * typedef unsigned long XIMStringConversionFeedback;
+     * {@snippet lang=c :
+     * #define XK_Thai_soso 3499
      * }
      */
-    public static final OfLong XIMStringConversionFeedback = JAVA_LONG;
+    public static int XK_Thai_soso() {
+        return XK_Thai_soso;
+    }
+    private static final int XK_Thai_chochoe = (int)3500L;
     /**
-     * {@snippet :
-     * typedef unsigned short XIMStringConversionPosition;
+     * {@snippet lang=c :
+     * #define XK_Thai_chochoe 3500
      * }
      */
-    public static final OfShort XIMStringConversionPosition = JAVA_SHORT;
+    public static int XK_Thai_chochoe() {
+        return XK_Thai_chochoe;
+    }
+    private static final int XK_Thai_yoying = (int)3501L;
     /**
-     * {@snippet :
-     * typedef unsigned short XIMStringConversionType;
+     * {@snippet lang=c :
+     * #define XK_Thai_yoying 3501
      * }
      */
-    public static final OfShort XIMStringConversionType = JAVA_SHORT;
+    public static int XK_Thai_yoying() {
+        return XK_Thai_yoying;
+    }
+    private static final int XK_Thai_dochada = (int)3502L;
     /**
-     * {@snippet :
-     * typedef unsigned short XIMStringConversionOperation;
+     * {@snippet lang=c :
+     * #define XK_Thai_dochada 3502
      * }
      */
-    public static final OfShort XIMStringConversionOperation = JAVA_SHORT;
+    public static int XK_Thai_dochada() {
+        return XK_Thai_dochada;
+    }
+    private static final int XK_Thai_topatak = (int)3503L;
     /**
-     * {@snippet :
-     * enum .XIMForwardChar = 0;
+     * {@snippet lang=c :
+     * #define XK_Thai_topatak 3503
      * }
      */
-    public static int XIMForwardChar() {
-        return (int)0L;
+    public static int XK_Thai_topatak() {
+        return XK_Thai_topatak;
     }
+    private static final int XK_Thai_thothan = (int)3504L;
     /**
-     * {@snippet :
-     * enum .XIMBackwardChar = 1;
+     * {@snippet lang=c :
+     * #define XK_Thai_thothan 3504
      * }
      */
-    public static int XIMBackwardChar() {
-        return (int)1L;
+    public static int XK_Thai_thothan() {
+        return XK_Thai_thothan;
     }
+    private static final int XK_Thai_thonangmontho = (int)3505L;
     /**
-     * {@snippet :
-     * enum .XIMForwardWord = 2;
+     * {@snippet lang=c :
+     * #define XK_Thai_thonangmontho 3505
      * }
      */
-    public static int XIMForwardWord() {
-        return (int)2L;
+    public static int XK_Thai_thonangmontho() {
+        return XK_Thai_thonangmontho;
     }
+    private static final int XK_Thai_thophuthao = (int)3506L;
     /**
-     * {@snippet :
-     * enum .XIMBackwardWord = 3;
+     * {@snippet lang=c :
+     * #define XK_Thai_thophuthao 3506
      * }
      */
-    public static int XIMBackwardWord() {
-        return (int)3L;
+    public static int XK_Thai_thophuthao() {
+        return XK_Thai_thophuthao;
     }
+    private static final int XK_Thai_nonen = (int)3507L;
     /**
-     * {@snippet :
-     * enum .XIMCaretUp = 4;
+     * {@snippet lang=c :
+     * #define XK_Thai_nonen 3507
      * }
      */
-    public static int XIMCaretUp() {
-        return (int)4L;
+    public static int XK_Thai_nonen() {
+        return XK_Thai_nonen;
     }
+    private static final int XK_Thai_dodek = (int)3508L;
     /**
-     * {@snippet :
-     * enum .XIMCaretDown = 5;
+     * {@snippet lang=c :
+     * #define XK_Thai_dodek 3508
      * }
      */
-    public static int XIMCaretDown() {
-        return (int)5L;
+    public static int XK_Thai_dodek() {
+        return XK_Thai_dodek;
     }
+    private static final int XK_Thai_totao = (int)3509L;
     /**
-     * {@snippet :
-     * enum .XIMNextLine = 6;
+     * {@snippet lang=c :
+     * #define XK_Thai_totao 3509
      * }
      */
-    public static int XIMNextLine() {
-        return (int)6L;
+    public static int XK_Thai_totao() {
+        return XK_Thai_totao;
     }
+    private static final int XK_Thai_thothung = (int)3510L;
     /**
-     * {@snippet :
-     * enum .XIMPreviousLine = 7;
+     * {@snippet lang=c :
+     * #define XK_Thai_thothung 3510
      * }
      */
-    public static int XIMPreviousLine() {
-        return (int)7L;
+    public static int XK_Thai_thothung() {
+        return XK_Thai_thothung;
     }
+    private static final int XK_Thai_thothahan = (int)3511L;
     /**
-     * {@snippet :
-     * enum .XIMLineStart = 8;
+     * {@snippet lang=c :
+     * #define XK_Thai_thothahan 3511
      * }
      */
-    public static int XIMLineStart() {
-        return (int)8L;
+    public static int XK_Thai_thothahan() {
+        return XK_Thai_thothahan;
     }
+    private static final int XK_Thai_thothong = (int)3512L;
     /**
-     * {@snippet :
-     * enum .XIMLineEnd = 9;
+     * {@snippet lang=c :
+     * #define XK_Thai_thothong 3512
      * }
      */
-    public static int XIMLineEnd() {
-        return (int)9L;
+    public static int XK_Thai_thothong() {
+        return XK_Thai_thothong;
     }
+    private static final int XK_Thai_nonu = (int)3513L;
     /**
-     * {@snippet :
-     * enum .XIMAbsolutePosition = 10;
+     * {@snippet lang=c :
+     * #define XK_Thai_nonu 3513
      * }
      */
-    public static int XIMAbsolutePosition() {
-        return (int)10L;
+    public static int XK_Thai_nonu() {
+        return XK_Thai_nonu;
     }
+    private static final int XK_Thai_bobaimai = (int)3514L;
     /**
-     * {@snippet :
-     * enum .XIMDontChange = 11;
+     * {@snippet lang=c :
+     * #define XK_Thai_bobaimai 3514
      * }
      */
-    public static int XIMDontChange() {
-        return (int)11L;
+    public static int XK_Thai_bobaimai() {
+        return XK_Thai_bobaimai;
     }
+    private static final int XK_Thai_popla = (int)3515L;
     /**
-     * {@snippet :
-     * enum .XIMIsInvisible = 0;
+     * {@snippet lang=c :
+     * #define XK_Thai_popla 3515
      * }
      */
-    public static int XIMIsInvisible() {
-        return (int)0L;
+    public static int XK_Thai_popla() {
+        return XK_Thai_popla;
     }
+    private static final int XK_Thai_phophung = (int)3516L;
     /**
-     * {@snippet :
-     * enum .XIMIsPrimary = 1;
+     * {@snippet lang=c :
+     * #define XK_Thai_phophung 3516
      * }
      */
-    public static int XIMIsPrimary() {
-        return (int)1L;
+    public static int XK_Thai_phophung() {
+        return XK_Thai_phophung;
     }
+    private static final int XK_Thai_fofa = (int)3517L;
     /**
-     * {@snippet :
-     * enum .XIMIsSecondary = 2;
+     * {@snippet lang=c :
+     * #define XK_Thai_fofa 3517
      * }
      */
-    public static int XIMIsSecondary() {
-        return (int)2L;
+    public static int XK_Thai_fofa() {
+        return XK_Thai_fofa;
     }
+    private static final int XK_Thai_phophan = (int)3518L;
     /**
-     * {@snippet :
-     * enum .XIMTextType = 0;
+     * {@snippet lang=c :
+     * #define XK_Thai_phophan 3518
      * }
      */
-    public static int XIMTextType() {
-        return (int)0L;
+    public static int XK_Thai_phophan() {
+        return XK_Thai_phophan;
     }
+    private static final int XK_Thai_fofan = (int)3519L;
     /**
-     * {@snippet :
-     * enum .XIMBitmapType = 1;
+     * {@snippet lang=c :
+     * #define XK_Thai_fofan 3519
      * }
      */
-    public static int XIMBitmapType() {
-        return (int)1L;
+    public static int XK_Thai_fofan() {
+        return XK_Thai_fofan;
     }
+    private static final int XK_Thai_phosamphao = (int)3520L;
     /**
-     * {@snippet :
-     * typedef unsigned long XIMHotKeyState;
+     * {@snippet lang=c :
+     * #define XK_Thai_phosamphao 3520
      * }
      */
-    public static final OfLong XIMHotKeyState = JAVA_LONG;
-    public static MemoryLayout _Xdebug$LAYOUT() {
-        return JAVA_INT;
-    }
-    public static VarHandle _Xdebug$VH() {
-        return constants$123.const$1;
+    public static int XK_Thai_phosamphao() {
+        return XK_Thai_phosamphao;
     }
-    public static MemorySegment _Xdebug$SEGMENT() {
-        return RuntimeHelper.requireNonNull(constants$123.const$2,"_Xdebug");
-    }
+    private static final int XK_Thai_moma = (int)3521L;
     /**
-     * Getter for variable:
-     * {@snippet :
-     * int _Xdebug;
+     * {@snippet lang=c :
+     * #define XK_Thai_moma 3521
      * }
      */
-    public static int _Xdebug$get() {
-        return (int) constants$123.const$1.get(RuntimeHelper.requireNonNull(constants$123.const$2, "_Xdebug"));
+    public static int XK_Thai_moma() {
+        return XK_Thai_moma;
     }
+    private static final int XK_Thai_yoyak = (int)3522L;
     /**
-     * Setter for variable:
-     * {@snippet :
-     * int _Xdebug;
+     * {@snippet lang=c :
+     * #define XK_Thai_yoyak 3522
      * }
      */
-    public static void _Xdebug$set(int x) {
-        constants$123.const$1.set(RuntimeHelper.requireNonNull(constants$123.const$2, "_Xdebug"), x);
-    }
-    public static MethodHandle XLoadQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$123.const$4,"XLoadQueryFont");
+    public static int XK_Thai_yoyak() {
+        return XK_Thai_yoyak;
     }
+    private static final int XK_Thai_rorua = (int)3523L;
     /**
-     * {@snippet :
-     * XFontStruct* XLoadQueryFont(Display*, char*);
+     * {@snippet lang=c :
+     * #define XK_Thai_rorua 3523
      * }
      */
-    public static MemorySegment XLoadQueryFont(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XLoadQueryFont$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_rorua() {
+        return XK_Thai_rorua;
     }
-    public static MethodHandle XQueryFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$123.const$6,"XQueryFont");
-    }
+    private static final int XK_Thai_ru = (int)3524L;
     /**
-     * {@snippet :
-     * XFontStruct* XQueryFont(Display*, XID);
+     * {@snippet lang=c :
+     * #define XK_Thai_ru 3524
      * }
      */
-    public static MemorySegment XQueryFont(MemorySegment x0, long x1) {
-        var mh$ = XQueryFont$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetMotionEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$124.const$1,"XGetMotionEvents");
+    public static int XK_Thai_ru() {
+        return XK_Thai_ru;
     }
+    private static final int XK_Thai_loling = (int)3525L;
     /**
-     * {@snippet :
-     * XTimeCoord* XGetMotionEvents(Display*, Window, Time, Time, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_loling 3525
      * }
      */
-    public static MemorySegment XGetMotionEvents(MemorySegment x0, long x1, long x2, long x3, MemorySegment x4) {
-        var mh$ = XGetMotionEvents$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_loling() {
+        return XK_Thai_loling;
     }
-    public static MethodHandle XDeleteModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$124.const$3,"XDeleteModifiermapEntry");
-    }
+    private static final int XK_Thai_lu = (int)3526L;
     /**
-     * {@snippet :
-     * XModifierKeymap* XDeleteModifiermapEntry(XModifierKeymap*, KeyCode, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_lu 3526
      * }
      */
-    public static MemorySegment XDeleteModifiermapEntry(MemorySegment x0, byte x1, int x2) {
-        var mh$ = XDeleteModifiermapEntry$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetModifierMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$124.const$5,"XGetModifierMapping");
+    public static int XK_Thai_lu() {
+        return XK_Thai_lu;
     }
+    private static final int XK_Thai_wowaen = (int)3527L;
     /**
-     * {@snippet :
-     * XModifierKeymap* XGetModifierMapping(Display*);
+     * {@snippet lang=c :
+     * #define XK_Thai_wowaen 3527
      * }
      */
-    public static MemorySegment XGetModifierMapping(MemorySegment x0) {
-        var mh$ = XGetModifierMapping$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_wowaen() {
+        return XK_Thai_wowaen;
     }
-    public static MethodHandle XInsertModifiermapEntry$MH() {
-        return RuntimeHelper.requireNonNull(constants$125.const$0,"XInsertModifiermapEntry");
-    }
+    private static final int XK_Thai_sosala = (int)3528L;
     /**
-     * {@snippet :
-     * XModifierKeymap* XInsertModifiermapEntry(XModifierKeymap*, KeyCode, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_sosala 3528
      * }
      */
-    public static MemorySegment XInsertModifiermapEntry(MemorySegment x0, byte x1, int x2) {
-        var mh$ = XInsertModifiermapEntry$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XNewModifiermap$MH() {
-        return RuntimeHelper.requireNonNull(constants$125.const$2,"XNewModifiermap");
+    public static int XK_Thai_sosala() {
+        return XK_Thai_sosala;
     }
+    private static final int XK_Thai_sorusi = (int)3529L;
     /**
-     * {@snippet :
-     * XModifierKeymap* XNewModifiermap(int);
+     * {@snippet lang=c :
+     * #define XK_Thai_sorusi 3529
      * }
      */
-    public static MemorySegment XNewModifiermap(int x0) {
-        var mh$ = XNewModifiermap$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_sorusi() {
+        return XK_Thai_sorusi;
     }
-    public static MethodHandle XCreateImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$125.const$3,"XCreateImage");
-    }
+    private static final int XK_Thai_sosua = (int)3530L;
     /**
-     * {@snippet :
-     * XImage* XCreateImage(Display*, Visual*, unsigned int, int, int, char*, unsigned int, unsigned int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_sosua 3530
      * }
      */
-    public static MemorySegment XCreateImage(MemorySegment x0, MemorySegment x1, int x2, int x3, int x4, MemorySegment x5, int x6, int x7, int x8, int x9) {
-        var mh$ = XCreateImage$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInitImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$125.const$4,"XInitImage");
+    public static int XK_Thai_sosua() {
+        return XK_Thai_sosua;
     }
+    private static final int XK_Thai_hohip = (int)3531L;
     /**
-     * {@snippet :
-     * int XInitImage(XImage*);
+     * {@snippet lang=c :
+     * #define XK_Thai_hohip 3531
      * }
      */
-    public static int XInitImage(MemorySegment x0) {
-        var mh$ = XInitImage$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_hohip() {
+        return XK_Thai_hohip;
     }
-    public static MethodHandle XGetImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$125.const$6,"XGetImage");
-    }
+    private static final int XK_Thai_lochula = (int)3532L;
     /**
-     * {@snippet :
-     * XImage* XGetImage(Display*, Drawable, int, int, unsigned int, unsigned int, unsigned long, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_lochula 3532
      * }
      */
-    public static MemorySegment XGetImage(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, long x6, int x7) {
-        var mh$ = XGetImage$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetSubImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$126.const$1,"XGetSubImage");
+    public static int XK_Thai_lochula() {
+        return XK_Thai_lochula;
     }
+    private static final int XK_Thai_oang = (int)3533L;
     /**
-     * {@snippet :
-     * XImage* XGetSubImage(Display*, Drawable, int, int, unsigned int, unsigned int, unsigned long, int, XImage*, int, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_oang 3533
      * }
      */
-    public static MemorySegment XGetSubImage(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, long x6, int x7, MemorySegment x8, int x9, int x10) {
-        var mh$ = XGetSubImage$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_oang() {
+        return XK_Thai_oang;
     }
-    public static MethodHandle XOpenDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$126.const$2,"XOpenDisplay");
-    }
+    private static final int XK_Thai_honokhuk = (int)3534L;
     /**
-     * {@snippet :
-     * Display* XOpenDisplay(char*);
+     * {@snippet lang=c :
+     * #define XK_Thai_honokhuk 3534
      * }
      */
-    public static MemorySegment XOpenDisplay(MemorySegment x0) {
-        var mh$ = XOpenDisplay$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XrmInitialize$MH() {
-        return RuntimeHelper.requireNonNull(constants$126.const$4,"XrmInitialize");
+    public static int XK_Thai_honokhuk() {
+        return XK_Thai_honokhuk;
     }
+    private static final int XK_Thai_paiyannoi = (int)3535L;
     /**
-     * {@snippet :
-     * void XrmInitialize();
+     * {@snippet lang=c :
+     * #define XK_Thai_paiyannoi 3535
      * }
      */
-    public static void XrmInitialize() {
-        var mh$ = XrmInitialize$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_paiyannoi() {
+        return XK_Thai_paiyannoi;
     }
-    public static MethodHandle XFetchBytes$MH() {
-        return RuntimeHelper.requireNonNull(constants$126.const$5,"XFetchBytes");
-    }
+    private static final int XK_Thai_saraa = (int)3536L;
     /**
-     * {@snippet :
-     * char* XFetchBytes(Display*, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraa 3536
      * }
      */
-    public static MemorySegment XFetchBytes(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XFetchBytes$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFetchBuffer$MH() {
-        return RuntimeHelper.requireNonNull(constants$127.const$1,"XFetchBuffer");
+    public static int XK_Thai_saraa() {
+        return XK_Thai_saraa;
     }
+    private static final int XK_Thai_maihanakat = (int)3537L;
     /**
-     * {@snippet :
-     * char* XFetchBuffer(Display*, int*, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_maihanakat 3537
      * }
      */
-    public static MemorySegment XFetchBuffer(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XFetchBuffer$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_maihanakat() {
+        return XK_Thai_maihanakat;
     }
-    public static MethodHandle XGetAtomName$MH() {
-        return RuntimeHelper.requireNonNull(constants$127.const$2,"XGetAtomName");
-    }
+    private static final int XK_Thai_saraaa = (int)3538L;
     /**
-     * {@snippet :
-     * char* XGetAtomName(Display*, Atom);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraaa 3538
      * }
      */
-    public static MemorySegment XGetAtomName(MemorySegment x0, long x1) {
-        var mh$ = XGetAtomName$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetAtomNames$MH() {
-        return RuntimeHelper.requireNonNull(constants$127.const$4,"XGetAtomNames");
+    public static int XK_Thai_saraaa() {
+        return XK_Thai_saraaa;
     }
+    private static final int XK_Thai_saraam = (int)3539L;
     /**
-     * {@snippet :
-     * int XGetAtomNames(Display*, Atom*, int, char**);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraam 3539
      * }
      */
-    public static int XGetAtomNames(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3) {
-        var mh$ = XGetAtomNames$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_saraam() {
+        return XK_Thai_saraam;
     }
-    public static MethodHandle XGetDefault$MH() {
-        return RuntimeHelper.requireNonNull(constants$127.const$6,"XGetDefault");
-    }
+    private static final int XK_Thai_sarai = (int)3540L;
     /**
-     * {@snippet :
-     * char* XGetDefault(Display*, char*, char*);
+     * {@snippet lang=c :
+     * #define XK_Thai_sarai 3540
      * }
      */
-    public static MemorySegment XGetDefault(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XGetDefault$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayName$MH() {
-        return RuntimeHelper.requireNonNull(constants$128.const$0,"XDisplayName");
+    public static int XK_Thai_sarai() {
+        return XK_Thai_sarai;
     }
+    private static final int XK_Thai_saraii = (int)3541L;
     /**
-     * {@snippet :
-     * char* XDisplayName(char*);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraii 3541
      * }
      */
-    public static MemorySegment XDisplayName(MemorySegment x0) {
-        var mh$ = XDisplayName$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_saraii() {
+        return XK_Thai_saraii;
     }
-    public static MethodHandle XKeysymToString$MH() {
-        return RuntimeHelper.requireNonNull(constants$128.const$2,"XKeysymToString");
-    }
+    private static final int XK_Thai_saraue = (int)3542L;
     /**
-     * {@snippet :
-     * char* XKeysymToString(KeySym);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraue 3542
      * }
      */
-    public static MemorySegment XKeysymToString(long x0) {
-        var mh$ = XKeysymToString$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSynchronize$MH() {
-        return RuntimeHelper.requireNonNull(constants$128.const$5,"XSynchronize");
+    public static int XK_Thai_saraue() {
+        return XK_Thai_saraue;
     }
+    private static final int XK_Thai_sarauee = (int)3543L;
     /**
-     * {@snippet :
-     * int (*XSynchronize(Display*, int))(Display*);
+     * {@snippet lang=c :
+     * #define XK_Thai_sarauee 3543
      * }
      */
-    public static MemorySegment XSynchronize(MemorySegment x0, int x1) {
-        var mh$ = XSynchronize$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_sarauee() {
+        return XK_Thai_sarauee;
     }
-    public static MethodHandle XSetAfterFunction$MH() {
-        return RuntimeHelper.requireNonNull(constants$129.const$2,"XSetAfterFunction");
-    }
+    private static final int XK_Thai_sarau = (int)3544L;
     /**
-     * {@snippet :
-     * int (*XSetAfterFunction(Display*, int (*)(Display*)))(Display*);
+     * {@snippet lang=c :
+     * #define XK_Thai_sarau 3544
      * }
      */
-    public static MemorySegment XSetAfterFunction(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XSetAfterFunction$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInternAtom$MH() {
-        return RuntimeHelper.requireNonNull(constants$129.const$4,"XInternAtom");
+    public static int XK_Thai_sarau() {
+        return XK_Thai_sarau;
     }
+    private static final int XK_Thai_sarauu = (int)3545L;
     /**
-     * {@snippet :
-     * Atom XInternAtom(Display*, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_sarauu 3545
      * }
      */
-    public static long XInternAtom(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XInternAtom$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_sarauu() {
+        return XK_Thai_sarauu;
     }
-    public static MethodHandle XInternAtoms$MH() {
-        return RuntimeHelper.requireNonNull(constants$129.const$6,"XInternAtoms");
-    }
+    private static final int XK_Thai_phinthu = (int)3546L;
     /**
-     * {@snippet :
-     * int XInternAtoms(Display*, char**, int, int, Atom*);
+     * {@snippet lang=c :
+     * #define XK_Thai_phinthu 3546
      * }
      */
-    public static int XInternAtoms(MemorySegment x0, MemorySegment x1, int x2, int x3, MemorySegment x4) {
-        var mh$ = XInternAtoms$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCopyColormapAndFree$MH() {
-        return RuntimeHelper.requireNonNull(constants$130.const$1,"XCopyColormapAndFree");
+    public static int XK_Thai_phinthu() {
+        return XK_Thai_phinthu;
     }
+    private static final int XK_Thai_maihanakat_maitho = (int)3550L;
     /**
-     * {@snippet :
-     * Colormap XCopyColormapAndFree(Display*, Colormap);
+     * {@snippet lang=c :
+     * #define XK_Thai_maihanakat_maitho 3550
      * }
      */
-    public static long XCopyColormapAndFree(MemorySegment x0, long x1) {
-        var mh$ = XCopyColormapAndFree$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_maihanakat_maitho() {
+        return XK_Thai_maihanakat_maitho;
     }
-    public static MethodHandle XCreateColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$130.const$3,"XCreateColormap");
-    }
+    private static final int XK_Thai_baht = (int)3551L;
     /**
-     * {@snippet :
-     * Colormap XCreateColormap(Display*, Window, Visual*, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_baht 3551
      * }
      */
-    public static long XCreateColormap(MemorySegment x0, long x1, MemorySegment x2, int x3) {
-        var mh$ = XCreateColormap$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreatePixmapCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$130.const$5,"XCreatePixmapCursor");
+    public static int XK_Thai_baht() {
+        return XK_Thai_baht;
     }
+    private static final int XK_Thai_sarae = (int)3552L;
     /**
-     * {@snippet :
-     * Cursor XCreatePixmapCursor(Display*, Pixmap, Pixmap, XColor*, XColor*, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Thai_sarae 3552
      * }
      */
-    public static long XCreatePixmapCursor(MemorySegment x0, long x1, long x2, MemorySegment x3, MemorySegment x4, int x5, int x6) {
-        var mh$ = XCreatePixmapCursor$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_sarae() {
+        return XK_Thai_sarae;
     }
-    public static MethodHandle XCreateGlyphCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$131.const$1,"XCreateGlyphCursor");
-    }
+    private static final int XK_Thai_saraae = (int)3553L;
     /**
-     * {@snippet :
-     * Cursor XCreateGlyphCursor(Display*, Font, Font, unsigned int, unsigned int, const XColor*, const XColor*);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraae 3553
      * }
      */
-    public static long XCreateGlyphCursor(MemorySegment x0, long x1, long x2, int x3, int x4, MemorySegment x5, MemorySegment x6) {
-        var mh$ = XCreateGlyphCursor$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateFontCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$131.const$3,"XCreateFontCursor");
+    public static int XK_Thai_saraae() {
+        return XK_Thai_saraae;
     }
+    private static final int XK_Thai_sarao = (int)3554L;
     /**
-     * {@snippet :
-     * Cursor XCreateFontCursor(Display*, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Thai_sarao 3554
      * }
      */
-    public static long XCreateFontCursor(MemorySegment x0, int x1) {
-        var mh$ = XCreateFontCursor$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_sarao() {
+        return XK_Thai_sarao;
     }
-    public static MethodHandle XLoadFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$131.const$5,"XLoadFont");
-    }
+    private static final int XK_Thai_saraaimaimuan = (int)3555L;
     /**
-     * {@snippet :
-     * Font XLoadFont(Display*, char*);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraaimaimuan 3555
      * }
      */
-    public static long XLoadFont(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XLoadFont$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$132.const$1,"XCreateGC");
+    public static int XK_Thai_saraaimaimuan() {
+        return XK_Thai_saraaimaimuan;
     }
+    private static final int XK_Thai_saraaimaimalai = (int)3556L;
     /**
-     * {@snippet :
-     * GC XCreateGC(Display*, Drawable, unsigned long, XGCValues*);
+     * {@snippet lang=c :
+     * #define XK_Thai_saraaimaimalai 3556
      * }
      */
-    public static MemorySegment XCreateGC(MemorySegment x0, long x1, long x2, MemorySegment x3) {
-        var mh$ = XCreateGC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_saraaimaimalai() {
+        return XK_Thai_saraaimaimalai;
     }
-    public static MethodHandle XGContextFromGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$132.const$3,"XGContextFromGC");
-    }
+    private static final int XK_Thai_lakkhangyao = (int)3557L;
     /**
-     * {@snippet :
-     * GContext XGContextFromGC(GC);
+     * {@snippet lang=c :
+     * #define XK_Thai_lakkhangyao 3557
      * }
      */
-    public static long XGContextFromGC(MemorySegment x0) {
-        var mh$ = XGContextFromGC$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFlushGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$132.const$5,"XFlushGC");
+    public static int XK_Thai_lakkhangyao() {
+        return XK_Thai_lakkhangyao;
     }
+    private static final int XK_Thai_maiyamok = (int)3558L;
     /**
-     * {@snippet :
-     * void XFlushGC(Display*, GC);
+     * {@snippet lang=c :
+     * #define XK_Thai_maiyamok 3558
      * }
      */
-    public static void XFlushGC(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XFlushGC$MH();
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_maiyamok() {
+        return XK_Thai_maiyamok;
     }
-    public static MethodHandle XCreatePixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$133.const$1,"XCreatePixmap");
-    }
+    private static final int XK_Thai_maitaikhu = (int)3559L;
     /**
-     * {@snippet :
-     * Pixmap XCreatePixmap(Display*, Drawable, unsigned int, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Thai_maitaikhu 3559
      * }
      */
-    public static long XCreatePixmap(MemorySegment x0, long x1, int x2, int x3, int x4) {
-        var mh$ = XCreatePixmap$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateBitmapFromData$MH() {
-        return RuntimeHelper.requireNonNull(constants$133.const$3,"XCreateBitmapFromData");
+    public static int XK_Thai_maitaikhu() {
+        return XK_Thai_maitaikhu;
     }
+    private static final int XK_Thai_maiek = (int)3560L;
     /**
-     * {@snippet :
-     * Pixmap XCreateBitmapFromData(Display*, Drawable, char*, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Thai_maiek 3560
      * }
      */
-    public static long XCreateBitmapFromData(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4) {
-        var mh$ = XCreateBitmapFromData$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_maiek() {
+        return XK_Thai_maiek;
     }
-    public static MethodHandle XCreatePixmapFromBitmapData$MH() {
-        return RuntimeHelper.requireNonNull(constants$133.const$5,"XCreatePixmapFromBitmapData");
-    }
+    private static final int XK_Thai_maitho = (int)3561L;
     /**
-     * {@snippet :
-     * Pixmap XCreatePixmapFromBitmapData(Display*, Drawable, char*, unsigned int, unsigned int, unsigned long, unsigned long, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Thai_maitho 3561
      * }
      */
-    public static long XCreatePixmapFromBitmapData(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, long x5, long x6, int x7) {
-        var mh$ = XCreatePixmapFromBitmapData$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateSimpleWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$134.const$1,"XCreateSimpleWindow");
+    public static int XK_Thai_maitho() {
+        return XK_Thai_maitho;
     }
+    private static final int XK_Thai_maitri = (int)3562L;
     /**
-     * {@snippet :
-     * Window XCreateSimpleWindow(Display*, Window, int, int, unsigned int, unsigned int, unsigned int, unsigned long, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_Thai_maitri 3562
      * }
      */
-    public static long XCreateSimpleWindow(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, int x6, long x7, long x8) {
-        var mh$ = XCreateSimpleWindow$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_maitri() {
+        return XK_Thai_maitri;
     }
-    public static MethodHandle XGetSelectionOwner$MH() {
-        return RuntimeHelper.requireNonNull(constants$134.const$2,"XGetSelectionOwner");
-    }
+    private static final int XK_Thai_maichattawa = (int)3563L;
     /**
-     * {@snippet :
-     * Window XGetSelectionOwner(Display*, Atom);
+     * {@snippet lang=c :
+     * #define XK_Thai_maichattawa 3563
      * }
      */
-    public static long XGetSelectionOwner(MemorySegment x0, long x1) {
-        var mh$ = XGetSelectionOwner$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$134.const$4,"XCreateWindow");
+    public static int XK_Thai_maichattawa() {
+        return XK_Thai_maichattawa;
     }
+    private static final int XK_Thai_thanthakhat = (int)3564L;
     /**
-     * {@snippet :
-     * Window XCreateWindow(Display*, Window, int, int, unsigned int, unsigned int, unsigned int, int, unsigned int, Visual*, unsigned long, XSetWindowAttributes*);
+     * {@snippet lang=c :
+     * #define XK_Thai_thanthakhat 3564
      * }
      */
-    public static long XCreateWindow(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, int x6, int x7, int x8, MemorySegment x9, long x10, MemorySegment x11) {
-        var mh$ = XCreateWindow$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_thanthakhat() {
+        return XK_Thai_thanthakhat;
     }
-    public static MethodHandle XListInstalledColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$134.const$6,"XListInstalledColormaps");
-    }
+    private static final int XK_Thai_nikhahit = (int)3565L;
     /**
-     * {@snippet :
-     * Colormap* XListInstalledColormaps(Display*, Window, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_nikhahit 3565
      * }
      */
-    public static MemorySegment XListInstalledColormaps(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XListInstalledColormaps$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListFonts$MH() {
-        return RuntimeHelper.requireNonNull(constants$135.const$1,"XListFonts");
+    public static int XK_Thai_nikhahit() {
+        return XK_Thai_nikhahit;
     }
+    private static final int XK_Thai_leksun = (int)3568L;
     /**
-     * {@snippet :
-     * char** XListFonts(Display*, char*, int, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_leksun 3568
      * }
      */
-    public static MemorySegment XListFonts(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3) {
-        var mh$ = XListFonts$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_leksun() {
+        return XK_Thai_leksun;
     }
-    public static MethodHandle XListFontsWithInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$135.const$3,"XListFontsWithInfo");
-    }
+    private static final int XK_Thai_leknung = (int)3569L;
     /**
-     * {@snippet :
-     * char** XListFontsWithInfo(Display*, char*, int, int*, XFontStruct**);
+     * {@snippet lang=c :
+     * #define XK_Thai_leknung 3569
      * }
      */
-    public static MemorySegment XListFontsWithInfo(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XListFontsWithInfo$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$135.const$4,"XGetFontPath");
+    public static int XK_Thai_leknung() {
+        return XK_Thai_leknung;
     }
+    private static final int XK_Thai_leksong = (int)3570L;
     /**
-     * {@snippet :
-     * char** XGetFontPath(Display*, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_leksong 3570
      * }
      */
-    public static MemorySegment XGetFontPath(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XGetFontPath$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_leksong() {
+        return XK_Thai_leksong;
     }
-    public static MethodHandle XListExtensions$MH() {
-        return RuntimeHelper.requireNonNull(constants$135.const$5,"XListExtensions");
-    }
+    private static final int XK_Thai_leksam = (int)3571L;
     /**
-     * {@snippet :
-     * char** XListExtensions(Display*, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_leksam 3571
      * }
      */
-    public static MemorySegment XListExtensions(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XListExtensions$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$136.const$0,"XListProperties");
+    public static int XK_Thai_leksam() {
+        return XK_Thai_leksam;
     }
+    private static final int XK_Thai_leksi = (int)3572L;
     /**
-     * {@snippet :
-     * Atom* XListProperties(Display*, Window, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_leksi 3572
      * }
      */
-    public static MemorySegment XListProperties(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XListProperties$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_leksi() {
+        return XK_Thai_leksi;
     }
-    public static MethodHandle XListHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$136.const$1,"XListHosts");
-    }
+    private static final int XK_Thai_lekha = (int)3573L;
     /**
-     * {@snippet :
-     * XHostAddress* XListHosts(Display*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_lekha 3573
      * }
      */
-    public static MemorySegment XListHosts(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XListHosts$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XKeycodeToKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$136.const$3,"XKeycodeToKeysym");
+    public static int XK_Thai_lekha() {
+        return XK_Thai_lekha;
     }
+    private static final int XK_Thai_lekhok = (int)3574L;
     /**
-     * {@snippet :
-     * KeySym XKeycodeToKeysym(Display*, KeyCode, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_lekhok 3574
      * }
      */
-    public static long XKeycodeToKeysym(MemorySegment x0, byte x1, int x2) {
-        var mh$ = XKeycodeToKeysym$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_lekhok() {
+        return XK_Thai_lekhok;
     }
-    public static MethodHandle XLookupKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$136.const$4,"XLookupKeysym");
-    }
+    private static final int XK_Thai_lekchet = (int)3575L;
     /**
-     * {@snippet :
-     * KeySym XLookupKeysym(XKeyEvent*, int);
+     * {@snippet lang=c :
+     * #define XK_Thai_lekchet 3575
      * }
      */
-    public static long XLookupKeysym(MemorySegment x0, int x1) {
-        var mh$ = XLookupKeysym$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$136.const$6,"XGetKeyboardMapping");
+    public static int XK_Thai_lekchet() {
+        return XK_Thai_lekchet;
     }
+    private static final int XK_Thai_lekpaet = (int)3576L;
     /**
-     * {@snippet :
-     * KeySym* XGetKeyboardMapping(Display*, KeyCode, int, int*);
+     * {@snippet lang=c :
+     * #define XK_Thai_lekpaet 3576
      * }
      */
-    public static MemorySegment XGetKeyboardMapping(MemorySegment x0, byte x1, int x2, MemorySegment x3) {
-        var mh$ = XGetKeyboardMapping$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Thai_lekpaet() {
+        return XK_Thai_lekpaet;
     }
-    public static MethodHandle XStringToKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$137.const$0,"XStringToKeysym");
-    }
+    private static final int XK_Thai_lekkao = (int)3577L;
     /**
-     * {@snippet :
-     * KeySym XStringToKeysym(char*);
+     * {@snippet lang=c :
+     * #define XK_Thai_lekkao 3577
      * }
      */
-    public static long XStringToKeysym(MemorySegment x0) {
-        var mh$ = XStringToKeysym$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMaxRequestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$137.const$1,"XMaxRequestSize");
+    public static int XK_Thai_lekkao() {
+        return XK_Thai_lekkao;
     }
+    private static final int XK_Hangul = (int)65329L;
     /**
-     * {@snippet :
-     * long XMaxRequestSize(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul 65329
      * }
      */
-    public static long XMaxRequestSize(MemorySegment x0) {
-        var mh$ = XMaxRequestSize$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul() {
+        return XK_Hangul;
     }
-    public static MethodHandle XExtendedMaxRequestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$137.const$2,"XExtendedMaxRequestSize");
-    }
+    private static final int XK_Hangul_Start = (int)65330L;
     /**
-     * {@snippet :
-     * long XExtendedMaxRequestSize(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Start 65330
      * }
      */
-    public static long XExtendedMaxRequestSize(MemorySegment x0) {
-        var mh$ = XExtendedMaxRequestSize$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XResourceManagerString$MH() {
-        return RuntimeHelper.requireNonNull(constants$137.const$3,"XResourceManagerString");
+    public static int XK_Hangul_Start() {
+        return XK_Hangul_Start;
     }
+    private static final int XK_Hangul_End = (int)65331L;
     /**
-     * {@snippet :
-     * char* XResourceManagerString(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_End 65331
      * }
      */
-    public static MemorySegment XResourceManagerString(MemorySegment x0) {
-        var mh$ = XResourceManagerString$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_End() {
+        return XK_Hangul_End;
     }
-    public static MethodHandle XScreenResourceString$MH() {
-        return RuntimeHelper.requireNonNull(constants$137.const$4,"XScreenResourceString");
-    }
+    private static final int XK_Hangul_Hanja = (int)65332L;
     /**
-     * {@snippet :
-     * char* XScreenResourceString(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Hanja 65332
      * }
      */
-    public static MemorySegment XScreenResourceString(MemorySegment x0) {
-        var mh$ = XScreenResourceString$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayMotionBufferSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$137.const$5,"XDisplayMotionBufferSize");
+    public static int XK_Hangul_Hanja() {
+        return XK_Hangul_Hanja;
     }
+    private static final int XK_Hangul_Jamo = (int)65333L;
     /**
-     * {@snippet :
-     * unsigned long XDisplayMotionBufferSize(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Jamo 65333
      * }
      */
-    public static long XDisplayMotionBufferSize(MemorySegment x0) {
-        var mh$ = XDisplayMotionBufferSize$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Jamo() {
+        return XK_Hangul_Jamo;
     }
-    public static MethodHandle XVisualIDFromVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$138.const$0,"XVisualIDFromVisual");
-    }
+    private static final int XK_Hangul_Romaja = (int)65334L;
     /**
-     * {@snippet :
-     * VisualID XVisualIDFromVisual(Visual*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Romaja 65334
      * }
      */
-    public static long XVisualIDFromVisual(MemorySegment x0) {
-        var mh$ = XVisualIDFromVisual$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XInitThreads$MH() {
-        return RuntimeHelper.requireNonNull(constants$138.const$2,"XInitThreads");
+    public static int XK_Hangul_Romaja() {
+        return XK_Hangul_Romaja;
     }
+    private static final int XK_Hangul_Codeinput = (int)65335L;
     /**
-     * {@snippet :
-     * int XInitThreads();
+     * {@snippet lang=c :
+     * #define XK_Hangul_Codeinput 65335
      * }
      */
-    public static int XInitThreads() {
-        var mh$ = XInitThreads$MH();
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Codeinput() {
+        return XK_Hangul_Codeinput;
     }
-    public static MethodHandle XLockDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$138.const$4,"XLockDisplay");
-    }
+    private static final int XK_Hangul_Jeonja = (int)65336L;
     /**
-     * {@snippet :
-     * void XLockDisplay(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Jeonja 65336
      * }
      */
-    public static void XLockDisplay(MemorySegment x0) {
-        var mh$ = XLockDisplay$MH();
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnlockDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$138.const$5,"XUnlockDisplay");
+    public static int XK_Hangul_Jeonja() {
+        return XK_Hangul_Jeonja;
     }
+    private static final int XK_Hangul_Banja = (int)65337L;
     /**
-     * {@snippet :
-     * void XUnlockDisplay(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Banja 65337
      * }
      */
-    public static void XUnlockDisplay(MemorySegment x0) {
-        var mh$ = XUnlockDisplay$MH();
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Banja() {
+        return XK_Hangul_Banja;
     }
-    public static MethodHandle XInitExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$139.const$0,"XInitExtension");
-    }
+    private static final int XK_Hangul_PreHanja = (int)65338L;
     /**
-     * {@snippet :
-     * XExtCodes* XInitExtension(Display*, char*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_PreHanja 65338
      * }
      */
-    public static MemorySegment XInitExtension(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XInitExtension$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$139.const$1,"XAddExtension");
+    public static int XK_Hangul_PreHanja() {
+        return XK_Hangul_PreHanja;
     }
+    private static final int XK_Hangul_PostHanja = (int)65339L;
     /**
-     * {@snippet :
-     * XExtCodes* XAddExtension(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_PostHanja 65339
      * }
      */
-    public static MemorySegment XAddExtension(MemorySegment x0) {
-        var mh$ = XAddExtension$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_PostHanja() {
+        return XK_Hangul_PostHanja;
     }
-    public static MethodHandle XFindOnExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$139.const$2,"XFindOnExtensionList");
-    }
+    private static final int XK_Hangul_SingleCandidate = (int)65340L;
     /**
-     * {@snippet :
-     * XExtData* XFindOnExtensionList(XExtData**, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SingleCandidate 65340
      * }
      */
-    public static MemorySegment XFindOnExtensionList(MemorySegment x0, int x1) {
-        var mh$ = XFindOnExtensionList$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEHeadOfExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$139.const$4,"XEHeadOfExtensionList");
+    public static int XK_Hangul_SingleCandidate() {
+        return XK_Hangul_SingleCandidate;
     }
+    private static final int XK_Hangul_MultipleCandidate = (int)65341L;
     /**
-     * {@snippet :
-     * XExtData** XEHeadOfExtensionList(XEDataObject);
+     * {@snippet lang=c :
+     * #define XK_Hangul_MultipleCandidate 65341
      * }
      */
-    public static MemorySegment XEHeadOfExtensionList(MemorySegment x0) {
-        var mh$ = XEHeadOfExtensionList$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_MultipleCandidate() {
+        return XK_Hangul_MultipleCandidate;
     }
-    public static MethodHandle XRootWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$139.const$5,"XRootWindow");
-    }
+    private static final int XK_Hangul_PreviousCandidate = (int)65342L;
     /**
-     * {@snippet :
-     * Window XRootWindow(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_PreviousCandidate 65342
      * }
      */
-    public static long XRootWindow(MemorySegment x0, int x1) {
-        var mh$ = XRootWindow$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultRootWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$140.const$0,"XDefaultRootWindow");
+    public static int XK_Hangul_PreviousCandidate() {
+        return XK_Hangul_PreviousCandidate;
     }
+    private static final int XK_Hangul_Special = (int)65343L;
     /**
-     * {@snippet :
-     * Window XDefaultRootWindow(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Special 65343
      * }
      */
-    public static long XDefaultRootWindow(MemorySegment x0) {
-        var mh$ = XDefaultRootWindow$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Special() {
+        return XK_Hangul_Special;
     }
-    public static MethodHandle XRootWindowOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$140.const$1,"XRootWindowOfScreen");
-    }
+    private static final int XK_Hangul_switch = (int)65406L;
     /**
-     * {@snippet :
-     * Window XRootWindowOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_switch 65406
      * }
      */
-    public static long XRootWindowOfScreen(MemorySegment x0) {
-        var mh$ = XRootWindowOfScreen$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultVisual$MH() {
-        return RuntimeHelper.requireNonNull(constants$140.const$2,"XDefaultVisual");
+    public static int XK_Hangul_switch() {
+        return XK_Hangul_switch;
     }
+    private static final int XK_Hangul_Kiyeog = (int)3745L;
     /**
-     * {@snippet :
-     * Visual* XDefaultVisual(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Kiyeog 3745
      * }
      */
-    public static MemorySegment XDefaultVisual(MemorySegment x0, int x1) {
-        var mh$ = XDefaultVisual$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Kiyeog() {
+        return XK_Hangul_Kiyeog;
     }
-    public static MethodHandle XDefaultVisualOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$140.const$3,"XDefaultVisualOfScreen");
-    }
+    private static final int XK_Hangul_SsangKiyeog = (int)3746L;
     /**
-     * {@snippet :
-     * Visual* XDefaultVisualOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SsangKiyeog 3746
      * }
      */
-    public static MemorySegment XDefaultVisualOfScreen(MemorySegment x0) {
-        var mh$ = XDefaultVisualOfScreen$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$140.const$4,"XDefaultGC");
+    public static int XK_Hangul_SsangKiyeog() {
+        return XK_Hangul_SsangKiyeog;
     }
+    private static final int XK_Hangul_KiyeogSios = (int)3747L;
     /**
-     * {@snippet :
-     * GC XDefaultGC(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_KiyeogSios 3747
      * }
      */
-    public static MemorySegment XDefaultGC(MemorySegment x0, int x1) {
-        var mh$ = XDefaultGC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_KiyeogSios() {
+        return XK_Hangul_KiyeogSios;
     }
-    public static MethodHandle XDefaultGCOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$140.const$5,"XDefaultGCOfScreen");
-    }
+    private static final int XK_Hangul_Nieun = (int)3748L;
     /**
-     * {@snippet :
-     * GC XDefaultGCOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Nieun 3748
      * }
      */
-    public static MemorySegment XDefaultGCOfScreen(MemorySegment x0) {
-        var mh$ = XDefaultGCOfScreen$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBlackPixel$MH() {
-        return RuntimeHelper.requireNonNull(constants$141.const$0,"XBlackPixel");
+    public static int XK_Hangul_Nieun() {
+        return XK_Hangul_Nieun;
     }
+    private static final int XK_Hangul_NieunJieuj = (int)3749L;
     /**
-     * {@snippet :
-     * unsigned long XBlackPixel(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_NieunJieuj 3749
      * }
      */
-    public static long XBlackPixel(MemorySegment x0, int x1) {
-        var mh$ = XBlackPixel$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_NieunJieuj() {
+        return XK_Hangul_NieunJieuj;
     }
-    public static MethodHandle XWhitePixel$MH() {
-        return RuntimeHelper.requireNonNull(constants$141.const$1,"XWhitePixel");
-    }
+    private static final int XK_Hangul_NieunHieuh = (int)3750L;
     /**
-     * {@snippet :
-     * unsigned long XWhitePixel(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_NieunHieuh 3750
      * }
      */
-    public static long XWhitePixel(MemorySegment x0, int x1) {
-        var mh$ = XWhitePixel$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$141.const$3,"XAllPlanes");
+    public static int XK_Hangul_NieunHieuh() {
+        return XK_Hangul_NieunHieuh;
     }
+    private static final int XK_Hangul_Dikeud = (int)3751L;
     /**
-     * {@snippet :
-     * unsigned long XAllPlanes();
+     * {@snippet lang=c :
+     * #define XK_Hangul_Dikeud 3751
      * }
      */
-    public static long XAllPlanes() {
-        var mh$ = XAllPlanes$MH();
-        try {
-            return (long)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Dikeud() {
+        return XK_Hangul_Dikeud;
     }
-    public static MethodHandle XBlackPixelOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$141.const$4,"XBlackPixelOfScreen");
-    }
+    private static final int XK_Hangul_SsangDikeud = (int)3752L;
     /**
-     * {@snippet :
-     * unsigned long XBlackPixelOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SsangDikeud 3752
      * }
      */
-    public static long XBlackPixelOfScreen(MemorySegment x0) {
-        var mh$ = XBlackPixelOfScreen$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWhitePixelOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$141.const$5,"XWhitePixelOfScreen");
+    public static int XK_Hangul_SsangDikeud() {
+        return XK_Hangul_SsangDikeud;
     }
+    private static final int XK_Hangul_Rieul = (int)3753L;
     /**
-     * {@snippet :
-     * unsigned long XWhitePixelOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Rieul 3753
      * }
      */
-    public static long XWhitePixelOfScreen(MemorySegment x0) {
-        var mh$ = XWhitePixelOfScreen$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Rieul() {
+        return XK_Hangul_Rieul;
     }
-    public static MethodHandle XNextRequest$MH() {
-        return RuntimeHelper.requireNonNull(constants$142.const$0,"XNextRequest");
-    }
+    private static final int XK_Hangul_RieulKiyeog = (int)3754L;
     /**
-     * {@snippet :
-     * unsigned long XNextRequest(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulKiyeog 3754
      * }
      */
-    public static long XNextRequest(MemorySegment x0) {
-        var mh$ = XNextRequest$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLastKnownRequestProcessed$MH() {
-        return RuntimeHelper.requireNonNull(constants$142.const$1,"XLastKnownRequestProcessed");
+    public static int XK_Hangul_RieulKiyeog() {
+        return XK_Hangul_RieulKiyeog;
     }
+    private static final int XK_Hangul_RieulMieum = (int)3755L;
     /**
-     * {@snippet :
-     * unsigned long XLastKnownRequestProcessed(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulMieum 3755
      * }
      */
-    public static long XLastKnownRequestProcessed(MemorySegment x0) {
-        var mh$ = XLastKnownRequestProcessed$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_RieulMieum() {
+        return XK_Hangul_RieulMieum;
     }
-    public static MethodHandle XServerVendor$MH() {
-        return RuntimeHelper.requireNonNull(constants$142.const$2,"XServerVendor");
-    }
+    private static final int XK_Hangul_RieulPieub = (int)3756L;
     /**
-     * {@snippet :
-     * char* XServerVendor(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulPieub 3756
      * }
      */
-    public static MemorySegment XServerVendor(MemorySegment x0) {
-        var mh$ = XServerVendor$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayString$MH() {
-        return RuntimeHelper.requireNonNull(constants$142.const$3,"XDisplayString");
+    public static int XK_Hangul_RieulPieub() {
+        return XK_Hangul_RieulPieub;
     }
+    private static final int XK_Hangul_RieulSios = (int)3757L;
     /**
-     * {@snippet :
-     * char* XDisplayString(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulSios 3757
      * }
      */
-    public static MemorySegment XDisplayString(MemorySegment x0) {
-        var mh$ = XDisplayString$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_RieulSios() {
+        return XK_Hangul_RieulSios;
     }
-    public static MethodHandle XDefaultColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$142.const$4,"XDefaultColormap");
-    }
+    private static final int XK_Hangul_RieulTieut = (int)3758L;
     /**
-     * {@snippet :
-     * Colormap XDefaultColormap(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulTieut 3758
      * }
      */
-    public static long XDefaultColormap(MemorySegment x0, int x1) {
-        var mh$ = XDefaultColormap$MH();
-        try {
-            return (long)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultColormapOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$142.const$5,"XDefaultColormapOfScreen");
+    public static int XK_Hangul_RieulTieut() {
+        return XK_Hangul_RieulTieut;
     }
+    private static final int XK_Hangul_RieulPhieuf = (int)3759L;
     /**
-     * {@snippet :
-     * Colormap XDefaultColormapOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulPhieuf 3759
      * }
      */
-    public static long XDefaultColormapOfScreen(MemorySegment x0) {
-        var mh$ = XDefaultColormapOfScreen$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_RieulPhieuf() {
+        return XK_Hangul_RieulPhieuf;
     }
-    public static MethodHandle XDisplayOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$143.const$0,"XDisplayOfScreen");
-    }
+    private static final int XK_Hangul_RieulHieuh = (int)3760L;
     /**
-     * {@snippet :
-     * Display* XDisplayOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulHieuh 3760
      * }
      */
-    public static MemorySegment XDisplayOfScreen(MemorySegment x0) {
-        var mh$ = XDisplayOfScreen$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XScreenOfDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$143.const$1,"XScreenOfDisplay");
+    public static int XK_Hangul_RieulHieuh() {
+        return XK_Hangul_RieulHieuh;
     }
+    private static final int XK_Hangul_Mieum = (int)3761L;
     /**
-     * {@snippet :
-     * Screen* XScreenOfDisplay(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Mieum 3761
      * }
      */
-    public static MemorySegment XScreenOfDisplay(MemorySegment x0, int x1) {
-        var mh$ = XScreenOfDisplay$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Mieum() {
+        return XK_Hangul_Mieum;
     }
-    public static MethodHandle XDefaultScreenOfDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$143.const$2,"XDefaultScreenOfDisplay");
-    }
+    private static final int XK_Hangul_Pieub = (int)3762L;
     /**
-     * {@snippet :
-     * Screen* XDefaultScreenOfDisplay(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Pieub 3762
      * }
      */
-    public static MemorySegment XDefaultScreenOfDisplay(MemorySegment x0) {
-        var mh$ = XDefaultScreenOfDisplay$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEventMaskOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$143.const$3,"XEventMaskOfScreen");
+    public static int XK_Hangul_Pieub() {
+        return XK_Hangul_Pieub;
     }
+    private static final int XK_Hangul_SsangPieub = (int)3763L;
     /**
-     * {@snippet :
-     * long XEventMaskOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SsangPieub 3763
      * }
      */
-    public static long XEventMaskOfScreen(MemorySegment x0) {
-        var mh$ = XEventMaskOfScreen$MH();
-        try {
-            return (long)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_SsangPieub() {
+        return XK_Hangul_SsangPieub;
     }
-    public static MethodHandle XScreenNumberOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$143.const$4,"XScreenNumberOfScreen");
-    }
+    private static final int XK_Hangul_PieubSios = (int)3764L;
     /**
-     * {@snippet :
-     * int XScreenNumberOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_PieubSios 3764
      * }
      */
-    public static int XScreenNumberOfScreen(MemorySegment x0) {
-        var mh$ = XScreenNumberOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetErrorHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$144.const$2,"XSetErrorHandler");
+    public static int XK_Hangul_PieubSios() {
+        return XK_Hangul_PieubSios;
     }
+    private static final int XK_Hangul_Sios = (int)3765L;
     /**
-     * {@snippet :
-     * XErrorHandler XSetErrorHandler(XErrorHandler);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Sios 3765
      * }
      */
-    public static MemorySegment XSetErrorHandler(MemorySegment x0) {
-        var mh$ = XSetErrorHandler$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Sios() {
+        return XK_Hangul_Sios;
     }
-    public static MethodHandle XSetIOErrorHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$144.const$4,"XSetIOErrorHandler");
-    }
+    private static final int XK_Hangul_SsangSios = (int)3766L;
     /**
-     * {@snippet :
-     * XIOErrorHandler XSetIOErrorHandler(XIOErrorHandler);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SsangSios 3766
      * }
      */
-    public static MemorySegment XSetIOErrorHandler(MemorySegment x0) {
-        var mh$ = XSetIOErrorHandler$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetIOErrorExitHandler$MH() {
-        return RuntimeHelper.requireNonNull(constants$145.const$1,"XSetIOErrorExitHandler");
+    public static int XK_Hangul_SsangSios() {
+        return XK_Hangul_SsangSios;
     }
+    private static final int XK_Hangul_Ieung = (int)3767L;
     /**
-     * {@snippet :
-     * void XSetIOErrorExitHandler(Display*, XIOErrorExitHandler, void*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Ieung 3767
      * }
      */
-    public static void XSetIOErrorExitHandler(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XSetIOErrorExitHandler$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Ieung() {
+        return XK_Hangul_Ieung;
     }
-    public static MethodHandle XListPixmapFormats$MH() {
-        return RuntimeHelper.requireNonNull(constants$145.const$2,"XListPixmapFormats");
-    }
+    private static final int XK_Hangul_Jieuj = (int)3768L;
     /**
-     * {@snippet :
-     * XPixmapFormatValues* XListPixmapFormats(Display*, int*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Jieuj 3768
      * }
      */
-    public static MemorySegment XListPixmapFormats(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XListPixmapFormats$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XListDepths$MH() {
-        return RuntimeHelper.requireNonNull(constants$145.const$4,"XListDepths");
+    public static int XK_Hangul_Jieuj() {
+        return XK_Hangul_Jieuj;
     }
+    private static final int XK_Hangul_SsangJieuj = (int)3769L;
     /**
-     * {@snippet :
-     * int* XListDepths(Display*, int, int*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SsangJieuj 3769
      * }
      */
-    public static MemorySegment XListDepths(MemorySegment x0, int x1, MemorySegment x2) {
-        var mh$ = XListDepths$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_SsangJieuj() {
+        return XK_Hangul_SsangJieuj;
     }
-    public static MethodHandle XReconfigureWMWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$145.const$6,"XReconfigureWMWindow");
-    }
+    private static final int XK_Hangul_Cieuc = (int)3770L;
     /**
-     * {@snippet :
-     * int XReconfigureWMWindow(Display*, Window, int, unsigned int, XWindowChanges*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Cieuc 3770
      * }
      */
-    public static int XReconfigureWMWindow(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4) {
-        var mh$ = XReconfigureWMWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWMProtocols$MH() {
-        return RuntimeHelper.requireNonNull(constants$146.const$1,"XGetWMProtocols");
+    public static int XK_Hangul_Cieuc() {
+        return XK_Hangul_Cieuc;
     }
+    private static final int XK_Hangul_Khieuq = (int)3771L;
     /**
-     * {@snippet :
-     * int XGetWMProtocols(Display*, Window, Atom**, int*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Khieuq 3771
      * }
      */
-    public static int XGetWMProtocols(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XGetWMProtocols$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Khieuq() {
+        return XK_Hangul_Khieuq;
     }
-    public static MethodHandle XSetWMProtocols$MH() {
-        return RuntimeHelper.requireNonNull(constants$146.const$3,"XSetWMProtocols");
-    }
+    private static final int XK_Hangul_Tieut = (int)3772L;
     /**
-     * {@snippet :
-     * int XSetWMProtocols(Display*, Window, Atom*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Tieut 3772
      * }
      */
-    public static int XSetWMProtocols(MemorySegment x0, long x1, MemorySegment x2, int x3) {
-        var mh$ = XSetWMProtocols$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XIconifyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$146.const$5,"XIconifyWindow");
+    public static int XK_Hangul_Tieut() {
+        return XK_Hangul_Tieut;
     }
+    private static final int XK_Hangul_Phieuf = (int)3773L;
     /**
-     * {@snippet :
-     * int XIconifyWindow(Display*, Window, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Phieuf 3773
      * }
      */
-    public static int XIconifyWindow(MemorySegment x0, long x1, int x2) {
-        var mh$ = XIconifyWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_Phieuf() {
+        return XK_Hangul_Phieuf;
     }
-    public static MethodHandle XWithdrawWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$147.const$0,"XWithdrawWindow");
-    }
+    private static final int XK_Hangul_Hieuh = (int)3774L;
     /**
-     * {@snippet :
-     * int XWithdrawWindow(Display*, Window, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_Hieuh 3774
      * }
      */
-    public static int XWithdrawWindow(MemorySegment x0, long x1, int x2) {
-        var mh$ = XWithdrawWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetCommand$MH() {
-        return RuntimeHelper.requireNonNull(constants$147.const$1,"XGetCommand");
+    public static int XK_Hangul_Hieuh() {
+        return XK_Hangul_Hieuh;
     }
+    private static final int XK_Hangul_A = (int)3775L;
     /**
-     * {@snippet :
-     * int XGetCommand(Display*, Window, char***, int*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_A 3775
      * }
      */
-    public static int XGetCommand(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XGetCommand$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_A() {
+        return XK_Hangul_A;
     }
-    public static MethodHandle XGetWMColormapWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$147.const$2,"XGetWMColormapWindows");
-    }
+    private static final int XK_Hangul_AE = (int)3776L;
     /**
-     * {@snippet :
-     * int XGetWMColormapWindows(Display*, Window, Window**, int*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_AE 3776
      * }
      */
-    public static int XGetWMColormapWindows(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XGetWMColormapWindows$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWMColormapWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$147.const$3,"XSetWMColormapWindows");
+    public static int XK_Hangul_AE() {
+        return XK_Hangul_AE;
     }
+    private static final int XK_Hangul_YA = (int)3777L;
     /**
-     * {@snippet :
-     * int XSetWMColormapWindows(Display*, Window, Window*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YA 3777
      * }
      */
-    public static int XSetWMColormapWindows(MemorySegment x0, long x1, MemorySegment x2, int x3) {
-        var mh$ = XSetWMColormapWindows$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_YA() {
+        return XK_Hangul_YA;
     }
-    public static MethodHandle XFreeStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$147.const$4,"XFreeStringList");
-    }
+    private static final int XK_Hangul_YAE = (int)3778L;
     /**
-     * {@snippet :
-     * void XFreeStringList(char**);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YAE 3778
      * }
      */
-    public static void XFreeStringList(MemorySegment x0) {
-        var mh$ = XFreeStringList$MH();
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetTransientForHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$147.const$6,"XSetTransientForHint");
+    public static int XK_Hangul_YAE() {
+        return XK_Hangul_YAE;
     }
+    private static final int XK_Hangul_EO = (int)3779L;
     /**
-     * {@snippet :
-     * int XSetTransientForHint(Display*, Window, Window);
+     * {@snippet lang=c :
+     * #define XK_Hangul_EO 3779
      * }
      */
-    public static int XSetTransientForHint(MemorySegment x0, long x1, long x2) {
-        var mh$ = XSetTransientForHint$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_EO() {
+        return XK_Hangul_EO;
     }
-    public static MethodHandle XActivateScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$148.const$0,"XActivateScreenSaver");
-    }
+    private static final int XK_Hangul_E = (int)3780L;
     /**
-     * {@snippet :
-     * int XActivateScreenSaver(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_E 3780
      * }
      */
-    public static int XActivateScreenSaver(MemorySegment x0) {
-        var mh$ = XActivateScreenSaver$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddHost$MH() {
-        return RuntimeHelper.requireNonNull(constants$148.const$1,"XAddHost");
+    public static int XK_Hangul_E() {
+        return XK_Hangul_E;
     }
+    private static final int XK_Hangul_YEO = (int)3781L;
     /**
-     * {@snippet :
-     * int XAddHost(Display*, XHostAddress*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YEO 3781
      * }
      */
-    public static int XAddHost(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XAddHost$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_YEO() {
+        return XK_Hangul_YEO;
     }
-    public static MethodHandle XAddHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$148.const$3,"XAddHosts");
-    }
+    private static final int XK_Hangul_YE = (int)3782L;
     /**
-     * {@snippet :
-     * int XAddHosts(Display*, XHostAddress*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YE 3782
      * }
      */
-    public static int XAddHosts(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XAddHosts$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAddToExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$148.const$4,"XAddToExtensionList");
+    public static int XK_Hangul_YE() {
+        return XK_Hangul_YE;
     }
+    private static final int XK_Hangul_O = (int)3783L;
     /**
-     * {@snippet :
-     * int XAddToExtensionList(struct _XExtData**, XExtData*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_O 3783
      * }
      */
-    public static int XAddToExtensionList(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XAddToExtensionList$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_O() {
+        return XK_Hangul_O;
     }
-    public static MethodHandle XAddToSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$148.const$5,"XAddToSaveSet");
-    }
+    private static final int XK_Hangul_WA = (int)3784L;
     /**
-     * {@snippet :
-     * int XAddToSaveSet(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Hangul_WA 3784
      * }
      */
-    public static int XAddToSaveSet(MemorySegment x0, long x1) {
-        var mh$ = XAddToSaveSet$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllocColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$149.const$1,"XAllocColor");
+    public static int XK_Hangul_WA() {
+        return XK_Hangul_WA;
     }
+    private static final int XK_Hangul_WAE = (int)3785L;
     /**
-     * {@snippet :
-     * int XAllocColor(Display*, Colormap, XColor*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_WAE 3785
      * }
      */
-    public static int XAllocColor(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XAllocColor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_WAE() {
+        return XK_Hangul_WAE;
     }
-    public static MethodHandle XAllocColorCells$MH() {
-        return RuntimeHelper.requireNonNull(constants$149.const$3,"XAllocColorCells");
-    }
+    private static final int XK_Hangul_OE = (int)3786L;
     /**
-     * {@snippet :
-     * int XAllocColorCells(Display*, Colormap, int, unsigned long*, unsigned int, unsigned long*, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_OE 3786
      * }
      */
-    public static int XAllocColorCells(MemorySegment x0, long x1, int x2, MemorySegment x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XAllocColorCells$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_OE() {
+        return XK_Hangul_OE;
     }
-    public static MethodHandle XAllocColorPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$149.const$5,"XAllocColorPlanes");
-    }
+    private static final int XK_Hangul_YO = (int)3787L;
     /**
-     * {@snippet :
-     * int XAllocColorPlanes(Display*, Colormap, int, unsigned long*, int, int, int, int, unsigned long*, unsigned long*, unsigned long*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YO 3787
      * }
      */
-    public static int XAllocColorPlanes(MemorySegment x0, long x1, int x2, MemorySegment x3, int x4, int x5, int x6, int x7, MemorySegment x8, MemorySegment x9, MemorySegment x10) {
-        var mh$ = XAllocColorPlanes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllocNamedColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$150.const$1,"XAllocNamedColor");
+    public static int XK_Hangul_YO() {
+        return XK_Hangul_YO;
     }
+    private static final int XK_Hangul_U = (int)3788L;
     /**
-     * {@snippet :
-     * int XAllocNamedColor(Display*, Colormap, char*, XColor*, XColor*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_U 3788
      * }
      */
-    public static int XAllocNamedColor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XAllocNamedColor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_U() {
+        return XK_Hangul_U;
     }
-    public static MethodHandle XAllowEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$150.const$3,"XAllowEvents");
-    }
+    private static final int XK_Hangul_WEO = (int)3789L;
     /**
-     * {@snippet :
-     * int XAllowEvents(Display*, int, Time);
+     * {@snippet lang=c :
+     * #define XK_Hangul_WEO 3789
      * }
      */
-    public static int XAllowEvents(MemorySegment x0, int x1, long x2) {
-        var mh$ = XAllowEvents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAutoRepeatOff$MH() {
-        return RuntimeHelper.requireNonNull(constants$150.const$4,"XAutoRepeatOff");
+    public static int XK_Hangul_WEO() {
+        return XK_Hangul_WEO;
     }
+    private static final int XK_Hangul_WE = (int)3790L;
     /**
-     * {@snippet :
-     * int XAutoRepeatOff(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_WE 3790
      * }
      */
-    public static int XAutoRepeatOff(MemorySegment x0) {
-        var mh$ = XAutoRepeatOff$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_WE() {
+        return XK_Hangul_WE;
     }
-    public static MethodHandle XAutoRepeatOn$MH() {
-        return RuntimeHelper.requireNonNull(constants$150.const$5,"XAutoRepeatOn");
-    }
+    private static final int XK_Hangul_WI = (int)3791L;
     /**
-     * {@snippet :
-     * int XAutoRepeatOn(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_WI 3791
      * }
      */
-    public static int XAutoRepeatOn(MemorySegment x0) {
-        var mh$ = XAutoRepeatOn$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_WI() {
+        return XK_Hangul_WI;
     }
-    public static MethodHandle XBell$MH() {
-        return RuntimeHelper.requireNonNull(constants$151.const$0,"XBell");
-    }
+    private static final int XK_Hangul_YU = (int)3792L;
     /**
-     * {@snippet :
-     * int XBell(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YU 3792
      * }
      */
-    public static int XBell(MemorySegment x0, int x1) {
-        var mh$ = XBell$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XBitmapBitOrder$MH() {
-        return RuntimeHelper.requireNonNull(constants$151.const$1,"XBitmapBitOrder");
+    public static int XK_Hangul_YU() {
+        return XK_Hangul_YU;
     }
+    private static final int XK_Hangul_EU = (int)3793L;
     /**
-     * {@snippet :
-     * int XBitmapBitOrder(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_EU 3793
      * }
      */
-    public static int XBitmapBitOrder(MemorySegment x0) {
-        var mh$ = XBitmapBitOrder$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_EU() {
+        return XK_Hangul_EU;
     }
-    public static MethodHandle XBitmapPad$MH() {
-        return RuntimeHelper.requireNonNull(constants$151.const$2,"XBitmapPad");
-    }
+    private static final int XK_Hangul_YI = (int)3794L;
     /**
-     * {@snippet :
-     * int XBitmapPad(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YI 3794
      * }
      */
-    public static int XBitmapPad(MemorySegment x0) {
-        var mh$ = XBitmapPad$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_YI() {
+        return XK_Hangul_YI;
     }
-    public static MethodHandle XBitmapUnit$MH() {
-        return RuntimeHelper.requireNonNull(constants$151.const$3,"XBitmapUnit");
-    }
+    private static final int XK_Hangul_I = (int)3795L;
     /**
-     * {@snippet :
-     * int XBitmapUnit(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_I 3795
      * }
      */
-    public static int XBitmapUnit(MemorySegment x0) {
-        var mh$ = XBitmapUnit$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCellsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$151.const$4,"XCellsOfScreen");
+    public static int XK_Hangul_I() {
+        return XK_Hangul_I;
     }
+    private static final int XK_Hangul_J_Kiyeog = (int)3796L;
     /**
-     * {@snippet :
-     * int XCellsOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Kiyeog 3796
      * }
      */
-    public static int XCellsOfScreen(MemorySegment x0) {
-        var mh$ = XCellsOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Kiyeog() {
+        return XK_Hangul_J_Kiyeog;
     }
-    public static MethodHandle XChangeActivePointerGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$151.const$6,"XChangeActivePointerGrab");
-    }
+    private static final int XK_Hangul_J_SsangKiyeog = (int)3797L;
     /**
-     * {@snippet :
-     * int XChangeActivePointerGrab(Display*, unsigned int, Cursor, Time);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_SsangKiyeog 3797
      * }
      */
-    public static int XChangeActivePointerGrab(MemorySegment x0, int x1, long x2, long x3) {
-        var mh$ = XChangeActivePointerGrab$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_SsangKiyeog() {
+        return XK_Hangul_J_SsangKiyeog;
     }
-    public static MethodHandle XChangeGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$152.const$1,"XChangeGC");
-    }
+    private static final int XK_Hangul_J_KiyeogSios = (int)3798L;
     /**
-     * {@snippet :
-     * int XChangeGC(Display*, GC, unsigned long, XGCValues*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_KiyeogSios 3798
      * }
      */
-    public static int XChangeGC(MemorySegment x0, MemorySegment x1, long x2, MemorySegment x3) {
-        var mh$ = XChangeGC$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeKeyboardControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$152.const$2,"XChangeKeyboardControl");
+    public static int XK_Hangul_J_KiyeogSios() {
+        return XK_Hangul_J_KiyeogSios;
     }
+    private static final int XK_Hangul_J_Nieun = (int)3799L;
     /**
-     * {@snippet :
-     * int XChangeKeyboardControl(Display*, unsigned long, XKeyboardControl*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Nieun 3799
      * }
      */
-    public static int XChangeKeyboardControl(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XChangeKeyboardControl$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Nieun() {
+        return XK_Hangul_J_Nieun;
     }
-    public static MethodHandle XChangeKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$152.const$4,"XChangeKeyboardMapping");
-    }
+    private static final int XK_Hangul_J_NieunJieuj = (int)3800L;
     /**
-     * {@snippet :
-     * int XChangeKeyboardMapping(Display*, int, int, KeySym*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_NieunJieuj 3800
      * }
      */
-    public static int XChangeKeyboardMapping(MemorySegment x0, int x1, int x2, MemorySegment x3, int x4) {
-        var mh$ = XChangeKeyboardMapping$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_NieunJieuj() {
+        return XK_Hangul_J_NieunJieuj;
     }
-    public static MethodHandle XChangePointerControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$152.const$6,"XChangePointerControl");
-    }
+    private static final int XK_Hangul_J_NieunHieuh = (int)3801L;
     /**
-     * {@snippet :
-     * int XChangePointerControl(Display*, int, int, int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_NieunHieuh 3801
      * }
      */
-    public static int XChangePointerControl(MemorySegment x0, int x1, int x2, int x3, int x4, int x5) {
-        var mh$ = XChangePointerControl$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XChangeProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$153.const$1,"XChangeProperty");
+    public static int XK_Hangul_J_NieunHieuh() {
+        return XK_Hangul_J_NieunHieuh;
     }
+    private static final int XK_Hangul_J_Dikeud = (int)3802L;
     /**
-     * {@snippet :
-     * int XChangeProperty(Display*, Window, Atom, Atom, int, int, unsigned char*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Dikeud 3802
      * }
      */
-    public static int XChangeProperty(MemorySegment x0, long x1, long x2, long x3, int x4, int x5, MemorySegment x6, int x7) {
-        var mh$ = XChangeProperty$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Dikeud() {
+        return XK_Hangul_J_Dikeud;
     }
-    public static MethodHandle XChangeSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$153.const$2,"XChangeSaveSet");
-    }
+    private static final int XK_Hangul_J_Rieul = (int)3803L;
     /**
-     * {@snippet :
-     * int XChangeSaveSet(Display*, Window, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Rieul 3803
      * }
      */
-    public static int XChangeSaveSet(MemorySegment x0, long x1, int x2) {
-        var mh$ = XChangeSaveSet$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Rieul() {
+        return XK_Hangul_J_Rieul;
     }
-    public static MethodHandle XChangeWindowAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$153.const$4,"XChangeWindowAttributes");
-    }
+    private static final int XK_Hangul_J_RieulKiyeog = (int)3804L;
     /**
-     * {@snippet :
-     * int XChangeWindowAttributes(Display*, Window, unsigned long, XSetWindowAttributes*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_RieulKiyeog 3804
      * }
      */
-    public static int XChangeWindowAttributes(MemorySegment x0, long x1, long x2, MemorySegment x3) {
-        var mh$ = XChangeWindowAttributes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCheckIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$154.const$1,"XCheckIfEvent");
+    public static int XK_Hangul_J_RieulKiyeog() {
+        return XK_Hangul_J_RieulKiyeog;
     }
+    private static final int XK_Hangul_J_RieulMieum = (int)3805L;
     /**
-     * {@snippet :
-     * int XCheckIfEvent(Display*, XEvent*, int (*)(Display*,XEvent*,XPointer), XPointer);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_RieulMieum 3805
      * }
      */
-    public static int XCheckIfEvent(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XCheckIfEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_RieulMieum() {
+        return XK_Hangul_J_RieulMieum;
     }
-    public static MethodHandle XCheckMaskEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$154.const$2,"XCheckMaskEvent");
-    }
+    private static final int XK_Hangul_J_RieulPieub = (int)3806L;
     /**
-     * {@snippet :
-     * int XCheckMaskEvent(Display*, long, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_RieulPieub 3806
      * }
      */
-    public static int XCheckMaskEvent(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XCheckMaskEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_RieulPieub() {
+        return XK_Hangul_J_RieulPieub;
     }
-    public static MethodHandle XCheckTypedEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$154.const$4,"XCheckTypedEvent");
-    }
+    private static final int XK_Hangul_J_RieulSios = (int)3807L;
     /**
-     * {@snippet :
-     * int XCheckTypedEvent(Display*, int, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_RieulSios 3807
      * }
      */
-    public static int XCheckTypedEvent(MemorySegment x0, int x1, MemorySegment x2) {
-        var mh$ = XCheckTypedEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCheckTypedWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$154.const$6,"XCheckTypedWindowEvent");
+    public static int XK_Hangul_J_RieulSios() {
+        return XK_Hangul_J_RieulSios;
     }
+    private static final int XK_Hangul_J_RieulTieut = (int)3808L;
     /**
-     * {@snippet :
-     * int XCheckTypedWindowEvent(Display*, Window, int, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_RieulTieut 3808
      * }
      */
-    public static int XCheckTypedWindowEvent(MemorySegment x0, long x1, int x2, MemorySegment x3) {
-        var mh$ = XCheckTypedWindowEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_RieulTieut() {
+        return XK_Hangul_J_RieulTieut;
     }
-    public static MethodHandle XCheckWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$155.const$0,"XCheckWindowEvent");
-    }
+    private static final int XK_Hangul_J_RieulPhieuf = (int)3809L;
     /**
-     * {@snippet :
-     * int XCheckWindowEvent(Display*, Window, long, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_RieulPhieuf 3809
      * }
      */
-    public static int XCheckWindowEvent(MemorySegment x0, long x1, long x2, MemorySegment x3) {
-        var mh$ = XCheckWindowEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_RieulPhieuf() {
+        return XK_Hangul_J_RieulPhieuf;
     }
-    public static MethodHandle XCirculateSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$155.const$1,"XCirculateSubwindows");
-    }
+    private static final int XK_Hangul_J_RieulHieuh = (int)3810L;
     /**
-     * {@snippet :
-     * int XCirculateSubwindows(Display*, Window, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_RieulHieuh 3810
      * }
      */
-    public static int XCirculateSubwindows(MemorySegment x0, long x1, int x2) {
-        var mh$ = XCirculateSubwindows$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCirculateSubwindowsDown$MH() {
-        return RuntimeHelper.requireNonNull(constants$155.const$2,"XCirculateSubwindowsDown");
+    public static int XK_Hangul_J_RieulHieuh() {
+        return XK_Hangul_J_RieulHieuh;
     }
+    private static final int XK_Hangul_J_Mieum = (int)3811L;
     /**
-     * {@snippet :
-     * int XCirculateSubwindowsDown(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Mieum 3811
      * }
      */
-    public static int XCirculateSubwindowsDown(MemorySegment x0, long x1) {
-        var mh$ = XCirculateSubwindowsDown$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Mieum() {
+        return XK_Hangul_J_Mieum;
     }
-    public static MethodHandle XCirculateSubwindowsUp$MH() {
-        return RuntimeHelper.requireNonNull(constants$155.const$3,"XCirculateSubwindowsUp");
-    }
+    private static final int XK_Hangul_J_Pieub = (int)3812L;
     /**
-     * {@snippet :
-     * int XCirculateSubwindowsUp(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Pieub 3812
      * }
      */
-    public static int XCirculateSubwindowsUp(MemorySegment x0, long x1) {
-        var mh$ = XCirculateSubwindowsUp$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XClearArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$155.const$5,"XClearArea");
+    public static int XK_Hangul_J_Pieub() {
+        return XK_Hangul_J_Pieub;
     }
+    private static final int XK_Hangul_J_PieubSios = (int)3813L;
     /**
-     * {@snippet :
-     * int XClearArea(Display*, Window, int, int, unsigned int, unsigned int, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_PieubSios 3813
      * }
      */
-    public static int XClearArea(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, int x6) {
-        var mh$ = XClearArea$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_PieubSios() {
+        return XK_Hangul_J_PieubSios;
     }
-    public static MethodHandle XClearWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$156.const$0,"XClearWindow");
-    }
+    private static final int XK_Hangul_J_Sios = (int)3814L;
     /**
-     * {@snippet :
-     * int XClearWindow(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Sios 3814
      * }
      */
-    public static int XClearWindow(MemorySegment x0, long x1) {
-        var mh$ = XClearWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Sios() {
+        return XK_Hangul_J_Sios;
     }
-    public static MethodHandle XCloseDisplay$MH() {
-        return RuntimeHelper.requireNonNull(constants$156.const$1,"XCloseDisplay");
-    }
+    private static final int XK_Hangul_J_SsangSios = (int)3815L;
     /**
-     * {@snippet :
-     * int XCloseDisplay(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_SsangSios 3815
      * }
      */
-    public static int XCloseDisplay(MemorySegment x0) {
-        var mh$ = XCloseDisplay$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XConfigureWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$156.const$2,"XConfigureWindow");
+    public static int XK_Hangul_J_SsangSios() {
+        return XK_Hangul_J_SsangSios;
     }
+    private static final int XK_Hangul_J_Ieung = (int)3816L;
     /**
-     * {@snippet :
-     * int XConfigureWindow(Display*, Window, unsigned int, XWindowChanges*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Ieung 3816
      * }
      */
-    public static int XConfigureWindow(MemorySegment x0, long x1, int x2, MemorySegment x3) {
-        var mh$ = XConfigureWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Ieung() {
+        return XK_Hangul_J_Ieung;
     }
-    public static MethodHandle XConnectionNumber$MH() {
-        return RuntimeHelper.requireNonNull(constants$156.const$3,"XConnectionNumber");
-    }
+    private static final int XK_Hangul_J_Jieuj = (int)3817L;
     /**
-     * {@snippet :
-     * int XConnectionNumber(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Jieuj 3817
      * }
      */
-    public static int XConnectionNumber(MemorySegment x0) {
-        var mh$ = XConnectionNumber$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Jieuj() {
+        return XK_Hangul_J_Jieuj;
     }
-    public static MethodHandle XConvertSelection$MH() {
-        return RuntimeHelper.requireNonNull(constants$156.const$5,"XConvertSelection");
-    }
+    private static final int XK_Hangul_J_Cieuc = (int)3818L;
     /**
-     * {@snippet :
-     * int XConvertSelection(Display*, Atom, Atom, Atom, Window, Time);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Cieuc 3818
      * }
      */
-    public static int XConvertSelection(MemorySegment x0, long x1, long x2, long x3, long x4, long x5) {
-        var mh$ = XConvertSelection$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCopyArea$MH() {
-        return RuntimeHelper.requireNonNull(constants$157.const$1,"XCopyArea");
+    public static int XK_Hangul_J_Cieuc() {
+        return XK_Hangul_J_Cieuc;
     }
+    private static final int XK_Hangul_J_Khieuq = (int)3819L;
     /**
-     * {@snippet :
-     * int XCopyArea(Display*, Drawable, Drawable, GC, int, int, unsigned int, unsigned int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Khieuq 3819
      * }
      */
-    public static int XCopyArea(MemorySegment x0, long x1, long x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, int x9) {
-        var mh$ = XCopyArea$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Khieuq() {
+        return XK_Hangul_J_Khieuq;
     }
-    public static MethodHandle XCopyGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$157.const$2,"XCopyGC");
-    }
+    private static final int XK_Hangul_J_Tieut = (int)3820L;
     /**
-     * {@snippet :
-     * int XCopyGC(Display*, GC, unsigned long, GC);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Tieut 3820
      * }
      */
-    public static int XCopyGC(MemorySegment x0, MemorySegment x1, long x2, MemorySegment x3) {
-        var mh$ = XCopyGC$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Tieut() {
+        return XK_Hangul_J_Tieut;
     }
-    public static MethodHandle XCopyPlane$MH() {
-        return RuntimeHelper.requireNonNull(constants$157.const$4,"XCopyPlane");
-    }
+    private static final int XK_Hangul_J_Phieuf = (int)3821L;
     /**
-     * {@snippet :
-     * int XCopyPlane(Display*, Drawable, Drawable, GC, int, int, unsigned int, unsigned int, int, int, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Phieuf 3821
      * }
      */
-    public static int XCopyPlane(MemorySegment x0, long x1, long x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, int x9, long x10) {
-        var mh$ = XCopyPlane$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefaultDepth$MH() {
-        return RuntimeHelper.requireNonNull(constants$157.const$5,"XDefaultDepth");
+    public static int XK_Hangul_J_Phieuf() {
+        return XK_Hangul_J_Phieuf;
     }
+    private static final int XK_Hangul_J_Hieuh = (int)3822L;
     /**
-     * {@snippet :
-     * int XDefaultDepth(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_Hieuh 3822
      * }
      */
-    public static int XDefaultDepth(MemorySegment x0, int x1) {
-        var mh$ = XDefaultDepth$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_Hieuh() {
+        return XK_Hangul_J_Hieuh;
     }
-    public static MethodHandle XDefaultDepthOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$158.const$0,"XDefaultDepthOfScreen");
-    }
+    private static final int XK_Hangul_RieulYeorinHieuh = (int)3823L;
     /**
-     * {@snippet :
-     * int XDefaultDepthOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_RieulYeorinHieuh 3823
      * }
      */
-    public static int XDefaultDepthOfScreen(MemorySegment x0) {
-        var mh$ = XDefaultDepthOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_RieulYeorinHieuh() {
+        return XK_Hangul_RieulYeorinHieuh;
     }
-    public static MethodHandle XDefaultScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$158.const$1,"XDefaultScreen");
-    }
+    private static final int XK_Hangul_SunkyeongeumMieum = (int)3824L;
     /**
-     * {@snippet :
-     * int XDefaultScreen(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SunkyeongeumMieum 3824
      * }
      */
-    public static int XDefaultScreen(MemorySegment x0) {
-        var mh$ = XDefaultScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDefineCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$158.const$2,"XDefineCursor");
+    public static int XK_Hangul_SunkyeongeumMieum() {
+        return XK_Hangul_SunkyeongeumMieum;
     }
+    private static final int XK_Hangul_SunkyeongeumPieub = (int)3825L;
     /**
-     * {@snippet :
-     * int XDefineCursor(Display*, Window, Cursor);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SunkyeongeumPieub 3825
      * }
      */
-    public static int XDefineCursor(MemorySegment x0, long x1, long x2) {
-        var mh$ = XDefineCursor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_SunkyeongeumPieub() {
+        return XK_Hangul_SunkyeongeumPieub;
     }
-    public static MethodHandle XDeleteProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$158.const$3,"XDeleteProperty");
-    }
+    private static final int XK_Hangul_PanSios = (int)3826L;
     /**
-     * {@snippet :
-     * int XDeleteProperty(Display*, Window, Atom);
+     * {@snippet lang=c :
+     * #define XK_Hangul_PanSios 3826
      * }
      */
-    public static int XDeleteProperty(MemorySegment x0, long x1, long x2) {
-        var mh$ = XDeleteProperty$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_PanSios() {
+        return XK_Hangul_PanSios;
     }
-    public static MethodHandle XDestroyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$158.const$4,"XDestroyWindow");
-    }
+    private static final int XK_Hangul_KkogjiDalrinIeung = (int)3827L;
     /**
-     * {@snippet :
-     * int XDestroyWindow(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Hangul_KkogjiDalrinIeung 3827
      * }
      */
-    public static int XDestroyWindow(MemorySegment x0, long x1) {
-        var mh$ = XDestroyWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDestroySubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$158.const$5,"XDestroySubwindows");
+    public static int XK_Hangul_KkogjiDalrinIeung() {
+        return XK_Hangul_KkogjiDalrinIeung;
     }
+    private static final int XK_Hangul_SunkyeongeumPhieuf = (int)3828L;
     /**
-     * {@snippet :
-     * int XDestroySubwindows(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Hangul_SunkyeongeumPhieuf 3828
      * }
      */
-    public static int XDestroySubwindows(MemorySegment x0, long x1) {
-        var mh$ = XDestroySubwindows$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_SunkyeongeumPhieuf() {
+        return XK_Hangul_SunkyeongeumPhieuf;
     }
-    public static MethodHandle XDoesBackingStore$MH() {
-        return RuntimeHelper.requireNonNull(constants$159.const$0,"XDoesBackingStore");
-    }
+    private static final int XK_Hangul_YeorinHieuh = (int)3829L;
     /**
-     * {@snippet :
-     * int XDoesBackingStore(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_YeorinHieuh 3829
      * }
      */
-    public static int XDoesBackingStore(MemorySegment x0) {
-        var mh$ = XDoesBackingStore$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_YeorinHieuh() {
+        return XK_Hangul_YeorinHieuh;
     }
-    public static MethodHandle XDoesSaveUnders$MH() {
-        return RuntimeHelper.requireNonNull(constants$159.const$1,"XDoesSaveUnders");
-    }
+    private static final int XK_Hangul_AraeA = (int)3830L;
     /**
-     * {@snippet :
-     * int XDoesSaveUnders(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_AraeA 3830
      * }
      */
-    public static int XDoesSaveUnders(MemorySegment x0) {
-        var mh$ = XDoesSaveUnders$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$159.const$2,"XDisableAccessControl");
+    public static int XK_Hangul_AraeA() {
+        return XK_Hangul_AraeA;
     }
+    private static final int XK_Hangul_AraeAE = (int)3831L;
     /**
-     * {@snippet :
-     * int XDisableAccessControl(Display*);
+     * {@snippet lang=c :
+     * #define XK_Hangul_AraeAE 3831
      * }
      */
-    public static int XDisableAccessControl(MemorySegment x0) {
-        var mh$ = XDisableAccessControl$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_AraeAE() {
+        return XK_Hangul_AraeAE;
     }
-    public static MethodHandle XDisplayCells$MH() {
-        return RuntimeHelper.requireNonNull(constants$159.const$3,"XDisplayCells");
-    }
+    private static final int XK_Hangul_J_PanSios = (int)3832L;
     /**
-     * {@snippet :
-     * int XDisplayCells(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_PanSios 3832
      * }
      */
-    public static int XDisplayCells(MemorySegment x0, int x1) {
-        var mh$ = XDisplayCells$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_PanSios() {
+        return XK_Hangul_J_PanSios;
     }
-    public static MethodHandle XDisplayHeight$MH() {
-        return RuntimeHelper.requireNonNull(constants$159.const$4,"XDisplayHeight");
-    }
+    private static final int XK_Hangul_J_KkogjiDalrinIeung = (int)3833L;
     /**
-     * {@snippet :
-     * int XDisplayHeight(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_KkogjiDalrinIeung 3833
      * }
      */
-    public static int XDisplayHeight(MemorySegment x0, int x1) {
-        var mh$ = XDisplayHeight$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayHeightMM$MH() {
-        return RuntimeHelper.requireNonNull(constants$159.const$5,"XDisplayHeightMM");
+    public static int XK_Hangul_J_KkogjiDalrinIeung() {
+        return XK_Hangul_J_KkogjiDalrinIeung;
     }
+    private static final int XK_Hangul_J_YeorinHieuh = (int)3834L;
     /**
-     * {@snippet :
-     * int XDisplayHeightMM(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Hangul_J_YeorinHieuh 3834
      * }
      */
-    public static int XDisplayHeightMM(MemorySegment x0, int x1) {
-        var mh$ = XDisplayHeightMM$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Hangul_J_YeorinHieuh() {
+        return XK_Hangul_J_YeorinHieuh;
     }
-    public static MethodHandle XDisplayKeycodes$MH() {
-        return RuntimeHelper.requireNonNull(constants$160.const$0,"XDisplayKeycodes");
-    }
+    private static final int XK_Korean_Won = (int)3839L;
     /**
-     * {@snippet :
-     * int XDisplayKeycodes(Display*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Korean_Won 3839
      * }
      */
-    public static int XDisplayKeycodes(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XDisplayKeycodes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayPlanes$MH() {
-        return RuntimeHelper.requireNonNull(constants$160.const$1,"XDisplayPlanes");
+    public static int XK_Korean_Won() {
+        return XK_Korean_Won;
     }
+    private static final int XK_Armenian_ligature_ew = (int)16778631L;
     /**
-     * {@snippet :
-     * int XDisplayPlanes(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ligature_ew 16778631
      * }
      */
-    public static int XDisplayPlanes(MemorySegment x0, int x1) {
-        var mh$ = XDisplayPlanes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ligature_ew() {
+        return XK_Armenian_ligature_ew;
     }
-    public static MethodHandle XDisplayWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$160.const$2,"XDisplayWidth");
-    }
+    private static final int XK_Armenian_full_stop = (int)16778633L;
     /**
-     * {@snippet :
-     * int XDisplayWidth(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_full_stop 16778633
      * }
      */
-    public static int XDisplayWidth(MemorySegment x0, int x1) {
-        var mh$ = XDisplayWidth$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_full_stop() {
+        return XK_Armenian_full_stop;
     }
-    public static MethodHandle XDisplayWidthMM$MH() {
-        return RuntimeHelper.requireNonNull(constants$160.const$3,"XDisplayWidthMM");
-    }
+    private static final int XK_Armenian_verjaket = (int)16778633L;
     /**
-     * {@snippet :
-     * int XDisplayWidthMM(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_verjaket 16778633
      * }
      */
-    public static int XDisplayWidthMM(MemorySegment x0, int x1) {
-        var mh$ = XDisplayWidthMM$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawArc$MH() {
-        return RuntimeHelper.requireNonNull(constants$160.const$5,"XDrawArc");
+    public static int XK_Armenian_verjaket() {
+        return XK_Armenian_verjaket;
     }
+    private static final int XK_Armenian_separation_mark = (int)16778589L;
     /**
-     * {@snippet :
-     * int XDrawArc(Display*, Drawable, GC, int, int, unsigned int, unsigned int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_separation_mark 16778589
      * }
      */
-    public static int XDrawArc(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6, int x7, int x8) {
-        var mh$ = XDrawArc$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_separation_mark() {
+        return XK_Armenian_separation_mark;
     }
-    public static MethodHandle XDrawArcs$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$1,"XDrawArcs");
-    }
+    private static final int XK_Armenian_but = (int)16778589L;
     /**
-     * {@snippet :
-     * int XDrawArcs(Display*, Drawable, GC, XArc*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_but 16778589
      * }
      */
-    public static int XDrawArcs(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
-        var mh$ = XDrawArcs$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_but() {
+        return XK_Armenian_but;
     }
-    public static MethodHandle XDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$3,"XDrawImageString");
-    }
+    private static final int XK_Armenian_hyphen = (int)16778634L;
     /**
-     * {@snippet :
-     * int XDrawImageString(Display*, Drawable, GC, int, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_hyphen 16778634
      * }
      */
-    public static int XDrawImageString(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XDrawImageString$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawImageString16$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$4,"XDrawImageString16");
+    public static int XK_Armenian_hyphen() {
+        return XK_Armenian_hyphen;
     }
+    private static final int XK_Armenian_yentamna = (int)16778634L;
     /**
-     * {@snippet :
-     * int XDrawImageString16(Display*, Drawable, GC, int, int, const XChar2b*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_yentamna 16778634
      * }
      */
-    public static int XDrawImageString16(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XDrawImageString16$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_yentamna() {
+        return XK_Armenian_yentamna;
     }
-    public static MethodHandle XDrawLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$6,"XDrawLine");
-    }
+    private static final int XK_Armenian_exclam = (int)16778588L;
     /**
-     * {@snippet :
-     * int XDrawLine(Display*, Drawable, GC, int, int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_exclam 16778588
      * }
      */
-    public static int XDrawLine(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6) {
-        var mh$ = XDrawLine$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_exclam() {
+        return XK_Armenian_exclam;
     }
-    public static MethodHandle XDrawLines$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$1,"XDrawLines");
-    }
+    private static final int XK_Armenian_amanak = (int)16778588L;
     /**
-     * {@snippet :
-     * int XDrawLines(Display*, Drawable, GC, XPoint*, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_amanak 16778588
      * }
      */
-    public static int XDrawLines(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5) {
-        var mh$ = XDrawLines$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawPoint$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$3,"XDrawPoint");
+    public static int XK_Armenian_amanak() {
+        return XK_Armenian_amanak;
     }
+    private static final int XK_Armenian_accent = (int)16778587L;
     /**
-     * {@snippet :
-     * int XDrawPoint(Display*, Drawable, GC, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_accent 16778587
      * }
      */
-    public static int XDrawPoint(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4) {
-        var mh$ = XDrawPoint$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_accent() {
+        return XK_Armenian_accent;
     }
-    public static MethodHandle XDrawPoints$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$4,"XDrawPoints");
-    }
+    private static final int XK_Armenian_shesht = (int)16778587L;
     /**
-     * {@snippet :
-     * int XDrawPoints(Display*, Drawable, GC, XPoint*, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_shesht 16778587
      * }
      */
-    public static int XDrawPoints(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5) {
-        var mh$ = XDrawPoints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_shesht() {
+        return XK_Armenian_shesht;
     }
-    public static MethodHandle XDrawRectangle$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$5,"XDrawRectangle");
-    }
+    private static final int XK_Armenian_question = (int)16778590L;
     /**
-     * {@snippet :
-     * int XDrawRectangle(Display*, Drawable, GC, int, int, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_question 16778590
      * }
      */
-    public static int XDrawRectangle(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6) {
-        var mh$ = XDrawRectangle$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$0,"XDrawRectangles");
+    public static int XK_Armenian_question() {
+        return XK_Armenian_question;
     }
+    private static final int XK_Armenian_paruyk = (int)16778590L;
     /**
-     * {@snippet :
-     * int XDrawRectangles(Display*, Drawable, GC, XRectangle*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_paruyk 16778590
      * }
      */
-    public static int XDrawRectangles(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
-        var mh$ = XDrawRectangles$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_paruyk() {
+        return XK_Armenian_paruyk;
     }
-    public static MethodHandle XDrawSegments$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$1,"XDrawSegments");
-    }
+    private static final int XK_Armenian_AYB = (int)16778545L;
     /**
-     * {@snippet :
-     * int XDrawSegments(Display*, Drawable, GC, XSegment*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_AYB 16778545
      * }
      */
-    public static int XDrawSegments(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
-        var mh$ = XDrawSegments$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_AYB() {
+        return XK_Armenian_AYB;
     }
-    public static MethodHandle XDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$2,"XDrawString");
-    }
+    private static final int XK_Armenian_ayb = (int)16778593L;
     /**
-     * {@snippet :
-     * int XDrawString(Display*, Drawable, GC, int, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ayb 16778593
      * }
      */
-    public static int XDrawString(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XDrawString$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDrawString16$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$3,"XDrawString16");
+    public static int XK_Armenian_ayb() {
+        return XK_Armenian_ayb;
     }
+    private static final int XK_Armenian_BEN = (int)16778546L;
     /**
-     * {@snippet :
-     * int XDrawString16(Display*, Drawable, GC, int, int, const XChar2b*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_BEN 16778546
      * }
      */
-    public static int XDrawString16(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XDrawString16$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_BEN() {
+        return XK_Armenian_BEN;
     }
-    public static MethodHandle XDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$4,"XDrawText");
-    }
+    private static final int XK_Armenian_ben = (int)16778594L;
     /**
-     * {@snippet :
-     * int XDrawText(Display*, Drawable, GC, int, int, XTextItem*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ben 16778594
      * }
      */
-    public static int XDrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XDrawText$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ben() {
+        return XK_Armenian_ben;
     }
-    public static MethodHandle XDrawText16$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$5,"XDrawText16");
-    }
+    private static final int XK_Armenian_GIM = (int)16778547L;
     /**
-     * {@snippet :
-     * int XDrawText16(Display*, Drawable, GC, int, int, XTextItem16*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_GIM 16778547
      * }
      */
-    public static int XDrawText16(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XDrawText16$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEnableAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$0,"XEnableAccessControl");
+    public static int XK_Armenian_GIM() {
+        return XK_Armenian_GIM;
     }
+    private static final int XK_Armenian_gim = (int)16778595L;
     /**
-     * {@snippet :
-     * int XEnableAccessControl(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_gim 16778595
      * }
      */
-    public static int XEnableAccessControl(MemorySegment x0) {
-        var mh$ = XEnableAccessControl$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_gim() {
+        return XK_Armenian_gim;
     }
-    public static MethodHandle XEventsQueued$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$1,"XEventsQueued");
-    }
+    private static final int XK_Armenian_DA = (int)16778548L;
     /**
-     * {@snippet :
-     * int XEventsQueued(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_DA 16778548
      * }
      */
-    public static int XEventsQueued(MemorySegment x0, int x1) {
-        var mh$ = XEventsQueued$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_DA() {
+        return XK_Armenian_DA;
     }
-    public static MethodHandle XFetchName$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$2,"XFetchName");
-    }
+    private static final int XK_Armenian_da = (int)16778596L;
     /**
-     * {@snippet :
-     * int XFetchName(Display*, Window, char**);
+     * {@snippet lang=c :
+     * #define XK_Armenian_da 16778596
      * }
      */
-    public static int XFetchName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XFetchName$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFillArc$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$3,"XFillArc");
+    public static int XK_Armenian_da() {
+        return XK_Armenian_da;
     }
+    private static final int XK_Armenian_YECH = (int)16778549L;
     /**
-     * {@snippet :
-     * int XFillArc(Display*, Drawable, GC, int, int, unsigned int, unsigned int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_YECH 16778549
      * }
      */
-    public static int XFillArc(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6, int x7, int x8) {
-        var mh$ = XFillArc$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_YECH() {
+        return XK_Armenian_YECH;
     }
-    public static MethodHandle XFillArcs$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$4,"XFillArcs");
-    }
+    private static final int XK_Armenian_yech = (int)16778597L;
     /**
-     * {@snippet :
-     * int XFillArcs(Display*, Drawable, GC, XArc*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_yech 16778597
      * }
      */
-    public static int XFillArcs(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
-        var mh$ = XFillArcs$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_yech() {
+        return XK_Armenian_yech;
     }
-    public static MethodHandle XFillPolygon$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$6,"XFillPolygon");
-    }
+    private static final int XK_Armenian_ZA = (int)16778550L;
     /**
-     * {@snippet :
-     * int XFillPolygon(Display*, Drawable, GC, XPoint*, int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ZA 16778550
      * }
      */
-    public static int XFillPolygon(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, int x6) {
-        var mh$ = XFillPolygon$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFillRectangle$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$0,"XFillRectangle");
+    public static int XK_Armenian_ZA() {
+        return XK_Armenian_ZA;
     }
+    private static final int XK_Armenian_za = (int)16778598L;
     /**
-     * {@snippet :
-     * int XFillRectangle(Display*, Drawable, GC, int, int, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_za 16778598
      * }
      */
-    public static int XFillRectangle(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, int x5, int x6) {
-        var mh$ = XFillRectangle$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_za() {
+        return XK_Armenian_za;
     }
-    public static MethodHandle XFillRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$1,"XFillRectangles");
-    }
+    private static final int XK_Armenian_E = (int)16778551L;
     /**
-     * {@snippet :
-     * int XFillRectangles(Display*, Drawable, GC, XRectangle*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_E 16778551
      * }
      */
-    public static int XFillRectangles(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4) {
-        var mh$ = XFillRectangles$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_E() {
+        return XK_Armenian_E;
     }
-    public static MethodHandle XFlush$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$2,"XFlush");
-    }
+    private static final int XK_Armenian_e = (int)16778599L;
     /**
-     * {@snippet :
-     * int XFlush(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_e 16778599
      * }
      */
-    public static int XFlush(MemorySegment x0) {
-        var mh$ = XFlush$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XForceScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$3,"XForceScreenSaver");
+    public static int XK_Armenian_e() {
+        return XK_Armenian_e;
     }
+    private static final int XK_Armenian_AT = (int)16778552L;
     /**
-     * {@snippet :
-     * int XForceScreenSaver(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_AT 16778552
      * }
      */
-    public static int XForceScreenSaver(MemorySegment x0, int x1) {
-        var mh$ = XForceScreenSaver$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_AT() {
+        return XK_Armenian_AT;
     }
-    public static MethodHandle XFree$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$4,"XFree");
-    }
+    private static final int XK_Armenian_at = (int)16778600L;
     /**
-     * {@snippet :
-     * int XFree(void*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_at 16778600
      * }
      */
-    public static int XFree(MemorySegment x0) {
-        var mh$ = XFree$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_at() {
+        return XK_Armenian_at;
     }
-    public static MethodHandle XFreeColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$5,"XFreeColormap");
-    }
+    private static final int XK_Armenian_TO = (int)16778553L;
     /**
-     * {@snippet :
-     * int XFreeColormap(Display*, Colormap);
+     * {@snippet lang=c :
+     * #define XK_Armenian_TO 16778553
      * }
      */
-    public static int XFreeColormap(MemorySegment x0, long x1) {
-        var mh$ = XFreeColormap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$1,"XFreeColors");
+    public static int XK_Armenian_TO() {
+        return XK_Armenian_TO;
     }
+    private static final int XK_Armenian_to = (int)16778601L;
     /**
-     * {@snippet :
-     * int XFreeColors(Display*, Colormap, unsigned long*, int, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_Armenian_to 16778601
      * }
      */
-    public static int XFreeColors(MemorySegment x0, long x1, MemorySegment x2, int x3, long x4) {
-        var mh$ = XFreeColors$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_to() {
+        return XK_Armenian_to;
     }
-    public static MethodHandle XFreeCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$2,"XFreeCursor");
-    }
+    private static final int XK_Armenian_ZHE = (int)16778554L;
     /**
-     * {@snippet :
-     * int XFreeCursor(Display*, Cursor);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ZHE 16778554
      * }
      */
-    public static int XFreeCursor(MemorySegment x0, long x1) {
-        var mh$ = XFreeCursor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ZHE() {
+        return XK_Armenian_ZHE;
     }
-    public static MethodHandle XFreeExtensionList$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$3,"XFreeExtensionList");
-    }
+    private static final int XK_Armenian_zhe = (int)16778602L;
     /**
-     * {@snippet :
-     * int XFreeExtensionList(char**);
+     * {@snippet lang=c :
+     * #define XK_Armenian_zhe 16778602
      * }
      */
-    public static int XFreeExtensionList(MemorySegment x0) {
-        var mh$ = XFreeExtensionList$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$4,"XFreeFont");
+    public static int XK_Armenian_zhe() {
+        return XK_Armenian_zhe;
     }
+    private static final int XK_Armenian_INI = (int)16778555L;
     /**
-     * {@snippet :
-     * int XFreeFont(Display*, XFontStruct*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_INI 16778555
      * }
      */
-    public static int XFreeFont(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XFreeFont$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_INI() {
+        return XK_Armenian_INI;
     }
-    public static MethodHandle XFreeFontInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$5,"XFreeFontInfo");
-    }
+    private static final int XK_Armenian_ini = (int)16778603L;
     /**
-     * {@snippet :
-     * int XFreeFontInfo(char**, XFontStruct*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ini 16778603
      * }
      */
-    public static int XFreeFontInfo(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XFreeFontInfo$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ini() {
+        return XK_Armenian_ini;
     }
-    public static MethodHandle XFreeFontNames$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$0,"XFreeFontNames");
-    }
+    private static final int XK_Armenian_LYUN = (int)16778556L;
     /**
-     * {@snippet :
-     * int XFreeFontNames(char**);
+     * {@snippet lang=c :
+     * #define XK_Armenian_LYUN 16778556
      * }
      */
-    public static int XFreeFontNames(MemorySegment x0) {
-        var mh$ = XFreeFontNames$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$1,"XFreeFontPath");
+    public static int XK_Armenian_LYUN() {
+        return XK_Armenian_LYUN;
     }
+    private static final int XK_Armenian_lyun = (int)16778604L;
     /**
-     * {@snippet :
-     * int XFreeFontPath(char**);
+     * {@snippet lang=c :
+     * #define XK_Armenian_lyun 16778604
      * }
      */
-    public static int XFreeFontPath(MemorySegment x0) {
-        var mh$ = XFreeFontPath$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_lyun() {
+        return XK_Armenian_lyun;
     }
-    public static MethodHandle XFreeGC$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$2,"XFreeGC");
-    }
+    private static final int XK_Armenian_KHE = (int)16778557L;
     /**
-     * {@snippet :
-     * int XFreeGC(Display*, GC);
+     * {@snippet lang=c :
+     * #define XK_Armenian_KHE 16778557
      * }
      */
-    public static int XFreeGC(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XFreeGC$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_KHE() {
+        return XK_Armenian_KHE;
     }
-    public static MethodHandle XFreeModifiermap$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$3,"XFreeModifiermap");
-    }
+    private static final int XK_Armenian_khe = (int)16778605L;
     /**
-     * {@snippet :
-     * int XFreeModifiermap(XModifierKeymap*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_khe 16778605
      * }
      */
-    public static int XFreeModifiermap(MemorySegment x0) {
-        var mh$ = XFreeModifiermap$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreePixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$4,"XFreePixmap");
+    public static int XK_Armenian_khe() {
+        return XK_Armenian_khe;
     }
+    private static final int XK_Armenian_TSA = (int)16778558L;
     /**
-     * {@snippet :
-     * int XFreePixmap(Display*, Pixmap);
+     * {@snippet lang=c :
+     * #define XK_Armenian_TSA 16778558
      * }
      */
-    public static int XFreePixmap(MemorySegment x0, long x1) {
-        var mh$ = XFreePixmap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_TSA() {
+        return XK_Armenian_TSA;
     }
-    public static MethodHandle XGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$6,"XGeometry");
-    }
+    private static final int XK_Armenian_tsa = (int)16778606L;
     /**
-     * {@snippet :
-     * int XGeometry(Display*, int, char*, char*, unsigned int, unsigned int, unsigned int, int, int, int*, int*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_tsa 16778606
      * }
      */
-    public static int XGeometry(MemorySegment x0, int x1, MemorySegment x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, MemorySegment x9, MemorySegment x10, MemorySegment x11, MemorySegment x12) {
-        var mh$ = XGeometry$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_tsa() {
+        return XK_Armenian_tsa;
     }
-    public static MethodHandle XGetErrorDatabaseText$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$1,"XGetErrorDatabaseText");
-    }
+    private static final int XK_Armenian_KEN = (int)16778559L;
     /**
-     * {@snippet :
-     * int XGetErrorDatabaseText(Display*, char*, char*, char*, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_KEN 16778559
      * }
      */
-    public static int XGetErrorDatabaseText(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5) {
-        var mh$ = XGetErrorDatabaseText$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetErrorText$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$3,"XGetErrorText");
+    public static int XK_Armenian_KEN() {
+        return XK_Armenian_KEN;
     }
+    private static final int XK_Armenian_ken = (int)16778607L;
     /**
-     * {@snippet :
-     * int XGetErrorText(Display*, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ken 16778607
      * }
      */
-    public static int XGetErrorText(MemorySegment x0, int x1, MemorySegment x2, int x3) {
-        var mh$ = XGetErrorText$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ken() {
+        return XK_Armenian_ken;
     }
-    public static MethodHandle XGetFontProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$4,"XGetFontProperty");
-    }
+    private static final int XK_Armenian_HO = (int)16778560L;
     /**
-     * {@snippet :
-     * int XGetFontProperty(XFontStruct*, Atom, unsigned long*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_HO 16778560
      * }
      */
-    public static int XGetFontProperty(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetFontProperty$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_HO() {
+        return XK_Armenian_HO;
     }
-    public static MethodHandle XGetGCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$5,"XGetGCValues");
-    }
+    private static final int XK_Armenian_ho = (int)16778608L;
     /**
-     * {@snippet :
-     * int XGetGCValues(Display*, GC, unsigned long, XGCValues*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ho 16778608
      * }
      */
-    public static int XGetGCValues(MemorySegment x0, MemorySegment x1, long x2, MemorySegment x3) {
-        var mh$ = XGetGCValues$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$1,"XGetGeometry");
+    public static int XK_Armenian_ho() {
+        return XK_Armenian_ho;
     }
+    private static final int XK_Armenian_DZA = (int)16778561L;
     /**
-     * {@snippet :
-     * int XGetGeometry(Display*, Drawable, Window*, int*, int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_DZA 16778561
      * }
      */
-    public static int XGetGeometry(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = XGetGeometry$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_DZA() {
+        return XK_Armenian_DZA;
     }
-    public static MethodHandle XGetIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$2,"XGetIconName");
-    }
+    private static final int XK_Armenian_dza = (int)16778609L;
     /**
-     * {@snippet :
-     * int XGetIconName(Display*, Window, char**);
+     * {@snippet lang=c :
+     * #define XK_Armenian_dza 16778609
      * }
      */
-    public static int XGetIconName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetIconName$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetInputFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$3,"XGetInputFocus");
+    public static int XK_Armenian_dza() {
+        return XK_Armenian_dza;
     }
+    private static final int XK_Armenian_GHAT = (int)16778562L;
     /**
-     * {@snippet :
-     * int XGetInputFocus(Display*, Window*, int*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_GHAT 16778562
      * }
      */
-    public static int XGetInputFocus(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XGetInputFocus$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_GHAT() {
+        return XK_Armenian_GHAT;
     }
-    public static MethodHandle XGetKeyboardControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$4,"XGetKeyboardControl");
-    }
+    private static final int XK_Armenian_ghat = (int)16778610L;
     /**
-     * {@snippet :
-     * int XGetKeyboardControl(Display*, XKeyboardState*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ghat 16778610
      * }
      */
-    public static int XGetKeyboardControl(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XGetKeyboardControl$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ghat() {
+        return XK_Armenian_ghat;
     }
-    public static MethodHandle XGetPointerControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$5,"XGetPointerControl");
-    }
+    private static final int XK_Armenian_TCHE = (int)16778563L;
     /**
-     * {@snippet :
-     * int XGetPointerControl(Display*, int*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_TCHE 16778563
      * }
      */
-    public static int XGetPointerControl(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XGetPointerControl$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetPointerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$0,"XGetPointerMapping");
+    public static int XK_Armenian_TCHE() {
+        return XK_Armenian_TCHE;
     }
+    private static final int XK_Armenian_tche = (int)16778611L;
     /**
-     * {@snippet :
-     * int XGetPointerMapping(Display*, unsigned char*, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_tche 16778611
      * }
      */
-    public static int XGetPointerMapping(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XGetPointerMapping$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_tche() {
+        return XK_Armenian_tche;
     }
-    public static MethodHandle XGetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$2,"XGetScreenSaver");
-    }
+    private static final int XK_Armenian_MEN = (int)16778564L;
     /**
-     * {@snippet :
-     * int XGetScreenSaver(Display*, int*, int*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_MEN 16778564
      * }
      */
-    public static int XGetScreenSaver(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XGetScreenSaver$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_MEN() {
+        return XK_Armenian_MEN;
     }
-    public static MethodHandle XGetTransientForHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$3,"XGetTransientForHint");
-    }
+    private static final int XK_Armenian_men = (int)16778612L;
     /**
-     * {@snippet :
-     * int XGetTransientForHint(Display*, Window, Window*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_men 16778612
      * }
      */
-    public static int XGetTransientForHint(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetTransientForHint$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWindowProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$5,"XGetWindowProperty");
+    public static int XK_Armenian_men() {
+        return XK_Armenian_men;
     }
+    private static final int XK_Armenian_HI = (int)16778565L;
     /**
-     * {@snippet :
-     * int XGetWindowProperty(Display*, Window, Atom, long, long, int, Atom, Atom*, int*, unsigned long*, unsigned long*, unsigned char**);
+     * {@snippet lang=c :
+     * #define XK_Armenian_HI 16778565
      * }
      */
-    public static int XGetWindowProperty(MemorySegment x0, long x1, long x2, long x3, long x4, int x5, long x6, MemorySegment x7, MemorySegment x8, MemorySegment x9, MemorySegment x10, MemorySegment x11) {
-        var mh$ = XGetWindowProperty$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_HI() {
+        return XK_Armenian_HI;
     }
-    public static MethodHandle XGetWindowAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$0,"XGetWindowAttributes");
-    }
+    private static final int XK_Armenian_hi = (int)16778613L;
     /**
-     * {@snippet :
-     * int XGetWindowAttributes(Display*, Window, XWindowAttributes*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_hi 16778613
      * }
      */
-    public static int XGetWindowAttributes(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetWindowAttributes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_hi() {
+        return XK_Armenian_hi;
     }
-    public static MethodHandle XGrabButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$2,"XGrabButton");
-    }
+    private static final int XK_Armenian_NU = (int)16778566L;
     /**
-     * {@snippet :
-     * int XGrabButton(Display*, unsigned int, unsigned int, Window, int, unsigned int, int, int, Window, Cursor);
+     * {@snippet lang=c :
+     * #define XK_Armenian_NU 16778566
      * }
      */
-    public static int XGrabButton(MemorySegment x0, int x1, int x2, long x3, int x4, int x5, int x6, int x7, long x8, long x9) {
-        var mh$ = XGrabButton$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGrabKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$4,"XGrabKey");
+    public static int XK_Armenian_NU() {
+        return XK_Armenian_NU;
     }
+    private static final int XK_Armenian_nu = (int)16778614L;
     /**
-     * {@snippet :
-     * int XGrabKey(Display*, int, unsigned int, Window, int, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_nu 16778614
      * }
      */
-    public static int XGrabKey(MemorySegment x0, int x1, int x2, long x3, int x4, int x5, int x6) {
-        var mh$ = XGrabKey$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_nu() {
+        return XK_Armenian_nu;
     }
-    public static MethodHandle XGrabKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$6,"XGrabKeyboard");
-    }
+    private static final int XK_Armenian_SHA = (int)16778567L;
     /**
-     * {@snippet :
-     * int XGrabKeyboard(Display*, Window, int, int, int, Time);
+     * {@snippet lang=c :
+     * #define XK_Armenian_SHA 16778567
      * }
      */
-    public static int XGrabKeyboard(MemorySegment x0, long x1, int x2, int x3, int x4, long x5) {
-        var mh$ = XGrabKeyboard$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_SHA() {
+        return XK_Armenian_SHA;
     }
-    public static MethodHandle XGrabPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$1,"XGrabPointer");
-    }
+    private static final int XK_Armenian_sha = (int)16778615L;
     /**
-     * {@snippet :
-     * int XGrabPointer(Display*, Window, int, unsigned int, int, int, Window, Cursor, Time);
+     * {@snippet lang=c :
+     * #define XK_Armenian_sha 16778615
      * }
      */
-    public static int XGrabPointer(MemorySegment x0, long x1, int x2, int x3, int x4, int x5, long x6, long x7, long x8) {
-        var mh$ = XGrabPointer$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGrabServer$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$2,"XGrabServer");
+    public static int XK_Armenian_sha() {
+        return XK_Armenian_sha;
     }
+    private static final int XK_Armenian_VO = (int)16778568L;
     /**
-     * {@snippet :
-     * int XGrabServer(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_VO 16778568
      * }
      */
-    public static int XGrabServer(MemorySegment x0) {
-        var mh$ = XGrabServer$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_VO() {
+        return XK_Armenian_VO;
     }
-    public static MethodHandle XHeightMMOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$3,"XHeightMMOfScreen");
-    }
+    private static final int XK_Armenian_vo = (int)16778616L;
     /**
-     * {@snippet :
-     * int XHeightMMOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_vo 16778616
      * }
      */
-    public static int XHeightMMOfScreen(MemorySegment x0) {
-        var mh$ = XHeightMMOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_vo() {
+        return XK_Armenian_vo;
     }
-    public static MethodHandle XHeightOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$4,"XHeightOfScreen");
-    }
+    private static final int XK_Armenian_CHA = (int)16778569L;
     /**
-     * {@snippet :
-     * int XHeightOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_CHA 16778569
      * }
      */
-    public static int XHeightOfScreen(MemorySegment x0) {
-        var mh$ = XHeightOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$0,"XIfEvent");
+    public static int XK_Armenian_CHA() {
+        return XK_Armenian_CHA;
     }
+    private static final int XK_Armenian_cha = (int)16778617L;
     /**
-     * {@snippet :
-     * int XIfEvent(Display*, XEvent*, int (*)(Display*,XEvent*,XPointer), XPointer);
+     * {@snippet lang=c :
+     * #define XK_Armenian_cha 16778617
      * }
      */
-    public static int XIfEvent(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XIfEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_cha() {
+        return XK_Armenian_cha;
     }
-    public static MethodHandle XImageByteOrder$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$1,"XImageByteOrder");
-    }
+    private static final int XK_Armenian_PE = (int)16778570L;
     /**
-     * {@snippet :
-     * int XImageByteOrder(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_PE 16778570
      * }
      */
-    public static int XImageByteOrder(MemorySegment x0) {
-        var mh$ = XImageByteOrder$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_PE() {
+        return XK_Armenian_PE;
     }
-    public static MethodHandle XInstallColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$2,"XInstallColormap");
-    }
+    private static final int XK_Armenian_pe = (int)16778618L;
     /**
-     * {@snippet :
-     * int XInstallColormap(Display*, Colormap);
+     * {@snippet lang=c :
+     * #define XK_Armenian_pe 16778618
      * }
      */
-    public static int XInstallColormap(MemorySegment x0, long x1) {
-        var mh$ = XInstallColormap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XKeysymToKeycode$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$4,"XKeysymToKeycode");
+    public static int XK_Armenian_pe() {
+        return XK_Armenian_pe;
     }
+    private static final int XK_Armenian_JE = (int)16778571L;
     /**
-     * {@snippet :
-     * KeyCode XKeysymToKeycode(Display*, KeySym);
+     * {@snippet lang=c :
+     * #define XK_Armenian_JE 16778571
      * }
      */
-    public static byte XKeysymToKeycode(MemorySegment x0, long x1) {
-        var mh$ = XKeysymToKeycode$MH();
-        try {
-            return (byte)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_JE() {
+        return XK_Armenian_JE;
     }
-    public static MethodHandle XKillClient$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$5,"XKillClient");
-    }
+    private static final int XK_Armenian_je = (int)16778619L;
     /**
-     * {@snippet :
-     * int XKillClient(Display*, XID);
+     * {@snippet lang=c :
+     * #define XK_Armenian_je 16778619
      * }
      */
-    public static int XKillClient(MemorySegment x0, long x1) {
-        var mh$ = XKillClient$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_je() {
+        return XK_Armenian_je;
     }
-    public static MethodHandle XLookupColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$0,"XLookupColor");
-    }
+    private static final int XK_Armenian_RA = (int)16778572L;
     /**
-     * {@snippet :
-     * int XLookupColor(Display*, Colormap, char*, XColor*, XColor*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_RA 16778572
      * }
      */
-    public static int XLookupColor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XLookupColor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLowerWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$1,"XLowerWindow");
+    public static int XK_Armenian_RA() {
+        return XK_Armenian_RA;
     }
+    private static final int XK_Armenian_ra = (int)16778620L;
     /**
-     * {@snippet :
-     * int XLowerWindow(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ra 16778620
      * }
      */
-    public static int XLowerWindow(MemorySegment x0, long x1) {
-        var mh$ = XLowerWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ra() {
+        return XK_Armenian_ra;
     }
-    public static MethodHandle XMapRaised$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$2,"XMapRaised");
-    }
+    private static final int XK_Armenian_SE = (int)16778573L;
     /**
-     * {@snippet :
-     * int XMapRaised(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Armenian_SE 16778573
      * }
      */
-    public static int XMapRaised(MemorySegment x0, long x1) {
-        var mh$ = XMapRaised$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_SE() {
+        return XK_Armenian_SE;
     }
-    public static MethodHandle XMapSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$3,"XMapSubwindows");
-    }
+    private static final int XK_Armenian_se = (int)16778621L;
     /**
-     * {@snippet :
-     * int XMapSubwindows(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Armenian_se 16778621
      * }
      */
-    public static int XMapSubwindows(MemorySegment x0, long x1) {
-        var mh$ = XMapSubwindows$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$4,"XMapWindow");
+    public static int XK_Armenian_se() {
+        return XK_Armenian_se;
     }
+    private static final int XK_Armenian_VEV = (int)16778574L;
     /**
-     * {@snippet :
-     * int XMapWindow(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Armenian_VEV 16778574
      * }
      */
-    public static int XMapWindow(MemorySegment x0, long x1) {
-        var mh$ = XMapWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_VEV() {
+        return XK_Armenian_VEV;
     }
-    public static MethodHandle XMaskEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$5,"XMaskEvent");
-    }
+    private static final int XK_Armenian_vev = (int)16778622L;
     /**
-     * {@snippet :
-     * int XMaskEvent(Display*, long, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_vev 16778622
      * }
      */
-    public static int XMaskEvent(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XMaskEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_vev() {
+        return XK_Armenian_vev;
     }
-    public static MethodHandle XMaxCmapsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$0,"XMaxCmapsOfScreen");
-    }
+    private static final int XK_Armenian_TYUN = (int)16778575L;
     /**
-     * {@snippet :
-     * int XMaxCmapsOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_TYUN 16778575
      * }
      */
-    public static int XMaxCmapsOfScreen(MemorySegment x0) {
-        var mh$ = XMaxCmapsOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMinCmapsOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$1,"XMinCmapsOfScreen");
+    public static int XK_Armenian_TYUN() {
+        return XK_Armenian_TYUN;
     }
+    private static final int XK_Armenian_tyun = (int)16778623L;
     /**
-     * {@snippet :
-     * int XMinCmapsOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_tyun 16778623
      * }
      */
-    public static int XMinCmapsOfScreen(MemorySegment x0) {
-        var mh$ = XMinCmapsOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_tyun() {
+        return XK_Armenian_tyun;
     }
-    public static MethodHandle XMoveResizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$3,"XMoveResizeWindow");
-    }
+    private static final int XK_Armenian_RE = (int)16778576L;
     /**
-     * {@snippet :
-     * int XMoveResizeWindow(Display*, Window, int, int, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_RE 16778576
      * }
      */
-    public static int XMoveResizeWindow(MemorySegment x0, long x1, int x2, int x3, int x4, int x5) {
-        var mh$ = XMoveResizeWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_RE() {
+        return XK_Armenian_RE;
     }
-    public static MethodHandle XMoveWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$5,"XMoveWindow");
-    }
+    private static final int XK_Armenian_re = (int)16778624L;
     /**
-     * {@snippet :
-     * int XMoveWindow(Display*, Window, int, int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_re 16778624
      * }
      */
-    public static int XMoveWindow(MemorySegment x0, long x1, int x2, int x3) {
-        var mh$ = XMoveWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XNextEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$0,"XNextEvent");
+    public static int XK_Armenian_re() {
+        return XK_Armenian_re;
     }
+    private static final int XK_Armenian_TSO = (int)16778577L;
     /**
-     * {@snippet :
-     * int XNextEvent(Display*, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_TSO 16778577
      * }
      */
-    public static int XNextEvent(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XNextEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_TSO() {
+        return XK_Armenian_TSO;
     }
-    public static MethodHandle XNoOp$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$1,"XNoOp");
-    }
+    private static final int XK_Armenian_tso = (int)16778625L;
     /**
-     * {@snippet :
-     * int XNoOp(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_tso 16778625
      * }
      */
-    public static int XNoOp(MemorySegment x0) {
-        var mh$ = XNoOp$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_tso() {
+        return XK_Armenian_tso;
     }
-    public static MethodHandle XParseColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$2,"XParseColor");
-    }
+    private static final int XK_Armenian_VYUN = (int)16778578L;
     /**
-     * {@snippet :
-     * int XParseColor(Display*, Colormap, char*, XColor*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_VYUN 16778578
      * }
      */
-    public static int XParseColor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XParseColor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XParseGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$3,"XParseGeometry");
+    public static int XK_Armenian_VYUN() {
+        return XK_Armenian_VYUN;
     }
+    private static final int XK_Armenian_vyun = (int)16778626L;
     /**
-     * {@snippet :
-     * int XParseGeometry(char*, int*, int*, unsigned int*, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_vyun 16778626
      * }
      */
-    public static int XParseGeometry(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XParseGeometry$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_vyun() {
+        return XK_Armenian_vyun;
     }
-    public static MethodHandle XPeekEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$4,"XPeekEvent");
-    }
+    private static final int XK_Armenian_PYUR = (int)16778579L;
     /**
-     * {@snippet :
-     * int XPeekEvent(Display*, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_PYUR 16778579
      * }
      */
-    public static int XPeekEvent(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XPeekEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_PYUR() {
+        return XK_Armenian_PYUR;
     }
-    public static MethodHandle XPeekIfEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$0,"XPeekIfEvent");
-    }
+    private static final int XK_Armenian_pyur = (int)16778627L;
     /**
-     * {@snippet :
-     * int XPeekIfEvent(Display*, XEvent*, int (*)(Display*,XEvent*,XPointer), XPointer);
+     * {@snippet lang=c :
+     * #define XK_Armenian_pyur 16778627
      * }
      */
-    public static int XPeekIfEvent(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XPeekIfEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPending$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$1,"XPending");
+    public static int XK_Armenian_pyur() {
+        return XK_Armenian_pyur;
     }
+    private static final int XK_Armenian_KE = (int)16778580L;
     /**
-     * {@snippet :
-     * int XPending(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_KE 16778580
      * }
      */
-    public static int XPending(MemorySegment x0) {
-        var mh$ = XPending$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_KE() {
+        return XK_Armenian_KE;
     }
-    public static MethodHandle XPlanesOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$2,"XPlanesOfScreen");
-    }
+    private static final int XK_Armenian_ke = (int)16778628L;
     /**
-     * {@snippet :
-     * int XPlanesOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_ke 16778628
      * }
      */
-    public static int XPlanesOfScreen(MemorySegment x0) {
-        var mh$ = XPlanesOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_ke() {
+        return XK_Armenian_ke;
     }
-    public static MethodHandle XProtocolRevision$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$3,"XProtocolRevision");
-    }
+    private static final int XK_Armenian_O = (int)16778581L;
     /**
-     * {@snippet :
-     * int XProtocolRevision(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_O 16778581
      * }
      */
-    public static int XProtocolRevision(MemorySegment x0) {
-        var mh$ = XProtocolRevision$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XProtocolVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$4,"XProtocolVersion");
+    public static int XK_Armenian_O() {
+        return XK_Armenian_O;
     }
+    private static final int XK_Armenian_o = (int)16778629L;
     /**
-     * {@snippet :
-     * int XProtocolVersion(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_o 16778629
      * }
      */
-    public static int XProtocolVersion(MemorySegment x0) {
-        var mh$ = XProtocolVersion$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_o() {
+        return XK_Armenian_o;
     }
-    public static MethodHandle XPutBackEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$5,"XPutBackEvent");
-    }
+    private static final int XK_Armenian_FE = (int)16778582L;
     /**
-     * {@snippet :
-     * int XPutBackEvent(Display*, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_FE 16778582
      * }
      */
-    public static int XPutBackEvent(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XPutBackEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_FE() {
+        return XK_Armenian_FE;
     }
-    public static MethodHandle XPutImage$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$1,"XPutImage");
-    }
+    private static final int XK_Armenian_fe = (int)16778630L;
     /**
-     * {@snippet :
-     * int XPutImage(Display*, Drawable, GC, XImage*, int, int, int, int, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Armenian_fe 16778630
      * }
      */
-    public static int XPutImage(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, int x6, int x7, int x8, int x9) {
-        var mh$ = XPutImage$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQLength$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$2,"XQLength");
+    public static int XK_Armenian_fe() {
+        return XK_Armenian_fe;
     }
+    private static final int XK_Armenian_apostrophe = (int)16778586L;
     /**
-     * {@snippet :
-     * int XQLength(Display*);
+     * {@snippet lang=c :
+     * #define XK_Armenian_apostrophe 16778586
      * }
      */
-    public static int XQLength(MemorySegment x0) {
-        var mh$ = XQLength$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Armenian_apostrophe() {
+        return XK_Armenian_apostrophe;
     }
-    public static MethodHandle XQueryBestCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$4,"XQueryBestCursor");
-    }
+    private static final int XK_Georgian_an = (int)16781520L;
     /**
-     * {@snippet :
-     * int XQueryBestCursor(Display*, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_an 16781520
      * }
      */
-    public static int XQueryBestCursor(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XQueryBestCursor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_an() {
+        return XK_Georgian_an;
     }
-    public static MethodHandle XQueryBestSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$6,"XQueryBestSize");
-    }
+    private static final int XK_Georgian_ban = (int)16781521L;
     /**
-     * {@snippet :
-     * int XQueryBestSize(Display*, int, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_ban 16781521
      * }
      */
-    public static int XQueryBestSize(MemorySegment x0, int x1, long x2, int x3, int x4, MemorySegment x5, MemorySegment x6) {
-        var mh$ = XQueryBestSize$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryBestStipple$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$0,"XQueryBestStipple");
+    public static int XK_Georgian_ban() {
+        return XK_Georgian_ban;
     }
+    private static final int XK_Georgian_gan = (int)16781522L;
     /**
-     * {@snippet :
-     * int XQueryBestStipple(Display*, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_gan 16781522
      * }
      */
-    public static int XQueryBestStipple(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XQueryBestStipple$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_gan() {
+        return XK_Georgian_gan;
     }
-    public static MethodHandle XQueryBestTile$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$1,"XQueryBestTile");
-    }
+    private static final int XK_Georgian_don = (int)16781523L;
     /**
-     * {@snippet :
-     * int XQueryBestTile(Display*, Drawable, unsigned int, unsigned int, unsigned int*, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_don 16781523
      * }
      */
-    public static int XQueryBestTile(MemorySegment x0, long x1, int x2, int x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XQueryBestTile$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$2,"XQueryColor");
+    public static int XK_Georgian_don() {
+        return XK_Georgian_don;
     }
+    private static final int XK_Georgian_en = (int)16781524L;
     /**
-     * {@snippet :
-     * int XQueryColor(Display*, Colormap, XColor*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_en 16781524
      * }
      */
-    public static int XQueryColor(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XQueryColor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_en() {
+        return XK_Georgian_en;
     }
-    public static MethodHandle XQueryColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$3,"XQueryColors");
-    }
+    private static final int XK_Georgian_vin = (int)16781525L;
     /**
-     * {@snippet :
-     * int XQueryColors(Display*, Colormap, XColor*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_vin 16781525
      * }
      */
-    public static int XQueryColors(MemorySegment x0, long x1, MemorySegment x2, int x3) {
-        var mh$ = XQueryColors$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_vin() {
+        return XK_Georgian_vin;
     }
-    public static MethodHandle XQueryExtension$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$4,"XQueryExtension");
-    }
+    private static final int XK_Georgian_zen = (int)16781526L;
     /**
-     * {@snippet :
-     * int XQueryExtension(Display*, char*, int*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_zen 16781526
      * }
      */
-    public static int XQueryExtension(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XQueryExtension$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryKeymap$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$5,"XQueryKeymap");
+    public static int XK_Georgian_zen() {
+        return XK_Georgian_zen;
     }
+    private static final int XK_Georgian_tan = (int)16781527L;
     /**
-     * {@snippet :
-     * int XQueryKeymap(Display*, char [32]);
+     * {@snippet lang=c :
+     * #define XK_Georgian_tan 16781527
      * }
      */
-    public static int XQueryKeymap(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XQueryKeymap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_tan() {
+        return XK_Georgian_tan;
     }
-    public static MethodHandle XQueryPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$0,"XQueryPointer");
-    }
+    private static final int XK_Georgian_in = (int)16781528L;
     /**
-     * {@snippet :
-     * int XQueryPointer(Display*, Window, Window*, Window*, int*, int*, int*, int*, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_in 16781528
      * }
      */
-    public static int XQueryPointer(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = XQueryPointer$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_in() {
+        return XK_Georgian_in;
     }
-    public static MethodHandle XQueryTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$2,"XQueryTextExtents");
-    }
+    private static final int XK_Georgian_kan = (int)16781529L;
     /**
-     * {@snippet :
-     * int XQueryTextExtents(Display*, XID, char*, int, int*, int*, int*, XCharStruct*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_kan 16781529
      * }
      */
-    public static int XQueryTextExtents(MemorySegment x0, long x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
-        var mh$ = XQueryTextExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XQueryTextExtents16$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$3,"XQueryTextExtents16");
+    public static int XK_Georgian_kan() {
+        return XK_Georgian_kan;
     }
+    private static final int XK_Georgian_las = (int)16781530L;
     /**
-     * {@snippet :
-     * int XQueryTextExtents16(Display*, XID, const XChar2b*, int, int*, int*, int*, XCharStruct*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_las 16781530
      * }
      */
-    public static int XQueryTextExtents16(MemorySegment x0, long x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
-        var mh$ = XQueryTextExtents16$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_las() {
+        return XK_Georgian_las;
     }
-    public static MethodHandle XQueryTree$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$5,"XQueryTree");
-    }
+    private static final int XK_Georgian_man = (int)16781531L;
     /**
-     * {@snippet :
-     * int XQueryTree(Display*, Window, Window*, Window*, Window**, unsigned int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_man 16781531
      * }
      */
-    public static int XQueryTree(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XQueryTree$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_man() {
+        return XK_Georgian_man;
     }
-    public static MethodHandle XRaiseWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$0,"XRaiseWindow");
-    }
+    private static final int XK_Georgian_nar = (int)16781532L;
     /**
-     * {@snippet :
-     * int XRaiseWindow(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Georgian_nar 16781532
      * }
      */
-    public static int XRaiseWindow(MemorySegment x0, long x1) {
-        var mh$ = XRaiseWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XReadBitmapFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$2,"XReadBitmapFile");
+    public static int XK_Georgian_nar() {
+        return XK_Georgian_nar;
     }
+    private static final int XK_Georgian_on = (int)16781533L;
     /**
-     * {@snippet :
-     * int XReadBitmapFile(Display*, Drawable, char*, unsigned int*, unsigned int*, Pixmap*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_on 16781533
      * }
      */
-    public static int XReadBitmapFile(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
-        var mh$ = XReadBitmapFile$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_on() {
+        return XK_Georgian_on;
     }
-    public static MethodHandle XReadBitmapFileData$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$4,"XReadBitmapFileData");
-    }
+    private static final int XK_Georgian_par = (int)16781534L;
     /**
-     * {@snippet :
-     * int XReadBitmapFileData(char*, unsigned int*, unsigned int*, unsigned char**, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_par 16781534
      * }
      */
-    public static int XReadBitmapFileData(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XReadBitmapFileData$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_par() {
+        return XK_Georgian_par;
     }
-    public static MethodHandle XRebindKeysym$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$6,"XRebindKeysym");
-    }
+    private static final int XK_Georgian_zhar = (int)16781535L;
     /**
-     * {@snippet :
-     * int XRebindKeysym(Display*, KeySym, KeySym*, int, unsigned char*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_zhar 16781535
      * }
      */
-    public static int XRebindKeysym(MemorySegment x0, long x1, MemorySegment x2, int x3, MemorySegment x4, int x5) {
-        var mh$ = XRebindKeysym$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRecolorCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$0,"XRecolorCursor");
+    public static int XK_Georgian_zhar() {
+        return XK_Georgian_zhar;
     }
+    private static final int XK_Georgian_rae = (int)16781536L;
     /**
-     * {@snippet :
-     * int XRecolorCursor(Display*, Cursor, XColor*, XColor*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_rae 16781536
      * }
      */
-    public static int XRecolorCursor(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XRecolorCursor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_rae() {
+        return XK_Georgian_rae;
     }
-    public static MethodHandle XRefreshKeyboardMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$1,"XRefreshKeyboardMapping");
-    }
+    private static final int XK_Georgian_san = (int)16781537L;
     /**
-     * {@snippet :
-     * int XRefreshKeyboardMapping(XMappingEvent*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_san 16781537
      * }
      */
-    public static int XRefreshKeyboardMapping(MemorySegment x0) {
-        var mh$ = XRefreshKeyboardMapping$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_san() {
+        return XK_Georgian_san;
     }
-    public static MethodHandle XRemoveFromSaveSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$2,"XRemoveFromSaveSet");
-    }
+    private static final int XK_Georgian_tar = (int)16781538L;
     /**
-     * {@snippet :
-     * int XRemoveFromSaveSet(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Georgian_tar 16781538
      * }
      */
-    public static int XRemoveFromSaveSet(MemorySegment x0, long x1) {
-        var mh$ = XRemoveFromSaveSet$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRemoveHost$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$3,"XRemoveHost");
+    public static int XK_Georgian_tar() {
+        return XK_Georgian_tar;
     }
+    private static final int XK_Georgian_un = (int)16781539L;
     /**
-     * {@snippet :
-     * int XRemoveHost(Display*, XHostAddress*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_un 16781539
      * }
      */
-    public static int XRemoveHost(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XRemoveHost$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_un() {
+        return XK_Georgian_un;
     }
-    public static MethodHandle XRemoveHosts$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$4,"XRemoveHosts");
-    }
+    private static final int XK_Georgian_phar = (int)16781540L;
     /**
-     * {@snippet :
-     * int XRemoveHosts(Display*, XHostAddress*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_phar 16781540
      * }
      */
-    public static int XRemoveHosts(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XRemoveHosts$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_phar() {
+        return XK_Georgian_phar;
     }
-    public static MethodHandle XReparentWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$6,"XReparentWindow");
-    }
+    private static final int XK_Georgian_khar = (int)16781541L;
     /**
-     * {@snippet :
-     * int XReparentWindow(Display*, Window, Window, int, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_khar 16781541
      * }
      */
-    public static int XReparentWindow(MemorySegment x0, long x1, long x2, int x3, int x4) {
-        var mh$ = XReparentWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XResetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$0,"XResetScreenSaver");
+    public static int XK_Georgian_khar() {
+        return XK_Georgian_khar;
     }
+    private static final int XK_Georgian_ghan = (int)16781542L;
     /**
-     * {@snippet :
-     * int XResetScreenSaver(Display*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_ghan 16781542
      * }
      */
-    public static int XResetScreenSaver(MemorySegment x0) {
-        var mh$ = XResetScreenSaver$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_ghan() {
+        return XK_Georgian_ghan;
     }
-    public static MethodHandle XResizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$1,"XResizeWindow");
-    }
+    private static final int XK_Georgian_qar = (int)16781543L;
     /**
-     * {@snippet :
-     * int XResizeWindow(Display*, Window, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_qar 16781543
      * }
      */
-    public static int XResizeWindow(MemorySegment x0, long x1, int x2, int x3) {
-        var mh$ = XResizeWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_qar() {
+        return XK_Georgian_qar;
     }
-    public static MethodHandle XRestackWindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$2,"XRestackWindows");
-    }
+    private static final int XK_Georgian_shin = (int)16781544L;
     /**
-     * {@snippet :
-     * int XRestackWindows(Display*, Window*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_shin 16781544
      * }
      */
-    public static int XRestackWindows(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XRestackWindows$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRotateBuffers$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$3,"XRotateBuffers");
+    public static int XK_Georgian_shin() {
+        return XK_Georgian_shin;
     }
+    private static final int XK_Georgian_chin = (int)16781545L;
     /**
-     * {@snippet :
-     * int XRotateBuffers(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_chin 16781545
      * }
      */
-    public static int XRotateBuffers(MemorySegment x0, int x1) {
-        var mh$ = XRotateBuffers$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_chin() {
+        return XK_Georgian_chin;
     }
-    public static MethodHandle XRotateWindowProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$4,"XRotateWindowProperties");
-    }
+    private static final int XK_Georgian_can = (int)16781546L;
     /**
-     * {@snippet :
-     * int XRotateWindowProperties(Display*, Window, Atom*, int, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_can 16781546
      * }
      */
-    public static int XRotateWindowProperties(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4) {
-        var mh$ = XRotateWindowProperties$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_can() {
+        return XK_Georgian_can;
     }
-    public static MethodHandle XScreenCount$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$5,"XScreenCount");
-    }
+    private static final int XK_Georgian_jil = (int)16781547L;
     /**
-     * {@snippet :
-     * int XScreenCount(Display*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_jil 16781547
      * }
      */
-    public static int XScreenCount(MemorySegment x0) {
-        var mh$ = XScreenCount$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSelectInput$MH() {
-        return RuntimeHelper.requireNonNull(constants$184.const$0,"XSelectInput");
+    public static int XK_Georgian_jil() {
+        return XK_Georgian_jil;
     }
+    private static final int XK_Georgian_cil = (int)16781548L;
     /**
-     * {@snippet :
-     * int XSelectInput(Display*, Window, long);
+     * {@snippet lang=c :
+     * #define XK_Georgian_cil 16781548
      * }
      */
-    public static int XSelectInput(MemorySegment x0, long x1, long x2) {
-        var mh$ = XSelectInput$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_cil() {
+        return XK_Georgian_cil;
     }
-    public static MethodHandle XSendEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$184.const$2,"XSendEvent");
-    }
+    private static final int XK_Georgian_char = (int)16781549L;
     /**
-     * {@snippet :
-     * int XSendEvent(Display*, Window, int, long, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Georgian_char 16781549
      * }
      */
-    public static int XSendEvent(MemorySegment x0, long x1, int x2, long x3, MemorySegment x4) {
-        var mh$ = XSendEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_char() {
+        return XK_Georgian_char;
     }
-    public static MethodHandle XSetAccessControl$MH() {
-        return RuntimeHelper.requireNonNull(constants$184.const$3,"XSetAccessControl");
-    }
+    private static final int XK_Georgian_xan = (int)16781550L;
     /**
-     * {@snippet :
-     * int XSetAccessControl(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_xan 16781550
      * }
      */
-    public static int XSetAccessControl(MemorySegment x0, int x1) {
-        var mh$ = XSetAccessControl$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetArcMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$184.const$4,"XSetArcMode");
+    public static int XK_Georgian_xan() {
+        return XK_Georgian_xan;
     }
+    private static final int XK_Georgian_jhan = (int)16781551L;
     /**
-     * {@snippet :
-     * int XSetArcMode(Display*, GC, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_jhan 16781551
      * }
      */
-    public static int XSetArcMode(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetArcMode$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_jhan() {
+        return XK_Georgian_jhan;
     }
-    public static MethodHandle XSetBackground$MH() {
-        return RuntimeHelper.requireNonNull(constants$184.const$6,"XSetBackground");
-    }
+    private static final int XK_Georgian_hae = (int)16781552L;
     /**
-     * {@snippet :
-     * int XSetBackground(Display*, GC, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_Georgian_hae 16781552
      * }
      */
-    public static int XSetBackground(MemorySegment x0, MemorySegment x1, long x2) {
-        var mh$ = XSetBackground$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_hae() {
+        return XK_Georgian_hae;
     }
-    public static MethodHandle XSetClipMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$185.const$0,"XSetClipMask");
-    }
+    private static final int XK_Georgian_he = (int)16781553L;
     /**
-     * {@snippet :
-     * int XSetClipMask(Display*, GC, Pixmap);
+     * {@snippet lang=c :
+     * #define XK_Georgian_he 16781553
      * }
      */
-    public static int XSetClipMask(MemorySegment x0, MemorySegment x1, long x2) {
-        var mh$ = XSetClipMask$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetClipOrigin$MH() {
-        return RuntimeHelper.requireNonNull(constants$185.const$2,"XSetClipOrigin");
+    public static int XK_Georgian_he() {
+        return XK_Georgian_he;
     }
+    private static final int XK_Georgian_hie = (int)16781554L;
     /**
-     * {@snippet :
-     * int XSetClipOrigin(Display*, GC, int, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_hie 16781554
      * }
      */
-    public static int XSetClipOrigin(MemorySegment x0, MemorySegment x1, int x2, int x3) {
-        var mh$ = XSetClipOrigin$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_hie() {
+        return XK_Georgian_hie;
     }
-    public static MethodHandle XSetClipRectangles$MH() {
-        return RuntimeHelper.requireNonNull(constants$185.const$4,"XSetClipRectangles");
-    }
+    private static final int XK_Georgian_we = (int)16781555L;
     /**
-     * {@snippet :
-     * int XSetClipRectangles(Display*, GC, int, int, XRectangle*, int, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_we 16781555
      * }
      */
-    public static int XSetClipRectangles(MemorySegment x0, MemorySegment x1, int x2, int x3, MemorySegment x4, int x5, int x6) {
-        var mh$ = XSetClipRectangles$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_we() {
+        return XK_Georgian_we;
     }
-    public static MethodHandle XSetCloseDownMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$185.const$5,"XSetCloseDownMode");
-    }
+    private static final int XK_Georgian_har = (int)16781556L;
     /**
-     * {@snippet :
-     * int XSetCloseDownMode(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_har 16781556
      * }
      */
-    public static int XSetCloseDownMode(MemorySegment x0, int x1) {
-        var mh$ = XSetCloseDownMode$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetCommand$MH() {
-        return RuntimeHelper.requireNonNull(constants$186.const$0,"XSetCommand");
+    public static int XK_Georgian_har() {
+        return XK_Georgian_har;
     }
+    private static final int XK_Georgian_hoe = (int)16781557L;
     /**
-     * {@snippet :
-     * int XSetCommand(Display*, Window, char**, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_hoe 16781557
      * }
      */
-    public static int XSetCommand(MemorySegment x0, long x1, MemorySegment x2, int x3) {
-        var mh$ = XSetCommand$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_hoe() {
+        return XK_Georgian_hoe;
     }
-    public static MethodHandle XSetDashes$MH() {
-        return RuntimeHelper.requireNonNull(constants$186.const$2,"XSetDashes");
-    }
+    private static final int XK_Georgian_fi = (int)16781558L;
     /**
-     * {@snippet :
-     * int XSetDashes(Display*, GC, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Georgian_fi 16781558
      * }
      */
-    public static int XSetDashes(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, int x4) {
-        var mh$ = XSetDashes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Georgian_fi() {
+        return XK_Georgian_fi;
     }
-    public static MethodHandle XSetFillRule$MH() {
-        return RuntimeHelper.requireNonNull(constants$186.const$3,"XSetFillRule");
-    }
+    private static final int XK_Xabovedot = (int)16785034L;
     /**
-     * {@snippet :
-     * int XSetFillRule(Display*, GC, int);
+     * {@snippet lang=c :
+     * #define XK_Xabovedot 16785034
      * }
      */
-    public static int XSetFillRule(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetFillRule$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetFillStyle$MH() {
-        return RuntimeHelper.requireNonNull(constants$186.const$4,"XSetFillStyle");
+    public static int XK_Xabovedot() {
+        return XK_Xabovedot;
     }
+    private static final int XK_Ibreve = (int)16777516L;
     /**
-     * {@snippet :
-     * int XSetFillStyle(Display*, GC, int);
+     * {@snippet lang=c :
+     * #define XK_Ibreve 16777516
      * }
      */
-    public static int XSetFillStyle(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetFillStyle$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ibreve() {
+        return XK_Ibreve;
     }
-    public static MethodHandle XSetFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$186.const$5,"XSetFont");
-    }
+    private static final int XK_Zstroke = (int)16777653L;
     /**
-     * {@snippet :
-     * int XSetFont(Display*, GC, Font);
+     * {@snippet lang=c :
+     * #define XK_Zstroke 16777653
      * }
      */
-    public static int XSetFont(MemorySegment x0, MemorySegment x1, long x2) {
-        var mh$ = XSetFont$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Zstroke() {
+        return XK_Zstroke;
     }
-    public static MethodHandle XSetFontPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$187.const$0,"XSetFontPath");
-    }
+    private static final int XK_Gcaron = (int)16777702L;
     /**
-     * {@snippet :
-     * int XSetFontPath(Display*, char**, int);
+     * {@snippet lang=c :
+     * #define XK_Gcaron 16777702
      * }
      */
-    public static int XSetFontPath(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetFontPath$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetForeground$MH() {
-        return RuntimeHelper.requireNonNull(constants$187.const$1,"XSetForeground");
+    public static int XK_Gcaron() {
+        return XK_Gcaron;
     }
+    private static final int XK_Ocaron = (int)16777681L;
     /**
-     * {@snippet :
-     * int XSetForeground(Display*, GC, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_Ocaron 16777681
      * }
      */
-    public static int XSetForeground(MemorySegment x0, MemorySegment x1, long x2) {
-        var mh$ = XSetForeground$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ocaron() {
+        return XK_Ocaron;
     }
-    public static MethodHandle XSetFunction$MH() {
-        return RuntimeHelper.requireNonNull(constants$187.const$2,"XSetFunction");
-    }
+    private static final int XK_Obarred = (int)16777631L;
     /**
-     * {@snippet :
-     * int XSetFunction(Display*, GC, int);
+     * {@snippet lang=c :
+     * #define XK_Obarred 16777631
      * }
      */
-    public static int XSetFunction(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetFunction$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Obarred() {
+        return XK_Obarred;
     }
-    public static MethodHandle XSetGraphicsExposures$MH() {
-        return RuntimeHelper.requireNonNull(constants$187.const$3,"XSetGraphicsExposures");
-    }
+    private static final int XK_xabovedot = (int)16785035L;
     /**
-     * {@snippet :
-     * int XSetGraphicsExposures(Display*, GC, int);
+     * {@snippet lang=c :
+     * #define XK_xabovedot 16785035
      * }
      */
-    public static int XSetGraphicsExposures(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetGraphicsExposures$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$187.const$4,"XSetIconName");
+    public static int XK_xabovedot() {
+        return XK_xabovedot;
     }
+    private static final int XK_ibreve = (int)16777517L;
     /**
-     * {@snippet :
-     * int XSetIconName(Display*, Window, char*);
+     * {@snippet lang=c :
+     * #define XK_ibreve 16777517
      * }
      */
-    public static int XSetIconName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetIconName$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ibreve() {
+        return XK_ibreve;
     }
-    public static MethodHandle XSetInputFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$187.const$6,"XSetInputFocus");
-    }
+    private static final int XK_zstroke = (int)16777654L;
     /**
-     * {@snippet :
-     * int XSetInputFocus(Display*, Window, int, Time);
+     * {@snippet lang=c :
+     * #define XK_zstroke 16777654
      * }
      */
-    public static int XSetInputFocus(MemorySegment x0, long x1, int x2, long x3) {
-        var mh$ = XSetInputFocus$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_zstroke() {
+        return XK_zstroke;
     }
-    public static MethodHandle XSetLineAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$188.const$1,"XSetLineAttributes");
-    }
+    private static final int XK_gcaron = (int)16777703L;
     /**
-     * {@snippet :
-     * int XSetLineAttributes(Display*, GC, unsigned int, int, int, int);
+     * {@snippet lang=c :
+     * #define XK_gcaron 16777703
      * }
      */
-    public static int XSetLineAttributes(MemorySegment x0, MemorySegment x1, int x2, int x3, int x4, int x5) {
-        var mh$ = XSetLineAttributes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetModifierMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$188.const$2,"XSetModifierMapping");
+    public static int XK_gcaron() {
+        return XK_gcaron;
     }
+    private static final int XK_ocaron = (int)16777682L;
     /**
-     * {@snippet :
-     * int XSetModifierMapping(Display*, XModifierKeymap*);
+     * {@snippet lang=c :
+     * #define XK_ocaron 16777682
      * }
      */
-    public static int XSetModifierMapping(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XSetModifierMapping$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ocaron() {
+        return XK_ocaron;
     }
-    public static MethodHandle XSetPlaneMask$MH() {
-        return RuntimeHelper.requireNonNull(constants$188.const$3,"XSetPlaneMask");
-    }
+    private static final int XK_obarred = (int)16777845L;
     /**
-     * {@snippet :
-     * int XSetPlaneMask(Display*, GC, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_obarred 16777845
      * }
      */
-    public static int XSetPlaneMask(MemorySegment x0, MemorySegment x1, long x2) {
-        var mh$ = XSetPlaneMask$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetPointerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$188.const$4,"XSetPointerMapping");
+    public static int XK_obarred() {
+        return XK_obarred;
     }
+    private static final int XK_SCHWA = (int)16777615L;
     /**
-     * {@snippet :
-     * int XSetPointerMapping(Display*, unsigned char*, int);
+     * {@snippet lang=c :
+     * #define XK_SCHWA 16777615
      * }
      */
-    public static int XSetPointerMapping(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetPointerMapping$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_SCHWA() {
+        return XK_SCHWA;
     }
-    public static MethodHandle XSetScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$188.const$6,"XSetScreenSaver");
-    }
+    private static final int XK_schwa = (int)16777817L;
     /**
-     * {@snippet :
-     * int XSetScreenSaver(Display*, int, int, int, int);
+     * {@snippet lang=c :
+     * #define XK_schwa 16777817
      * }
      */
-    public static int XSetScreenSaver(MemorySegment x0, int x1, int x2, int x3, int x4) {
-        var mh$ = XSetScreenSaver$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_schwa() {
+        return XK_schwa;
     }
-    public static MethodHandle XSetSelectionOwner$MH() {
-        return RuntimeHelper.requireNonNull(constants$189.const$1,"XSetSelectionOwner");
-    }
+    private static final int XK_EZH = (int)16777655L;
     /**
-     * {@snippet :
-     * int XSetSelectionOwner(Display*, Atom, Window, Time);
+     * {@snippet lang=c :
+     * #define XK_EZH 16777655
      * }
      */
-    public static int XSetSelectionOwner(MemorySegment x0, long x1, long x2, long x3) {
-        var mh$ = XSetSelectionOwner$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetState$MH() {
-        return RuntimeHelper.requireNonNull(constants$189.const$3,"XSetState");
+    public static int XK_EZH() {
+        return XK_EZH;
     }
+    private static final int XK_ezh = (int)16777874L;
     /**
-     * {@snippet :
-     * int XSetState(Display*, GC, unsigned long, unsigned long, int, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_ezh 16777874
      * }
      */
-    public static int XSetState(MemorySegment x0, MemorySegment x1, long x2, long x3, int x4, long x5) {
-        var mh$ = XSetState$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ezh() {
+        return XK_ezh;
     }
-    public static MethodHandle XSetStipple$MH() {
-        return RuntimeHelper.requireNonNull(constants$189.const$4,"XSetStipple");
-    }
+    private static final int XK_Lbelowdot = (int)16784950L;
     /**
-     * {@snippet :
-     * int XSetStipple(Display*, GC, Pixmap);
+     * {@snippet lang=c :
+     * #define XK_Lbelowdot 16784950
      * }
      */
-    public static int XSetStipple(MemorySegment x0, MemorySegment x1, long x2) {
-        var mh$ = XSetStipple$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Lbelowdot() {
+        return XK_Lbelowdot;
     }
-    public static MethodHandle XSetSubwindowMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$189.const$5,"XSetSubwindowMode");
-    }
+    private static final int XK_lbelowdot = (int)16784951L;
     /**
-     * {@snippet :
-     * int XSetSubwindowMode(Display*, GC, int);
+     * {@snippet lang=c :
+     * #define XK_lbelowdot 16784951
      * }
      */
-    public static int XSetSubwindowMode(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XSetSubwindowMode$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetTSOrigin$MH() {
-        return RuntimeHelper.requireNonNull(constants$190.const$0,"XSetTSOrigin");
+    public static int XK_lbelowdot() {
+        return XK_lbelowdot;
     }
+    private static final int XK_Abelowdot = (int)16785056L;
     /**
-     * {@snippet :
-     * int XSetTSOrigin(Display*, GC, int, int);
+     * {@snippet lang=c :
+     * #define XK_Abelowdot 16785056
      * }
      */
-    public static int XSetTSOrigin(MemorySegment x0, MemorySegment x1, int x2, int x3) {
-        var mh$ = XSetTSOrigin$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Abelowdot() {
+        return XK_Abelowdot;
     }
-    public static MethodHandle XSetTile$MH() {
-        return RuntimeHelper.requireNonNull(constants$190.const$1,"XSetTile");
-    }
+    private static final int XK_abelowdot = (int)16785057L;
     /**
-     * {@snippet :
-     * int XSetTile(Display*, GC, Pixmap);
+     * {@snippet lang=c :
+     * #define XK_abelowdot 16785057
      * }
      */
-    public static int XSetTile(MemorySegment x0, MemorySegment x1, long x2) {
-        var mh$ = XSetTile$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_abelowdot() {
+        return XK_abelowdot;
     }
-    public static MethodHandle XSetWindowBackground$MH() {
-        return RuntimeHelper.requireNonNull(constants$190.const$2,"XSetWindowBackground");
-    }
+    private static final int XK_Ahook = (int)16785058L;
     /**
-     * {@snippet :
-     * int XSetWindowBackground(Display*, Window, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_Ahook 16785058
      * }
      */
-    public static int XSetWindowBackground(MemorySegment x0, long x1, long x2) {
-        var mh$ = XSetWindowBackground$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowBackgroundPixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$190.const$3,"XSetWindowBackgroundPixmap");
+    public static int XK_Ahook() {
+        return XK_Ahook;
     }
+    private static final int XK_ahook = (int)16785059L;
     /**
-     * {@snippet :
-     * int XSetWindowBackgroundPixmap(Display*, Window, Pixmap);
+     * {@snippet lang=c :
+     * #define XK_ahook 16785059
      * }
      */
-    public static int XSetWindowBackgroundPixmap(MemorySegment x0, long x1, long x2) {
-        var mh$ = XSetWindowBackgroundPixmap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ahook() {
+        return XK_ahook;
     }
-    public static MethodHandle XSetWindowBorder$MH() {
-        return RuntimeHelper.requireNonNull(constants$190.const$4,"XSetWindowBorder");
-    }
+    private static final int XK_Acircumflexacute = (int)16785060L;
     /**
-     * {@snippet :
-     * int XSetWindowBorder(Display*, Window, unsigned long);
+     * {@snippet lang=c :
+     * #define XK_Acircumflexacute 16785060
      * }
      */
-    public static int XSetWindowBorder(MemorySegment x0, long x1, long x2) {
-        var mh$ = XSetWindowBorder$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Acircumflexacute() {
+        return XK_Acircumflexacute;
     }
-    public static MethodHandle XSetWindowBorderPixmap$MH() {
-        return RuntimeHelper.requireNonNull(constants$190.const$5,"XSetWindowBorderPixmap");
-    }
+    private static final int XK_acircumflexacute = (int)16785061L;
     /**
-     * {@snippet :
-     * int XSetWindowBorderPixmap(Display*, Window, Pixmap);
+     * {@snippet lang=c :
+     * #define XK_acircumflexacute 16785061
      * }
      */
-    public static int XSetWindowBorderPixmap(MemorySegment x0, long x1, long x2) {
-        var mh$ = XSetWindowBorderPixmap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWindowBorderWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$191.const$0,"XSetWindowBorderWidth");
+    public static int XK_acircumflexacute() {
+        return XK_acircumflexacute;
     }
+    private static final int XK_Acircumflexgrave = (int)16785062L;
     /**
-     * {@snippet :
-     * int XSetWindowBorderWidth(Display*, Window, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_Acircumflexgrave 16785062
      * }
      */
-    public static int XSetWindowBorderWidth(MemorySegment x0, long x1, int x2) {
-        var mh$ = XSetWindowBorderWidth$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Acircumflexgrave() {
+        return XK_Acircumflexgrave;
     }
-    public static MethodHandle XSetWindowColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$191.const$1,"XSetWindowColormap");
-    }
+    private static final int XK_acircumflexgrave = (int)16785063L;
     /**
-     * {@snippet :
-     * int XSetWindowColormap(Display*, Window, Colormap);
+     * {@snippet lang=c :
+     * #define XK_acircumflexgrave 16785063
      * }
      */
-    public static int XSetWindowColormap(MemorySegment x0, long x1, long x2) {
-        var mh$ = XSetWindowColormap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_acircumflexgrave() {
+        return XK_acircumflexgrave;
     }
-    public static MethodHandle XStoreBuffer$MH() {
-        return RuntimeHelper.requireNonNull(constants$191.const$2,"XStoreBuffer");
-    }
+    private static final int XK_Acircumflexhook = (int)16785064L;
     /**
-     * {@snippet :
-     * int XStoreBuffer(Display*, char*, int, int);
+     * {@snippet lang=c :
+     * #define XK_Acircumflexhook 16785064
      * }
      */
-    public static int XStoreBuffer(MemorySegment x0, MemorySegment x1, int x2, int x3) {
-        var mh$ = XStoreBuffer$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreBytes$MH() {
-        return RuntimeHelper.requireNonNull(constants$191.const$3,"XStoreBytes");
+    public static int XK_Acircumflexhook() {
+        return XK_Acircumflexhook;
     }
+    private static final int XK_acircumflexhook = (int)16785065L;
     /**
-     * {@snippet :
-     * int XStoreBytes(Display*, char*, int);
+     * {@snippet lang=c :
+     * #define XK_acircumflexhook 16785065
      * }
      */
-    public static int XStoreBytes(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XStoreBytes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_acircumflexhook() {
+        return XK_acircumflexhook;
     }
-    public static MethodHandle XStoreColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$191.const$4,"XStoreColor");
-    }
+    private static final int XK_Acircumflextilde = (int)16785066L;
     /**
-     * {@snippet :
-     * int XStoreColor(Display*, Colormap, XColor*);
+     * {@snippet lang=c :
+     * #define XK_Acircumflextilde 16785066
      * }
      */
-    public static int XStoreColor(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XStoreColor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Acircumflextilde() {
+        return XK_Acircumflextilde;
     }
-    public static MethodHandle XStoreColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$191.const$5,"XStoreColors");
-    }
+    private static final int XK_acircumflextilde = (int)16785067L;
     /**
-     * {@snippet :
-     * int XStoreColors(Display*, Colormap, XColor*, int);
+     * {@snippet lang=c :
+     * #define XK_acircumflextilde 16785067
      * }
      */
-    public static int XStoreColors(MemorySegment x0, long x1, MemorySegment x2, int x3) {
-        var mh$ = XStoreColors$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XStoreName$MH() {
-        return RuntimeHelper.requireNonNull(constants$192.const$0,"XStoreName");
+    public static int XK_acircumflextilde() {
+        return XK_acircumflextilde;
     }
+    private static final int XK_Acircumflexbelowdot = (int)16785068L;
     /**
-     * {@snippet :
-     * int XStoreName(Display*, Window, char*);
+     * {@snippet lang=c :
+     * #define XK_Acircumflexbelowdot 16785068
      * }
      */
-    public static int XStoreName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XStoreName$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Acircumflexbelowdot() {
+        return XK_Acircumflexbelowdot;
     }
-    public static MethodHandle XStoreNamedColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$192.const$2,"XStoreNamedColor");
-    }
+    private static final int XK_acircumflexbelowdot = (int)16785069L;
     /**
-     * {@snippet :
-     * int XStoreNamedColor(Display*, Colormap, char*, unsigned long, int);
+     * {@snippet lang=c :
+     * #define XK_acircumflexbelowdot 16785069
      * }
      */
-    public static int XStoreNamedColor(MemorySegment x0, long x1, MemorySegment x2, long x3, int x4) {
-        var mh$ = XStoreNamedColor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_acircumflexbelowdot() {
+        return XK_acircumflexbelowdot;
     }
-    public static MethodHandle XSync$MH() {
-        return RuntimeHelper.requireNonNull(constants$192.const$3,"XSync");
-    }
+    private static final int XK_Abreveacute = (int)16785070L;
     /**
-     * {@snippet :
-     * int XSync(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_Abreveacute 16785070
      * }
      */
-    public static int XSync(MemorySegment x0, int x1) {
-        var mh$ = XSync$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$192.const$5,"XTextExtents");
+    public static int XK_Abreveacute() {
+        return XK_Abreveacute;
     }
+    private static final int XK_abreveacute = (int)16785071L;
     /**
-     * {@snippet :
-     * int XTextExtents(XFontStruct*, char*, int, int*, int*, int*, XCharStruct*);
+     * {@snippet lang=c :
+     * #define XK_abreveacute 16785071
      * }
      */
-    public static int XTextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6) {
-        var mh$ = XTextExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_abreveacute() {
+        return XK_abreveacute;
     }
-    public static MethodHandle XTextExtents16$MH() {
-        return RuntimeHelper.requireNonNull(constants$193.const$0,"XTextExtents16");
-    }
+    private static final int XK_Abrevegrave = (int)16785072L;
     /**
-     * {@snippet :
-     * int XTextExtents16(XFontStruct*, const XChar2b*, int, int*, int*, int*, XCharStruct*);
+     * {@snippet lang=c :
+     * #define XK_Abrevegrave 16785072
      * }
      */
-    public static int XTextExtents16(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, MemorySegment x5, MemorySegment x6) {
-        var mh$ = XTextExtents16$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Abrevegrave() {
+        return XK_Abrevegrave;
     }
-    public static MethodHandle XTextWidth$MH() {
-        return RuntimeHelper.requireNonNull(constants$193.const$1,"XTextWidth");
-    }
+    private static final int XK_abrevegrave = (int)16785073L;
     /**
-     * {@snippet :
-     * int XTextWidth(XFontStruct*, char*, int);
+     * {@snippet lang=c :
+     * #define XK_abrevegrave 16785073
      * }
      */
-    public static int XTextWidth(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XTextWidth$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XTextWidth16$MH() {
-        return RuntimeHelper.requireNonNull(constants$193.const$2,"XTextWidth16");
+    public static int XK_abrevegrave() {
+        return XK_abrevegrave;
     }
+    private static final int XK_Abrevehook = (int)16785074L;
     /**
-     * {@snippet :
-     * int XTextWidth16(XFontStruct*, const XChar2b*, int);
+     * {@snippet lang=c :
+     * #define XK_Abrevehook 16785074
      * }
      */
-    public static int XTextWidth16(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XTextWidth16$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Abrevehook() {
+        return XK_Abrevehook;
     }
-    public static MethodHandle XTranslateCoordinates$MH() {
-        return RuntimeHelper.requireNonNull(constants$193.const$4,"XTranslateCoordinates");
-    }
+    private static final int XK_abrevehook = (int)16785075L;
     /**
-     * {@snippet :
-     * int XTranslateCoordinates(Display*, Window, Window, int, int, int*, int*, Window*);
+     * {@snippet lang=c :
+     * #define XK_abrevehook 16785075
      * }
      */
-    public static int XTranslateCoordinates(MemorySegment x0, long x1, long x2, int x3, int x4, MemorySegment x5, MemorySegment x6, MemorySegment x7) {
-        var mh$ = XTranslateCoordinates$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_abrevehook() {
+        return XK_abrevehook;
     }
-    public static MethodHandle XUndefineCursor$MH() {
-        return RuntimeHelper.requireNonNull(constants$193.const$5,"XUndefineCursor");
-    }
+    private static final int XK_Abrevetilde = (int)16785076L;
     /**
-     * {@snippet :
-     * int XUndefineCursor(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Abrevetilde 16785076
      * }
      */
-    public static int XUndefineCursor(MemorySegment x0, long x1) {
-        var mh$ = XUndefineCursor$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUngrabButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$194.const$0,"XUngrabButton");
+    public static int XK_Abrevetilde() {
+        return XK_Abrevetilde;
     }
+    private static final int XK_abrevetilde = (int)16785077L;
     /**
-     * {@snippet :
-     * int XUngrabButton(Display*, unsigned int, unsigned int, Window);
+     * {@snippet lang=c :
+     * #define XK_abrevetilde 16785077
      * }
      */
-    public static int XUngrabButton(MemorySegment x0, int x1, int x2, long x3) {
-        var mh$ = XUngrabButton$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_abrevetilde() {
+        return XK_abrevetilde;
     }
-    public static MethodHandle XUngrabKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$194.const$1,"XUngrabKey");
-    }
+    private static final int XK_Abrevebelowdot = (int)16785078L;
     /**
-     * {@snippet :
-     * int XUngrabKey(Display*, int, unsigned int, Window);
+     * {@snippet lang=c :
+     * #define XK_Abrevebelowdot 16785078
      * }
      */
-    public static int XUngrabKey(MemorySegment x0, int x1, int x2, long x3) {
-        var mh$ = XUngrabKey$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Abrevebelowdot() {
+        return XK_Abrevebelowdot;
     }
-    public static MethodHandle XUngrabKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$194.const$2,"XUngrabKeyboard");
-    }
+    private static final int XK_abrevebelowdot = (int)16785079L;
     /**
-     * {@snippet :
-     * int XUngrabKeyboard(Display*, Time);
+     * {@snippet lang=c :
+     * #define XK_abrevebelowdot 16785079
      * }
      */
-    public static int XUngrabKeyboard(MemorySegment x0, long x1) {
-        var mh$ = XUngrabKeyboard$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUngrabPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$194.const$3,"XUngrabPointer");
+    public static int XK_abrevebelowdot() {
+        return XK_abrevebelowdot;
     }
+    private static final int XK_Ebelowdot = (int)16785080L;
     /**
-     * {@snippet :
-     * int XUngrabPointer(Display*, Time);
+     * {@snippet lang=c :
+     * #define XK_Ebelowdot 16785080
      * }
      */
-    public static int XUngrabPointer(MemorySegment x0, long x1) {
-        var mh$ = XUngrabPointer$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ebelowdot() {
+        return XK_Ebelowdot;
     }
-    public static MethodHandle XUngrabServer$MH() {
-        return RuntimeHelper.requireNonNull(constants$194.const$4,"XUngrabServer");
-    }
+    private static final int XK_ebelowdot = (int)16785081L;
     /**
-     * {@snippet :
-     * int XUngrabServer(Display*);
+     * {@snippet lang=c :
+     * #define XK_ebelowdot 16785081
      * }
      */
-    public static int XUngrabServer(MemorySegment x0) {
-        var mh$ = XUngrabServer$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ebelowdot() {
+        return XK_ebelowdot;
     }
-    public static MethodHandle XUninstallColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$194.const$5,"XUninstallColormap");
-    }
+    private static final int XK_Ehook = (int)16785082L;
     /**
-     * {@snippet :
-     * int XUninstallColormap(Display*, Colormap);
+     * {@snippet lang=c :
+     * #define XK_Ehook 16785082
      * }
      */
-    public static int XUninstallColormap(MemorySegment x0, long x1) {
-        var mh$ = XUninstallColormap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnloadFont$MH() {
-        return RuntimeHelper.requireNonNull(constants$195.const$0,"XUnloadFont");
+    public static int XK_Ehook() {
+        return XK_Ehook;
     }
+    private static final int XK_ehook = (int)16785083L;
     /**
-     * {@snippet :
-     * int XUnloadFont(Display*, Font);
+     * {@snippet lang=c :
+     * #define XK_ehook 16785083
      * }
      */
-    public static int XUnloadFont(MemorySegment x0, long x1) {
-        var mh$ = XUnloadFont$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ehook() {
+        return XK_ehook;
     }
-    public static MethodHandle XUnmapSubwindows$MH() {
-        return RuntimeHelper.requireNonNull(constants$195.const$1,"XUnmapSubwindows");
-    }
+    private static final int XK_Etilde = (int)16785084L;
     /**
-     * {@snippet :
-     * int XUnmapSubwindows(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_Etilde 16785084
      * }
      */
-    public static int XUnmapSubwindows(MemorySegment x0, long x1) {
-        var mh$ = XUnmapSubwindows$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Etilde() {
+        return XK_Etilde;
     }
-    public static MethodHandle XUnmapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$195.const$2,"XUnmapWindow");
-    }
+    private static final int XK_etilde = (int)16785085L;
     /**
-     * {@snippet :
-     * int XUnmapWindow(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_etilde 16785085
      * }
      */
-    public static int XUnmapWindow(MemorySegment x0, long x1) {
-        var mh$ = XUnmapWindow$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XVendorRelease$MH() {
-        return RuntimeHelper.requireNonNull(constants$195.const$3,"XVendorRelease");
+    public static int XK_etilde() {
+        return XK_etilde;
     }
+    private static final int XK_Ecircumflexacute = (int)16785086L;
     /**
-     * {@snippet :
-     * int XVendorRelease(Display*);
+     * {@snippet lang=c :
+     * #define XK_Ecircumflexacute 16785086
      * }
      */
-    public static int XVendorRelease(MemorySegment x0) {
-        var mh$ = XVendorRelease$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ecircumflexacute() {
+        return XK_Ecircumflexacute;
     }
-    public static MethodHandle XWarpPointer$MH() {
-        return RuntimeHelper.requireNonNull(constants$195.const$5,"XWarpPointer");
-    }
+    private static final int XK_ecircumflexacute = (int)16785087L;
     /**
-     * {@snippet :
-     * int XWarpPointer(Display*, Window, Window, int, int, unsigned int, unsigned int, int, int);
+     * {@snippet lang=c :
+     * #define XK_ecircumflexacute 16785087
      * }
      */
-    public static int XWarpPointer(MemorySegment x0, long x1, long x2, int x3, int x4, int x5, int x6, int x7, int x8) {
-        var mh$ = XWarpPointer$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ecircumflexacute() {
+        return XK_ecircumflexacute;
     }
-    public static MethodHandle XWidthMMOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$196.const$0,"XWidthMMOfScreen");
-    }
+    private static final int XK_Ecircumflexgrave = (int)16785088L;
     /**
-     * {@snippet :
-     * int XWidthMMOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_Ecircumflexgrave 16785088
      * }
      */
-    public static int XWidthMMOfScreen(MemorySegment x0) {
-        var mh$ = XWidthMMOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XWidthOfScreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$196.const$1,"XWidthOfScreen");
+    public static int XK_Ecircumflexgrave() {
+        return XK_Ecircumflexgrave;
     }
+    private static final int XK_ecircumflexgrave = (int)16785089L;
     /**
-     * {@snippet :
-     * int XWidthOfScreen(Screen*);
+     * {@snippet lang=c :
+     * #define XK_ecircumflexgrave 16785089
      * }
      */
-    public static int XWidthOfScreen(MemorySegment x0) {
-        var mh$ = XWidthOfScreen$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ecircumflexgrave() {
+        return XK_ecircumflexgrave;
     }
-    public static MethodHandle XWindowEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$196.const$2,"XWindowEvent");
-    }
+    private static final int XK_Ecircumflexhook = (int)16785090L;
     /**
-     * {@snippet :
-     * int XWindowEvent(Display*, Window, long, XEvent*);
+     * {@snippet lang=c :
+     * #define XK_Ecircumflexhook 16785090
      * }
      */
-    public static int XWindowEvent(MemorySegment x0, long x1, long x2, MemorySegment x3) {
-        var mh$ = XWindowEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ecircumflexhook() {
+        return XK_Ecircumflexhook;
     }
-    public static MethodHandle XWriteBitmapFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$196.const$4,"XWriteBitmapFile");
-    }
+    private static final int XK_ecircumflexhook = (int)16785091L;
     /**
-     * {@snippet :
-     * int XWriteBitmapFile(Display*, char*, Pixmap, unsigned int, unsigned int, int, int);
+     * {@snippet lang=c :
+     * #define XK_ecircumflexhook 16785091
      * }
      */
-    public static int XWriteBitmapFile(MemorySegment x0, MemorySegment x1, long x2, int x3, int x4, int x5, int x6) {
-        var mh$ = XWriteBitmapFile$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSupportsLocale$MH() {
-        return RuntimeHelper.requireNonNull(constants$196.const$5,"XSupportsLocale");
+    public static int XK_ecircumflexhook() {
+        return XK_ecircumflexhook;
     }
+    private static final int XK_Ecircumflextilde = (int)16785092L;
     /**
-     * {@snippet :
-     * int XSupportsLocale();
+     * {@snippet lang=c :
+     * #define XK_Ecircumflextilde 16785092
      * }
      */
-    public static int XSupportsLocale() {
-        var mh$ = XSupportsLocale$MH();
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ecircumflextilde() {
+        return XK_Ecircumflextilde;
     }
-    public static MethodHandle XSetLocaleModifiers$MH() {
-        return RuntimeHelper.requireNonNull(constants$197.const$0,"XSetLocaleModifiers");
-    }
+    private static final int XK_ecircumflextilde = (int)16785093L;
     /**
-     * {@snippet :
-     * char* XSetLocaleModifiers(char*);
+     * {@snippet lang=c :
+     * #define XK_ecircumflextilde 16785093
      * }
      */
-    public static MemorySegment XSetLocaleModifiers(MemorySegment x0) {
-        var mh$ = XSetLocaleModifiers$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ecircumflextilde() {
+        return XK_ecircumflextilde;
     }
-    public static MethodHandle XOpenOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$197.const$2,"XOpenOM");
-    }
+    private static final int XK_Ecircumflexbelowdot = (int)16785094L;
     /**
-     * {@snippet :
-     * XOM XOpenOM(Display*, struct _XrmHashBucketRec*, char*, char*);
+     * {@snippet lang=c :
+     * #define XK_Ecircumflexbelowdot 16785094
      * }
      */
-    public static MemorySegment XOpenOM(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XOpenOM$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCloseOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$197.const$3,"XCloseOM");
+    public static int XK_Ecircumflexbelowdot() {
+        return XK_Ecircumflexbelowdot;
     }
+    private static final int XK_ecircumflexbelowdot = (int)16785095L;
     /**
-     * {@snippet :
-     * int XCloseOM(XOM);
+     * {@snippet lang=c :
+     * #define XK_ecircumflexbelowdot 16785095
      * }
      */
-    public static int XCloseOM(MemorySegment x0) {
-        var mh$ = XCloseOM$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ecircumflexbelowdot() {
+        return XK_ecircumflexbelowdot;
     }
-    public static MethodHandle XSetOMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$197.const$4,"XSetOMValues");
-    }
+    private static final int XK_Ihook = (int)16785096L;
     /**
-     * {@snippet :
-     * char* XSetOMValues(XOM,...);
+     * {@snippet lang=c :
+     * #define XK_Ihook 16785096
      * }
      */
-    public static MemorySegment XSetOMValues(MemorySegment x0, Object... x1) {
-        var mh$ = XSetOMValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetOMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$197.const$5,"XGetOMValues");
+    public static int XK_Ihook() {
+        return XK_Ihook;
     }
+    private static final int XK_ihook = (int)16785097L;
     /**
-     * {@snippet :
-     * char* XGetOMValues(XOM,...);
+     * {@snippet lang=c :
+     * #define XK_ihook 16785097
      * }
      */
-    public static MemorySegment XGetOMValues(MemorySegment x0, Object... x1) {
-        var mh$ = XGetOMValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ihook() {
+        return XK_ihook;
     }
-    public static MethodHandle XDisplayOfOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$198.const$0,"XDisplayOfOM");
-    }
+    private static final int XK_Ibelowdot = (int)16785098L;
     /**
-     * {@snippet :
-     * Display* XDisplayOfOM(XOM);
+     * {@snippet lang=c :
+     * #define XK_Ibelowdot 16785098
      * }
      */
-    public static MemorySegment XDisplayOfOM(MemorySegment x0) {
-        var mh$ = XDisplayOfOM$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ibelowdot() {
+        return XK_Ibelowdot;
     }
-    public static MethodHandle XLocaleOfOM$MH() {
-        return RuntimeHelper.requireNonNull(constants$198.const$1,"XLocaleOfOM");
-    }
+    private static final int XK_ibelowdot = (int)16785099L;
     /**
-     * {@snippet :
-     * char* XLocaleOfOM(XOM);
+     * {@snippet lang=c :
+     * #define XK_ibelowdot 16785099
      * }
      */
-    public static MemorySegment XLocaleOfOM(MemorySegment x0) {
-        var mh$ = XLocaleOfOM$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCreateOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$198.const$2,"XCreateOC");
+    public static int XK_ibelowdot() {
+        return XK_ibelowdot;
     }
+    private static final int XK_Obelowdot = (int)16785100L;
     /**
-     * {@snippet :
-     * XOC XCreateOC(XOM,...);
+     * {@snippet lang=c :
+     * #define XK_Obelowdot 16785100
      * }
      */
-    public static MemorySegment XCreateOC(MemorySegment x0, Object... x1) {
-        var mh$ = XCreateOC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Obelowdot() {
+        return XK_Obelowdot;
     }
-    public static MethodHandle XDestroyOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$198.const$3,"XDestroyOC");
-    }
+    private static final int XK_obelowdot = (int)16785101L;
     /**
-     * {@snippet :
-     * void XDestroyOC(XOC);
+     * {@snippet lang=c :
+     * #define XK_obelowdot 16785101
      * }
      */
-    public static void XDestroyOC(MemorySegment x0) {
-        var mh$ = XDestroyOC$MH();
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_obelowdot() {
+        return XK_obelowdot;
     }
-    public static MethodHandle XOMOfOC$MH() {
-        return RuntimeHelper.requireNonNull(constants$198.const$4,"XOMOfOC");
-    }
+    private static final int XK_Ohook = (int)16785102L;
     /**
-     * {@snippet :
-     * XOM XOMOfOC(XOC);
+     * {@snippet lang=c :
+     * #define XK_Ohook 16785102
      * }
      */
-    public static MemorySegment XOMOfOC(MemorySegment x0) {
-        var mh$ = XOMOfOC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$198.const$5,"XSetOCValues");
+    public static int XK_Ohook() {
+        return XK_Ohook;
     }
+    private static final int XK_ohook = (int)16785103L;
     /**
-     * {@snippet :
-     * char* XSetOCValues(XOC,...);
+     * {@snippet lang=c :
+     * #define XK_ohook 16785103
      * }
      */
-    public static MemorySegment XSetOCValues(MemorySegment x0, Object... x1) {
-        var mh$ = XSetOCValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ohook() {
+        return XK_ohook;
     }
-    public static MethodHandle XGetOCValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$199.const$0,"XGetOCValues");
-    }
+    private static final int XK_Ocircumflexacute = (int)16785104L;
     /**
-     * {@snippet :
-     * char* XGetOCValues(XOC,...);
+     * {@snippet lang=c :
+     * #define XK_Ocircumflexacute 16785104
      * }
      */
-    public static MemorySegment XGetOCValues(MemorySegment x0, Object... x1) {
-        var mh$ = XGetOCValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ocircumflexacute() {
+        return XK_Ocircumflexacute;
     }
-    public static MethodHandle XCreateFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$199.const$2,"XCreateFontSet");
-    }
+    private static final int XK_ocircumflexacute = (int)16785105L;
     /**
-     * {@snippet :
-     * XFontSet XCreateFontSet(Display*, char*, char***, int*, char**);
+     * {@snippet lang=c :
+     * #define XK_ocircumflexacute 16785105
      * }
      */
-    public static MemorySegment XCreateFontSet(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XCreateFontSet$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XFreeFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$199.const$3,"XFreeFontSet");
+    public static int XK_ocircumflexacute() {
+        return XK_ocircumflexacute;
     }
+    private static final int XK_Ocircumflexgrave = (int)16785106L;
     /**
-     * {@snippet :
-     * void XFreeFontSet(Display*, XFontSet);
+     * {@snippet lang=c :
+     * #define XK_Ocircumflexgrave 16785106
      * }
      */
-    public static void XFreeFontSet(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XFreeFontSet$MH();
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ocircumflexgrave() {
+        return XK_Ocircumflexgrave;
     }
-    public static MethodHandle XFontsOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$199.const$4,"XFontsOfFontSet");
-    }
+    private static final int XK_ocircumflexgrave = (int)16785107L;
     /**
-     * {@snippet :
-     * int XFontsOfFontSet(XFontSet, XFontStruct***, char***);
+     * {@snippet lang=c :
+     * #define XK_ocircumflexgrave 16785107
      * }
      */
-    public static int XFontsOfFontSet(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XFontsOfFontSet$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ocircumflexgrave() {
+        return XK_ocircumflexgrave;
     }
-    public static MethodHandle XBaseFontNameListOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$199.const$5,"XBaseFontNameListOfFontSet");
-    }
+    private static final int XK_Ocircumflexhook = (int)16785108L;
     /**
-     * {@snippet :
-     * char* XBaseFontNameListOfFontSet(XFontSet);
+     * {@snippet lang=c :
+     * #define XK_Ocircumflexhook 16785108
      * }
      */
-    public static MemorySegment XBaseFontNameListOfFontSet(MemorySegment x0) {
-        var mh$ = XBaseFontNameListOfFontSet$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XLocaleOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$200.const$0,"XLocaleOfFontSet");
+    public static int XK_Ocircumflexhook() {
+        return XK_Ocircumflexhook;
     }
+    private static final int XK_ocircumflexhook = (int)16785109L;
     /**
-     * {@snippet :
-     * char* XLocaleOfFontSet(XFontSet);
+     * {@snippet lang=c :
+     * #define XK_ocircumflexhook 16785109
      * }
      */
-    public static MemorySegment XLocaleOfFontSet(MemorySegment x0) {
-        var mh$ = XLocaleOfFontSet$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ocircumflexhook() {
+        return XK_ocircumflexhook;
     }
-    public static MethodHandle XContextDependentDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$200.const$1,"XContextDependentDrawing");
-    }
+    private static final int XK_Ocircumflextilde = (int)16785110L;
     /**
-     * {@snippet :
-     * int XContextDependentDrawing(XFontSet);
+     * {@snippet lang=c :
+     * #define XK_Ocircumflextilde 16785110
      * }
      */
-    public static int XContextDependentDrawing(MemorySegment x0) {
-        var mh$ = XContextDependentDrawing$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ocircumflextilde() {
+        return XK_Ocircumflextilde;
     }
-    public static MethodHandle XDirectionalDependentDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$200.const$2,"XDirectionalDependentDrawing");
-    }
+    private static final int XK_ocircumflextilde = (int)16785111L;
     /**
-     * {@snippet :
-     * int XDirectionalDependentDrawing(XFontSet);
+     * {@snippet lang=c :
+     * #define XK_ocircumflextilde 16785111
      * }
      */
-    public static int XDirectionalDependentDrawing(MemorySegment x0) {
-        var mh$ = XDirectionalDependentDrawing$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XContextualDrawing$MH() {
-        return RuntimeHelper.requireNonNull(constants$200.const$3,"XContextualDrawing");
+    public static int XK_ocircumflextilde() {
+        return XK_ocircumflextilde;
     }
+    private static final int XK_Ocircumflexbelowdot = (int)16785112L;
     /**
-     * {@snippet :
-     * int XContextualDrawing(XFontSet);
+     * {@snippet lang=c :
+     * #define XK_Ocircumflexbelowdot 16785112
      * }
      */
-    public static int XContextualDrawing(MemorySegment x0) {
-        var mh$ = XContextualDrawing$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ocircumflexbelowdot() {
+        return XK_Ocircumflexbelowdot;
     }
-    public static MethodHandle XExtentsOfFontSet$MH() {
-        return RuntimeHelper.requireNonNull(constants$200.const$4,"XExtentsOfFontSet");
-    }
+    private static final int XK_ocircumflexbelowdot = (int)16785113L;
     /**
-     * {@snippet :
-     * XFontSetExtents* XExtentsOfFontSet(XFontSet);
+     * {@snippet lang=c :
+     * #define XK_ocircumflexbelowdot 16785113
      * }
      */
-    public static MemorySegment XExtentsOfFontSet(MemorySegment x0) {
-        var mh$ = XExtentsOfFontSet$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ocircumflexbelowdot() {
+        return XK_ocircumflexbelowdot;
     }
-    public static MethodHandle XmbTextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$200.const$5,"XmbTextEscapement");
-    }
+    private static final int XK_Ohornacute = (int)16785114L;
     /**
-     * {@snippet :
-     * int XmbTextEscapement(XFontSet, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Ohornacute 16785114
      * }
      */
-    public static int XmbTextEscapement(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XmbTextEscapement$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcTextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$201.const$0,"XwcTextEscapement");
+    public static int XK_Ohornacute() {
+        return XK_Ohornacute;
     }
+    private static final int XK_ohornacute = (int)16785115L;
     /**
-     * {@snippet :
-     * int XwcTextEscapement(XFontSet, const wchar_t*, int);
+     * {@snippet lang=c :
+     * #define XK_ohornacute 16785115
      * }
      */
-    public static int XwcTextEscapement(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = XwcTextEscapement$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ohornacute() {
+        return XK_ohornacute;
     }
-    public static MethodHandle Xutf8TextEscapement$MH() {
-        return RuntimeHelper.requireNonNull(constants$201.const$1,"Xutf8TextEscapement");
-    }
+    private static final int XK_Ohorngrave = (int)16785116L;
     /**
-     * {@snippet :
-     * int Xutf8TextEscapement(XFontSet, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Ohorngrave 16785116
      * }
      */
-    public static int Xutf8TextEscapement(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = Xutf8TextEscapement$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ohorngrave() {
+        return XK_Ohorngrave;
     }
-    public static MethodHandle XmbTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$201.const$3,"XmbTextExtents");
-    }
+    private static final int XK_ohorngrave = (int)16785117L;
     /**
-     * {@snippet :
-     * int XmbTextExtents(XFontSet, char*, int, XRectangle*, XRectangle*);
+     * {@snippet lang=c :
+     * #define XK_ohorngrave 16785117
      * }
      */
-    public static int XmbTextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XmbTextExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcTextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$201.const$4,"XwcTextExtents");
+    public static int XK_ohorngrave() {
+        return XK_ohorngrave;
     }
+    private static final int XK_Ohornhook = (int)16785118L;
     /**
-     * {@snippet :
-     * int XwcTextExtents(XFontSet, const wchar_t*, int, XRectangle*, XRectangle*);
+     * {@snippet lang=c :
+     * #define XK_Ohornhook 16785118
      * }
      */
-    public static int XwcTextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XwcTextExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ohornhook() {
+        return XK_Ohornhook;
     }
-    public static MethodHandle Xutf8TextExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$201.const$5,"Xutf8TextExtents");
-    }
+    private static final int XK_ohornhook = (int)16785119L;
     /**
-     * {@snippet :
-     * int Xutf8TextExtents(XFontSet, char*, int, XRectangle*, XRectangle*);
+     * {@snippet lang=c :
+     * #define XK_ohornhook 16785119
      * }
      */
-    public static int Xutf8TextExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = Xutf8TextExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ohornhook() {
+        return XK_ohornhook;
     }
-    public static MethodHandle XmbTextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$202.const$1,"XmbTextPerCharExtents");
-    }
+    private static final int XK_Ohorntilde = (int)16785120L;
     /**
-     * {@snippet :
-     * int XmbTextPerCharExtents(XFontSet, char*, int, XRectangle*, XRectangle*, int, int*, XRectangle*, XRectangle*);
+     * {@snippet lang=c :
+     * #define XK_Ohorntilde 16785120
      * }
      */
-    public static int XmbTextPerCharExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = XmbTextPerCharExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcTextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$202.const$2,"XwcTextPerCharExtents");
+    public static int XK_Ohorntilde() {
+        return XK_Ohorntilde;
     }
+    private static final int XK_ohorntilde = (int)16785121L;
     /**
-     * {@snippet :
-     * int XwcTextPerCharExtents(XFontSet, const wchar_t*, int, XRectangle*, XRectangle*, int, int*, XRectangle*, XRectangle*);
+     * {@snippet lang=c :
+     * #define XK_ohorntilde 16785121
      * }
      */
-    public static int XwcTextPerCharExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = XwcTextPerCharExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ohorntilde() {
+        return XK_ohorntilde;
     }
-    public static MethodHandle Xutf8TextPerCharExtents$MH() {
-        return RuntimeHelper.requireNonNull(constants$202.const$3,"Xutf8TextPerCharExtents");
-    }
+    private static final int XK_Ohornbelowdot = (int)16785122L;
     /**
-     * {@snippet :
-     * int Xutf8TextPerCharExtents(XFontSet, char*, int, XRectangle*, XRectangle*, int, int*, XRectangle*, XRectangle*);
+     * {@snippet lang=c :
+     * #define XK_Ohornbelowdot 16785122
      * }
      */
-    public static int Xutf8TextPerCharExtents(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = Xutf8TextPerCharExtents$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ohornbelowdot() {
+        return XK_Ohornbelowdot;
     }
-    public static MethodHandle XmbDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$202.const$5,"XmbDrawText");
-    }
+    private static final int XK_ohornbelowdot = (int)16785123L;
     /**
-     * {@snippet :
-     * void XmbDrawText(Display*, Drawable, GC, int, int, XmbTextItem*, int);
+     * {@snippet lang=c :
+     * #define XK_ohornbelowdot 16785123
      * }
      */
-    public static void XmbDrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XmbDrawText$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcDrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$203.const$0,"XwcDrawText");
+    public static int XK_ohornbelowdot() {
+        return XK_ohornbelowdot;
     }
+    private static final int XK_Ubelowdot = (int)16785124L;
     /**
-     * {@snippet :
-     * void XwcDrawText(Display*, Drawable, GC, int, int, XwcTextItem*, int);
+     * {@snippet lang=c :
+     * #define XK_Ubelowdot 16785124
      * }
      */
-    public static void XwcDrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = XwcDrawText$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ubelowdot() {
+        return XK_Ubelowdot;
     }
-    public static MethodHandle Xutf8DrawText$MH() {
-        return RuntimeHelper.requireNonNull(constants$203.const$1,"Xutf8DrawText");
-    }
+    private static final int XK_ubelowdot = (int)16785125L;
     /**
-     * {@snippet :
-     * void Xutf8DrawText(Display*, Drawable, GC, int, int, XmbTextItem*, int);
+     * {@snippet lang=c :
+     * #define XK_ubelowdot 16785125
      * }
      */
-    public static void Xutf8DrawText(MemorySegment x0, long x1, MemorySegment x2, int x3, int x4, MemorySegment x5, int x6) {
-        var mh$ = Xutf8DrawText$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ubelowdot() {
+        return XK_ubelowdot;
     }
-    public static MethodHandle XmbDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$203.const$3,"XmbDrawString");
-    }
+    private static final int XK_Uhook = (int)16785126L;
     /**
-     * {@snippet :
-     * void XmbDrawString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Uhook 16785126
      * }
      */
-    public static void XmbDrawString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
-        var mh$ = XmbDrawString$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcDrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$203.const$4,"XwcDrawString");
+    public static int XK_Uhook() {
+        return XK_Uhook;
     }
+    private static final int XK_uhook = (int)16785127L;
     /**
-     * {@snippet :
-     * void XwcDrawString(Display*, Drawable, XFontSet, GC, int, int, const wchar_t*, int);
+     * {@snippet lang=c :
+     * #define XK_uhook 16785127
      * }
      */
-    public static void XwcDrawString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
-        var mh$ = XwcDrawString$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_uhook() {
+        return XK_uhook;
     }
-    public static MethodHandle Xutf8DrawString$MH() {
-        return RuntimeHelper.requireNonNull(constants$203.const$5,"Xutf8DrawString");
-    }
+    private static final int XK_Uhornacute = (int)16785128L;
     /**
-     * {@snippet :
-     * void Xutf8DrawString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_Uhornacute 16785128
      * }
      */
-    public static void Xutf8DrawString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
-        var mh$ = Xutf8DrawString$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Uhornacute() {
+        return XK_Uhornacute;
     }
-    public static MethodHandle XmbDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$204.const$0,"XmbDrawImageString");
-    }
+    private static final int XK_uhornacute = (int)16785129L;
     /**
-     * {@snippet :
-     * void XmbDrawImageString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_uhornacute 16785129
      * }
      */
-    public static void XmbDrawImageString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
-        var mh$ = XmbDrawImageString$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcDrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$204.const$1,"XwcDrawImageString");
+    public static int XK_uhornacute() {
+        return XK_uhornacute;
     }
+    private static final int XK_Uhorngrave = (int)16785130L;
     /**
-     * {@snippet :
-     * void XwcDrawImageString(Display*, Drawable, XFontSet, GC, int, int, const wchar_t*, int);
+     * {@snippet lang=c :
+     * #define XK_Uhorngrave 16785130
      * }
      */
-    public static void XwcDrawImageString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
-        var mh$ = XwcDrawImageString$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Uhorngrave() {
+        return XK_Uhorngrave;
     }
-    public static MethodHandle Xutf8DrawImageString$MH() {
-        return RuntimeHelper.requireNonNull(constants$204.const$2,"Xutf8DrawImageString");
-    }
+    private static final int XK_uhorngrave = (int)16785131L;
     /**
-     * {@snippet :
-     * void Xutf8DrawImageString(Display*, Drawable, XFontSet, GC, int, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_uhorngrave 16785131
      * }
      */
-    public static void Xutf8DrawImageString(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, int x4, int x5, MemorySegment x6, int x7) {
-        var mh$ = Xutf8DrawImageString$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_uhorngrave() {
+        return XK_uhorngrave;
     }
-    public static MethodHandle XOpenIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$204.const$3,"XOpenIM");
-    }
+    private static final int XK_Uhornhook = (int)16785132L;
     /**
-     * {@snippet :
-     * XIM XOpenIM(Display*, struct _XrmHashBucketRec*, char*, char*);
+     * {@snippet lang=c :
+     * #define XK_Uhornhook 16785132
      * }
      */
-    public static MemorySegment XOpenIM(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XOpenIM$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XCloseIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$204.const$4,"XCloseIM");
+    public static int XK_Uhornhook() {
+        return XK_Uhornhook;
     }
+    private static final int XK_uhornhook = (int)16785133L;
     /**
-     * {@snippet :
-     * int XCloseIM(XIM);
+     * {@snippet lang=c :
+     * #define XK_uhornhook 16785133
      * }
      */
-    public static int XCloseIM(MemorySegment x0) {
-        var mh$ = XCloseIM$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_uhornhook() {
+        return XK_uhornhook;
     }
-    public static MethodHandle XGetIMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$204.const$5,"XGetIMValues");
-    }
+    private static final int XK_Uhorntilde = (int)16785134L;
     /**
-     * {@snippet :
-     * char* XGetIMValues(XIM,...);
+     * {@snippet lang=c :
+     * #define XK_Uhorntilde 16785134
      * }
      */
-    public static MemorySegment XGetIMValues(MemorySegment x0, Object... x1) {
-        var mh$ = XGetIMValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Uhorntilde() {
+        return XK_Uhorntilde;
     }
-    public static MethodHandle XSetIMValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$205.const$0,"XSetIMValues");
-    }
+    private static final int XK_uhorntilde = (int)16785135L;
     /**
-     * {@snippet :
-     * char* XSetIMValues(XIM,...);
+     * {@snippet lang=c :
+     * #define XK_uhorntilde 16785135
      * }
      */
-    public static MemorySegment XSetIMValues(MemorySegment x0, Object... x1) {
-        var mh$ = XSetIMValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDisplayOfIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$205.const$1,"XDisplayOfIM");
+    public static int XK_uhorntilde() {
+        return XK_uhorntilde;
     }
+    private static final int XK_Uhornbelowdot = (int)16785136L;
     /**
-     * {@snippet :
-     * Display* XDisplayOfIM(XIM);
+     * {@snippet lang=c :
+     * #define XK_Uhornbelowdot 16785136
      * }
      */
-    public static MemorySegment XDisplayOfIM(MemorySegment x0) {
-        var mh$ = XDisplayOfIM$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Uhornbelowdot() {
+        return XK_Uhornbelowdot;
     }
-    public static MethodHandle XLocaleOfIM$MH() {
-        return RuntimeHelper.requireNonNull(constants$205.const$2,"XLocaleOfIM");
-    }
+    private static final int XK_uhornbelowdot = (int)16785137L;
     /**
-     * {@snippet :
-     * char* XLocaleOfIM(XIM);
+     * {@snippet lang=c :
+     * #define XK_uhornbelowdot 16785137
      * }
      */
-    public static MemorySegment XLocaleOfIM(MemorySegment x0) {
-        var mh$ = XLocaleOfIM$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_uhornbelowdot() {
+        return XK_uhornbelowdot;
     }
-    public static MethodHandle XCreateIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$205.const$3,"XCreateIC");
-    }
+    private static final int XK_Ybelowdot = (int)16785140L;
     /**
-     * {@snippet :
-     * XIC XCreateIC(XIM,...);
+     * {@snippet lang=c :
+     * #define XK_Ybelowdot 16785140
      * }
      */
-    public static MemorySegment XCreateIC(MemorySegment x0, Object... x1) {
-        var mh$ = XCreateIC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDestroyIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$205.const$4,"XDestroyIC");
+    public static int XK_Ybelowdot() {
+        return XK_Ybelowdot;
     }
+    private static final int XK_ybelowdot = (int)16785141L;
     /**
-     * {@snippet :
-     * void XDestroyIC(XIC);
+     * {@snippet lang=c :
+     * #define XK_ybelowdot 16785141
      * }
      */
-    public static void XDestroyIC(MemorySegment x0) {
-        var mh$ = XDestroyIC$MH();
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ybelowdot() {
+        return XK_ybelowdot;
     }
-    public static MethodHandle XSetICFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$205.const$5,"XSetICFocus");
-    }
+    private static final int XK_Yhook = (int)16785142L;
     /**
-     * {@snippet :
-     * void XSetICFocus(XIC);
+     * {@snippet lang=c :
+     * #define XK_Yhook 16785142
      * }
      */
-    public static void XSetICFocus(MemorySegment x0) {
-        var mh$ = XSetICFocus$MH();
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Yhook() {
+        return XK_Yhook;
     }
-    public static MethodHandle XUnsetICFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$206.const$0,"XUnsetICFocus");
-    }
+    private static final int XK_yhook = (int)16785143L;
     /**
-     * {@snippet :
-     * void XUnsetICFocus(XIC);
+     * {@snippet lang=c :
+     * #define XK_yhook 16785143
      * }
      */
-    public static void XUnsetICFocus(MemorySegment x0) {
-        var mh$ = XUnsetICFocus$MH();
-        try {
-            mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$206.const$1,"XwcResetIC");
+    public static int XK_yhook() {
+        return XK_yhook;
     }
+    private static final int XK_Ytilde = (int)16785144L;
     /**
-     * {@snippet :
-     * wchar_t* XwcResetIC(XIC);
+     * {@snippet lang=c :
+     * #define XK_Ytilde 16785144
      * }
      */
-    public static MemorySegment XwcResetIC(MemorySegment x0) {
-        var mh$ = XwcResetIC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ytilde() {
+        return XK_Ytilde;
     }
-    public static MethodHandle XmbResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$206.const$2,"XmbResetIC");
-    }
+    private static final int XK_ytilde = (int)16785145L;
     /**
-     * {@snippet :
-     * char* XmbResetIC(XIC);
+     * {@snippet lang=c :
+     * #define XK_ytilde 16785145
      * }
      */
-    public static MemorySegment XmbResetIC(MemorySegment x0) {
-        var mh$ = XmbResetIC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8ResetIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$206.const$3,"Xutf8ResetIC");
+    public static int XK_ytilde() {
+        return XK_ytilde;
     }
+    private static final int XK_Ohorn = (int)16777632L;
     /**
-     * {@snippet :
-     * char* Xutf8ResetIC(XIC);
+     * {@snippet lang=c :
+     * #define XK_Ohorn 16777632
      * }
      */
-    public static MemorySegment Xutf8ResetIC(MemorySegment x0) {
-        var mh$ = Xutf8ResetIC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_Ohorn() {
+        return XK_Ohorn;
     }
-    public static MethodHandle XSetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$206.const$4,"XSetICValues");
-    }
+    private static final int XK_ohorn = (int)16777633L;
     /**
-     * {@snippet :
-     * char* XSetICValues(XIC,...);
+     * {@snippet lang=c :
+     * #define XK_ohorn 16777633
      * }
      */
-    public static MemorySegment XSetICValues(MemorySegment x0, Object... x1) {
-        var mh$ = XSetICValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ohorn() {
+        return XK_ohorn;
     }
-    public static MethodHandle XGetICValues$MH() {
-        return RuntimeHelper.requireNonNull(constants$206.const$5,"XGetICValues");
-    }
+    private static final int XK_Uhorn = (int)16777647L;
     /**
-     * {@snippet :
-     * char* XGetICValues(XIC,...);
+     * {@snippet lang=c :
+     * #define XK_Uhorn 16777647
      * }
      */
-    public static MemorySegment XGetICValues(MemorySegment x0, Object... x1) {
-        var mh$ = XGetICValues$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XIMOfIC$MH() {
-        return RuntimeHelper.requireNonNull(constants$207.const$0,"XIMOfIC");
+    public static int XK_Uhorn() {
+        return XK_Uhorn;
     }
+    private static final int XK_uhorn = (int)16777648L;
     /**
-     * {@snippet :
-     * XIM XIMOfIC(XIC);
+     * {@snippet lang=c :
+     * #define XK_uhorn 16777648
      * }
      */
-    public static MemorySegment XIMOfIC(MemorySegment x0) {
-        var mh$ = XIMOfIC$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_uhorn() {
+        return XK_uhorn;
     }
-    public static MethodHandle XFilterEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$207.const$1,"XFilterEvent");
-    }
+    private static final int XK_combining_tilde = (int)16777987L;
     /**
-     * {@snippet :
-     * int XFilterEvent(XEvent*, Window);
+     * {@snippet lang=c :
+     * #define XK_combining_tilde 16777987
      * }
      */
-    public static int XFilterEvent(MemorySegment x0, long x1) {
-        var mh$ = XFilterEvent$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_combining_tilde() {
+        return XK_combining_tilde;
     }
-    public static MethodHandle XmbLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$207.const$3,"XmbLookupString");
-    }
+    private static final int XK_combining_grave = (int)16777984L;
     /**
-     * {@snippet :
-     * int XmbLookupString(XIC, XKeyPressedEvent*, char*, int, KeySym*, int*);
+     * {@snippet lang=c :
+     * #define XK_combining_grave 16777984
      * }
      */
-    public static int XmbLookupString(MemorySegment x0, MemorySegment x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XmbLookupString$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XwcLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$207.const$4,"XwcLookupString");
+    public static int XK_combining_grave() {
+        return XK_combining_grave;
     }
+    private static final int XK_combining_acute = (int)16777985L;
     /**
-     * {@snippet :
-     * int XwcLookupString(XIC, XKeyPressedEvent*, wchar_t*, int, KeySym*, int*);
+     * {@snippet lang=c :
+     * #define XK_combining_acute 16777985
      * }
      */
-    public static int XwcLookupString(MemorySegment x0, MemorySegment x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XwcLookupString$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_combining_acute() {
+        return XK_combining_acute;
     }
-    public static MethodHandle Xutf8LookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$207.const$5,"Xutf8LookupString");
-    }
+    private static final int XK_combining_hook = (int)16777993L;
     /**
-     * {@snippet :
-     * int Xutf8LookupString(XIC, XKeyPressedEvent*, char*, int, KeySym*, int*);
+     * {@snippet lang=c :
+     * #define XK_combining_hook 16777993
      * }
      */
-    public static int Xutf8LookupString(MemorySegment x0, MemorySegment x1, MemorySegment x2, int x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = Xutf8LookupString$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_combining_hook() {
+        return XK_combining_hook;
     }
-    public static MethodHandle XVaCreateNestedList$MH() {
-        return RuntimeHelper.requireNonNull(constants$208.const$0,"XVaCreateNestedList");
-    }
+    private static final int XK_combining_belowdot = (int)16778019L;
     /**
-     * {@snippet :
-     * XVaNestedList XVaCreateNestedList(int,...);
+     * {@snippet lang=c :
+     * #define XK_combining_belowdot 16778019
      * }
      */
-    public static MemorySegment XVaCreateNestedList(int x0, Object... x1) {
-        var mh$ = XVaCreateNestedList$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XRegisterIMInstantiateCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$208.const$1,"XRegisterIMInstantiateCallback");
+    public static int XK_combining_belowdot() {
+        return XK_combining_belowdot;
     }
+    private static final int XK_EcuSign = (int)16785568L;
     /**
-     * {@snippet :
-     * int XRegisterIMInstantiateCallback(Display*, struct _XrmHashBucketRec*, char*, char*, XIDProc, XPointer);
+     * {@snippet lang=c :
+     * #define XK_EcuSign 16785568
      * }
      */
-    public static int XRegisterIMInstantiateCallback(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XRegisterIMInstantiateCallback$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_EcuSign() {
+        return XK_EcuSign;
     }
-    public static MethodHandle XUnregisterIMInstantiateCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$208.const$2,"XUnregisterIMInstantiateCallback");
-    }
+    private static final int XK_ColonSign = (int)16785569L;
     /**
-     * {@snippet :
-     * int XUnregisterIMInstantiateCallback(Display*, struct _XrmHashBucketRec*, char*, char*, XIDProc, XPointer);
+     * {@snippet lang=c :
+     * #define XK_ColonSign 16785569
      * }
      */
-    public static int XUnregisterIMInstantiateCallback(MemorySegment x0, MemorySegment x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, MemorySegment x5) {
-        var mh$ = XUnregisterIMInstantiateCallback$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ColonSign() {
+        return XK_ColonSign;
     }
-    public static MethodHandle XInternalConnectionNumbers$MH() {
-        return RuntimeHelper.requireNonNull(constants$209.const$0,"XInternalConnectionNumbers");
-    }
+    private static final int XK_CruzeiroSign = (int)16785570L;
     /**
-     * {@snippet :
-     * int XInternalConnectionNumbers(Display*, int**, int*);
+     * {@snippet lang=c :
+     * #define XK_CruzeiroSign 16785570
      * }
      */
-    public static int XInternalConnectionNumbers(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XInternalConnectionNumbers$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XProcessInternalConnection$MH() {
-        return RuntimeHelper.requireNonNull(constants$209.const$2,"XProcessInternalConnection");
+    public static int XK_CruzeiroSign() {
+        return XK_CruzeiroSign;
     }
+    private static final int XK_FFrancSign = (int)16785571L;
     /**
-     * {@snippet :
-     * void XProcessInternalConnection(Display*, int);
+     * {@snippet lang=c :
+     * #define XK_FFrancSign 16785571
      * }
      */
-    public static void XProcessInternalConnection(MemorySegment x0, int x1) {
-        var mh$ = XProcessInternalConnection$MH();
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_FFrancSign() {
+        return XK_FFrancSign;
     }
-    public static MethodHandle XAddConnectionWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$209.const$3,"XAddConnectionWatch");
-    }
+    private static final int XK_LiraSign = (int)16785572L;
     /**
-     * {@snippet :
-     * int XAddConnectionWatch(Display*, XConnectionWatchProc, XPointer);
+     * {@snippet lang=c :
+     * #define XK_LiraSign 16785572
      * }
      */
-    public static int XAddConnectionWatch(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XAddConnectionWatch$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_LiraSign() {
+        return XK_LiraSign;
     }
-    public static MethodHandle XRemoveConnectionWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$209.const$4,"XRemoveConnectionWatch");
-    }
+    private static final int XK_MillSign = (int)16785573L;
     /**
-     * {@snippet :
-     * void XRemoveConnectionWatch(Display*, XConnectionWatchProc, XPointer);
+     * {@snippet lang=c :
+     * #define XK_MillSign 16785573
      * }
      */
-    public static void XRemoveConnectionWatch(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XRemoveConnectionWatch$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetAuthorization$MH() {
-        return RuntimeHelper.requireNonNull(constants$209.const$6,"XSetAuthorization");
+    public static int XK_MillSign() {
+        return XK_MillSign;
     }
+    private static final int XK_NairaSign = (int)16785574L;
     /**
-     * {@snippet :
-     * void XSetAuthorization(char*, int, char*, int);
+     * {@snippet lang=c :
+     * #define XK_NairaSign 16785574
      * }
      */
-    public static void XSetAuthorization(MemorySegment x0, int x1, MemorySegment x2, int x3) {
-        var mh$ = XSetAuthorization$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_NairaSign() {
+        return XK_NairaSign;
     }
-    public static MethodHandle _Xmbtowc$MH() {
-        return RuntimeHelper.requireNonNull(constants$210.const$0,"_Xmbtowc");
-    }
+    private static final int XK_PesetaSign = (int)16785575L;
     /**
-     * {@snippet :
-     * int _Xmbtowc(wchar_t*, char*, int);
+     * {@snippet lang=c :
+     * #define XK_PesetaSign 16785575
      * }
      */
-    public static int _Xmbtowc(MemorySegment x0, MemorySegment x1, int x2) {
-        var mh$ = _Xmbtowc$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_PesetaSign() {
+        return XK_PesetaSign;
     }
-    public static MethodHandle _Xwctomb$MH() {
-        return RuntimeHelper.requireNonNull(constants$210.const$1,"_Xwctomb");
-    }
+    private static final int XK_RupeeSign = (int)16785576L;
     /**
-     * {@snippet :
-     * int _Xwctomb(char*, wchar_t);
+     * {@snippet lang=c :
+     * #define XK_RupeeSign 16785576
      * }
      */
-    public static int _Xwctomb(MemorySegment x0, int x1) {
-        var mh$ = _Xwctomb$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetEventData$MH() {
-        return RuntimeHelper.requireNonNull(constants$210.const$2,"XGetEventData");
+    public static int XK_RupeeSign() {
+        return XK_RupeeSign;
     }
+    private static final int XK_WonSign = (int)16785577L;
     /**
-     * {@snippet :
-     * int XGetEventData(Display*, XGenericEventCookie*);
+     * {@snippet lang=c :
+     * #define XK_WonSign 16785577
      * }
      */
-    public static int XGetEventData(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XGetEventData$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_WonSign() {
+        return XK_WonSign;
     }
-    public static MethodHandle XFreeEventData$MH() {
-        return RuntimeHelper.requireNonNull(constants$210.const$3,"XFreeEventData");
-    }
+    private static final int XK_NewSheqelSign = (int)16785578L;
     /**
-     * {@snippet :
-     * void XFreeEventData(Display*, XGenericEventCookie*);
+     * {@snippet lang=c :
+     * #define XK_NewSheqelSign 16785578
      * }
      */
-    public static void XFreeEventData(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XFreeEventData$MH();
-        try {
-            mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_NewSheqelSign() {
+        return XK_NewSheqelSign;
     }
+    private static final int XK_DongSign = (int)16785579L;
     /**
-     * {@snippet :
-     * enum .XStringStyle = 0;
+     * {@snippet lang=c :
+     * #define XK_DongSign 16785579
      * }
      */
-    public static int XStringStyle() {
-        return (int)0L;
+    public static int XK_DongSign() {
+        return XK_DongSign;
     }
+    private static final int XK_EuroSign = (int)8364L;
     /**
-     * {@snippet :
-     * enum .XCompoundTextStyle = 1;
+     * {@snippet lang=c :
+     * #define XK_EuroSign 8364
      * }
      */
-    public static int XCompoundTextStyle() {
-        return (int)1L;
+    public static int XK_EuroSign() {
+        return XK_EuroSign;
     }
+    private static final int XK_zerosuperior = (int)16785520L;
     /**
-     * {@snippet :
-     * enum .XTextStyle = 2;
+     * {@snippet lang=c :
+     * #define XK_zerosuperior 16785520
      * }
      */
-    public static int XTextStyle() {
-        return (int)2L;
+    public static int XK_zerosuperior() {
+        return XK_zerosuperior;
     }
+    private static final int XK_foursuperior = (int)16785524L;
     /**
-     * {@snippet :
-     * enum .XStdICCTextStyle = 3;
+     * {@snippet lang=c :
+     * #define XK_foursuperior 16785524
      * }
      */
-    public static int XStdICCTextStyle() {
-        return (int)3L;
+    public static int XK_foursuperior() {
+        return XK_foursuperior;
     }
+    private static final int XK_fivesuperior = (int)16785525L;
     /**
-     * {@snippet :
-     * enum .XUTF8StringStyle = 4;
+     * {@snippet lang=c :
+     * #define XK_fivesuperior 16785525
      * }
      */
-    public static int XUTF8StringStyle() {
-        return (int)4L;
+    public static int XK_fivesuperior() {
+        return XK_fivesuperior;
     }
-    /**
-     * {@snippet :
-     * typedef struct _XRegion* Region;
-     * }
-     */
-    public static final AddressLayout Region = RuntimeHelper.POINTER;
+    private static final int XK_sixsuperior = (int)16785526L;
     /**
-     * {@snippet :
-     * typedef int XContext;
+     * {@snippet lang=c :
+     * #define XK_sixsuperior 16785526
      * }
      */
-    public static final OfInt XContext = JAVA_INT;
-    public static MethodHandle XAllocClassHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$222.const$3,"XAllocClassHint");
+    public static int XK_sixsuperior() {
+        return XK_sixsuperior;
     }
+    private static final int XK_sevensuperior = (int)16785527L;
     /**
-     * {@snippet :
-     * XClassHint* XAllocClassHint();
+     * {@snippet lang=c :
+     * #define XK_sevensuperior 16785527
      * }
      */
-    public static MemorySegment XAllocClassHint() {
-        var mh$ = XAllocClassHint$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_sevensuperior() {
+        return XK_sevensuperior;
     }
-    public static MethodHandle XAllocIconSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$222.const$4,"XAllocIconSize");
-    }
+    private static final int XK_eightsuperior = (int)16785528L;
     /**
-     * {@snippet :
-     * XIconSize* XAllocIconSize();
+     * {@snippet lang=c :
+     * #define XK_eightsuperior 16785528
      * }
      */
-    public static MemorySegment XAllocIconSize() {
-        var mh$ = XAllocIconSize$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XAllocSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$222.const$5,"XAllocSizeHints");
+    public static int XK_eightsuperior() {
+        return XK_eightsuperior;
     }
+    private static final int XK_ninesuperior = (int)16785529L;
     /**
-     * {@snippet :
-     * XSizeHints* XAllocSizeHints();
+     * {@snippet lang=c :
+     * #define XK_ninesuperior 16785529
      * }
      */
-    public static MemorySegment XAllocSizeHints() {
-        var mh$ = XAllocSizeHints$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ninesuperior() {
+        return XK_ninesuperior;
     }
-    public static MethodHandle XAllocStandardColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$223.const$0,"XAllocStandardColormap");
-    }
+    private static final int XK_zerosubscript = (int)16785536L;
     /**
-     * {@snippet :
-     * XStandardColormap* XAllocStandardColormap();
+     * {@snippet lang=c :
+     * #define XK_zerosubscript 16785536
      * }
      */
-    public static MemorySegment XAllocStandardColormap() {
-        var mh$ = XAllocStandardColormap$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_zerosubscript() {
+        return XK_zerosubscript;
     }
-    public static MethodHandle XAllocWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$223.const$1,"XAllocWMHints");
-    }
+    private static final int XK_onesubscript = (int)16785537L;
     /**
-     * {@snippet :
-     * XWMHints* XAllocWMHints();
+     * {@snippet lang=c :
+     * #define XK_onesubscript 16785537
      * }
      */
-    public static MemorySegment XAllocWMHints() {
-        var mh$ = XAllocWMHints$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XClipBox$MH() {
-        return RuntimeHelper.requireNonNull(constants$223.const$2,"XClipBox");
+    public static int XK_onesubscript() {
+        return XK_onesubscript;
     }
+    private static final int XK_twosubscript = (int)16785538L;
     /**
-     * {@snippet :
-     * int XClipBox(Region, XRectangle*);
+     * {@snippet lang=c :
+     * #define XK_twosubscript 16785538
      * }
      */
-    public static int XClipBox(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XClipBox$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_twosubscript() {
+        return XK_twosubscript;
     }
-    public static MethodHandle XCreateRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$223.const$3,"XCreateRegion");
-    }
+    private static final int XK_threesubscript = (int)16785539L;
     /**
-     * {@snippet :
-     * Region XCreateRegion();
+     * {@snippet lang=c :
+     * #define XK_threesubscript 16785539
      * }
      */
-    public static MemorySegment XCreateRegion() {
-        var mh$ = XCreateRegion$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_threesubscript() {
+        return XK_threesubscript;
     }
-    public static MethodHandle XDefaultString$MH() {
-        return RuntimeHelper.requireNonNull(constants$223.const$4,"XDefaultString");
-    }
+    private static final int XK_foursubscript = (int)16785540L;
     /**
-     * {@snippet :
-     * char* XDefaultString();
+     * {@snippet lang=c :
+     * #define XK_foursubscript 16785540
      * }
      */
-    public static MemorySegment XDefaultString() {
-        var mh$ = XDefaultString$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XDeleteContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$223.const$5,"XDeleteContext");
+    public static int XK_foursubscript() {
+        return XK_foursubscript;
     }
+    private static final int XK_fivesubscript = (int)16785541L;
     /**
-     * {@snippet :
-     * int XDeleteContext(Display*, XID, XContext);
+     * {@snippet lang=c :
+     * #define XK_fivesubscript 16785541
      * }
      */
-    public static int XDeleteContext(MemorySegment x0, long x1, int x2) {
-        var mh$ = XDeleteContext$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_fivesubscript() {
+        return XK_fivesubscript;
     }
-    public static MethodHandle XDestroyRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$224.const$0,"XDestroyRegion");
-    }
+    private static final int XK_sixsubscript = (int)16785542L;
     /**
-     * {@snippet :
-     * int XDestroyRegion(Region);
+     * {@snippet lang=c :
+     * #define XK_sixsubscript 16785542
      * }
      */
-    public static int XDestroyRegion(MemorySegment x0) {
-        var mh$ = XDestroyRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_sixsubscript() {
+        return XK_sixsubscript;
     }
-    public static MethodHandle XEmptyRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$224.const$1,"XEmptyRegion");
-    }
+    private static final int XK_sevensubscript = (int)16785543L;
     /**
-     * {@snippet :
-     * int XEmptyRegion(Region);
+     * {@snippet lang=c :
+     * #define XK_sevensubscript 16785543
      * }
      */
-    public static int XEmptyRegion(MemorySegment x0) {
-        var mh$ = XEmptyRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XEqualRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$224.const$2,"XEqualRegion");
+    public static int XK_sevensubscript() {
+        return XK_sevensubscript;
     }
+    private static final int XK_eightsubscript = (int)16785544L;
     /**
-     * {@snippet :
-     * int XEqualRegion(Region, Region);
+     * {@snippet lang=c :
+     * #define XK_eightsubscript 16785544
      * }
      */
-    public static int XEqualRegion(MemorySegment x0, MemorySegment x1) {
-        var mh$ = XEqualRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_eightsubscript() {
+        return XK_eightsubscript;
     }
-    public static MethodHandle XFindContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$224.const$3,"XFindContext");
-    }
+    private static final int XK_ninesubscript = (int)16785545L;
     /**
-     * {@snippet :
-     * int XFindContext(Display*, XID, XContext, XPointer*);
+     * {@snippet lang=c :
+     * #define XK_ninesubscript 16785545
      * }
      */
-    public static int XFindContext(MemorySegment x0, long x1, int x2, MemorySegment x3) {
-        var mh$ = XFindContext$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_ninesubscript() {
+        return XK_ninesubscript;
     }
-    public static MethodHandle XGetClassHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$224.const$4,"XGetClassHint");
-    }
+    private static final int XK_partdifferential = (int)16785922L;
     /**
-     * {@snippet :
-     * int XGetClassHint(Display*, Window, XClassHint*);
+     * {@snippet lang=c :
+     * #define XK_partdifferential 16785922
      * }
      */
-    public static int XGetClassHint(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetClassHint$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetIconSizes$MH() {
-        return RuntimeHelper.requireNonNull(constants$224.const$5,"XGetIconSizes");
+    public static int XK_partdifferential() {
+        return XK_partdifferential;
     }
+    private static final int XK_emptyset = (int)16785925L;
     /**
-     * {@snippet :
-     * int XGetIconSizes(Display*, Window, XIconSize**, int*);
+     * {@snippet lang=c :
+     * #define XK_emptyset 16785925
      * }
      */
-    public static int XGetIconSizes(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XGetIconSizes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_emptyset() {
+        return XK_emptyset;
     }
-    public static MethodHandle XGetNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$225.const$0,"XGetNormalHints");
-    }
+    private static final int XK_elementof = (int)16785928L;
     /**
-     * {@snippet :
-     * int XGetNormalHints(Display*, Window, XSizeHints*);
+     * {@snippet lang=c :
+     * #define XK_elementof 16785928
      * }
      */
-    public static int XGetNormalHints(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetNormalHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_elementof() {
+        return XK_elementof;
     }
-    public static MethodHandle XGetRGBColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$225.const$2,"XGetRGBColormaps");
-    }
+    private static final int XK_notelementof = (int)16785929L;
     /**
-     * {@snippet :
-     * int XGetRGBColormaps(Display*, Window, XStandardColormap**, int*, Atom);
+     * {@snippet lang=c :
+     * #define XK_notelementof 16785929
      * }
      */
-    public static int XGetRGBColormaps(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, long x4) {
-        var mh$ = XGetRGBColormaps$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$225.const$4,"XGetSizeHints");
+    public static int XK_notelementof() {
+        return XK_notelementof;
     }
+    private static final int XK_containsas = (int)16785931L;
     /**
-     * {@snippet :
-     * int XGetSizeHints(Display*, Window, XSizeHints*, Atom);
+     * {@snippet lang=c :
+     * #define XK_containsas 16785931
      * }
      */
-    public static int XGetSizeHints(MemorySegment x0, long x1, MemorySegment x2, long x3) {
-        var mh$ = XGetSizeHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_containsas() {
+        return XK_containsas;
     }
-    public static MethodHandle XGetStandardColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$225.const$5,"XGetStandardColormap");
-    }
+    private static final int XK_squareroot = (int)16785946L;
     /**
-     * {@snippet :
-     * int XGetStandardColormap(Display*, Window, XStandardColormap*, Atom);
+     * {@snippet lang=c :
+     * #define XK_squareroot 16785946
      * }
      */
-    public static int XGetStandardColormap(MemorySegment x0, long x1, MemorySegment x2, long x3) {
-        var mh$ = XGetStandardColormap$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_squareroot() {
+        return XK_squareroot;
     }
-    public static MethodHandle XGetTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$226.const$0,"XGetTextProperty");
-    }
+    private static final int XK_cuberoot = (int)16785947L;
     /**
-     * {@snippet :
-     * int XGetTextProperty(Display*, Window, XTextProperty*, Atom);
+     * {@snippet lang=c :
+     * #define XK_cuberoot 16785947
      * }
      */
-    public static int XGetTextProperty(MemorySegment x0, long x1, MemorySegment x2, long x3) {
-        var mh$ = XGetTextProperty$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetVisualInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$226.const$2,"XGetVisualInfo");
+    public static int XK_cuberoot() {
+        return XK_cuberoot;
     }
+    private static final int XK_fourthroot = (int)16785948L;
     /**
-     * {@snippet :
-     * XVisualInfo* XGetVisualInfo(Display*, long, XVisualInfo*, int*);
+     * {@snippet lang=c :
+     * #define XK_fourthroot 16785948
      * }
      */
-    public static MemorySegment XGetVisualInfo(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XGetVisualInfo$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_fourthroot() {
+        return XK_fourthroot;
     }
-    public static MethodHandle XGetWMClientMachine$MH() {
-        return RuntimeHelper.requireNonNull(constants$226.const$3,"XGetWMClientMachine");
-    }
+    private static final int XK_dintegral = (int)16785964L;
     /**
-     * {@snippet :
-     * int XGetWMClientMachine(Display*, Window, XTextProperty*);
+     * {@snippet lang=c :
+     * #define XK_dintegral 16785964
      * }
      */
-    public static int XGetWMClientMachine(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetWMClientMachine$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_dintegral() {
+        return XK_dintegral;
     }
-    public static MethodHandle XGetWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$226.const$4,"XGetWMHints");
-    }
+    private static final int XK_tintegral = (int)16785965L;
     /**
-     * {@snippet :
-     * XWMHints* XGetWMHints(Display*, Window);
+     * {@snippet lang=c :
+     * #define XK_tintegral 16785965
      * }
      */
-    public static MemorySegment XGetWMHints(MemorySegment x0, long x1) {
-        var mh$ = XGetWMHints$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWMIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$226.const$5,"XGetWMIconName");
+    public static int XK_tintegral() {
+        return XK_tintegral;
     }
+    private static final int XK_because = (int)16785973L;
     /**
-     * {@snippet :
-     * int XGetWMIconName(Display*, Window, XTextProperty*);
+     * {@snippet lang=c :
+     * #define XK_because 16785973
      * }
      */
-    public static int XGetWMIconName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetWMIconName$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_because() {
+        return XK_because;
     }
-    public static MethodHandle XGetWMName$MH() {
-        return RuntimeHelper.requireNonNull(constants$227.const$0,"XGetWMName");
-    }
+    private static final int XK_approxeq = (int)16785992L;
     /**
-     * {@snippet :
-     * int XGetWMName(Display*, Window, XTextProperty*);
+     * {@snippet lang=c :
+     * #define XK_approxeq 16785992
      * }
      */
-    public static int XGetWMName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetWMName$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XGetWMNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$227.const$1,"XGetWMNormalHints");
+    public static int XK_approxeq() {
+        return XK_approxeq;
     }
+    private static final int XK_notapproxeq = (int)16785991L;
     /**
-     * {@snippet :
-     * int XGetWMNormalHints(Display*, Window, XSizeHints*, long*);
+     * {@snippet lang=c :
+     * #define XK_notapproxeq 16785991
      * }
      */
-    public static int XGetWMNormalHints(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3) {
-        var mh$ = XGetWMNormalHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_notapproxeq() {
+        return XK_notapproxeq;
     }
-    public static MethodHandle XGetWMSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$227.const$2,"XGetWMSizeHints");
-    }
+    private static final int XK_notidentical = (int)16786018L;
     /**
-     * {@snippet :
-     * int XGetWMSizeHints(Display*, Window, XSizeHints*, long*, Atom);
+     * {@snippet lang=c :
+     * #define XK_notidentical 16786018
      * }
      */
-    public static int XGetWMSizeHints(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, long x4) {
-        var mh$ = XGetWMSizeHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_notidentical() {
+        return XK_notidentical;
     }
-    public static MethodHandle XGetZoomHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$227.const$3,"XGetZoomHints");
-    }
+    private static final int XK_stricteq = (int)16786019L;
     /**
-     * {@snippet :
-     * int XGetZoomHints(Display*, Window, XSizeHints*);
+     * {@snippet lang=c :
+     * #define XK_stricteq 16786019
      * }
      */
-    public static int XGetZoomHints(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XGetZoomHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XIntersectRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$227.const$4,"XIntersectRegion");
+    public static int XK_stricteq() {
+        return XK_stricteq;
     }
+    private static final int XK_braille_dot_1 = (int)65521L;
     /**
-     * {@snippet :
-     * int XIntersectRegion(Region, Region, Region);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_1 65521
      * }
      */
-    public static int XIntersectRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XIntersectRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dot_1() {
+        return XK_braille_dot_1;
     }
-    public static MethodHandle XConvertCase$MH() {
-        return RuntimeHelper.requireNonNull(constants$227.const$6,"XConvertCase");
-    }
+    private static final int XK_braille_dot_2 = (int)65522L;
     /**
-     * {@snippet :
-     * void XConvertCase(KeySym, KeySym*, KeySym*);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_2 65522
      * }
      */
-    public static void XConvertCase(long x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XConvertCase$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dot_2() {
+        return XK_braille_dot_2;
     }
-    public static MethodHandle XLookupString$MH() {
-        return RuntimeHelper.requireNonNull(constants$228.const$0,"XLookupString");
-    }
+    private static final int XK_braille_dot_3 = (int)65523L;
     /**
-     * {@snippet :
-     * int XLookupString(XKeyEvent*, char*, int, KeySym*, XComposeStatus*);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_3 65523
      * }
      */
-    public static int XLookupString(MemorySegment x0, MemorySegment x1, int x2, MemorySegment x3, MemorySegment x4) {
-        var mh$ = XLookupString$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XMatchVisualInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$228.const$2,"XMatchVisualInfo");
+    public static int XK_braille_dot_3() {
+        return XK_braille_dot_3;
     }
+    private static final int XK_braille_dot_4 = (int)65524L;
     /**
-     * {@snippet :
-     * int XMatchVisualInfo(Display*, int, int, int, XVisualInfo*);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_4 65524
      * }
      */
-    public static int XMatchVisualInfo(MemorySegment x0, int x1, int x2, int x3, MemorySegment x4) {
-        var mh$ = XMatchVisualInfo$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dot_4() {
+        return XK_braille_dot_4;
     }
-    public static MethodHandle XOffsetRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$228.const$4,"XOffsetRegion");
-    }
+    private static final int XK_braille_dot_5 = (int)65525L;
     /**
-     * {@snippet :
-     * int XOffsetRegion(Region, int, int);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_5 65525
      * }
      */
-    public static int XOffsetRegion(MemorySegment x0, int x1, int x2) {
-        var mh$ = XOffsetRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dot_5() {
+        return XK_braille_dot_5;
     }
-    public static MethodHandle XPointInRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$228.const$5,"XPointInRegion");
-    }
+    private static final int XK_braille_dot_6 = (int)65526L;
     /**
-     * {@snippet :
-     * int XPointInRegion(Region, int, int);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_6 65526
      * }
      */
-    public static int XPointInRegion(MemorySegment x0, int x1, int x2) {
-        var mh$ = XPointInRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XPolygonRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$229.const$1,"XPolygonRegion");
+    public static int XK_braille_dot_6() {
+        return XK_braille_dot_6;
     }
+    private static final int XK_braille_dot_7 = (int)65527L;
     /**
-     * {@snippet :
-     * Region XPolygonRegion(XPoint*, int, int);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_7 65527
      * }
      */
-    public static MemorySegment XPolygonRegion(MemorySegment x0, int x1, int x2) {
-        var mh$ = XPolygonRegion$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dot_7() {
+        return XK_braille_dot_7;
     }
-    public static MethodHandle XRectInRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$229.const$2,"XRectInRegion");
-    }
+    private static final int XK_braille_dot_8 = (int)65528L;
     /**
-     * {@snippet :
-     * int XRectInRegion(Region, int, int, unsigned int, unsigned int);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_8 65528
      * }
      */
-    public static int XRectInRegion(MemorySegment x0, int x1, int x2, int x3, int x4) {
-        var mh$ = XRectInRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dot_8() {
+        return XK_braille_dot_8;
     }
-    public static MethodHandle XSaveContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$229.const$3,"XSaveContext");
-    }
+    private static final int XK_braille_dot_9 = (int)65529L;
     /**
-     * {@snippet :
-     * int XSaveContext(Display*, XID, XContext, char*);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_9 65529
      * }
      */
-    public static int XSaveContext(MemorySegment x0, long x1, int x2, MemorySegment x3) {
-        var mh$ = XSaveContext$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetClassHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$229.const$4,"XSetClassHint");
+    public static int XK_braille_dot_9() {
+        return XK_braille_dot_9;
     }
+    private static final int XK_braille_dot_10 = (int)65530L;
     /**
-     * {@snippet :
-     * int XSetClassHint(Display*, Window, XClassHint*);
+     * {@snippet lang=c :
+     * #define XK_braille_dot_10 65530
      * }
      */
-    public static int XSetClassHint(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetClassHint$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dot_10() {
+        return XK_braille_dot_10;
     }
-    public static MethodHandle XSetIconSizes$MH() {
-        return RuntimeHelper.requireNonNull(constants$229.const$5,"XSetIconSizes");
-    }
+    private static final int XK_braille_blank = (int)16787456L;
     /**
-     * {@snippet :
-     * int XSetIconSizes(Display*, Window, XIconSize*, int);
+     * {@snippet lang=c :
+     * #define XK_braille_blank 16787456
      * }
      */
-    public static int XSetIconSizes(MemorySegment x0, long x1, MemorySegment x2, int x3) {
-        var mh$ = XSetIconSizes$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_blank() {
+        return XK_braille_blank;
     }
-    public static MethodHandle XSetNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$230.const$0,"XSetNormalHints");
-    }
+    private static final int XK_braille_dots_1 = (int)16787457L;
     /**
-     * {@snippet :
-     * int XSetNormalHints(Display*, Window, XSizeHints*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1 16787457
      * }
      */
-    public static int XSetNormalHints(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetNormalHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetRGBColormaps$MH() {
-        return RuntimeHelper.requireNonNull(constants$230.const$2,"XSetRGBColormaps");
+    public static int XK_braille_dots_1() {
+        return XK_braille_dots_1;
     }
+    private static final int XK_braille_dots_2 = (int)16787458L;
     /**
-     * {@snippet :
-     * void XSetRGBColormaps(Display*, Window, XStandardColormap*, int, Atom);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2 16787458
      * }
      */
-    public static void XSetRGBColormaps(MemorySegment x0, long x1, MemorySegment x2, int x3, long x4) {
-        var mh$ = XSetRGBColormaps$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_2() {
+        return XK_braille_dots_2;
     }
-    public static MethodHandle XSetSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$230.const$3,"XSetSizeHints");
-    }
+    private static final int XK_braille_dots_12 = (int)16787459L;
     /**
-     * {@snippet :
-     * int XSetSizeHints(Display*, Window, XSizeHints*, Atom);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12 16787459
      * }
      */
-    public static int XSetSizeHints(MemorySegment x0, long x1, MemorySegment x2, long x3) {
-        var mh$ = XSetSizeHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_12() {
+        return XK_braille_dots_12;
     }
-    public static MethodHandle XSetStandardProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$230.const$5,"XSetStandardProperties");
-    }
+    private static final int XK_braille_dots_3 = (int)16787460L;
     /**
-     * {@snippet :
-     * int XSetStandardProperties(Display*, Window, char*, char*, Pixmap, char**, int, XSizeHints*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_3 16787460
      * }
      */
-    public static int XSetStandardProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, long x4, MemorySegment x5, int x6, MemorySegment x7) {
-        var mh$ = XSetStandardProperties$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$231.const$1,"XSetTextProperty");
+    public static int XK_braille_dots_3() {
+        return XK_braille_dots_3;
     }
+    private static final int XK_braille_dots_13 = (int)16787461L;
     /**
-     * {@snippet :
-     * void XSetTextProperty(Display*, Window, XTextProperty*, Atom);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_13 16787461
      * }
      */
-    public static void XSetTextProperty(MemorySegment x0, long x1, MemorySegment x2, long x3) {
-        var mh$ = XSetTextProperty$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_13() {
+        return XK_braille_dots_13;
     }
-    public static MethodHandle XSetWMClientMachine$MH() {
-        return RuntimeHelper.requireNonNull(constants$231.const$3,"XSetWMClientMachine");
-    }
+    private static final int XK_braille_dots_23 = (int)16787462L;
     /**
-     * {@snippet :
-     * void XSetWMClientMachine(Display*, Window, XTextProperty*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_23 16787462
      * }
      */
-    public static void XSetWMClientMachine(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetWMClientMachine$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_23() {
+        return XK_braille_dots_23;
     }
-    public static MethodHandle XSetWMHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$231.const$4,"XSetWMHints");
-    }
+    private static final int XK_braille_dots_123 = (int)16787463L;
     /**
-     * {@snippet :
-     * int XSetWMHints(Display*, Window, XWMHints*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_123 16787463
      * }
      */
-    public static int XSetWMHints(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetWMHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWMIconName$MH() {
-        return RuntimeHelper.requireNonNull(constants$231.const$5,"XSetWMIconName");
+    public static int XK_braille_dots_123() {
+        return XK_braille_dots_123;
     }
+    private static final int XK_braille_dots_4 = (int)16787464L;
     /**
-     * {@snippet :
-     * void XSetWMIconName(Display*, Window, XTextProperty*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_4 16787464
      * }
      */
-    public static void XSetWMIconName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetWMIconName$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_4() {
+        return XK_braille_dots_4;
     }
-    public static MethodHandle XSetWMName$MH() {
-        return RuntimeHelper.requireNonNull(constants$232.const$0,"XSetWMName");
-    }
+    private static final int XK_braille_dots_14 = (int)16787465L;
     /**
-     * {@snippet :
-     * void XSetWMName(Display*, Window, XTextProperty*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_14 16787465
      * }
      */
-    public static void XSetWMName(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetWMName$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_14() {
+        return XK_braille_dots_14;
     }
-    public static MethodHandle XSetWMNormalHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$232.const$1,"XSetWMNormalHints");
-    }
+    private static final int XK_braille_dots_24 = (int)16787466L;
     /**
-     * {@snippet :
-     * void XSetWMNormalHints(Display*, Window, XSizeHints*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_24 16787466
      * }
      */
-    public static void XSetWMNormalHints(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetWMNormalHints$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWMProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$232.const$3,"XSetWMProperties");
+    public static int XK_braille_dots_24() {
+        return XK_braille_dots_24;
     }
+    private static final int XK_braille_dots_124 = (int)16787467L;
     /**
-     * {@snippet :
-     * void XSetWMProperties(Display*, Window, XTextProperty*, XTextProperty*, char**, int, XSizeHints*, XWMHints*, XClassHint*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_124 16787467
      * }
      */
-    public static void XSetWMProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = XSetWMProperties$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_124() {
+        return XK_braille_dots_124;
     }
-    public static MethodHandle XmbSetWMProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$232.const$4,"XmbSetWMProperties");
-    }
+    private static final int XK_braille_dots_34 = (int)16787468L;
     /**
-     * {@snippet :
-     * void XmbSetWMProperties(Display*, Window, char*, char*, char**, int, XSizeHints*, XWMHints*, XClassHint*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_34 16787468
      * }
      */
-    public static void XmbSetWMProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = XmbSetWMProperties$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_34() {
+        return XK_braille_dots_34;
     }
-    public static MethodHandle Xutf8SetWMProperties$MH() {
-        return RuntimeHelper.requireNonNull(constants$232.const$5,"Xutf8SetWMProperties");
-    }
+    private static final int XK_braille_dots_134 = (int)16787469L;
     /**
-     * {@snippet :
-     * void Xutf8SetWMProperties(Display*, Window, char*, char*, char**, int, XSizeHints*, XWMHints*, XClassHint*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_134 16787469
      * }
      */
-    public static void Xutf8SetWMProperties(MemorySegment x0, long x1, MemorySegment x2, MemorySegment x3, MemorySegment x4, int x5, MemorySegment x6, MemorySegment x7, MemorySegment x8) {
-        var mh$ = Xutf8SetWMProperties$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetWMSizeHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$233.const$0,"XSetWMSizeHints");
+    public static int XK_braille_dots_134() {
+        return XK_braille_dots_134;
     }
+    private static final int XK_braille_dots_234 = (int)16787470L;
     /**
-     * {@snippet :
-     * void XSetWMSizeHints(Display*, Window, XSizeHints*, Atom);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_234 16787470
      * }
      */
-    public static void XSetWMSizeHints(MemorySegment x0, long x1, MemorySegment x2, long x3) {
-        var mh$ = XSetWMSizeHints$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_234() {
+        return XK_braille_dots_234;
     }
-    public static MethodHandle XSetRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$233.const$1,"XSetRegion");
-    }
+    private static final int XK_braille_dots_1234 = (int)16787471L;
     /**
-     * {@snippet :
-     * int XSetRegion(Display*, GC, Region);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1234 16787471
      * }
      */
-    public static int XSetRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XSetRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_1234() {
+        return XK_braille_dots_1234;
     }
-    public static MethodHandle XSetStandardColormap$MH() {
-        return RuntimeHelper.requireNonNull(constants$233.const$2,"XSetStandardColormap");
-    }
+    private static final int XK_braille_dots_5 = (int)16787472L;
     /**
-     * {@snippet :
-     * void XSetStandardColormap(Display*, Window, XStandardColormap*, Atom);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_5 16787472
      * }
      */
-    public static void XSetStandardColormap(MemorySegment x0, long x1, MemorySegment x2, long x3) {
-        var mh$ = XSetStandardColormap$MH();
-        try {
-            mh$.invokeExact(x0, x1, x2, x3);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSetZoomHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$233.const$3,"XSetZoomHints");
+    public static int XK_braille_dots_5() {
+        return XK_braille_dots_5;
     }
+    private static final int XK_braille_dots_15 = (int)16787473L;
     /**
-     * {@snippet :
-     * int XSetZoomHints(Display*, Window, XSizeHints*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_15 16787473
      * }
      */
-    public static int XSetZoomHints(MemorySegment x0, long x1, MemorySegment x2) {
-        var mh$ = XSetZoomHints$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_15() {
+        return XK_braille_dots_15;
     }
-    public static MethodHandle XShrinkRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$233.const$4,"XShrinkRegion");
-    }
+    private static final int XK_braille_dots_25 = (int)16787474L;
     /**
-     * {@snippet :
-     * int XShrinkRegion(Region, int, int);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_25 16787474
      * }
      */
-    public static int XShrinkRegion(MemorySegment x0, int x1, int x2) {
-        var mh$ = XShrinkRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_25() {
+        return XK_braille_dots_25;
     }
-    public static MethodHandle XStringListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$233.const$5,"XStringListToTextProperty");
-    }
+    private static final int XK_braille_dots_125 = (int)16787475L;
     /**
-     * {@snippet :
-     * int XStringListToTextProperty(char**, int, XTextProperty*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_125 16787475
      * }
      */
-    public static int XStringListToTextProperty(MemorySegment x0, int x1, MemorySegment x2) {
-        var mh$ = XStringListToTextProperty$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XSubtractRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$234.const$0,"XSubtractRegion");
+    public static int XK_braille_dots_125() {
+        return XK_braille_dots_125;
     }
+    private static final int XK_braille_dots_35 = (int)16787476L;
     /**
-     * {@snippet :
-     * int XSubtractRegion(Region, Region, Region);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_35 16787476
      * }
      */
-    public static int XSubtractRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XSubtractRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_35() {
+        return XK_braille_dots_35;
     }
-    public static MethodHandle XmbTextListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$234.const$1,"XmbTextListToTextProperty");
-    }
+    private static final int XK_braille_dots_135 = (int)16787477L;
     /**
-     * {@snippet :
-     * int XmbTextListToTextProperty(Display* display, char** list, int count, XICCEncodingStyle style, XTextProperty* text_prop_return);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_135 16787477
      * }
      */
-    public static int XmbTextListToTextProperty(MemorySegment display, MemorySegment list, int count, int style, MemorySegment text_prop_return) {
-        var mh$ = XmbTextListToTextProperty$MH();
-        try {
-            return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_135() {
+        return XK_braille_dots_135;
     }
-    public static MethodHandle XwcTextListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$234.const$2,"XwcTextListToTextProperty");
-    }
+    private static final int XK_braille_dots_235 = (int)16787478L;
     /**
-     * {@snippet :
-     * int XwcTextListToTextProperty(Display* display, wchar_t** list, int count, XICCEncodingStyle style, XTextProperty* text_prop_return);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_235 16787478
      * }
      */
-    public static int XwcTextListToTextProperty(MemorySegment display, MemorySegment list, int count, int style, MemorySegment text_prop_return) {
-        var mh$ = XwcTextListToTextProperty$MH();
-        try {
-            return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle Xutf8TextListToTextProperty$MH() {
-        return RuntimeHelper.requireNonNull(constants$234.const$3,"Xutf8TextListToTextProperty");
+    public static int XK_braille_dots_235() {
+        return XK_braille_dots_235;
     }
+    private static final int XK_braille_dots_1235 = (int)16787479L;
     /**
-     * {@snippet :
-     * int Xutf8TextListToTextProperty(Display* display, char** list, int count, XICCEncodingStyle style, XTextProperty* text_prop_return);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1235 16787479
      * }
      */
-    public static int Xutf8TextListToTextProperty(MemorySegment display, MemorySegment list, int count, int style, MemorySegment text_prop_return) {
-        var mh$ = Xutf8TextListToTextProperty$MH();
-        try {
-            return (int)mh$.invokeExact(display, list, count, style, text_prop_return);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_1235() {
+        return XK_braille_dots_1235;
     }
-    public static MethodHandle XwcFreeStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$234.const$4,"XwcFreeStringList");
-    }
+    private static final int XK_braille_dots_45 = (int)16787480L;
     /**
-     * {@snippet :
-     * void XwcFreeStringList(wchar_t** list);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_45 16787480
      * }
      */
-    public static void XwcFreeStringList(MemorySegment list) {
-        var mh$ = XwcFreeStringList$MH();
-        try {
-            mh$.invokeExact(list);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_45() {
+        return XK_braille_dots_45;
     }
-    public static MethodHandle XTextPropertyToStringList$MH() {
-        return RuntimeHelper.requireNonNull(constants$234.const$5,"XTextPropertyToStringList");
-    }
+    private static final int XK_braille_dots_145 = (int)16787481L;
     /**
-     * {@snippet :
-     * int XTextPropertyToStringList(XTextProperty*, char***, int*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_145 16787481
      * }
      */
-    public static int XTextPropertyToStringList(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XTextPropertyToStringList$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XmbTextPropertyToTextList$MH() {
-        return RuntimeHelper.requireNonNull(constants$235.const$0,"XmbTextPropertyToTextList");
+    public static int XK_braille_dots_145() {
+        return XK_braille_dots_145;
     }
+    private static final int XK_braille_dots_245 = (int)16787482L;
     /**
-     * {@snippet :
-     * int XmbTextPropertyToTextList(Display* display, const XTextProperty* text_prop, char*** list_return, int* count_return);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_245 16787482
      * }
      */
-    public static int XmbTextPropertyToTextList(MemorySegment display, MemorySegment text_prop, MemorySegment list_return, MemorySegment count_return) {
-        var mh$ = XmbTextPropertyToTextList$MH();
-        try {
-            return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_245() {
+        return XK_braille_dots_245;
     }
-    public static MethodHandle XwcTextPropertyToTextList$MH() {
-        return RuntimeHelper.requireNonNull(constants$235.const$1,"XwcTextPropertyToTextList");
-    }
+    private static final int XK_braille_dots_1245 = (int)16787483L;
     /**
-     * {@snippet :
-     * int XwcTextPropertyToTextList(Display* display, const XTextProperty* text_prop, wchar_t*** list_return, int* count_return);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1245 16787483
      * }
      */
-    public static int XwcTextPropertyToTextList(MemorySegment display, MemorySegment text_prop, MemorySegment list_return, MemorySegment count_return) {
-        var mh$ = XwcTextPropertyToTextList$MH();
-        try {
-            return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_1245() {
+        return XK_braille_dots_1245;
     }
-    public static MethodHandle Xutf8TextPropertyToTextList$MH() {
-        return RuntimeHelper.requireNonNull(constants$235.const$2,"Xutf8TextPropertyToTextList");
-    }
+    private static final int XK_braille_dots_345 = (int)16787484L;
     /**
-     * {@snippet :
-     * int Xutf8TextPropertyToTextList(Display* display, const XTextProperty* text_prop, char*** list_return, int* count_return);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_345 16787484
      * }
      */
-    public static int Xutf8TextPropertyToTextList(MemorySegment display, MemorySegment text_prop, MemorySegment list_return, MemorySegment count_return) {
-        var mh$ = Xutf8TextPropertyToTextList$MH();
-        try {
-            return (int)mh$.invokeExact(display, text_prop, list_return, count_return);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XUnionRectWithRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$235.const$3,"XUnionRectWithRegion");
+    public static int XK_braille_dots_345() {
+        return XK_braille_dots_345;
     }
+    private static final int XK_braille_dots_1345 = (int)16787485L;
     /**
-     * {@snippet :
-     * int XUnionRectWithRegion(XRectangle*, Region, Region);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1345 16787485
      * }
      */
-    public static int XUnionRectWithRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XUnionRectWithRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_1345() {
+        return XK_braille_dots_1345;
     }
-    public static MethodHandle XUnionRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$235.const$4,"XUnionRegion");
-    }
+    private static final int XK_braille_dots_2345 = (int)16787486L;
     /**
-     * {@snippet :
-     * int XUnionRegion(Region, Region, Region);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2345 16787486
      * }
      */
-    public static int XUnionRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XUnionRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_2345() {
+        return XK_braille_dots_2345;
     }
-    public static MethodHandle XWMGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$235.const$6,"XWMGeometry");
-    }
+    private static final int XK_braille_dots_12345 = (int)16787487L;
     /**
-     * {@snippet :
-     * int XWMGeometry(Display*, int, char*, char*, unsigned int, XSizeHints*, int*, int*, int*, int*, int*);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12345 16787487
      * }
      */
-    public static int XWMGeometry(MemorySegment x0, int x1, MemorySegment x2, MemorySegment x3, int x4, MemorySegment x5, MemorySegment x6, MemorySegment x7, MemorySegment x8, MemorySegment x9, MemorySegment x10) {
-        var mh$ = XWMGeometry$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle XXorRegion$MH() {
-        return RuntimeHelper.requireNonNull(constants$236.const$0,"XXorRegion");
+    public static int XK_braille_dots_12345() {
+        return XK_braille_dots_12345;
     }
+    private static final int XK_braille_dots_6 = (int)16787488L;
     /**
-     * {@snippet :
-     * int XXorRegion(Region, Region, Region);
+     * {@snippet lang=c :
+     * #define XK_braille_dots_6 16787488
      * }
      */
-    public static int XXorRegion(MemorySegment x0, MemorySegment x1, MemorySegment x2) {
-        var mh$ = XXorRegion$MH();
-        try {
-            return (int)mh$.invokeExact(x0, x1, x2);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int XK_braille_dots_6() {
+        return XK_braille_dots_6;
     }
+    private static final int XK_braille_dots_16 = (int)16787489L;
     /**
-     * {@snippet :
-     * #define _POSIX_C_SOURCE 200809
+     * {@snippet lang=c :
+     * #define XK_braille_dots_16 16787489
      * }
      */
-    public static long _POSIX_C_SOURCE() {
-        return 200809L;
+    public static int XK_braille_dots_16() {
+        return XK_braille_dots_16;
     }
+    private static final int XK_braille_dots_26 = (int)16787490L;
     /**
-     * {@snippet :
-     * #define __TIMESIZE 64
+     * {@snippet lang=c :
+     * #define XK_braille_dots_26 16787490
      * }
      */
-    public static int __TIMESIZE() {
-        return (int)64L;
+    public static int XK_braille_dots_26() {
+        return XK_braille_dots_26;
     }
+    private static final int XK_braille_dots_126 = (int)16787491L;
     /**
-     * {@snippet :
-     * #define __STDC_IEC_60559_BFP__ 201404
+     * {@snippet lang=c :
+     * #define XK_braille_dots_126 16787491
      * }
      */
-    public static long __STDC_IEC_60559_BFP__() {
-        return 201404L;
+    public static int XK_braille_dots_126() {
+        return XK_braille_dots_126;
     }
+    private static final int XK_braille_dots_36 = (int)16787492L;
     /**
-     * {@snippet :
-     * #define __STDC_IEC_60559_COMPLEX__ 201404
+     * {@snippet lang=c :
+     * #define XK_braille_dots_36 16787492
      * }
      */
-    public static long __STDC_IEC_60559_COMPLEX__() {
-        return 201404L;
+    public static int XK_braille_dots_36() {
+        return XK_braille_dots_36;
     }
+    private static final int XK_braille_dots_136 = (int)16787493L;
     /**
-     * {@snippet :
-     * #define __STDC_ISO_10646__ 201706
+     * {@snippet lang=c :
+     * #define XK_braille_dots_136 16787493
      * }
      */
-    public static long __STDC_ISO_10646__() {
-        return 201706L;
+    public static int XK_braille_dots_136() {
+        return XK_braille_dots_136;
     }
+    private static final int XK_braille_dots_236 = (int)16787494L;
     /**
-     * {@snippet :
-     * #define __BYTE_ORDER 1234
+     * {@snippet lang=c :
+     * #define XK_braille_dots_236 16787494
      * }
      */
-    public static int __BYTE_ORDER() {
-        return (int)1234L;
+    public static int XK_braille_dots_236() {
+        return XK_braille_dots_236;
     }
+    private static final int XK_braille_dots_1236 = (int)16787495L;
     /**
-     * {@snippet :
-     * #define __FLOAT_WORD_ORDER 1234
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1236 16787495
      * }
      */
-    public static int __FLOAT_WORD_ORDER() {
-        return (int)1234L;
+    public static int XK_braille_dots_1236() {
+        return XK_braille_dots_1236;
     }
+    private static final int XK_braille_dots_46 = (int)16787496L;
     /**
-     * {@snippet :
-     * #define LITTLE_ENDIAN 1234
+     * {@snippet lang=c :
+     * #define XK_braille_dots_46 16787496
      * }
      */
-    public static int LITTLE_ENDIAN() {
-        return (int)1234L;
+    public static int XK_braille_dots_46() {
+        return XK_braille_dots_46;
     }
+    private static final int XK_braille_dots_146 = (int)16787497L;
     /**
-     * {@snippet :
-     * #define BIG_ENDIAN 4321
+     * {@snippet lang=c :
+     * #define XK_braille_dots_146 16787497
      * }
      */
-    public static int BIG_ENDIAN() {
-        return (int)4321L;
+    public static int XK_braille_dots_146() {
+        return XK_braille_dots_146;
     }
+    private static final int XK_braille_dots_246 = (int)16787498L;
     /**
-     * {@snippet :
-     * #define PDP_ENDIAN 3412
+     * {@snippet lang=c :
+     * #define XK_braille_dots_246 16787498
      * }
      */
-    public static int PDP_ENDIAN() {
-        return (int)3412L;
+    public static int XK_braille_dots_246() {
+        return XK_braille_dots_246;
     }
+    private static final int XK_braille_dots_1246 = (int)16787499L;
     /**
-     * {@snippet :
-     * #define BYTE_ORDER 1234
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1246 16787499
      * }
      */
-    public static int BYTE_ORDER() {
-        return (int)1234L;
+    public static int XK_braille_dots_1246() {
+        return XK_braille_dots_1246;
     }
+    private static final int XK_braille_dots_346 = (int)16787500L;
     /**
-     * {@snippet :
-     * #define _SIGSET_NWORDS 16
+     * {@snippet lang=c :
+     * #define XK_braille_dots_346 16787500
      * }
      */
-    public static long _SIGSET_NWORDS() {
-        return 16L;
+    public static int XK_braille_dots_346() {
+        return XK_braille_dots_346;
     }
+    private static final int XK_braille_dots_1346 = (int)16787501L;
     /**
-     * {@snippet :
-     * #define __NFDBITS 64
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1346 16787501
      * }
      */
-    public static int __NFDBITS() {
-        return (int)64L;
+    public static int XK_braille_dots_1346() {
+        return XK_braille_dots_1346;
     }
+    private static final int XK_braille_dots_2346 = (int)16787502L;
     /**
-     * {@snippet :
-     * #define FD_SETSIZE 1024
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2346 16787502
      * }
      */
-    public static int FD_SETSIZE() {
-        return (int)1024L;
+    public static int XK_braille_dots_2346() {
+        return XK_braille_dots_2346;
     }
+    private static final int XK_braille_dots_12346 = (int)16787503L;
     /**
-     * {@snippet :
-     * #define NFDBITS 64
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12346 16787503
      * }
      */
-    public static int NFDBITS() {
-        return (int)64L;
+    public static int XK_braille_dots_12346() {
+        return XK_braille_dots_12346;
     }
+    private static final int XK_braille_dots_56 = (int)16787504L;
     /**
-     * {@snippet :
-     * #define __PTHREAD_RWLOCK_ELISION_EXTRA 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_56 16787504
      * }
      */
-    public static int __PTHREAD_RWLOCK_ELISION_EXTRA() {
-        return (int)0L;
+    public static int XK_braille_dots_56() {
+        return XK_braille_dots_56;
     }
+    private static final int XK_braille_dots_156 = (int)16787505L;
     /**
-     * {@snippet :
-     * #define None 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_156 16787505
      * }
      */
-    public static long None() {
-        return 0L;
+    public static int XK_braille_dots_156() {
+        return XK_braille_dots_156;
     }
+    private static final int XK_braille_dots_256 = (int)16787506L;
     /**
-     * {@snippet :
-     * #define ParentRelative 1
+     * {@snippet lang=c :
+     * #define XK_braille_dots_256 16787506
      * }
      */
-    public static long ParentRelative() {
-        return 1L;
+    public static int XK_braille_dots_256() {
+        return XK_braille_dots_256;
     }
+    private static final int XK_braille_dots_1256 = (int)16787507L;
     /**
-     * {@snippet :
-     * #define CopyFromParent 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1256 16787507
      * }
      */
-    public static long CopyFromParent() {
-        return 0L;
+    public static int XK_braille_dots_1256() {
+        return XK_braille_dots_1256;
     }
+    private static final int XK_braille_dots_356 = (int)16787508L;
     /**
-     * {@snippet :
-     * #define PointerWindow 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_356 16787508
      * }
      */
-    public static long PointerWindow() {
-        return 0L;
+    public static int XK_braille_dots_356() {
+        return XK_braille_dots_356;
     }
+    private static final int XK_braille_dots_1356 = (int)16787509L;
     /**
-     * {@snippet :
-     * #define InputFocus 1
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1356 16787509
      * }
      */
-    public static long InputFocus() {
-        return 1L;
+    public static int XK_braille_dots_1356() {
+        return XK_braille_dots_1356;
     }
+    private static final int XK_braille_dots_2356 = (int)16787510L;
     /**
-     * {@snippet :
-     * #define PointerRoot 1
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2356 16787510
      * }
      */
-    public static long PointerRoot() {
-        return 1L;
+    public static int XK_braille_dots_2356() {
+        return XK_braille_dots_2356;
     }
+    private static final int XK_braille_dots_12356 = (int)16787511L;
     /**
-     * {@snippet :
-     * #define AnyPropertyType 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12356 16787511
      * }
      */
-    public static long AnyPropertyType() {
-        return 0L;
+    public static int XK_braille_dots_12356() {
+        return XK_braille_dots_12356;
     }
+    private static final int XK_braille_dots_456 = (int)16787512L;
     /**
-     * {@snippet :
-     * #define AnyKey 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_456 16787512
      * }
      */
-    public static long AnyKey() {
-        return 0L;
+    public static int XK_braille_dots_456() {
+        return XK_braille_dots_456;
     }
+    private static final int XK_braille_dots_1456 = (int)16787513L;
     /**
-     * {@snippet :
-     * #define AnyButton 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1456 16787513
      * }
      */
-    public static long AnyButton() {
-        return 0L;
+    public static int XK_braille_dots_1456() {
+        return XK_braille_dots_1456;
     }
+    private static final int XK_braille_dots_2456 = (int)16787514L;
     /**
-     * {@snippet :
-     * #define AllTemporary 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2456 16787514
      * }
      */
-    public static long AllTemporary() {
-        return 0L;
+    public static int XK_braille_dots_2456() {
+        return XK_braille_dots_2456;
     }
+    private static final int XK_braille_dots_12456 = (int)16787515L;
     /**
-     * {@snippet :
-     * #define CurrentTime 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12456 16787515
      * }
      */
-    public static long CurrentTime() {
-        return 0L;
+    public static int XK_braille_dots_12456() {
+        return XK_braille_dots_12456;
     }
+    private static final int XK_braille_dots_3456 = (int)16787516L;
     /**
-     * {@snippet :
-     * #define NoSymbol 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_3456 16787516
      * }
      */
-    public static long NoSymbol() {
-        return 0L;
+    public static int XK_braille_dots_3456() {
+        return XK_braille_dots_3456;
     }
+    private static final int XK_braille_dots_13456 = (int)16787517L;
     /**
-     * {@snippet :
-     * #define NoEventMask 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_13456 16787517
      * }
      */
-    public static long NoEventMask() {
-        return 0L;
+    public static int XK_braille_dots_13456() {
+        return XK_braille_dots_13456;
     }
+    private static final int XK_braille_dots_23456 = (int)16787518L;
     /**
-     * {@snippet :
-     * #define KeyPressMask 1
+     * {@snippet lang=c :
+     * #define XK_braille_dots_23456 16787518
      * }
      */
-    public static long KeyPressMask() {
-        return 1L;
+    public static int XK_braille_dots_23456() {
+        return XK_braille_dots_23456;
     }
+    private static final int XK_braille_dots_123456 = (int)16787519L;
     /**
-     * {@snippet :
-     * #define KeyReleaseMask 2
+     * {@snippet lang=c :
+     * #define XK_braille_dots_123456 16787519
      * }
      */
-    public static long KeyReleaseMask() {
-        return 2L;
+    public static int XK_braille_dots_123456() {
+        return XK_braille_dots_123456;
     }
+    private static final int XK_braille_dots_7 = (int)16787520L;
     /**
-     * {@snippet :
-     * #define ButtonPressMask 4
+     * {@snippet lang=c :
+     * #define XK_braille_dots_7 16787520
      * }
      */
-    public static long ButtonPressMask() {
-        return 4L;
+    public static int XK_braille_dots_7() {
+        return XK_braille_dots_7;
     }
+    private static final int XK_braille_dots_17 = (int)16787521L;
     /**
-     * {@snippet :
-     * #define ButtonReleaseMask 8
+     * {@snippet lang=c :
+     * #define XK_braille_dots_17 16787521
      * }
      */
-    public static long ButtonReleaseMask() {
-        return 8L;
+    public static int XK_braille_dots_17() {
+        return XK_braille_dots_17;
     }
+    private static final int XK_braille_dots_27 = (int)16787522L;
     /**
-     * {@snippet :
-     * #define EnterWindowMask 16
+     * {@snippet lang=c :
+     * #define XK_braille_dots_27 16787522
      * }
      */
-    public static long EnterWindowMask() {
-        return 16L;
+    public static int XK_braille_dots_27() {
+        return XK_braille_dots_27;
     }
+    private static final int XK_braille_dots_127 = (int)16787523L;
     /**
-     * {@snippet :
-     * #define LeaveWindowMask 32
+     * {@snippet lang=c :
+     * #define XK_braille_dots_127 16787523
      * }
      */
-    public static long LeaveWindowMask() {
-        return 32L;
+    public static int XK_braille_dots_127() {
+        return XK_braille_dots_127;
     }
+    private static final int XK_braille_dots_37 = (int)16787524L;
     /**
-     * {@snippet :
-     * #define PointerMotionMask 64
+     * {@snippet lang=c :
+     * #define XK_braille_dots_37 16787524
      * }
      */
-    public static long PointerMotionMask() {
-        return 64L;
+    public static int XK_braille_dots_37() {
+        return XK_braille_dots_37;
     }
+    private static final int XK_braille_dots_137 = (int)16787525L;
     /**
-     * {@snippet :
-     * #define PointerMotionHintMask 128
+     * {@snippet lang=c :
+     * #define XK_braille_dots_137 16787525
      * }
      */
-    public static long PointerMotionHintMask() {
-        return 128L;
+    public static int XK_braille_dots_137() {
+        return XK_braille_dots_137;
     }
+    private static final int XK_braille_dots_237 = (int)16787526L;
     /**
-     * {@snippet :
-     * #define Button1MotionMask 256
+     * {@snippet lang=c :
+     * #define XK_braille_dots_237 16787526
      * }
      */
-    public static long Button1MotionMask() {
-        return 256L;
+    public static int XK_braille_dots_237() {
+        return XK_braille_dots_237;
     }
+    private static final int XK_braille_dots_1237 = (int)16787527L;
     /**
-     * {@snippet :
-     * #define Button2MotionMask 512
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1237 16787527
      * }
      */
-    public static long Button2MotionMask() {
-        return 512L;
+    public static int XK_braille_dots_1237() {
+        return XK_braille_dots_1237;
     }
+    private static final int XK_braille_dots_47 = (int)16787528L;
     /**
-     * {@snippet :
-     * #define Button3MotionMask 1024
+     * {@snippet lang=c :
+     * #define XK_braille_dots_47 16787528
      * }
      */
-    public static long Button3MotionMask() {
-        return 1024L;
+    public static int XK_braille_dots_47() {
+        return XK_braille_dots_47;
     }
+    private static final int XK_braille_dots_147 = (int)16787529L;
     /**
-     * {@snippet :
-     * #define Button4MotionMask 2048
+     * {@snippet lang=c :
+     * #define XK_braille_dots_147 16787529
      * }
      */
-    public static long Button4MotionMask() {
-        return 2048L;
+    public static int XK_braille_dots_147() {
+        return XK_braille_dots_147;
     }
+    private static final int XK_braille_dots_247 = (int)16787530L;
     /**
-     * {@snippet :
-     * #define Button5MotionMask 4096
+     * {@snippet lang=c :
+     * #define XK_braille_dots_247 16787530
      * }
      */
-    public static long Button5MotionMask() {
-        return 4096L;
+    public static int XK_braille_dots_247() {
+        return XK_braille_dots_247;
     }
+    private static final int XK_braille_dots_1247 = (int)16787531L;
     /**
-     * {@snippet :
-     * #define ButtonMotionMask 8192
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1247 16787531
      * }
      */
-    public static long ButtonMotionMask() {
-        return 8192L;
+    public static int XK_braille_dots_1247() {
+        return XK_braille_dots_1247;
     }
+    private static final int XK_braille_dots_347 = (int)16787532L;
     /**
-     * {@snippet :
-     * #define KeymapStateMask 16384
+     * {@snippet lang=c :
+     * #define XK_braille_dots_347 16787532
      * }
      */
-    public static long KeymapStateMask() {
-        return 16384L;
+    public static int XK_braille_dots_347() {
+        return XK_braille_dots_347;
     }
+    private static final int XK_braille_dots_1347 = (int)16787533L;
     /**
-     * {@snippet :
-     * #define ExposureMask 32768
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1347 16787533
      * }
      */
-    public static long ExposureMask() {
-        return 32768L;
+    public static int XK_braille_dots_1347() {
+        return XK_braille_dots_1347;
     }
+    private static final int XK_braille_dots_2347 = (int)16787534L;
     /**
-     * {@snippet :
-     * #define VisibilityChangeMask 65536
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2347 16787534
      * }
      */
-    public static long VisibilityChangeMask() {
-        return 65536L;
+    public static int XK_braille_dots_2347() {
+        return XK_braille_dots_2347;
     }
+    private static final int XK_braille_dots_12347 = (int)16787535L;
     /**
-     * {@snippet :
-     * #define StructureNotifyMask 131072
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12347 16787535
      * }
      */
-    public static long StructureNotifyMask() {
-        return 131072L;
+    public static int XK_braille_dots_12347() {
+        return XK_braille_dots_12347;
     }
+    private static final int XK_braille_dots_57 = (int)16787536L;
     /**
-     * {@snippet :
-     * #define ResizeRedirectMask 262144
+     * {@snippet lang=c :
+     * #define XK_braille_dots_57 16787536
      * }
      */
-    public static long ResizeRedirectMask() {
-        return 262144L;
+    public static int XK_braille_dots_57() {
+        return XK_braille_dots_57;
     }
+    private static final int XK_braille_dots_157 = (int)16787537L;
     /**
-     * {@snippet :
-     * #define SubstructureNotifyMask 524288
+     * {@snippet lang=c :
+     * #define XK_braille_dots_157 16787537
      * }
      */
-    public static long SubstructureNotifyMask() {
-        return 524288L;
+    public static int XK_braille_dots_157() {
+        return XK_braille_dots_157;
     }
+    private static final int XK_braille_dots_257 = (int)16787538L;
     /**
-     * {@snippet :
-     * #define SubstructureRedirectMask 1048576
+     * {@snippet lang=c :
+     * #define XK_braille_dots_257 16787538
      * }
      */
-    public static long SubstructureRedirectMask() {
-        return 1048576L;
+    public static int XK_braille_dots_257() {
+        return XK_braille_dots_257;
     }
+    private static final int XK_braille_dots_1257 = (int)16787539L;
     /**
-     * {@snippet :
-     * #define FocusChangeMask 2097152
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1257 16787539
      * }
      */
-    public static long FocusChangeMask() {
-        return 2097152L;
+    public static int XK_braille_dots_1257() {
+        return XK_braille_dots_1257;
     }
+    private static final int XK_braille_dots_357 = (int)16787540L;
     /**
-     * {@snippet :
-     * #define PropertyChangeMask 4194304
+     * {@snippet lang=c :
+     * #define XK_braille_dots_357 16787540
      * }
      */
-    public static long PropertyChangeMask() {
-        return 4194304L;
+    public static int XK_braille_dots_357() {
+        return XK_braille_dots_357;
     }
+    private static final int XK_braille_dots_1357 = (int)16787541L;
     /**
-     * {@snippet :
-     * #define ColormapChangeMask 8388608
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1357 16787541
      * }
      */
-    public static long ColormapChangeMask() {
-        return 8388608L;
+    public static int XK_braille_dots_1357() {
+        return XK_braille_dots_1357;
     }
+    private static final int XK_braille_dots_2357 = (int)16787542L;
     /**
-     * {@snippet :
-     * #define OwnerGrabButtonMask 16777216
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2357 16787542
      * }
      */
-    public static long OwnerGrabButtonMask() {
-        return 16777216L;
+    public static int XK_braille_dots_2357() {
+        return XK_braille_dots_2357;
     }
+    private static final int XK_braille_dots_12357 = (int)16787543L;
     /**
-     * {@snippet :
-     * #define ShiftMask 1
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12357 16787543
      * }
      */
-    public static int ShiftMask() {
-        return (int)1L;
+    public static int XK_braille_dots_12357() {
+        return XK_braille_dots_12357;
     }
+    private static final int XK_braille_dots_457 = (int)16787544L;
     /**
-     * {@snippet :
-     * #define LockMask 2
+     * {@snippet lang=c :
+     * #define XK_braille_dots_457 16787544
      * }
      */
-    public static int LockMask() {
-        return (int)2L;
+    public static int XK_braille_dots_457() {
+        return XK_braille_dots_457;
     }
+    private static final int XK_braille_dots_1457 = (int)16787545L;
     /**
-     * {@snippet :
-     * #define ControlMask 4
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1457 16787545
      * }
      */
-    public static int ControlMask() {
-        return (int)4L;
+    public static int XK_braille_dots_1457() {
+        return XK_braille_dots_1457;
     }
+    private static final int XK_braille_dots_2457 = (int)16787546L;
     /**
-     * {@snippet :
-     * #define Mod1Mask 8
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2457 16787546
      * }
      */
-    public static int Mod1Mask() {
-        return (int)8L;
+    public static int XK_braille_dots_2457() {
+        return XK_braille_dots_2457;
     }
+    private static final int XK_braille_dots_12457 = (int)16787547L;
     /**
-     * {@snippet :
-     * #define Mod2Mask 16
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12457 16787547
      * }
      */
-    public static int Mod2Mask() {
-        return (int)16L;
+    public static int XK_braille_dots_12457() {
+        return XK_braille_dots_12457;
     }
+    private static final int XK_braille_dots_3457 = (int)16787548L;
     /**
-     * {@snippet :
-     * #define Mod3Mask 32
+     * {@snippet lang=c :
+     * #define XK_braille_dots_3457 16787548
      * }
      */
-    public static int Mod3Mask() {
-        return (int)32L;
+    public static int XK_braille_dots_3457() {
+        return XK_braille_dots_3457;
     }
+    private static final int XK_braille_dots_13457 = (int)16787549L;
     /**
-     * {@snippet :
-     * #define Mod4Mask 64
+     * {@snippet lang=c :
+     * #define XK_braille_dots_13457 16787549
      * }
      */
-    public static int Mod4Mask() {
-        return (int)64L;
+    public static int XK_braille_dots_13457() {
+        return XK_braille_dots_13457;
     }
+    private static final int XK_braille_dots_23457 = (int)16787550L;
     /**
-     * {@snippet :
-     * #define Mod5Mask 128
+     * {@snippet lang=c :
+     * #define XK_braille_dots_23457 16787550
      * }
      */
-    public static int Mod5Mask() {
-        return (int)128L;
+    public static int XK_braille_dots_23457() {
+        return XK_braille_dots_23457;
     }
+    private static final int XK_braille_dots_123457 = (int)16787551L;
     /**
-     * {@snippet :
-     * #define Button1Mask 256
+     * {@snippet lang=c :
+     * #define XK_braille_dots_123457 16787551
      * }
      */
-    public static int Button1Mask() {
-        return (int)256L;
+    public static int XK_braille_dots_123457() {
+        return XK_braille_dots_123457;
     }
+    private static final int XK_braille_dots_67 = (int)16787552L;
     /**
-     * {@snippet :
-     * #define Button2Mask 512
+     * {@snippet lang=c :
+     * #define XK_braille_dots_67 16787552
      * }
      */
-    public static int Button2Mask() {
-        return (int)512L;
+    public static int XK_braille_dots_67() {
+        return XK_braille_dots_67;
     }
+    private static final int XK_braille_dots_167 = (int)16787553L;
     /**
-     * {@snippet :
-     * #define Button3Mask 1024
+     * {@snippet lang=c :
+     * #define XK_braille_dots_167 16787553
      * }
      */
-    public static int Button3Mask() {
-        return (int)1024L;
+    public static int XK_braille_dots_167() {
+        return XK_braille_dots_167;
     }
+    private static final int XK_braille_dots_267 = (int)16787554L;
     /**
-     * {@snippet :
-     * #define Button4Mask 2048
+     * {@snippet lang=c :
+     * #define XK_braille_dots_267 16787554
      * }
      */
-    public static int Button4Mask() {
-        return (int)2048L;
+    public static int XK_braille_dots_267() {
+        return XK_braille_dots_267;
     }
+    private static final int XK_braille_dots_1267 = (int)16787555L;
     /**
-     * {@snippet :
-     * #define Button5Mask 4096
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1267 16787555
      * }
      */
-    public static int Button5Mask() {
-        return (int)4096L;
+    public static int XK_braille_dots_1267() {
+        return XK_braille_dots_1267;
     }
+    private static final int XK_braille_dots_367 = (int)16787556L;
     /**
-     * {@snippet :
-     * #define AnyModifier 32768
+     * {@snippet lang=c :
+     * #define XK_braille_dots_367 16787556
      * }
      */
-    public static int AnyModifier() {
-        return (int)32768L;
+    public static int XK_braille_dots_367() {
+        return XK_braille_dots_367;
     }
+    private static final int XK_braille_dots_1367 = (int)16787557L;
     /**
-     * {@snippet :
-     * #define RevertToNone 0
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1367 16787557
      * }
      */
-    public static int RevertToNone() {
-        return (int)0L;
+    public static int XK_braille_dots_1367() {
+        return XK_braille_dots_1367;
     }
+    private static final int XK_braille_dots_2367 = (int)16787558L;
     /**
-     * {@snippet :
-     * #define RevertToPointerRoot 1
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2367 16787558
      * }
      */
-    public static int RevertToPointerRoot() {
-        return (int)1L;
+    public static int XK_braille_dots_2367() {
+        return XK_braille_dots_2367;
     }
+    private static final int XK_braille_dots_12367 = (int)16787559L;
     /**
-     * {@snippet :
-     * #define CWBackPixmap 1
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12367 16787559
      * }
      */
-    public static long CWBackPixmap() {
-        return 1L;
+    public static int XK_braille_dots_12367() {
+        return XK_braille_dots_12367;
     }
+    private static final int XK_braille_dots_467 = (int)16787560L;
     /**
-     * {@snippet :
-     * #define CWBackPixel 2
+     * {@snippet lang=c :
+     * #define XK_braille_dots_467 16787560
      * }
      */
-    public static long CWBackPixel() {
-        return 2L;
+    public static int XK_braille_dots_467() {
+        return XK_braille_dots_467;
     }
+    private static final int XK_braille_dots_1467 = (int)16787561L;
     /**
-     * {@snippet :
-     * #define CWBorderPixmap 4
+     * {@snippet lang=c :
+     * #define XK_braille_dots_1467 16787561
      * }
      */
-    public static long CWBorderPixmap() {
-        return 4L;
+    public static int XK_braille_dots_1467() {
+        return XK_braille_dots_1467;
     }
+    private static final int XK_braille_dots_2467 = (int)16787562L;
     /**
-     * {@snippet :
-     * #define CWBorderPixel 8
+     * {@snippet lang=c :
+     * #define XK_braille_dots_2467 16787562
      * }
      */
-    public static long CWBorderPixel() {
-        return 8L;
+    public static int XK_braille_dots_2467() {
+        return XK_braille_dots_2467;
     }
+    private static final int XK_braille_dots_12467 = (int)16787563L;
     /**
-     * {@snippet :
-     * #define CWBitGravity 16
+     * {@snippet lang=c :
+     * #define XK_braille_dots_12467 16787563
      * }
      */
-    public static long CWBitGravity() {
-        return 16L;
+    public static int XK_braille_dots_12467() {
+        return XK_braille_dots_12467;
     }
 }
-
 

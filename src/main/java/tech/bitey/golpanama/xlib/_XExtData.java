@@ -2,166 +2,315 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct _XExtData {
  *     int number;
- *     struct _XExtData* next;
- *     int (*free_private)(struct _XExtData*);
+ *     struct _XExtData *next;
+ *     int (*free_private)(struct _XExtData *);
  *     XPointer private_data;
- * };
+ * }
  * }
  */
 public class _XExtData {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$10.const$3;
-    }
-    public static VarHandle number$VH() {
-        return constants$10.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int number;
-     * }
-     */
-    public static int number$get(MemorySegment seg) {
-        return (int)constants$10.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int number;
-     * }
-     */
-    public static void number$set(MemorySegment seg, int x) {
-        constants$10.const$4.set(seg, x);
-    }
-    public static int number$get(MemorySegment seg, long index) {
-        return (int)constants$10.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void number$set(MemorySegment seg, long index, int x) {
-        constants$10.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle next$VH() {
-        return constants$10.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * struct _XExtData* next;
-     * }
-     */
-    public static MemorySegment next$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$10.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * struct _XExtData* next;
-     * }
-     */
-    public static void next$set(MemorySegment seg, MemorySegment x) {
-        constants$10.const$5.set(seg, x);
-    }
-    public static MemorySegment next$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$10.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void next$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$10.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    /**
-     * {@snippet :
- * int (*free_private)(struct _XExtData*);
-     * }
-     */
-    public interface free_private {
-
-        int apply(java.lang.foreign.MemorySegment _x0);
-        static MemorySegment allocate(free_private fi, Arena scope) {
-            return RuntimeHelper.upcallStub(constants$11.const$1, fi, constants$11.const$0, scope);
-        }
-        static free_private ofAddress(MemorySegment addr, Arena arena) {
-            MemorySegment symbol = addr.reinterpret(arena, null);
-            return (java.lang.foreign.MemorySegment __x0) -> {
-                try {
-                    return (int)constants$11.const$2.invokeExact(symbol, __x0);
-                } catch (Throwable ex$) {
-                    throw new AssertionError("should not reach here", ex$);
-                }
-            };
-        }
+    _XExtData() {
+        // Should not be called directly
     }
 
-    public static VarHandle free_private$VH() {
-        return constants$11.const$3;
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_INT.withName("number"),
+        MemoryLayout.paddingLayout(4),
+        Xlib_h.C_POINTER.withName("next"),
+        Xlib_h.C_POINTER.withName("free_private"),
+        Xlib_h.C_POINTER.withName("private_data")
+    ).withName("_XExtData");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
     }
+
+    private static final OfInt number$LAYOUT = (OfInt)$LAYOUT.select(groupElement("number"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int number
+     * }
+     */
+    public static final OfInt number$layout() {
+        return number$LAYOUT;
+    }
+
+    private static final long number$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int number
+     * }
+     */
+    public static final long number$offset() {
+        return number$OFFSET;
+    }
+
     /**
      * Getter for field:
-     * {@snippet :
-     * int (*free_private)(struct _XExtData*);
+     * {@snippet lang=c :
+     * int number
      * }
      */
-    public static MemorySegment free_private$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$11.const$3.get(seg);
+    public static int number(MemorySegment struct) {
+        return struct.get(number$LAYOUT, number$OFFSET);
     }
+
     /**
      * Setter for field:
-     * {@snippet :
-     * int (*free_private)(struct _XExtData*);
+     * {@snippet lang=c :
+     * int number
      * }
      */
-    public static void free_private$set(MemorySegment seg, MemorySegment x) {
-        constants$11.const$3.set(seg, x);
+    public static void number(MemorySegment struct, int fieldValue) {
+        struct.set(number$LAYOUT, number$OFFSET, fieldValue);
     }
-    public static MemorySegment free_private$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$11.const$3.get(seg.asSlice(index*sizeof()));
+
+    private static final AddressLayout next$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("next"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * struct _XExtData *next
+     * }
+     */
+    public static final AddressLayout next$layout() {
+        return next$LAYOUT;
     }
-    public static void free_private$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$11.const$3.set(seg.asSlice(index*sizeof()), x);
+
+    private static final long next$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * struct _XExtData *next
+     * }
+     */
+    public static final long next$offset() {
+        return next$OFFSET;
     }
-    public static free_private free_private(MemorySegment segment, Arena scope) {
-        return free_private.ofAddress(free_private$get(segment), scope);
-    }
-    public static VarHandle private_data$VH() {
-        return constants$11.const$4;
-    }
+
     /**
      * Getter for field:
-     * {@snippet :
-     * XPointer private_data;
+     * {@snippet lang=c :
+     * struct _XExtData *next
      * }
      */
-    public static MemorySegment private_data$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$11.const$4.get(seg);
+    public static MemorySegment next(MemorySegment struct) {
+        return struct.get(next$LAYOUT, next$OFFSET);
     }
+
     /**
      * Setter for field:
-     * {@snippet :
-     * XPointer private_data;
+     * {@snippet lang=c :
+     * struct _XExtData *next
      * }
      */
-    public static void private_data$set(MemorySegment seg, MemorySegment x) {
-        constants$11.const$4.set(seg, x);
+    public static void next(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(next$LAYOUT, next$OFFSET, fieldValue);
     }
-    public static MemorySegment private_data$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$11.const$4.get(seg.asSlice(index*sizeof()));
+
+    /**
+     * {@snippet lang=c :
+     * int (*free_private)(struct _XExtData *)
+     * }
+     */
+    public class free_private {
+
+        /**
+         * The function pointer signature, expressed as a functional interface
+         */
+        public interface Function {
+            int apply(MemorySegment _x0);
+        }
+
+        private static final FunctionDescriptor $DESC = FunctionDescriptor.of(
+            Xlib_h.C_INT,
+            Xlib_h.C_POINTER
+        );
+
+        /**
+         * The descriptor of this function pointer
+         */
+        public static FunctionDescriptor descriptor() {
+            return $DESC;
+        }
+
+        private static final MethodHandle UP$MH = Xlib_h.upcallHandle(free_private.Function.class, "apply", $DESC);
+
+        /**
+         * Allocates a new upcall stub, whose implementation is defined by {@code fi}.
+         * The lifetime of the returned segment is managed by {@code arena}
+         */
+        public static MemorySegment allocate(free_private.Function fi, Arena arena) {
+            return Linker.nativeLinker().upcallStub(UP$MH.bindTo(fi), $DESC, arena);
+        }
+
+        private static final MethodHandle DOWN$MH = Linker.nativeLinker().downcallHandle($DESC);
+
+        /**
+         * Invoke the upcall stub {@code funcPtr}, with given parameters
+         */
+        public static int invoke(MemorySegment funcPtr,MemorySegment _x0) {
+            try {
+                return (int) DOWN$MH.invokeExact(funcPtr, _x0);
+            } catch (Throwable ex$) {
+                throw new AssertionError("should not reach here", ex$);
+            }
+        }
     }
-    public static void private_data$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$11.const$4.set(seg.asSlice(index*sizeof()), x);
+
+    private static final AddressLayout free_private$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("free_private"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int (*free_private)(struct _XExtData *)
+     * }
+     */
+    public static final AddressLayout free_private$layout() {
+        return free_private$LAYOUT;
     }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
+
+    private static final long free_private$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int (*free_private)(struct _XExtData *)
+     * }
+     */
+    public static final long free_private$offset() {
+        return free_private$OFFSET;
     }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int (*free_private)(struct _XExtData *)
+     * }
+     */
+    public static MemorySegment free_private(MemorySegment struct) {
+        return struct.get(free_private$LAYOUT, free_private$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int (*free_private)(struct _XExtData *)
+     * }
+     */
+    public static void free_private(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(free_private$LAYOUT, free_private$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout private_data$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("private_data"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XPointer private_data
+     * }
+     */
+    public static final AddressLayout private_data$layout() {
+        return private_data$LAYOUT;
+    }
+
+    private static final long private_data$OFFSET = 24;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XPointer private_data
+     * }
+     */
+    public static final long private_data$offset() {
+        return private_data$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XPointer private_data
+     * }
+     */
+    public static MemorySegment private_data(MemorySegment struct) {
+        return struct.get(private_data$LAYOUT, private_data$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XPointer private_data
+     * }
+     */
+    public static void private_data(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(private_data$LAYOUT, private_data$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
 }
-
 

@@ -2,15 +2,20 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
- *     Visual* visual;
+ *     Visual *visual;
  *     VisualID visualid;
  *     int screen;
  *     int depth;
@@ -20,290 +25,518 @@ import static java.lang.foreign.ValueLayout.*;
  *     unsigned long blue_mask;
  *     int colormap_size;
  *     int bits_per_rgb;
- * };
+ * }
  * }
  */
 public class XVisualInfo {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$218.const$4;
+    XVisualInfo() {
+        // Should not be called directly
     }
-    public static VarHandle visual$VH() {
-        return constants$218.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Visual* visual;
-     * }
-     */
-    public static MemorySegment visual$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$218.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Visual* visual;
-     * }
-     */
-    public static void visual$set(MemorySegment seg, MemorySegment x) {
-        constants$218.const$5.set(seg, x);
-    }
-    public static MemorySegment visual$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$218.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void visual$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$218.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle visualid$VH() {
-        return constants$219.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * VisualID visualid;
-     * }
-     */
-    public static long visualid$get(MemorySegment seg) {
-        return (long)constants$219.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * VisualID visualid;
-     * }
-     */
-    public static void visualid$set(MemorySegment seg, long x) {
-        constants$219.const$0.set(seg, x);
-    }
-    public static long visualid$get(MemorySegment seg, long index) {
-        return (long)constants$219.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void visualid$set(MemorySegment seg, long index, long x) {
-        constants$219.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle screen$VH() {
-        return constants$219.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int screen;
-     * }
-     */
-    public static int screen$get(MemorySegment seg) {
-        return (int)constants$219.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int screen;
-     * }
-     */
-    public static void screen$set(MemorySegment seg, int x) {
-        constants$219.const$1.set(seg, x);
-    }
-    public static int screen$get(MemorySegment seg, long index) {
-        return (int)constants$219.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void screen$set(MemorySegment seg, long index, int x) {
-        constants$219.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle depth$VH() {
-        return constants$219.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int depth;
-     * }
-     */
-    public static int depth$get(MemorySegment seg) {
-        return (int)constants$219.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int depth;
-     * }
-     */
-    public static void depth$set(MemorySegment seg, int x) {
-        constants$219.const$2.set(seg, x);
-    }
-    public static int depth$get(MemorySegment seg, long index) {
-        return (int)constants$219.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void depth$set(MemorySegment seg, long index, int x) {
-        constants$219.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle class_$VH() {
-        return constants$219.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int class;
-     * }
-     */
-    public static int class_$get(MemorySegment seg) {
-        return (int)constants$219.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int class;
-     * }
-     */
-    public static void class_$set(MemorySegment seg, int x) {
-        constants$219.const$3.set(seg, x);
-    }
-    public static int class_$get(MemorySegment seg, long index) {
-        return (int)constants$219.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void class_$set(MemorySegment seg, long index, int x) {
-        constants$219.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle red_mask$VH() {
-        return constants$219.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long red_mask;
-     * }
-     */
-    public static long red_mask$get(MemorySegment seg) {
-        return (long)constants$219.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long red_mask;
-     * }
-     */
-    public static void red_mask$set(MemorySegment seg, long x) {
-        constants$219.const$4.set(seg, x);
-    }
-    public static long red_mask$get(MemorySegment seg, long index) {
-        return (long)constants$219.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void red_mask$set(MemorySegment seg, long index, long x) {
-        constants$219.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle green_mask$VH() {
-        return constants$219.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long green_mask;
-     * }
-     */
-    public static long green_mask$get(MemorySegment seg) {
-        return (long)constants$219.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long green_mask;
-     * }
-     */
-    public static void green_mask$set(MemorySegment seg, long x) {
-        constants$219.const$5.set(seg, x);
-    }
-    public static long green_mask$get(MemorySegment seg, long index) {
-        return (long)constants$219.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void green_mask$set(MemorySegment seg, long index, long x) {
-        constants$219.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle blue_mask$VH() {
-        return constants$220.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long blue_mask;
-     * }
-     */
-    public static long blue_mask$get(MemorySegment seg) {
-        return (long)constants$220.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long blue_mask;
-     * }
-     */
-    public static void blue_mask$set(MemorySegment seg, long x) {
-        constants$220.const$0.set(seg, x);
-    }
-    public static long blue_mask$get(MemorySegment seg, long index) {
-        return (long)constants$220.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void blue_mask$set(MemorySegment seg, long index, long x) {
-        constants$220.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle colormap_size$VH() {
-        return constants$220.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int colormap_size;
-     * }
-     */
-    public static int colormap_size$get(MemorySegment seg) {
-        return (int)constants$220.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int colormap_size;
-     * }
-     */
-    public static void colormap_size$set(MemorySegment seg, int x) {
-        constants$220.const$1.set(seg, x);
-    }
-    public static int colormap_size$get(MemorySegment seg, long index) {
-        return (int)constants$220.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void colormap_size$set(MemorySegment seg, long index, int x) {
-        constants$220.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle bits_per_rgb$VH() {
-        return constants$220.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int bits_per_rgb;
-     * }
-     */
-    public static int bits_per_rgb$get(MemorySegment seg) {
-        return (int)constants$220.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int bits_per_rgb;
-     * }
-     */
-    public static void bits_per_rgb$set(MemorySegment seg, int x) {
-        constants$220.const$2.set(seg, x);
-    }
-    public static int bits_per_rgb$get(MemorySegment seg, long index) {
-        return (int)constants$220.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void bits_per_rgb$set(MemorySegment seg, long index, int x) {
-        constants$220.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_POINTER.withName("visual"),
+        Xlib_h.C_LONG.withName("visualid"),
+        Xlib_h.C_INT.withName("screen"),
+        Xlib_h.C_INT.withName("depth"),
+        Xlib_h.C_INT.withName("class"),
+        MemoryLayout.paddingLayout(4),
+        Xlib_h.C_LONG.withName("red_mask"),
+        Xlib_h.C_LONG.withName("green_mask"),
+        Xlib_h.C_LONG.withName("blue_mask"),
+        Xlib_h.C_INT.withName("colormap_size"),
+        Xlib_h.C_INT.withName("bits_per_rgb")
+    ).withName("$anon$287:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final AddressLayout visual$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("visual"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static final AddressLayout visual$layout() {
+        return visual$LAYOUT;
+    }
+
+    private static final long visual$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static final long visual$offset() {
+        return visual$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static MemorySegment visual(MemorySegment struct) {
+        return struct.get(visual$LAYOUT, visual$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static void visual(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(visual$LAYOUT, visual$OFFSET, fieldValue);
+    }
+
+    private static final OfLong visualid$LAYOUT = (OfLong)$LAYOUT.select(groupElement("visualid"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static final OfLong visualid$layout() {
+        return visualid$LAYOUT;
+    }
+
+    private static final long visualid$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static final long visualid$offset() {
+        return visualid$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static long visualid(MemorySegment struct) {
+        return struct.get(visualid$LAYOUT, visualid$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static void visualid(MemorySegment struct, long fieldValue) {
+        struct.set(visualid$LAYOUT, visualid$OFFSET, fieldValue);
+    }
+
+    private static final OfInt screen$LAYOUT = (OfInt)$LAYOUT.select(groupElement("screen"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int screen
+     * }
+     */
+    public static final OfInt screen$layout() {
+        return screen$LAYOUT;
+    }
+
+    private static final long screen$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int screen
+     * }
+     */
+    public static final long screen$offset() {
+        return screen$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int screen
+     * }
+     */
+    public static int screen(MemorySegment struct) {
+        return struct.get(screen$LAYOUT, screen$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int screen
+     * }
+     */
+    public static void screen(MemorySegment struct, int fieldValue) {
+        struct.set(screen$LAYOUT, screen$OFFSET, fieldValue);
+    }
+
+    private static final OfInt depth$LAYOUT = (OfInt)$LAYOUT.select(groupElement("depth"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int depth
+     * }
+     */
+    public static final OfInt depth$layout() {
+        return depth$LAYOUT;
+    }
+
+    private static final long depth$OFFSET = 20;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int depth
+     * }
+     */
+    public static final long depth$offset() {
+        return depth$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int depth
+     * }
+     */
+    public static int depth(MemorySegment struct) {
+        return struct.get(depth$LAYOUT, depth$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int depth
+     * }
+     */
+    public static void depth(MemorySegment struct, int fieldValue) {
+        struct.set(depth$LAYOUT, depth$OFFSET, fieldValue);
+    }
+
+    private static final OfInt class_$LAYOUT = (OfInt)$LAYOUT.select(groupElement("class"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int class
+     * }
+     */
+    public static final OfInt class_$layout() {
+        return class_$LAYOUT;
+    }
+
+    private static final long class_$OFFSET = 24;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int class
+     * }
+     */
+    public static final long class_$offset() {
+        return class_$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int class
+     * }
+     */
+    public static int class_(MemorySegment struct) {
+        return struct.get(class_$LAYOUT, class_$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int class
+     * }
+     */
+    public static void class_(MemorySegment struct, int fieldValue) {
+        struct.set(class_$LAYOUT, class_$OFFSET, fieldValue);
+    }
+
+    private static final OfLong red_mask$LAYOUT = (OfLong)$LAYOUT.select(groupElement("red_mask"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long red_mask
+     * }
+     */
+    public static final OfLong red_mask$layout() {
+        return red_mask$LAYOUT;
+    }
+
+    private static final long red_mask$OFFSET = 32;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long red_mask
+     * }
+     */
+    public static final long red_mask$offset() {
+        return red_mask$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long red_mask
+     * }
+     */
+    public static long red_mask(MemorySegment struct) {
+        return struct.get(red_mask$LAYOUT, red_mask$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long red_mask
+     * }
+     */
+    public static void red_mask(MemorySegment struct, long fieldValue) {
+        struct.set(red_mask$LAYOUT, red_mask$OFFSET, fieldValue);
+    }
+
+    private static final OfLong green_mask$LAYOUT = (OfLong)$LAYOUT.select(groupElement("green_mask"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long green_mask
+     * }
+     */
+    public static final OfLong green_mask$layout() {
+        return green_mask$LAYOUT;
+    }
+
+    private static final long green_mask$OFFSET = 40;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long green_mask
+     * }
+     */
+    public static final long green_mask$offset() {
+        return green_mask$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long green_mask
+     * }
+     */
+    public static long green_mask(MemorySegment struct) {
+        return struct.get(green_mask$LAYOUT, green_mask$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long green_mask
+     * }
+     */
+    public static void green_mask(MemorySegment struct, long fieldValue) {
+        struct.set(green_mask$LAYOUT, green_mask$OFFSET, fieldValue);
+    }
+
+    private static final OfLong blue_mask$LAYOUT = (OfLong)$LAYOUT.select(groupElement("blue_mask"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mask
+     * }
+     */
+    public static final OfLong blue_mask$layout() {
+        return blue_mask$LAYOUT;
+    }
+
+    private static final long blue_mask$OFFSET = 48;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mask
+     * }
+     */
+    public static final long blue_mask$offset() {
+        return blue_mask$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mask
+     * }
+     */
+    public static long blue_mask(MemorySegment struct) {
+        return struct.get(blue_mask$LAYOUT, blue_mask$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mask
+     * }
+     */
+    public static void blue_mask(MemorySegment struct, long fieldValue) {
+        struct.set(blue_mask$LAYOUT, blue_mask$OFFSET, fieldValue);
+    }
+
+    private static final OfInt colormap_size$LAYOUT = (OfInt)$LAYOUT.select(groupElement("colormap_size"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int colormap_size
+     * }
+     */
+    public static final OfInt colormap_size$layout() {
+        return colormap_size$LAYOUT;
+    }
+
+    private static final long colormap_size$OFFSET = 56;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int colormap_size
+     * }
+     */
+    public static final long colormap_size$offset() {
+        return colormap_size$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int colormap_size
+     * }
+     */
+    public static int colormap_size(MemorySegment struct) {
+        return struct.get(colormap_size$LAYOUT, colormap_size$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int colormap_size
+     * }
+     */
+    public static void colormap_size(MemorySegment struct, int fieldValue) {
+        struct.set(colormap_size$LAYOUT, colormap_size$OFFSET, fieldValue);
+    }
+
+    private static final OfInt bits_per_rgb$LAYOUT = (OfInt)$LAYOUT.select(groupElement("bits_per_rgb"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int bits_per_rgb
+     * }
+     */
+    public static final OfInt bits_per_rgb$layout() {
+        return bits_per_rgb$LAYOUT;
+    }
+
+    private static final long bits_per_rgb$OFFSET = 60;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int bits_per_rgb
+     * }
+     */
+    public static final long bits_per_rgb$offset() {
+        return bits_per_rgb$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int bits_per_rgb
+     * }
+     */
+    public static int bits_per_rgb(MemorySegment struct) {
+        return struct.get(bits_per_rgb$LAYOUT, bits_per_rgb$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int bits_per_rgb
+     * }
+     */
+    public static void bits_per_rgb(MemorySegment struct, int fieldValue) {
+        struct.set(bits_per_rgb$LAYOUT, bits_per_rgb$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

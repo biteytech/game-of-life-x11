@@ -2,84 +2,173 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
  *     int max_keypermod;
- *     KeyCode* modifiermap;
- * };
+ *     KeyCode *modifiermap;
+ * }
  * }
  */
 public class XModifierKeymap {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$47.const$5;
+    XModifierKeymap() {
+        // Should not be called directly
     }
-    public static VarHandle max_keypermod$VH() {
-        return constants$48.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int max_keypermod;
-     * }
-     */
-    public static int max_keypermod$get(MemorySegment seg) {
-        return (int)constants$48.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int max_keypermod;
-     * }
-     */
-    public static void max_keypermod$set(MemorySegment seg, int x) {
-        constants$48.const$0.set(seg, x);
-    }
-    public static int max_keypermod$get(MemorySegment seg, long index) {
-        return (int)constants$48.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void max_keypermod$set(MemorySegment seg, long index, int x) {
-        constants$48.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle modifiermap$VH() {
-        return constants$48.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * KeyCode* modifiermap;
-     * }
-     */
-    public static MemorySegment modifiermap$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$48.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * KeyCode* modifiermap;
-     * }
-     */
-    public static void modifiermap$set(MemorySegment seg, MemorySegment x) {
-        constants$48.const$1.set(seg, x);
-    }
-    public static MemorySegment modifiermap$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$48.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void modifiermap$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$48.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_INT.withName("max_keypermod"),
+        MemoryLayout.paddingLayout(4),
+        Xlib_h.C_POINTER.withName("modifiermap")
+    ).withName("$anon$475:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfInt max_keypermod$LAYOUT = (OfInt)$LAYOUT.select(groupElement("max_keypermod"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int max_keypermod
+     * }
+     */
+    public static final OfInt max_keypermod$layout() {
+        return max_keypermod$LAYOUT;
+    }
+
+    private static final long max_keypermod$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int max_keypermod
+     * }
+     */
+    public static final long max_keypermod$offset() {
+        return max_keypermod$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int max_keypermod
+     * }
+     */
+    public static int max_keypermod(MemorySegment struct) {
+        return struct.get(max_keypermod$LAYOUT, max_keypermod$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int max_keypermod
+     * }
+     */
+    public static void max_keypermod(MemorySegment struct, int fieldValue) {
+        struct.set(max_keypermod$LAYOUT, max_keypermod$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout modifiermap$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("modifiermap"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * KeyCode *modifiermap
+     * }
+     */
+    public static final AddressLayout modifiermap$layout() {
+        return modifiermap$LAYOUT;
+    }
+
+    private static final long modifiermap$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * KeyCode *modifiermap
+     * }
+     */
+    public static final long modifiermap$offset() {
+        return modifiermap$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * KeyCode *modifiermap
+     * }
+     */
+    public static MemorySegment modifiermap(MemorySegment struct) {
+        return struct.get(modifiermap$LAYOUT, modifiermap$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * KeyCode *modifiermap
+     * }
+     */
+    public static void modifiermap(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(modifiermap$LAYOUT, modifiermap$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

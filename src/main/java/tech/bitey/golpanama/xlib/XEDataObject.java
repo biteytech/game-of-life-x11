@@ -2,196 +2,356 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * union {
- *     Display* display;
+ *     Display *display;
  *     GC gc;
- *     Visual* visual;
- *     Screen* screen;
- *     ScreenFormat* pixmap_format;
- *     XFontStruct* font;
- * };
+ *     Visual *visual;
+ *     Screen *screen;
+ *     ScreenFormat *pixmap_format;
+ *     XFontStruct *font;
+ * }
  * }
  */
 public class XEDataObject {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$109.const$1;
+    XEDataObject() {
+        // Should not be called directly
     }
-    public static VarHandle display$VH() {
-        return constants$109.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Display* display;
-     * }
-     */
-    public static MemorySegment display$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Display* display;
-     * }
-     */
-    public static void display$set(MemorySegment seg, MemorySegment x) {
-        constants$109.const$2.set(seg, x);
-    }
-    public static MemorySegment display$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void display$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$109.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle gc$VH() {
-        return constants$109.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * GC gc;
-     * }
-     */
-    public static MemorySegment gc$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * GC gc;
-     * }
-     */
-    public static void gc$set(MemorySegment seg, MemorySegment x) {
-        constants$109.const$3.set(seg, x);
-    }
-    public static MemorySegment gc$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void gc$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$109.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle visual$VH() {
-        return constants$109.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Visual* visual;
-     * }
-     */
-    public static MemorySegment visual$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Visual* visual;
-     * }
-     */
-    public static void visual$set(MemorySegment seg, MemorySegment x) {
-        constants$109.const$4.set(seg, x);
-    }
-    public static MemorySegment visual$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void visual$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$109.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle screen$VH() {
-        return constants$109.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Screen* screen;
-     * }
-     */
-    public static MemorySegment screen$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Screen* screen;
-     * }
-     */
-    public static void screen$set(MemorySegment seg, MemorySegment x) {
-        constants$109.const$5.set(seg, x);
-    }
-    public static MemorySegment screen$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$109.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void screen$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$109.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle pixmap_format$VH() {
-        return constants$110.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * ScreenFormat* pixmap_format;
-     * }
-     */
-    public static MemorySegment pixmap_format$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$110.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * ScreenFormat* pixmap_format;
-     * }
-     */
-    public static void pixmap_format$set(MemorySegment seg, MemorySegment x) {
-        constants$110.const$0.set(seg, x);
-    }
-    public static MemorySegment pixmap_format$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$110.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void pixmap_format$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$110.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle font$VH() {
-        return constants$110.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * XFontStruct* font;
-     * }
-     */
-    public static MemorySegment font$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$110.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * XFontStruct* font;
-     * }
-     */
-    public static void font$set(MemorySegment seg, MemorySegment x) {
-        constants$110.const$1.set(seg, x);
-    }
-    public static MemorySegment font$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$110.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void font$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$110.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.unionLayout(
+        Xlib_h.C_POINTER.withName("display"),
+        Xlib_h.C_POINTER.withName("gc"),
+        Xlib_h.C_POINTER.withName("visual"),
+        Xlib_h.C_POINTER.withName("screen"),
+        Xlib_h.C_POINTER.withName("pixmap_format"),
+        Xlib_h.C_POINTER.withName("font")
+    ).withName("$anon$1077:9");
+
+    /**
+     * The layout of this union
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final AddressLayout display$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("display"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Display *display
+     * }
+     */
+    public static final AddressLayout display$layout() {
+        return display$LAYOUT;
+    }
+
+    private static final long display$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Display *display
+     * }
+     */
+    public static final long display$offset() {
+        return display$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Display *display
+     * }
+     */
+    public static MemorySegment display(MemorySegment union) {
+        return union.get(display$LAYOUT, display$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Display *display
+     * }
+     */
+    public static void display(MemorySegment union, MemorySegment fieldValue) {
+        union.set(display$LAYOUT, display$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout gc$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("gc"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * GC gc
+     * }
+     */
+    public static final AddressLayout gc$layout() {
+        return gc$LAYOUT;
+    }
+
+    private static final long gc$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * GC gc
+     * }
+     */
+    public static final long gc$offset() {
+        return gc$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * GC gc
+     * }
+     */
+    public static MemorySegment gc(MemorySegment union) {
+        return union.get(gc$LAYOUT, gc$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * GC gc
+     * }
+     */
+    public static void gc(MemorySegment union, MemorySegment fieldValue) {
+        union.set(gc$LAYOUT, gc$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout visual$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("visual"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static final AddressLayout visual$layout() {
+        return visual$LAYOUT;
+    }
+
+    private static final long visual$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static final long visual$offset() {
+        return visual$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static MemorySegment visual(MemorySegment union) {
+        return union.get(visual$LAYOUT, visual$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Visual *visual
+     * }
+     */
+    public static void visual(MemorySegment union, MemorySegment fieldValue) {
+        union.set(visual$LAYOUT, visual$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout screen$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("screen"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Screen *screen
+     * }
+     */
+    public static final AddressLayout screen$layout() {
+        return screen$LAYOUT;
+    }
+
+    private static final long screen$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Screen *screen
+     * }
+     */
+    public static final long screen$offset() {
+        return screen$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Screen *screen
+     * }
+     */
+    public static MemorySegment screen(MemorySegment union) {
+        return union.get(screen$LAYOUT, screen$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Screen *screen
+     * }
+     */
+    public static void screen(MemorySegment union, MemorySegment fieldValue) {
+        union.set(screen$LAYOUT, screen$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout pixmap_format$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("pixmap_format"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * ScreenFormat *pixmap_format
+     * }
+     */
+    public static final AddressLayout pixmap_format$layout() {
+        return pixmap_format$LAYOUT;
+    }
+
+    private static final long pixmap_format$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * ScreenFormat *pixmap_format
+     * }
+     */
+    public static final long pixmap_format$offset() {
+        return pixmap_format$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * ScreenFormat *pixmap_format
+     * }
+     */
+    public static MemorySegment pixmap_format(MemorySegment union) {
+        return union.get(pixmap_format$LAYOUT, pixmap_format$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * ScreenFormat *pixmap_format
+     * }
+     */
+    public static void pixmap_format(MemorySegment union, MemorySegment fieldValue) {
+        union.set(pixmap_format$LAYOUT, pixmap_format$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout font$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("font"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XFontStruct *font
+     * }
+     */
+    public static final AddressLayout font$layout() {
+        return font$LAYOUT;
+    }
+
+    private static final long font$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XFontStruct *font
+     * }
+     */
+    public static final long font$offset() {
+        return font$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XFontStruct *font
+     * }
+     */
+    public static MemorySegment font(MemorySegment union) {
+        return union.get(font$LAYOUT, font$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XFontStruct *font
+     * }
+     */
+    public static void font(MemorySegment union, MemorySegment fieldValue) {
+        union.set(font$LAYOUT, font$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this union
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

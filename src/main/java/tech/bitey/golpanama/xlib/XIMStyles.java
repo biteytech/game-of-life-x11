@@ -2,84 +2,173 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
  *     unsigned short count_styles;
- *     XIMStyle* supported_styles;
- * };
+ *     XIMStyle *supported_styles;
+ * }
  * }
  */
 public class XIMStyles {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$114.const$1;
+    XIMStyles() {
+        // Should not be called directly
     }
-    public static VarHandle count_styles$VH() {
-        return constants$114.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned short count_styles;
-     * }
-     */
-    public static short count_styles$get(MemorySegment seg) {
-        return (short)constants$114.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned short count_styles;
-     * }
-     */
-    public static void count_styles$set(MemorySegment seg, short x) {
-        constants$114.const$2.set(seg, x);
-    }
-    public static short count_styles$get(MemorySegment seg, long index) {
-        return (short)constants$114.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void count_styles$set(MemorySegment seg, long index, short x) {
-        constants$114.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle supported_styles$VH() {
-        return constants$114.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * XIMStyle* supported_styles;
-     * }
-     */
-    public static MemorySegment supported_styles$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$114.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * XIMStyle* supported_styles;
-     * }
-     */
-    public static void supported_styles$set(MemorySegment seg, MemorySegment x) {
-        constants$114.const$3.set(seg, x);
-    }
-    public static MemorySegment supported_styles$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$114.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void supported_styles$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$114.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_SHORT.withName("count_styles"),
+        MemoryLayout.paddingLayout(6),
+        Xlib_h.C_POINTER.withName("supported_styles")
+    ).withName("$anon$1168:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfShort count_styles$LAYOUT = (OfShort)$LAYOUT.select(groupElement("count_styles"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned short count_styles
+     * }
+     */
+    public static final OfShort count_styles$layout() {
+        return count_styles$LAYOUT;
+    }
+
+    private static final long count_styles$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned short count_styles
+     * }
+     */
+    public static final long count_styles$offset() {
+        return count_styles$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned short count_styles
+     * }
+     */
+    public static short count_styles(MemorySegment struct) {
+        return struct.get(count_styles$LAYOUT, count_styles$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned short count_styles
+     * }
+     */
+    public static void count_styles(MemorySegment struct, short fieldValue) {
+        struct.set(count_styles$LAYOUT, count_styles$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout supported_styles$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("supported_styles"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XIMStyle *supported_styles
+     * }
+     */
+    public static final AddressLayout supported_styles$layout() {
+        return supported_styles$LAYOUT;
+    }
+
+    private static final long supported_styles$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XIMStyle *supported_styles
+     * }
+     */
+    public static final long supported_styles$offset() {
+        return supported_styles$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XIMStyle *supported_styles
+     * }
+     */
+    public static MemorySegment supported_styles(MemorySegment struct) {
+        return struct.get(supported_styles$LAYOUT, supported_styles$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XIMStyle *supported_styles
+     * }
+     */
+    public static void supported_styles(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(supported_styles$LAYOUT, supported_styles$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

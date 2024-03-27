@@ -2,8021 +2,1679 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
-import static java.lang.foreign.ValueLayout.*;
-public class Xlib_h extends Xlib_h_3 {
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
 
-    public static final OfByte C_CHAR = JAVA_BYTE;
-    public static final OfShort C_SHORT = JAVA_SHORT;
-    public static final OfInt C_INT = JAVA_INT;
-    public static final OfLong C_LONG = JAVA_LONG;
-    public static final OfLong C_LONG_LONG = JAVA_LONG;
-    public static final OfFloat C_FLOAT = JAVA_FLOAT;
-    public static final OfDouble C_DOUBLE = JAVA_DOUBLE;
-    public static final AddressLayout C_POINTER = RuntimeHelper.POINTER;
-    /**
-     * {@snippet :
-     * #define XlibSpecificationRelease 6
-     * }
-     */
-    public static int XlibSpecificationRelease() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define _SYS_TYPES_H 1
-     * }
-     */
-    public static int _SYS_TYPES_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _FEATURES_H 1
-     * }
-     */
-    public static int _FEATURES_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _DEFAULT_SOURCE 1
-     * }
-     */
-    public static int _DEFAULT_SOURCE() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __GLIBC_USE_ISOC2X 0
-     * }
-     */
-    public static int __GLIBC_USE_ISOC2X() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_ISOC11 1
-     * }
-     */
-    public static int __USE_ISOC11() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_ISOC99 1
-     * }
-     */
-    public static int __USE_ISOC99() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_ISOC95 1
-     * }
-     */
-    public static int __USE_ISOC95() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_POSIX_IMPLICITLY 1
-     * }
-     */
-    public static int __USE_POSIX_IMPLICITLY() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _POSIX_SOURCE 1
-     * }
-     */
-    public static int _POSIX_SOURCE() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_POSIX 1
-     * }
-     */
-    public static int __USE_POSIX() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_POSIX2 1
-     * }
-     */
-    public static int __USE_POSIX2() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_POSIX199309 1
-     * }
-     */
-    public static int __USE_POSIX199309() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_POSIX199506 1
-     * }
-     */
-    public static int __USE_POSIX199506() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_XOPEN2K 1
-     * }
-     */
-    public static int __USE_XOPEN2K() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_XOPEN2K8 1
-     * }
-     */
-    public static int __USE_XOPEN2K8() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _ATFILE_SOURCE 1
-     * }
-     */
-    public static int _ATFILE_SOURCE() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __WORDSIZE 64
-     * }
-     */
-    public static int __WORDSIZE() {
-        return (int)64L;
-    }
-    /**
-     * {@snippet :
-     * #define __WORDSIZE_TIME64_COMPAT32 1
-     * }
-     */
-    public static int __WORDSIZE_TIME64_COMPAT32() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __SYSCALL_WORDSIZE 64
-     * }
-     */
-    public static int __SYSCALL_WORDSIZE() {
-        return (int)64L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_MISC 1
-     * }
-     */
-    public static int __USE_MISC() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_ATFILE 1
-     * }
-     */
-    public static int __USE_ATFILE() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __USE_FORTIFY_LEVEL 0
-     * }
-     */
-    public static int __USE_FORTIFY_LEVEL() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define __GLIBC_USE_DEPRECATED_GETS 0
-     * }
-     */
-    public static int __GLIBC_USE_DEPRECATED_GETS() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define __GLIBC_USE_DEPRECATED_SCANF 0
-     * }
-     */
-    public static int __GLIBC_USE_DEPRECATED_SCANF() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define _STDC_PREDEF_H 1
-     * }
-     */
-    public static int _STDC_PREDEF_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __STDC_IEC_559__ 1
-     * }
-     */
-    public static int __STDC_IEC_559__() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __STDC_IEC_559_COMPLEX__ 1
-     * }
-     */
-    public static int __STDC_IEC_559_COMPLEX__() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __GNU_LIBRARY__ 6
-     * }
-     */
-    public static int __GNU_LIBRARY__() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define __GLIBC__ 2
-     * }
-     */
-    public static int __GLIBC__() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define __GLIBC_MINOR__ 35
-     * }
-     */
-    public static int __GLIBC_MINOR__() {
-        return (int)35L;
-    }
-    /**
-     * {@snippet :
-     * #define _SYS_CDEFS_H 1
-     * }
-     */
-    public static int _SYS_CDEFS_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __glibc_c99_flexarr_available 1
-     * }
-     */
-    public static int __glibc_c99_flexarr_available() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI 0
-     * }
-     */
-    public static int __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define __HAVE_GENERIC_SELECTION 1
-     * }
-     */
-    public static int __HAVE_GENERIC_SELECTION() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_TYPES_H 1
-     * }
-     */
-    public static int _BITS_TYPES_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_TYPESIZES_H 1
-     * }
-     */
-    public static int _BITS_TYPESIZES_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __OFF_T_MATCHES_OFF64_T 1
-     * }
-     */
-    public static int __OFF_T_MATCHES_OFF64_T() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __INO_T_MATCHES_INO64_T 1
-     * }
-     */
-    public static int __INO_T_MATCHES_INO64_T() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __RLIM_T_MATCHES_RLIM64_T 1
-     * }
-     */
-    public static int __RLIM_T_MATCHES_RLIM64_T() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __STATFS_MATCHES_STATFS64 1
-     * }
-     */
-    public static int __STATFS_MATCHES_STATFS64() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 1
-     * }
-     */
-    public static int __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __FD_SETSIZE 1024
-     * }
-     */
-    public static int __FD_SETSIZE() {
-        return (int)1024L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_TIME64_H 1
-     * }
-     */
-    public static int _BITS_TIME64_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __clock_t_defined 1
-     * }
-     */
-    public static int __clock_t_defined() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __clockid_t_defined 1
-     * }
-     */
-    public static int __clockid_t_defined() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __time_t_defined 1
-     * }
-     */
-    public static int __time_t_defined() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __timer_t_defined 1
-     * }
-     */
-    public static int __timer_t_defined() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_STDINT_INTN_H 1
-     * }
-     */
-    public static int _BITS_STDINT_INTN_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __BIT_TYPES_DEFINED__ 1
-     * }
-     */
-    public static int __BIT_TYPES_DEFINED__() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _ENDIAN_H 1
-     * }
-     */
-    public static int _ENDIAN_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_ENDIAN_H 1
-     * }
-     */
-    public static int _BITS_ENDIAN_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __LITTLE_ENDIAN 1234
-     * }
-     */
-    public static int __LITTLE_ENDIAN() {
-        return (int)1234L;
-    }
-    /**
-     * {@snippet :
-     * #define __BIG_ENDIAN 4321
-     * }
-     */
-    public static int __BIG_ENDIAN() {
-        return (int)4321L;
-    }
-    /**
-     * {@snippet :
-     * #define __PDP_ENDIAN 3412
-     * }
-     */
-    public static int __PDP_ENDIAN() {
-        return (int)3412L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_ENDIANNESS_H 1
-     * }
-     */
-    public static int _BITS_ENDIANNESS_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_BYTESWAP_H 1
-     * }
-     */
-    public static int _BITS_BYTESWAP_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_UINTN_IDENTITY_H 1
-     * }
-     */
-    public static int _BITS_UINTN_IDENTITY_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _SYS_SELECT_H 1
-     * }
-     */
-    public static int _SYS_SELECT_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __sigset_t_defined 1
-     * }
-     */
-    public static int __sigset_t_defined() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __timeval_defined 1
-     * }
-     */
-    public static int __timeval_defined() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _STRUCT_TIMESPEC 1
-     * }
-     */
-    public static int _STRUCT_TIMESPEC() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_PTHREADTYPES_COMMON_H 1
-     * }
-     */
-    public static int _BITS_PTHREADTYPES_COMMON_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _THREAD_SHARED_TYPES_H 1
-     * }
-     */
-    public static int _THREAD_SHARED_TYPES_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define _BITS_PTHREADTYPES_ARCH_H 1
-     * }
-     */
-    public static int _BITS_PTHREADTYPES_ARCH_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_MUTEX_T 40
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_MUTEX_T() {
-        return (int)40L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_ATTR_T 56
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_ATTR_T() {
-        return (int)56L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_RWLOCK_T 56
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_RWLOCK_T() {
-        return (int)56L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_BARRIER_T 32
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_BARRIER_T() {
-        return (int)32L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_MUTEXATTR_T 4
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_MUTEXATTR_T() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_COND_T 48
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_COND_T() {
-        return (int)48L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_CONDATTR_T 4
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_CONDATTR_T() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_RWLOCKATTR_T 8
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_RWLOCKATTR_T() {
-        return (int)8L;
-    }
-    /**
-     * {@snippet :
-     * #define __SIZEOF_PTHREAD_BARRIERATTR_T 4
-     * }
-     */
-    public static int __SIZEOF_PTHREAD_BARRIERATTR_T() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define _THREAD_MUTEX_INTERNAL_H 1
-     * }
-     */
-    public static int _THREAD_MUTEX_INTERNAL_H() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __PTHREAD_MUTEX_HAVE_PREV 1
-     * }
-     */
-    public static int __PTHREAD_MUTEX_HAVE_PREV() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define __have_pthread_attr_t 1
-     * }
-     */
-    public static int __have_pthread_attr_t() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define X_PROTOCOL 11
-     * }
-     */
-    public static int X_PROTOCOL() {
-        return (int)11L;
-    }
-    /**
-     * {@snippet :
-     * #define X_PROTOCOL_REVISION 0
-     * }
-     */
-    public static int X_PROTOCOL_REVISION() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define KeyPress 2
-     * }
-     */
-    public static int KeyPress() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define KeyRelease 3
-     * }
-     */
-    public static int KeyRelease() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define ButtonPress 4
-     * }
-     */
-    public static int ButtonPress() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define ButtonRelease 5
-     * }
-     */
-    public static int ButtonRelease() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define MotionNotify 6
-     * }
-     */
-    public static int MotionNotify() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define EnterNotify 7
-     * }
-     */
-    public static int EnterNotify() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * #define LeaveNotify 8
-     * }
-     */
-    public static int LeaveNotify() {
-        return (int)8L;
-    }
-    /**
-     * {@snippet :
-     * #define FocusIn 9
-     * }
-     */
-    public static int FocusIn() {
-        return (int)9L;
-    }
-    /**
-     * {@snippet :
-     * #define FocusOut 10
-     * }
-     */
-    public static int FocusOut() {
-        return (int)10L;
-    }
-    /**
-     * {@snippet :
-     * #define KeymapNotify 11
-     * }
-     */
-    public static int KeymapNotify() {
-        return (int)11L;
-    }
-    /**
-     * {@snippet :
-     * #define Expose 12
-     * }
-     */
-    public static int Expose() {
-        return (int)12L;
-    }
-    /**
-     * {@snippet :
-     * #define GraphicsExpose 13
-     * }
-     */
-    public static int GraphicsExpose() {
-        return (int)13L;
-    }
-    /**
-     * {@snippet :
-     * #define NoExpose 14
-     * }
-     */
-    public static int NoExpose() {
-        return (int)14L;
-    }
-    /**
-     * {@snippet :
-     * #define VisibilityNotify 15
-     * }
-     */
-    public static int VisibilityNotify() {
-        return (int)15L;
-    }
-    /**
-     * {@snippet :
-     * #define CreateNotify 16
-     * }
-     */
-    public static int CreateNotify() {
-        return (int)16L;
-    }
-    /**
-     * {@snippet :
-     * #define DestroyNotify 17
-     * }
-     */
-    public static int DestroyNotify() {
-        return (int)17L;
-    }
-    /**
-     * {@snippet :
-     * #define UnmapNotify 18
-     * }
-     */
-    public static int UnmapNotify() {
-        return (int)18L;
-    }
-    /**
-     * {@snippet :
-     * #define MapNotify 19
-     * }
-     */
-    public static int MapNotify() {
-        return (int)19L;
-    }
-    /**
-     * {@snippet :
-     * #define MapRequest 20
-     * }
-     */
-    public static int MapRequest() {
-        return (int)20L;
-    }
-    /**
-     * {@snippet :
-     * #define ReparentNotify 21
-     * }
-     */
-    public static int ReparentNotify() {
-        return (int)21L;
-    }
-    /**
-     * {@snippet :
-     * #define ConfigureNotify 22
-     * }
-     */
-    public static int ConfigureNotify() {
-        return (int)22L;
-    }
-    /**
-     * {@snippet :
-     * #define ConfigureRequest 23
-     * }
-     */
-    public static int ConfigureRequest() {
-        return (int)23L;
-    }
-    /**
-     * {@snippet :
-     * #define GravityNotify 24
-     * }
-     */
-    public static int GravityNotify() {
-        return (int)24L;
-    }
-    /**
-     * {@snippet :
-     * #define ResizeRequest 25
-     * }
-     */
-    public static int ResizeRequest() {
-        return (int)25L;
-    }
-    /**
-     * {@snippet :
-     * #define CirculateNotify 26
-     * }
-     */
-    public static int CirculateNotify() {
-        return (int)26L;
-    }
-    /**
-     * {@snippet :
-     * #define CirculateRequest 27
-     * }
-     */
-    public static int CirculateRequest() {
-        return (int)27L;
-    }
-    /**
-     * {@snippet :
-     * #define PropertyNotify 28
-     * }
-     */
-    public static int PropertyNotify() {
-        return (int)28L;
-    }
-    /**
-     * {@snippet :
-     * #define SelectionClear 29
-     * }
-     */
-    public static int SelectionClear() {
-        return (int)29L;
-    }
-    /**
-     * {@snippet :
-     * #define SelectionRequest 30
-     * }
-     */
-    public static int SelectionRequest() {
-        return (int)30L;
-    }
-    /**
-     * {@snippet :
-     * #define SelectionNotify 31
-     * }
-     */
-    public static int SelectionNotify() {
-        return (int)31L;
-    }
-    /**
-     * {@snippet :
-     * #define ColormapNotify 32
-     * }
-     */
-    public static int ColormapNotify() {
-        return (int)32L;
-    }
-    /**
-     * {@snippet :
-     * #define ClientMessage 33
-     * }
-     */
-    public static int ClientMessage() {
-        return (int)33L;
-    }
-    /**
-     * {@snippet :
-     * #define MappingNotify 34
-     * }
-     */
-    public static int MappingNotify() {
-        return (int)34L;
-    }
-    /**
-     * {@snippet :
-     * #define GenericEvent 35
-     * }
-     */
-    public static int GenericEvent() {
-        return (int)35L;
-    }
-    /**
-     * {@snippet :
-     * #define LASTEvent 36
-     * }
-     */
-    public static int LASTEvent() {
-        return (int)36L;
-    }
-    /**
-     * {@snippet :
-     * #define ShiftMapIndex 0
-     * }
-     */
-    public static int ShiftMapIndex() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define LockMapIndex 1
-     * }
-     */
-    public static int LockMapIndex() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define ControlMapIndex 2
-     * }
-     */
-    public static int ControlMapIndex() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define Mod1MapIndex 3
-     * }
-     */
-    public static int Mod1MapIndex() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define Mod2MapIndex 4
-     * }
-     */
-    public static int Mod2MapIndex() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define Mod3MapIndex 5
-     * }
-     */
-    public static int Mod3MapIndex() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define Mod4MapIndex 6
-     * }
-     */
-    public static int Mod4MapIndex() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define Mod5MapIndex 7
-     * }
-     */
-    public static int Mod5MapIndex() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * #define Button1 1
-     * }
-     */
-    public static int Button1() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define Button2 2
-     * }
-     */
-    public static int Button2() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define Button3 3
-     * }
-     */
-    public static int Button3() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define Button4 4
-     * }
-     */
-    public static int Button4() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define Button5 5
-     * }
-     */
-    public static int Button5() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyNormal 0
-     * }
-     */
-    public static int NotifyNormal() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyGrab 1
-     * }
-     */
-    public static int NotifyGrab() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyUngrab 2
-     * }
-     */
-    public static int NotifyUngrab() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyWhileGrabbed 3
-     * }
-     */
-    public static int NotifyWhileGrabbed() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyHint 1
-     * }
-     */
-    public static int NotifyHint() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyAncestor 0
-     * }
-     */
-    public static int NotifyAncestor() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyVirtual 1
-     * }
-     */
-    public static int NotifyVirtual() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyInferior 2
-     * }
-     */
-    public static int NotifyInferior() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyNonlinear 3
-     * }
-     */
-    public static int NotifyNonlinear() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyNonlinearVirtual 4
-     * }
-     */
-    public static int NotifyNonlinearVirtual() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyPointer 5
-     * }
-     */
-    public static int NotifyPointer() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyPointerRoot 6
-     * }
-     */
-    public static int NotifyPointerRoot() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define NotifyDetailNone 7
-     * }
-     */
-    public static int NotifyDetailNone() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * #define VisibilityUnobscured 0
-     * }
-     */
-    public static int VisibilityUnobscured() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define VisibilityPartiallyObscured 1
-     * }
-     */
-    public static int VisibilityPartiallyObscured() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define VisibilityFullyObscured 2
-     * }
-     */
-    public static int VisibilityFullyObscured() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define PlaceOnTop 0
-     * }
-     */
-    public static int PlaceOnTop() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define PlaceOnBottom 1
-     * }
-     */
-    public static int PlaceOnBottom() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define FamilyInternet 0
-     * }
-     */
-    public static int FamilyInternet() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define FamilyDECnet 1
-     * }
-     */
-    public static int FamilyDECnet() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define FamilyChaos 2
-     * }
-     */
-    public static int FamilyChaos() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define FamilyInternet6 6
-     * }
-     */
-    public static int FamilyInternet6() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define FamilyServerInterpreted 5
-     * }
-     */
-    public static int FamilyServerInterpreted() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define PropertyNewValue 0
-     * }
-     */
-    public static int PropertyNewValue() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define PropertyDelete 1
-     * }
-     */
-    public static int PropertyDelete() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define ColormapUninstalled 0
-     * }
-     */
-    public static int ColormapUninstalled() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define ColormapInstalled 1
-     * }
-     */
-    public static int ColormapInstalled() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define GrabModeSync 0
-     * }
-     */
-    public static int GrabModeSync() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define GrabModeAsync 1
-     * }
-     */
-    public static int GrabModeAsync() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define GrabSuccess 0
-     * }
-     */
-    public static int GrabSuccess() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define AlreadyGrabbed 1
-     * }
-     */
-    public static int AlreadyGrabbed() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define GrabInvalidTime 2
-     * }
-     */
-    public static int GrabInvalidTime() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define GrabNotViewable 3
-     * }
-     */
-    public static int GrabNotViewable() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define GrabFrozen 4
-     * }
-     */
-    public static int GrabFrozen() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define AsyncPointer 0
-     * }
-     */
-    public static int AsyncPointer() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define SyncPointer 1
-     * }
-     */
-    public static int SyncPointer() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define ReplayPointer 2
-     * }
-     */
-    public static int ReplayPointer() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define AsyncKeyboard 3
-     * }
-     */
-    public static int AsyncKeyboard() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define SyncKeyboard 4
-     * }
-     */
-    public static int SyncKeyboard() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define ReplayKeyboard 5
-     * }
-     */
-    public static int ReplayKeyboard() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define AsyncBoth 6
-     * }
-     */
-    public static int AsyncBoth() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define SyncBoth 7
-     * }
-     */
-    public static int SyncBoth() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * #define RevertToParent 2
-     * }
-     */
-    public static int RevertToParent() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define Success 0
-     * }
-     */
-    public static int Success() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define BadRequest 1
-     * }
-     */
-    public static int BadRequest() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define BadValue 2
-     * }
-     */
-    public static int BadValue() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define BadWindow 3
-     * }
-     */
-    public static int BadWindow() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define BadPixmap 4
-     * }
-     */
-    public static int BadPixmap() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define BadAtom 5
-     * }
-     */
-    public static int BadAtom() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define BadCursor 6
-     * }
-     */
-    public static int BadCursor() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define BadFont 7
-     * }
-     */
-    public static int BadFont() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * #define BadMatch 8
-     * }
-     */
-    public static int BadMatch() {
-        return (int)8L;
-    }
-    /**
-     * {@snippet :
-     * #define BadDrawable 9
-     * }
-     */
-    public static int BadDrawable() {
-        return (int)9L;
-    }
-    /**
-     * {@snippet :
-     * #define BadAccess 10
-     * }
-     */
-    public static int BadAccess() {
-        return (int)10L;
-    }
-    /**
-     * {@snippet :
-     * #define BadAlloc 11
-     * }
-     */
-    public static int BadAlloc() {
-        return (int)11L;
-    }
-    /**
-     * {@snippet :
-     * #define BadColor 12
-     * }
-     */
-    public static int BadColor() {
-        return (int)12L;
-    }
-    /**
-     * {@snippet :
-     * #define BadGC 13
-     * }
-     */
-    public static int BadGC() {
-        return (int)13L;
-    }
-    /**
-     * {@snippet :
-     * #define BadIDChoice 14
-     * }
-     */
-    public static int BadIDChoice() {
-        return (int)14L;
-    }
-    /**
-     * {@snippet :
-     * #define BadName 15
-     * }
-     */
-    public static int BadName() {
-        return (int)15L;
-    }
-    /**
-     * {@snippet :
-     * #define BadLength 16
-     * }
-     */
-    public static int BadLength() {
-        return (int)16L;
-    }
-    /**
-     * {@snippet :
-     * #define BadImplementation 17
-     * }
-     */
-    public static int BadImplementation() {
-        return (int)17L;
-    }
-    /**
-     * {@snippet :
-     * #define FirstExtensionError 128
-     * }
-     */
-    public static int FirstExtensionError() {
-        return (int)128L;
-    }
-    /**
-     * {@snippet :
-     * #define LastExtensionError 255
-     * }
-     */
-    public static int LastExtensionError() {
-        return (int)255L;
-    }
-    /**
-     * {@snippet :
-     * #define InputOutput 1
-     * }
-     */
-    public static int InputOutput() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define InputOnly 2
-     * }
-     */
-    public static int InputOnly() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define ForgetGravity 0
-     * }
-     */
-    public static int ForgetGravity() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define NorthWestGravity 1
-     * }
-     */
-    public static int NorthWestGravity() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define NorthGravity 2
-     * }
-     */
-    public static int NorthGravity() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define NorthEastGravity 3
-     * }
-     */
-    public static int NorthEastGravity() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define WestGravity 4
-     * }
-     */
-    public static int WestGravity() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define CenterGravity 5
-     * }
-     */
-    public static int CenterGravity() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define EastGravity 6
-     * }
-     */
-    public static int EastGravity() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define SouthWestGravity 7
-     * }
-     */
-    public static int SouthWestGravity() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * #define SouthGravity 8
-     * }
-     */
-    public static int SouthGravity() {
-        return (int)8L;
-    }
-    /**
-     * {@snippet :
-     * #define SouthEastGravity 9
-     * }
-     */
-    public static int SouthEastGravity() {
-        return (int)9L;
-    }
-    /**
-     * {@snippet :
-     * #define StaticGravity 10
-     * }
-     */
-    public static int StaticGravity() {
-        return (int)10L;
-    }
-    /**
-     * {@snippet :
-     * #define UnmapGravity 0
-     * }
-     */
-    public static int UnmapGravity() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define NotUseful 0
-     * }
-     */
-    public static int NotUseful() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define WhenMapped 1
-     * }
-     */
-    public static int WhenMapped() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define Always 2
-     * }
-     */
-    public static int Always() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define IsUnmapped 0
-     * }
-     */
-    public static int IsUnmapped() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define IsUnviewable 1
-     * }
-     */
-    public static int IsUnviewable() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define IsViewable 2
-     * }
-     */
-    public static int IsViewable() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define SetModeInsert 0
-     * }
-     */
-    public static int SetModeInsert() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define SetModeDelete 1
-     * }
-     */
-    public static int SetModeDelete() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define DestroyAll 0
-     * }
-     */
-    public static int DestroyAll() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define RetainPermanent 1
-     * }
-     */
-    public static int RetainPermanent() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define RetainTemporary 2
-     * }
-     */
-    public static int RetainTemporary() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define Above 0
-     * }
-     */
-    public static int Above() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define Below 1
-     * }
-     */
-    public static int Below() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define TopIf 2
-     * }
-     */
-    public static int TopIf() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define BottomIf 3
-     * }
-     */
-    public static int BottomIf() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define Opposite 4
-     * }
-     */
-    public static int Opposite() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define RaiseLowest 0
-     * }
-     */
-    public static int RaiseLowest() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define LowerHighest 1
-     * }
-     */
-    public static int LowerHighest() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define PropModeReplace 0
-     * }
-     */
-    public static int PropModeReplace() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define PropModePrepend 1
-     * }
-     */
-    public static int PropModePrepend() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define PropModeAppend 2
-     * }
-     */
-    public static int PropModeAppend() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define GXclear 0
-     * }
-     */
-    public static int GXclear() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define GXand 1
-     * }
-     */
-    public static int GXand() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define GXandReverse 2
-     * }
-     */
-    public static int GXandReverse() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define GXcopy 3
-     * }
-     */
-    public static int GXcopy() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define GXandInverted 4
-     * }
-     */
-    public static int GXandInverted() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define GXnoop 5
-     * }
-     */
-    public static int GXnoop() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define GXxor 6
-     * }
-     */
-    public static int GXxor() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * #define GXor 7
-     * }
-     */
-    public static int GXor() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * #define GXnor 8
-     * }
-     */
-    public static int GXnor() {
-        return (int)8L;
-    }
-    /**
-     * {@snippet :
-     * #define GXequiv 9
-     * }
-     */
-    public static int GXequiv() {
-        return (int)9L;
-    }
-    /**
-     * {@snippet :
-     * #define GXinvert 10
-     * }
-     */
-    public static int GXinvert() {
-        return (int)10L;
-    }
-    /**
-     * {@snippet :
-     * #define GXorReverse 11
-     * }
-     */
-    public static int GXorReverse() {
-        return (int)11L;
-    }
-    /**
-     * {@snippet :
-     * #define GXcopyInverted 12
-     * }
-     */
-    public static int GXcopyInverted() {
-        return (int)12L;
-    }
-    /**
-     * {@snippet :
-     * #define GXorInverted 13
-     * }
-     */
-    public static int GXorInverted() {
-        return (int)13L;
-    }
-    /**
-     * {@snippet :
-     * #define GXnand 14
-     * }
-     */
-    public static int GXnand() {
-        return (int)14L;
-    }
-    /**
-     * {@snippet :
-     * #define GXset 15
-     * }
-     */
-    public static int GXset() {
-        return (int)15L;
-    }
-    /**
-     * {@snippet :
-     * #define LineSolid 0
-     * }
-     */
-    public static int LineSolid() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define LineOnOffDash 1
-     * }
-     */
-    public static int LineOnOffDash() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define LineDoubleDash 2
-     * }
-     */
-    public static int LineDoubleDash() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define CapNotLast 0
-     * }
-     */
-    public static int CapNotLast() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define CapButt 1
-     * }
-     */
-    public static int CapButt() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define CapRound 2
-     * }
-     */
-    public static int CapRound() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define CapProjecting 3
-     * }
-     */
-    public static int CapProjecting() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define JoinMiter 0
-     * }
-     */
-    public static int JoinMiter() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define JoinRound 1
-     * }
-     */
-    public static int JoinRound() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define JoinBevel 2
-     * }
-     */
-    public static int JoinBevel() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define FillSolid 0
-     * }
-     */
-    public static int FillSolid() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define FillTiled 1
-     * }
-     */
-    public static int FillTiled() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define FillStippled 2
-     * }
-     */
-    public static int FillStippled() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define FillOpaqueStippled 3
-     * }
-     */
-    public static int FillOpaqueStippled() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define EvenOddRule 0
-     * }
-     */
-    public static int EvenOddRule() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define WindingRule 1
-     * }
-     */
-    public static int WindingRule() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define ClipByChildren 0
-     * }
-     */
-    public static int ClipByChildren() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define IncludeInferiors 1
-     * }
-     */
-    public static int IncludeInferiors() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define Unsorted 0
-     * }
-     */
-    public static int Unsorted() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define YSorted 1
-     * }
-     */
-    public static int YSorted() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define YXSorted 2
-     * }
-     */
-    public static int YXSorted() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define YXBanded 3
-     * }
-     */
-    public static int YXBanded() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define CoordModeOrigin 0
-     * }
-     */
-    public static int CoordModeOrigin() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define CoordModePrevious 1
-     * }
-     */
-    public static int CoordModePrevious() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define Complex 0
-     * }
-     */
-    public static int Complex() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define Nonconvex 1
-     * }
-     */
-    public static int Nonconvex() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define Convex 2
-     * }
-     */
-    public static int Convex() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define ArcChord 0
-     * }
-     */
-    public static int ArcChord() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define ArcPieSlice 1
-     * }
-     */
-    public static int ArcPieSlice() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define GCLastBit 22
-     * }
-     */
-    public static int GCLastBit() {
-        return (int)22L;
-    }
-    /**
-     * {@snippet :
-     * #define FontLeftToRight 0
-     * }
-     */
-    public static int FontLeftToRight() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define FontRightToLeft 1
-     * }
-     */
-    public static int FontRightToLeft() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define FontChange 255
-     * }
-     */
-    public static int FontChange() {
-        return (int)255L;
-    }
-    /**
-     * {@snippet :
-     * #define XYBitmap 0
-     * }
-     */
-    public static int XYBitmap() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define XYPixmap 1
-     * }
-     */
-    public static int XYPixmap() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define ZPixmap 2
-     * }
-     */
-    public static int ZPixmap() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define AllocNone 0
-     * }
-     */
-    public static int AllocNone() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define AllocAll 1
-     * }
-     */
-    public static int AllocAll() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define CursorShape 0
-     * }
-     */
-    public static int CursorShape() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define TileShape 1
-     * }
-     */
-    public static int TileShape() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define StippleShape 2
-     * }
-     */
-    public static int StippleShape() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define AutoRepeatModeOff 0
-     * }
-     */
-    public static int AutoRepeatModeOff() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define AutoRepeatModeOn 1
-     * }
-     */
-    public static int AutoRepeatModeOn() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define AutoRepeatModeDefault 2
-     * }
-     */
-    public static int AutoRepeatModeDefault() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define LedModeOff 0
-     * }
-     */
-    public static int LedModeOff() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define LedModeOn 1
-     * }
-     */
-    public static int LedModeOn() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define MappingSuccess 0
-     * }
-     */
-    public static int MappingSuccess() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define MappingBusy 1
-     * }
-     */
-    public static int MappingBusy() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define MappingFailed 2
-     * }
-     */
-    public static int MappingFailed() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define MappingModifier 0
-     * }
-     */
-    public static int MappingModifier() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define MappingKeyboard 1
-     * }
-     */
-    public static int MappingKeyboard() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define MappingPointer 2
-     * }
-     */
-    public static int MappingPointer() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define DontPreferBlanking 0
-     * }
-     */
-    public static int DontPreferBlanking() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define PreferBlanking 1
-     * }
-     */
-    public static int PreferBlanking() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define DefaultBlanking 2
-     * }
-     */
-    public static int DefaultBlanking() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define DisableScreenSaver 0
-     * }
-     */
-    public static int DisableScreenSaver() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define DisableScreenInterval 0
-     * }
-     */
-    public static int DisableScreenInterval() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define DontAllowExposures 0
-     * }
-     */
-    public static int DontAllowExposures() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define AllowExposures 1
-     * }
-     */
-    public static int AllowExposures() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define DefaultExposures 2
-     * }
-     */
-    public static int DefaultExposures() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define ScreenSaverReset 0
-     * }
-     */
-    public static int ScreenSaverReset() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define ScreenSaverActive 1
-     * }
-     */
-    public static int ScreenSaverActive() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define HostInsert 0
-     * }
-     */
-    public static int HostInsert() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define HostDelete 1
-     * }
-     */
-    public static int HostDelete() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define EnableAccess 1
-     * }
-     */
-    public static int EnableAccess() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define DisableAccess 0
-     * }
-     */
-    public static int DisableAccess() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define StaticGray 0
-     * }
-     */
-    public static int StaticGray() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define GrayScale 1
-     * }
-     */
-    public static int GrayScale() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define StaticColor 2
-     * }
-     */
-    public static int StaticColor() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define PseudoColor 3
-     * }
-     */
-    public static int PseudoColor() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define TrueColor 4
-     * }
-     */
-    public static int TrueColor() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define DirectColor 5
-     * }
-     */
-    public static int DirectColor() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * #define LSBFirst 0
-     * }
-     */
-    public static int LSBFirst() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define MSBFirst 1
-     * }
-     */
-    public static int MSBFirst() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define NeedFunctionPrototypes 1
-     * }
-     */
-    public static int NeedFunctionPrototypes() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define NeedVarargsPrototypes 1
-     * }
-     */
-    public static int NeedVarargsPrototypes() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define NeedNestedPrototypes 1
-     * }
-     */
-    public static int NeedNestedPrototypes() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define FUNCPROTO 15
-     * }
-     */
-    public static int FUNCPROTO() {
-        return (int)15L;
-    }
-    /**
-     * {@snippet :
-     * #define NeedWidePrototypes 0
-     * }
-     */
-    public static int NeedWidePrototypes() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define X_HAVE_UTF8_STRING 1
-     * }
-     */
-    public static int X_HAVE_UTF8_STRING() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define True 1
-     * }
-     */
-    public static int True() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define False 0
-     * }
-     */
-    public static int False() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define QueuedAlready 0
-     * }
-     */
-    public static int QueuedAlready() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * #define QueuedAfterReading 1
-     * }
-     */
-    public static int QueuedAfterReading() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define QueuedAfterFlush 2
-     * }
-     */
-    public static int QueuedAfterFlush() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define XLookupNone 1
-     * }
-     */
-    public static int XLookupNone() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * #define XLookupChars 2
-     * }
-     */
-    public static int XLookupChars() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * #define XLookupKeySym 3
-     * }
-     */
-    public static int XLookupKeySym() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * #define XLookupBoth 4
-     * }
-     */
-    public static int XLookupBoth() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_VoidSymbol 16777215
-     * }
-     */
-    public static int XK_VoidSymbol() {
-        return (int)16777215L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_BackSpace 65288
-     * }
-     */
-    public static int XK_BackSpace() {
-        return (int)65288L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Tab 65289
-     * }
-     */
-    public static int XK_Tab() {
-        return (int)65289L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Linefeed 65290
-     * }
-     */
-    public static int XK_Linefeed() {
-        return (int)65290L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Clear 65291
-     * }
-     */
-    public static int XK_Clear() {
-        return (int)65291L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Return 65293
-     * }
-     */
-    public static int XK_Return() {
-        return (int)65293L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pause 65299
-     * }
-     */
-    public static int XK_Pause() {
-        return (int)65299L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Scroll_Lock 65300
-     * }
-     */
-    public static int XK_Scroll_Lock() {
-        return (int)65300L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Sys_Req 65301
-     * }
-     */
-    public static int XK_Sys_Req() {
-        return (int)65301L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Escape 65307
-     * }
-     */
-    public static int XK_Escape() {
-        return (int)65307L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Delete 65535
-     * }
-     */
-    public static int XK_Delete() {
-        return (int)65535L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Multi_key 65312
-     * }
-     */
-    public static int XK_Multi_key() {
-        return (int)65312L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Codeinput 65335
-     * }
-     */
-    public static int XK_Codeinput() {
-        return (int)65335L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_SingleCandidate 65340
-     * }
-     */
-    public static int XK_SingleCandidate() {
-        return (int)65340L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_MultipleCandidate 65341
-     * }
-     */
-    public static int XK_MultipleCandidate() {
-        return (int)65341L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_PreviousCandidate 65342
-     * }
-     */
-    public static int XK_PreviousCandidate() {
-        return (int)65342L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Kanji 65313
-     * }
-     */
-    public static int XK_Kanji() {
-        return (int)65313L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Muhenkan 65314
-     * }
-     */
-    public static int XK_Muhenkan() {
-        return (int)65314L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Henkan_Mode 65315
-     * }
-     */
-    public static int XK_Henkan_Mode() {
-        return (int)65315L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Henkan 65315
-     * }
-     */
-    public static int XK_Henkan() {
-        return (int)65315L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Romaji 65316
-     * }
-     */
-    public static int XK_Romaji() {
-        return (int)65316L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Hiragana 65317
-     * }
-     */
-    public static int XK_Hiragana() {
-        return (int)65317L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Katakana 65318
-     * }
-     */
-    public static int XK_Katakana() {
-        return (int)65318L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Hiragana_Katakana 65319
-     * }
-     */
-    public static int XK_Hiragana_Katakana() {
-        return (int)65319L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Zenkaku 65320
-     * }
-     */
-    public static int XK_Zenkaku() {
-        return (int)65320L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Hankaku 65321
-     * }
-     */
-    public static int XK_Hankaku() {
-        return (int)65321L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Zenkaku_Hankaku 65322
-     * }
-     */
-    public static int XK_Zenkaku_Hankaku() {
-        return (int)65322L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Touroku 65323
-     * }
-     */
-    public static int XK_Touroku() {
-        return (int)65323L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Massyo 65324
-     * }
-     */
-    public static int XK_Massyo() {
-        return (int)65324L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Kana_Lock 65325
-     * }
-     */
-    public static int XK_Kana_Lock() {
-        return (int)65325L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Kana_Shift 65326
-     * }
-     */
-    public static int XK_Kana_Shift() {
-        return (int)65326L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Eisu_Shift 65327
-     * }
-     */
-    public static int XK_Eisu_Shift() {
-        return (int)65327L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Eisu_toggle 65328
-     * }
-     */
-    public static int XK_Eisu_toggle() {
-        return (int)65328L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Kanji_Bangou 65335
-     * }
-     */
-    public static int XK_Kanji_Bangou() {
-        return (int)65335L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Zen_Koho 65341
-     * }
-     */
-    public static int XK_Zen_Koho() {
-        return (int)65341L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Mae_Koho 65342
-     * }
-     */
-    public static int XK_Mae_Koho() {
-        return (int)65342L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Home 65360
-     * }
-     */
-    public static int XK_Home() {
-        return (int)65360L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Left 65361
-     * }
-     */
-    public static int XK_Left() {
-        return (int)65361L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Up 65362
-     * }
-     */
-    public static int XK_Up() {
-        return (int)65362L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Right 65363
-     * }
-     */
-    public static int XK_Right() {
-        return (int)65363L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Down 65364
-     * }
-     */
-    public static int XK_Down() {
-        return (int)65364L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Prior 65365
-     * }
-     */
-    public static int XK_Prior() {
-        return (int)65365L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Page_Up 65365
-     * }
-     */
-    public static int XK_Page_Up() {
-        return (int)65365L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Next 65366
-     * }
-     */
-    public static int XK_Next() {
-        return (int)65366L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Page_Down 65366
-     * }
-     */
-    public static int XK_Page_Down() {
-        return (int)65366L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_End 65367
-     * }
-     */
-    public static int XK_End() {
-        return (int)65367L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Begin 65368
-     * }
-     */
-    public static int XK_Begin() {
-        return (int)65368L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Select 65376
-     * }
-     */
-    public static int XK_Select() {
-        return (int)65376L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Print 65377
-     * }
-     */
-    public static int XK_Print() {
-        return (int)65377L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Execute 65378
-     * }
-     */
-    public static int XK_Execute() {
-        return (int)65378L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Insert 65379
-     * }
-     */
-    public static int XK_Insert() {
-        return (int)65379L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Undo 65381
-     * }
-     */
-    public static int XK_Undo() {
-        return (int)65381L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Redo 65382
-     * }
-     */
-    public static int XK_Redo() {
-        return (int)65382L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Menu 65383
-     * }
-     */
-    public static int XK_Menu() {
-        return (int)65383L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Find 65384
-     * }
-     */
-    public static int XK_Find() {
-        return (int)65384L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Cancel 65385
-     * }
-     */
-    public static int XK_Cancel() {
-        return (int)65385L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Help 65386
-     * }
-     */
-    public static int XK_Help() {
-        return (int)65386L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Break 65387
-     * }
-     */
-    public static int XK_Break() {
-        return (int)65387L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Mode_switch 65406
-     * }
-     */
-    public static int XK_Mode_switch() {
-        return (int)65406L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_script_switch 65406
-     * }
-     */
-    public static int XK_script_switch() {
-        return (int)65406L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Num_Lock 65407
-     * }
-     */
-    public static int XK_Num_Lock() {
-        return (int)65407L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Space 65408
-     * }
-     */
-    public static int XK_KP_Space() {
-        return (int)65408L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Tab 65417
-     * }
-     */
-    public static int XK_KP_Tab() {
-        return (int)65417L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Enter 65421
-     * }
-     */
-    public static int XK_KP_Enter() {
-        return (int)65421L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_F1 65425
-     * }
-     */
-    public static int XK_KP_F1() {
-        return (int)65425L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_F2 65426
-     * }
-     */
-    public static int XK_KP_F2() {
-        return (int)65426L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_F3 65427
-     * }
-     */
-    public static int XK_KP_F3() {
-        return (int)65427L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_F4 65428
-     * }
-     */
-    public static int XK_KP_F4() {
-        return (int)65428L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Home 65429
-     * }
-     */
-    public static int XK_KP_Home() {
-        return (int)65429L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Left 65430
-     * }
-     */
-    public static int XK_KP_Left() {
-        return (int)65430L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Up 65431
-     * }
-     */
-    public static int XK_KP_Up() {
-        return (int)65431L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Right 65432
-     * }
-     */
-    public static int XK_KP_Right() {
-        return (int)65432L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Down 65433
-     * }
-     */
-    public static int XK_KP_Down() {
-        return (int)65433L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Prior 65434
-     * }
-     */
-    public static int XK_KP_Prior() {
-        return (int)65434L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Page_Up 65434
-     * }
-     */
-    public static int XK_KP_Page_Up() {
-        return (int)65434L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Next 65435
-     * }
-     */
-    public static int XK_KP_Next() {
-        return (int)65435L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Page_Down 65435
-     * }
-     */
-    public static int XK_KP_Page_Down() {
-        return (int)65435L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_End 65436
-     * }
-     */
-    public static int XK_KP_End() {
-        return (int)65436L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Begin 65437
-     * }
-     */
-    public static int XK_KP_Begin() {
-        return (int)65437L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Insert 65438
-     * }
-     */
-    public static int XK_KP_Insert() {
-        return (int)65438L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Delete 65439
-     * }
-     */
-    public static int XK_KP_Delete() {
-        return (int)65439L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Equal 65469
-     * }
-     */
-    public static int XK_KP_Equal() {
-        return (int)65469L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Multiply 65450
-     * }
-     */
-    public static int XK_KP_Multiply() {
-        return (int)65450L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Add 65451
-     * }
-     */
-    public static int XK_KP_Add() {
-        return (int)65451L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Separator 65452
-     * }
-     */
-    public static int XK_KP_Separator() {
-        return (int)65452L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Subtract 65453
-     * }
-     */
-    public static int XK_KP_Subtract() {
-        return (int)65453L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Decimal 65454
-     * }
-     */
-    public static int XK_KP_Decimal() {
-        return (int)65454L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_Divide 65455
-     * }
-     */
-    public static int XK_KP_Divide() {
-        return (int)65455L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_0 65456
-     * }
-     */
-    public static int XK_KP_0() {
-        return (int)65456L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_1 65457
-     * }
-     */
-    public static int XK_KP_1() {
-        return (int)65457L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_2 65458
-     * }
-     */
-    public static int XK_KP_2() {
-        return (int)65458L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_3 65459
-     * }
-     */
-    public static int XK_KP_3() {
-        return (int)65459L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_4 65460
-     * }
-     */
-    public static int XK_KP_4() {
-        return (int)65460L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_5 65461
-     * }
-     */
-    public static int XK_KP_5() {
-        return (int)65461L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_6 65462
-     * }
-     */
-    public static int XK_KP_6() {
-        return (int)65462L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_7 65463
-     * }
-     */
-    public static int XK_KP_7() {
-        return (int)65463L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_8 65464
-     * }
-     */
-    public static int XK_KP_8() {
-        return (int)65464L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_KP_9 65465
-     * }
-     */
-    public static int XK_KP_9() {
-        return (int)65465L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F1 65470
-     * }
-     */
-    public static int XK_F1() {
-        return (int)65470L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F2 65471
-     * }
-     */
-    public static int XK_F2() {
-        return (int)65471L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F3 65472
-     * }
-     */
-    public static int XK_F3() {
-        return (int)65472L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F4 65473
-     * }
-     */
-    public static int XK_F4() {
-        return (int)65473L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F5 65474
-     * }
-     */
-    public static int XK_F5() {
-        return (int)65474L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F6 65475
-     * }
-     */
-    public static int XK_F6() {
-        return (int)65475L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F7 65476
-     * }
-     */
-    public static int XK_F7() {
-        return (int)65476L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F8 65477
-     * }
-     */
-    public static int XK_F8() {
-        return (int)65477L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F9 65478
-     * }
-     */
-    public static int XK_F9() {
-        return (int)65478L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F10 65479
-     * }
-     */
-    public static int XK_F10() {
-        return (int)65479L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F11 65480
-     * }
-     */
-    public static int XK_F11() {
-        return (int)65480L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L1 65480
-     * }
-     */
-    public static int XK_L1() {
-        return (int)65480L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F12 65481
-     * }
-     */
-    public static int XK_F12() {
-        return (int)65481L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L2 65481
-     * }
-     */
-    public static int XK_L2() {
-        return (int)65481L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F13 65482
-     * }
-     */
-    public static int XK_F13() {
-        return (int)65482L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L3 65482
-     * }
-     */
-    public static int XK_L3() {
-        return (int)65482L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F14 65483
-     * }
-     */
-    public static int XK_F14() {
-        return (int)65483L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L4 65483
-     * }
-     */
-    public static int XK_L4() {
-        return (int)65483L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F15 65484
-     * }
-     */
-    public static int XK_F15() {
-        return (int)65484L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L5 65484
-     * }
-     */
-    public static int XK_L5() {
-        return (int)65484L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F16 65485
-     * }
-     */
-    public static int XK_F16() {
-        return (int)65485L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L6 65485
-     * }
-     */
-    public static int XK_L6() {
-        return (int)65485L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F17 65486
-     * }
-     */
-    public static int XK_F17() {
-        return (int)65486L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L7 65486
-     * }
-     */
-    public static int XK_L7() {
-        return (int)65486L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F18 65487
-     * }
-     */
-    public static int XK_F18() {
-        return (int)65487L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L8 65487
-     * }
-     */
-    public static int XK_L8() {
-        return (int)65487L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F19 65488
-     * }
-     */
-    public static int XK_F19() {
-        return (int)65488L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L9 65488
-     * }
-     */
-    public static int XK_L9() {
-        return (int)65488L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F20 65489
-     * }
-     */
-    public static int XK_F20() {
-        return (int)65489L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L10 65489
-     * }
-     */
-    public static int XK_L10() {
-        return (int)65489L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F21 65490
-     * }
-     */
-    public static int XK_F21() {
-        return (int)65490L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R1 65490
-     * }
-     */
-    public static int XK_R1() {
-        return (int)65490L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F22 65491
-     * }
-     */
-    public static int XK_F22() {
-        return (int)65491L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R2 65491
-     * }
-     */
-    public static int XK_R2() {
-        return (int)65491L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F23 65492
-     * }
-     */
-    public static int XK_F23() {
-        return (int)65492L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R3 65492
-     * }
-     */
-    public static int XK_R3() {
-        return (int)65492L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F24 65493
-     * }
-     */
-    public static int XK_F24() {
-        return (int)65493L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R4 65493
-     * }
-     */
-    public static int XK_R4() {
-        return (int)65493L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F25 65494
-     * }
-     */
-    public static int XK_F25() {
-        return (int)65494L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R5 65494
-     * }
-     */
-    public static int XK_R5() {
-        return (int)65494L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F26 65495
-     * }
-     */
-    public static int XK_F26() {
-        return (int)65495L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R6 65495
-     * }
-     */
-    public static int XK_R6() {
-        return (int)65495L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F27 65496
-     * }
-     */
-    public static int XK_F27() {
-        return (int)65496L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R7 65496
-     * }
-     */
-    public static int XK_R7() {
-        return (int)65496L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F28 65497
-     * }
-     */
-    public static int XK_F28() {
-        return (int)65497L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R8 65497
-     * }
-     */
-    public static int XK_R8() {
-        return (int)65497L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F29 65498
-     * }
-     */
-    public static int XK_F29() {
-        return (int)65498L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R9 65498
-     * }
-     */
-    public static int XK_R9() {
-        return (int)65498L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F30 65499
-     * }
-     */
-    public static int XK_F30() {
-        return (int)65499L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R10 65499
-     * }
-     */
-    public static int XK_R10() {
-        return (int)65499L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F31 65500
-     * }
-     */
-    public static int XK_F31() {
-        return (int)65500L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R11 65500
-     * }
-     */
-    public static int XK_R11() {
-        return (int)65500L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F32 65501
-     * }
-     */
-    public static int XK_F32() {
-        return (int)65501L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R12 65501
-     * }
-     */
-    public static int XK_R12() {
-        return (int)65501L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F33 65502
-     * }
-     */
-    public static int XK_F33() {
-        return (int)65502L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R13 65502
-     * }
-     */
-    public static int XK_R13() {
-        return (int)65502L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F34 65503
-     * }
-     */
-    public static int XK_F34() {
-        return (int)65503L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R14 65503
-     * }
-     */
-    public static int XK_R14() {
-        return (int)65503L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F35 65504
-     * }
-     */
-    public static int XK_F35() {
-        return (int)65504L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R15 65504
-     * }
-     */
-    public static int XK_R15() {
-        return (int)65504L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Shift_L 65505
-     * }
-     */
-    public static int XK_Shift_L() {
-        return (int)65505L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Shift_R 65506
-     * }
-     */
-    public static int XK_Shift_R() {
-        return (int)65506L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Control_L 65507
-     * }
-     */
-    public static int XK_Control_L() {
-        return (int)65507L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Control_R 65508
-     * }
-     */
-    public static int XK_Control_R() {
-        return (int)65508L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Caps_Lock 65509
-     * }
-     */
-    public static int XK_Caps_Lock() {
-        return (int)65509L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Shift_Lock 65510
-     * }
-     */
-    public static int XK_Shift_Lock() {
-        return (int)65510L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Meta_L 65511
-     * }
-     */
-    public static int XK_Meta_L() {
-        return (int)65511L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Meta_R 65512
-     * }
-     */
-    public static int XK_Meta_R() {
-        return (int)65512L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Alt_L 65513
-     * }
-     */
-    public static int XK_Alt_L() {
-        return (int)65513L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Alt_R 65514
-     * }
-     */
-    public static int XK_Alt_R() {
-        return (int)65514L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Super_L 65515
-     * }
-     */
-    public static int XK_Super_L() {
-        return (int)65515L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Super_R 65516
-     * }
-     */
-    public static int XK_Super_R() {
-        return (int)65516L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Hyper_L 65517
-     * }
-     */
-    public static int XK_Hyper_L() {
-        return (int)65517L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Hyper_R 65518
-     * }
-     */
-    public static int XK_Hyper_R() {
-        return (int)65518L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Lock 65025
-     * }
-     */
-    public static int XK_ISO_Lock() {
-        return (int)65025L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Level2_Latch 65026
-     * }
-     */
-    public static int XK_ISO_Level2_Latch() {
-        return (int)65026L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Level3_Shift 65027
-     * }
-     */
-    public static int XK_ISO_Level3_Shift() {
-        return (int)65027L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Level3_Latch 65028
-     * }
-     */
-    public static int XK_ISO_Level3_Latch() {
-        return (int)65028L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Level3_Lock 65029
-     * }
-     */
-    public static int XK_ISO_Level3_Lock() {
-        return (int)65029L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Level5_Shift 65041
-     * }
-     */
-    public static int XK_ISO_Level5_Shift() {
-        return (int)65041L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Level5_Latch 65042
-     * }
-     */
-    public static int XK_ISO_Level5_Latch() {
-        return (int)65042L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Level5_Lock 65043
-     * }
-     */
-    public static int XK_ISO_Level5_Lock() {
-        return (int)65043L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Group_Shift 65406
-     * }
-     */
-    public static int XK_ISO_Group_Shift() {
-        return (int)65406L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Group_Latch 65030
-     * }
-     */
-    public static int XK_ISO_Group_Latch() {
-        return (int)65030L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Group_Lock 65031
-     * }
-     */
-    public static int XK_ISO_Group_Lock() {
-        return (int)65031L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Next_Group 65032
-     * }
-     */
-    public static int XK_ISO_Next_Group() {
-        return (int)65032L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Next_Group_Lock 65033
-     * }
-     */
-    public static int XK_ISO_Next_Group_Lock() {
-        return (int)65033L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Prev_Group 65034
-     * }
-     */
-    public static int XK_ISO_Prev_Group() {
-        return (int)65034L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Prev_Group_Lock 65035
-     * }
-     */
-    public static int XK_ISO_Prev_Group_Lock() {
-        return (int)65035L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_First_Group 65036
-     * }
-     */
-    public static int XK_ISO_First_Group() {
-        return (int)65036L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_First_Group_Lock 65037
-     * }
-     */
-    public static int XK_ISO_First_Group_Lock() {
-        return (int)65037L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Last_Group 65038
-     * }
-     */
-    public static int XK_ISO_Last_Group() {
-        return (int)65038L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Last_Group_Lock 65039
-     * }
-     */
-    public static int XK_ISO_Last_Group_Lock() {
-        return (int)65039L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Left_Tab 65056
-     * }
-     */
-    public static int XK_ISO_Left_Tab() {
-        return (int)65056L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Move_Line_Up 65057
-     * }
-     */
-    public static int XK_ISO_Move_Line_Up() {
-        return (int)65057L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Move_Line_Down 65058
-     * }
-     */
-    public static int XK_ISO_Move_Line_Down() {
-        return (int)65058L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Partial_Line_Up 65059
-     * }
-     */
-    public static int XK_ISO_Partial_Line_Up() {
-        return (int)65059L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Partial_Line_Down 65060
-     * }
-     */
-    public static int XK_ISO_Partial_Line_Down() {
-        return (int)65060L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Partial_Space_Left 65061
-     * }
-     */
-    public static int XK_ISO_Partial_Space_Left() {
-        return (int)65061L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Partial_Space_Right 65062
-     * }
-     */
-    public static int XK_ISO_Partial_Space_Right() {
-        return (int)65062L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Set_Margin_Left 65063
-     * }
-     */
-    public static int XK_ISO_Set_Margin_Left() {
-        return (int)65063L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Set_Margin_Right 65064
-     * }
-     */
-    public static int XK_ISO_Set_Margin_Right() {
-        return (int)65064L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Release_Margin_Left 65065
-     * }
-     */
-    public static int XK_ISO_Release_Margin_Left() {
-        return (int)65065L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Release_Margin_Right 65066
-     * }
-     */
-    public static int XK_ISO_Release_Margin_Right() {
-        return (int)65066L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Release_Both_Margins 65067
-     * }
-     */
-    public static int XK_ISO_Release_Both_Margins() {
-        return (int)65067L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Fast_Cursor_Left 65068
-     * }
-     */
-    public static int XK_ISO_Fast_Cursor_Left() {
-        return (int)65068L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Fast_Cursor_Right 65069
-     * }
-     */
-    public static int XK_ISO_Fast_Cursor_Right() {
-        return (int)65069L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Fast_Cursor_Up 65070
-     * }
-     */
-    public static int XK_ISO_Fast_Cursor_Up() {
-        return (int)65070L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Fast_Cursor_Down 65071
-     * }
-     */
-    public static int XK_ISO_Fast_Cursor_Down() {
-        return (int)65071L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Continuous_Underline 65072
-     * }
-     */
-    public static int XK_ISO_Continuous_Underline() {
-        return (int)65072L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Discontinuous_Underline 65073
-     * }
-     */
-    public static int XK_ISO_Discontinuous_Underline() {
-        return (int)65073L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Emphasize 65074
-     * }
-     */
-    public static int XK_ISO_Emphasize() {
-        return (int)65074L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Center_Object 65075
-     * }
-     */
-    public static int XK_ISO_Center_Object() {
-        return (int)65075L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ISO_Enter 65076
-     * }
-     */
-    public static int XK_ISO_Enter() {
-        return (int)65076L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_grave 65104
-     * }
-     */
-    public static int XK_dead_grave() {
-        return (int)65104L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_acute 65105
-     * }
-     */
-    public static int XK_dead_acute() {
-        return (int)65105L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_circumflex 65106
-     * }
-     */
-    public static int XK_dead_circumflex() {
-        return (int)65106L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_tilde 65107
-     * }
-     */
-    public static int XK_dead_tilde() {
-        return (int)65107L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_perispomeni 65107
-     * }
-     */
-    public static int XK_dead_perispomeni() {
-        return (int)65107L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_macron 65108
-     * }
-     */
-    public static int XK_dead_macron() {
-        return (int)65108L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_breve 65109
-     * }
-     */
-    public static int XK_dead_breve() {
-        return (int)65109L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_abovedot 65110
-     * }
-     */
-    public static int XK_dead_abovedot() {
-        return (int)65110L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_diaeresis 65111
-     * }
-     */
-    public static int XK_dead_diaeresis() {
-        return (int)65111L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_abovering 65112
-     * }
-     */
-    public static int XK_dead_abovering() {
-        return (int)65112L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_doubleacute 65113
-     * }
-     */
-    public static int XK_dead_doubleacute() {
-        return (int)65113L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_caron 65114
-     * }
-     */
-    public static int XK_dead_caron() {
-        return (int)65114L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_cedilla 65115
-     * }
-     */
-    public static int XK_dead_cedilla() {
-        return (int)65115L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_ogonek 65116
-     * }
-     */
-    public static int XK_dead_ogonek() {
-        return (int)65116L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_iota 65117
-     * }
-     */
-    public static int XK_dead_iota() {
-        return (int)65117L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_voiced_sound 65118
-     * }
-     */
-    public static int XK_dead_voiced_sound() {
-        return (int)65118L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_semivoiced_sound 65119
-     * }
-     */
-    public static int XK_dead_semivoiced_sound() {
-        return (int)65119L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowdot 65120
-     * }
-     */
-    public static int XK_dead_belowdot() {
-        return (int)65120L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_hook 65121
-     * }
-     */
-    public static int XK_dead_hook() {
-        return (int)65121L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_horn 65122
-     * }
-     */
-    public static int XK_dead_horn() {
-        return (int)65122L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_stroke 65123
-     * }
-     */
-    public static int XK_dead_stroke() {
-        return (int)65123L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_abovecomma 65124
-     * }
-     */
-    public static int XK_dead_abovecomma() {
-        return (int)65124L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_psili 65124
-     * }
-     */
-    public static int XK_dead_psili() {
-        return (int)65124L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_abovereversedcomma 65125
-     * }
-     */
-    public static int XK_dead_abovereversedcomma() {
-        return (int)65125L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_dasia 65125
-     * }
-     */
-    public static int XK_dead_dasia() {
-        return (int)65125L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_doublegrave 65126
-     * }
-     */
-    public static int XK_dead_doublegrave() {
-        return (int)65126L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowring 65127
-     * }
-     */
-    public static int XK_dead_belowring() {
-        return (int)65127L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowmacron 65128
-     * }
-     */
-    public static int XK_dead_belowmacron() {
-        return (int)65128L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowcircumflex 65129
-     * }
-     */
-    public static int XK_dead_belowcircumflex() {
-        return (int)65129L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowtilde 65130
-     * }
-     */
-    public static int XK_dead_belowtilde() {
-        return (int)65130L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowbreve 65131
-     * }
-     */
-    public static int XK_dead_belowbreve() {
-        return (int)65131L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowdiaeresis 65132
-     * }
-     */
-    public static int XK_dead_belowdiaeresis() {
-        return (int)65132L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_invertedbreve 65133
-     * }
-     */
-    public static int XK_dead_invertedbreve() {
-        return (int)65133L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowcomma 65134
-     * }
-     */
-    public static int XK_dead_belowcomma() {
-        return (int)65134L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_currency 65135
-     * }
-     */
-    public static int XK_dead_currency() {
-        return (int)65135L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_lowline 65168
-     * }
-     */
-    public static int XK_dead_lowline() {
-        return (int)65168L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_aboveverticalline 65169
-     * }
-     */
-    public static int XK_dead_aboveverticalline() {
-        return (int)65169L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_belowverticalline 65170
-     * }
-     */
-    public static int XK_dead_belowverticalline() {
-        return (int)65170L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_longsolidusoverlay 65171
-     * }
-     */
-    public static int XK_dead_longsolidusoverlay() {
-        return (int)65171L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_a 65152
-     * }
-     */
-    public static int XK_dead_a() {
-        return (int)65152L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_A 65153
-     * }
-     */
-    public static int XK_dead_A() {
-        return (int)65153L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_e 65154
-     * }
-     */
-    public static int XK_dead_e() {
-        return (int)65154L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_E 65155
-     * }
-     */
-    public static int XK_dead_E() {
-        return (int)65155L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_i 65156
-     * }
-     */
-    public static int XK_dead_i() {
-        return (int)65156L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_I 65157
-     * }
-     */
-    public static int XK_dead_I() {
-        return (int)65157L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_o 65158
-     * }
-     */
-    public static int XK_dead_o() {
-        return (int)65158L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_O 65159
-     * }
-     */
-    public static int XK_dead_O() {
-        return (int)65159L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_u 65160
-     * }
-     */
-    public static int XK_dead_u() {
-        return (int)65160L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_U 65161
-     * }
-     */
-    public static int XK_dead_U() {
-        return (int)65161L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_small_schwa 65162
-     * }
-     */
-    public static int XK_dead_small_schwa() {
-        return (int)65162L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_capital_schwa 65163
-     * }
-     */
-    public static int XK_dead_capital_schwa() {
-        return (int)65163L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dead_greek 65164
-     * }
-     */
-    public static int XK_dead_greek() {
-        return (int)65164L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_First_Virtual_Screen 65232
-     * }
-     */
-    public static int XK_First_Virtual_Screen() {
-        return (int)65232L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Prev_Virtual_Screen 65233
-     * }
-     */
-    public static int XK_Prev_Virtual_Screen() {
-        return (int)65233L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Next_Virtual_Screen 65234
-     * }
-     */
-    public static int XK_Next_Virtual_Screen() {
-        return (int)65234L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Last_Virtual_Screen 65236
-     * }
-     */
-    public static int XK_Last_Virtual_Screen() {
-        return (int)65236L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Terminate_Server 65237
-     * }
-     */
-    public static int XK_Terminate_Server() {
-        return (int)65237L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_AccessX_Enable 65136
-     * }
-     */
-    public static int XK_AccessX_Enable() {
-        return (int)65136L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_AccessX_Feedback_Enable 65137
-     * }
-     */
-    public static int XK_AccessX_Feedback_Enable() {
-        return (int)65137L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_RepeatKeys_Enable 65138
-     * }
-     */
-    public static int XK_RepeatKeys_Enable() {
-        return (int)65138L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_SlowKeys_Enable 65139
-     * }
-     */
-    public static int XK_SlowKeys_Enable() {
-        return (int)65139L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_BounceKeys_Enable 65140
-     * }
-     */
-    public static int XK_BounceKeys_Enable() {
-        return (int)65140L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_StickyKeys_Enable 65141
-     * }
-     */
-    public static int XK_StickyKeys_Enable() {
-        return (int)65141L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_MouseKeys_Enable 65142
-     * }
-     */
-    public static int XK_MouseKeys_Enable() {
-        return (int)65142L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_MouseKeys_Accel_Enable 65143
-     * }
-     */
-    public static int XK_MouseKeys_Accel_Enable() {
-        return (int)65143L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Overlay1_Enable 65144
-     * }
-     */
-    public static int XK_Overlay1_Enable() {
-        return (int)65144L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Overlay2_Enable 65145
-     * }
-     */
-    public static int XK_Overlay2_Enable() {
-        return (int)65145L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_AudibleBell_Enable 65146
-     * }
-     */
-    public static int XK_AudibleBell_Enable() {
-        return (int)65146L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Left 65248
-     * }
-     */
-    public static int XK_Pointer_Left() {
-        return (int)65248L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Right 65249
-     * }
-     */
-    public static int XK_Pointer_Right() {
-        return (int)65249L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Up 65250
-     * }
-     */
-    public static int XK_Pointer_Up() {
-        return (int)65250L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Down 65251
-     * }
-     */
-    public static int XK_Pointer_Down() {
-        return (int)65251L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_UpLeft 65252
-     * }
-     */
-    public static int XK_Pointer_UpLeft() {
-        return (int)65252L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_UpRight 65253
-     * }
-     */
-    public static int XK_Pointer_UpRight() {
-        return (int)65253L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DownLeft 65254
-     * }
-     */
-    public static int XK_Pointer_DownLeft() {
-        return (int)65254L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DownRight 65255
-     * }
-     */
-    public static int XK_Pointer_DownRight() {
-        return (int)65255L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Button_Dflt 65256
-     * }
-     */
-    public static int XK_Pointer_Button_Dflt() {
-        return (int)65256L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Button1 65257
-     * }
-     */
-    public static int XK_Pointer_Button1() {
-        return (int)65257L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Button2 65258
-     * }
-     */
-    public static int XK_Pointer_Button2() {
-        return (int)65258L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Button3 65259
-     * }
-     */
-    public static int XK_Pointer_Button3() {
-        return (int)65259L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Button4 65260
-     * }
-     */
-    public static int XK_Pointer_Button4() {
-        return (int)65260L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Button5 65261
-     * }
-     */
-    public static int XK_Pointer_Button5() {
-        return (int)65261L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DblClick_Dflt 65262
-     * }
-     */
-    public static int XK_Pointer_DblClick_Dflt() {
-        return (int)65262L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DblClick1 65263
-     * }
-     */
-    public static int XK_Pointer_DblClick1() {
-        return (int)65263L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DblClick2 65264
-     * }
-     */
-    public static int XK_Pointer_DblClick2() {
-        return (int)65264L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DblClick3 65265
-     * }
-     */
-    public static int XK_Pointer_DblClick3() {
-        return (int)65265L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DblClick4 65266
-     * }
-     */
-    public static int XK_Pointer_DblClick4() {
-        return (int)65266L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DblClick5 65267
-     * }
-     */
-    public static int XK_Pointer_DblClick5() {
-        return (int)65267L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Drag_Dflt 65268
-     * }
-     */
-    public static int XK_Pointer_Drag_Dflt() {
-        return (int)65268L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Drag1 65269
-     * }
-     */
-    public static int XK_Pointer_Drag1() {
-        return (int)65269L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Drag2 65270
-     * }
-     */
-    public static int XK_Pointer_Drag2() {
-        return (int)65270L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Drag3 65271
-     * }
-     */
-    public static int XK_Pointer_Drag3() {
-        return (int)65271L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Drag4 65272
-     * }
-     */
-    public static int XK_Pointer_Drag4() {
-        return (int)65272L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Drag5 65277
-     * }
-     */
-    public static int XK_Pointer_Drag5() {
-        return (int)65277L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_EnableKeys 65273
-     * }
-     */
-    public static int XK_Pointer_EnableKeys() {
-        return (int)65273L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_Accelerate 65274
-     * }
-     */
-    public static int XK_Pointer_Accelerate() {
-        return (int)65274L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DfltBtnNext 65275
-     * }
-     */
-    public static int XK_Pointer_DfltBtnNext() {
-        return (int)65275L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Pointer_DfltBtnPrev 65276
-     * }
-     */
-    public static int XK_Pointer_DfltBtnPrev() {
-        return (int)65276L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ch 65184
-     * }
-     */
-    public static int XK_ch() {
-        return (int)65184L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ch 65185
-     * }
-     */
-    public static int XK_Ch() {
-        return (int)65185L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_CH 65186
-     * }
-     */
-    public static int XK_CH() {
-        return (int)65186L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_c_h 65187
-     * }
-     */
-    public static int XK_c_h() {
-        return (int)65187L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_C_h 65188
-     * }
-     */
-    public static int XK_C_h() {
-        return (int)65188L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_C_H 65189
-     * }
-     */
-    public static int XK_C_H() {
-        return (int)65189L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_space 32
-     * }
-     */
-    public static int XK_space() {
-        return (int)32L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_exclam 33
-     * }
-     */
-    public static int XK_exclam() {
-        return (int)33L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_quotedbl 34
-     * }
-     */
-    public static int XK_quotedbl() {
-        return (int)34L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_numbersign 35
-     * }
-     */
-    public static int XK_numbersign() {
-        return (int)35L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_dollar 36
-     * }
-     */
-    public static int XK_dollar() {
-        return (int)36L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_percent 37
-     * }
-     */
-    public static int XK_percent() {
-        return (int)37L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ampersand 38
-     * }
-     */
-    public static int XK_ampersand() {
-        return (int)38L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_apostrophe 39
-     * }
-     */
-    public static int XK_apostrophe() {
-        return (int)39L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_quoteright 39
-     * }
-     */
-    public static int XK_quoteright() {
-        return (int)39L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_parenleft 40
-     * }
-     */
-    public static int XK_parenleft() {
-        return (int)40L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_parenright 41
-     * }
-     */
-    public static int XK_parenright() {
-        return (int)41L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_asterisk 42
-     * }
-     */
-    public static int XK_asterisk() {
-        return (int)42L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_plus 43
-     * }
-     */
-    public static int XK_plus() {
-        return (int)43L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_comma 44
-     * }
-     */
-    public static int XK_comma() {
-        return (int)44L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_minus 45
-     * }
-     */
-    public static int XK_minus() {
-        return (int)45L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_period 46
-     * }
-     */
-    public static int XK_period() {
-        return (int)46L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_slash 47
-     * }
-     */
-    public static int XK_slash() {
-        return (int)47L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_0 48
-     * }
-     */
-    public static int XK_0() {
-        return (int)48L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_1 49
-     * }
-     */
-    public static int XK_1() {
-        return (int)49L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_2 50
-     * }
-     */
-    public static int XK_2() {
-        return (int)50L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_3 51
-     * }
-     */
-    public static int XK_3() {
-        return (int)51L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_4 52
-     * }
-     */
-    public static int XK_4() {
-        return (int)52L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_5 53
-     * }
-     */
-    public static int XK_5() {
-        return (int)53L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_6 54
-     * }
-     */
-    public static int XK_6() {
-        return (int)54L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_7 55
-     * }
-     */
-    public static int XK_7() {
-        return (int)55L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_8 56
-     * }
-     */
-    public static int XK_8() {
-        return (int)56L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_9 57
-     * }
-     */
-    public static int XK_9() {
-        return (int)57L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_colon 58
-     * }
-     */
-    public static int XK_colon() {
-        return (int)58L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_semicolon 59
-     * }
-     */
-    public static int XK_semicolon() {
-        return (int)59L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_less 60
-     * }
-     */
-    public static int XK_less() {
-        return (int)60L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_equal 61
-     * }
-     */
-    public static int XK_equal() {
-        return (int)61L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_greater 62
-     * }
-     */
-    public static int XK_greater() {
-        return (int)62L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_question 63
-     * }
-     */
-    public static int XK_question() {
-        return (int)63L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_at 64
-     * }
-     */
-    public static int XK_at() {
-        return (int)64L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_A 65
-     * }
-     */
-    public static int XK_A() {
-        return (int)65L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_B 66
-     * }
-     */
-    public static int XK_B() {
-        return (int)66L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_C 67
-     * }
-     */
-    public static int XK_C() {
-        return (int)67L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_D 68
-     * }
-     */
-    public static int XK_D() {
-        return (int)68L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_E 69
-     * }
-     */
-    public static int XK_E() {
-        return (int)69L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_F 70
-     * }
-     */
-    public static int XK_F() {
-        return (int)70L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_G 71
-     * }
-     */
-    public static int XK_G() {
-        return (int)71L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_H 72
-     * }
-     */
-    public static int XK_H() {
-        return (int)72L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_I 73
-     * }
-     */
-    public static int XK_I() {
-        return (int)73L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_J 74
-     * }
-     */
-    public static int XK_J() {
-        return (int)74L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_K 75
-     * }
-     */
-    public static int XK_K() {
-        return (int)75L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_L 76
-     * }
-     */
-    public static int XK_L() {
-        return (int)76L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_M 77
-     * }
-     */
-    public static int XK_M() {
-        return (int)77L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_N 78
-     * }
-     */
-    public static int XK_N() {
-        return (int)78L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_O 79
-     * }
-     */
-    public static int XK_O() {
-        return (int)79L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_P 80
-     * }
-     */
-    public static int XK_P() {
-        return (int)80L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Q 81
-     * }
-     */
-    public static int XK_Q() {
-        return (int)81L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_R 82
-     * }
-     */
-    public static int XK_R() {
-        return (int)82L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_S 83
-     * }
-     */
-    public static int XK_S() {
-        return (int)83L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_T 84
-     * }
-     */
-    public static int XK_T() {
-        return (int)84L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_U 85
-     * }
-     */
-    public static int XK_U() {
-        return (int)85L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_V 86
-     * }
-     */
-    public static int XK_V() {
-        return (int)86L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_W 87
-     * }
-     */
-    public static int XK_W() {
-        return (int)87L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_X 88
-     * }
-     */
-    public static int XK_X() {
-        return (int)88L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Y 89
-     * }
-     */
-    public static int XK_Y() {
-        return (int)89L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Z 90
-     * }
-     */
-    public static int XK_Z() {
-        return (int)90L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_bracketleft 91
-     * }
-     */
-    public static int XK_bracketleft() {
-        return (int)91L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_backslash 92
-     * }
-     */
-    public static int XK_backslash() {
-        return (int)92L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_bracketright 93
-     * }
-     */
-    public static int XK_bracketright() {
-        return (int)93L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_asciicircum 94
-     * }
-     */
-    public static int XK_asciicircum() {
-        return (int)94L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_underscore 95
-     * }
-     */
-    public static int XK_underscore() {
-        return (int)95L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_grave 96
-     * }
-     */
-    public static int XK_grave() {
-        return (int)96L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_quoteleft 96
-     * }
-     */
-    public static int XK_quoteleft() {
-        return (int)96L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_a 97
-     * }
-     */
-    public static int XK_a() {
-        return (int)97L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_b 98
-     * }
-     */
-    public static int XK_b() {
-        return (int)98L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_c 99
-     * }
-     */
-    public static int XK_c() {
-        return (int)99L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_d 100
-     * }
-     */
-    public static int XK_d() {
-        return (int)100L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_e 101
-     * }
-     */
-    public static int XK_e() {
-        return (int)101L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_f 102
-     * }
-     */
-    public static int XK_f() {
-        return (int)102L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_g 103
-     * }
-     */
-    public static int XK_g() {
-        return (int)103L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_h 104
-     * }
-     */
-    public static int XK_h() {
-        return (int)104L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_i 105
-     * }
-     */
-    public static int XK_i() {
-        return (int)105L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_j 106
-     * }
-     */
-    public static int XK_j() {
-        return (int)106L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_k 107
-     * }
-     */
-    public static int XK_k() {
-        return (int)107L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_l 108
-     * }
-     */
-    public static int XK_l() {
-        return (int)108L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_m 109
-     * }
-     */
-    public static int XK_m() {
-        return (int)109L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_n 110
-     * }
-     */
-    public static int XK_n() {
-        return (int)110L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_o 111
-     * }
-     */
-    public static int XK_o() {
-        return (int)111L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_p 112
-     * }
-     */
-    public static int XK_p() {
-        return (int)112L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_q 113
-     * }
-     */
-    public static int XK_q() {
-        return (int)113L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_r 114
-     * }
-     */
-    public static int XK_r() {
-        return (int)114L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_s 115
-     * }
-     */
-    public static int XK_s() {
-        return (int)115L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_t 116
-     * }
-     */
-    public static int XK_t() {
-        return (int)116L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_u 117
-     * }
-     */
-    public static int XK_u() {
-        return (int)117L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_v 118
-     * }
-     */
-    public static int XK_v() {
-        return (int)118L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_w 119
-     * }
-     */
-    public static int XK_w() {
-        return (int)119L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_x 120
-     * }
-     */
-    public static int XK_x() {
-        return (int)120L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_y 121
-     * }
-     */
-    public static int XK_y() {
-        return (int)121L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_z 122
-     * }
-     */
-    public static int XK_z() {
-        return (int)122L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braceleft 123
-     * }
-     */
-    public static int XK_braceleft() {
-        return (int)123L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_bar 124
-     * }
-     */
-    public static int XK_bar() {
-        return (int)124L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_braceright 125
-     * }
-     */
-    public static int XK_braceright() {
-        return (int)125L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_asciitilde 126
-     * }
-     */
-    public static int XK_asciitilde() {
-        return (int)126L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_nobreakspace 160
-     * }
-     */
-    public static int XK_nobreakspace() {
-        return (int)160L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_exclamdown 161
-     * }
-     */
-    public static int XK_exclamdown() {
-        return (int)161L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_cent 162
-     * }
-     */
-    public static int XK_cent() {
-        return (int)162L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_sterling 163
-     * }
-     */
-    public static int XK_sterling() {
-        return (int)163L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_currency 164
-     * }
-     */
-    public static int XK_currency() {
-        return (int)164L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_yen 165
-     * }
-     */
-    public static int XK_yen() {
-        return (int)165L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_brokenbar 166
-     * }
-     */
-    public static int XK_brokenbar() {
-        return (int)166L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_section 167
-     * }
-     */
-    public static int XK_section() {
-        return (int)167L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_diaeresis 168
-     * }
-     */
-    public static int XK_diaeresis() {
-        return (int)168L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_copyright 169
-     * }
-     */
-    public static int XK_copyright() {
-        return (int)169L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ordfeminine 170
-     * }
-     */
-    public static int XK_ordfeminine() {
-        return (int)170L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_guillemotleft 171
-     * }
-     */
-    public static int XK_guillemotleft() {
-        return (int)171L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_notsign 172
-     * }
-     */
-    public static int XK_notsign() {
-        return (int)172L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_hyphen 173
-     * }
-     */
-    public static int XK_hyphen() {
-        return (int)173L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_registered 174
-     * }
-     */
-    public static int XK_registered() {
-        return (int)174L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_macron 175
-     * }
-     */
-    public static int XK_macron() {
-        return (int)175L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_degree 176
-     * }
-     */
-    public static int XK_degree() {
-        return (int)176L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_plusminus 177
-     * }
-     */
-    public static int XK_plusminus() {
-        return (int)177L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_twosuperior 178
-     * }
-     */
-    public static int XK_twosuperior() {
-        return (int)178L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_threesuperior 179
-     * }
-     */
-    public static int XK_threesuperior() {
-        return (int)179L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_acute 180
-     * }
-     */
-    public static int XK_acute() {
-        return (int)180L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_mu 181
-     * }
-     */
-    public static int XK_mu() {
-        return (int)181L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_paragraph 182
-     * }
-     */
-    public static int XK_paragraph() {
-        return (int)182L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_periodcentered 183
-     * }
-     */
-    public static int XK_periodcentered() {
-        return (int)183L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_cedilla 184
-     * }
-     */
-    public static int XK_cedilla() {
-        return (int)184L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_onesuperior 185
-     * }
-     */
-    public static int XK_onesuperior() {
-        return (int)185L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_masculine 186
-     * }
-     */
-    public static int XK_masculine() {
-        return (int)186L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_guillemotright 187
-     * }
-     */
-    public static int XK_guillemotright() {
-        return (int)187L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_onequarter 188
-     * }
-     */
-    public static int XK_onequarter() {
-        return (int)188L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_onehalf 189
-     * }
-     */
-    public static int XK_onehalf() {
-        return (int)189L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_threequarters 190
-     * }
-     */
-    public static int XK_threequarters() {
-        return (int)190L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_questiondown 191
-     * }
-     */
-    public static int XK_questiondown() {
-        return (int)191L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Agrave 192
-     * }
-     */
-    public static int XK_Agrave() {
-        return (int)192L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Aacute 193
-     * }
-     */
-    public static int XK_Aacute() {
-        return (int)193L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Acircumflex 194
-     * }
-     */
-    public static int XK_Acircumflex() {
-        return (int)194L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Atilde 195
-     * }
-     */
-    public static int XK_Atilde() {
-        return (int)195L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Adiaeresis 196
-     * }
-     */
-    public static int XK_Adiaeresis() {
-        return (int)196L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Aring 197
-     * }
-     */
-    public static int XK_Aring() {
-        return (int)197L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_AE 198
-     * }
-     */
-    public static int XK_AE() {
-        return (int)198L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ccedilla 199
-     * }
-     */
-    public static int XK_Ccedilla() {
-        return (int)199L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Egrave 200
-     * }
-     */
-    public static int XK_Egrave() {
-        return (int)200L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Eacute 201
-     * }
-     */
-    public static int XK_Eacute() {
-        return (int)201L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ecircumflex 202
-     * }
-     */
-    public static int XK_Ecircumflex() {
-        return (int)202L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ediaeresis 203
-     * }
-     */
-    public static int XK_Ediaeresis() {
-        return (int)203L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Igrave 204
-     * }
-     */
-    public static int XK_Igrave() {
-        return (int)204L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Iacute 205
-     * }
-     */
-    public static int XK_Iacute() {
-        return (int)205L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Icircumflex 206
-     * }
-     */
-    public static int XK_Icircumflex() {
-        return (int)206L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Idiaeresis 207
-     * }
-     */
-    public static int XK_Idiaeresis() {
-        return (int)207L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ETH 208
-     * }
-     */
-    public static int XK_ETH() {
-        return (int)208L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Eth 208
-     * }
-     */
-    public static int XK_Eth() {
-        return (int)208L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ntilde 209
-     * }
-     */
-    public static int XK_Ntilde() {
-        return (int)209L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ograve 210
-     * }
-     */
-    public static int XK_Ograve() {
-        return (int)210L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Oacute 211
-     * }
-     */
-    public static int XK_Oacute() {
-        return (int)211L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ocircumflex 212
-     * }
-     */
-    public static int XK_Ocircumflex() {
-        return (int)212L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Otilde 213
-     * }
-     */
-    public static int XK_Otilde() {
-        return (int)213L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Odiaeresis 214
-     * }
-     */
-    public static int XK_Odiaeresis() {
-        return (int)214L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_multiply 215
-     * }
-     */
-    public static int XK_multiply() {
-        return (int)215L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Oslash 216
-     * }
-     */
-    public static int XK_Oslash() {
-        return (int)216L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ooblique 216
-     * }
-     */
-    public static int XK_Ooblique() {
-        return (int)216L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ugrave 217
-     * }
-     */
-    public static int XK_Ugrave() {
-        return (int)217L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Uacute 218
-     * }
-     */
-    public static int XK_Uacute() {
-        return (int)218L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Ucircumflex 219
-     * }
-     */
-    public static int XK_Ucircumflex() {
-        return (int)219L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Udiaeresis 220
-     * }
-     */
-    public static int XK_Udiaeresis() {
-        return (int)220L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Yacute 221
-     * }
-     */
-    public static int XK_Yacute() {
-        return (int)221L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_THORN 222
-     * }
-     */
-    public static int XK_THORN() {
-        return (int)222L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_Thorn 222
-     * }
-     */
-    public static int XK_Thorn() {
-        return (int)222L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ssharp 223
-     * }
-     */
-    public static int XK_ssharp() {
-        return (int)223L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_agrave 224
-     * }
-     */
-    public static int XK_agrave() {
-        return (int)224L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_aacute 225
-     * }
-     */
-    public static int XK_aacute() {
-        return (int)225L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_acircumflex 226
-     * }
-     */
-    public static int XK_acircumflex() {
-        return (int)226L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_atilde 227
-     * }
-     */
-    public static int XK_atilde() {
-        return (int)227L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_adiaeresis 228
-     * }
-     */
-    public static int XK_adiaeresis() {
-        return (int)228L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_aring 229
-     * }
-     */
-    public static int XK_aring() {
-        return (int)229L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ae 230
-     * }
-     */
-    public static int XK_ae() {
-        return (int)230L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ccedilla 231
-     * }
-     */
-    public static int XK_ccedilla() {
-        return (int)231L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_egrave 232
-     * }
-     */
-    public static int XK_egrave() {
-        return (int)232L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_eacute 233
-     * }
-     */
-    public static int XK_eacute() {
-        return (int)233L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ecircumflex 234
-     * }
-     */
-    public static int XK_ecircumflex() {
-        return (int)234L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ediaeresis 235
-     * }
-     */
-    public static int XK_ediaeresis() {
-        return (int)235L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_igrave 236
-     * }
-     */
-    public static int XK_igrave() {
-        return (int)236L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_iacute 237
-     * }
-     */
-    public static int XK_iacute() {
-        return (int)237L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_icircumflex 238
-     * }
-     */
-    public static int XK_icircumflex() {
-        return (int)238L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_idiaeresis 239
-     * }
-     */
-    public static int XK_idiaeresis() {
-        return (int)239L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_eth 240
-     * }
-     */
-    public static int XK_eth() {
-        return (int)240L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ntilde 241
-     * }
-     */
-    public static int XK_ntilde() {
-        return (int)241L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ograve 242
-     * }
-     */
-    public static int XK_ograve() {
-        return (int)242L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_oacute 243
-     * }
-     */
-    public static int XK_oacute() {
-        return (int)243L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_ocircumflex 244
-     * }
-     */
-    public static int XK_ocircumflex() {
-        return (int)244L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_otilde 245
-     * }
-     */
-    public static int XK_otilde() {
-        return (int)245L;
-    }
-    /**
-     * {@snippet :
-     * #define XK_odiaeresis 246
-     * }
-     */
-    public static int XK_odiaeresis() {
-        return (int)246L;
+import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
+public class Xlib_h extends Xlib_h_1 {
+
+    Xlib_h() {
+        // Should not be called directly
     }
+    private static final long CWWinGravity = 32L;
     /**
-     * {@snippet :
-     * #define XK_division 247
+     * {@snippet lang=c :
+     * #define CWWinGravity 32
      * }
      */
-    public static int XK_division() {
-        return (int)247L;
+    public static long CWWinGravity() {
+        return CWWinGravity;
     }
+    private static final long CWBackingStore = 64L;
     /**
-     * {@snippet :
-     * #define XK_oslash 248
+     * {@snippet lang=c :
+     * #define CWBackingStore 64
      * }
      */
-    public static int XK_oslash() {
-        return (int)248L;
+    public static long CWBackingStore() {
+        return CWBackingStore;
     }
+    private static final long CWBackingPlanes = 128L;
     /**
-     * {@snippet :
-     * #define XK_ooblique 248
+     * {@snippet lang=c :
+     * #define CWBackingPlanes 128
      * }
      */
-    public static int XK_ooblique() {
-        return (int)248L;
+    public static long CWBackingPlanes() {
+        return CWBackingPlanes;
     }
+    private static final long CWBackingPixel = 256L;
     /**
-     * {@snippet :
-     * #define XK_ugrave 249
+     * {@snippet lang=c :
+     * #define CWBackingPixel 256
      * }
      */
-    public static int XK_ugrave() {
-        return (int)249L;
+    public static long CWBackingPixel() {
+        return CWBackingPixel;
     }
+    private static final long CWOverrideRedirect = 512L;
     /**
-     * {@snippet :
-     * #define XK_uacute 250
+     * {@snippet lang=c :
+     * #define CWOverrideRedirect 512
      * }
      */
-    public static int XK_uacute() {
-        return (int)250L;
+    public static long CWOverrideRedirect() {
+        return CWOverrideRedirect;
     }
+    private static final long CWSaveUnder = 1024L;
     /**
-     * {@snippet :
-     * #define XK_ucircumflex 251
+     * {@snippet lang=c :
+     * #define CWSaveUnder 1024
      * }
      */
-    public static int XK_ucircumflex() {
-        return (int)251L;
+    public static long CWSaveUnder() {
+        return CWSaveUnder;
     }
+    private static final long CWEventMask = 2048L;
     /**
-     * {@snippet :
-     * #define XK_udiaeresis 252
+     * {@snippet lang=c :
+     * #define CWEventMask 2048
      * }
      */
-    public static int XK_udiaeresis() {
-        return (int)252L;
+    public static long CWEventMask() {
+        return CWEventMask;
     }
+    private static final long CWDontPropagate = 4096L;
     /**
-     * {@snippet :
-     * #define XK_yacute 253
+     * {@snippet lang=c :
+     * #define CWDontPropagate 4096
      * }
      */
-    public static int XK_yacute() {
-        return (int)253L;
+    public static long CWDontPropagate() {
+        return CWDontPropagate;
     }
+    private static final long CWColormap = 8192L;
     /**
-     * {@snippet :
-     * #define XK_thorn 254
+     * {@snippet lang=c :
+     * #define CWColormap 8192
      * }
      */
-    public static int XK_thorn() {
-        return (int)254L;
+    public static long CWColormap() {
+        return CWColormap;
     }
+    private static final long CWCursor = 16384L;
     /**
-     * {@snippet :
-     * #define XK_ydiaeresis 255
+     * {@snippet lang=c :
+     * #define CWCursor 16384
      * }
      */
-    public static int XK_ydiaeresis() {
-        return (int)255L;
+    public static long CWCursor() {
+        return CWCursor;
     }
+    private static final int CWX = (int)1L;
     /**
-     * {@snippet :
-     * #define XK_Aogonek 417
+     * {@snippet lang=c :
+     * #define CWX 1
      * }
      */
-    public static int XK_Aogonek() {
-        return (int)417L;
+    public static int CWX() {
+        return CWX;
     }
+    private static final int CWY = (int)2L;
     /**
-     * {@snippet :
-     * #define XK_breve 418
+     * {@snippet lang=c :
+     * #define CWY 2
      * }
      */
-    public static int XK_breve() {
-        return (int)418L;
+    public static int CWY() {
+        return CWY;
     }
+    private static final int CWWidth = (int)4L;
     /**
-     * {@snippet :
-     * #define XK_Lstroke 419
+     * {@snippet lang=c :
+     * #define CWWidth 4
      * }
      */
-    public static int XK_Lstroke() {
-        return (int)419L;
+    public static int CWWidth() {
+        return CWWidth;
     }
+    private static final int CWHeight = (int)8L;
     /**
-     * {@snippet :
-     * #define XK_Lcaron 421
+     * {@snippet lang=c :
+     * #define CWHeight 8
      * }
      */
-    public static int XK_Lcaron() {
-        return (int)421L;
+    public static int CWHeight() {
+        return CWHeight;
     }
+    private static final int CWBorderWidth = (int)16L;
     /**
-     * {@snippet :
-     * #define XK_Sacute 422
+     * {@snippet lang=c :
+     * #define CWBorderWidth 16
      * }
      */
-    public static int XK_Sacute() {
-        return (int)422L;
+    public static int CWBorderWidth() {
+        return CWBorderWidth;
     }
+    private static final int CWSibling = (int)32L;
     /**
-     * {@snippet :
-     * #define XK_Scaron 425
+     * {@snippet lang=c :
+     * #define CWSibling 32
      * }
      */
-    public static int XK_Scaron() {
-        return (int)425L;
+    public static int CWSibling() {
+        return CWSibling;
     }
+    private static final int CWStackMode = (int)64L;
     /**
-     * {@snippet :
-     * #define XK_Scedilla 426
+     * {@snippet lang=c :
+     * #define CWStackMode 64
      * }
      */
-    public static int XK_Scedilla() {
-        return (int)426L;
+    public static int CWStackMode() {
+        return CWStackMode;
     }
+    private static final long GCFunction = 1L;
     /**
-     * {@snippet :
-     * #define XK_Tcaron 427
+     * {@snippet lang=c :
+     * #define GCFunction 1
      * }
      */
-    public static int XK_Tcaron() {
-        return (int)427L;
+    public static long GCFunction() {
+        return GCFunction;
     }
+    private static final long GCPlaneMask = 2L;
     /**
-     * {@snippet :
-     * #define XK_Zacute 428
+     * {@snippet lang=c :
+     * #define GCPlaneMask 2
      * }
      */
-    public static int XK_Zacute() {
-        return (int)428L;
+    public static long GCPlaneMask() {
+        return GCPlaneMask;
     }
+    private static final long GCForeground = 4L;
     /**
-     * {@snippet :
-     * #define XK_Zcaron 430
+     * {@snippet lang=c :
+     * #define GCForeground 4
      * }
      */
-    public static int XK_Zcaron() {
-        return (int)430L;
+    public static long GCForeground() {
+        return GCForeground;
     }
+    private static final long GCBackground = 8L;
     /**
-     * {@snippet :
-     * #define XK_Zabovedot 431
+     * {@snippet lang=c :
+     * #define GCBackground 8
      * }
      */
-    public static int XK_Zabovedot() {
-        return (int)431L;
+    public static long GCBackground() {
+        return GCBackground;
     }
+    private static final long GCLineWidth = 16L;
     /**
-     * {@snippet :
-     * #define XK_aogonek 433
+     * {@snippet lang=c :
+     * #define GCLineWidth 16
      * }
      */
-    public static int XK_aogonek() {
-        return (int)433L;
+    public static long GCLineWidth() {
+        return GCLineWidth;
     }
+    private static final long GCLineStyle = 32L;
     /**
-     * {@snippet :
-     * #define XK_ogonek 434
+     * {@snippet lang=c :
+     * #define GCLineStyle 32
      * }
      */
-    public static int XK_ogonek() {
-        return (int)434L;
+    public static long GCLineStyle() {
+        return GCLineStyle;
     }
+    private static final long GCCapStyle = 64L;
     /**
-     * {@snippet :
-     * #define XK_lstroke 435
+     * {@snippet lang=c :
+     * #define GCCapStyle 64
      * }
      */
-    public static int XK_lstroke() {
-        return (int)435L;
+    public static long GCCapStyle() {
+        return GCCapStyle;
     }
+    private static final long GCJoinStyle = 128L;
     /**
-     * {@snippet :
-     * #define XK_lcaron 437
+     * {@snippet lang=c :
+     * #define GCJoinStyle 128
      * }
      */
-    public static int XK_lcaron() {
-        return (int)437L;
+    public static long GCJoinStyle() {
+        return GCJoinStyle;
     }
+    private static final long GCFillStyle = 256L;
     /**
-     * {@snippet :
-     * #define XK_sacute 438
+     * {@snippet lang=c :
+     * #define GCFillStyle 256
      * }
      */
-    public static int XK_sacute() {
-        return (int)438L;
+    public static long GCFillStyle() {
+        return GCFillStyle;
     }
+    private static final long GCFillRule = 512L;
     /**
-     * {@snippet :
-     * #define XK_caron 439
+     * {@snippet lang=c :
+     * #define GCFillRule 512
      * }
      */
-    public static int XK_caron() {
-        return (int)439L;
+    public static long GCFillRule() {
+        return GCFillRule;
     }
+    private static final long GCTile = 1024L;
     /**
-     * {@snippet :
-     * #define XK_scaron 441
+     * {@snippet lang=c :
+     * #define GCTile 1024
      * }
      */
-    public static int XK_scaron() {
-        return (int)441L;
+    public static long GCTile() {
+        return GCTile;
     }
+    private static final long GCStipple = 2048L;
     /**
-     * {@snippet :
-     * #define XK_scedilla 442
+     * {@snippet lang=c :
+     * #define GCStipple 2048
      * }
      */
-    public static int XK_scedilla() {
-        return (int)442L;
+    public static long GCStipple() {
+        return GCStipple;
     }
+    private static final long GCTileStipXOrigin = 4096L;
     /**
-     * {@snippet :
-     * #define XK_tcaron 443
+     * {@snippet lang=c :
+     * #define GCTileStipXOrigin 4096
      * }
      */
-    public static int XK_tcaron() {
-        return (int)443L;
+    public static long GCTileStipXOrigin() {
+        return GCTileStipXOrigin;
     }
+    private static final long GCTileStipYOrigin = 8192L;
     /**
-     * {@snippet :
-     * #define XK_zacute 444
+     * {@snippet lang=c :
+     * #define GCTileStipYOrigin 8192
      * }
      */
-    public static int XK_zacute() {
-        return (int)444L;
+    public static long GCTileStipYOrigin() {
+        return GCTileStipYOrigin;
     }
+    private static final long GCFont = 16384L;
     /**
-     * {@snippet :
-     * #define XK_doubleacute 445
+     * {@snippet lang=c :
+     * #define GCFont 16384
      * }
      */
-    public static int XK_doubleacute() {
-        return (int)445L;
+    public static long GCFont() {
+        return GCFont;
     }
+    private static final long GCSubwindowMode = 32768L;
     /**
-     * {@snippet :
-     * #define XK_zcaron 446
+     * {@snippet lang=c :
+     * #define GCSubwindowMode 32768
      * }
      */
-    public static int XK_zcaron() {
-        return (int)446L;
+    public static long GCSubwindowMode() {
+        return GCSubwindowMode;
     }
+    private static final long GCGraphicsExposures = 65536L;
     /**
-     * {@snippet :
-     * #define XK_zabovedot 447
+     * {@snippet lang=c :
+     * #define GCGraphicsExposures 65536
      * }
      */
-    public static int XK_zabovedot() {
-        return (int)447L;
+    public static long GCGraphicsExposures() {
+        return GCGraphicsExposures;
     }
+    private static final long GCClipXOrigin = 131072L;
     /**
-     * {@snippet :
-     * #define XK_Racute 448
+     * {@snippet lang=c :
+     * #define GCClipXOrigin 131072
      * }
      */
-    public static int XK_Racute() {
-        return (int)448L;
+    public static long GCClipXOrigin() {
+        return GCClipXOrigin;
     }
+    private static final long GCClipYOrigin = 262144L;
     /**
-     * {@snippet :
-     * #define XK_Abreve 451
+     * {@snippet lang=c :
+     * #define GCClipYOrigin 262144
      * }
      */
-    public static int XK_Abreve() {
-        return (int)451L;
+    public static long GCClipYOrigin() {
+        return GCClipYOrigin;
     }
+    private static final long GCClipMask = 524288L;
     /**
-     * {@snippet :
-     * #define XK_Lacute 453
+     * {@snippet lang=c :
+     * #define GCClipMask 524288
      * }
      */
-    public static int XK_Lacute() {
-        return (int)453L;
+    public static long GCClipMask() {
+        return GCClipMask;
     }
+    private static final long GCDashOffset = 1048576L;
     /**
-     * {@snippet :
-     * #define XK_Cacute 454
+     * {@snippet lang=c :
+     * #define GCDashOffset 1048576
      * }
      */
-    public static int XK_Cacute() {
-        return (int)454L;
+    public static long GCDashOffset() {
+        return GCDashOffset;
     }
+    private static final long GCDashList = 2097152L;
     /**
-     * {@snippet :
-     * #define XK_Ccaron 456
+     * {@snippet lang=c :
+     * #define GCDashList 2097152
      * }
      */
-    public static int XK_Ccaron() {
-        return (int)456L;
+    public static long GCDashList() {
+        return GCDashList;
     }
+    private static final long GCArcMode = 4194304L;
     /**
-     * {@snippet :
-     * #define XK_Eogonek 458
+     * {@snippet lang=c :
+     * #define GCArcMode 4194304
      * }
      */
-    public static int XK_Eogonek() {
-        return (int)458L;
+    public static long GCArcMode() {
+        return GCArcMode;
     }
+    private static final int DoRed = (int)1L;
     /**
-     * {@snippet :
-     * #define XK_Ecaron 460
+     * {@snippet lang=c :
+     * #define DoRed 1
      * }
      */
-    public static int XK_Ecaron() {
-        return (int)460L;
+    public static int DoRed() {
+        return DoRed;
     }
+    private static final int DoGreen = (int)2L;
     /**
-     * {@snippet :
-     * #define XK_Dcaron 463
+     * {@snippet lang=c :
+     * #define DoGreen 2
      * }
      */
-    public static int XK_Dcaron() {
-        return (int)463L;
+    public static int DoGreen() {
+        return DoGreen;
     }
+    private static final int DoBlue = (int)4L;
     /**
-     * {@snippet :
-     * #define XK_Dstroke 464
+     * {@snippet lang=c :
+     * #define DoBlue 4
      * }
      */
-    public static int XK_Dstroke() {
-        return (int)464L;
+    public static int DoBlue() {
+        return DoBlue;
     }
+    private static final long KBKeyClickPercent = 1L;
     /**
-     * {@snippet :
-     * #define XK_Nacute 465
+     * {@snippet lang=c :
+     * #define KBKeyClickPercent 1
      * }
      */
-    public static int XK_Nacute() {
-        return (int)465L;
+    public static long KBKeyClickPercent() {
+        return KBKeyClickPercent;
     }
+    private static final long KBBellPercent = 2L;
     /**
-     * {@snippet :
-     * #define XK_Ncaron 466
+     * {@snippet lang=c :
+     * #define KBBellPercent 2
      * }
      */
-    public static int XK_Ncaron() {
-        return (int)466L;
+    public static long KBBellPercent() {
+        return KBBellPercent;
     }
+    private static final long KBBellPitch = 4L;
     /**
-     * {@snippet :
-     * #define XK_Odoubleacute 469
+     * {@snippet lang=c :
+     * #define KBBellPitch 4
      * }
      */
-    public static int XK_Odoubleacute() {
-        return (int)469L;
+    public static long KBBellPitch() {
+        return KBBellPitch;
     }
+    private static final long KBBellDuration = 8L;
     /**
-     * {@snippet :
-     * #define XK_Rcaron 472
+     * {@snippet lang=c :
+     * #define KBBellDuration 8
      * }
      */
-    public static int XK_Rcaron() {
-        return (int)472L;
+    public static long KBBellDuration() {
+        return KBBellDuration;
     }
+    private static final long KBLed = 16L;
     /**
-     * {@snippet :
-     * #define XK_Uring 473
+     * {@snippet lang=c :
+     * #define KBLed 16
      * }
      */
-    public static int XK_Uring() {
-        return (int)473L;
+    public static long KBLed() {
+        return KBLed;
     }
+    private static final long KBLedMode = 32L;
     /**
-     * {@snippet :
-     * #define XK_Udoubleacute 475
+     * {@snippet lang=c :
+     * #define KBLedMode 32
      * }
      */
-    public static int XK_Udoubleacute() {
-        return (int)475L;
+    public static long KBLedMode() {
+        return KBLedMode;
     }
+    private static final long KBKey = 64L;
     /**
-     * {@snippet :
-     * #define XK_Tcedilla 478
+     * {@snippet lang=c :
+     * #define KBKey 64
      * }
      */
-    public static int XK_Tcedilla() {
-        return (int)478L;
+    public static long KBKey() {
+        return KBKey;
     }
+    private static final long KBAutoRepeatMode = 128L;
     /**
-     * {@snippet :
-     * #define XK_racute 480
+     * {@snippet lang=c :
+     * #define KBAutoRepeatMode 128
      * }
      */
-    public static int XK_racute() {
-        return (int)480L;
+    public static long KBAutoRepeatMode() {
+        return KBAutoRepeatMode;
     }
+    private static final MemorySegment NULL = MemorySegment.ofAddress(0L);
     /**
-     * {@snippet :
-     * #define XK_abreve 483
+     * {@snippet lang=c :
+     * #define NULL (void*) 0
      * }
      */
-    public static int XK_abreve() {
-        return (int)483L;
+    public static MemorySegment NULL() {
+        return NULL;
     }
+    private static final long AllPlanes = -1L;
     /**
-     * {@snippet :
-     * #define XK_lacute 485
+     * {@snippet lang=c :
+     * #define AllPlanes -1
      * }
      */
-    public static int XK_lacute() {
-        return (int)485L;
+    public static long AllPlanes() {
+        return AllPlanes;
     }
     /**
-     * {@snippet :
-     * #define XK_cacute 486
+     * {@snippet lang=c :
+     * #define XNRequiredCharSet "requiredCharSet"
      * }
      */
-    public static int XK_cacute() {
-        return (int)486L;
+    public static MemorySegment XNRequiredCharSet() {
+        class Holder {
+            static final MemorySegment XNRequiredCharSet
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("requiredCharSet");
+        }
+        return Holder.XNRequiredCharSet;
     }
     /**
-     * {@snippet :
-     * #define XK_ccaron 488
+     * {@snippet lang=c :
+     * #define XNQueryOrientation "queryOrientation"
      * }
      */
-    public static int XK_ccaron() {
-        return (int)488L;
+    public static MemorySegment XNQueryOrientation() {
+        class Holder {
+            static final MemorySegment XNQueryOrientation
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("queryOrientation");
+        }
+        return Holder.XNQueryOrientation;
     }
     /**
-     * {@snippet :
-     * #define XK_eogonek 490
+     * {@snippet lang=c :
+     * #define XNBaseFontName "baseFontName"
      * }
      */
-    public static int XK_eogonek() {
-        return (int)490L;
+    public static MemorySegment XNBaseFontName() {
+        class Holder {
+            static final MemorySegment XNBaseFontName
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("baseFontName");
+        }
+        return Holder.XNBaseFontName;
     }
     /**
-     * {@snippet :
-     * #define XK_ecaron 492
+     * {@snippet lang=c :
+     * #define XNOMAutomatic "omAutomatic"
      * }
      */
-    public static int XK_ecaron() {
-        return (int)492L;
+    public static MemorySegment XNOMAutomatic() {
+        class Holder {
+            static final MemorySegment XNOMAutomatic
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("omAutomatic");
+        }
+        return Holder.XNOMAutomatic;
     }
     /**
-     * {@snippet :
-     * #define XK_dcaron 495
+     * {@snippet lang=c :
+     * #define XNMissingCharSet "missingCharSet"
      * }
      */
-    public static int XK_dcaron() {
-        return (int)495L;
+    public static MemorySegment XNMissingCharSet() {
+        class Holder {
+            static final MemorySegment XNMissingCharSet
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("missingCharSet");
+        }
+        return Holder.XNMissingCharSet;
     }
     /**
-     * {@snippet :
-     * #define XK_dstroke 496
+     * {@snippet lang=c :
+     * #define XNDefaultString "defaultString"
      * }
      */
-    public static int XK_dstroke() {
-        return (int)496L;
+    public static MemorySegment XNDefaultString() {
+        class Holder {
+            static final MemorySegment XNDefaultString
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("defaultString");
+        }
+        return Holder.XNDefaultString;
     }
     /**
-     * {@snippet :
-     * #define XK_nacute 497
+     * {@snippet lang=c :
+     * #define XNOrientation "orientation"
      * }
      */
-    public static int XK_nacute() {
-        return (int)497L;
+    public static MemorySegment XNOrientation() {
+        class Holder {
+            static final MemorySegment XNOrientation
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("orientation");
+        }
+        return Holder.XNOrientation;
     }
     /**
-     * {@snippet :
-     * #define XK_ncaron 498
+     * {@snippet lang=c :
+     * #define XNDirectionalDependentDrawing "directionalDependentDrawing"
      * }
      */
-    public static int XK_ncaron() {
-        return (int)498L;
+    public static MemorySegment XNDirectionalDependentDrawing() {
+        class Holder {
+            static final MemorySegment XNDirectionalDependentDrawing
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("directionalDependentDrawing");
+        }
+        return Holder.XNDirectionalDependentDrawing;
     }
     /**
-     * {@snippet :
-     * #define XK_odoubleacute 501
+     * {@snippet lang=c :
+     * #define XNContextualDrawing "contextualDrawing"
      * }
      */
-    public static int XK_odoubleacute() {
-        return (int)501L;
+    public static MemorySegment XNContextualDrawing() {
+        class Holder {
+            static final MemorySegment XNContextualDrawing
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("contextualDrawing");
+        }
+        return Holder.XNContextualDrawing;
     }
     /**
-     * {@snippet :
-     * #define XK_rcaron 504
+     * {@snippet lang=c :
+     * #define XNFontInfo "fontInfo"
      * }
      */
-    public static int XK_rcaron() {
-        return (int)504L;
+    public static MemorySegment XNFontInfo() {
+        class Holder {
+            static final MemorySegment XNFontInfo
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("fontInfo");
+        }
+        return Holder.XNFontInfo;
     }
+    private static final long XIMPreeditArea = 1L;
     /**
-     * {@snippet :
-     * #define XK_uring 505
+     * {@snippet lang=c :
+     * #define XIMPreeditArea 1
      * }
      */
-    public static int XK_uring() {
-        return (int)505L;
+    public static long XIMPreeditArea() {
+        return XIMPreeditArea;
     }
+    private static final long XIMPreeditCallbacks = 2L;
     /**
-     * {@snippet :
-     * #define XK_udoubleacute 507
+     * {@snippet lang=c :
+     * #define XIMPreeditCallbacks 2
      * }
      */
-    public static int XK_udoubleacute() {
-        return (int)507L;
+    public static long XIMPreeditCallbacks() {
+        return XIMPreeditCallbacks;
     }
+    private static final long XIMPreeditPosition = 4L;
     /**
-     * {@snippet :
-     * #define XK_tcedilla 510
+     * {@snippet lang=c :
+     * #define XIMPreeditPosition 4
      * }
      */
-    public static int XK_tcedilla() {
-        return (int)510L;
+    public static long XIMPreeditPosition() {
+        return XIMPreeditPosition;
     }
+    private static final long XIMPreeditNothing = 8L;
     /**
-     * {@snippet :
-     * #define XK_abovedot 511
+     * {@snippet lang=c :
+     * #define XIMPreeditNothing 8
      * }
      */
-    public static int XK_abovedot() {
-        return (int)511L;
+    public static long XIMPreeditNothing() {
+        return XIMPreeditNothing;
     }
+    private static final long XIMPreeditNone = 16L;
     /**
-     * {@snippet :
-     * #define XK_Hstroke 673
+     * {@snippet lang=c :
+     * #define XIMPreeditNone 16
      * }
      */
-    public static int XK_Hstroke() {
-        return (int)673L;
+    public static long XIMPreeditNone() {
+        return XIMPreeditNone;
     }
+    private static final long XIMStatusArea = 256L;
     /**
-     * {@snippet :
-     * #define XK_Hcircumflex 678
+     * {@snippet lang=c :
+     * #define XIMStatusArea 256
      * }
      */
-    public static int XK_Hcircumflex() {
-        return (int)678L;
+    public static long XIMStatusArea() {
+        return XIMStatusArea;
     }
+    private static final long XIMStatusCallbacks = 512L;
     /**
-     * {@snippet :
-     * #define XK_Iabovedot 681
+     * {@snippet lang=c :
+     * #define XIMStatusCallbacks 512
      * }
      */
-    public static int XK_Iabovedot() {
-        return (int)681L;
+    public static long XIMStatusCallbacks() {
+        return XIMStatusCallbacks;
     }
+    private static final long XIMStatusNothing = 1024L;
     /**
-     * {@snippet :
-     * #define XK_Gbreve 683
+     * {@snippet lang=c :
+     * #define XIMStatusNothing 1024
      * }
      */
-    public static int XK_Gbreve() {
-        return (int)683L;
+    public static long XIMStatusNothing() {
+        return XIMStatusNothing;
     }
+    private static final long XIMStatusNone = 2048L;
     /**
-     * {@snippet :
-     * #define XK_Jcircumflex 684
+     * {@snippet lang=c :
+     * #define XIMStatusNone 2048
      * }
      */
-    public static int XK_Jcircumflex() {
-        return (int)684L;
+    public static long XIMStatusNone() {
+        return XIMStatusNone;
     }
     /**
-     * {@snippet :
-     * #define XK_hstroke 689
+     * {@snippet lang=c :
+     * #define XNVaNestedList "XNVaNestedList"
      * }
      */
-    public static int XK_hstroke() {
-        return (int)689L;
+    public static MemorySegment XNVaNestedList() {
+        class Holder {
+            static final MemorySegment XNVaNestedList
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("XNVaNestedList");
+        }
+        return Holder.XNVaNestedList;
     }
     /**
-     * {@snippet :
-     * #define XK_hcircumflex 694
+     * {@snippet lang=c :
+     * #define XNQueryInputStyle "queryInputStyle"
      * }
      */
-    public static int XK_hcircumflex() {
-        return (int)694L;
+    public static MemorySegment XNQueryInputStyle() {
+        class Holder {
+            static final MemorySegment XNQueryInputStyle
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("queryInputStyle");
+        }
+        return Holder.XNQueryInputStyle;
     }
     /**
-     * {@snippet :
-     * #define XK_idotless 697
+     * {@snippet lang=c :
+     * #define XNClientWindow "clientWindow"
      * }
      */
-    public static int XK_idotless() {
-        return (int)697L;
+    public static MemorySegment XNClientWindow() {
+        class Holder {
+            static final MemorySegment XNClientWindow
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("clientWindow");
+        }
+        return Holder.XNClientWindow;
     }
     /**
-     * {@snippet :
-     * #define XK_gbreve 699
+     * {@snippet lang=c :
+     * #define XNInputStyle "inputStyle"
      * }
      */
-    public static int XK_gbreve() {
-        return (int)699L;
+    public static MemorySegment XNInputStyle() {
+        class Holder {
+            static final MemorySegment XNInputStyle
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("inputStyle");
+        }
+        return Holder.XNInputStyle;
     }
     /**
-     * {@snippet :
-     * #define XK_jcircumflex 700
+     * {@snippet lang=c :
+     * #define XNFocusWindow "focusWindow"
      * }
      */
-    public static int XK_jcircumflex() {
-        return (int)700L;
+    public static MemorySegment XNFocusWindow() {
+        class Holder {
+            static final MemorySegment XNFocusWindow
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("focusWindow");
+        }
+        return Holder.XNFocusWindow;
     }
     /**
-     * {@snippet :
-     * #define XK_Cabovedot 709
+     * {@snippet lang=c :
+     * #define XNResourceName "resourceName"
      * }
      */
-    public static int XK_Cabovedot() {
-        return (int)709L;
+    public static MemorySegment XNResourceName() {
+        class Holder {
+            static final MemorySegment XNResourceName
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("resourceName");
+        }
+        return Holder.XNResourceName;
     }
     /**
-     * {@snippet :
-     * #define XK_Ccircumflex 710
+     * {@snippet lang=c :
+     * #define XNResourceClass "resourceClass"
      * }
      */
-    public static int XK_Ccircumflex() {
-        return (int)710L;
+    public static MemorySegment XNResourceClass() {
+        class Holder {
+            static final MemorySegment XNResourceClass
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("resourceClass");
+        }
+        return Holder.XNResourceClass;
     }
     /**
-     * {@snippet :
-     * #define XK_Gabovedot 725
+     * {@snippet lang=c :
+     * #define XNGeometryCallback "geometryCallback"
      * }
      */
-    public static int XK_Gabovedot() {
-        return (int)725L;
+    public static MemorySegment XNGeometryCallback() {
+        class Holder {
+            static final MemorySegment XNGeometryCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("geometryCallback");
+        }
+        return Holder.XNGeometryCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_Gcircumflex 728
+     * {@snippet lang=c :
+     * #define XNDestroyCallback "destroyCallback"
      * }
      */
-    public static int XK_Gcircumflex() {
-        return (int)728L;
+    public static MemorySegment XNDestroyCallback() {
+        class Holder {
+            static final MemorySegment XNDestroyCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("destroyCallback");
+        }
+        return Holder.XNDestroyCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_Ubreve 733
+     * {@snippet lang=c :
+     * #define XNFilterEvents "filterEvents"
      * }
      */
-    public static int XK_Ubreve() {
-        return (int)733L;
+    public static MemorySegment XNFilterEvents() {
+        class Holder {
+            static final MemorySegment XNFilterEvents
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("filterEvents");
+        }
+        return Holder.XNFilterEvents;
     }
     /**
-     * {@snippet :
-     * #define XK_Scircumflex 734
+     * {@snippet lang=c :
+     * #define XNPreeditStartCallback "preeditStartCallback"
      * }
      */
-    public static int XK_Scircumflex() {
-        return (int)734L;
+    public static MemorySegment XNPreeditStartCallback() {
+        class Holder {
+            static final MemorySegment XNPreeditStartCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("preeditStartCallback");
+        }
+        return Holder.XNPreeditStartCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_cabovedot 741
+     * {@snippet lang=c :
+     * #define XNPreeditDoneCallback "preeditDoneCallback"
      * }
      */
-    public static int XK_cabovedot() {
-        return (int)741L;
+    public static MemorySegment XNPreeditDoneCallback() {
+        class Holder {
+            static final MemorySegment XNPreeditDoneCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("preeditDoneCallback");
+        }
+        return Holder.XNPreeditDoneCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_ccircumflex 742
+     * {@snippet lang=c :
+     * #define XNPreeditDrawCallback "preeditDrawCallback"
      * }
      */
-    public static int XK_ccircumflex() {
-        return (int)742L;
+    public static MemorySegment XNPreeditDrawCallback() {
+        class Holder {
+            static final MemorySegment XNPreeditDrawCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("preeditDrawCallback");
+        }
+        return Holder.XNPreeditDrawCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_gabovedot 757
+     * {@snippet lang=c :
+     * #define XNPreeditCaretCallback "preeditCaretCallback"
      * }
      */
-    public static int XK_gabovedot() {
-        return (int)757L;
+    public static MemorySegment XNPreeditCaretCallback() {
+        class Holder {
+            static final MemorySegment XNPreeditCaretCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("preeditCaretCallback");
+        }
+        return Holder.XNPreeditCaretCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_gcircumflex 760
+     * {@snippet lang=c :
+     * #define XNPreeditStateNotifyCallback "preeditStateNotifyCallback"
      * }
      */
-    public static int XK_gcircumflex() {
-        return (int)760L;
+    public static MemorySegment XNPreeditStateNotifyCallback() {
+        class Holder {
+            static final MemorySegment XNPreeditStateNotifyCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("preeditStateNotifyCallback");
+        }
+        return Holder.XNPreeditStateNotifyCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_ubreve 765
+     * {@snippet lang=c :
+     * #define XNPreeditAttributes "preeditAttributes"
      * }
      */
-    public static int XK_ubreve() {
-        return (int)765L;
+    public static MemorySegment XNPreeditAttributes() {
+        class Holder {
+            static final MemorySegment XNPreeditAttributes
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("preeditAttributes");
+        }
+        return Holder.XNPreeditAttributes;
     }
     /**
-     * {@snippet :
-     * #define XK_scircumflex 766
+     * {@snippet lang=c :
+     * #define XNStatusStartCallback "statusStartCallback"
      * }
      */
-    public static int XK_scircumflex() {
-        return (int)766L;
+    public static MemorySegment XNStatusStartCallback() {
+        class Holder {
+            static final MemorySegment XNStatusStartCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("statusStartCallback");
+        }
+        return Holder.XNStatusStartCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_kra 930
+     * {@snippet lang=c :
+     * #define XNStatusDoneCallback "statusDoneCallback"
      * }
      */
-    public static int XK_kra() {
-        return (int)930L;
+    public static MemorySegment XNStatusDoneCallback() {
+        class Holder {
+            static final MemorySegment XNStatusDoneCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("statusDoneCallback");
+        }
+        return Holder.XNStatusDoneCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_kappa 930
+     * {@snippet lang=c :
+     * #define XNStatusDrawCallback "statusDrawCallback"
      * }
      */
-    public static int XK_kappa() {
-        return (int)930L;
+    public static MemorySegment XNStatusDrawCallback() {
+        class Holder {
+            static final MemorySegment XNStatusDrawCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("statusDrawCallback");
+        }
+        return Holder.XNStatusDrawCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_Rcedilla 931
+     * {@snippet lang=c :
+     * #define XNStatusAttributes "statusAttributes"
      * }
      */
-    public static int XK_Rcedilla() {
-        return (int)931L;
+    public static MemorySegment XNStatusAttributes() {
+        class Holder {
+            static final MemorySegment XNStatusAttributes
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("statusAttributes");
+        }
+        return Holder.XNStatusAttributes;
     }
     /**
-     * {@snippet :
-     * #define XK_Itilde 933
+     * {@snippet lang=c :
+     * #define XNArea "area"
      * }
      */
-    public static int XK_Itilde() {
-        return (int)933L;
+    public static MemorySegment XNArea() {
+        class Holder {
+            static final MemorySegment XNArea
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("area");
+        }
+        return Holder.XNArea;
     }
     /**
-     * {@snippet :
-     * #define XK_Lcedilla 934
+     * {@snippet lang=c :
+     * #define XNAreaNeeded "areaNeeded"
      * }
      */
-    public static int XK_Lcedilla() {
-        return (int)934L;
+    public static MemorySegment XNAreaNeeded() {
+        class Holder {
+            static final MemorySegment XNAreaNeeded
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("areaNeeded");
+        }
+        return Holder.XNAreaNeeded;
     }
     /**
-     * {@snippet :
-     * #define XK_Emacron 938
+     * {@snippet lang=c :
+     * #define XNSpotLocation "spotLocation"
      * }
      */
-    public static int XK_Emacron() {
-        return (int)938L;
+    public static MemorySegment XNSpotLocation() {
+        class Holder {
+            static final MemorySegment XNSpotLocation
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("spotLocation");
+        }
+        return Holder.XNSpotLocation;
     }
     /**
-     * {@snippet :
-     * #define XK_Gcedilla 939
+     * {@snippet lang=c :
+     * #define XNColormap "colorMap"
      * }
      */
-    public static int XK_Gcedilla() {
-        return (int)939L;
+    public static MemorySegment XNColormap() {
+        class Holder {
+            static final MemorySegment XNColormap
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("colorMap");
+        }
+        return Holder.XNColormap;
     }
     /**
-     * {@snippet :
-     * #define XK_Tslash 940
+     * {@snippet lang=c :
+     * #define XNStdColormap "stdColorMap"
      * }
      */
-    public static int XK_Tslash() {
-        return (int)940L;
+    public static MemorySegment XNStdColormap() {
+        class Holder {
+            static final MemorySegment XNStdColormap
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("stdColorMap");
+        }
+        return Holder.XNStdColormap;
     }
     /**
-     * {@snippet :
-     * #define XK_rcedilla 947
+     * {@snippet lang=c :
+     * #define XNForeground "foreground"
      * }
      */
-    public static int XK_rcedilla() {
-        return (int)947L;
+    public static MemorySegment XNForeground() {
+        class Holder {
+            static final MemorySegment XNForeground
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("foreground");
+        }
+        return Holder.XNForeground;
     }
     /**
-     * {@snippet :
-     * #define XK_itilde 949
+     * {@snippet lang=c :
+     * #define XNBackground "background"
      * }
      */
-    public static int XK_itilde() {
-        return (int)949L;
+    public static MemorySegment XNBackground() {
+        class Holder {
+            static final MemorySegment XNBackground
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("background");
+        }
+        return Holder.XNBackground;
     }
     /**
-     * {@snippet :
-     * #define XK_lcedilla 950
+     * {@snippet lang=c :
+     * #define XNBackgroundPixmap "backgroundPixmap"
      * }
      */
-    public static int XK_lcedilla() {
-        return (int)950L;
+    public static MemorySegment XNBackgroundPixmap() {
+        class Holder {
+            static final MemorySegment XNBackgroundPixmap
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("backgroundPixmap");
+        }
+        return Holder.XNBackgroundPixmap;
     }
     /**
-     * {@snippet :
-     * #define XK_emacron 954
+     * {@snippet lang=c :
+     * #define XNFontSet "fontSet"
      * }
      */
-    public static int XK_emacron() {
-        return (int)954L;
+    public static MemorySegment XNFontSet() {
+        class Holder {
+            static final MemorySegment XNFontSet
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("fontSet");
+        }
+        return Holder.XNFontSet;
     }
     /**
-     * {@snippet :
-     * #define XK_gcedilla 955
+     * {@snippet lang=c :
+     * #define XNLineSpace "lineSpace"
      * }
      */
-    public static int XK_gcedilla() {
-        return (int)955L;
+    public static MemorySegment XNLineSpace() {
+        class Holder {
+            static final MemorySegment XNLineSpace
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("lineSpace");
+        }
+        return Holder.XNLineSpace;
     }
     /**
-     * {@snippet :
-     * #define XK_tslash 956
+     * {@snippet lang=c :
+     * #define XNCursor "cursor"
      * }
      */
-    public static int XK_tslash() {
-        return (int)956L;
+    public static MemorySegment XNCursor() {
+        class Holder {
+            static final MemorySegment XNCursor
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("cursor");
+        }
+        return Holder.XNCursor;
     }
     /**
-     * {@snippet :
-     * #define XK_ENG 957
+     * {@snippet lang=c :
+     * #define XNQueryIMValuesList "queryIMValuesList"
      * }
      */
-    public static int XK_ENG() {
-        return (int)957L;
+    public static MemorySegment XNQueryIMValuesList() {
+        class Holder {
+            static final MemorySegment XNQueryIMValuesList
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("queryIMValuesList");
+        }
+        return Holder.XNQueryIMValuesList;
     }
     /**
-     * {@snippet :
-     * #define XK_eng 959
+     * {@snippet lang=c :
+     * #define XNQueryICValuesList "queryICValuesList"
      * }
      */
-    public static int XK_eng() {
-        return (int)959L;
+    public static MemorySegment XNQueryICValuesList() {
+        class Holder {
+            static final MemorySegment XNQueryICValuesList
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("queryICValuesList");
+        }
+        return Holder.XNQueryICValuesList;
     }
     /**
-     * {@snippet :
-     * #define XK_Amacron 960
+     * {@snippet lang=c :
+     * #define XNVisiblePosition "visiblePosition"
      * }
      */
-    public static int XK_Amacron() {
-        return (int)960L;
+    public static MemorySegment XNVisiblePosition() {
+        class Holder {
+            static final MemorySegment XNVisiblePosition
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("visiblePosition");
+        }
+        return Holder.XNVisiblePosition;
     }
     /**
-     * {@snippet :
-     * #define XK_Iogonek 967
+     * {@snippet lang=c :
+     * #define XNR6PreeditCallback "r6PreeditCallback"
      * }
      */
-    public static int XK_Iogonek() {
-        return (int)967L;
+    public static MemorySegment XNR6PreeditCallback() {
+        class Holder {
+            static final MemorySegment XNR6PreeditCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("r6PreeditCallback");
+        }
+        return Holder.XNR6PreeditCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_Eabovedot 972
+     * {@snippet lang=c :
+     * #define XNStringConversionCallback "stringConversionCallback"
      * }
      */
-    public static int XK_Eabovedot() {
-        return (int)972L;
+    public static MemorySegment XNStringConversionCallback() {
+        class Holder {
+            static final MemorySegment XNStringConversionCallback
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("stringConversionCallback");
+        }
+        return Holder.XNStringConversionCallback;
     }
     /**
-     * {@snippet :
-     * #define XK_Imacron 975
+     * {@snippet lang=c :
+     * #define XNStringConversion "stringConversion"
      * }
      */
-    public static int XK_Imacron() {
-        return (int)975L;
+    public static MemorySegment XNStringConversion() {
+        class Holder {
+            static final MemorySegment XNStringConversion
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("stringConversion");
+        }
+        return Holder.XNStringConversion;
     }
     /**
-     * {@snippet :
-     * #define XK_Ncedilla 977
+     * {@snippet lang=c :
+     * #define XNResetState "resetState"
      * }
      */
-    public static int XK_Ncedilla() {
-        return (int)977L;
+    public static MemorySegment XNResetState() {
+        class Holder {
+            static final MemorySegment XNResetState
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("resetState");
+        }
+        return Holder.XNResetState;
     }
     /**
-     * {@snippet :
-     * #define XK_Omacron 978
+     * {@snippet lang=c :
+     * #define XNHotKey "hotKey"
      * }
      */
-    public static int XK_Omacron() {
-        return (int)978L;
+    public static MemorySegment XNHotKey() {
+        class Holder {
+            static final MemorySegment XNHotKey
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("hotKey");
+        }
+        return Holder.XNHotKey;
     }
     /**
-     * {@snippet :
-     * #define XK_Kcedilla 979
+     * {@snippet lang=c :
+     * #define XNHotKeyState "hotKeyState"
      * }
      */
-    public static int XK_Kcedilla() {
-        return (int)979L;
+    public static MemorySegment XNHotKeyState() {
+        class Holder {
+            static final MemorySegment XNHotKeyState
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("hotKeyState");
+        }
+        return Holder.XNHotKeyState;
     }
     /**
-     * {@snippet :
-     * #define XK_Uogonek 985
+     * {@snippet lang=c :
+     * #define XNPreeditState "preeditState"
      * }
      */
-    public static int XK_Uogonek() {
-        return (int)985L;
+    public static MemorySegment XNPreeditState() {
+        class Holder {
+            static final MemorySegment XNPreeditState
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("preeditState");
+        }
+        return Holder.XNPreeditState;
     }
     /**
-     * {@snippet :
-     * #define XK_Utilde 989
+     * {@snippet lang=c :
+     * #define XNSeparatorofNestedList "separatorofNestedList"
      * }
      */
-    public static int XK_Utilde() {
-        return (int)989L;
+    public static MemorySegment XNSeparatorofNestedList() {
+        class Holder {
+            static final MemorySegment XNSeparatorofNestedList
+                = Xlib_h.LIBRARY_ARENA.allocateFrom("separatorofNestedList");
+        }
+        return Holder.XNSeparatorofNestedList;
     }
+    private static final int XBufferOverflow = (int)-1L;
     /**
-     * {@snippet :
-     * #define XK_Umacron 990
+     * {@snippet lang=c :
+     * #define XBufferOverflow -1
      * }
      */
-    public static int XK_Umacron() {
-        return (int)990L;
+    public static int XBufferOverflow() {
+        return XBufferOverflow;
     }
+    private static final long XIMReverse = 1L;
     /**
-     * {@snippet :
-     * #define XK_amacron 992
+     * {@snippet lang=c :
+     * #define XIMReverse 1
      * }
      */
-    public static int XK_amacron() {
-        return (int)992L;
+    public static long XIMReverse() {
+        return XIMReverse;
     }
+    private static final long XIMUnderline = 2L;
     /**
-     * {@snippet :
-     * #define XK_iogonek 999
+     * {@snippet lang=c :
+     * #define XIMUnderline 2
      * }
      */
-    public static int XK_iogonek() {
-        return (int)999L;
+    public static long XIMUnderline() {
+        return XIMUnderline;
     }
+    private static final long XIMHighlight = 4L;
     /**
-     * {@snippet :
-     * #define XK_eabovedot 1004
+     * {@snippet lang=c :
+     * #define XIMHighlight 4
      * }
      */
-    public static int XK_eabovedot() {
-        return (int)1004L;
+    public static long XIMHighlight() {
+        return XIMHighlight;
     }
+    private static final long XIMPrimary = 32L;
     /**
-     * {@snippet :
-     * #define XK_imacron 1007
+     * {@snippet lang=c :
+     * #define XIMPrimary 32
      * }
      */
-    public static int XK_imacron() {
-        return (int)1007L;
+    public static long XIMPrimary() {
+        return XIMPrimary;
     }
+    private static final long XIMSecondary = 64L;
     /**
-     * {@snippet :
-     * #define XK_ncedilla 1009
+     * {@snippet lang=c :
+     * #define XIMSecondary 64
      * }
      */
-    public static int XK_ncedilla() {
-        return (int)1009L;
+    public static long XIMSecondary() {
+        return XIMSecondary;
     }
+    private static final long XIMTertiary = 128L;
     /**
-     * {@snippet :
-     * #define XK_omacron 1010
+     * {@snippet lang=c :
+     * #define XIMTertiary 128
      * }
      */
-    public static int XK_omacron() {
-        return (int)1010L;
+    public static long XIMTertiary() {
+        return XIMTertiary;
     }
+    private static final long XIMVisibleToForward = 256L;
     /**
-     * {@snippet :
-     * #define XK_kcedilla 1011
+     * {@snippet lang=c :
+     * #define XIMVisibleToForward 256
      * }
      */
-    public static int XK_kcedilla() {
-        return (int)1011L;
+    public static long XIMVisibleToForward() {
+        return XIMVisibleToForward;
     }
+    private static final long XIMVisibleToBackword = 512L;
     /**
-     * {@snippet :
-     * #define XK_uogonek 1017
+     * {@snippet lang=c :
+     * #define XIMVisibleToBackword 512
      * }
      */
-    public static int XK_uogonek() {
-        return (int)1017L;
+    public static long XIMVisibleToBackword() {
+        return XIMVisibleToBackword;
     }
+    private static final long XIMVisibleToCenter = 1024L;
     /**
-     * {@snippet :
-     * #define XK_utilde 1021
+     * {@snippet lang=c :
+     * #define XIMVisibleToCenter 1024
      * }
      */
-    public static int XK_utilde() {
-        return (int)1021L;
+    public static long XIMVisibleToCenter() {
+        return XIMVisibleToCenter;
     }
+    private static final long XIMPreeditUnKnown = 0L;
     /**
-     * {@snippet :
-     * #define XK_umacron 1022
+     * {@snippet lang=c :
+     * #define XIMPreeditUnKnown 0
      * }
      */
-    public static int XK_umacron() {
-        return (int)1022L;
+    public static long XIMPreeditUnKnown() {
+        return XIMPreeditUnKnown;
     }
+    private static final long XIMPreeditEnable = 1L;
     /**
-     * {@snippet :
-     * #define XK_Wcircumflex 16777588
+     * {@snippet lang=c :
+     * #define XIMPreeditEnable 1
      * }
      */
-    public static int XK_Wcircumflex() {
-        return (int)16777588L;
+    public static long XIMPreeditEnable() {
+        return XIMPreeditEnable;
     }
+    private static final long XIMPreeditDisable = 2L;
     /**
-     * {@snippet :
-     * #define XK_wcircumflex 16777589
+     * {@snippet lang=c :
+     * #define XIMPreeditDisable 2
      * }
      */
-    public static int XK_wcircumflex() {
-        return (int)16777589L;
+    public static long XIMPreeditDisable() {
+        return XIMPreeditDisable;
     }
+    private static final long XIMInitialState = 1L;
     /**
-     * {@snippet :
-     * #define XK_Ycircumflex 16777590
+     * {@snippet lang=c :
+     * #define XIMInitialState 1
      * }
      */
-    public static int XK_Ycircumflex() {
-        return (int)16777590L;
+    public static long XIMInitialState() {
+        return XIMInitialState;
     }
+    private static final long XIMPreserveState = 2L;
     /**
-     * {@snippet :
-     * #define XK_ycircumflex 16777591
+     * {@snippet lang=c :
+     * #define XIMPreserveState 2
      * }
      */
-    public static int XK_ycircumflex() {
-        return (int)16777591L;
+    public static long XIMPreserveState() {
+        return XIMPreserveState;
     }
+    private static final int XIMStringConversionLeftEdge = (int)1L;
     /**
-     * {@snippet :
-     * #define XK_Babovedot 16784898
+     * {@snippet lang=c :
+     * #define XIMStringConversionLeftEdge 1
      * }
      */
-    public static int XK_Babovedot() {
-        return (int)16784898L;
+    public static int XIMStringConversionLeftEdge() {
+        return XIMStringConversionLeftEdge;
     }
+    private static final int XIMStringConversionRightEdge = (int)2L;
     /**
-     * {@snippet :
-     * #define XK_babovedot 16784899
+     * {@snippet lang=c :
+     * #define XIMStringConversionRightEdge 2
      * }
      */
-    public static int XK_babovedot() {
-        return (int)16784899L;
+    public static int XIMStringConversionRightEdge() {
+        return XIMStringConversionRightEdge;
     }
+    private static final int XIMStringConversionTopEdge = (int)4L;
     /**
-     * {@snippet :
-     * #define XK_Dabovedot 16784906
+     * {@snippet lang=c :
+     * #define XIMStringConversionTopEdge 4
      * }
      */
-    public static int XK_Dabovedot() {
-        return (int)16784906L;
+    public static int XIMStringConversionTopEdge() {
+        return XIMStringConversionTopEdge;
     }
+    private static final int XIMStringConversionBottomEdge = (int)8L;
     /**
-     * {@snippet :
-     * #define XK_dabovedot 16784907
+     * {@snippet lang=c :
+     * #define XIMStringConversionBottomEdge 8
      * }
      */
-    public static int XK_dabovedot() {
-        return (int)16784907L;
+    public static int XIMStringConversionBottomEdge() {
+        return XIMStringConversionBottomEdge;
     }
+    private static final int XIMStringConversionConcealed = (int)16L;
     /**
-     * {@snippet :
-     * #define XK_Fabovedot 16784926
+     * {@snippet lang=c :
+     * #define XIMStringConversionConcealed 16
      * }
      */
-    public static int XK_Fabovedot() {
-        return (int)16784926L;
+    public static int XIMStringConversionConcealed() {
+        return XIMStringConversionConcealed;
     }
+    private static final int XIMStringConversionWrapped = (int)32L;
     /**
-     * {@snippet :
-     * #define XK_fabovedot 16784927
+     * {@snippet lang=c :
+     * #define XIMStringConversionWrapped 32
      * }
      */
-    public static int XK_fabovedot() {
-        return (int)16784927L;
+    public static int XIMStringConversionWrapped() {
+        return XIMStringConversionWrapped;
     }
+    private static final int XIMStringConversionBuffer = (int)1L;
     /**
-     * {@snippet :
-     * #define XK_Mabovedot 16784960
+     * {@snippet lang=c :
+     * #define XIMStringConversionBuffer 1
      * }
      */
-    public static int XK_Mabovedot() {
-        return (int)16784960L;
+    public static int XIMStringConversionBuffer() {
+        return XIMStringConversionBuffer;
     }
+    private static final int XIMStringConversionLine = (int)2L;
     /**
-     * {@snippet :
-     * #define XK_mabovedot 16784961
+     * {@snippet lang=c :
+     * #define XIMStringConversionLine 2
      * }
      */
-    public static int XK_mabovedot() {
-        return (int)16784961L;
+    public static int XIMStringConversionLine() {
+        return XIMStringConversionLine;
     }
+    private static final int XIMStringConversionWord = (int)3L;
     /**
-     * {@snippet :
-     * #define XK_Pabovedot 16784982
+     * {@snippet lang=c :
+     * #define XIMStringConversionWord 3
      * }
      */
-    public static int XK_Pabovedot() {
-        return (int)16784982L;
+    public static int XIMStringConversionWord() {
+        return XIMStringConversionWord;
     }
+    private static final int XIMStringConversionChar = (int)4L;
     /**
-     * {@snippet :
-     * #define XK_pabovedot 16784983
+     * {@snippet lang=c :
+     * #define XIMStringConversionChar 4
      * }
      */
-    public static int XK_pabovedot() {
-        return (int)16784983L;
+    public static int XIMStringConversionChar() {
+        return XIMStringConversionChar;
     }
+    private static final int XIMStringConversionSubstitution = (int)1L;
     /**
-     * {@snippet :
-     * #define XK_Sabovedot 16784992
+     * {@snippet lang=c :
+     * #define XIMStringConversionSubstitution 1
      * }
      */
-    public static int XK_Sabovedot() {
-        return (int)16784992L;
+    public static int XIMStringConversionSubstitution() {
+        return XIMStringConversionSubstitution;
     }
+    private static final int XIMStringConversionRetrieval = (int)2L;
     /**
-     * {@snippet :
-     * #define XK_sabovedot 16784993
+     * {@snippet lang=c :
+     * #define XIMStringConversionRetrieval 2
      * }
      */
-    public static int XK_sabovedot() {
-        return (int)16784993L;
+    public static int XIMStringConversionRetrieval() {
+        return XIMStringConversionRetrieval;
     }
+    private static final long XIMHotKeyStateON = 1L;
     /**
-     * {@snippet :
-     * #define XK_Tabovedot 16785002
+     * {@snippet lang=c :
+     * #define XIMHotKeyStateON 1
      * }
      */
-    public static int XK_Tabovedot() {
-        return (int)16785002L;
+    public static long XIMHotKeyStateON() {
+        return XIMHotKeyStateON;
     }
+    private static final long XIMHotKeyStateOFF = 2L;
     /**
-     * {@snippet :
-     * #define XK_tabovedot 16785003
+     * {@snippet lang=c :
+     * #define XIMHotKeyStateOFF 2
      * }
      */
-    public static int XK_tabovedot() {
-        return (int)16785003L;
+    public static long XIMHotKeyStateOFF() {
+        return XIMHotKeyStateOFF;
     }
+    private static final long USPosition = 1L;
     /**
-     * {@snippet :
-     * #define XK_Wgrave 16785024
+     * {@snippet lang=c :
+     * #define USPosition 1
      * }
      */
-    public static int XK_Wgrave() {
-        return (int)16785024L;
+    public static long USPosition() {
+        return USPosition;
     }
+    private static final long USSize = 2L;
     /**
-     * {@snippet :
-     * #define XK_wgrave 16785025
+     * {@snippet lang=c :
+     * #define USSize 2
      * }
      */
-    public static int XK_wgrave() {
-        return (int)16785025L;
+    public static long USSize() {
+        return USSize;
     }
+    private static final long PPosition = 4L;
     /**
-     * {@snippet :
-     * #define XK_Wacute 16785026
+     * {@snippet lang=c :
+     * #define PPosition 4
      * }
      */
-    public static int XK_Wacute() {
-        return (int)16785026L;
+    public static long PPosition() {
+        return PPosition;
     }
+    private static final long PSize = 8L;
     /**
-     * {@snippet :
-     * #define XK_wacute 16785027
+     * {@snippet lang=c :
+     * #define PSize 8
      * }
      */
-    public static int XK_wacute() {
-        return (int)16785027L;
+    public static long PSize() {
+        return PSize;
     }
+    private static final long PMinSize = 16L;
     /**
-     * {@snippet :
-     * #define XK_Wdiaeresis 16785028
+     * {@snippet lang=c :
+     * #define PMinSize 16
      * }
      */
-    public static int XK_Wdiaeresis() {
-        return (int)16785028L;
+    public static long PMinSize() {
+        return PMinSize;
     }
+    private static final long PMaxSize = 32L;
     /**
-     * {@snippet :
-     * #define XK_wdiaeresis 16785029
+     * {@snippet lang=c :
+     * #define PMaxSize 32
      * }
      */
-    public static int XK_wdiaeresis() {
-        return (int)16785029L;
+    public static long PMaxSize() {
+        return PMaxSize;
     }
+    private static final long PResizeInc = 64L;
     /**
-     * {@snippet :
-     * #define XK_Ygrave 16785138
+     * {@snippet lang=c :
+     * #define PResizeInc 64
      * }
      */
-    public static int XK_Ygrave() {
-        return (int)16785138L;
+    public static long PResizeInc() {
+        return PResizeInc;
     }
+    private static final long PAspect = 128L;
     /**
-     * {@snippet :
-     * #define XK_ygrave 16785139
+     * {@snippet lang=c :
+     * #define PAspect 128
      * }
      */
-    public static int XK_ygrave() {
-        return (int)16785139L;
+    public static long PAspect() {
+        return PAspect;
     }
+    private static final long PBaseSize = 256L;
     /**
-     * {@snippet :
-     * #define XK_OE 5052
+     * {@snippet lang=c :
+     * #define PBaseSize 256
      * }
      */
-    public static int XK_OE() {
-        return (int)5052L;
+    public static long PBaseSize() {
+        return PBaseSize;
     }
+    private static final long PWinGravity = 512L;
     /**
-     * {@snippet :
-     * #define XK_oe 5053
+     * {@snippet lang=c :
+     * #define PWinGravity 512
      * }
      */
-    public static int XK_oe() {
-        return (int)5053L;
+    public static long PWinGravity() {
+        return PWinGravity;
     }
+    private static final long PAllHints = 252L;
     /**
-     * {@snippet :
-     * #define XK_Ydiaeresis 5054
+     * {@snippet lang=c :
+     * #define PAllHints 252
      * }
      */
-    public static int XK_Ydiaeresis() {
-        return (int)5054L;
+    public static long PAllHints() {
+        return PAllHints;
     }
+    private static final long InputHint = 1L;
     /**
-     * {@snippet :
-     * #define XK_overline 1150
+     * {@snippet lang=c :
+     * #define InputHint 1
      * }
      */
-    public static int XK_overline() {
-        return (int)1150L;
+    public static long InputHint() {
+        return InputHint;
     }
+    private static final long StateHint = 2L;
     /**
-     * {@snippet :
-     * #define XK_kana_fullstop 1185
+     * {@snippet lang=c :
+     * #define StateHint 2
      * }
      */
-    public static int XK_kana_fullstop() {
-        return (int)1185L;
+    public static long StateHint() {
+        return StateHint;
     }
+    private static final long IconPixmapHint = 4L;
     /**
-     * {@snippet :
-     * #define XK_kana_openingbracket 1186
+     * {@snippet lang=c :
+     * #define IconPixmapHint 4
      * }
      */
-    public static int XK_kana_openingbracket() {
-        return (int)1186L;
+    public static long IconPixmapHint() {
+        return IconPixmapHint;
     }
+    private static final long IconWindowHint = 8L;
     /**
-     * {@snippet :
-     * #define XK_kana_closingbracket 1187
+     * {@snippet lang=c :
+     * #define IconWindowHint 8
      * }
      */
-    public static int XK_kana_closingbracket() {
-        return (int)1187L;
+    public static long IconWindowHint() {
+        return IconWindowHint;
     }
+    private static final long IconPositionHint = 16L;
     /**
-     * {@snippet :
-     * #define XK_kana_comma 1188
+     * {@snippet lang=c :
+     * #define IconPositionHint 16
      * }
      */
-    public static int XK_kana_comma() {
-        return (int)1188L;
+    public static long IconPositionHint() {
+        return IconPositionHint;
     }
+    private static final long IconMaskHint = 32L;
     /**
-     * {@snippet :
-     * #define XK_kana_conjunctive 1189
+     * {@snippet lang=c :
+     * #define IconMaskHint 32
      * }
      */
-    public static int XK_kana_conjunctive() {
-        return (int)1189L;
+    public static long IconMaskHint() {
+        return IconMaskHint;
     }
+    private static final long WindowGroupHint = 64L;
     /**
-     * {@snippet :
-     * #define XK_kana_middledot 1189
+     * {@snippet lang=c :
+     * #define WindowGroupHint 64
      * }
      */
-    public static int XK_kana_middledot() {
-        return (int)1189L;
+    public static long WindowGroupHint() {
+        return WindowGroupHint;
     }
+    private static final long AllHints = 127L;
     /**
-     * {@snippet :
-     * #define XK_kana_WO 1190
+     * {@snippet lang=c :
+     * #define AllHints 127
      * }
      */
-    public static int XK_kana_WO() {
-        return (int)1190L;
+    public static long AllHints() {
+        return AllHints;
     }
+    private static final long XUrgencyHint = 256L;
     /**
-     * {@snippet :
-     * #define XK_kana_a 1191
+     * {@snippet lang=c :
+     * #define XUrgencyHint 256
      * }
      */
-    public static int XK_kana_a() {
-        return (int)1191L;
+    public static long XUrgencyHint() {
+        return XUrgencyHint;
     }
+    private static final int XNoMemory = (int)-1L;
     /**
-     * {@snippet :
-     * #define XK_kana_i 1192
+     * {@snippet lang=c :
+     * #define XNoMemory -1
      * }
      */
-    public static int XK_kana_i() {
-        return (int)1192L;
+    public static int XNoMemory() {
+        return XNoMemory;
     }
+    private static final int XLocaleNotSupported = (int)-2L;
     /**
-     * {@snippet :
-     * #define XK_kana_u 1193
+     * {@snippet lang=c :
+     * #define XLocaleNotSupported -2
      * }
      */
-    public static int XK_kana_u() {
-        return (int)1193L;
+    public static int XLocaleNotSupported() {
+        return XLocaleNotSupported;
     }
+    private static final int XConverterNotFound = (int)-3L;
     /**
-     * {@snippet :
-     * #define XK_kana_e 1194
+     * {@snippet lang=c :
+     * #define XConverterNotFound -3
      * }
      */
-    public static int XK_kana_e() {
-        return (int)1194L;
+    public static int XConverterNotFound() {
+        return XConverterNotFound;
     }
+    private static final long ReleaseByFreeingColormap = 1L;
     /**
-     * {@snippet :
-     * #define XK_kana_o 1195
+     * {@snippet lang=c :
+     * #define ReleaseByFreeingColormap 1
      * }
      */
-    public static int XK_kana_o() {
-        return (int)1195L;
+    public static long ReleaseByFreeingColormap() {
+        return ReleaseByFreeingColormap;
     }
 }
-
 

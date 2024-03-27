@@ -2,13 +2,18 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
  *     Colormap colormap;
  *     unsigned long red_max;
@@ -20,290 +25,517 @@ import static java.lang.foreign.ValueLayout.*;
  *     unsigned long base_pixel;
  *     VisualID visualid;
  *     XID killid;
- * };
+ * }
  * }
  */
 public class XStandardColormap {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$220.const$3;
+    XStandardColormap() {
+        // Should not be called directly
     }
-    public static VarHandle colormap$VH() {
-        return constants$220.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Colormap colormap;
-     * }
-     */
-    public static long colormap$get(MemorySegment seg) {
-        return (long)constants$220.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Colormap colormap;
-     * }
-     */
-    public static void colormap$set(MemorySegment seg, long x) {
-        constants$220.const$4.set(seg, x);
-    }
-    public static long colormap$get(MemorySegment seg, long index) {
-        return (long)constants$220.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void colormap$set(MemorySegment seg, long index, long x) {
-        constants$220.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle red_max$VH() {
-        return constants$220.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long red_max;
-     * }
-     */
-    public static long red_max$get(MemorySegment seg) {
-        return (long)constants$220.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long red_max;
-     * }
-     */
-    public static void red_max$set(MemorySegment seg, long x) {
-        constants$220.const$5.set(seg, x);
-    }
-    public static long red_max$get(MemorySegment seg, long index) {
-        return (long)constants$220.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void red_max$set(MemorySegment seg, long index, long x) {
-        constants$220.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle red_mult$VH() {
-        return constants$221.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long red_mult;
-     * }
-     */
-    public static long red_mult$get(MemorySegment seg) {
-        return (long)constants$221.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long red_mult;
-     * }
-     */
-    public static void red_mult$set(MemorySegment seg, long x) {
-        constants$221.const$0.set(seg, x);
-    }
-    public static long red_mult$get(MemorySegment seg, long index) {
-        return (long)constants$221.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void red_mult$set(MemorySegment seg, long index, long x) {
-        constants$221.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle green_max$VH() {
-        return constants$221.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long green_max;
-     * }
-     */
-    public static long green_max$get(MemorySegment seg) {
-        return (long)constants$221.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long green_max;
-     * }
-     */
-    public static void green_max$set(MemorySegment seg, long x) {
-        constants$221.const$1.set(seg, x);
-    }
-    public static long green_max$get(MemorySegment seg, long index) {
-        return (long)constants$221.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void green_max$set(MemorySegment seg, long index, long x) {
-        constants$221.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle green_mult$VH() {
-        return constants$221.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long green_mult;
-     * }
-     */
-    public static long green_mult$get(MemorySegment seg) {
-        return (long)constants$221.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long green_mult;
-     * }
-     */
-    public static void green_mult$set(MemorySegment seg, long x) {
-        constants$221.const$2.set(seg, x);
-    }
-    public static long green_mult$get(MemorySegment seg, long index) {
-        return (long)constants$221.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void green_mult$set(MemorySegment seg, long index, long x) {
-        constants$221.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle blue_max$VH() {
-        return constants$221.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long blue_max;
-     * }
-     */
-    public static long blue_max$get(MemorySegment seg) {
-        return (long)constants$221.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long blue_max;
-     * }
-     */
-    public static void blue_max$set(MemorySegment seg, long x) {
-        constants$221.const$3.set(seg, x);
-    }
-    public static long blue_max$get(MemorySegment seg, long index) {
-        return (long)constants$221.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void blue_max$set(MemorySegment seg, long index, long x) {
-        constants$221.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle blue_mult$VH() {
-        return constants$221.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long blue_mult;
-     * }
-     */
-    public static long blue_mult$get(MemorySegment seg) {
-        return (long)constants$221.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long blue_mult;
-     * }
-     */
-    public static void blue_mult$set(MemorySegment seg, long x) {
-        constants$221.const$4.set(seg, x);
-    }
-    public static long blue_mult$get(MemorySegment seg, long index) {
-        return (long)constants$221.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void blue_mult$set(MemorySegment seg, long index, long x) {
-        constants$221.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle base_pixel$VH() {
-        return constants$221.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long base_pixel;
-     * }
-     */
-    public static long base_pixel$get(MemorySegment seg) {
-        return (long)constants$221.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long base_pixel;
-     * }
-     */
-    public static void base_pixel$set(MemorySegment seg, long x) {
-        constants$221.const$5.set(seg, x);
-    }
-    public static long base_pixel$get(MemorySegment seg, long index) {
-        return (long)constants$221.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void base_pixel$set(MemorySegment seg, long index, long x) {
-        constants$221.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle visualid$VH() {
-        return constants$222.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * VisualID visualid;
-     * }
-     */
-    public static long visualid$get(MemorySegment seg) {
-        return (long)constants$222.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * VisualID visualid;
-     * }
-     */
-    public static void visualid$set(MemorySegment seg, long x) {
-        constants$222.const$0.set(seg, x);
-    }
-    public static long visualid$get(MemorySegment seg, long index) {
-        return (long)constants$222.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void visualid$set(MemorySegment seg, long index, long x) {
-        constants$222.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle killid$VH() {
-        return constants$222.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * XID killid;
-     * }
-     */
-    public static long killid$get(MemorySegment seg) {
-        return (long)constants$222.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * XID killid;
-     * }
-     */
-    public static void killid$set(MemorySegment seg, long x) {
-        constants$222.const$1.set(seg, x);
-    }
-    public static long killid$get(MemorySegment seg, long index) {
-        return (long)constants$222.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void killid$set(MemorySegment seg, long index, long x) {
-        constants$222.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_LONG.withName("colormap"),
+        Xlib_h.C_LONG.withName("red_max"),
+        Xlib_h.C_LONG.withName("red_mult"),
+        Xlib_h.C_LONG.withName("green_max"),
+        Xlib_h.C_LONG.withName("green_mult"),
+        Xlib_h.C_LONG.withName("blue_max"),
+        Xlib_h.C_LONG.withName("blue_mult"),
+        Xlib_h.C_LONG.withName("base_pixel"),
+        Xlib_h.C_LONG.withName("visualid"),
+        Xlib_h.C_LONG.withName("killid")
+    ).withName("$anon$320:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfLong colormap$LAYOUT = (OfLong)$LAYOUT.select(groupElement("colormap"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Colormap colormap
+     * }
+     */
+    public static final OfLong colormap$layout() {
+        return colormap$LAYOUT;
+    }
+
+    private static final long colormap$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Colormap colormap
+     * }
+     */
+    public static final long colormap$offset() {
+        return colormap$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Colormap colormap
+     * }
+     */
+    public static long colormap(MemorySegment struct) {
+        return struct.get(colormap$LAYOUT, colormap$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Colormap colormap
+     * }
+     */
+    public static void colormap(MemorySegment struct, long fieldValue) {
+        struct.set(colormap$LAYOUT, colormap$OFFSET, fieldValue);
+    }
+
+    private static final OfLong red_max$LAYOUT = (OfLong)$LAYOUT.select(groupElement("red_max"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long red_max
+     * }
+     */
+    public static final OfLong red_max$layout() {
+        return red_max$LAYOUT;
+    }
+
+    private static final long red_max$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long red_max
+     * }
+     */
+    public static final long red_max$offset() {
+        return red_max$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long red_max
+     * }
+     */
+    public static long red_max(MemorySegment struct) {
+        return struct.get(red_max$LAYOUT, red_max$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long red_max
+     * }
+     */
+    public static void red_max(MemorySegment struct, long fieldValue) {
+        struct.set(red_max$LAYOUT, red_max$OFFSET, fieldValue);
+    }
+
+    private static final OfLong red_mult$LAYOUT = (OfLong)$LAYOUT.select(groupElement("red_mult"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long red_mult
+     * }
+     */
+    public static final OfLong red_mult$layout() {
+        return red_mult$LAYOUT;
+    }
+
+    private static final long red_mult$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long red_mult
+     * }
+     */
+    public static final long red_mult$offset() {
+        return red_mult$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long red_mult
+     * }
+     */
+    public static long red_mult(MemorySegment struct) {
+        return struct.get(red_mult$LAYOUT, red_mult$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long red_mult
+     * }
+     */
+    public static void red_mult(MemorySegment struct, long fieldValue) {
+        struct.set(red_mult$LAYOUT, red_mult$OFFSET, fieldValue);
+    }
+
+    private static final OfLong green_max$LAYOUT = (OfLong)$LAYOUT.select(groupElement("green_max"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long green_max
+     * }
+     */
+    public static final OfLong green_max$layout() {
+        return green_max$LAYOUT;
+    }
+
+    private static final long green_max$OFFSET = 24;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long green_max
+     * }
+     */
+    public static final long green_max$offset() {
+        return green_max$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long green_max
+     * }
+     */
+    public static long green_max(MemorySegment struct) {
+        return struct.get(green_max$LAYOUT, green_max$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long green_max
+     * }
+     */
+    public static void green_max(MemorySegment struct, long fieldValue) {
+        struct.set(green_max$LAYOUT, green_max$OFFSET, fieldValue);
+    }
+
+    private static final OfLong green_mult$LAYOUT = (OfLong)$LAYOUT.select(groupElement("green_mult"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long green_mult
+     * }
+     */
+    public static final OfLong green_mult$layout() {
+        return green_mult$LAYOUT;
+    }
+
+    private static final long green_mult$OFFSET = 32;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long green_mult
+     * }
+     */
+    public static final long green_mult$offset() {
+        return green_mult$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long green_mult
+     * }
+     */
+    public static long green_mult(MemorySegment struct) {
+        return struct.get(green_mult$LAYOUT, green_mult$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long green_mult
+     * }
+     */
+    public static void green_mult(MemorySegment struct, long fieldValue) {
+        struct.set(green_mult$LAYOUT, green_mult$OFFSET, fieldValue);
+    }
+
+    private static final OfLong blue_max$LAYOUT = (OfLong)$LAYOUT.select(groupElement("blue_max"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long blue_max
+     * }
+     */
+    public static final OfLong blue_max$layout() {
+        return blue_max$LAYOUT;
+    }
+
+    private static final long blue_max$OFFSET = 40;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long blue_max
+     * }
+     */
+    public static final long blue_max$offset() {
+        return blue_max$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long blue_max
+     * }
+     */
+    public static long blue_max(MemorySegment struct) {
+        return struct.get(blue_max$LAYOUT, blue_max$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long blue_max
+     * }
+     */
+    public static void blue_max(MemorySegment struct, long fieldValue) {
+        struct.set(blue_max$LAYOUT, blue_max$OFFSET, fieldValue);
+    }
+
+    private static final OfLong blue_mult$LAYOUT = (OfLong)$LAYOUT.select(groupElement("blue_mult"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mult
+     * }
+     */
+    public static final OfLong blue_mult$layout() {
+        return blue_mult$LAYOUT;
+    }
+
+    private static final long blue_mult$OFFSET = 48;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mult
+     * }
+     */
+    public static final long blue_mult$offset() {
+        return blue_mult$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mult
+     * }
+     */
+    public static long blue_mult(MemorySegment struct) {
+        return struct.get(blue_mult$LAYOUT, blue_mult$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long blue_mult
+     * }
+     */
+    public static void blue_mult(MemorySegment struct, long fieldValue) {
+        struct.set(blue_mult$LAYOUT, blue_mult$OFFSET, fieldValue);
+    }
+
+    private static final OfLong base_pixel$LAYOUT = (OfLong)$LAYOUT.select(groupElement("base_pixel"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long base_pixel
+     * }
+     */
+    public static final OfLong base_pixel$layout() {
+        return base_pixel$LAYOUT;
+    }
+
+    private static final long base_pixel$OFFSET = 56;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long base_pixel
+     * }
+     */
+    public static final long base_pixel$offset() {
+        return base_pixel$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long base_pixel
+     * }
+     */
+    public static long base_pixel(MemorySegment struct) {
+        return struct.get(base_pixel$LAYOUT, base_pixel$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long base_pixel
+     * }
+     */
+    public static void base_pixel(MemorySegment struct, long fieldValue) {
+        struct.set(base_pixel$LAYOUT, base_pixel$OFFSET, fieldValue);
+    }
+
+    private static final OfLong visualid$LAYOUT = (OfLong)$LAYOUT.select(groupElement("visualid"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static final OfLong visualid$layout() {
+        return visualid$LAYOUT;
+    }
+
+    private static final long visualid$OFFSET = 64;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static final long visualid$offset() {
+        return visualid$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static long visualid(MemorySegment struct) {
+        return struct.get(visualid$LAYOUT, visualid$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * VisualID visualid
+     * }
+     */
+    public static void visualid(MemorySegment struct, long fieldValue) {
+        struct.set(visualid$LAYOUT, visualid$OFFSET, fieldValue);
+    }
+
+    private static final OfLong killid$LAYOUT = (OfLong)$LAYOUT.select(groupElement("killid"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XID killid
+     * }
+     */
+    public static final OfLong killid$layout() {
+        return killid$LAYOUT;
+    }
+
+    private static final long killid$OFFSET = 72;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XID killid
+     * }
+     */
+    public static final long killid$offset() {
+        return killid$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XID killid
+     * }
+     */
+    public static long killid(MemorySegment struct) {
+        return struct.get(killid$LAYOUT, killid$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XID killid
+     * }
+     */
+    public static void killid(MemorySegment struct, long fieldValue) {
+        struct.set(killid$LAYOUT, killid$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

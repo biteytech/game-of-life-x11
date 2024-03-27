@@ -1,12 +1,12 @@
 /*
- * Copyright 2023 biteytech@protonmail.com
- * 
+ * Copyright 2024 biteytech@protonmail.com
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -49,7 +49,7 @@ public class RenderX11 implements Render {
 				black, white);
 
 		try (Arena offHeap = Arena.ofConfined()) {
-			MemorySegment gameOfLife = offHeap.allocateUtf8String("Game of Life");
+			MemorySegment gameOfLife = offHeap.allocateFrom("Game of Life");
 			Xlib_h.XSetStandardProperties(display, win, gameOfLife, gameOfLife, 0, NULL, 0, NULL);
 
 			Xlib_h.XSelectInput(display, win, Xlib_h.ExposureMask());
@@ -71,9 +71,9 @@ public class RenderX11 implements Render {
 		try (Arena offHeap = Arena.ofConfined()) {
 			long cmap = Xlib_h.XDefaultColormap(display, 0);
 			MemorySegment near_color = XColor.allocate(offHeap), true_color = XColor.allocate(offHeap);
-			MemorySegment lightGray = offHeap.allocateUtf8String("Light Gray");
+			MemorySegment lightGray = offHeap.allocateFrom("Light Gray");
 			Xlib_h.XAllocNamedColor(display, cmap, lightGray, near_color, true_color);
-			Xlib_h.XSetForeground(display, gc, XColor.pixel$get(near_color));
+			Xlib_h.XSetForeground(display, gc, XColor.pixel(near_color));
 		}
 
 		// draw grid

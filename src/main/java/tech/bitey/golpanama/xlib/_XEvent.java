@@ -2,13 +2,18 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * union _XEvent {
  *     int type;
  *     XAnyEvent xany;
@@ -45,149 +50,1675 @@ import static java.lang.foreign.ValueLayout.*;
  *     XGenericEvent xgeneric;
  *     XGenericEventCookie xcookie;
  *     long pad[24];
- * };
+ * }
  * }
  */
 public class _XEvent {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$103.const$2;
+    _XEvent() {
+        // Should not be called directly
     }
-    public static VarHandle type$VH() {
-        return constants$103.const$3;
+
+    private static final GroupLayout $LAYOUT = MemoryLayout.unionLayout(
+        Xlib_h.C_INT.withName("type"),
+        XAnyEvent.layout().withName("xany"),
+        XKeyEvent.layout().withName("xkey"),
+        XButtonEvent.layout().withName("xbutton"),
+        XMotionEvent.layout().withName("xmotion"),
+        XCrossingEvent.layout().withName("xcrossing"),
+        XFocusChangeEvent.layout().withName("xfocus"),
+        XExposeEvent.layout().withName("xexpose"),
+        XGraphicsExposeEvent.layout().withName("xgraphicsexpose"),
+        XNoExposeEvent.layout().withName("xnoexpose"),
+        XVisibilityEvent.layout().withName("xvisibility"),
+        XCreateWindowEvent.layout().withName("xcreatewindow"),
+        XDestroyWindowEvent.layout().withName("xdestroywindow"),
+        XUnmapEvent.layout().withName("xunmap"),
+        XMapEvent.layout().withName("xmap"),
+        XMapRequestEvent.layout().withName("xmaprequest"),
+        XReparentEvent.layout().withName("xreparent"),
+        XConfigureEvent.layout().withName("xconfigure"),
+        XGravityEvent.layout().withName("xgravity"),
+        XResizeRequestEvent.layout().withName("xresizerequest"),
+        XConfigureRequestEvent.layout().withName("xconfigurerequest"),
+        XCirculateEvent.layout().withName("xcirculate"),
+        XCirculateRequestEvent.layout().withName("xcirculaterequest"),
+        XPropertyEvent.layout().withName("xproperty"),
+        XSelectionClearEvent.layout().withName("xselectionclear"),
+        XSelectionRequestEvent.layout().withName("xselectionrequest"),
+        XSelectionEvent.layout().withName("xselection"),
+        XColormapEvent.layout().withName("xcolormap"),
+        XClientMessageEvent.layout().withName("xclient"),
+        XMappingEvent.layout().withName("xmapping"),
+        XErrorEvent.layout().withName("xerror"),
+        XKeymapEvent.layout().withName("xkeymap"),
+        XGenericEvent.layout().withName("xgeneric"),
+        XGenericEventCookie.layout().withName("xcookie"),
+        MemoryLayout.sequenceLayout(24, Xlib_h.C_LONG).withName("pad")
+    ).withName("_XEvent");
+
+    /**
+     * The layout of this union
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
     }
+
+    private static final OfInt type$LAYOUT = (OfInt)$LAYOUT.select(groupElement("type"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int type
+     * }
+     */
+    public static final OfInt type$layout() {
+        return type$LAYOUT;
+    }
+
+    private static final long type$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int type
+     * }
+     */
+    public static final long type$offset() {
+        return type$OFFSET;
+    }
+
     /**
      * Getter for field:
-     * {@snippet :
-     * int type;
+     * {@snippet lang=c :
+     * int type
      * }
      */
-    public static int type$get(MemorySegment seg) {
-        return (int)constants$103.const$3.get(seg);
+    public static int type(MemorySegment union) {
+        return union.get(type$LAYOUT, type$OFFSET);
     }
+
     /**
      * Setter for field:
-     * {@snippet :
-     * int type;
+     * {@snippet lang=c :
+     * int type
      * }
      */
-    public static void type$set(MemorySegment seg, int x) {
-        constants$103.const$3.set(seg, x);
+    public static void type(MemorySegment union, int fieldValue) {
+        union.set(type$LAYOUT, type$OFFSET, fieldValue);
     }
-    public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$103.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void type$set(MemorySegment seg, long index, int x) {
-        constants$103.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static MemorySegment xany$slice(MemorySegment seg) {
-        return seg.asSlice(0, 40);
-    }
-    public static MemorySegment xkey$slice(MemorySegment seg) {
-        return seg.asSlice(0, 96);
-    }
-    public static MemorySegment xbutton$slice(MemorySegment seg) {
-        return seg.asSlice(0, 96);
-    }
-    public static MemorySegment xmotion$slice(MemorySegment seg) {
-        return seg.asSlice(0, 96);
-    }
-    public static MemorySegment xcrossing$slice(MemorySegment seg) {
-        return seg.asSlice(0, 104);
-    }
-    public static MemorySegment xfocus$slice(MemorySegment seg) {
-        return seg.asSlice(0, 48);
-    }
-    public static MemorySegment xexpose$slice(MemorySegment seg) {
-        return seg.asSlice(0, 64);
-    }
-    public static MemorySegment xgraphicsexpose$slice(MemorySegment seg) {
-        return seg.asSlice(0, 72);
-    }
-    public static MemorySegment xnoexpose$slice(MemorySegment seg) {
-        return seg.asSlice(0, 48);
-    }
-    public static MemorySegment xvisibility$slice(MemorySegment seg) {
-        return seg.asSlice(0, 48);
-    }
-    public static MemorySegment xcreatewindow$slice(MemorySegment seg) {
-        return seg.asSlice(0, 72);
-    }
-    public static MemorySegment xdestroywindow$slice(MemorySegment seg) {
-        return seg.asSlice(0, 48);
-    }
-    public static MemorySegment xunmap$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xmap$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xmaprequest$slice(MemorySegment seg) {
-        return seg.asSlice(0, 48);
-    }
-    public static MemorySegment xreparent$slice(MemorySegment seg) {
-        return seg.asSlice(0, 72);
-    }
-    public static MemorySegment xconfigure$slice(MemorySegment seg) {
-        return seg.asSlice(0, 88);
-    }
-    public static MemorySegment xgravity$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xresizerequest$slice(MemorySegment seg) {
-        return seg.asSlice(0, 48);
-    }
-    public static MemorySegment xconfigurerequest$slice(MemorySegment seg) {
-        return seg.asSlice(0, 96);
-    }
-    public static MemorySegment xcirculate$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xcirculaterequest$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xproperty$slice(MemorySegment seg) {
-        return seg.asSlice(0, 64);
-    }
-    public static MemorySegment xselectionclear$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xselectionrequest$slice(MemorySegment seg) {
-        return seg.asSlice(0, 80);
-    }
-    public static MemorySegment xselection$slice(MemorySegment seg) {
-        return seg.asSlice(0, 72);
-    }
-    public static MemorySegment xcolormap$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xclient$slice(MemorySegment seg) {
-        return seg.asSlice(0, 96);
-    }
-    public static MemorySegment xmapping$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment xerror$slice(MemorySegment seg) {
-        return seg.asSlice(0, 40);
-    }
-    public static MemorySegment xkeymap$slice(MemorySegment seg) {
-        return seg.asSlice(0, 72);
-    }
-    public static MemorySegment xgeneric$slice(MemorySegment seg) {
-        return seg.asSlice(0, 40);
-    }
-    public static MemorySegment xcookie$slice(MemorySegment seg) {
-        return seg.asSlice(0, 56);
-    }
-    public static MemorySegment pad$slice(MemorySegment seg) {
-        return seg.asSlice(0, 192);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout xany$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xany"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XAnyEvent xany
+     * }
+     */
+    public static final GroupLayout xany$layout() {
+        return xany$LAYOUT;
+    }
+
+    private static final long xany$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XAnyEvent xany
+     * }
+     */
+    public static final long xany$offset() {
+        return xany$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XAnyEvent xany
+     * }
+     */
+    public static MemorySegment xany(MemorySegment union) {
+        return union.asSlice(xany$OFFSET, xany$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XAnyEvent xany
+     * }
+     */
+    public static void xany(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xany$OFFSET, xany$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xkey$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xkey"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XKeyEvent xkey
+     * }
+     */
+    public static final GroupLayout xkey$layout() {
+        return xkey$LAYOUT;
+    }
+
+    private static final long xkey$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XKeyEvent xkey
+     * }
+     */
+    public static final long xkey$offset() {
+        return xkey$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XKeyEvent xkey
+     * }
+     */
+    public static MemorySegment xkey(MemorySegment union) {
+        return union.asSlice(xkey$OFFSET, xkey$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XKeyEvent xkey
+     * }
+     */
+    public static void xkey(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xkey$OFFSET, xkey$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xbutton$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xbutton"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XButtonEvent xbutton
+     * }
+     */
+    public static final GroupLayout xbutton$layout() {
+        return xbutton$LAYOUT;
+    }
+
+    private static final long xbutton$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XButtonEvent xbutton
+     * }
+     */
+    public static final long xbutton$offset() {
+        return xbutton$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XButtonEvent xbutton
+     * }
+     */
+    public static MemorySegment xbutton(MemorySegment union) {
+        return union.asSlice(xbutton$OFFSET, xbutton$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XButtonEvent xbutton
+     * }
+     */
+    public static void xbutton(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xbutton$OFFSET, xbutton$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xmotion$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xmotion"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XMotionEvent xmotion
+     * }
+     */
+    public static final GroupLayout xmotion$layout() {
+        return xmotion$LAYOUT;
+    }
+
+    private static final long xmotion$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XMotionEvent xmotion
+     * }
+     */
+    public static final long xmotion$offset() {
+        return xmotion$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XMotionEvent xmotion
+     * }
+     */
+    public static MemorySegment xmotion(MemorySegment union) {
+        return union.asSlice(xmotion$OFFSET, xmotion$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XMotionEvent xmotion
+     * }
+     */
+    public static void xmotion(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xmotion$OFFSET, xmotion$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xcrossing$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xcrossing"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XCrossingEvent xcrossing
+     * }
+     */
+    public static final GroupLayout xcrossing$layout() {
+        return xcrossing$LAYOUT;
+    }
+
+    private static final long xcrossing$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XCrossingEvent xcrossing
+     * }
+     */
+    public static final long xcrossing$offset() {
+        return xcrossing$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XCrossingEvent xcrossing
+     * }
+     */
+    public static MemorySegment xcrossing(MemorySegment union) {
+        return union.asSlice(xcrossing$OFFSET, xcrossing$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XCrossingEvent xcrossing
+     * }
+     */
+    public static void xcrossing(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xcrossing$OFFSET, xcrossing$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xfocus$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xfocus"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XFocusChangeEvent xfocus
+     * }
+     */
+    public static final GroupLayout xfocus$layout() {
+        return xfocus$LAYOUT;
+    }
+
+    private static final long xfocus$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XFocusChangeEvent xfocus
+     * }
+     */
+    public static final long xfocus$offset() {
+        return xfocus$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XFocusChangeEvent xfocus
+     * }
+     */
+    public static MemorySegment xfocus(MemorySegment union) {
+        return union.asSlice(xfocus$OFFSET, xfocus$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XFocusChangeEvent xfocus
+     * }
+     */
+    public static void xfocus(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xfocus$OFFSET, xfocus$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xexpose$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xexpose"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XExposeEvent xexpose
+     * }
+     */
+    public static final GroupLayout xexpose$layout() {
+        return xexpose$LAYOUT;
+    }
+
+    private static final long xexpose$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XExposeEvent xexpose
+     * }
+     */
+    public static final long xexpose$offset() {
+        return xexpose$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XExposeEvent xexpose
+     * }
+     */
+    public static MemorySegment xexpose(MemorySegment union) {
+        return union.asSlice(xexpose$OFFSET, xexpose$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XExposeEvent xexpose
+     * }
+     */
+    public static void xexpose(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xexpose$OFFSET, xexpose$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xgraphicsexpose$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xgraphicsexpose"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XGraphicsExposeEvent xgraphicsexpose
+     * }
+     */
+    public static final GroupLayout xgraphicsexpose$layout() {
+        return xgraphicsexpose$LAYOUT;
+    }
+
+    private static final long xgraphicsexpose$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XGraphicsExposeEvent xgraphicsexpose
+     * }
+     */
+    public static final long xgraphicsexpose$offset() {
+        return xgraphicsexpose$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XGraphicsExposeEvent xgraphicsexpose
+     * }
+     */
+    public static MemorySegment xgraphicsexpose(MemorySegment union) {
+        return union.asSlice(xgraphicsexpose$OFFSET, xgraphicsexpose$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XGraphicsExposeEvent xgraphicsexpose
+     * }
+     */
+    public static void xgraphicsexpose(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xgraphicsexpose$OFFSET, xgraphicsexpose$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xnoexpose$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xnoexpose"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XNoExposeEvent xnoexpose
+     * }
+     */
+    public static final GroupLayout xnoexpose$layout() {
+        return xnoexpose$LAYOUT;
+    }
+
+    private static final long xnoexpose$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XNoExposeEvent xnoexpose
+     * }
+     */
+    public static final long xnoexpose$offset() {
+        return xnoexpose$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XNoExposeEvent xnoexpose
+     * }
+     */
+    public static MemorySegment xnoexpose(MemorySegment union) {
+        return union.asSlice(xnoexpose$OFFSET, xnoexpose$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XNoExposeEvent xnoexpose
+     * }
+     */
+    public static void xnoexpose(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xnoexpose$OFFSET, xnoexpose$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xvisibility$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xvisibility"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XVisibilityEvent xvisibility
+     * }
+     */
+    public static final GroupLayout xvisibility$layout() {
+        return xvisibility$LAYOUT;
+    }
+
+    private static final long xvisibility$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XVisibilityEvent xvisibility
+     * }
+     */
+    public static final long xvisibility$offset() {
+        return xvisibility$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XVisibilityEvent xvisibility
+     * }
+     */
+    public static MemorySegment xvisibility(MemorySegment union) {
+        return union.asSlice(xvisibility$OFFSET, xvisibility$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XVisibilityEvent xvisibility
+     * }
+     */
+    public static void xvisibility(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xvisibility$OFFSET, xvisibility$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xcreatewindow$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xcreatewindow"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XCreateWindowEvent xcreatewindow
+     * }
+     */
+    public static final GroupLayout xcreatewindow$layout() {
+        return xcreatewindow$LAYOUT;
+    }
+
+    private static final long xcreatewindow$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XCreateWindowEvent xcreatewindow
+     * }
+     */
+    public static final long xcreatewindow$offset() {
+        return xcreatewindow$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XCreateWindowEvent xcreatewindow
+     * }
+     */
+    public static MemorySegment xcreatewindow(MemorySegment union) {
+        return union.asSlice(xcreatewindow$OFFSET, xcreatewindow$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XCreateWindowEvent xcreatewindow
+     * }
+     */
+    public static void xcreatewindow(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xcreatewindow$OFFSET, xcreatewindow$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xdestroywindow$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xdestroywindow"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XDestroyWindowEvent xdestroywindow
+     * }
+     */
+    public static final GroupLayout xdestroywindow$layout() {
+        return xdestroywindow$LAYOUT;
+    }
+
+    private static final long xdestroywindow$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XDestroyWindowEvent xdestroywindow
+     * }
+     */
+    public static final long xdestroywindow$offset() {
+        return xdestroywindow$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XDestroyWindowEvent xdestroywindow
+     * }
+     */
+    public static MemorySegment xdestroywindow(MemorySegment union) {
+        return union.asSlice(xdestroywindow$OFFSET, xdestroywindow$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XDestroyWindowEvent xdestroywindow
+     * }
+     */
+    public static void xdestroywindow(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xdestroywindow$OFFSET, xdestroywindow$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xunmap$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xunmap"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XUnmapEvent xunmap
+     * }
+     */
+    public static final GroupLayout xunmap$layout() {
+        return xunmap$LAYOUT;
+    }
+
+    private static final long xunmap$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XUnmapEvent xunmap
+     * }
+     */
+    public static final long xunmap$offset() {
+        return xunmap$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XUnmapEvent xunmap
+     * }
+     */
+    public static MemorySegment xunmap(MemorySegment union) {
+        return union.asSlice(xunmap$OFFSET, xunmap$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XUnmapEvent xunmap
+     * }
+     */
+    public static void xunmap(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xunmap$OFFSET, xunmap$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xmap$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xmap"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XMapEvent xmap
+     * }
+     */
+    public static final GroupLayout xmap$layout() {
+        return xmap$LAYOUT;
+    }
+
+    private static final long xmap$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XMapEvent xmap
+     * }
+     */
+    public static final long xmap$offset() {
+        return xmap$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XMapEvent xmap
+     * }
+     */
+    public static MemorySegment xmap(MemorySegment union) {
+        return union.asSlice(xmap$OFFSET, xmap$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XMapEvent xmap
+     * }
+     */
+    public static void xmap(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xmap$OFFSET, xmap$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xmaprequest$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xmaprequest"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XMapRequestEvent xmaprequest
+     * }
+     */
+    public static final GroupLayout xmaprequest$layout() {
+        return xmaprequest$LAYOUT;
+    }
+
+    private static final long xmaprequest$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XMapRequestEvent xmaprequest
+     * }
+     */
+    public static final long xmaprequest$offset() {
+        return xmaprequest$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XMapRequestEvent xmaprequest
+     * }
+     */
+    public static MemorySegment xmaprequest(MemorySegment union) {
+        return union.asSlice(xmaprequest$OFFSET, xmaprequest$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XMapRequestEvent xmaprequest
+     * }
+     */
+    public static void xmaprequest(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xmaprequest$OFFSET, xmaprequest$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xreparent$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xreparent"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XReparentEvent xreparent
+     * }
+     */
+    public static final GroupLayout xreparent$layout() {
+        return xreparent$LAYOUT;
+    }
+
+    private static final long xreparent$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XReparentEvent xreparent
+     * }
+     */
+    public static final long xreparent$offset() {
+        return xreparent$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XReparentEvent xreparent
+     * }
+     */
+    public static MemorySegment xreparent(MemorySegment union) {
+        return union.asSlice(xreparent$OFFSET, xreparent$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XReparentEvent xreparent
+     * }
+     */
+    public static void xreparent(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xreparent$OFFSET, xreparent$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xconfigure$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xconfigure"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XConfigureEvent xconfigure
+     * }
+     */
+    public static final GroupLayout xconfigure$layout() {
+        return xconfigure$LAYOUT;
+    }
+
+    private static final long xconfigure$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XConfigureEvent xconfigure
+     * }
+     */
+    public static final long xconfigure$offset() {
+        return xconfigure$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XConfigureEvent xconfigure
+     * }
+     */
+    public static MemorySegment xconfigure(MemorySegment union) {
+        return union.asSlice(xconfigure$OFFSET, xconfigure$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XConfigureEvent xconfigure
+     * }
+     */
+    public static void xconfigure(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xconfigure$OFFSET, xconfigure$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xgravity$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xgravity"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XGravityEvent xgravity
+     * }
+     */
+    public static final GroupLayout xgravity$layout() {
+        return xgravity$LAYOUT;
+    }
+
+    private static final long xgravity$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XGravityEvent xgravity
+     * }
+     */
+    public static final long xgravity$offset() {
+        return xgravity$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XGravityEvent xgravity
+     * }
+     */
+    public static MemorySegment xgravity(MemorySegment union) {
+        return union.asSlice(xgravity$OFFSET, xgravity$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XGravityEvent xgravity
+     * }
+     */
+    public static void xgravity(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xgravity$OFFSET, xgravity$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xresizerequest$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xresizerequest"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XResizeRequestEvent xresizerequest
+     * }
+     */
+    public static final GroupLayout xresizerequest$layout() {
+        return xresizerequest$LAYOUT;
+    }
+
+    private static final long xresizerequest$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XResizeRequestEvent xresizerequest
+     * }
+     */
+    public static final long xresizerequest$offset() {
+        return xresizerequest$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XResizeRequestEvent xresizerequest
+     * }
+     */
+    public static MemorySegment xresizerequest(MemorySegment union) {
+        return union.asSlice(xresizerequest$OFFSET, xresizerequest$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XResizeRequestEvent xresizerequest
+     * }
+     */
+    public static void xresizerequest(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xresizerequest$OFFSET, xresizerequest$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xconfigurerequest$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xconfigurerequest"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XConfigureRequestEvent xconfigurerequest
+     * }
+     */
+    public static final GroupLayout xconfigurerequest$layout() {
+        return xconfigurerequest$LAYOUT;
+    }
+
+    private static final long xconfigurerequest$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XConfigureRequestEvent xconfigurerequest
+     * }
+     */
+    public static final long xconfigurerequest$offset() {
+        return xconfigurerequest$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XConfigureRequestEvent xconfigurerequest
+     * }
+     */
+    public static MemorySegment xconfigurerequest(MemorySegment union) {
+        return union.asSlice(xconfigurerequest$OFFSET, xconfigurerequest$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XConfigureRequestEvent xconfigurerequest
+     * }
+     */
+    public static void xconfigurerequest(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xconfigurerequest$OFFSET, xconfigurerequest$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xcirculate$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xcirculate"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XCirculateEvent xcirculate
+     * }
+     */
+    public static final GroupLayout xcirculate$layout() {
+        return xcirculate$LAYOUT;
+    }
+
+    private static final long xcirculate$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XCirculateEvent xcirculate
+     * }
+     */
+    public static final long xcirculate$offset() {
+        return xcirculate$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XCirculateEvent xcirculate
+     * }
+     */
+    public static MemorySegment xcirculate(MemorySegment union) {
+        return union.asSlice(xcirculate$OFFSET, xcirculate$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XCirculateEvent xcirculate
+     * }
+     */
+    public static void xcirculate(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xcirculate$OFFSET, xcirculate$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xcirculaterequest$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xcirculaterequest"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XCirculateRequestEvent xcirculaterequest
+     * }
+     */
+    public static final GroupLayout xcirculaterequest$layout() {
+        return xcirculaterequest$LAYOUT;
+    }
+
+    private static final long xcirculaterequest$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XCirculateRequestEvent xcirculaterequest
+     * }
+     */
+    public static final long xcirculaterequest$offset() {
+        return xcirculaterequest$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XCirculateRequestEvent xcirculaterequest
+     * }
+     */
+    public static MemorySegment xcirculaterequest(MemorySegment union) {
+        return union.asSlice(xcirculaterequest$OFFSET, xcirculaterequest$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XCirculateRequestEvent xcirculaterequest
+     * }
+     */
+    public static void xcirculaterequest(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xcirculaterequest$OFFSET, xcirculaterequest$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xproperty$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xproperty"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XPropertyEvent xproperty
+     * }
+     */
+    public static final GroupLayout xproperty$layout() {
+        return xproperty$LAYOUT;
+    }
+
+    private static final long xproperty$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XPropertyEvent xproperty
+     * }
+     */
+    public static final long xproperty$offset() {
+        return xproperty$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XPropertyEvent xproperty
+     * }
+     */
+    public static MemorySegment xproperty(MemorySegment union) {
+        return union.asSlice(xproperty$OFFSET, xproperty$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XPropertyEvent xproperty
+     * }
+     */
+    public static void xproperty(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xproperty$OFFSET, xproperty$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xselectionclear$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xselectionclear"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XSelectionClearEvent xselectionclear
+     * }
+     */
+    public static final GroupLayout xselectionclear$layout() {
+        return xselectionclear$LAYOUT;
+    }
+
+    private static final long xselectionclear$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XSelectionClearEvent xselectionclear
+     * }
+     */
+    public static final long xselectionclear$offset() {
+        return xselectionclear$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XSelectionClearEvent xselectionclear
+     * }
+     */
+    public static MemorySegment xselectionclear(MemorySegment union) {
+        return union.asSlice(xselectionclear$OFFSET, xselectionclear$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XSelectionClearEvent xselectionclear
+     * }
+     */
+    public static void xselectionclear(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xselectionclear$OFFSET, xselectionclear$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xselectionrequest$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xselectionrequest"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XSelectionRequestEvent xselectionrequest
+     * }
+     */
+    public static final GroupLayout xselectionrequest$layout() {
+        return xselectionrequest$LAYOUT;
+    }
+
+    private static final long xselectionrequest$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XSelectionRequestEvent xselectionrequest
+     * }
+     */
+    public static final long xselectionrequest$offset() {
+        return xselectionrequest$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XSelectionRequestEvent xselectionrequest
+     * }
+     */
+    public static MemorySegment xselectionrequest(MemorySegment union) {
+        return union.asSlice(xselectionrequest$OFFSET, xselectionrequest$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XSelectionRequestEvent xselectionrequest
+     * }
+     */
+    public static void xselectionrequest(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xselectionrequest$OFFSET, xselectionrequest$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xselection$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xselection"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XSelectionEvent xselection
+     * }
+     */
+    public static final GroupLayout xselection$layout() {
+        return xselection$LAYOUT;
+    }
+
+    private static final long xselection$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XSelectionEvent xselection
+     * }
+     */
+    public static final long xselection$offset() {
+        return xselection$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XSelectionEvent xselection
+     * }
+     */
+    public static MemorySegment xselection(MemorySegment union) {
+        return union.asSlice(xselection$OFFSET, xselection$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XSelectionEvent xselection
+     * }
+     */
+    public static void xselection(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xselection$OFFSET, xselection$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xcolormap$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xcolormap"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XColormapEvent xcolormap
+     * }
+     */
+    public static final GroupLayout xcolormap$layout() {
+        return xcolormap$LAYOUT;
+    }
+
+    private static final long xcolormap$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XColormapEvent xcolormap
+     * }
+     */
+    public static final long xcolormap$offset() {
+        return xcolormap$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XColormapEvent xcolormap
+     * }
+     */
+    public static MemorySegment xcolormap(MemorySegment union) {
+        return union.asSlice(xcolormap$OFFSET, xcolormap$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XColormapEvent xcolormap
+     * }
+     */
+    public static void xcolormap(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xcolormap$OFFSET, xcolormap$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xclient$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xclient"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XClientMessageEvent xclient
+     * }
+     */
+    public static final GroupLayout xclient$layout() {
+        return xclient$LAYOUT;
+    }
+
+    private static final long xclient$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XClientMessageEvent xclient
+     * }
+     */
+    public static final long xclient$offset() {
+        return xclient$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XClientMessageEvent xclient
+     * }
+     */
+    public static MemorySegment xclient(MemorySegment union) {
+        return union.asSlice(xclient$OFFSET, xclient$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XClientMessageEvent xclient
+     * }
+     */
+    public static void xclient(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xclient$OFFSET, xclient$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xmapping$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xmapping"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XMappingEvent xmapping
+     * }
+     */
+    public static final GroupLayout xmapping$layout() {
+        return xmapping$LAYOUT;
+    }
+
+    private static final long xmapping$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XMappingEvent xmapping
+     * }
+     */
+    public static final long xmapping$offset() {
+        return xmapping$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XMappingEvent xmapping
+     * }
+     */
+    public static MemorySegment xmapping(MemorySegment union) {
+        return union.asSlice(xmapping$OFFSET, xmapping$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XMappingEvent xmapping
+     * }
+     */
+    public static void xmapping(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xmapping$OFFSET, xmapping$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xerror$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xerror"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XErrorEvent xerror
+     * }
+     */
+    public static final GroupLayout xerror$layout() {
+        return xerror$LAYOUT;
+    }
+
+    private static final long xerror$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XErrorEvent xerror
+     * }
+     */
+    public static final long xerror$offset() {
+        return xerror$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XErrorEvent xerror
+     * }
+     */
+    public static MemorySegment xerror(MemorySegment union) {
+        return union.asSlice(xerror$OFFSET, xerror$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XErrorEvent xerror
+     * }
+     */
+    public static void xerror(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xerror$OFFSET, xerror$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xkeymap$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xkeymap"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XKeymapEvent xkeymap
+     * }
+     */
+    public static final GroupLayout xkeymap$layout() {
+        return xkeymap$LAYOUT;
+    }
+
+    private static final long xkeymap$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XKeymapEvent xkeymap
+     * }
+     */
+    public static final long xkeymap$offset() {
+        return xkeymap$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XKeymapEvent xkeymap
+     * }
+     */
+    public static MemorySegment xkeymap(MemorySegment union) {
+        return union.asSlice(xkeymap$OFFSET, xkeymap$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XKeymapEvent xkeymap
+     * }
+     */
+    public static void xkeymap(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xkeymap$OFFSET, xkeymap$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xgeneric$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xgeneric"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XGenericEvent xgeneric
+     * }
+     */
+    public static final GroupLayout xgeneric$layout() {
+        return xgeneric$LAYOUT;
+    }
+
+    private static final long xgeneric$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XGenericEvent xgeneric
+     * }
+     */
+    public static final long xgeneric$offset() {
+        return xgeneric$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XGenericEvent xgeneric
+     * }
+     */
+    public static MemorySegment xgeneric(MemorySegment union) {
+        return union.asSlice(xgeneric$OFFSET, xgeneric$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XGenericEvent xgeneric
+     * }
+     */
+    public static void xgeneric(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xgeneric$OFFSET, xgeneric$LAYOUT.byteSize());
+    }
+
+    private static final GroupLayout xcookie$LAYOUT = (GroupLayout)$LAYOUT.select(groupElement("xcookie"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XGenericEventCookie xcookie
+     * }
+     */
+    public static final GroupLayout xcookie$layout() {
+        return xcookie$LAYOUT;
+    }
+
+    private static final long xcookie$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XGenericEventCookie xcookie
+     * }
+     */
+    public static final long xcookie$offset() {
+        return xcookie$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XGenericEventCookie xcookie
+     * }
+     */
+    public static MemorySegment xcookie(MemorySegment union) {
+        return union.asSlice(xcookie$OFFSET, xcookie$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XGenericEventCookie xcookie
+     * }
+     */
+    public static void xcookie(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, xcookie$OFFSET, xcookie$LAYOUT.byteSize());
+    }
+
+    private static final SequenceLayout pad$LAYOUT = (SequenceLayout)$LAYOUT.select(groupElement("pad"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * long pad[24]
+     * }
+     */
+    public static final SequenceLayout pad$layout() {
+        return pad$LAYOUT;
+    }
+
+    private static final long pad$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * long pad[24]
+     * }
+     */
+    public static final long pad$offset() {
+        return pad$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * long pad[24]
+     * }
+     */
+    public static MemorySegment pad(MemorySegment union) {
+        return union.asSlice(pad$OFFSET, pad$LAYOUT.byteSize());
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * long pad[24]
+     * }
+     */
+    public static void pad(MemorySegment union, MemorySegment fieldValue) {
+        MemorySegment.copy(fieldValue, 0L, union, pad$OFFSET, pad$LAYOUT.byteSize());
+    }
+
+    private static long[] pad$DIMS = { 24 };
+
+    /**
+     * Dimensions for array field:
+     * {@snippet lang=c :
+     * long pad[24]
+     * }
+     */
+    public static long[] pad$dimensions() {
+        return pad$DIMS;
+    }
+    private static final VarHandle pad$ELEM_HANDLE = pad$LAYOUT.varHandle(sequenceElement());
+
+    /**
+     * Indexed getter for field:
+     * {@snippet lang=c :
+     * long pad[24]
+     * }
+     */
+    public static long pad(MemorySegment union, long index0) {
+        return (long)pad$ELEM_HANDLE.get(union, 0L, index0);
+    }
+
+    /**
+     * Indexed setter for field:
+     * {@snippet lang=c :
+     * long pad[24]
+     * }
+     */
+    public static void pad(MemorySegment union, long index0, long fieldValue) {
+        pad$ELEM_HANDLE.set(union, 0L, index0, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this union
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

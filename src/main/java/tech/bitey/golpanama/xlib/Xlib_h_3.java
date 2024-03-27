@@ -2,1349 +2,9057 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
-import static java.lang.foreign.ValueLayout.*;
-public class Xlib_h_3 extends Xlib_h_2 {
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
 
+import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
+public class Xlib_h_3 {
+
+    Xlib_h_3() {
+        // Should not be called directly
+    }
+
+    static final Arena LIBRARY_ARENA = Arena.ofAuto();
+    static final boolean TRACE_DOWNCALLS = Boolean.getBoolean("jextract.trace.downcalls");
+
+    static void traceDowncall(String name, Object... args) {
+         String traceArgs = Arrays.stream(args)
+                       .map(Object::toString)
+                       .collect(Collectors.joining(", "));
+         System.out.printf("%s(%s)\n", name, traceArgs);
+    }
+
+    static MemorySegment findOrThrow(String symbol) {
+        return SYMBOL_LOOKUP.find(symbol)
+            .orElseThrow(() -> new UnsatisfiedLinkError("unresolved symbol: " + symbol));
+    }
+
+    static MethodHandle upcallHandle(Class<?> fi, String name, FunctionDescriptor fdesc) {
+        try {
+            return MethodHandles.lookup().findVirtual(fi, name, fdesc.toMethodType());
+        } catch (ReflectiveOperationException ex) {
+            throw new AssertionError(ex);
+        }
+    }
+
+    static final SymbolLookup SYMBOL_LOOKUP = SymbolLookup.loaderLookup()
+            .or(Linker.nativeLinker().defaultLookup());
+
+    public static final ValueLayout.OfBoolean C_BOOL = ValueLayout.JAVA_BOOLEAN;
+    public static final ValueLayout.OfByte C_CHAR = ValueLayout.JAVA_BYTE;
+    public static final ValueLayout.OfShort C_SHORT = ValueLayout.JAVA_SHORT;
+    public static final ValueLayout.OfInt C_INT = ValueLayout.JAVA_INT;
+    public static final ValueLayout.OfLong C_LONG_LONG = ValueLayout.JAVA_LONG;
+    public static final ValueLayout.OfFloat C_FLOAT = ValueLayout.JAVA_FLOAT;
+    public static final ValueLayout.OfDouble C_DOUBLE = ValueLayout.JAVA_DOUBLE;
+    public static final AddressLayout C_POINTER = ValueLayout.ADDRESS
+            .withTargetLayout(MemoryLayout.sequenceLayout(java.lang.Long.MAX_VALUE, JAVA_BYTE));
+    public static final ValueLayout.OfLong C_LONG = ValueLayout.JAVA_LONG;
+    private static final int XlibSpecificationRelease = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define XlibSpecificationRelease 6
+     * }
+     */
+    public static int XlibSpecificationRelease() {
+        return XlibSpecificationRelease;
+    }
+    private static final int _SYS_TYPES_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _SYS_TYPES_H 1
+     * }
+     */
+    public static int _SYS_TYPES_H() {
+        return _SYS_TYPES_H;
+    }
+    private static final int _FEATURES_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _FEATURES_H 1
+     * }
+     */
+    public static int _FEATURES_H() {
+        return _FEATURES_H;
+    }
+    private static final int _DEFAULT_SOURCE = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _DEFAULT_SOURCE 1
+     * }
+     */
+    public static int _DEFAULT_SOURCE() {
+        return _DEFAULT_SOURCE;
+    }
+    private static final int __GLIBC_USE_ISOC2X = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define __GLIBC_USE_ISOC2X 0
+     * }
+     */
+    public static int __GLIBC_USE_ISOC2X() {
+        return __GLIBC_USE_ISOC2X;
+    }
+    private static final int __USE_ISOC11 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_ISOC11 1
+     * }
+     */
+    public static int __USE_ISOC11() {
+        return __USE_ISOC11;
+    }
+    private static final int __USE_ISOC99 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_ISOC99 1
+     * }
+     */
+    public static int __USE_ISOC99() {
+        return __USE_ISOC99;
+    }
+    private static final int __USE_ISOC95 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_ISOC95 1
+     * }
+     */
+    public static int __USE_ISOC95() {
+        return __USE_ISOC95;
+    }
+    private static final int __USE_POSIX_IMPLICITLY = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_POSIX_IMPLICITLY 1
+     * }
+     */
+    public static int __USE_POSIX_IMPLICITLY() {
+        return __USE_POSIX_IMPLICITLY;
+    }
+    private static final int _POSIX_SOURCE = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _POSIX_SOURCE 1
+     * }
+     */
+    public static int _POSIX_SOURCE() {
+        return _POSIX_SOURCE;
+    }
+    private static final int __USE_POSIX = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_POSIX 1
+     * }
+     */
+    public static int __USE_POSIX() {
+        return __USE_POSIX;
+    }
+    private static final int __USE_POSIX2 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_POSIX2 1
+     * }
+     */
+    public static int __USE_POSIX2() {
+        return __USE_POSIX2;
+    }
+    private static final int __USE_POSIX199309 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_POSIX199309 1
+     * }
+     */
+    public static int __USE_POSIX199309() {
+        return __USE_POSIX199309;
+    }
+    private static final int __USE_POSIX199506 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_POSIX199506 1
+     * }
+     */
+    public static int __USE_POSIX199506() {
+        return __USE_POSIX199506;
+    }
+    private static final int __USE_XOPEN2K = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_XOPEN2K 1
+     * }
+     */
+    public static int __USE_XOPEN2K() {
+        return __USE_XOPEN2K;
+    }
+    private static final int __USE_XOPEN2K8 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_XOPEN2K8 1
+     * }
+     */
+    public static int __USE_XOPEN2K8() {
+        return __USE_XOPEN2K8;
+    }
+    private static final int _ATFILE_SOURCE = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _ATFILE_SOURCE 1
+     * }
+     */
+    public static int _ATFILE_SOURCE() {
+        return _ATFILE_SOURCE;
+    }
+    private static final int __WORDSIZE = (int)64L;
+    /**
+     * {@snippet lang=c :
+     * #define __WORDSIZE 64
+     * }
+     */
+    public static int __WORDSIZE() {
+        return __WORDSIZE;
+    }
+    private static final int __WORDSIZE_TIME64_COMPAT32 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __WORDSIZE_TIME64_COMPAT32 1
+     * }
+     */
+    public static int __WORDSIZE_TIME64_COMPAT32() {
+        return __WORDSIZE_TIME64_COMPAT32;
+    }
+    private static final int __SYSCALL_WORDSIZE = (int)64L;
+    /**
+     * {@snippet lang=c :
+     * #define __SYSCALL_WORDSIZE 64
+     * }
+     */
+    public static int __SYSCALL_WORDSIZE() {
+        return __SYSCALL_WORDSIZE;
+    }
+    private static final int __USE_MISC = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_MISC 1
+     * }
+     */
+    public static int __USE_MISC() {
+        return __USE_MISC;
+    }
+    private static final int __USE_ATFILE = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_ATFILE 1
+     * }
+     */
+    public static int __USE_ATFILE() {
+        return __USE_ATFILE;
+    }
+    private static final int __USE_FORTIFY_LEVEL = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define __USE_FORTIFY_LEVEL 0
+     * }
+     */
+    public static int __USE_FORTIFY_LEVEL() {
+        return __USE_FORTIFY_LEVEL;
+    }
+    private static final int __GLIBC_USE_DEPRECATED_GETS = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define __GLIBC_USE_DEPRECATED_GETS 0
+     * }
+     */
+    public static int __GLIBC_USE_DEPRECATED_GETS() {
+        return __GLIBC_USE_DEPRECATED_GETS;
+    }
+    private static final int __GLIBC_USE_DEPRECATED_SCANF = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define __GLIBC_USE_DEPRECATED_SCANF 0
+     * }
+     */
+    public static int __GLIBC_USE_DEPRECATED_SCANF() {
+        return __GLIBC_USE_DEPRECATED_SCANF;
+    }
+    private static final int _STDC_PREDEF_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _STDC_PREDEF_H 1
+     * }
+     */
+    public static int _STDC_PREDEF_H() {
+        return _STDC_PREDEF_H;
+    }
+    private static final int __STDC_IEC_559__ = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __STDC_IEC_559__ 1
+     * }
+     */
+    public static int __STDC_IEC_559__() {
+        return __STDC_IEC_559__;
+    }
+    private static final int __STDC_IEC_559_COMPLEX__ = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __STDC_IEC_559_COMPLEX__ 1
+     * }
+     */
+    public static int __STDC_IEC_559_COMPLEX__() {
+        return __STDC_IEC_559_COMPLEX__;
+    }
+    private static final int __GNU_LIBRARY__ = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define __GNU_LIBRARY__ 6
+     * }
+     */
+    public static int __GNU_LIBRARY__() {
+        return __GNU_LIBRARY__;
+    }
+    private static final int __GLIBC__ = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define __GLIBC__ 2
+     * }
+     */
+    public static int __GLIBC__() {
+        return __GLIBC__;
+    }
+    private static final int __GLIBC_MINOR__ = (int)35L;
+    /**
+     * {@snippet lang=c :
+     * #define __GLIBC_MINOR__ 35
+     * }
+     */
+    public static int __GLIBC_MINOR__() {
+        return __GLIBC_MINOR__;
+    }
+    private static final int _SYS_CDEFS_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _SYS_CDEFS_H 1
+     * }
+     */
+    public static int _SYS_CDEFS_H() {
+        return _SYS_CDEFS_H;
+    }
+    private static final int __glibc_c99_flexarr_available = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __glibc_c99_flexarr_available 1
+     * }
+     */
+    public static int __glibc_c99_flexarr_available() {
+        return __glibc_c99_flexarr_available;
+    }
+    private static final int __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI 0
+     * }
+     */
+    public static int __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI() {
+        return __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI;
+    }
+    private static final int __HAVE_GENERIC_SELECTION = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __HAVE_GENERIC_SELECTION 1
+     * }
+     */
+    public static int __HAVE_GENERIC_SELECTION() {
+        return __HAVE_GENERIC_SELECTION;
+    }
+    private static final int _BITS_TYPES_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_TYPES_H 1
+     * }
+     */
+    public static int _BITS_TYPES_H() {
+        return _BITS_TYPES_H;
+    }
+    private static final int _BITS_TYPESIZES_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_TYPESIZES_H 1
+     * }
+     */
+    public static int _BITS_TYPESIZES_H() {
+        return _BITS_TYPESIZES_H;
+    }
+    private static final int __OFF_T_MATCHES_OFF64_T = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __OFF_T_MATCHES_OFF64_T 1
+     * }
+     */
+    public static int __OFF_T_MATCHES_OFF64_T() {
+        return __OFF_T_MATCHES_OFF64_T;
+    }
+    private static final int __INO_T_MATCHES_INO64_T = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __INO_T_MATCHES_INO64_T 1
+     * }
+     */
+    public static int __INO_T_MATCHES_INO64_T() {
+        return __INO_T_MATCHES_INO64_T;
+    }
+    private static final int __RLIM_T_MATCHES_RLIM64_T = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __RLIM_T_MATCHES_RLIM64_T 1
+     * }
+     */
+    public static int __RLIM_T_MATCHES_RLIM64_T() {
+        return __RLIM_T_MATCHES_RLIM64_T;
+    }
+    private static final int __STATFS_MATCHES_STATFS64 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __STATFS_MATCHES_STATFS64 1
+     * }
+     */
+    public static int __STATFS_MATCHES_STATFS64() {
+        return __STATFS_MATCHES_STATFS64;
+    }
+    private static final int __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64 1
+     * }
+     */
+    public static int __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64() {
+        return __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64;
+    }
+    private static final int __FD_SETSIZE = (int)1024L;
+    /**
+     * {@snippet lang=c :
+     * #define __FD_SETSIZE 1024
+     * }
+     */
+    public static int __FD_SETSIZE() {
+        return __FD_SETSIZE;
+    }
+    private static final int _BITS_TIME64_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_TIME64_H 1
+     * }
+     */
+    public static int _BITS_TIME64_H() {
+        return _BITS_TIME64_H;
+    }
+    private static final int __clock_t_defined = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __clock_t_defined 1
+     * }
+     */
+    public static int __clock_t_defined() {
+        return __clock_t_defined;
+    }
+    private static final int __clockid_t_defined = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __clockid_t_defined 1
+     * }
+     */
+    public static int __clockid_t_defined() {
+        return __clockid_t_defined;
+    }
+    private static final int __time_t_defined = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __time_t_defined 1
+     * }
+     */
+    public static int __time_t_defined() {
+        return __time_t_defined;
+    }
+    private static final int __timer_t_defined = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __timer_t_defined 1
+     * }
+     */
+    public static int __timer_t_defined() {
+        return __timer_t_defined;
+    }
+    private static final int _BITS_STDINT_INTN_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_STDINT_INTN_H 1
+     * }
+     */
+    public static int _BITS_STDINT_INTN_H() {
+        return _BITS_STDINT_INTN_H;
+    }
+    private static final int __BIT_TYPES_DEFINED__ = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __BIT_TYPES_DEFINED__ 1
+     * }
+     */
+    public static int __BIT_TYPES_DEFINED__() {
+        return __BIT_TYPES_DEFINED__;
+    }
+    private static final int _ENDIAN_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _ENDIAN_H 1
+     * }
+     */
+    public static int _ENDIAN_H() {
+        return _ENDIAN_H;
+    }
+    private static final int _BITS_ENDIAN_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_ENDIAN_H 1
+     * }
+     */
+    public static int _BITS_ENDIAN_H() {
+        return _BITS_ENDIAN_H;
+    }
+    private static final int __LITTLE_ENDIAN = (int)1234L;
+    /**
+     * {@snippet lang=c :
+     * #define __LITTLE_ENDIAN 1234
+     * }
+     */
+    public static int __LITTLE_ENDIAN() {
+        return __LITTLE_ENDIAN;
+    }
+    private static final int __BIG_ENDIAN = (int)4321L;
+    /**
+     * {@snippet lang=c :
+     * #define __BIG_ENDIAN 4321
+     * }
+     */
+    public static int __BIG_ENDIAN() {
+        return __BIG_ENDIAN;
+    }
+    private static final int __PDP_ENDIAN = (int)3412L;
+    /**
+     * {@snippet lang=c :
+     * #define __PDP_ENDIAN 3412
+     * }
+     */
+    public static int __PDP_ENDIAN() {
+        return __PDP_ENDIAN;
+    }
+    private static final int _BITS_ENDIANNESS_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_ENDIANNESS_H 1
+     * }
+     */
+    public static int _BITS_ENDIANNESS_H() {
+        return _BITS_ENDIANNESS_H;
+    }
+    private static final int _BITS_BYTESWAP_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_BYTESWAP_H 1
+     * }
+     */
+    public static int _BITS_BYTESWAP_H() {
+        return _BITS_BYTESWAP_H;
+    }
+    private static final int _BITS_UINTN_IDENTITY_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_UINTN_IDENTITY_H 1
+     * }
+     */
+    public static int _BITS_UINTN_IDENTITY_H() {
+        return _BITS_UINTN_IDENTITY_H;
+    }
+    private static final int _SYS_SELECT_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _SYS_SELECT_H 1
+     * }
+     */
+    public static int _SYS_SELECT_H() {
+        return _SYS_SELECT_H;
+    }
+    private static final int __sigset_t_defined = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __sigset_t_defined 1
+     * }
+     */
+    public static int __sigset_t_defined() {
+        return __sigset_t_defined;
+    }
+    private static final int __timeval_defined = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __timeval_defined 1
+     * }
+     */
+    public static int __timeval_defined() {
+        return __timeval_defined;
+    }
+    private static final int _STRUCT_TIMESPEC = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _STRUCT_TIMESPEC 1
+     * }
+     */
+    public static int _STRUCT_TIMESPEC() {
+        return _STRUCT_TIMESPEC;
+    }
+    private static final int _BITS_PTHREADTYPES_COMMON_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_PTHREADTYPES_COMMON_H 1
+     * }
+     */
+    public static int _BITS_PTHREADTYPES_COMMON_H() {
+        return _BITS_PTHREADTYPES_COMMON_H;
+    }
+    private static final int _THREAD_SHARED_TYPES_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _THREAD_SHARED_TYPES_H 1
+     * }
+     */
+    public static int _THREAD_SHARED_TYPES_H() {
+        return _THREAD_SHARED_TYPES_H;
+    }
+    private static final int _BITS_PTHREADTYPES_ARCH_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _BITS_PTHREADTYPES_ARCH_H 1
+     * }
+     */
+    public static int _BITS_PTHREADTYPES_ARCH_H() {
+        return _BITS_PTHREADTYPES_ARCH_H;
+    }
+    private static final int __SIZEOF_PTHREAD_MUTEX_T = (int)40L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_MUTEX_T 40
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_MUTEX_T() {
+        return __SIZEOF_PTHREAD_MUTEX_T;
+    }
+    private static final int __SIZEOF_PTHREAD_ATTR_T = (int)56L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_ATTR_T 56
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_ATTR_T() {
+        return __SIZEOF_PTHREAD_ATTR_T;
+    }
+    private static final int __SIZEOF_PTHREAD_RWLOCK_T = (int)56L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_RWLOCK_T 56
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_RWLOCK_T() {
+        return __SIZEOF_PTHREAD_RWLOCK_T;
+    }
+    private static final int __SIZEOF_PTHREAD_BARRIER_T = (int)32L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_BARRIER_T 32
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_BARRIER_T() {
+        return __SIZEOF_PTHREAD_BARRIER_T;
+    }
+    private static final int __SIZEOF_PTHREAD_MUTEXATTR_T = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_MUTEXATTR_T 4
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_MUTEXATTR_T() {
+        return __SIZEOF_PTHREAD_MUTEXATTR_T;
+    }
+    private static final int __SIZEOF_PTHREAD_COND_T = (int)48L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_COND_T 48
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_COND_T() {
+        return __SIZEOF_PTHREAD_COND_T;
+    }
+    private static final int __SIZEOF_PTHREAD_CONDATTR_T = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_CONDATTR_T 4
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_CONDATTR_T() {
+        return __SIZEOF_PTHREAD_CONDATTR_T;
+    }
+    private static final int __SIZEOF_PTHREAD_RWLOCKATTR_T = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_RWLOCKATTR_T 8
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_RWLOCKATTR_T() {
+        return __SIZEOF_PTHREAD_RWLOCKATTR_T;
+    }
+    private static final int __SIZEOF_PTHREAD_BARRIERATTR_T = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define __SIZEOF_PTHREAD_BARRIERATTR_T 4
+     * }
+     */
+    public static int __SIZEOF_PTHREAD_BARRIERATTR_T() {
+        return __SIZEOF_PTHREAD_BARRIERATTR_T;
+    }
+    private static final int _THREAD_MUTEX_INTERNAL_H = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define _THREAD_MUTEX_INTERNAL_H 1
+     * }
+     */
+    public static int _THREAD_MUTEX_INTERNAL_H() {
+        return _THREAD_MUTEX_INTERNAL_H;
+    }
+    private static final int __PTHREAD_MUTEX_HAVE_PREV = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_MUTEX_HAVE_PREV 1
+     * }
+     */
+    public static int __PTHREAD_MUTEX_HAVE_PREV() {
+        return __PTHREAD_MUTEX_HAVE_PREV;
+    }
+    private static final int __have_pthread_attr_t = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define __have_pthread_attr_t 1
+     * }
+     */
+    public static int __have_pthread_attr_t() {
+        return __have_pthread_attr_t;
+    }
+    private static final int X_PROTOCOL = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * #define X_PROTOCOL 11
+     * }
+     */
+    public static int X_PROTOCOL() {
+        return X_PROTOCOL;
+    }
+    private static final int X_PROTOCOL_REVISION = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define X_PROTOCOL_REVISION 0
+     * }
+     */
+    public static int X_PROTOCOL_REVISION() {
+        return X_PROTOCOL_REVISION;
+    }
+    private static final int KeyPress = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define KeyPress 2
+     * }
+     */
+    public static int KeyPress() {
+        return KeyPress;
+    }
+    private static final int KeyRelease = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define KeyRelease 3
+     * }
+     */
+    public static int KeyRelease() {
+        return KeyRelease;
+    }
+    private static final int ButtonPress = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define ButtonPress 4
+     * }
+     */
+    public static int ButtonPress() {
+        return ButtonPress;
+    }
+    private static final int ButtonRelease = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define ButtonRelease 5
+     * }
+     */
+    public static int ButtonRelease() {
+        return ButtonRelease;
+    }
+    private static final int MotionNotify = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define MotionNotify 6
+     * }
+     */
+    public static int MotionNotify() {
+        return MotionNotify;
+    }
+    private static final int EnterNotify = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * #define EnterNotify 7
+     * }
+     */
+    public static int EnterNotify() {
+        return EnterNotify;
+    }
+    private static final int LeaveNotify = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define LeaveNotify 8
+     * }
+     */
+    public static int LeaveNotify() {
+        return LeaveNotify;
+    }
+    private static final int FocusIn = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * #define FocusIn 9
+     * }
+     */
+    public static int FocusIn() {
+        return FocusIn;
+    }
+    private static final int FocusOut = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * #define FocusOut 10
+     * }
+     */
+    public static int FocusOut() {
+        return FocusOut;
+    }
+    private static final int KeymapNotify = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * #define KeymapNotify 11
+     * }
+     */
+    public static int KeymapNotify() {
+        return KeymapNotify;
+    }
+    private static final int Expose = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * #define Expose 12
+     * }
+     */
+    public static int Expose() {
+        return Expose;
+    }
+    private static final int GraphicsExpose = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * #define GraphicsExpose 13
+     * }
+     */
+    public static int GraphicsExpose() {
+        return GraphicsExpose;
+    }
+    private static final int NoExpose = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * #define NoExpose 14
+     * }
+     */
+    public static int NoExpose() {
+        return NoExpose;
+    }
+    private static final int VisibilityNotify = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * #define VisibilityNotify 15
+     * }
+     */
+    public static int VisibilityNotify() {
+        return VisibilityNotify;
+    }
+    private static final int CreateNotify = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * #define CreateNotify 16
+     * }
+     */
+    public static int CreateNotify() {
+        return CreateNotify;
+    }
+    private static final int DestroyNotify = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * #define DestroyNotify 17
+     * }
+     */
+    public static int DestroyNotify() {
+        return DestroyNotify;
+    }
+    private static final int UnmapNotify = (int)18L;
+    /**
+     * {@snippet lang=c :
+     * #define UnmapNotify 18
+     * }
+     */
+    public static int UnmapNotify() {
+        return UnmapNotify;
+    }
+    private static final int MapNotify = (int)19L;
+    /**
+     * {@snippet lang=c :
+     * #define MapNotify 19
+     * }
+     */
+    public static int MapNotify() {
+        return MapNotify;
+    }
+    private static final int MapRequest = (int)20L;
+    /**
+     * {@snippet lang=c :
+     * #define MapRequest 20
+     * }
+     */
+    public static int MapRequest() {
+        return MapRequest;
+    }
+    private static final int ReparentNotify = (int)21L;
+    /**
+     * {@snippet lang=c :
+     * #define ReparentNotify 21
+     * }
+     */
+    public static int ReparentNotify() {
+        return ReparentNotify;
+    }
+    private static final int ConfigureNotify = (int)22L;
+    /**
+     * {@snippet lang=c :
+     * #define ConfigureNotify 22
+     * }
+     */
+    public static int ConfigureNotify() {
+        return ConfigureNotify;
+    }
+    private static final int ConfigureRequest = (int)23L;
+    /**
+     * {@snippet lang=c :
+     * #define ConfigureRequest 23
+     * }
+     */
+    public static int ConfigureRequest() {
+        return ConfigureRequest;
+    }
+    private static final int GravityNotify = (int)24L;
+    /**
+     * {@snippet lang=c :
+     * #define GravityNotify 24
+     * }
+     */
+    public static int GravityNotify() {
+        return GravityNotify;
+    }
+    private static final int ResizeRequest = (int)25L;
+    /**
+     * {@snippet lang=c :
+     * #define ResizeRequest 25
+     * }
+     */
+    public static int ResizeRequest() {
+        return ResizeRequest;
+    }
+    private static final int CirculateNotify = (int)26L;
+    /**
+     * {@snippet lang=c :
+     * #define CirculateNotify 26
+     * }
+     */
+    public static int CirculateNotify() {
+        return CirculateNotify;
+    }
+    private static final int CirculateRequest = (int)27L;
+    /**
+     * {@snippet lang=c :
+     * #define CirculateRequest 27
+     * }
+     */
+    public static int CirculateRequest() {
+        return CirculateRequest;
+    }
+    private static final int PropertyNotify = (int)28L;
+    /**
+     * {@snippet lang=c :
+     * #define PropertyNotify 28
+     * }
+     */
+    public static int PropertyNotify() {
+        return PropertyNotify;
+    }
+    private static final int SelectionClear = (int)29L;
+    /**
+     * {@snippet lang=c :
+     * #define SelectionClear 29
+     * }
+     */
+    public static int SelectionClear() {
+        return SelectionClear;
+    }
+    private static final int SelectionRequest = (int)30L;
+    /**
+     * {@snippet lang=c :
+     * #define SelectionRequest 30
+     * }
+     */
+    public static int SelectionRequest() {
+        return SelectionRequest;
+    }
+    private static final int SelectionNotify = (int)31L;
+    /**
+     * {@snippet lang=c :
+     * #define SelectionNotify 31
+     * }
+     */
+    public static int SelectionNotify() {
+        return SelectionNotify;
+    }
+    private static final int ColormapNotify = (int)32L;
+    /**
+     * {@snippet lang=c :
+     * #define ColormapNotify 32
+     * }
+     */
+    public static int ColormapNotify() {
+        return ColormapNotify;
+    }
+    private static final int ClientMessage = (int)33L;
+    /**
+     * {@snippet lang=c :
+     * #define ClientMessage 33
+     * }
+     */
+    public static int ClientMessage() {
+        return ClientMessage;
+    }
+    private static final int MappingNotify = (int)34L;
+    /**
+     * {@snippet lang=c :
+     * #define MappingNotify 34
+     * }
+     */
+    public static int MappingNotify() {
+        return MappingNotify;
+    }
+    private static final int GenericEvent = (int)35L;
+    /**
+     * {@snippet lang=c :
+     * #define GenericEvent 35
+     * }
+     */
+    public static int GenericEvent() {
+        return GenericEvent;
+    }
+    private static final int LASTEvent = (int)36L;
+    /**
+     * {@snippet lang=c :
+     * #define LASTEvent 36
+     * }
+     */
+    public static int LASTEvent() {
+        return LASTEvent;
+    }
+    private static final int ShiftMapIndex = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define ShiftMapIndex 0
+     * }
+     */
+    public static int ShiftMapIndex() {
+        return ShiftMapIndex;
+    }
+    private static final int LockMapIndex = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define LockMapIndex 1
+     * }
+     */
+    public static int LockMapIndex() {
+        return LockMapIndex;
+    }
+    private static final int ControlMapIndex = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define ControlMapIndex 2
+     * }
+     */
+    public static int ControlMapIndex() {
+        return ControlMapIndex;
+    }
+    private static final int Mod1MapIndex = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define Mod1MapIndex 3
+     * }
+     */
+    public static int Mod1MapIndex() {
+        return Mod1MapIndex;
+    }
+    private static final int Mod2MapIndex = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define Mod2MapIndex 4
+     * }
+     */
+    public static int Mod2MapIndex() {
+        return Mod2MapIndex;
+    }
+    private static final int Mod3MapIndex = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define Mod3MapIndex 5
+     * }
+     */
+    public static int Mod3MapIndex() {
+        return Mod3MapIndex;
+    }
+    private static final int Mod4MapIndex = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define Mod4MapIndex 6
+     * }
+     */
+    public static int Mod4MapIndex() {
+        return Mod4MapIndex;
+    }
+    private static final int Mod5MapIndex = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * #define Mod5MapIndex 7
+     * }
+     */
+    public static int Mod5MapIndex() {
+        return Mod5MapIndex;
+    }
+    private static final int Button1 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define Button1 1
+     * }
+     */
+    public static int Button1() {
+        return Button1;
+    }
+    private static final int Button2 = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define Button2 2
+     * }
+     */
+    public static int Button2() {
+        return Button2;
+    }
+    private static final int Button3 = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define Button3 3
+     * }
+     */
+    public static int Button3() {
+        return Button3;
+    }
+    private static final int Button4 = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define Button4 4
+     * }
+     */
+    public static int Button4() {
+        return Button4;
+    }
+    private static final int Button5 = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define Button5 5
+     * }
+     */
+    public static int Button5() {
+        return Button5;
+    }
+    private static final int NotifyNormal = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyNormal 0
+     * }
+     */
+    public static int NotifyNormal() {
+        return NotifyNormal;
+    }
+    private static final int NotifyGrab = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyGrab 1
+     * }
+     */
+    public static int NotifyGrab() {
+        return NotifyGrab;
+    }
+    private static final int NotifyUngrab = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyUngrab 2
+     * }
+     */
+    public static int NotifyUngrab() {
+        return NotifyUngrab;
+    }
+    private static final int NotifyWhileGrabbed = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyWhileGrabbed 3
+     * }
+     */
+    public static int NotifyWhileGrabbed() {
+        return NotifyWhileGrabbed;
+    }
+    private static final int NotifyHint = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyHint 1
+     * }
+     */
+    public static int NotifyHint() {
+        return NotifyHint;
+    }
+    private static final int NotifyAncestor = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyAncestor 0
+     * }
+     */
+    public static int NotifyAncestor() {
+        return NotifyAncestor;
+    }
+    private static final int NotifyVirtual = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyVirtual 1
+     * }
+     */
+    public static int NotifyVirtual() {
+        return NotifyVirtual;
+    }
+    private static final int NotifyInferior = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyInferior 2
+     * }
+     */
+    public static int NotifyInferior() {
+        return NotifyInferior;
+    }
+    private static final int NotifyNonlinear = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyNonlinear 3
+     * }
+     */
+    public static int NotifyNonlinear() {
+        return NotifyNonlinear;
+    }
+    private static final int NotifyNonlinearVirtual = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyNonlinearVirtual 4
+     * }
+     */
+    public static int NotifyNonlinearVirtual() {
+        return NotifyNonlinearVirtual;
+    }
+    private static final int NotifyPointer = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyPointer 5
+     * }
+     */
+    public static int NotifyPointer() {
+        return NotifyPointer;
+    }
+    private static final int NotifyPointerRoot = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyPointerRoot 6
+     * }
+     */
+    public static int NotifyPointerRoot() {
+        return NotifyPointerRoot;
+    }
+    private static final int NotifyDetailNone = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * #define NotifyDetailNone 7
+     * }
+     */
+    public static int NotifyDetailNone() {
+        return NotifyDetailNone;
+    }
+    private static final int VisibilityUnobscured = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define VisibilityUnobscured 0
+     * }
+     */
+    public static int VisibilityUnobscured() {
+        return VisibilityUnobscured;
+    }
+    private static final int VisibilityPartiallyObscured = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define VisibilityPartiallyObscured 1
+     * }
+     */
+    public static int VisibilityPartiallyObscured() {
+        return VisibilityPartiallyObscured;
+    }
+    private static final int VisibilityFullyObscured = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define VisibilityFullyObscured 2
+     * }
+     */
+    public static int VisibilityFullyObscured() {
+        return VisibilityFullyObscured;
+    }
+    private static final int PlaceOnTop = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define PlaceOnTop 0
+     * }
+     */
+    public static int PlaceOnTop() {
+        return PlaceOnTop;
+    }
+    private static final int PlaceOnBottom = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define PlaceOnBottom 1
+     * }
+     */
+    public static int PlaceOnBottom() {
+        return PlaceOnBottom;
+    }
+    private static final int FamilyInternet = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define FamilyInternet 0
+     * }
+     */
+    public static int FamilyInternet() {
+        return FamilyInternet;
+    }
+    private static final int FamilyDECnet = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define FamilyDECnet 1
+     * }
+     */
+    public static int FamilyDECnet() {
+        return FamilyDECnet;
+    }
+    private static final int FamilyChaos = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define FamilyChaos 2
+     * }
+     */
+    public static int FamilyChaos() {
+        return FamilyChaos;
+    }
+    private static final int FamilyInternet6 = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define FamilyInternet6 6
+     * }
+     */
+    public static int FamilyInternet6() {
+        return FamilyInternet6;
+    }
+    private static final int FamilyServerInterpreted = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define FamilyServerInterpreted 5
+     * }
+     */
+    public static int FamilyServerInterpreted() {
+        return FamilyServerInterpreted;
+    }
+    private static final int PropertyNewValue = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define PropertyNewValue 0
+     * }
+     */
+    public static int PropertyNewValue() {
+        return PropertyNewValue;
+    }
+    private static final int PropertyDelete = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define PropertyDelete 1
+     * }
+     */
+    public static int PropertyDelete() {
+        return PropertyDelete;
+    }
+    private static final int ColormapUninstalled = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define ColormapUninstalled 0
+     * }
+     */
+    public static int ColormapUninstalled() {
+        return ColormapUninstalled;
+    }
+    private static final int ColormapInstalled = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define ColormapInstalled 1
+     * }
+     */
+    public static int ColormapInstalled() {
+        return ColormapInstalled;
+    }
+    private static final int GrabModeSync = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define GrabModeSync 0
+     * }
+     */
+    public static int GrabModeSync() {
+        return GrabModeSync;
+    }
+    private static final int GrabModeAsync = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define GrabModeAsync 1
+     * }
+     */
+    public static int GrabModeAsync() {
+        return GrabModeAsync;
+    }
+    private static final int GrabSuccess = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define GrabSuccess 0
+     * }
+     */
+    public static int GrabSuccess() {
+        return GrabSuccess;
+    }
+    private static final int AlreadyGrabbed = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define AlreadyGrabbed 1
+     * }
+     */
+    public static int AlreadyGrabbed() {
+        return AlreadyGrabbed;
+    }
+    private static final int GrabInvalidTime = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define GrabInvalidTime 2
+     * }
+     */
+    public static int GrabInvalidTime() {
+        return GrabInvalidTime;
+    }
+    private static final int GrabNotViewable = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define GrabNotViewable 3
+     * }
+     */
+    public static int GrabNotViewable() {
+        return GrabNotViewable;
+    }
+    private static final int GrabFrozen = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define GrabFrozen 4
+     * }
+     */
+    public static int GrabFrozen() {
+        return GrabFrozen;
+    }
+    private static final int AsyncPointer = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define AsyncPointer 0
+     * }
+     */
+    public static int AsyncPointer() {
+        return AsyncPointer;
+    }
+    private static final int SyncPointer = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define SyncPointer 1
+     * }
+     */
+    public static int SyncPointer() {
+        return SyncPointer;
+    }
+    private static final int ReplayPointer = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define ReplayPointer 2
+     * }
+     */
+    public static int ReplayPointer() {
+        return ReplayPointer;
+    }
+    private static final int AsyncKeyboard = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define AsyncKeyboard 3
+     * }
+     */
+    public static int AsyncKeyboard() {
+        return AsyncKeyboard;
+    }
+    private static final int SyncKeyboard = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define SyncKeyboard 4
+     * }
+     */
+    public static int SyncKeyboard() {
+        return SyncKeyboard;
+    }
+    private static final int ReplayKeyboard = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define ReplayKeyboard 5
+     * }
+     */
+    public static int ReplayKeyboard() {
+        return ReplayKeyboard;
+    }
+    private static final int AsyncBoth = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define AsyncBoth 6
+     * }
+     */
+    public static int AsyncBoth() {
+        return AsyncBoth;
+    }
+    private static final int SyncBoth = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * #define SyncBoth 7
+     * }
+     */
+    public static int SyncBoth() {
+        return SyncBoth;
+    }
+    private static final int RevertToParent = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define RevertToParent 2
+     * }
+     */
+    public static int RevertToParent() {
+        return RevertToParent;
+    }
+    private static final int Success = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define Success 0
+     * }
+     */
+    public static int Success() {
+        return Success;
+    }
+    private static final int BadRequest = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define BadRequest 1
+     * }
+     */
+    public static int BadRequest() {
+        return BadRequest;
+    }
+    private static final int BadValue = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define BadValue 2
+     * }
+     */
+    public static int BadValue() {
+        return BadValue;
+    }
+    private static final int BadWindow = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define BadWindow 3
+     * }
+     */
+    public static int BadWindow() {
+        return BadWindow;
+    }
+    private static final int BadPixmap = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define BadPixmap 4
+     * }
+     */
+    public static int BadPixmap() {
+        return BadPixmap;
+    }
+    private static final int BadAtom = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define BadAtom 5
+     * }
+     */
+    public static int BadAtom() {
+        return BadAtom;
+    }
+    private static final int BadCursor = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define BadCursor 6
+     * }
+     */
+    public static int BadCursor() {
+        return BadCursor;
+    }
+    private static final int BadFont = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * #define BadFont 7
+     * }
+     */
+    public static int BadFont() {
+        return BadFont;
+    }
+    private static final int BadMatch = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define BadMatch 8
+     * }
+     */
+    public static int BadMatch() {
+        return BadMatch;
+    }
+    private static final int BadDrawable = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * #define BadDrawable 9
+     * }
+     */
+    public static int BadDrawable() {
+        return BadDrawable;
+    }
+    private static final int BadAccess = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * #define BadAccess 10
+     * }
+     */
+    public static int BadAccess() {
+        return BadAccess;
+    }
+    private static final int BadAlloc = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * #define BadAlloc 11
+     * }
+     */
+    public static int BadAlloc() {
+        return BadAlloc;
+    }
+    private static final int BadColor = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * #define BadColor 12
+     * }
+     */
+    public static int BadColor() {
+        return BadColor;
+    }
+    private static final int BadGC = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * #define BadGC 13
+     * }
+     */
+    public static int BadGC() {
+        return BadGC;
+    }
+    private static final int BadIDChoice = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * #define BadIDChoice 14
+     * }
+     */
+    public static int BadIDChoice() {
+        return BadIDChoice;
+    }
+    private static final int BadName = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * #define BadName 15
+     * }
+     */
+    public static int BadName() {
+        return BadName;
+    }
+    private static final int BadLength = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * #define BadLength 16
+     * }
+     */
+    public static int BadLength() {
+        return BadLength;
+    }
+    private static final int BadImplementation = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * #define BadImplementation 17
+     * }
+     */
+    public static int BadImplementation() {
+        return BadImplementation;
+    }
+    private static final int FirstExtensionError = (int)128L;
+    /**
+     * {@snippet lang=c :
+     * #define FirstExtensionError 128
+     * }
+     */
+    public static int FirstExtensionError() {
+        return FirstExtensionError;
+    }
+    private static final int LastExtensionError = (int)255L;
+    /**
+     * {@snippet lang=c :
+     * #define LastExtensionError 255
+     * }
+     */
+    public static int LastExtensionError() {
+        return LastExtensionError;
+    }
+    private static final int InputOutput = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define InputOutput 1
+     * }
+     */
+    public static int InputOutput() {
+        return InputOutput;
+    }
+    private static final int InputOnly = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define InputOnly 2
+     * }
+     */
+    public static int InputOnly() {
+        return InputOnly;
+    }
+    private static final int ForgetGravity = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define ForgetGravity 0
+     * }
+     */
+    public static int ForgetGravity() {
+        return ForgetGravity;
+    }
+    private static final int NorthWestGravity = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define NorthWestGravity 1
+     * }
+     */
+    public static int NorthWestGravity() {
+        return NorthWestGravity;
+    }
+    private static final int NorthGravity = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define NorthGravity 2
+     * }
+     */
+    public static int NorthGravity() {
+        return NorthGravity;
+    }
+    private static final int NorthEastGravity = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define NorthEastGravity 3
+     * }
+     */
+    public static int NorthEastGravity() {
+        return NorthEastGravity;
+    }
+    private static final int WestGravity = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define WestGravity 4
+     * }
+     */
+    public static int WestGravity() {
+        return WestGravity;
+    }
+    private static final int CenterGravity = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define CenterGravity 5
+     * }
+     */
+    public static int CenterGravity() {
+        return CenterGravity;
+    }
+    private static final int EastGravity = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define EastGravity 6
+     * }
+     */
+    public static int EastGravity() {
+        return EastGravity;
+    }
+    private static final int SouthWestGravity = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * #define SouthWestGravity 7
+     * }
+     */
+    public static int SouthWestGravity() {
+        return SouthWestGravity;
+    }
+    private static final int SouthGravity = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define SouthGravity 8
+     * }
+     */
+    public static int SouthGravity() {
+        return SouthGravity;
+    }
+    private static final int SouthEastGravity = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * #define SouthEastGravity 9
+     * }
+     */
+    public static int SouthEastGravity() {
+        return SouthEastGravity;
+    }
+    private static final int StaticGravity = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * #define StaticGravity 10
+     * }
+     */
+    public static int StaticGravity() {
+        return StaticGravity;
+    }
+    private static final int UnmapGravity = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define UnmapGravity 0
+     * }
+     */
+    public static int UnmapGravity() {
+        return UnmapGravity;
+    }
+    private static final int NotUseful = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define NotUseful 0
+     * }
+     */
+    public static int NotUseful() {
+        return NotUseful;
+    }
+    private static final int WhenMapped = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define WhenMapped 1
+     * }
+     */
+    public static int WhenMapped() {
+        return WhenMapped;
+    }
+    private static final int Always = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define Always 2
+     * }
+     */
+    public static int Always() {
+        return Always;
+    }
+    private static final int IsUnmapped = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define IsUnmapped 0
+     * }
+     */
+    public static int IsUnmapped() {
+        return IsUnmapped;
+    }
+    private static final int IsUnviewable = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define IsUnviewable 1
+     * }
+     */
+    public static int IsUnviewable() {
+        return IsUnviewable;
+    }
+    private static final int IsViewable = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define IsViewable 2
+     * }
+     */
+    public static int IsViewable() {
+        return IsViewable;
+    }
+    private static final int SetModeInsert = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define SetModeInsert 0
+     * }
+     */
+    public static int SetModeInsert() {
+        return SetModeInsert;
+    }
+    private static final int SetModeDelete = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define SetModeDelete 1
+     * }
+     */
+    public static int SetModeDelete() {
+        return SetModeDelete;
+    }
+    private static final int DestroyAll = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define DestroyAll 0
+     * }
+     */
+    public static int DestroyAll() {
+        return DestroyAll;
+    }
+    private static final int RetainPermanent = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define RetainPermanent 1
+     * }
+     */
+    public static int RetainPermanent() {
+        return RetainPermanent;
+    }
+    private static final int RetainTemporary = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define RetainTemporary 2
+     * }
+     */
+    public static int RetainTemporary() {
+        return RetainTemporary;
+    }
+    private static final int Above = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define Above 0
+     * }
+     */
+    public static int Above() {
+        return Above;
+    }
+    private static final int Below = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define Below 1
+     * }
+     */
+    public static int Below() {
+        return Below;
+    }
+    private static final int TopIf = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define TopIf 2
+     * }
+     */
+    public static int TopIf() {
+        return TopIf;
+    }
+    private static final int BottomIf = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define BottomIf 3
+     * }
+     */
+    public static int BottomIf() {
+        return BottomIf;
+    }
+    private static final int Opposite = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define Opposite 4
+     * }
+     */
+    public static int Opposite() {
+        return Opposite;
+    }
+    private static final int RaiseLowest = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define RaiseLowest 0
+     * }
+     */
+    public static int RaiseLowest() {
+        return RaiseLowest;
+    }
+    private static final int LowerHighest = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define LowerHighest 1
+     * }
+     */
+    public static int LowerHighest() {
+        return LowerHighest;
+    }
+    private static final int PropModeReplace = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define PropModeReplace 0
+     * }
+     */
+    public static int PropModeReplace() {
+        return PropModeReplace;
+    }
+    private static final int PropModePrepend = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define PropModePrepend 1
+     * }
+     */
+    public static int PropModePrepend() {
+        return PropModePrepend;
+    }
+    private static final int PropModeAppend = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define PropModeAppend 2
+     * }
+     */
+    public static int PropModeAppend() {
+        return PropModeAppend;
+    }
+    private static final int GXclear = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define GXclear 0
+     * }
+     */
+    public static int GXclear() {
+        return GXclear;
+    }
+    private static final int GXand = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define GXand 1
+     * }
+     */
+    public static int GXand() {
+        return GXand;
+    }
+    private static final int GXandReverse = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define GXandReverse 2
+     * }
+     */
+    public static int GXandReverse() {
+        return GXandReverse;
+    }
+    private static final int GXcopy = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define GXcopy 3
+     * }
+     */
+    public static int GXcopy() {
+        return GXcopy;
+    }
+    private static final int GXandInverted = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define GXandInverted 4
+     * }
+     */
+    public static int GXandInverted() {
+        return GXandInverted;
+    }
+    private static final int GXnoop = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define GXnoop 5
+     * }
+     */
+    public static int GXnoop() {
+        return GXnoop;
+    }
+    private static final int GXxor = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * #define GXxor 6
+     * }
+     */
+    public static int GXxor() {
+        return GXxor;
+    }
+    private static final int GXor = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * #define GXor 7
+     * }
+     */
+    public static int GXor() {
+        return GXor;
+    }
+    private static final int GXnor = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define GXnor 8
+     * }
+     */
+    public static int GXnor() {
+        return GXnor;
+    }
+    private static final int GXequiv = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * #define GXequiv 9
+     * }
+     */
+    public static int GXequiv() {
+        return GXequiv;
+    }
+    private static final int GXinvert = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * #define GXinvert 10
+     * }
+     */
+    public static int GXinvert() {
+        return GXinvert;
+    }
+    private static final int GXorReverse = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * #define GXorReverse 11
+     * }
+     */
+    public static int GXorReverse() {
+        return GXorReverse;
+    }
+    private static final int GXcopyInverted = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * #define GXcopyInverted 12
+     * }
+     */
+    public static int GXcopyInverted() {
+        return GXcopyInverted;
+    }
+    private static final int GXorInverted = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * #define GXorInverted 13
+     * }
+     */
+    public static int GXorInverted() {
+        return GXorInverted;
+    }
+    private static final int GXnand = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * #define GXnand 14
+     * }
+     */
+    public static int GXnand() {
+        return GXnand;
+    }
+    private static final int GXset = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * #define GXset 15
+     * }
+     */
+    public static int GXset() {
+        return GXset;
+    }
+    private static final int LineSolid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define LineSolid 0
+     * }
+     */
+    public static int LineSolid() {
+        return LineSolid;
+    }
+    private static final int LineOnOffDash = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define LineOnOffDash 1
+     * }
+     */
+    public static int LineOnOffDash() {
+        return LineOnOffDash;
+    }
+    private static final int LineDoubleDash = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define LineDoubleDash 2
+     * }
+     */
+    public static int LineDoubleDash() {
+        return LineDoubleDash;
+    }
+    private static final int CapNotLast = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define CapNotLast 0
+     * }
+     */
+    public static int CapNotLast() {
+        return CapNotLast;
+    }
+    private static final int CapButt = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define CapButt 1
+     * }
+     */
+    public static int CapButt() {
+        return CapButt;
+    }
+    private static final int CapRound = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define CapRound 2
+     * }
+     */
+    public static int CapRound() {
+        return CapRound;
+    }
+    private static final int CapProjecting = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define CapProjecting 3
+     * }
+     */
+    public static int CapProjecting() {
+        return CapProjecting;
+    }
+    private static final int JoinMiter = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define JoinMiter 0
+     * }
+     */
+    public static int JoinMiter() {
+        return JoinMiter;
+    }
+    private static final int JoinRound = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define JoinRound 1
+     * }
+     */
+    public static int JoinRound() {
+        return JoinRound;
+    }
+    private static final int JoinBevel = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define JoinBevel 2
+     * }
+     */
+    public static int JoinBevel() {
+        return JoinBevel;
+    }
+    private static final int FillSolid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define FillSolid 0
+     * }
+     */
+    public static int FillSolid() {
+        return FillSolid;
+    }
+    private static final int FillTiled = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define FillTiled 1
+     * }
+     */
+    public static int FillTiled() {
+        return FillTiled;
+    }
+    private static final int FillStippled = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define FillStippled 2
+     * }
+     */
+    public static int FillStippled() {
+        return FillStippled;
+    }
+    private static final int FillOpaqueStippled = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define FillOpaqueStippled 3
+     * }
+     */
+    public static int FillOpaqueStippled() {
+        return FillOpaqueStippled;
+    }
+    private static final int EvenOddRule = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define EvenOddRule 0
+     * }
+     */
+    public static int EvenOddRule() {
+        return EvenOddRule;
+    }
+    private static final int WindingRule = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define WindingRule 1
+     * }
+     */
+    public static int WindingRule() {
+        return WindingRule;
+    }
+    private static final int ClipByChildren = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define ClipByChildren 0
+     * }
+     */
+    public static int ClipByChildren() {
+        return ClipByChildren;
+    }
+    private static final int IncludeInferiors = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define IncludeInferiors 1
+     * }
+     */
+    public static int IncludeInferiors() {
+        return IncludeInferiors;
+    }
+    private static final int Unsorted = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define Unsorted 0
+     * }
+     */
+    public static int Unsorted() {
+        return Unsorted;
+    }
+    private static final int YSorted = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define YSorted 1
+     * }
+     */
+    public static int YSorted() {
+        return YSorted;
+    }
+    private static final int YXSorted = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define YXSorted 2
+     * }
+     */
+    public static int YXSorted() {
+        return YXSorted;
+    }
+    private static final int YXBanded = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define YXBanded 3
+     * }
+     */
+    public static int YXBanded() {
+        return YXBanded;
+    }
+    private static final int CoordModeOrigin = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define CoordModeOrigin 0
+     * }
+     */
+    public static int CoordModeOrigin() {
+        return CoordModeOrigin;
+    }
+    private static final int CoordModePrevious = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define CoordModePrevious 1
+     * }
+     */
+    public static int CoordModePrevious() {
+        return CoordModePrevious;
+    }
+    private static final int Complex = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define Complex 0
+     * }
+     */
+    public static int Complex() {
+        return Complex;
+    }
+    private static final int Nonconvex = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define Nonconvex 1
+     * }
+     */
+    public static int Nonconvex() {
+        return Nonconvex;
+    }
+    private static final int Convex = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define Convex 2
+     * }
+     */
+    public static int Convex() {
+        return Convex;
+    }
+    private static final int ArcChord = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define ArcChord 0
+     * }
+     */
+    public static int ArcChord() {
+        return ArcChord;
+    }
+    private static final int ArcPieSlice = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define ArcPieSlice 1
+     * }
+     */
+    public static int ArcPieSlice() {
+        return ArcPieSlice;
+    }
+    private static final int GCLastBit = (int)22L;
+    /**
+     * {@snippet lang=c :
+     * #define GCLastBit 22
+     * }
+     */
+    public static int GCLastBit() {
+        return GCLastBit;
+    }
+    private static final int FontLeftToRight = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define FontLeftToRight 0
+     * }
+     */
+    public static int FontLeftToRight() {
+        return FontLeftToRight;
+    }
+    private static final int FontRightToLeft = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define FontRightToLeft 1
+     * }
+     */
+    public static int FontRightToLeft() {
+        return FontRightToLeft;
+    }
+    private static final int FontChange = (int)255L;
+    /**
+     * {@snippet lang=c :
+     * #define FontChange 255
+     * }
+     */
+    public static int FontChange() {
+        return FontChange;
+    }
+    private static final int XYBitmap = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define XYBitmap 0
+     * }
+     */
+    public static int XYBitmap() {
+        return XYBitmap;
+    }
+    private static final int XYPixmap = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define XYPixmap 1
+     * }
+     */
+    public static int XYPixmap() {
+        return XYPixmap;
+    }
+    private static final int ZPixmap = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define ZPixmap 2
+     * }
+     */
+    public static int ZPixmap() {
+        return ZPixmap;
+    }
+    private static final int AllocNone = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define AllocNone 0
+     * }
+     */
+    public static int AllocNone() {
+        return AllocNone;
+    }
+    private static final int AllocAll = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define AllocAll 1
+     * }
+     */
+    public static int AllocAll() {
+        return AllocAll;
+    }
+    private static final int CursorShape = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define CursorShape 0
+     * }
+     */
+    public static int CursorShape() {
+        return CursorShape;
+    }
+    private static final int TileShape = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define TileShape 1
+     * }
+     */
+    public static int TileShape() {
+        return TileShape;
+    }
+    private static final int StippleShape = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define StippleShape 2
+     * }
+     */
+    public static int StippleShape() {
+        return StippleShape;
+    }
+    private static final int AutoRepeatModeOff = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define AutoRepeatModeOff 0
+     * }
+     */
+    public static int AutoRepeatModeOff() {
+        return AutoRepeatModeOff;
+    }
+    private static final int AutoRepeatModeOn = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define AutoRepeatModeOn 1
+     * }
+     */
+    public static int AutoRepeatModeOn() {
+        return AutoRepeatModeOn;
+    }
+    private static final int AutoRepeatModeDefault = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define AutoRepeatModeDefault 2
+     * }
+     */
+    public static int AutoRepeatModeDefault() {
+        return AutoRepeatModeDefault;
+    }
+    private static final int LedModeOff = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define LedModeOff 0
+     * }
+     */
+    public static int LedModeOff() {
+        return LedModeOff;
+    }
+    private static final int LedModeOn = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define LedModeOn 1
+     * }
+     */
+    public static int LedModeOn() {
+        return LedModeOn;
+    }
+    private static final int MappingSuccess = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define MappingSuccess 0
+     * }
+     */
+    public static int MappingSuccess() {
+        return MappingSuccess;
+    }
+    private static final int MappingBusy = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define MappingBusy 1
+     * }
+     */
+    public static int MappingBusy() {
+        return MappingBusy;
+    }
+    private static final int MappingFailed = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define MappingFailed 2
+     * }
+     */
+    public static int MappingFailed() {
+        return MappingFailed;
+    }
+    private static final int MappingModifier = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define MappingModifier 0
+     * }
+     */
+    public static int MappingModifier() {
+        return MappingModifier;
+    }
+    private static final int MappingKeyboard = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define MappingKeyboard 1
+     * }
+     */
+    public static int MappingKeyboard() {
+        return MappingKeyboard;
+    }
+    private static final int MappingPointer = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define MappingPointer 2
+     * }
+     */
+    public static int MappingPointer() {
+        return MappingPointer;
+    }
+    private static final int DontPreferBlanking = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define DontPreferBlanking 0
+     * }
+     */
+    public static int DontPreferBlanking() {
+        return DontPreferBlanking;
+    }
+    private static final int PreferBlanking = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define PreferBlanking 1
+     * }
+     */
+    public static int PreferBlanking() {
+        return PreferBlanking;
+    }
+    private static final int DefaultBlanking = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define DefaultBlanking 2
+     * }
+     */
+    public static int DefaultBlanking() {
+        return DefaultBlanking;
+    }
+    private static final int DisableScreenSaver = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define DisableScreenSaver 0
+     * }
+     */
+    public static int DisableScreenSaver() {
+        return DisableScreenSaver;
+    }
+    private static final int DisableScreenInterval = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define DisableScreenInterval 0
+     * }
+     */
+    public static int DisableScreenInterval() {
+        return DisableScreenInterval;
+    }
+    private static final int DontAllowExposures = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define DontAllowExposures 0
+     * }
+     */
+    public static int DontAllowExposures() {
+        return DontAllowExposures;
+    }
+    private static final int AllowExposures = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define AllowExposures 1
+     * }
+     */
+    public static int AllowExposures() {
+        return AllowExposures;
+    }
+    private static final int DefaultExposures = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define DefaultExposures 2
+     * }
+     */
+    public static int DefaultExposures() {
+        return DefaultExposures;
+    }
+    private static final int ScreenSaverReset = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define ScreenSaverReset 0
+     * }
+     */
+    public static int ScreenSaverReset() {
+        return ScreenSaverReset;
+    }
+    private static final int ScreenSaverActive = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define ScreenSaverActive 1
+     * }
+     */
+    public static int ScreenSaverActive() {
+        return ScreenSaverActive;
+    }
+    private static final int HostInsert = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define HostInsert 0
+     * }
+     */
+    public static int HostInsert() {
+        return HostInsert;
+    }
+    private static final int HostDelete = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define HostDelete 1
+     * }
+     */
+    public static int HostDelete() {
+        return HostDelete;
+    }
+    private static final int EnableAccess = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define EnableAccess 1
+     * }
+     */
+    public static int EnableAccess() {
+        return EnableAccess;
+    }
+    private static final int DisableAccess = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define DisableAccess 0
+     * }
+     */
+    public static int DisableAccess() {
+        return DisableAccess;
+    }
+    private static final int StaticGray = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define StaticGray 0
+     * }
+     */
+    public static int StaticGray() {
+        return StaticGray;
+    }
+    private static final int GrayScale = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define GrayScale 1
+     * }
+     */
+    public static int GrayScale() {
+        return GrayScale;
+    }
+    private static final int StaticColor = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define StaticColor 2
+     * }
+     */
+    public static int StaticColor() {
+        return StaticColor;
+    }
+    private static final int PseudoColor = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define PseudoColor 3
+     * }
+     */
+    public static int PseudoColor() {
+        return PseudoColor;
+    }
+    private static final int TrueColor = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define TrueColor 4
+     * }
+     */
+    public static int TrueColor() {
+        return TrueColor;
+    }
+    private static final int DirectColor = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * #define DirectColor 5
+     * }
+     */
+    public static int DirectColor() {
+        return DirectColor;
+    }
+    private static final int LSBFirst = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define LSBFirst 0
+     * }
+     */
+    public static int LSBFirst() {
+        return LSBFirst;
+    }
+    private static final int MSBFirst = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define MSBFirst 1
+     * }
+     */
+    public static int MSBFirst() {
+        return MSBFirst;
+    }
+    private static final int NeedFunctionPrototypes = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define NeedFunctionPrototypes 1
+     * }
+     */
+    public static int NeedFunctionPrototypes() {
+        return NeedFunctionPrototypes;
+    }
+    private static final int NeedVarargsPrototypes = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define NeedVarargsPrototypes 1
+     * }
+     */
+    public static int NeedVarargsPrototypes() {
+        return NeedVarargsPrototypes;
+    }
+    private static final int NeedNestedPrototypes = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define NeedNestedPrototypes 1
+     * }
+     */
+    public static int NeedNestedPrototypes() {
+        return NeedNestedPrototypes;
+    }
+    private static final int FUNCPROTO = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * #define FUNCPROTO 15
+     * }
+     */
+    public static int FUNCPROTO() {
+        return FUNCPROTO;
+    }
+    private static final int NeedWidePrototypes = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define NeedWidePrototypes 0
+     * }
+     */
+    public static int NeedWidePrototypes() {
+        return NeedWidePrototypes;
+    }
+    private static final int X_HAVE_UTF8_STRING = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define X_HAVE_UTF8_STRING 1
+     * }
+     */
+    public static int X_HAVE_UTF8_STRING() {
+        return X_HAVE_UTF8_STRING;
+    }
+    private static final int True = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define True 1
+     * }
+     */
+    public static int True() {
+        return True;
+    }
+    private static final int False = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define False 0
+     * }
+     */
+    public static int False() {
+        return False;
+    }
+    private static final int QueuedAlready = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define QueuedAlready 0
+     * }
+     */
+    public static int QueuedAlready() {
+        return QueuedAlready;
+    }
+    private static final int QueuedAfterReading = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define QueuedAfterReading 1
+     * }
+     */
+    public static int QueuedAfterReading() {
+        return QueuedAfterReading;
+    }
+    private static final int QueuedAfterFlush = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define QueuedAfterFlush 2
+     * }
+     */
+    public static int QueuedAfterFlush() {
+        return QueuedAfterFlush;
+    }
+    private static final int XLookupNone = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * #define XLookupNone 1
+     * }
+     */
+    public static int XLookupNone() {
+        return XLookupNone;
+    }
+    private static final int XLookupChars = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * #define XLookupChars 2
+     * }
+     */
+    public static int XLookupChars() {
+        return XLookupChars;
+    }
+    private static final int XLookupKeySym = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define XLookupKeySym 3
+     * }
+     */
+    public static int XLookupKeySym() {
+        return XLookupKeySym;
+    }
+    private static final int XLookupBoth = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define XLookupBoth 4
+     * }
+     */
+    public static int XLookupBoth() {
+        return XLookupBoth;
+    }
+    private static final int XK_VoidSymbol = (int)16777215L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_VoidSymbol 16777215
+     * }
+     */
+    public static int XK_VoidSymbol() {
+        return XK_VoidSymbol;
+    }
+    private static final int XK_BackSpace = (int)65288L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_BackSpace 65288
+     * }
+     */
+    public static int XK_BackSpace() {
+        return XK_BackSpace;
+    }
+    private static final int XK_Tab = (int)65289L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Tab 65289
+     * }
+     */
+    public static int XK_Tab() {
+        return XK_Tab;
+    }
+    private static final int XK_Linefeed = (int)65290L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Linefeed 65290
+     * }
+     */
+    public static int XK_Linefeed() {
+        return XK_Linefeed;
+    }
+    private static final int XK_Clear = (int)65291L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Clear 65291
+     * }
+     */
+    public static int XK_Clear() {
+        return XK_Clear;
+    }
+    private static final int XK_Return = (int)65293L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Return 65293
+     * }
+     */
+    public static int XK_Return() {
+        return XK_Return;
+    }
+    private static final int XK_Pause = (int)65299L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pause 65299
+     * }
+     */
+    public static int XK_Pause() {
+        return XK_Pause;
+    }
+    private static final int XK_Scroll_Lock = (int)65300L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Scroll_Lock 65300
+     * }
+     */
+    public static int XK_Scroll_Lock() {
+        return XK_Scroll_Lock;
+    }
+    private static final int XK_Sys_Req = (int)65301L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Sys_Req 65301
+     * }
+     */
+    public static int XK_Sys_Req() {
+        return XK_Sys_Req;
+    }
+    private static final int XK_Escape = (int)65307L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Escape 65307
+     * }
+     */
+    public static int XK_Escape() {
+        return XK_Escape;
+    }
+    private static final int XK_Delete = (int)65535L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Delete 65535
+     * }
+     */
+    public static int XK_Delete() {
+        return XK_Delete;
+    }
+    private static final int XK_Multi_key = (int)65312L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Multi_key 65312
+     * }
+     */
+    public static int XK_Multi_key() {
+        return XK_Multi_key;
+    }
+    private static final int XK_Codeinput = (int)65335L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Codeinput 65335
+     * }
+     */
+    public static int XK_Codeinput() {
+        return XK_Codeinput;
+    }
+    private static final int XK_SingleCandidate = (int)65340L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_SingleCandidate 65340
+     * }
+     */
+    public static int XK_SingleCandidate() {
+        return XK_SingleCandidate;
+    }
+    private static final int XK_MultipleCandidate = (int)65341L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_MultipleCandidate 65341
+     * }
+     */
+    public static int XK_MultipleCandidate() {
+        return XK_MultipleCandidate;
+    }
+    private static final int XK_PreviousCandidate = (int)65342L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_PreviousCandidate 65342
+     * }
+     */
+    public static int XK_PreviousCandidate() {
+        return XK_PreviousCandidate;
+    }
+    private static final int XK_Kanji = (int)65313L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Kanji 65313
+     * }
+     */
+    public static int XK_Kanji() {
+        return XK_Kanji;
+    }
+    private static final int XK_Muhenkan = (int)65314L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Muhenkan 65314
+     * }
+     */
+    public static int XK_Muhenkan() {
+        return XK_Muhenkan;
+    }
+    private static final int XK_Henkan_Mode = (int)65315L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Henkan_Mode 65315
+     * }
+     */
+    public static int XK_Henkan_Mode() {
+        return XK_Henkan_Mode;
+    }
+    private static final int XK_Henkan = (int)65315L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Henkan 65315
+     * }
+     */
+    public static int XK_Henkan() {
+        return XK_Henkan;
+    }
+    private static final int XK_Romaji = (int)65316L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Romaji 65316
+     * }
+     */
+    public static int XK_Romaji() {
+        return XK_Romaji;
+    }
+    private static final int XK_Hiragana = (int)65317L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Hiragana 65317
+     * }
+     */
+    public static int XK_Hiragana() {
+        return XK_Hiragana;
+    }
+    private static final int XK_Katakana = (int)65318L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Katakana 65318
+     * }
+     */
+    public static int XK_Katakana() {
+        return XK_Katakana;
+    }
+    private static final int XK_Hiragana_Katakana = (int)65319L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Hiragana_Katakana 65319
+     * }
+     */
+    public static int XK_Hiragana_Katakana() {
+        return XK_Hiragana_Katakana;
+    }
+    private static final int XK_Zenkaku = (int)65320L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Zenkaku 65320
+     * }
+     */
+    public static int XK_Zenkaku() {
+        return XK_Zenkaku;
+    }
+    private static final int XK_Hankaku = (int)65321L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Hankaku 65321
+     * }
+     */
+    public static int XK_Hankaku() {
+        return XK_Hankaku;
+    }
+    private static final int XK_Zenkaku_Hankaku = (int)65322L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Zenkaku_Hankaku 65322
+     * }
+     */
+    public static int XK_Zenkaku_Hankaku() {
+        return XK_Zenkaku_Hankaku;
+    }
+    private static final int XK_Touroku = (int)65323L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Touroku 65323
+     * }
+     */
+    public static int XK_Touroku() {
+        return XK_Touroku;
+    }
+    private static final int XK_Massyo = (int)65324L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Massyo 65324
+     * }
+     */
+    public static int XK_Massyo() {
+        return XK_Massyo;
+    }
+    private static final int XK_Kana_Lock = (int)65325L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Kana_Lock 65325
+     * }
+     */
+    public static int XK_Kana_Lock() {
+        return XK_Kana_Lock;
+    }
+    private static final int XK_Kana_Shift = (int)65326L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Kana_Shift 65326
+     * }
+     */
+    public static int XK_Kana_Shift() {
+        return XK_Kana_Shift;
+    }
+    private static final int XK_Eisu_Shift = (int)65327L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Eisu_Shift 65327
+     * }
+     */
+    public static int XK_Eisu_Shift() {
+        return XK_Eisu_Shift;
+    }
+    private static final int XK_Eisu_toggle = (int)65328L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Eisu_toggle 65328
+     * }
+     */
+    public static int XK_Eisu_toggle() {
+        return XK_Eisu_toggle;
+    }
+    private static final int XK_Kanji_Bangou = (int)65335L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Kanji_Bangou 65335
+     * }
+     */
+    public static int XK_Kanji_Bangou() {
+        return XK_Kanji_Bangou;
+    }
+    private static final int XK_Zen_Koho = (int)65341L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Zen_Koho 65341
+     * }
+     */
+    public static int XK_Zen_Koho() {
+        return XK_Zen_Koho;
+    }
+    private static final int XK_Mae_Koho = (int)65342L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Mae_Koho 65342
+     * }
+     */
+    public static int XK_Mae_Koho() {
+        return XK_Mae_Koho;
+    }
+    private static final int XK_Home = (int)65360L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Home 65360
+     * }
+     */
+    public static int XK_Home() {
+        return XK_Home;
+    }
+    private static final int XK_Left = (int)65361L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Left 65361
+     * }
+     */
+    public static int XK_Left() {
+        return XK_Left;
+    }
+    private static final int XK_Up = (int)65362L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Up 65362
+     * }
+     */
+    public static int XK_Up() {
+        return XK_Up;
+    }
+    private static final int XK_Right = (int)65363L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Right 65363
+     * }
+     */
+    public static int XK_Right() {
+        return XK_Right;
+    }
+    private static final int XK_Down = (int)65364L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Down 65364
+     * }
+     */
+    public static int XK_Down() {
+        return XK_Down;
+    }
+    private static final int XK_Prior = (int)65365L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Prior 65365
+     * }
+     */
+    public static int XK_Prior() {
+        return XK_Prior;
+    }
+    private static final int XK_Page_Up = (int)65365L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Page_Up 65365
+     * }
+     */
+    public static int XK_Page_Up() {
+        return XK_Page_Up;
+    }
+    private static final int XK_Next = (int)65366L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Next 65366
+     * }
+     */
+    public static int XK_Next() {
+        return XK_Next;
+    }
+    private static final int XK_Page_Down = (int)65366L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Page_Down 65366
+     * }
+     */
+    public static int XK_Page_Down() {
+        return XK_Page_Down;
+    }
+    private static final int XK_End = (int)65367L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_End 65367
+     * }
+     */
+    public static int XK_End() {
+        return XK_End;
+    }
+    private static final int XK_Begin = (int)65368L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Begin 65368
+     * }
+     */
+    public static int XK_Begin() {
+        return XK_Begin;
+    }
+    private static final int XK_Select = (int)65376L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Select 65376
+     * }
+     */
+    public static int XK_Select() {
+        return XK_Select;
+    }
+    private static final int XK_Print = (int)65377L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Print 65377
+     * }
+     */
+    public static int XK_Print() {
+        return XK_Print;
+    }
+    private static final int XK_Execute = (int)65378L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Execute 65378
+     * }
+     */
+    public static int XK_Execute() {
+        return XK_Execute;
+    }
+    private static final int XK_Insert = (int)65379L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Insert 65379
+     * }
+     */
+    public static int XK_Insert() {
+        return XK_Insert;
+    }
+    private static final int XK_Undo = (int)65381L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Undo 65381
+     * }
+     */
+    public static int XK_Undo() {
+        return XK_Undo;
+    }
+    private static final int XK_Redo = (int)65382L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Redo 65382
+     * }
+     */
+    public static int XK_Redo() {
+        return XK_Redo;
+    }
+    private static final int XK_Menu = (int)65383L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Menu 65383
+     * }
+     */
+    public static int XK_Menu() {
+        return XK_Menu;
+    }
+    private static final int XK_Find = (int)65384L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Find 65384
+     * }
+     */
+    public static int XK_Find() {
+        return XK_Find;
+    }
+    private static final int XK_Cancel = (int)65385L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Cancel 65385
+     * }
+     */
+    public static int XK_Cancel() {
+        return XK_Cancel;
+    }
+    private static final int XK_Help = (int)65386L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Help 65386
+     * }
+     */
+    public static int XK_Help() {
+        return XK_Help;
+    }
+    private static final int XK_Break = (int)65387L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Break 65387
+     * }
+     */
+    public static int XK_Break() {
+        return XK_Break;
+    }
+    private static final int XK_Mode_switch = (int)65406L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Mode_switch 65406
+     * }
+     */
+    public static int XK_Mode_switch() {
+        return XK_Mode_switch;
+    }
+    private static final int XK_script_switch = (int)65406L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_script_switch 65406
+     * }
+     */
+    public static int XK_script_switch() {
+        return XK_script_switch;
+    }
+    private static final int XK_Num_Lock = (int)65407L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Num_Lock 65407
+     * }
+     */
+    public static int XK_Num_Lock() {
+        return XK_Num_Lock;
+    }
+    private static final int XK_KP_Space = (int)65408L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Space 65408
+     * }
+     */
+    public static int XK_KP_Space() {
+        return XK_KP_Space;
+    }
+    private static final int XK_KP_Tab = (int)65417L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Tab 65417
+     * }
+     */
+    public static int XK_KP_Tab() {
+        return XK_KP_Tab;
+    }
+    private static final int XK_KP_Enter = (int)65421L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Enter 65421
+     * }
+     */
+    public static int XK_KP_Enter() {
+        return XK_KP_Enter;
+    }
+    private static final int XK_KP_F1 = (int)65425L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_F1 65425
+     * }
+     */
+    public static int XK_KP_F1() {
+        return XK_KP_F1;
+    }
+    private static final int XK_KP_F2 = (int)65426L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_F2 65426
+     * }
+     */
+    public static int XK_KP_F2() {
+        return XK_KP_F2;
+    }
+    private static final int XK_KP_F3 = (int)65427L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_F3 65427
+     * }
+     */
+    public static int XK_KP_F3() {
+        return XK_KP_F3;
+    }
+    private static final int XK_KP_F4 = (int)65428L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_F4 65428
+     * }
+     */
+    public static int XK_KP_F4() {
+        return XK_KP_F4;
+    }
+    private static final int XK_KP_Home = (int)65429L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Home 65429
+     * }
+     */
+    public static int XK_KP_Home() {
+        return XK_KP_Home;
+    }
+    private static final int XK_KP_Left = (int)65430L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Left 65430
+     * }
+     */
+    public static int XK_KP_Left() {
+        return XK_KP_Left;
+    }
+    private static final int XK_KP_Up = (int)65431L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Up 65431
+     * }
+     */
+    public static int XK_KP_Up() {
+        return XK_KP_Up;
+    }
+    private static final int XK_KP_Right = (int)65432L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Right 65432
+     * }
+     */
+    public static int XK_KP_Right() {
+        return XK_KP_Right;
+    }
+    private static final int XK_KP_Down = (int)65433L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Down 65433
+     * }
+     */
+    public static int XK_KP_Down() {
+        return XK_KP_Down;
+    }
+    private static final int XK_KP_Prior = (int)65434L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Prior 65434
+     * }
+     */
+    public static int XK_KP_Prior() {
+        return XK_KP_Prior;
+    }
+    private static final int XK_KP_Page_Up = (int)65434L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Page_Up 65434
+     * }
+     */
+    public static int XK_KP_Page_Up() {
+        return XK_KP_Page_Up;
+    }
+    private static final int XK_KP_Next = (int)65435L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Next 65435
+     * }
+     */
+    public static int XK_KP_Next() {
+        return XK_KP_Next;
+    }
+    private static final int XK_KP_Page_Down = (int)65435L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Page_Down 65435
+     * }
+     */
+    public static int XK_KP_Page_Down() {
+        return XK_KP_Page_Down;
+    }
+    private static final int XK_KP_End = (int)65436L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_End 65436
+     * }
+     */
+    public static int XK_KP_End() {
+        return XK_KP_End;
+    }
+    private static final int XK_KP_Begin = (int)65437L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Begin 65437
+     * }
+     */
+    public static int XK_KP_Begin() {
+        return XK_KP_Begin;
+    }
+    private static final int XK_KP_Insert = (int)65438L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Insert 65438
+     * }
+     */
+    public static int XK_KP_Insert() {
+        return XK_KP_Insert;
+    }
+    private static final int XK_KP_Delete = (int)65439L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Delete 65439
+     * }
+     */
+    public static int XK_KP_Delete() {
+        return XK_KP_Delete;
+    }
+    private static final int XK_KP_Equal = (int)65469L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Equal 65469
+     * }
+     */
+    public static int XK_KP_Equal() {
+        return XK_KP_Equal;
+    }
+    private static final int XK_KP_Multiply = (int)65450L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Multiply 65450
+     * }
+     */
+    public static int XK_KP_Multiply() {
+        return XK_KP_Multiply;
+    }
+    private static final int XK_KP_Add = (int)65451L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Add 65451
+     * }
+     */
+    public static int XK_KP_Add() {
+        return XK_KP_Add;
+    }
+    private static final int XK_KP_Separator = (int)65452L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Separator 65452
+     * }
+     */
+    public static int XK_KP_Separator() {
+        return XK_KP_Separator;
+    }
+    private static final int XK_KP_Subtract = (int)65453L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Subtract 65453
+     * }
+     */
+    public static int XK_KP_Subtract() {
+        return XK_KP_Subtract;
+    }
+    private static final int XK_KP_Decimal = (int)65454L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Decimal 65454
+     * }
+     */
+    public static int XK_KP_Decimal() {
+        return XK_KP_Decimal;
+    }
+    private static final int XK_KP_Divide = (int)65455L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_Divide 65455
+     * }
+     */
+    public static int XK_KP_Divide() {
+        return XK_KP_Divide;
+    }
+    private static final int XK_KP_0 = (int)65456L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_0 65456
+     * }
+     */
+    public static int XK_KP_0() {
+        return XK_KP_0;
+    }
+    private static final int XK_KP_1 = (int)65457L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_1 65457
+     * }
+     */
+    public static int XK_KP_1() {
+        return XK_KP_1;
+    }
+    private static final int XK_KP_2 = (int)65458L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_2 65458
+     * }
+     */
+    public static int XK_KP_2() {
+        return XK_KP_2;
+    }
+    private static final int XK_KP_3 = (int)65459L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_3 65459
+     * }
+     */
+    public static int XK_KP_3() {
+        return XK_KP_3;
+    }
+    private static final int XK_KP_4 = (int)65460L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_4 65460
+     * }
+     */
+    public static int XK_KP_4() {
+        return XK_KP_4;
+    }
+    private static final int XK_KP_5 = (int)65461L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_5 65461
+     * }
+     */
+    public static int XK_KP_5() {
+        return XK_KP_5;
+    }
+    private static final int XK_KP_6 = (int)65462L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_6 65462
+     * }
+     */
+    public static int XK_KP_6() {
+        return XK_KP_6;
+    }
+    private static final int XK_KP_7 = (int)65463L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_7 65463
+     * }
+     */
+    public static int XK_KP_7() {
+        return XK_KP_7;
+    }
+    private static final int XK_KP_8 = (int)65464L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_8 65464
+     * }
+     */
+    public static int XK_KP_8() {
+        return XK_KP_8;
+    }
+    private static final int XK_KP_9 = (int)65465L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_KP_9 65465
+     * }
+     */
+    public static int XK_KP_9() {
+        return XK_KP_9;
+    }
+    private static final int XK_F1 = (int)65470L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F1 65470
+     * }
+     */
+    public static int XK_F1() {
+        return XK_F1;
+    }
+    private static final int XK_F2 = (int)65471L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F2 65471
+     * }
+     */
+    public static int XK_F2() {
+        return XK_F2;
+    }
+    private static final int XK_F3 = (int)65472L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F3 65472
+     * }
+     */
+    public static int XK_F3() {
+        return XK_F3;
+    }
+    private static final int XK_F4 = (int)65473L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F4 65473
+     * }
+     */
+    public static int XK_F4() {
+        return XK_F4;
+    }
+    private static final int XK_F5 = (int)65474L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F5 65474
+     * }
+     */
+    public static int XK_F5() {
+        return XK_F5;
+    }
+    private static final int XK_F6 = (int)65475L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F6 65475
+     * }
+     */
+    public static int XK_F6() {
+        return XK_F6;
+    }
+    private static final int XK_F7 = (int)65476L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F7 65476
+     * }
+     */
+    public static int XK_F7() {
+        return XK_F7;
+    }
+    private static final int XK_F8 = (int)65477L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F8 65477
+     * }
+     */
+    public static int XK_F8() {
+        return XK_F8;
+    }
+    private static final int XK_F9 = (int)65478L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F9 65478
+     * }
+     */
+    public static int XK_F9() {
+        return XK_F9;
+    }
+    private static final int XK_F10 = (int)65479L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F10 65479
+     * }
+     */
+    public static int XK_F10() {
+        return XK_F10;
+    }
+    private static final int XK_F11 = (int)65480L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F11 65480
+     * }
+     */
+    public static int XK_F11() {
+        return XK_F11;
+    }
+    private static final int XK_L1 = (int)65480L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L1 65480
+     * }
+     */
+    public static int XK_L1() {
+        return XK_L1;
+    }
+    private static final int XK_F12 = (int)65481L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F12 65481
+     * }
+     */
+    public static int XK_F12() {
+        return XK_F12;
+    }
+    private static final int XK_L2 = (int)65481L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L2 65481
+     * }
+     */
+    public static int XK_L2() {
+        return XK_L2;
+    }
+    private static final int XK_F13 = (int)65482L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F13 65482
+     * }
+     */
+    public static int XK_F13() {
+        return XK_F13;
+    }
+    private static final int XK_L3 = (int)65482L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L3 65482
+     * }
+     */
+    public static int XK_L3() {
+        return XK_L3;
+    }
+    private static final int XK_F14 = (int)65483L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F14 65483
+     * }
+     */
+    public static int XK_F14() {
+        return XK_F14;
+    }
+    private static final int XK_L4 = (int)65483L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L4 65483
+     * }
+     */
+    public static int XK_L4() {
+        return XK_L4;
+    }
+    private static final int XK_F15 = (int)65484L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F15 65484
+     * }
+     */
+    public static int XK_F15() {
+        return XK_F15;
+    }
+    private static final int XK_L5 = (int)65484L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L5 65484
+     * }
+     */
+    public static int XK_L5() {
+        return XK_L5;
+    }
+    private static final int XK_F16 = (int)65485L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F16 65485
+     * }
+     */
+    public static int XK_F16() {
+        return XK_F16;
+    }
+    private static final int XK_L6 = (int)65485L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L6 65485
+     * }
+     */
+    public static int XK_L6() {
+        return XK_L6;
+    }
+    private static final int XK_F17 = (int)65486L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F17 65486
+     * }
+     */
+    public static int XK_F17() {
+        return XK_F17;
+    }
+    private static final int XK_L7 = (int)65486L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L7 65486
+     * }
+     */
+    public static int XK_L7() {
+        return XK_L7;
+    }
+    private static final int XK_F18 = (int)65487L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F18 65487
+     * }
+     */
+    public static int XK_F18() {
+        return XK_F18;
+    }
+    private static final int XK_L8 = (int)65487L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L8 65487
+     * }
+     */
+    public static int XK_L8() {
+        return XK_L8;
+    }
+    private static final int XK_F19 = (int)65488L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F19 65488
+     * }
+     */
+    public static int XK_F19() {
+        return XK_F19;
+    }
+    private static final int XK_L9 = (int)65488L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L9 65488
+     * }
+     */
+    public static int XK_L9() {
+        return XK_L9;
+    }
+    private static final int XK_F20 = (int)65489L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F20 65489
+     * }
+     */
+    public static int XK_F20() {
+        return XK_F20;
+    }
+    private static final int XK_L10 = (int)65489L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L10 65489
+     * }
+     */
+    public static int XK_L10() {
+        return XK_L10;
+    }
+    private static final int XK_F21 = (int)65490L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F21 65490
+     * }
+     */
+    public static int XK_F21() {
+        return XK_F21;
+    }
+    private static final int XK_R1 = (int)65490L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R1 65490
+     * }
+     */
+    public static int XK_R1() {
+        return XK_R1;
+    }
+    private static final int XK_F22 = (int)65491L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F22 65491
+     * }
+     */
+    public static int XK_F22() {
+        return XK_F22;
+    }
+    private static final int XK_R2 = (int)65491L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R2 65491
+     * }
+     */
+    public static int XK_R2() {
+        return XK_R2;
+    }
+    private static final int XK_F23 = (int)65492L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F23 65492
+     * }
+     */
+    public static int XK_F23() {
+        return XK_F23;
+    }
+    private static final int XK_R3 = (int)65492L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R3 65492
+     * }
+     */
+    public static int XK_R3() {
+        return XK_R3;
+    }
+    private static final int XK_F24 = (int)65493L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F24 65493
+     * }
+     */
+    public static int XK_F24() {
+        return XK_F24;
+    }
+    private static final int XK_R4 = (int)65493L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R4 65493
+     * }
+     */
+    public static int XK_R4() {
+        return XK_R4;
+    }
+    private static final int XK_F25 = (int)65494L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F25 65494
+     * }
+     */
+    public static int XK_F25() {
+        return XK_F25;
+    }
+    private static final int XK_R5 = (int)65494L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R5 65494
+     * }
+     */
+    public static int XK_R5() {
+        return XK_R5;
+    }
+    private static final int XK_F26 = (int)65495L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F26 65495
+     * }
+     */
+    public static int XK_F26() {
+        return XK_F26;
+    }
+    private static final int XK_R6 = (int)65495L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R6 65495
+     * }
+     */
+    public static int XK_R6() {
+        return XK_R6;
+    }
+    private static final int XK_F27 = (int)65496L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F27 65496
+     * }
+     */
+    public static int XK_F27() {
+        return XK_F27;
+    }
+    private static final int XK_R7 = (int)65496L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R7 65496
+     * }
+     */
+    public static int XK_R7() {
+        return XK_R7;
+    }
+    private static final int XK_F28 = (int)65497L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F28 65497
+     * }
+     */
+    public static int XK_F28() {
+        return XK_F28;
+    }
+    private static final int XK_R8 = (int)65497L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R8 65497
+     * }
+     */
+    public static int XK_R8() {
+        return XK_R8;
+    }
+    private static final int XK_F29 = (int)65498L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F29 65498
+     * }
+     */
+    public static int XK_F29() {
+        return XK_F29;
+    }
+    private static final int XK_R9 = (int)65498L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R9 65498
+     * }
+     */
+    public static int XK_R9() {
+        return XK_R9;
+    }
+    private static final int XK_F30 = (int)65499L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F30 65499
+     * }
+     */
+    public static int XK_F30() {
+        return XK_F30;
+    }
+    private static final int XK_R10 = (int)65499L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R10 65499
+     * }
+     */
+    public static int XK_R10() {
+        return XK_R10;
+    }
+    private static final int XK_F31 = (int)65500L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F31 65500
+     * }
+     */
+    public static int XK_F31() {
+        return XK_F31;
+    }
+    private static final int XK_R11 = (int)65500L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R11 65500
+     * }
+     */
+    public static int XK_R11() {
+        return XK_R11;
+    }
+    private static final int XK_F32 = (int)65501L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F32 65501
+     * }
+     */
+    public static int XK_F32() {
+        return XK_F32;
+    }
+    private static final int XK_R12 = (int)65501L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R12 65501
+     * }
+     */
+    public static int XK_R12() {
+        return XK_R12;
+    }
+    private static final int XK_F33 = (int)65502L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F33 65502
+     * }
+     */
+    public static int XK_F33() {
+        return XK_F33;
+    }
+    private static final int XK_R13 = (int)65502L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R13 65502
+     * }
+     */
+    public static int XK_R13() {
+        return XK_R13;
+    }
+    private static final int XK_F34 = (int)65503L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F34 65503
+     * }
+     */
+    public static int XK_F34() {
+        return XK_F34;
+    }
+    private static final int XK_R14 = (int)65503L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R14 65503
+     * }
+     */
+    public static int XK_R14() {
+        return XK_R14;
+    }
+    private static final int XK_F35 = (int)65504L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F35 65504
+     * }
+     */
+    public static int XK_F35() {
+        return XK_F35;
+    }
+    private static final int XK_R15 = (int)65504L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R15 65504
+     * }
+     */
+    public static int XK_R15() {
+        return XK_R15;
+    }
+    private static final int XK_Shift_L = (int)65505L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Shift_L 65505
+     * }
+     */
+    public static int XK_Shift_L() {
+        return XK_Shift_L;
+    }
+    private static final int XK_Shift_R = (int)65506L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Shift_R 65506
+     * }
+     */
+    public static int XK_Shift_R() {
+        return XK_Shift_R;
+    }
+    private static final int XK_Control_L = (int)65507L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Control_L 65507
+     * }
+     */
+    public static int XK_Control_L() {
+        return XK_Control_L;
+    }
+    private static final int XK_Control_R = (int)65508L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Control_R 65508
+     * }
+     */
+    public static int XK_Control_R() {
+        return XK_Control_R;
+    }
+    private static final int XK_Caps_Lock = (int)65509L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Caps_Lock 65509
+     * }
+     */
+    public static int XK_Caps_Lock() {
+        return XK_Caps_Lock;
+    }
+    private static final int XK_Shift_Lock = (int)65510L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Shift_Lock 65510
+     * }
+     */
+    public static int XK_Shift_Lock() {
+        return XK_Shift_Lock;
+    }
+    private static final int XK_Meta_L = (int)65511L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Meta_L 65511
+     * }
+     */
+    public static int XK_Meta_L() {
+        return XK_Meta_L;
+    }
+    private static final int XK_Meta_R = (int)65512L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Meta_R 65512
+     * }
+     */
+    public static int XK_Meta_R() {
+        return XK_Meta_R;
+    }
+    private static final int XK_Alt_L = (int)65513L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Alt_L 65513
+     * }
+     */
+    public static int XK_Alt_L() {
+        return XK_Alt_L;
+    }
+    private static final int XK_Alt_R = (int)65514L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Alt_R 65514
+     * }
+     */
+    public static int XK_Alt_R() {
+        return XK_Alt_R;
+    }
+    private static final int XK_Super_L = (int)65515L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Super_L 65515
+     * }
+     */
+    public static int XK_Super_L() {
+        return XK_Super_L;
+    }
+    private static final int XK_Super_R = (int)65516L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Super_R 65516
+     * }
+     */
+    public static int XK_Super_R() {
+        return XK_Super_R;
+    }
+    private static final int XK_Hyper_L = (int)65517L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Hyper_L 65517
+     * }
+     */
+    public static int XK_Hyper_L() {
+        return XK_Hyper_L;
+    }
+    private static final int XK_Hyper_R = (int)65518L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Hyper_R 65518
+     * }
+     */
+    public static int XK_Hyper_R() {
+        return XK_Hyper_R;
+    }
+    private static final int XK_ISO_Lock = (int)65025L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Lock 65025
+     * }
+     */
+    public static int XK_ISO_Lock() {
+        return XK_ISO_Lock;
+    }
+    private static final int XK_ISO_Level2_Latch = (int)65026L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Level2_Latch 65026
+     * }
+     */
+    public static int XK_ISO_Level2_Latch() {
+        return XK_ISO_Level2_Latch;
+    }
+    private static final int XK_ISO_Level3_Shift = (int)65027L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Level3_Shift 65027
+     * }
+     */
+    public static int XK_ISO_Level3_Shift() {
+        return XK_ISO_Level3_Shift;
+    }
+    private static final int XK_ISO_Level3_Latch = (int)65028L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Level3_Latch 65028
+     * }
+     */
+    public static int XK_ISO_Level3_Latch() {
+        return XK_ISO_Level3_Latch;
+    }
+    private static final int XK_ISO_Level3_Lock = (int)65029L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Level3_Lock 65029
+     * }
+     */
+    public static int XK_ISO_Level3_Lock() {
+        return XK_ISO_Level3_Lock;
+    }
+    private static final int XK_ISO_Level5_Shift = (int)65041L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Level5_Shift 65041
+     * }
+     */
+    public static int XK_ISO_Level5_Shift() {
+        return XK_ISO_Level5_Shift;
+    }
+    private static final int XK_ISO_Level5_Latch = (int)65042L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Level5_Latch 65042
+     * }
+     */
+    public static int XK_ISO_Level5_Latch() {
+        return XK_ISO_Level5_Latch;
+    }
+    private static final int XK_ISO_Level5_Lock = (int)65043L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Level5_Lock 65043
+     * }
+     */
+    public static int XK_ISO_Level5_Lock() {
+        return XK_ISO_Level5_Lock;
+    }
+    private static final int XK_ISO_Group_Shift = (int)65406L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Group_Shift 65406
+     * }
+     */
+    public static int XK_ISO_Group_Shift() {
+        return XK_ISO_Group_Shift;
+    }
+    private static final int XK_ISO_Group_Latch = (int)65030L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Group_Latch 65030
+     * }
+     */
+    public static int XK_ISO_Group_Latch() {
+        return XK_ISO_Group_Latch;
+    }
+    private static final int XK_ISO_Group_Lock = (int)65031L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Group_Lock 65031
+     * }
+     */
+    public static int XK_ISO_Group_Lock() {
+        return XK_ISO_Group_Lock;
+    }
+    private static final int XK_ISO_Next_Group = (int)65032L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Next_Group 65032
+     * }
+     */
+    public static int XK_ISO_Next_Group() {
+        return XK_ISO_Next_Group;
+    }
+    private static final int XK_ISO_Next_Group_Lock = (int)65033L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Next_Group_Lock 65033
+     * }
+     */
+    public static int XK_ISO_Next_Group_Lock() {
+        return XK_ISO_Next_Group_Lock;
+    }
+    private static final int XK_ISO_Prev_Group = (int)65034L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Prev_Group 65034
+     * }
+     */
+    public static int XK_ISO_Prev_Group() {
+        return XK_ISO_Prev_Group;
+    }
+    private static final int XK_ISO_Prev_Group_Lock = (int)65035L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Prev_Group_Lock 65035
+     * }
+     */
+    public static int XK_ISO_Prev_Group_Lock() {
+        return XK_ISO_Prev_Group_Lock;
+    }
+    private static final int XK_ISO_First_Group = (int)65036L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_First_Group 65036
+     * }
+     */
+    public static int XK_ISO_First_Group() {
+        return XK_ISO_First_Group;
+    }
+    private static final int XK_ISO_First_Group_Lock = (int)65037L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_First_Group_Lock 65037
+     * }
+     */
+    public static int XK_ISO_First_Group_Lock() {
+        return XK_ISO_First_Group_Lock;
+    }
+    private static final int XK_ISO_Last_Group = (int)65038L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Last_Group 65038
+     * }
+     */
+    public static int XK_ISO_Last_Group() {
+        return XK_ISO_Last_Group;
+    }
+    private static final int XK_ISO_Last_Group_Lock = (int)65039L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Last_Group_Lock 65039
+     * }
+     */
+    public static int XK_ISO_Last_Group_Lock() {
+        return XK_ISO_Last_Group_Lock;
+    }
+    private static final int XK_ISO_Left_Tab = (int)65056L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Left_Tab 65056
+     * }
+     */
+    public static int XK_ISO_Left_Tab() {
+        return XK_ISO_Left_Tab;
+    }
+    private static final int XK_ISO_Move_Line_Up = (int)65057L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Move_Line_Up 65057
+     * }
+     */
+    public static int XK_ISO_Move_Line_Up() {
+        return XK_ISO_Move_Line_Up;
+    }
+    private static final int XK_ISO_Move_Line_Down = (int)65058L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Move_Line_Down 65058
+     * }
+     */
+    public static int XK_ISO_Move_Line_Down() {
+        return XK_ISO_Move_Line_Down;
+    }
+    private static final int XK_ISO_Partial_Line_Up = (int)65059L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Partial_Line_Up 65059
+     * }
+     */
+    public static int XK_ISO_Partial_Line_Up() {
+        return XK_ISO_Partial_Line_Up;
+    }
+    private static final int XK_ISO_Partial_Line_Down = (int)65060L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Partial_Line_Down 65060
+     * }
+     */
+    public static int XK_ISO_Partial_Line_Down() {
+        return XK_ISO_Partial_Line_Down;
+    }
+    private static final int XK_ISO_Partial_Space_Left = (int)65061L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Partial_Space_Left 65061
+     * }
+     */
+    public static int XK_ISO_Partial_Space_Left() {
+        return XK_ISO_Partial_Space_Left;
+    }
+    private static final int XK_ISO_Partial_Space_Right = (int)65062L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Partial_Space_Right 65062
+     * }
+     */
+    public static int XK_ISO_Partial_Space_Right() {
+        return XK_ISO_Partial_Space_Right;
+    }
+    private static final int XK_ISO_Set_Margin_Left = (int)65063L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Set_Margin_Left 65063
+     * }
+     */
+    public static int XK_ISO_Set_Margin_Left() {
+        return XK_ISO_Set_Margin_Left;
+    }
+    private static final int XK_ISO_Set_Margin_Right = (int)65064L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Set_Margin_Right 65064
+     * }
+     */
+    public static int XK_ISO_Set_Margin_Right() {
+        return XK_ISO_Set_Margin_Right;
+    }
+    private static final int XK_ISO_Release_Margin_Left = (int)65065L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Release_Margin_Left 65065
+     * }
+     */
+    public static int XK_ISO_Release_Margin_Left() {
+        return XK_ISO_Release_Margin_Left;
+    }
+    private static final int XK_ISO_Release_Margin_Right = (int)65066L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Release_Margin_Right 65066
+     * }
+     */
+    public static int XK_ISO_Release_Margin_Right() {
+        return XK_ISO_Release_Margin_Right;
+    }
+    private static final int XK_ISO_Release_Both_Margins = (int)65067L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Release_Both_Margins 65067
+     * }
+     */
+    public static int XK_ISO_Release_Both_Margins() {
+        return XK_ISO_Release_Both_Margins;
+    }
+    private static final int XK_ISO_Fast_Cursor_Left = (int)65068L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Fast_Cursor_Left 65068
+     * }
+     */
+    public static int XK_ISO_Fast_Cursor_Left() {
+        return XK_ISO_Fast_Cursor_Left;
+    }
+    private static final int XK_ISO_Fast_Cursor_Right = (int)65069L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Fast_Cursor_Right 65069
+     * }
+     */
+    public static int XK_ISO_Fast_Cursor_Right() {
+        return XK_ISO_Fast_Cursor_Right;
+    }
+    private static final int XK_ISO_Fast_Cursor_Up = (int)65070L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Fast_Cursor_Up 65070
+     * }
+     */
+    public static int XK_ISO_Fast_Cursor_Up() {
+        return XK_ISO_Fast_Cursor_Up;
+    }
+    private static final int XK_ISO_Fast_Cursor_Down = (int)65071L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Fast_Cursor_Down 65071
+     * }
+     */
+    public static int XK_ISO_Fast_Cursor_Down() {
+        return XK_ISO_Fast_Cursor_Down;
+    }
+    private static final int XK_ISO_Continuous_Underline = (int)65072L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Continuous_Underline 65072
+     * }
+     */
+    public static int XK_ISO_Continuous_Underline() {
+        return XK_ISO_Continuous_Underline;
+    }
+    private static final int XK_ISO_Discontinuous_Underline = (int)65073L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Discontinuous_Underline 65073
+     * }
+     */
+    public static int XK_ISO_Discontinuous_Underline() {
+        return XK_ISO_Discontinuous_Underline;
+    }
+    private static final int XK_ISO_Emphasize = (int)65074L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Emphasize 65074
+     * }
+     */
+    public static int XK_ISO_Emphasize() {
+        return XK_ISO_Emphasize;
+    }
+    private static final int XK_ISO_Center_Object = (int)65075L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Center_Object 65075
+     * }
+     */
+    public static int XK_ISO_Center_Object() {
+        return XK_ISO_Center_Object;
+    }
+    private static final int XK_ISO_Enter = (int)65076L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ISO_Enter 65076
+     * }
+     */
+    public static int XK_ISO_Enter() {
+        return XK_ISO_Enter;
+    }
+    private static final int XK_dead_grave = (int)65104L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_grave 65104
+     * }
+     */
+    public static int XK_dead_grave() {
+        return XK_dead_grave;
+    }
+    private static final int XK_dead_acute = (int)65105L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_acute 65105
+     * }
+     */
+    public static int XK_dead_acute() {
+        return XK_dead_acute;
+    }
+    private static final int XK_dead_circumflex = (int)65106L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_circumflex 65106
+     * }
+     */
+    public static int XK_dead_circumflex() {
+        return XK_dead_circumflex;
+    }
+    private static final int XK_dead_tilde = (int)65107L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_tilde 65107
+     * }
+     */
+    public static int XK_dead_tilde() {
+        return XK_dead_tilde;
+    }
+    private static final int XK_dead_perispomeni = (int)65107L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_perispomeni 65107
+     * }
+     */
+    public static int XK_dead_perispomeni() {
+        return XK_dead_perispomeni;
+    }
+    private static final int XK_dead_macron = (int)65108L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_macron 65108
+     * }
+     */
+    public static int XK_dead_macron() {
+        return XK_dead_macron;
+    }
+    private static final int XK_dead_breve = (int)65109L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_breve 65109
+     * }
+     */
+    public static int XK_dead_breve() {
+        return XK_dead_breve;
+    }
+    private static final int XK_dead_abovedot = (int)65110L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_abovedot 65110
+     * }
+     */
+    public static int XK_dead_abovedot() {
+        return XK_dead_abovedot;
+    }
+    private static final int XK_dead_diaeresis = (int)65111L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_diaeresis 65111
+     * }
+     */
+    public static int XK_dead_diaeresis() {
+        return XK_dead_diaeresis;
+    }
+    private static final int XK_dead_abovering = (int)65112L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_abovering 65112
+     * }
+     */
+    public static int XK_dead_abovering() {
+        return XK_dead_abovering;
+    }
+    private static final int XK_dead_doubleacute = (int)65113L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_doubleacute 65113
+     * }
+     */
+    public static int XK_dead_doubleacute() {
+        return XK_dead_doubleacute;
+    }
+    private static final int XK_dead_caron = (int)65114L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_caron 65114
+     * }
+     */
+    public static int XK_dead_caron() {
+        return XK_dead_caron;
+    }
+    private static final int XK_dead_cedilla = (int)65115L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_cedilla 65115
+     * }
+     */
+    public static int XK_dead_cedilla() {
+        return XK_dead_cedilla;
+    }
+    private static final int XK_dead_ogonek = (int)65116L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_ogonek 65116
+     * }
+     */
+    public static int XK_dead_ogonek() {
+        return XK_dead_ogonek;
+    }
+    private static final int XK_dead_iota = (int)65117L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_iota 65117
+     * }
+     */
+    public static int XK_dead_iota() {
+        return XK_dead_iota;
+    }
+    private static final int XK_dead_voiced_sound = (int)65118L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_voiced_sound 65118
+     * }
+     */
+    public static int XK_dead_voiced_sound() {
+        return XK_dead_voiced_sound;
+    }
+    private static final int XK_dead_semivoiced_sound = (int)65119L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_semivoiced_sound 65119
+     * }
+     */
+    public static int XK_dead_semivoiced_sound() {
+        return XK_dead_semivoiced_sound;
+    }
+    private static final int XK_dead_belowdot = (int)65120L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowdot 65120
+     * }
+     */
+    public static int XK_dead_belowdot() {
+        return XK_dead_belowdot;
+    }
+    private static final int XK_dead_hook = (int)65121L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_hook 65121
+     * }
+     */
+    public static int XK_dead_hook() {
+        return XK_dead_hook;
+    }
+    private static final int XK_dead_horn = (int)65122L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_horn 65122
+     * }
+     */
+    public static int XK_dead_horn() {
+        return XK_dead_horn;
+    }
+    private static final int XK_dead_stroke = (int)65123L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_stroke 65123
+     * }
+     */
+    public static int XK_dead_stroke() {
+        return XK_dead_stroke;
+    }
+    private static final int XK_dead_abovecomma = (int)65124L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_abovecomma 65124
+     * }
+     */
+    public static int XK_dead_abovecomma() {
+        return XK_dead_abovecomma;
+    }
+    private static final int XK_dead_psili = (int)65124L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_psili 65124
+     * }
+     */
+    public static int XK_dead_psili() {
+        return XK_dead_psili;
+    }
+    private static final int XK_dead_abovereversedcomma = (int)65125L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_abovereversedcomma 65125
+     * }
+     */
+    public static int XK_dead_abovereversedcomma() {
+        return XK_dead_abovereversedcomma;
+    }
+    private static final int XK_dead_dasia = (int)65125L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_dasia 65125
+     * }
+     */
+    public static int XK_dead_dasia() {
+        return XK_dead_dasia;
+    }
+    private static final int XK_dead_doublegrave = (int)65126L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_doublegrave 65126
+     * }
+     */
+    public static int XK_dead_doublegrave() {
+        return XK_dead_doublegrave;
+    }
+    private static final int XK_dead_belowring = (int)65127L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowring 65127
+     * }
+     */
+    public static int XK_dead_belowring() {
+        return XK_dead_belowring;
+    }
+    private static final int XK_dead_belowmacron = (int)65128L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowmacron 65128
+     * }
+     */
+    public static int XK_dead_belowmacron() {
+        return XK_dead_belowmacron;
+    }
+    private static final int XK_dead_belowcircumflex = (int)65129L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowcircumflex 65129
+     * }
+     */
+    public static int XK_dead_belowcircumflex() {
+        return XK_dead_belowcircumflex;
+    }
+    private static final int XK_dead_belowtilde = (int)65130L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowtilde 65130
+     * }
+     */
+    public static int XK_dead_belowtilde() {
+        return XK_dead_belowtilde;
+    }
+    private static final int XK_dead_belowbreve = (int)65131L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowbreve 65131
+     * }
+     */
+    public static int XK_dead_belowbreve() {
+        return XK_dead_belowbreve;
+    }
+    private static final int XK_dead_belowdiaeresis = (int)65132L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowdiaeresis 65132
+     * }
+     */
+    public static int XK_dead_belowdiaeresis() {
+        return XK_dead_belowdiaeresis;
+    }
+    private static final int XK_dead_invertedbreve = (int)65133L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_invertedbreve 65133
+     * }
+     */
+    public static int XK_dead_invertedbreve() {
+        return XK_dead_invertedbreve;
+    }
+    private static final int XK_dead_belowcomma = (int)65134L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowcomma 65134
+     * }
+     */
+    public static int XK_dead_belowcomma() {
+        return XK_dead_belowcomma;
+    }
+    private static final int XK_dead_currency = (int)65135L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_currency 65135
+     * }
+     */
+    public static int XK_dead_currency() {
+        return XK_dead_currency;
+    }
+    private static final int XK_dead_lowline = (int)65168L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_lowline 65168
+     * }
+     */
+    public static int XK_dead_lowline() {
+        return XK_dead_lowline;
+    }
+    private static final int XK_dead_aboveverticalline = (int)65169L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_aboveverticalline 65169
+     * }
+     */
+    public static int XK_dead_aboveverticalline() {
+        return XK_dead_aboveverticalline;
+    }
+    private static final int XK_dead_belowverticalline = (int)65170L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_belowverticalline 65170
+     * }
+     */
+    public static int XK_dead_belowverticalline() {
+        return XK_dead_belowverticalline;
+    }
+    private static final int XK_dead_longsolidusoverlay = (int)65171L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_longsolidusoverlay 65171
+     * }
+     */
+    public static int XK_dead_longsolidusoverlay() {
+        return XK_dead_longsolidusoverlay;
+    }
+    private static final int XK_dead_a = (int)65152L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_a 65152
+     * }
+     */
+    public static int XK_dead_a() {
+        return XK_dead_a;
+    }
+    private static final int XK_dead_A = (int)65153L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_A 65153
+     * }
+     */
+    public static int XK_dead_A() {
+        return XK_dead_A;
+    }
+    private static final int XK_dead_e = (int)65154L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_e 65154
+     * }
+     */
+    public static int XK_dead_e() {
+        return XK_dead_e;
+    }
+    private static final int XK_dead_E = (int)65155L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_E 65155
+     * }
+     */
+    public static int XK_dead_E() {
+        return XK_dead_E;
+    }
+    private static final int XK_dead_i = (int)65156L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_i 65156
+     * }
+     */
+    public static int XK_dead_i() {
+        return XK_dead_i;
+    }
+    private static final int XK_dead_I = (int)65157L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_I 65157
+     * }
+     */
+    public static int XK_dead_I() {
+        return XK_dead_I;
+    }
+    private static final int XK_dead_o = (int)65158L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_o 65158
+     * }
+     */
+    public static int XK_dead_o() {
+        return XK_dead_o;
+    }
+    private static final int XK_dead_O = (int)65159L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_O 65159
+     * }
+     */
+    public static int XK_dead_O() {
+        return XK_dead_O;
+    }
+    private static final int XK_dead_u = (int)65160L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_u 65160
+     * }
+     */
+    public static int XK_dead_u() {
+        return XK_dead_u;
+    }
+    private static final int XK_dead_U = (int)65161L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_U 65161
+     * }
+     */
+    public static int XK_dead_U() {
+        return XK_dead_U;
+    }
+    private static final int XK_dead_small_schwa = (int)65162L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_small_schwa 65162
+     * }
+     */
+    public static int XK_dead_small_schwa() {
+        return XK_dead_small_schwa;
+    }
+    private static final int XK_dead_capital_schwa = (int)65163L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_capital_schwa 65163
+     * }
+     */
+    public static int XK_dead_capital_schwa() {
+        return XK_dead_capital_schwa;
+    }
+    private static final int XK_dead_greek = (int)65164L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dead_greek 65164
+     * }
+     */
+    public static int XK_dead_greek() {
+        return XK_dead_greek;
+    }
+    private static final int XK_First_Virtual_Screen = (int)65232L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_First_Virtual_Screen 65232
+     * }
+     */
+    public static int XK_First_Virtual_Screen() {
+        return XK_First_Virtual_Screen;
+    }
+    private static final int XK_Prev_Virtual_Screen = (int)65233L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Prev_Virtual_Screen 65233
+     * }
+     */
+    public static int XK_Prev_Virtual_Screen() {
+        return XK_Prev_Virtual_Screen;
+    }
+    private static final int XK_Next_Virtual_Screen = (int)65234L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Next_Virtual_Screen 65234
+     * }
+     */
+    public static int XK_Next_Virtual_Screen() {
+        return XK_Next_Virtual_Screen;
+    }
+    private static final int XK_Last_Virtual_Screen = (int)65236L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Last_Virtual_Screen 65236
+     * }
+     */
+    public static int XK_Last_Virtual_Screen() {
+        return XK_Last_Virtual_Screen;
+    }
+    private static final int XK_Terminate_Server = (int)65237L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Terminate_Server 65237
+     * }
+     */
+    public static int XK_Terminate_Server() {
+        return XK_Terminate_Server;
+    }
+    private static final int XK_AccessX_Enable = (int)65136L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_AccessX_Enable 65136
+     * }
+     */
+    public static int XK_AccessX_Enable() {
+        return XK_AccessX_Enable;
+    }
+    private static final int XK_AccessX_Feedback_Enable = (int)65137L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_AccessX_Feedback_Enable 65137
+     * }
+     */
+    public static int XK_AccessX_Feedback_Enable() {
+        return XK_AccessX_Feedback_Enable;
+    }
+    private static final int XK_RepeatKeys_Enable = (int)65138L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_RepeatKeys_Enable 65138
+     * }
+     */
+    public static int XK_RepeatKeys_Enable() {
+        return XK_RepeatKeys_Enable;
+    }
+    private static final int XK_SlowKeys_Enable = (int)65139L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_SlowKeys_Enable 65139
+     * }
+     */
+    public static int XK_SlowKeys_Enable() {
+        return XK_SlowKeys_Enable;
+    }
+    private static final int XK_BounceKeys_Enable = (int)65140L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_BounceKeys_Enable 65140
+     * }
+     */
+    public static int XK_BounceKeys_Enable() {
+        return XK_BounceKeys_Enable;
+    }
+    private static final int XK_StickyKeys_Enable = (int)65141L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_StickyKeys_Enable 65141
+     * }
+     */
+    public static int XK_StickyKeys_Enable() {
+        return XK_StickyKeys_Enable;
+    }
+    private static final int XK_MouseKeys_Enable = (int)65142L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_MouseKeys_Enable 65142
+     * }
+     */
+    public static int XK_MouseKeys_Enable() {
+        return XK_MouseKeys_Enable;
+    }
+    private static final int XK_MouseKeys_Accel_Enable = (int)65143L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_MouseKeys_Accel_Enable 65143
+     * }
+     */
+    public static int XK_MouseKeys_Accel_Enable() {
+        return XK_MouseKeys_Accel_Enable;
+    }
+    private static final int XK_Overlay1_Enable = (int)65144L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Overlay1_Enable 65144
+     * }
+     */
+    public static int XK_Overlay1_Enable() {
+        return XK_Overlay1_Enable;
+    }
+    private static final int XK_Overlay2_Enable = (int)65145L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Overlay2_Enable 65145
+     * }
+     */
+    public static int XK_Overlay2_Enable() {
+        return XK_Overlay2_Enable;
+    }
+    private static final int XK_AudibleBell_Enable = (int)65146L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_AudibleBell_Enable 65146
+     * }
+     */
+    public static int XK_AudibleBell_Enable() {
+        return XK_AudibleBell_Enable;
+    }
+    private static final int XK_Pointer_Left = (int)65248L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Left 65248
+     * }
+     */
+    public static int XK_Pointer_Left() {
+        return XK_Pointer_Left;
+    }
+    private static final int XK_Pointer_Right = (int)65249L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Right 65249
+     * }
+     */
+    public static int XK_Pointer_Right() {
+        return XK_Pointer_Right;
+    }
+    private static final int XK_Pointer_Up = (int)65250L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Up 65250
+     * }
+     */
+    public static int XK_Pointer_Up() {
+        return XK_Pointer_Up;
+    }
+    private static final int XK_Pointer_Down = (int)65251L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Down 65251
+     * }
+     */
+    public static int XK_Pointer_Down() {
+        return XK_Pointer_Down;
+    }
+    private static final int XK_Pointer_UpLeft = (int)65252L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_UpLeft 65252
+     * }
+     */
+    public static int XK_Pointer_UpLeft() {
+        return XK_Pointer_UpLeft;
+    }
+    private static final int XK_Pointer_UpRight = (int)65253L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_UpRight 65253
+     * }
+     */
+    public static int XK_Pointer_UpRight() {
+        return XK_Pointer_UpRight;
+    }
+    private static final int XK_Pointer_DownLeft = (int)65254L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DownLeft 65254
+     * }
+     */
+    public static int XK_Pointer_DownLeft() {
+        return XK_Pointer_DownLeft;
+    }
+    private static final int XK_Pointer_DownRight = (int)65255L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DownRight 65255
+     * }
+     */
+    public static int XK_Pointer_DownRight() {
+        return XK_Pointer_DownRight;
+    }
+    private static final int XK_Pointer_Button_Dflt = (int)65256L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Button_Dflt 65256
+     * }
+     */
+    public static int XK_Pointer_Button_Dflt() {
+        return XK_Pointer_Button_Dflt;
+    }
+    private static final int XK_Pointer_Button1 = (int)65257L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Button1 65257
+     * }
+     */
+    public static int XK_Pointer_Button1() {
+        return XK_Pointer_Button1;
+    }
+    private static final int XK_Pointer_Button2 = (int)65258L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Button2 65258
+     * }
+     */
+    public static int XK_Pointer_Button2() {
+        return XK_Pointer_Button2;
+    }
+    private static final int XK_Pointer_Button3 = (int)65259L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Button3 65259
+     * }
+     */
+    public static int XK_Pointer_Button3() {
+        return XK_Pointer_Button3;
+    }
+    private static final int XK_Pointer_Button4 = (int)65260L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Button4 65260
+     * }
+     */
+    public static int XK_Pointer_Button4() {
+        return XK_Pointer_Button4;
+    }
+    private static final int XK_Pointer_Button5 = (int)65261L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Button5 65261
+     * }
+     */
+    public static int XK_Pointer_Button5() {
+        return XK_Pointer_Button5;
+    }
+    private static final int XK_Pointer_DblClick_Dflt = (int)65262L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DblClick_Dflt 65262
+     * }
+     */
+    public static int XK_Pointer_DblClick_Dflt() {
+        return XK_Pointer_DblClick_Dflt;
+    }
+    private static final int XK_Pointer_DblClick1 = (int)65263L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DblClick1 65263
+     * }
+     */
+    public static int XK_Pointer_DblClick1() {
+        return XK_Pointer_DblClick1;
+    }
+    private static final int XK_Pointer_DblClick2 = (int)65264L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DblClick2 65264
+     * }
+     */
+    public static int XK_Pointer_DblClick2() {
+        return XK_Pointer_DblClick2;
+    }
+    private static final int XK_Pointer_DblClick3 = (int)65265L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DblClick3 65265
+     * }
+     */
+    public static int XK_Pointer_DblClick3() {
+        return XK_Pointer_DblClick3;
+    }
+    private static final int XK_Pointer_DblClick4 = (int)65266L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DblClick4 65266
+     * }
+     */
+    public static int XK_Pointer_DblClick4() {
+        return XK_Pointer_DblClick4;
+    }
+    private static final int XK_Pointer_DblClick5 = (int)65267L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DblClick5 65267
+     * }
+     */
+    public static int XK_Pointer_DblClick5() {
+        return XK_Pointer_DblClick5;
+    }
+    private static final int XK_Pointer_Drag_Dflt = (int)65268L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Drag_Dflt 65268
+     * }
+     */
+    public static int XK_Pointer_Drag_Dflt() {
+        return XK_Pointer_Drag_Dflt;
+    }
+    private static final int XK_Pointer_Drag1 = (int)65269L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Drag1 65269
+     * }
+     */
+    public static int XK_Pointer_Drag1() {
+        return XK_Pointer_Drag1;
+    }
+    private static final int XK_Pointer_Drag2 = (int)65270L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Drag2 65270
+     * }
+     */
+    public static int XK_Pointer_Drag2() {
+        return XK_Pointer_Drag2;
+    }
+    private static final int XK_Pointer_Drag3 = (int)65271L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Drag3 65271
+     * }
+     */
+    public static int XK_Pointer_Drag3() {
+        return XK_Pointer_Drag3;
+    }
+    private static final int XK_Pointer_Drag4 = (int)65272L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Drag4 65272
+     * }
+     */
+    public static int XK_Pointer_Drag4() {
+        return XK_Pointer_Drag4;
+    }
+    private static final int XK_Pointer_Drag5 = (int)65277L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Drag5 65277
+     * }
+     */
+    public static int XK_Pointer_Drag5() {
+        return XK_Pointer_Drag5;
+    }
+    private static final int XK_Pointer_EnableKeys = (int)65273L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_EnableKeys 65273
+     * }
+     */
+    public static int XK_Pointer_EnableKeys() {
+        return XK_Pointer_EnableKeys;
+    }
+    private static final int XK_Pointer_Accelerate = (int)65274L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_Accelerate 65274
+     * }
+     */
+    public static int XK_Pointer_Accelerate() {
+        return XK_Pointer_Accelerate;
+    }
+    private static final int XK_Pointer_DfltBtnNext = (int)65275L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DfltBtnNext 65275
+     * }
+     */
+    public static int XK_Pointer_DfltBtnNext() {
+        return XK_Pointer_DfltBtnNext;
+    }
+    private static final int XK_Pointer_DfltBtnPrev = (int)65276L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Pointer_DfltBtnPrev 65276
+     * }
+     */
+    public static int XK_Pointer_DfltBtnPrev() {
+        return XK_Pointer_DfltBtnPrev;
+    }
+    private static final int XK_ch = (int)65184L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ch 65184
+     * }
+     */
+    public static int XK_ch() {
+        return XK_ch;
+    }
+    private static final int XK_Ch = (int)65185L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ch 65185
+     * }
+     */
+    public static int XK_Ch() {
+        return XK_Ch;
+    }
+    private static final int XK_CH = (int)65186L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_CH 65186
+     * }
+     */
+    public static int XK_CH() {
+        return XK_CH;
+    }
+    private static final int XK_c_h = (int)65187L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_c_h 65187
+     * }
+     */
+    public static int XK_c_h() {
+        return XK_c_h;
+    }
+    private static final int XK_C_h = (int)65188L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_C_h 65188
+     * }
+     */
+    public static int XK_C_h() {
+        return XK_C_h;
+    }
+    private static final int XK_C_H = (int)65189L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_C_H 65189
+     * }
+     */
+    public static int XK_C_H() {
+        return XK_C_H;
+    }
+    private static final int XK_space = (int)32L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_space 32
+     * }
+     */
+    public static int XK_space() {
+        return XK_space;
+    }
+    private static final int XK_exclam = (int)33L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_exclam 33
+     * }
+     */
+    public static int XK_exclam() {
+        return XK_exclam;
+    }
+    private static final int XK_quotedbl = (int)34L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_quotedbl 34
+     * }
+     */
+    public static int XK_quotedbl() {
+        return XK_quotedbl;
+    }
+    private static final int XK_numbersign = (int)35L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_numbersign 35
+     * }
+     */
+    public static int XK_numbersign() {
+        return XK_numbersign;
+    }
+    private static final int XK_dollar = (int)36L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_dollar 36
+     * }
+     */
+    public static int XK_dollar() {
+        return XK_dollar;
+    }
+    private static final int XK_percent = (int)37L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_percent 37
+     * }
+     */
+    public static int XK_percent() {
+        return XK_percent;
+    }
+    private static final int XK_ampersand = (int)38L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ampersand 38
+     * }
+     */
+    public static int XK_ampersand() {
+        return XK_ampersand;
+    }
+    private static final int XK_apostrophe = (int)39L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_apostrophe 39
+     * }
+     */
+    public static int XK_apostrophe() {
+        return XK_apostrophe;
+    }
+    private static final int XK_quoteright = (int)39L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_quoteright 39
+     * }
+     */
+    public static int XK_quoteright() {
+        return XK_quoteright;
+    }
+    private static final int XK_parenleft = (int)40L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_parenleft 40
+     * }
+     */
+    public static int XK_parenleft() {
+        return XK_parenleft;
+    }
+    private static final int XK_parenright = (int)41L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_parenright 41
+     * }
+     */
+    public static int XK_parenright() {
+        return XK_parenright;
+    }
+    private static final int XK_asterisk = (int)42L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_asterisk 42
+     * }
+     */
+    public static int XK_asterisk() {
+        return XK_asterisk;
+    }
+    private static final int XK_plus = (int)43L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_plus 43
+     * }
+     */
+    public static int XK_plus() {
+        return XK_plus;
+    }
+    private static final int XK_comma = (int)44L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_comma 44
+     * }
+     */
+    public static int XK_comma() {
+        return XK_comma;
+    }
+    private static final int XK_minus = (int)45L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_minus 45
+     * }
+     */
+    public static int XK_minus() {
+        return XK_minus;
+    }
+    private static final int XK_period = (int)46L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_period 46
+     * }
+     */
+    public static int XK_period() {
+        return XK_period;
+    }
+    private static final int XK_slash = (int)47L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_slash 47
+     * }
+     */
+    public static int XK_slash() {
+        return XK_slash;
+    }
+    private static final int XK_0 = (int)48L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_0 48
+     * }
+     */
+    public static int XK_0() {
+        return XK_0;
+    }
+    private static final int XK_1 = (int)49L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_1 49
+     * }
+     */
+    public static int XK_1() {
+        return XK_1;
+    }
+    private static final int XK_2 = (int)50L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_2 50
+     * }
+     */
+    public static int XK_2() {
+        return XK_2;
+    }
+    private static final int XK_3 = (int)51L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_3 51
+     * }
+     */
+    public static int XK_3() {
+        return XK_3;
+    }
+    private static final int XK_4 = (int)52L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_4 52
+     * }
+     */
+    public static int XK_4() {
+        return XK_4;
+    }
+    private static final int XK_5 = (int)53L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_5 53
+     * }
+     */
+    public static int XK_5() {
+        return XK_5;
+    }
+    private static final int XK_6 = (int)54L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_6 54
+     * }
+     */
+    public static int XK_6() {
+        return XK_6;
+    }
+    private static final int XK_7 = (int)55L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_7 55
+     * }
+     */
+    public static int XK_7() {
+        return XK_7;
+    }
+    private static final int XK_8 = (int)56L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_8 56
+     * }
+     */
+    public static int XK_8() {
+        return XK_8;
+    }
+    private static final int XK_9 = (int)57L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_9 57
+     * }
+     */
+    public static int XK_9() {
+        return XK_9;
+    }
+    private static final int XK_colon = (int)58L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_colon 58
+     * }
+     */
+    public static int XK_colon() {
+        return XK_colon;
+    }
+    private static final int XK_semicolon = (int)59L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_semicolon 59
+     * }
+     */
+    public static int XK_semicolon() {
+        return XK_semicolon;
+    }
+    private static final int XK_less = (int)60L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_less 60
+     * }
+     */
+    public static int XK_less() {
+        return XK_less;
+    }
+    private static final int XK_equal = (int)61L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_equal 61
+     * }
+     */
+    public static int XK_equal() {
+        return XK_equal;
+    }
+    private static final int XK_greater = (int)62L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_greater 62
+     * }
+     */
+    public static int XK_greater() {
+        return XK_greater;
+    }
+    private static final int XK_question = (int)63L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_question 63
+     * }
+     */
+    public static int XK_question() {
+        return XK_question;
+    }
+    private static final int XK_at = (int)64L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_at 64
+     * }
+     */
+    public static int XK_at() {
+        return XK_at;
+    }
+    private static final int XK_A = (int)65L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_A 65
+     * }
+     */
+    public static int XK_A() {
+        return XK_A;
+    }
+    private static final int XK_B = (int)66L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_B 66
+     * }
+     */
+    public static int XK_B() {
+        return XK_B;
+    }
+    private static final int XK_C = (int)67L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_C 67
+     * }
+     */
+    public static int XK_C() {
+        return XK_C;
+    }
+    private static final int XK_D = (int)68L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_D 68
+     * }
+     */
+    public static int XK_D() {
+        return XK_D;
+    }
+    private static final int XK_E = (int)69L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_E 69
+     * }
+     */
+    public static int XK_E() {
+        return XK_E;
+    }
+    private static final int XK_F = (int)70L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_F 70
+     * }
+     */
+    public static int XK_F() {
+        return XK_F;
+    }
+    private static final int XK_G = (int)71L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_G 71
+     * }
+     */
+    public static int XK_G() {
+        return XK_G;
+    }
+    private static final int XK_H = (int)72L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_H 72
+     * }
+     */
+    public static int XK_H() {
+        return XK_H;
+    }
+    private static final int XK_I = (int)73L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_I 73
+     * }
+     */
+    public static int XK_I() {
+        return XK_I;
+    }
+    private static final int XK_J = (int)74L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_J 74
+     * }
+     */
+    public static int XK_J() {
+        return XK_J;
+    }
+    private static final int XK_K = (int)75L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_K 75
+     * }
+     */
+    public static int XK_K() {
+        return XK_K;
+    }
+    private static final int XK_L = (int)76L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_L 76
+     * }
+     */
+    public static int XK_L() {
+        return XK_L;
+    }
+    private static final int XK_M = (int)77L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_M 77
+     * }
+     */
+    public static int XK_M() {
+        return XK_M;
+    }
+    private static final int XK_N = (int)78L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_N 78
+     * }
+     */
+    public static int XK_N() {
+        return XK_N;
+    }
+    private static final int XK_O = (int)79L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_O 79
+     * }
+     */
+    public static int XK_O() {
+        return XK_O;
+    }
+    private static final int XK_P = (int)80L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_P 80
+     * }
+     */
+    public static int XK_P() {
+        return XK_P;
+    }
+    private static final int XK_Q = (int)81L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Q 81
+     * }
+     */
+    public static int XK_Q() {
+        return XK_Q;
+    }
+    private static final int XK_R = (int)82L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_R 82
+     * }
+     */
+    public static int XK_R() {
+        return XK_R;
+    }
+    private static final int XK_S = (int)83L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_S 83
+     * }
+     */
+    public static int XK_S() {
+        return XK_S;
+    }
+    private static final int XK_T = (int)84L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_T 84
+     * }
+     */
+    public static int XK_T() {
+        return XK_T;
+    }
+    private static final int XK_U = (int)85L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_U 85
+     * }
+     */
+    public static int XK_U() {
+        return XK_U;
+    }
+    private static final int XK_V = (int)86L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_V 86
+     * }
+     */
+    public static int XK_V() {
+        return XK_V;
+    }
+    private static final int XK_W = (int)87L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_W 87
+     * }
+     */
+    public static int XK_W() {
+        return XK_W;
+    }
+    private static final int XK_X = (int)88L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_X 88
+     * }
+     */
+    public static int XK_X() {
+        return XK_X;
+    }
+    private static final int XK_Y = (int)89L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Y 89
+     * }
+     */
+    public static int XK_Y() {
+        return XK_Y;
+    }
+    private static final int XK_Z = (int)90L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Z 90
+     * }
+     */
+    public static int XK_Z() {
+        return XK_Z;
+    }
+    private static final int XK_bracketleft = (int)91L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_bracketleft 91
+     * }
+     */
+    public static int XK_bracketleft() {
+        return XK_bracketleft;
+    }
+    private static final int XK_backslash = (int)92L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_backslash 92
+     * }
+     */
+    public static int XK_backslash() {
+        return XK_backslash;
+    }
+    private static final int XK_bracketright = (int)93L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_bracketright 93
+     * }
+     */
+    public static int XK_bracketright() {
+        return XK_bracketright;
+    }
+    private static final int XK_asciicircum = (int)94L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_asciicircum 94
+     * }
+     */
+    public static int XK_asciicircum() {
+        return XK_asciicircum;
+    }
+    private static final int XK_underscore = (int)95L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_underscore 95
+     * }
+     */
+    public static int XK_underscore() {
+        return XK_underscore;
+    }
+    private static final int XK_grave = (int)96L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_grave 96
+     * }
+     */
+    public static int XK_grave() {
+        return XK_grave;
+    }
+    private static final int XK_quoteleft = (int)96L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_quoteleft 96
+     * }
+     */
+    public static int XK_quoteleft() {
+        return XK_quoteleft;
+    }
+    private static final int XK_a = (int)97L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_a 97
+     * }
+     */
+    public static int XK_a() {
+        return XK_a;
+    }
+    private static final int XK_b = (int)98L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_b 98
+     * }
+     */
+    public static int XK_b() {
+        return XK_b;
+    }
+    private static final int XK_c = (int)99L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_c 99
+     * }
+     */
+    public static int XK_c() {
+        return XK_c;
+    }
+    private static final int XK_d = (int)100L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_d 100
+     * }
+     */
+    public static int XK_d() {
+        return XK_d;
+    }
+    private static final int XK_e = (int)101L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_e 101
+     * }
+     */
+    public static int XK_e() {
+        return XK_e;
+    }
+    private static final int XK_f = (int)102L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_f 102
+     * }
+     */
+    public static int XK_f() {
+        return XK_f;
+    }
+    private static final int XK_g = (int)103L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_g 103
+     * }
+     */
+    public static int XK_g() {
+        return XK_g;
+    }
+    private static final int XK_h = (int)104L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_h 104
+     * }
+     */
+    public static int XK_h() {
+        return XK_h;
+    }
+    private static final int XK_i = (int)105L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_i 105
+     * }
+     */
+    public static int XK_i() {
+        return XK_i;
+    }
+    private static final int XK_j = (int)106L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_j 106
+     * }
+     */
+    public static int XK_j() {
+        return XK_j;
+    }
+    private static final int XK_k = (int)107L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_k 107
+     * }
+     */
+    public static int XK_k() {
+        return XK_k;
+    }
+    private static final int XK_l = (int)108L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_l 108
+     * }
+     */
+    public static int XK_l() {
+        return XK_l;
+    }
+    private static final int XK_m = (int)109L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_m 109
+     * }
+     */
+    public static int XK_m() {
+        return XK_m;
+    }
+    private static final int XK_n = (int)110L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_n 110
+     * }
+     */
+    public static int XK_n() {
+        return XK_n;
+    }
+    private static final int XK_o = (int)111L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_o 111
+     * }
+     */
+    public static int XK_o() {
+        return XK_o;
+    }
+    private static final int XK_p = (int)112L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_p 112
+     * }
+     */
+    public static int XK_p() {
+        return XK_p;
+    }
+    private static final int XK_q = (int)113L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_q 113
+     * }
+     */
+    public static int XK_q() {
+        return XK_q;
+    }
+    private static final int XK_r = (int)114L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_r 114
+     * }
+     */
+    public static int XK_r() {
+        return XK_r;
+    }
+    private static final int XK_s = (int)115L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_s 115
+     * }
+     */
+    public static int XK_s() {
+        return XK_s;
+    }
+    private static final int XK_t = (int)116L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_t 116
+     * }
+     */
+    public static int XK_t() {
+        return XK_t;
+    }
+    private static final int XK_u = (int)117L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_u 117
+     * }
+     */
+    public static int XK_u() {
+        return XK_u;
+    }
+    private static final int XK_v = (int)118L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_v 118
+     * }
+     */
+    public static int XK_v() {
+        return XK_v;
+    }
+    private static final int XK_w = (int)119L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_w 119
+     * }
+     */
+    public static int XK_w() {
+        return XK_w;
+    }
+    private static final int XK_x = (int)120L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_x 120
+     * }
+     */
+    public static int XK_x() {
+        return XK_x;
+    }
+    private static final int XK_y = (int)121L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_y 121
+     * }
+     */
+    public static int XK_y() {
+        return XK_y;
+    }
+    private static final int XK_z = (int)122L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_z 122
+     * }
+     */
+    public static int XK_z() {
+        return XK_z;
+    }
+    private static final int XK_braceleft = (int)123L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_braceleft 123
+     * }
+     */
+    public static int XK_braceleft() {
+        return XK_braceleft;
+    }
+    private static final int XK_bar = (int)124L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_bar 124
+     * }
+     */
+    public static int XK_bar() {
+        return XK_bar;
+    }
+    private static final int XK_braceright = (int)125L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_braceright 125
+     * }
+     */
+    public static int XK_braceright() {
+        return XK_braceright;
+    }
+    private static final int XK_asciitilde = (int)126L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_asciitilde 126
+     * }
+     */
+    public static int XK_asciitilde() {
+        return XK_asciitilde;
+    }
+    private static final int XK_nobreakspace = (int)160L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_nobreakspace 160
+     * }
+     */
+    public static int XK_nobreakspace() {
+        return XK_nobreakspace;
+    }
+    private static final int XK_exclamdown = (int)161L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_exclamdown 161
+     * }
+     */
+    public static int XK_exclamdown() {
+        return XK_exclamdown;
+    }
+    private static final int XK_cent = (int)162L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_cent 162
+     * }
+     */
+    public static int XK_cent() {
+        return XK_cent;
+    }
+    private static final int XK_sterling = (int)163L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_sterling 163
+     * }
+     */
+    public static int XK_sterling() {
+        return XK_sterling;
+    }
+    private static final int XK_currency = (int)164L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_currency 164
+     * }
+     */
+    public static int XK_currency() {
+        return XK_currency;
+    }
+    private static final int XK_yen = (int)165L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_yen 165
+     * }
+     */
+    public static int XK_yen() {
+        return XK_yen;
+    }
+    private static final int XK_brokenbar = (int)166L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_brokenbar 166
+     * }
+     */
+    public static int XK_brokenbar() {
+        return XK_brokenbar;
+    }
+    private static final int XK_section = (int)167L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_section 167
+     * }
+     */
+    public static int XK_section() {
+        return XK_section;
+    }
+    private static final int XK_diaeresis = (int)168L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_diaeresis 168
+     * }
+     */
+    public static int XK_diaeresis() {
+        return XK_diaeresis;
+    }
+    private static final int XK_copyright = (int)169L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_copyright 169
+     * }
+     */
+    public static int XK_copyright() {
+        return XK_copyright;
+    }
+    private static final int XK_ordfeminine = (int)170L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ordfeminine 170
+     * }
+     */
+    public static int XK_ordfeminine() {
+        return XK_ordfeminine;
+    }
+    private static final int XK_guillemotleft = (int)171L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_guillemotleft 171
+     * }
+     */
+    public static int XK_guillemotleft() {
+        return XK_guillemotleft;
+    }
+    private static final int XK_notsign = (int)172L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_notsign 172
+     * }
+     */
+    public static int XK_notsign() {
+        return XK_notsign;
+    }
+    private static final int XK_hyphen = (int)173L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_hyphen 173
+     * }
+     */
+    public static int XK_hyphen() {
+        return XK_hyphen;
+    }
+    private static final int XK_registered = (int)174L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_registered 174
+     * }
+     */
+    public static int XK_registered() {
+        return XK_registered;
+    }
+    private static final int XK_macron = (int)175L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_macron 175
+     * }
+     */
+    public static int XK_macron() {
+        return XK_macron;
+    }
+    private static final int XK_degree = (int)176L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_degree 176
+     * }
+     */
+    public static int XK_degree() {
+        return XK_degree;
+    }
+    private static final int XK_plusminus = (int)177L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_plusminus 177
+     * }
+     */
+    public static int XK_plusminus() {
+        return XK_plusminus;
+    }
+    private static final int XK_twosuperior = (int)178L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_twosuperior 178
+     * }
+     */
+    public static int XK_twosuperior() {
+        return XK_twosuperior;
+    }
+    private static final int XK_threesuperior = (int)179L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_threesuperior 179
+     * }
+     */
+    public static int XK_threesuperior() {
+        return XK_threesuperior;
+    }
+    private static final int XK_acute = (int)180L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_acute 180
+     * }
+     */
+    public static int XK_acute() {
+        return XK_acute;
+    }
+    private static final int XK_mu = (int)181L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_mu 181
+     * }
+     */
+    public static int XK_mu() {
+        return XK_mu;
+    }
+    private static final int XK_paragraph = (int)182L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_paragraph 182
+     * }
+     */
+    public static int XK_paragraph() {
+        return XK_paragraph;
+    }
+    private static final int XK_periodcentered = (int)183L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_periodcentered 183
+     * }
+     */
+    public static int XK_periodcentered() {
+        return XK_periodcentered;
+    }
+    private static final int XK_cedilla = (int)184L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_cedilla 184
+     * }
+     */
+    public static int XK_cedilla() {
+        return XK_cedilla;
+    }
+    private static final int XK_onesuperior = (int)185L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_onesuperior 185
+     * }
+     */
+    public static int XK_onesuperior() {
+        return XK_onesuperior;
+    }
+    private static final int XK_masculine = (int)186L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_masculine 186
+     * }
+     */
+    public static int XK_masculine() {
+        return XK_masculine;
+    }
+    private static final int XK_guillemotright = (int)187L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_guillemotright 187
+     * }
+     */
+    public static int XK_guillemotright() {
+        return XK_guillemotright;
+    }
+    private static final int XK_onequarter = (int)188L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_onequarter 188
+     * }
+     */
+    public static int XK_onequarter() {
+        return XK_onequarter;
+    }
+    private static final int XK_onehalf = (int)189L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_onehalf 189
+     * }
+     */
+    public static int XK_onehalf() {
+        return XK_onehalf;
+    }
+    private static final int XK_threequarters = (int)190L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_threequarters 190
+     * }
+     */
+    public static int XK_threequarters() {
+        return XK_threequarters;
+    }
+    private static final int XK_questiondown = (int)191L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_questiondown 191
+     * }
+     */
+    public static int XK_questiondown() {
+        return XK_questiondown;
+    }
+    private static final int XK_Agrave = (int)192L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Agrave 192
+     * }
+     */
+    public static int XK_Agrave() {
+        return XK_Agrave;
+    }
+    private static final int XK_Aacute = (int)193L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Aacute 193
+     * }
+     */
+    public static int XK_Aacute() {
+        return XK_Aacute;
+    }
+    private static final int XK_Acircumflex = (int)194L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Acircumflex 194
+     * }
+     */
+    public static int XK_Acircumflex() {
+        return XK_Acircumflex;
+    }
+    private static final int XK_Atilde = (int)195L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Atilde 195
+     * }
+     */
+    public static int XK_Atilde() {
+        return XK_Atilde;
+    }
+    private static final int XK_Adiaeresis = (int)196L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Adiaeresis 196
+     * }
+     */
+    public static int XK_Adiaeresis() {
+        return XK_Adiaeresis;
+    }
+    private static final int XK_Aring = (int)197L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Aring 197
+     * }
+     */
+    public static int XK_Aring() {
+        return XK_Aring;
+    }
+    private static final int XK_AE = (int)198L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_AE 198
+     * }
+     */
+    public static int XK_AE() {
+        return XK_AE;
+    }
+    private static final int XK_Ccedilla = (int)199L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ccedilla 199
+     * }
+     */
+    public static int XK_Ccedilla() {
+        return XK_Ccedilla;
+    }
+    private static final int XK_Egrave = (int)200L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Egrave 200
+     * }
+     */
+    public static int XK_Egrave() {
+        return XK_Egrave;
+    }
+    private static final int XK_Eacute = (int)201L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Eacute 201
+     * }
+     */
+    public static int XK_Eacute() {
+        return XK_Eacute;
+    }
+    private static final int XK_Ecircumflex = (int)202L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ecircumflex 202
+     * }
+     */
+    public static int XK_Ecircumflex() {
+        return XK_Ecircumflex;
+    }
+    private static final int XK_Ediaeresis = (int)203L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ediaeresis 203
+     * }
+     */
+    public static int XK_Ediaeresis() {
+        return XK_Ediaeresis;
+    }
+    private static final int XK_Igrave = (int)204L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Igrave 204
+     * }
+     */
+    public static int XK_Igrave() {
+        return XK_Igrave;
+    }
+    private static final int XK_Iacute = (int)205L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Iacute 205
+     * }
+     */
+    public static int XK_Iacute() {
+        return XK_Iacute;
+    }
+    private static final int XK_Icircumflex = (int)206L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Icircumflex 206
+     * }
+     */
+    public static int XK_Icircumflex() {
+        return XK_Icircumflex;
+    }
+    private static final int XK_Idiaeresis = (int)207L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Idiaeresis 207
+     * }
+     */
+    public static int XK_Idiaeresis() {
+        return XK_Idiaeresis;
+    }
+    private static final int XK_ETH = (int)208L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ETH 208
+     * }
+     */
+    public static int XK_ETH() {
+        return XK_ETH;
+    }
+    private static final int XK_Eth = (int)208L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Eth 208
+     * }
+     */
+    public static int XK_Eth() {
+        return XK_Eth;
+    }
+    private static final int XK_Ntilde = (int)209L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ntilde 209
+     * }
+     */
+    public static int XK_Ntilde() {
+        return XK_Ntilde;
+    }
+    private static final int XK_Ograve = (int)210L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ograve 210
+     * }
+     */
+    public static int XK_Ograve() {
+        return XK_Ograve;
+    }
+    private static final int XK_Oacute = (int)211L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Oacute 211
+     * }
+     */
+    public static int XK_Oacute() {
+        return XK_Oacute;
+    }
+    private static final int XK_Ocircumflex = (int)212L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ocircumflex 212
+     * }
+     */
+    public static int XK_Ocircumflex() {
+        return XK_Ocircumflex;
+    }
+    private static final int XK_Otilde = (int)213L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Otilde 213
+     * }
+     */
+    public static int XK_Otilde() {
+        return XK_Otilde;
+    }
+    private static final int XK_Odiaeresis = (int)214L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Odiaeresis 214
+     * }
+     */
+    public static int XK_Odiaeresis() {
+        return XK_Odiaeresis;
+    }
+    private static final int XK_multiply = (int)215L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_multiply 215
+     * }
+     */
+    public static int XK_multiply() {
+        return XK_multiply;
+    }
+    private static final int XK_Oslash = (int)216L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Oslash 216
+     * }
+     */
+    public static int XK_Oslash() {
+        return XK_Oslash;
+    }
+    private static final int XK_Ooblique = (int)216L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ooblique 216
+     * }
+     */
+    public static int XK_Ooblique() {
+        return XK_Ooblique;
+    }
+    private static final int XK_Ugrave = (int)217L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ugrave 217
+     * }
+     */
+    public static int XK_Ugrave() {
+        return XK_Ugrave;
+    }
+    private static final int XK_Uacute = (int)218L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Uacute 218
+     * }
+     */
+    public static int XK_Uacute() {
+        return XK_Uacute;
+    }
+    private static final int XK_Ucircumflex = (int)219L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Ucircumflex 219
+     * }
+     */
+    public static int XK_Ucircumflex() {
+        return XK_Ucircumflex;
+    }
+    private static final int XK_Udiaeresis = (int)220L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Udiaeresis 220
+     * }
+     */
+    public static int XK_Udiaeresis() {
+        return XK_Udiaeresis;
+    }
+    private static final int XK_Yacute = (int)221L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Yacute 221
+     * }
+     */
+    public static int XK_Yacute() {
+        return XK_Yacute;
+    }
+    private static final int XK_THORN = (int)222L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_THORN 222
+     * }
+     */
+    public static int XK_THORN() {
+        return XK_THORN;
+    }
+    private static final int XK_Thorn = (int)222L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_Thorn 222
+     * }
+     */
+    public static int XK_Thorn() {
+        return XK_Thorn;
+    }
+    private static final int XK_ssharp = (int)223L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ssharp 223
+     * }
+     */
+    public static int XK_ssharp() {
+        return XK_ssharp;
+    }
+    private static final int XK_agrave = (int)224L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_agrave 224
+     * }
+     */
+    public static int XK_agrave() {
+        return XK_agrave;
+    }
+    private static final int XK_aacute = (int)225L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_aacute 225
+     * }
+     */
+    public static int XK_aacute() {
+        return XK_aacute;
+    }
+    private static final int XK_acircumflex = (int)226L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_acircumflex 226
+     * }
+     */
+    public static int XK_acircumflex() {
+        return XK_acircumflex;
+    }
+    private static final int XK_atilde = (int)227L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_atilde 227
+     * }
+     */
+    public static int XK_atilde() {
+        return XK_atilde;
+    }
+    private static final int XK_adiaeresis = (int)228L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_adiaeresis 228
+     * }
+     */
+    public static int XK_adiaeresis() {
+        return XK_adiaeresis;
+    }
+    private static final int XK_aring = (int)229L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_aring 229
+     * }
+     */
+    public static int XK_aring() {
+        return XK_aring;
+    }
+    private static final int XK_ae = (int)230L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ae 230
+     * }
+     */
+    public static int XK_ae() {
+        return XK_ae;
+    }
+    private static final int XK_ccedilla = (int)231L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ccedilla 231
+     * }
+     */
+    public static int XK_ccedilla() {
+        return XK_ccedilla;
+    }
+    private static final int XK_egrave = (int)232L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_egrave 232
+     * }
+     */
+    public static int XK_egrave() {
+        return XK_egrave;
+    }
+    private static final int XK_eacute = (int)233L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_eacute 233
+     * }
+     */
+    public static int XK_eacute() {
+        return XK_eacute;
+    }
+    private static final int XK_ecircumflex = (int)234L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ecircumflex 234
+     * }
+     */
+    public static int XK_ecircumflex() {
+        return XK_ecircumflex;
+    }
+    private static final int XK_ediaeresis = (int)235L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ediaeresis 235
+     * }
+     */
+    public static int XK_ediaeresis() {
+        return XK_ediaeresis;
+    }
+    private static final int XK_igrave = (int)236L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_igrave 236
+     * }
+     */
+    public static int XK_igrave() {
+        return XK_igrave;
+    }
+    private static final int XK_iacute = (int)237L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_iacute 237
+     * }
+     */
+    public static int XK_iacute() {
+        return XK_iacute;
+    }
+    private static final int XK_icircumflex = (int)238L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_icircumflex 238
+     * }
+     */
+    public static int XK_icircumflex() {
+        return XK_icircumflex;
+    }
+    private static final int XK_idiaeresis = (int)239L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_idiaeresis 239
+     * }
+     */
+    public static int XK_idiaeresis() {
+        return XK_idiaeresis;
+    }
+    private static final int XK_eth = (int)240L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_eth 240
+     * }
+     */
+    public static int XK_eth() {
+        return XK_eth;
+    }
+    private static final int XK_ntilde = (int)241L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ntilde 241
+     * }
+     */
+    public static int XK_ntilde() {
+        return XK_ntilde;
+    }
+    private static final int XK_ograve = (int)242L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ograve 242
+     * }
+     */
+    public static int XK_ograve() {
+        return XK_ograve;
+    }
+    private static final int XK_oacute = (int)243L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_oacute 243
+     * }
+     */
+    public static int XK_oacute() {
+        return XK_oacute;
+    }
+    private static final int XK_ocircumflex = (int)244L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_ocircumflex 244
+     * }
+     */
+    public static int XK_ocircumflex() {
+        return XK_ocircumflex;
+    }
+    private static final int XK_otilde = (int)245L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_otilde 245
+     * }
+     */
+    public static int XK_otilde() {
+        return XK_otilde;
+    }
+    private static final int XK_odiaeresis = (int)246L;
+    /**
+     * {@snippet lang=c :
+     * #define XK_odiaeresis 246
+     * }
+     */
+    public static int XK_odiaeresis() {
+        return XK_odiaeresis;
+    }
+    private static final int XK_division = (int)247L;
     /**
-     * {@snippet :
-     * #define CWWinGravity 32
+     * {@snippet lang=c :
+     * #define XK_division 247
      * }
      */
-    public static long CWWinGravity() {
-        return 32L;
+    public static int XK_division() {
+        return XK_division;
     }
+    private static final int XK_oslash = (int)248L;
     /**
-     * {@snippet :
-     * #define CWBackingStore 64
+     * {@snippet lang=c :
+     * #define XK_oslash 248
      * }
      */
-    public static long CWBackingStore() {
-        return 64L;
+    public static int XK_oslash() {
+        return XK_oslash;
     }
+    private static final int XK_ooblique = (int)248L;
     /**
-     * {@snippet :
-     * #define CWBackingPlanes 128
+     * {@snippet lang=c :
+     * #define XK_ooblique 248
      * }
      */
-    public static long CWBackingPlanes() {
-        return 128L;
+    public static int XK_ooblique() {
+        return XK_ooblique;
     }
+    private static final int XK_ugrave = (int)249L;
     /**
-     * {@snippet :
-     * #define CWBackingPixel 256
+     * {@snippet lang=c :
+     * #define XK_ugrave 249
      * }
      */
-    public static long CWBackingPixel() {
-        return 256L;
+    public static int XK_ugrave() {
+        return XK_ugrave;
     }
+    private static final int XK_uacute = (int)250L;
     /**
-     * {@snippet :
-     * #define CWOverrideRedirect 512
+     * {@snippet lang=c :
+     * #define XK_uacute 250
      * }
      */
-    public static long CWOverrideRedirect() {
-        return 512L;
+    public static int XK_uacute() {
+        return XK_uacute;
     }
+    private static final int XK_ucircumflex = (int)251L;
     /**
-     * {@snippet :
-     * #define CWSaveUnder 1024
+     * {@snippet lang=c :
+     * #define XK_ucircumflex 251
      * }
      */
-    public static long CWSaveUnder() {
-        return 1024L;
+    public static int XK_ucircumflex() {
+        return XK_ucircumflex;
     }
+    private static final int XK_udiaeresis = (int)252L;
     /**
-     * {@snippet :
-     * #define CWEventMask 2048
+     * {@snippet lang=c :
+     * #define XK_udiaeresis 252
      * }
      */
-    public static long CWEventMask() {
-        return 2048L;
+    public static int XK_udiaeresis() {
+        return XK_udiaeresis;
     }
+    private static final int XK_yacute = (int)253L;
     /**
-     * {@snippet :
-     * #define CWDontPropagate 4096
+     * {@snippet lang=c :
+     * #define XK_yacute 253
      * }
      */
-    public static long CWDontPropagate() {
-        return 4096L;
+    public static int XK_yacute() {
+        return XK_yacute;
     }
+    private static final int XK_thorn = (int)254L;
     /**
-     * {@snippet :
-     * #define CWColormap 8192
+     * {@snippet lang=c :
+     * #define XK_thorn 254
      * }
      */
-    public static long CWColormap() {
-        return 8192L;
+    public static int XK_thorn() {
+        return XK_thorn;
     }
+    private static final int XK_ydiaeresis = (int)255L;
     /**
-     * {@snippet :
-     * #define CWCursor 16384
+     * {@snippet lang=c :
+     * #define XK_ydiaeresis 255
      * }
      */
-    public static long CWCursor() {
-        return 16384L;
+    public static int XK_ydiaeresis() {
+        return XK_ydiaeresis;
     }
+    private static final int XK_Aogonek = (int)417L;
     /**
-     * {@snippet :
-     * #define CWX 1
+     * {@snippet lang=c :
+     * #define XK_Aogonek 417
      * }
      */
-    public static int CWX() {
-        return (int)1L;
+    public static int XK_Aogonek() {
+        return XK_Aogonek;
     }
+    private static final int XK_breve = (int)418L;
     /**
-     * {@snippet :
-     * #define CWY 2
+     * {@snippet lang=c :
+     * #define XK_breve 418
      * }
      */
-    public static int CWY() {
-        return (int)2L;
+    public static int XK_breve() {
+        return XK_breve;
     }
+    private static final int XK_Lstroke = (int)419L;
     /**
-     * {@snippet :
-     * #define CWWidth 4
+     * {@snippet lang=c :
+     * #define XK_Lstroke 419
      * }
      */
-    public static int CWWidth() {
-        return (int)4L;
+    public static int XK_Lstroke() {
+        return XK_Lstroke;
     }
+    private static final int XK_Lcaron = (int)421L;
     /**
-     * {@snippet :
-     * #define CWHeight 8
+     * {@snippet lang=c :
+     * #define XK_Lcaron 421
      * }
      */
-    public static int CWHeight() {
-        return (int)8L;
+    public static int XK_Lcaron() {
+        return XK_Lcaron;
     }
+    private static final int XK_Sacute = (int)422L;
     /**
-     * {@snippet :
-     * #define CWBorderWidth 16
+     * {@snippet lang=c :
+     * #define XK_Sacute 422
      * }
      */
-    public static int CWBorderWidth() {
-        return (int)16L;
+    public static int XK_Sacute() {
+        return XK_Sacute;
     }
+    private static final int XK_Scaron = (int)425L;
     /**
-     * {@snippet :
-     * #define CWSibling 32
+     * {@snippet lang=c :
+     * #define XK_Scaron 425
      * }
      */
-    public static int CWSibling() {
-        return (int)32L;
+    public static int XK_Scaron() {
+        return XK_Scaron;
     }
+    private static final int XK_Scedilla = (int)426L;
     /**
-     * {@snippet :
-     * #define CWStackMode 64
+     * {@snippet lang=c :
+     * #define XK_Scedilla 426
      * }
      */
-    public static int CWStackMode() {
-        return (int)64L;
+    public static int XK_Scedilla() {
+        return XK_Scedilla;
     }
+    private static final int XK_Tcaron = (int)427L;
     /**
-     * {@snippet :
-     * #define GCFunction 1
+     * {@snippet lang=c :
+     * #define XK_Tcaron 427
      * }
      */
-    public static long GCFunction() {
-        return 1L;
+    public static int XK_Tcaron() {
+        return XK_Tcaron;
     }
+    private static final int XK_Zacute = (int)428L;
     /**
-     * {@snippet :
-     * #define GCPlaneMask 2
+     * {@snippet lang=c :
+     * #define XK_Zacute 428
      * }
      */
-    public static long GCPlaneMask() {
-        return 2L;
+    public static int XK_Zacute() {
+        return XK_Zacute;
     }
+    private static final int XK_Zcaron = (int)430L;
     /**
-     * {@snippet :
-     * #define GCForeground 4
+     * {@snippet lang=c :
+     * #define XK_Zcaron 430
      * }
      */
-    public static long GCForeground() {
-        return 4L;
+    public static int XK_Zcaron() {
+        return XK_Zcaron;
     }
+    private static final int XK_Zabovedot = (int)431L;
     /**
-     * {@snippet :
-     * #define GCBackground 8
+     * {@snippet lang=c :
+     * #define XK_Zabovedot 431
      * }
      */
-    public static long GCBackground() {
-        return 8L;
+    public static int XK_Zabovedot() {
+        return XK_Zabovedot;
     }
+    private static final int XK_aogonek = (int)433L;
     /**
-     * {@snippet :
-     * #define GCLineWidth 16
+     * {@snippet lang=c :
+     * #define XK_aogonek 433
      * }
      */
-    public static long GCLineWidth() {
-        return 16L;
+    public static int XK_aogonek() {
+        return XK_aogonek;
     }
+    private static final int XK_ogonek = (int)434L;
     /**
-     * {@snippet :
-     * #define GCLineStyle 32
+     * {@snippet lang=c :
+     * #define XK_ogonek 434
      * }
      */
-    public static long GCLineStyle() {
-        return 32L;
+    public static int XK_ogonek() {
+        return XK_ogonek;
     }
+    private static final int XK_lstroke = (int)435L;
     /**
-     * {@snippet :
-     * #define GCCapStyle 64
+     * {@snippet lang=c :
+     * #define XK_lstroke 435
      * }
      */
-    public static long GCCapStyle() {
-        return 64L;
+    public static int XK_lstroke() {
+        return XK_lstroke;
     }
+    private static final int XK_lcaron = (int)437L;
     /**
-     * {@snippet :
-     * #define GCJoinStyle 128
+     * {@snippet lang=c :
+     * #define XK_lcaron 437
      * }
      */
-    public static long GCJoinStyle() {
-        return 128L;
+    public static int XK_lcaron() {
+        return XK_lcaron;
     }
+    private static final int XK_sacute = (int)438L;
     /**
-     * {@snippet :
-     * #define GCFillStyle 256
+     * {@snippet lang=c :
+     * #define XK_sacute 438
      * }
      */
-    public static long GCFillStyle() {
-        return 256L;
+    public static int XK_sacute() {
+        return XK_sacute;
     }
+    private static final int XK_caron = (int)439L;
     /**
-     * {@snippet :
-     * #define GCFillRule 512
+     * {@snippet lang=c :
+     * #define XK_caron 439
      * }
      */
-    public static long GCFillRule() {
-        return 512L;
+    public static int XK_caron() {
+        return XK_caron;
     }
+    private static final int XK_scaron = (int)441L;
     /**
-     * {@snippet :
-     * #define GCTile 1024
+     * {@snippet lang=c :
+     * #define XK_scaron 441
      * }
      */
-    public static long GCTile() {
-        return 1024L;
+    public static int XK_scaron() {
+        return XK_scaron;
     }
+    private static final int XK_scedilla = (int)442L;
     /**
-     * {@snippet :
-     * #define GCStipple 2048
+     * {@snippet lang=c :
+     * #define XK_scedilla 442
      * }
      */
-    public static long GCStipple() {
-        return 2048L;
+    public static int XK_scedilla() {
+        return XK_scedilla;
     }
+    private static final int XK_tcaron = (int)443L;
     /**
-     * {@snippet :
-     * #define GCTileStipXOrigin 4096
+     * {@snippet lang=c :
+     * #define XK_tcaron 443
      * }
      */
-    public static long GCTileStipXOrigin() {
-        return 4096L;
+    public static int XK_tcaron() {
+        return XK_tcaron;
     }
+    private static final int XK_zacute = (int)444L;
     /**
-     * {@snippet :
-     * #define GCTileStipYOrigin 8192
+     * {@snippet lang=c :
+     * #define XK_zacute 444
      * }
      */
-    public static long GCTileStipYOrigin() {
-        return 8192L;
+    public static int XK_zacute() {
+        return XK_zacute;
     }
+    private static final int XK_doubleacute = (int)445L;
     /**
-     * {@snippet :
-     * #define GCFont 16384
+     * {@snippet lang=c :
+     * #define XK_doubleacute 445
      * }
      */
-    public static long GCFont() {
-        return 16384L;
+    public static int XK_doubleacute() {
+        return XK_doubleacute;
     }
+    private static final int XK_zcaron = (int)446L;
     /**
-     * {@snippet :
-     * #define GCSubwindowMode 32768
+     * {@snippet lang=c :
+     * #define XK_zcaron 446
      * }
      */
-    public static long GCSubwindowMode() {
-        return 32768L;
+    public static int XK_zcaron() {
+        return XK_zcaron;
     }
+    private static final int XK_zabovedot = (int)447L;
     /**
-     * {@snippet :
-     * #define GCGraphicsExposures 65536
+     * {@snippet lang=c :
+     * #define XK_zabovedot 447
      * }
      */
-    public static long GCGraphicsExposures() {
-        return 65536L;
+    public static int XK_zabovedot() {
+        return XK_zabovedot;
     }
+    private static final int XK_Racute = (int)448L;
     /**
-     * {@snippet :
-     * #define GCClipXOrigin 131072
+     * {@snippet lang=c :
+     * #define XK_Racute 448
      * }
      */
-    public static long GCClipXOrigin() {
-        return 131072L;
+    public static int XK_Racute() {
+        return XK_Racute;
     }
+    private static final int XK_Abreve = (int)451L;
     /**
-     * {@snippet :
-     * #define GCClipYOrigin 262144
+     * {@snippet lang=c :
+     * #define XK_Abreve 451
      * }
      */
-    public static long GCClipYOrigin() {
-        return 262144L;
+    public static int XK_Abreve() {
+        return XK_Abreve;
     }
+    private static final int XK_Lacute = (int)453L;
     /**
-     * {@snippet :
-     * #define GCClipMask 524288
+     * {@snippet lang=c :
+     * #define XK_Lacute 453
      * }
      */
-    public static long GCClipMask() {
-        return 524288L;
+    public static int XK_Lacute() {
+        return XK_Lacute;
     }
+    private static final int XK_Cacute = (int)454L;
     /**
-     * {@snippet :
-     * #define GCDashOffset 1048576
+     * {@snippet lang=c :
+     * #define XK_Cacute 454
      * }
      */
-    public static long GCDashOffset() {
-        return 1048576L;
+    public static int XK_Cacute() {
+        return XK_Cacute;
     }
+    private static final int XK_Ccaron = (int)456L;
     /**
-     * {@snippet :
-     * #define GCDashList 2097152
+     * {@snippet lang=c :
+     * #define XK_Ccaron 456
      * }
      */
-    public static long GCDashList() {
-        return 2097152L;
+    public static int XK_Ccaron() {
+        return XK_Ccaron;
     }
+    private static final int XK_Eogonek = (int)458L;
     /**
-     * {@snippet :
-     * #define GCArcMode 4194304
+     * {@snippet lang=c :
+     * #define XK_Eogonek 458
      * }
      */
-    public static long GCArcMode() {
-        return 4194304L;
+    public static int XK_Eogonek() {
+        return XK_Eogonek;
     }
+    private static final int XK_Ecaron = (int)460L;
     /**
-     * {@snippet :
-     * #define DoRed 1
+     * {@snippet lang=c :
+     * #define XK_Ecaron 460
      * }
      */
-    public static int DoRed() {
-        return (int)1L;
+    public static int XK_Ecaron() {
+        return XK_Ecaron;
     }
+    private static final int XK_Dcaron = (int)463L;
     /**
-     * {@snippet :
-     * #define DoGreen 2
+     * {@snippet lang=c :
+     * #define XK_Dcaron 463
      * }
      */
-    public static int DoGreen() {
-        return (int)2L;
+    public static int XK_Dcaron() {
+        return XK_Dcaron;
     }
+    private static final int XK_Dstroke = (int)464L;
     /**
-     * {@snippet :
-     * #define DoBlue 4
+     * {@snippet lang=c :
+     * #define XK_Dstroke 464
      * }
      */
-    public static int DoBlue() {
-        return (int)4L;
+    public static int XK_Dstroke() {
+        return XK_Dstroke;
     }
+    private static final int XK_Nacute = (int)465L;
     /**
-     * {@snippet :
-     * #define KBKeyClickPercent 1
+     * {@snippet lang=c :
+     * #define XK_Nacute 465
      * }
      */
-    public static long KBKeyClickPercent() {
-        return 1L;
+    public static int XK_Nacute() {
+        return XK_Nacute;
     }
+    private static final int XK_Ncaron = (int)466L;
     /**
-     * {@snippet :
-     * #define KBBellPercent 2
+     * {@snippet lang=c :
+     * #define XK_Ncaron 466
      * }
      */
-    public static long KBBellPercent() {
-        return 2L;
+    public static int XK_Ncaron() {
+        return XK_Ncaron;
     }
+    private static final int XK_Odoubleacute = (int)469L;
     /**
-     * {@snippet :
-     * #define KBBellPitch 4
+     * {@snippet lang=c :
+     * #define XK_Odoubleacute 469
      * }
      */
-    public static long KBBellPitch() {
-        return 4L;
+    public static int XK_Odoubleacute() {
+        return XK_Odoubleacute;
     }
+    private static final int XK_Rcaron = (int)472L;
     /**
-     * {@snippet :
-     * #define KBBellDuration 8
+     * {@snippet lang=c :
+     * #define XK_Rcaron 472
      * }
      */
-    public static long KBBellDuration() {
-        return 8L;
+    public static int XK_Rcaron() {
+        return XK_Rcaron;
     }
+    private static final int XK_Uring = (int)473L;
     /**
-     * {@snippet :
-     * #define KBLed 16
+     * {@snippet lang=c :
+     * #define XK_Uring 473
      * }
      */
-    public static long KBLed() {
-        return 16L;
+    public static int XK_Uring() {
+        return XK_Uring;
     }
+    private static final int XK_Udoubleacute = (int)475L;
     /**
-     * {@snippet :
-     * #define KBLedMode 32
+     * {@snippet lang=c :
+     * #define XK_Udoubleacute 475
      * }
      */
-    public static long KBLedMode() {
-        return 32L;
+    public static int XK_Udoubleacute() {
+        return XK_Udoubleacute;
     }
+    private static final int XK_Tcedilla = (int)478L;
     /**
-     * {@snippet :
-     * #define KBKey 64
+     * {@snippet lang=c :
+     * #define XK_Tcedilla 478
      * }
      */
-    public static long KBKey() {
-        return 64L;
+    public static int XK_Tcedilla() {
+        return XK_Tcedilla;
     }
+    private static final int XK_racute = (int)480L;
     /**
-     * {@snippet :
-     * #define KBAutoRepeatMode 128
+     * {@snippet lang=c :
+     * #define XK_racute 480
      * }
      */
-    public static long KBAutoRepeatMode() {
-        return 128L;
+    public static int XK_racute() {
+        return XK_racute;
     }
+    private static final int XK_abreve = (int)483L;
     /**
-     * {@snippet :
-     * #define NULL 0
+     * {@snippet lang=c :
+     * #define XK_abreve 483
      * }
      */
-    public static MemorySegment NULL() {
-        return constants$236.const$1;
+    public static int XK_abreve() {
+        return XK_abreve;
     }
+    private static final int XK_lacute = (int)485L;
     /**
-     * {@snippet :
-     * #define AllPlanes -1
+     * {@snippet lang=c :
+     * #define XK_lacute 485
      * }
      */
-    public static long AllPlanes() {
-        return -1L;
+    public static int XK_lacute() {
+        return XK_lacute;
     }
+    private static final int XK_cacute = (int)486L;
     /**
-     * {@snippet :
-     * #define XNRequiredCharSet "requiredCharSet"
+     * {@snippet lang=c :
+     * #define XK_cacute 486
      * }
      */
-    public static MemorySegment XNRequiredCharSet() {
-        return constants$236.const$2;
+    public static int XK_cacute() {
+        return XK_cacute;
     }
+    private static final int XK_ccaron = (int)488L;
     /**
-     * {@snippet :
-     * #define XNQueryOrientation "queryOrientation"
+     * {@snippet lang=c :
+     * #define XK_ccaron 488
      * }
      */
-    public static MemorySegment XNQueryOrientation() {
-        return constants$236.const$3;
+    public static int XK_ccaron() {
+        return XK_ccaron;
     }
+    private static final int XK_eogonek = (int)490L;
     /**
-     * {@snippet :
-     * #define XNBaseFontName "baseFontName"
+     * {@snippet lang=c :
+     * #define XK_eogonek 490
      * }
      */
-    public static MemorySegment XNBaseFontName() {
-        return constants$236.const$4;
+    public static int XK_eogonek() {
+        return XK_eogonek;
     }
+    private static final int XK_ecaron = (int)492L;
     /**
-     * {@snippet :
-     * #define XNOMAutomatic "omAutomatic"
+     * {@snippet lang=c :
+     * #define XK_ecaron 492
      * }
      */
-    public static MemorySegment XNOMAutomatic() {
-        return constants$236.const$5;
+    public static int XK_ecaron() {
+        return XK_ecaron;
     }
+    private static final int XK_dcaron = (int)495L;
     /**
-     * {@snippet :
-     * #define XNMissingCharSet "missingCharSet"
+     * {@snippet lang=c :
+     * #define XK_dcaron 495
      * }
      */
-    public static MemorySegment XNMissingCharSet() {
-        return constants$237.const$0;
+    public static int XK_dcaron() {
+        return XK_dcaron;
     }
+    private static final int XK_dstroke = (int)496L;
     /**
-     * {@snippet :
-     * #define XNDefaultString "defaultString"
+     * {@snippet lang=c :
+     * #define XK_dstroke 496
      * }
      */
-    public static MemorySegment XNDefaultString() {
-        return constants$237.const$1;
+    public static int XK_dstroke() {
+        return XK_dstroke;
     }
+    private static final int XK_nacute = (int)497L;
     /**
-     * {@snippet :
-     * #define XNOrientation "orientation"
+     * {@snippet lang=c :
+     * #define XK_nacute 497
      * }
      */
-    public static MemorySegment XNOrientation() {
-        return constants$237.const$2;
+    public static int XK_nacute() {
+        return XK_nacute;
     }
+    private static final int XK_ncaron = (int)498L;
     /**
-     * {@snippet :
-     * #define XNDirectionalDependentDrawing "directionalDependentDrawing"
+     * {@snippet lang=c :
+     * #define XK_ncaron 498
      * }
      */
-    public static MemorySegment XNDirectionalDependentDrawing() {
-        return constants$237.const$3;
+    public static int XK_ncaron() {
+        return XK_ncaron;
     }
+    private static final int XK_odoubleacute = (int)501L;
     /**
-     * {@snippet :
-     * #define XNContextualDrawing "contextualDrawing"
+     * {@snippet lang=c :
+     * #define XK_odoubleacute 501
      * }
      */
-    public static MemorySegment XNContextualDrawing() {
-        return constants$237.const$4;
+    public static int XK_odoubleacute() {
+        return XK_odoubleacute;
     }
+    private static final int XK_rcaron = (int)504L;
     /**
-     * {@snippet :
-     * #define XNFontInfo "fontInfo"
+     * {@snippet lang=c :
+     * #define XK_rcaron 504
      * }
      */
-    public static MemorySegment XNFontInfo() {
-        return constants$237.const$5;
+    public static int XK_rcaron() {
+        return XK_rcaron;
     }
+    private static final int XK_uring = (int)505L;
     /**
-     * {@snippet :
-     * #define XIMPreeditArea 1
+     * {@snippet lang=c :
+     * #define XK_uring 505
      * }
      */
-    public static long XIMPreeditArea() {
-        return 1L;
+    public static int XK_uring() {
+        return XK_uring;
     }
+    private static final int XK_udoubleacute = (int)507L;
     /**
-     * {@snippet :
-     * #define XIMPreeditCallbacks 2
+     * {@snippet lang=c :
+     * #define XK_udoubleacute 507
      * }
      */
-    public static long XIMPreeditCallbacks() {
-        return 2L;
+    public static int XK_udoubleacute() {
+        return XK_udoubleacute;
     }
+    private static final int XK_tcedilla = (int)510L;
     /**
-     * {@snippet :
-     * #define XIMPreeditPosition 4
+     * {@snippet lang=c :
+     * #define XK_tcedilla 510
      * }
      */
-    public static long XIMPreeditPosition() {
-        return 4L;
+    public static int XK_tcedilla() {
+        return XK_tcedilla;
     }
+    private static final int XK_abovedot = (int)511L;
     /**
-     * {@snippet :
-     * #define XIMPreeditNothing 8
+     * {@snippet lang=c :
+     * #define XK_abovedot 511
      * }
      */
-    public static long XIMPreeditNothing() {
-        return 8L;
+    public static int XK_abovedot() {
+        return XK_abovedot;
     }
+    private static final int XK_Hstroke = (int)673L;
     /**
-     * {@snippet :
-     * #define XIMPreeditNone 16
+     * {@snippet lang=c :
+     * #define XK_Hstroke 673
      * }
      */
-    public static long XIMPreeditNone() {
-        return 16L;
+    public static int XK_Hstroke() {
+        return XK_Hstroke;
     }
+    private static final int XK_Hcircumflex = (int)678L;
     /**
-     * {@snippet :
-     * #define XIMStatusArea 256
+     * {@snippet lang=c :
+     * #define XK_Hcircumflex 678
      * }
      */
-    public static long XIMStatusArea() {
-        return 256L;
+    public static int XK_Hcircumflex() {
+        return XK_Hcircumflex;
     }
+    private static final int XK_Iabovedot = (int)681L;
     /**
-     * {@snippet :
-     * #define XIMStatusCallbacks 512
+     * {@snippet lang=c :
+     * #define XK_Iabovedot 681
      * }
      */
-    public static long XIMStatusCallbacks() {
-        return 512L;
+    public static int XK_Iabovedot() {
+        return XK_Iabovedot;
     }
+    private static final int XK_Gbreve = (int)683L;
     /**
-     * {@snippet :
-     * #define XIMStatusNothing 1024
+     * {@snippet lang=c :
+     * #define XK_Gbreve 683
      * }
      */
-    public static long XIMStatusNothing() {
-        return 1024L;
+    public static int XK_Gbreve() {
+        return XK_Gbreve;
     }
+    private static final int XK_Jcircumflex = (int)684L;
     /**
-     * {@snippet :
-     * #define XIMStatusNone 2048
+     * {@snippet lang=c :
+     * #define XK_Jcircumflex 684
      * }
      */
-    public static long XIMStatusNone() {
-        return 2048L;
+    public static int XK_Jcircumflex() {
+        return XK_Jcircumflex;
     }
+    private static final int XK_hstroke = (int)689L;
     /**
-     * {@snippet :
-     * #define XNVaNestedList "XNVaNestedList"
+     * {@snippet lang=c :
+     * #define XK_hstroke 689
      * }
      */
-    public static MemorySegment XNVaNestedList() {
-        return constants$238.const$0;
+    public static int XK_hstroke() {
+        return XK_hstroke;
     }
+    private static final int XK_hcircumflex = (int)694L;
     /**
-     * {@snippet :
-     * #define XNQueryInputStyle "queryInputStyle"
+     * {@snippet lang=c :
+     * #define XK_hcircumflex 694
      * }
      */
-    public static MemorySegment XNQueryInputStyle() {
-        return constants$238.const$1;
+    public static int XK_hcircumflex() {
+        return XK_hcircumflex;
     }
+    private static final int XK_idotless = (int)697L;
     /**
-     * {@snippet :
-     * #define XNClientWindow "clientWindow"
+     * {@snippet lang=c :
+     * #define XK_idotless 697
      * }
      */
-    public static MemorySegment XNClientWindow() {
-        return constants$238.const$2;
+    public static int XK_idotless() {
+        return XK_idotless;
     }
+    private static final int XK_gbreve = (int)699L;
     /**
-     * {@snippet :
-     * #define XNInputStyle "inputStyle"
+     * {@snippet lang=c :
+     * #define XK_gbreve 699
      * }
      */
-    public static MemorySegment XNInputStyle() {
-        return constants$238.const$3;
+    public static int XK_gbreve() {
+        return XK_gbreve;
     }
+    private static final int XK_jcircumflex = (int)700L;
     /**
-     * {@snippet :
-     * #define XNFocusWindow "focusWindow"
+     * {@snippet lang=c :
+     * #define XK_jcircumflex 700
      * }
      */
-    public static MemorySegment XNFocusWindow() {
-        return constants$238.const$4;
+    public static int XK_jcircumflex() {
+        return XK_jcircumflex;
     }
+    private static final int XK_Cabovedot = (int)709L;
     /**
-     * {@snippet :
-     * #define XNResourceName "resourceName"
+     * {@snippet lang=c :
+     * #define XK_Cabovedot 709
      * }
      */
-    public static MemorySegment XNResourceName() {
-        return constants$238.const$5;
+    public static int XK_Cabovedot() {
+        return XK_Cabovedot;
     }
+    private static final int XK_Ccircumflex = (int)710L;
     /**
-     * {@snippet :
-     * #define XNResourceClass "resourceClass"
+     * {@snippet lang=c :
+     * #define XK_Ccircumflex 710
      * }
      */
-    public static MemorySegment XNResourceClass() {
-        return constants$239.const$0;
+    public static int XK_Ccircumflex() {
+        return XK_Ccircumflex;
     }
+    private static final int XK_Gabovedot = (int)725L;
     /**
-     * {@snippet :
-     * #define XNGeometryCallback "geometryCallback"
+     * {@snippet lang=c :
+     * #define XK_Gabovedot 725
      * }
      */
-    public static MemorySegment XNGeometryCallback() {
-        return constants$239.const$1;
+    public static int XK_Gabovedot() {
+        return XK_Gabovedot;
     }
+    private static final int XK_Gcircumflex = (int)728L;
     /**
-     * {@snippet :
-     * #define XNDestroyCallback "destroyCallback"
+     * {@snippet lang=c :
+     * #define XK_Gcircumflex 728
      * }
      */
-    public static MemorySegment XNDestroyCallback() {
-        return constants$239.const$2;
+    public static int XK_Gcircumflex() {
+        return XK_Gcircumflex;
     }
+    private static final int XK_Ubreve = (int)733L;
     /**
-     * {@snippet :
-     * #define XNFilterEvents "filterEvents"
+     * {@snippet lang=c :
+     * #define XK_Ubreve 733
      * }
      */
-    public static MemorySegment XNFilterEvents() {
-        return constants$239.const$3;
+    public static int XK_Ubreve() {
+        return XK_Ubreve;
     }
+    private static final int XK_Scircumflex = (int)734L;
     /**
-     * {@snippet :
-     * #define XNPreeditStartCallback "preeditStartCallback"
+     * {@snippet lang=c :
+     * #define XK_Scircumflex 734
      * }
      */
-    public static MemorySegment XNPreeditStartCallback() {
-        return constants$239.const$4;
+    public static int XK_Scircumflex() {
+        return XK_Scircumflex;
     }
+    private static final int XK_cabovedot = (int)741L;
     /**
-     * {@snippet :
-     * #define XNPreeditDoneCallback "preeditDoneCallback"
+     * {@snippet lang=c :
+     * #define XK_cabovedot 741
      * }
      */
-    public static MemorySegment XNPreeditDoneCallback() {
-        return constants$239.const$5;
+    public static int XK_cabovedot() {
+        return XK_cabovedot;
     }
+    private static final int XK_ccircumflex = (int)742L;
     /**
-     * {@snippet :
-     * #define XNPreeditDrawCallback "preeditDrawCallback"
+     * {@snippet lang=c :
+     * #define XK_ccircumflex 742
      * }
      */
-    public static MemorySegment XNPreeditDrawCallback() {
-        return constants$240.const$0;
+    public static int XK_ccircumflex() {
+        return XK_ccircumflex;
     }
+    private static final int XK_gabovedot = (int)757L;
     /**
-     * {@snippet :
-     * #define XNPreeditCaretCallback "preeditCaretCallback"
+     * {@snippet lang=c :
+     * #define XK_gabovedot 757
      * }
      */
-    public static MemorySegment XNPreeditCaretCallback() {
-        return constants$240.const$1;
+    public static int XK_gabovedot() {
+        return XK_gabovedot;
     }
+    private static final int XK_gcircumflex = (int)760L;
     /**
-     * {@snippet :
-     * #define XNPreeditStateNotifyCallback "preeditStateNotifyCallback"
+     * {@snippet lang=c :
+     * #define XK_gcircumflex 760
      * }
      */
-    public static MemorySegment XNPreeditStateNotifyCallback() {
-        return constants$240.const$2;
+    public static int XK_gcircumflex() {
+        return XK_gcircumflex;
     }
+    private static final int XK_ubreve = (int)765L;
     /**
-     * {@snippet :
-     * #define XNPreeditAttributes "preeditAttributes"
+     * {@snippet lang=c :
+     * #define XK_ubreve 765
      * }
      */
-    public static MemorySegment XNPreeditAttributes() {
-        return constants$240.const$3;
+    public static int XK_ubreve() {
+        return XK_ubreve;
     }
+    private static final int XK_scircumflex = (int)766L;
     /**
-     * {@snippet :
-     * #define XNStatusStartCallback "statusStartCallback"
+     * {@snippet lang=c :
+     * #define XK_scircumflex 766
      * }
      */
-    public static MemorySegment XNStatusStartCallback() {
-        return constants$240.const$4;
+    public static int XK_scircumflex() {
+        return XK_scircumflex;
     }
+    private static final int XK_kra = (int)930L;
     /**
-     * {@snippet :
-     * #define XNStatusDoneCallback "statusDoneCallback"
+     * {@snippet lang=c :
+     * #define XK_kra 930
      * }
      */
-    public static MemorySegment XNStatusDoneCallback() {
-        return constants$240.const$5;
+    public static int XK_kra() {
+        return XK_kra;
     }
+    private static final int XK_kappa = (int)930L;
     /**
-     * {@snippet :
-     * #define XNStatusDrawCallback "statusDrawCallback"
+     * {@snippet lang=c :
+     * #define XK_kappa 930
      * }
      */
-    public static MemorySegment XNStatusDrawCallback() {
-        return constants$241.const$0;
+    public static int XK_kappa() {
+        return XK_kappa;
     }
+    private static final int XK_Rcedilla = (int)931L;
     /**
-     * {@snippet :
-     * #define XNStatusAttributes "statusAttributes"
+     * {@snippet lang=c :
+     * #define XK_Rcedilla 931
      * }
      */
-    public static MemorySegment XNStatusAttributes() {
-        return constants$241.const$1;
+    public static int XK_Rcedilla() {
+        return XK_Rcedilla;
     }
+    private static final int XK_Itilde = (int)933L;
     /**
-     * {@snippet :
-     * #define XNArea "area"
+     * {@snippet lang=c :
+     * #define XK_Itilde 933
      * }
      */
-    public static MemorySegment XNArea() {
-        return constants$241.const$2;
+    public static int XK_Itilde() {
+        return XK_Itilde;
     }
+    private static final int XK_Lcedilla = (int)934L;
     /**
-     * {@snippet :
-     * #define XNAreaNeeded "areaNeeded"
+     * {@snippet lang=c :
+     * #define XK_Lcedilla 934
      * }
      */
-    public static MemorySegment XNAreaNeeded() {
-        return constants$241.const$3;
+    public static int XK_Lcedilla() {
+        return XK_Lcedilla;
     }
+    private static final int XK_Emacron = (int)938L;
     /**
-     * {@snippet :
-     * #define XNSpotLocation "spotLocation"
+     * {@snippet lang=c :
+     * #define XK_Emacron 938
      * }
      */
-    public static MemorySegment XNSpotLocation() {
-        return constants$241.const$4;
+    public static int XK_Emacron() {
+        return XK_Emacron;
     }
+    private static final int XK_Gcedilla = (int)939L;
     /**
-     * {@snippet :
-     * #define XNColormap "colorMap"
+     * {@snippet lang=c :
+     * #define XK_Gcedilla 939
      * }
      */
-    public static MemorySegment XNColormap() {
-        return constants$241.const$5;
+    public static int XK_Gcedilla() {
+        return XK_Gcedilla;
     }
+    private static final int XK_Tslash = (int)940L;
     /**
-     * {@snippet :
-     * #define XNStdColormap "stdColorMap"
+     * {@snippet lang=c :
+     * #define XK_Tslash 940
      * }
      */
-    public static MemorySegment XNStdColormap() {
-        return constants$242.const$0;
+    public static int XK_Tslash() {
+        return XK_Tslash;
     }
+    private static final int XK_rcedilla = (int)947L;
     /**
-     * {@snippet :
-     * #define XNForeground "foreground"
+     * {@snippet lang=c :
+     * #define XK_rcedilla 947
      * }
      */
-    public static MemorySegment XNForeground() {
-        return constants$242.const$1;
+    public static int XK_rcedilla() {
+        return XK_rcedilla;
     }
+    private static final int XK_itilde = (int)949L;
     /**
-     * {@snippet :
-     * #define XNBackground "background"
+     * {@snippet lang=c :
+     * #define XK_itilde 949
      * }
      */
-    public static MemorySegment XNBackground() {
-        return constants$242.const$2;
+    public static int XK_itilde() {
+        return XK_itilde;
     }
+    private static final int XK_lcedilla = (int)950L;
     /**
-     * {@snippet :
-     * #define XNBackgroundPixmap "backgroundPixmap"
+     * {@snippet lang=c :
+     * #define XK_lcedilla 950
      * }
      */
-    public static MemorySegment XNBackgroundPixmap() {
-        return constants$242.const$3;
+    public static int XK_lcedilla() {
+        return XK_lcedilla;
     }
+    private static final int XK_emacron = (int)954L;
     /**
-     * {@snippet :
-     * #define XNFontSet "fontSet"
+     * {@snippet lang=c :
+     * #define XK_emacron 954
      * }
      */
-    public static MemorySegment XNFontSet() {
-        return constants$242.const$4;
+    public static int XK_emacron() {
+        return XK_emacron;
     }
+    private static final int XK_gcedilla = (int)955L;
     /**
-     * {@snippet :
-     * #define XNLineSpace "lineSpace"
+     * {@snippet lang=c :
+     * #define XK_gcedilla 955
      * }
      */
-    public static MemorySegment XNLineSpace() {
-        return constants$242.const$5;
+    public static int XK_gcedilla() {
+        return XK_gcedilla;
     }
+    private static final int XK_tslash = (int)956L;
     /**
-     * {@snippet :
-     * #define XNCursor "cursor"
+     * {@snippet lang=c :
+     * #define XK_tslash 956
      * }
      */
-    public static MemorySegment XNCursor() {
-        return constants$243.const$0;
+    public static int XK_tslash() {
+        return XK_tslash;
     }
+    private static final int XK_ENG = (int)957L;
     /**
-     * {@snippet :
-     * #define XNQueryIMValuesList "queryIMValuesList"
+     * {@snippet lang=c :
+     * #define XK_ENG 957
      * }
      */
-    public static MemorySegment XNQueryIMValuesList() {
-        return constants$243.const$1;
+    public static int XK_ENG() {
+        return XK_ENG;
     }
+    private static final int XK_eng = (int)959L;
     /**
-     * {@snippet :
-     * #define XNQueryICValuesList "queryICValuesList"
+     * {@snippet lang=c :
+     * #define XK_eng 959
      * }
      */
-    public static MemorySegment XNQueryICValuesList() {
-        return constants$243.const$2;
+    public static int XK_eng() {
+        return XK_eng;
     }
+    private static final int XK_Amacron = (int)960L;
     /**
-     * {@snippet :
-     * #define XNVisiblePosition "visiblePosition"
+     * {@snippet lang=c :
+     * #define XK_Amacron 960
      * }
      */
-    public static MemorySegment XNVisiblePosition() {
-        return constants$243.const$3;
+    public static int XK_Amacron() {
+        return XK_Amacron;
     }
+    private static final int XK_Iogonek = (int)967L;
     /**
-     * {@snippet :
-     * #define XNR6PreeditCallback "r6PreeditCallback"
+     * {@snippet lang=c :
+     * #define XK_Iogonek 967
      * }
      */
-    public static MemorySegment XNR6PreeditCallback() {
-        return constants$243.const$4;
+    public static int XK_Iogonek() {
+        return XK_Iogonek;
     }
+    private static final int XK_Eabovedot = (int)972L;
     /**
-     * {@snippet :
-     * #define XNStringConversionCallback "stringConversionCallback"
+     * {@snippet lang=c :
+     * #define XK_Eabovedot 972
      * }
      */
-    public static MemorySegment XNStringConversionCallback() {
-        return constants$243.const$5;
+    public static int XK_Eabovedot() {
+        return XK_Eabovedot;
     }
+    private static final int XK_Imacron = (int)975L;
     /**
-     * {@snippet :
-     * #define XNStringConversion "stringConversion"
+     * {@snippet lang=c :
+     * #define XK_Imacron 975
      * }
      */
-    public static MemorySegment XNStringConversion() {
-        return constants$244.const$0;
+    public static int XK_Imacron() {
+        return XK_Imacron;
     }
+    private static final int XK_Ncedilla = (int)977L;
     /**
-     * {@snippet :
-     * #define XNResetState "resetState"
+     * {@snippet lang=c :
+     * #define XK_Ncedilla 977
      * }
      */
-    public static MemorySegment XNResetState() {
-        return constants$244.const$1;
+    public static int XK_Ncedilla() {
+        return XK_Ncedilla;
     }
+    private static final int XK_Omacron = (int)978L;
     /**
-     * {@snippet :
-     * #define XNHotKey "hotKey"
+     * {@snippet lang=c :
+     * #define XK_Omacron 978
      * }
      */
-    public static MemorySegment XNHotKey() {
-        return constants$244.const$2;
+    public static int XK_Omacron() {
+        return XK_Omacron;
     }
+    private static final int XK_Kcedilla = (int)979L;
     /**
-     * {@snippet :
-     * #define XNHotKeyState "hotKeyState"
+     * {@snippet lang=c :
+     * #define XK_Kcedilla 979
      * }
      */
-    public static MemorySegment XNHotKeyState() {
-        return constants$244.const$3;
+    public static int XK_Kcedilla() {
+        return XK_Kcedilla;
     }
+    private static final int XK_Uogonek = (int)985L;
     /**
-     * {@snippet :
-     * #define XNPreeditState "preeditState"
+     * {@snippet lang=c :
+     * #define XK_Uogonek 985
      * }
      */
-    public static MemorySegment XNPreeditState() {
-        return constants$244.const$4;
+    public static int XK_Uogonek() {
+        return XK_Uogonek;
     }
+    private static final int XK_Utilde = (int)989L;
     /**
-     * {@snippet :
-     * #define XNSeparatorofNestedList "separatorofNestedList"
+     * {@snippet lang=c :
+     * #define XK_Utilde 989
      * }
      */
-    public static MemorySegment XNSeparatorofNestedList() {
-        return constants$244.const$5;
+    public static int XK_Utilde() {
+        return XK_Utilde;
     }
+    private static final int XK_Umacron = (int)990L;
     /**
-     * {@snippet :
-     * #define XBufferOverflow -1
+     * {@snippet lang=c :
+     * #define XK_Umacron 990
      * }
      */
-    public static int XBufferOverflow() {
-        return (int)-1L;
+    public static int XK_Umacron() {
+        return XK_Umacron;
     }
+    private static final int XK_amacron = (int)992L;
     /**
-     * {@snippet :
-     * #define XIMReverse 1
+     * {@snippet lang=c :
+     * #define XK_amacron 992
      * }
      */
-    public static long XIMReverse() {
-        return 1L;
+    public static int XK_amacron() {
+        return XK_amacron;
     }
+    private static final int XK_iogonek = (int)999L;
     /**
-     * {@snippet :
-     * #define XIMUnderline 2
+     * {@snippet lang=c :
+     * #define XK_iogonek 999
      * }
      */
-    public static long XIMUnderline() {
-        return 2L;
+    public static int XK_iogonek() {
+        return XK_iogonek;
     }
+    private static final int XK_eabovedot = (int)1004L;
     /**
-     * {@snippet :
-     * #define XIMHighlight 4
+     * {@snippet lang=c :
+     * #define XK_eabovedot 1004
      * }
      */
-    public static long XIMHighlight() {
-        return 4L;
+    public static int XK_eabovedot() {
+        return XK_eabovedot;
     }
+    private static final int XK_imacron = (int)1007L;
     /**
-     * {@snippet :
-     * #define XIMPrimary 32
+     * {@snippet lang=c :
+     * #define XK_imacron 1007
      * }
      */
-    public static long XIMPrimary() {
-        return 32L;
+    public static int XK_imacron() {
+        return XK_imacron;
     }
+    private static final int XK_ncedilla = (int)1009L;
     /**
-     * {@snippet :
-     * #define XIMSecondary 64
+     * {@snippet lang=c :
+     * #define XK_ncedilla 1009
      * }
      */
-    public static long XIMSecondary() {
-        return 64L;
+    public static int XK_ncedilla() {
+        return XK_ncedilla;
     }
+    private static final int XK_omacron = (int)1010L;
     /**
-     * {@snippet :
-     * #define XIMTertiary 128
+     * {@snippet lang=c :
+     * #define XK_omacron 1010
      * }
      */
-    public static long XIMTertiary() {
-        return 128L;
+    public static int XK_omacron() {
+        return XK_omacron;
     }
+    private static final int XK_kcedilla = (int)1011L;
     /**
-     * {@snippet :
-     * #define XIMVisibleToForward 256
+     * {@snippet lang=c :
+     * #define XK_kcedilla 1011
      * }
      */
-    public static long XIMVisibleToForward() {
-        return 256L;
+    public static int XK_kcedilla() {
+        return XK_kcedilla;
     }
+    private static final int XK_uogonek = (int)1017L;
     /**
-     * {@snippet :
-     * #define XIMVisibleToBackword 512
+     * {@snippet lang=c :
+     * #define XK_uogonek 1017
      * }
      */
-    public static long XIMVisibleToBackword() {
-        return 512L;
+    public static int XK_uogonek() {
+        return XK_uogonek;
     }
+    private static final int XK_utilde = (int)1021L;
     /**
-     * {@snippet :
-     * #define XIMVisibleToCenter 1024
+     * {@snippet lang=c :
+     * #define XK_utilde 1021
      * }
      */
-    public static long XIMVisibleToCenter() {
-        return 1024L;
+    public static int XK_utilde() {
+        return XK_utilde;
     }
+    private static final int XK_umacron = (int)1022L;
     /**
-     * {@snippet :
-     * #define XIMPreeditUnKnown 0
+     * {@snippet lang=c :
+     * #define XK_umacron 1022
      * }
      */
-    public static long XIMPreeditUnKnown() {
-        return 0L;
+    public static int XK_umacron() {
+        return XK_umacron;
     }
+    private static final int XK_Wcircumflex = (int)16777588L;
     /**
-     * {@snippet :
-     * #define XIMPreeditEnable 1
+     * {@snippet lang=c :
+     * #define XK_Wcircumflex 16777588
      * }
      */
-    public static long XIMPreeditEnable() {
-        return 1L;
+    public static int XK_Wcircumflex() {
+        return XK_Wcircumflex;
     }
+    private static final int XK_wcircumflex = (int)16777589L;
     /**
-     * {@snippet :
-     * #define XIMPreeditDisable 2
+     * {@snippet lang=c :
+     * #define XK_wcircumflex 16777589
      * }
      */
-    public static long XIMPreeditDisable() {
-        return 2L;
+    public static int XK_wcircumflex() {
+        return XK_wcircumflex;
     }
+    private static final int XK_Ycircumflex = (int)16777590L;
     /**
-     * {@snippet :
-     * #define XIMInitialState 1
+     * {@snippet lang=c :
+     * #define XK_Ycircumflex 16777590
      * }
      */
-    public static long XIMInitialState() {
-        return 1L;
+    public static int XK_Ycircumflex() {
+        return XK_Ycircumflex;
     }
+    private static final int XK_ycircumflex = (int)16777591L;
     /**
-     * {@snippet :
-     * #define XIMPreserveState 2
+     * {@snippet lang=c :
+     * #define XK_ycircumflex 16777591
      * }
      */
-    public static long XIMPreserveState() {
-        return 2L;
+    public static int XK_ycircumflex() {
+        return XK_ycircumflex;
     }
+    private static final int XK_Babovedot = (int)16784898L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionLeftEdge 1
+     * {@snippet lang=c :
+     * #define XK_Babovedot 16784898
      * }
      */
-    public static int XIMStringConversionLeftEdge() {
-        return (int)1L;
+    public static int XK_Babovedot() {
+        return XK_Babovedot;
     }
+    private static final int XK_babovedot = (int)16784899L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionRightEdge 2
+     * {@snippet lang=c :
+     * #define XK_babovedot 16784899
      * }
      */
-    public static int XIMStringConversionRightEdge() {
-        return (int)2L;
+    public static int XK_babovedot() {
+        return XK_babovedot;
     }
+    private static final int XK_Dabovedot = (int)16784906L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionTopEdge 4
+     * {@snippet lang=c :
+     * #define XK_Dabovedot 16784906
      * }
      */
-    public static int XIMStringConversionTopEdge() {
-        return (int)4L;
+    public static int XK_Dabovedot() {
+        return XK_Dabovedot;
     }
+    private static final int XK_dabovedot = (int)16784907L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionBottomEdge 8
+     * {@snippet lang=c :
+     * #define XK_dabovedot 16784907
      * }
      */
-    public static int XIMStringConversionBottomEdge() {
-        return (int)8L;
+    public static int XK_dabovedot() {
+        return XK_dabovedot;
     }
+    private static final int XK_Fabovedot = (int)16784926L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionConcealed 16
+     * {@snippet lang=c :
+     * #define XK_Fabovedot 16784926
      * }
      */
-    public static int XIMStringConversionConcealed() {
-        return (int)16L;
+    public static int XK_Fabovedot() {
+        return XK_Fabovedot;
     }
+    private static final int XK_fabovedot = (int)16784927L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionWrapped 32
+     * {@snippet lang=c :
+     * #define XK_fabovedot 16784927
      * }
      */
-    public static int XIMStringConversionWrapped() {
-        return (int)32L;
+    public static int XK_fabovedot() {
+        return XK_fabovedot;
     }
+    private static final int XK_Mabovedot = (int)16784960L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionBuffer 1
+     * {@snippet lang=c :
+     * #define XK_Mabovedot 16784960
      * }
      */
-    public static int XIMStringConversionBuffer() {
-        return (int)1L;
+    public static int XK_Mabovedot() {
+        return XK_Mabovedot;
     }
+    private static final int XK_mabovedot = (int)16784961L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionLine 2
+     * {@snippet lang=c :
+     * #define XK_mabovedot 16784961
      * }
      */
-    public static int XIMStringConversionLine() {
-        return (int)2L;
+    public static int XK_mabovedot() {
+        return XK_mabovedot;
     }
+    private static final int XK_Pabovedot = (int)16784982L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionWord 3
+     * {@snippet lang=c :
+     * #define XK_Pabovedot 16784982
      * }
      */
-    public static int XIMStringConversionWord() {
-        return (int)3L;
+    public static int XK_Pabovedot() {
+        return XK_Pabovedot;
     }
+    private static final int XK_pabovedot = (int)16784983L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionChar 4
+     * {@snippet lang=c :
+     * #define XK_pabovedot 16784983
      * }
      */
-    public static int XIMStringConversionChar() {
-        return (int)4L;
+    public static int XK_pabovedot() {
+        return XK_pabovedot;
     }
+    private static final int XK_Sabovedot = (int)16784992L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionSubstitution 1
+     * {@snippet lang=c :
+     * #define XK_Sabovedot 16784992
      * }
      */
-    public static int XIMStringConversionSubstitution() {
-        return (int)1L;
+    public static int XK_Sabovedot() {
+        return XK_Sabovedot;
     }
+    private static final int XK_sabovedot = (int)16784993L;
     /**
-     * {@snippet :
-     * #define XIMStringConversionRetrieval 2
+     * {@snippet lang=c :
+     * #define XK_sabovedot 16784993
      * }
      */
-    public static int XIMStringConversionRetrieval() {
-        return (int)2L;
+    public static int XK_sabovedot() {
+        return XK_sabovedot;
     }
+    private static final int XK_Tabovedot = (int)16785002L;
     /**
-     * {@snippet :
-     * #define XIMHotKeyStateON 1
+     * {@snippet lang=c :
+     * #define XK_Tabovedot 16785002
      * }
      */
-    public static long XIMHotKeyStateON() {
-        return 1L;
+    public static int XK_Tabovedot() {
+        return XK_Tabovedot;
     }
+    private static final int XK_tabovedot = (int)16785003L;
     /**
-     * {@snippet :
-     * #define XIMHotKeyStateOFF 2
+     * {@snippet lang=c :
+     * #define XK_tabovedot 16785003
      * }
      */
-    public static long XIMHotKeyStateOFF() {
-        return 2L;
+    public static int XK_tabovedot() {
+        return XK_tabovedot;
     }
+    private static final int XK_Wgrave = (int)16785024L;
     /**
-     * {@snippet :
-     * #define USPosition 1
+     * {@snippet lang=c :
+     * #define XK_Wgrave 16785024
      * }
      */
-    public static long USPosition() {
-        return 1L;
+    public static int XK_Wgrave() {
+        return XK_Wgrave;
     }
+    private static final int XK_wgrave = (int)16785025L;
     /**
-     * {@snippet :
-     * #define USSize 2
+     * {@snippet lang=c :
+     * #define XK_wgrave 16785025
      * }
      */
-    public static long USSize() {
-        return 2L;
+    public static int XK_wgrave() {
+        return XK_wgrave;
     }
+    private static final int XK_Wacute = (int)16785026L;
     /**
-     * {@snippet :
-     * #define PPosition 4
+     * {@snippet lang=c :
+     * #define XK_Wacute 16785026
      * }
      */
-    public static long PPosition() {
-        return 4L;
+    public static int XK_Wacute() {
+        return XK_Wacute;
     }
+    private static final int XK_wacute = (int)16785027L;
     /**
-     * {@snippet :
-     * #define PSize 8
+     * {@snippet lang=c :
+     * #define XK_wacute 16785027
      * }
      */
-    public static long PSize() {
-        return 8L;
+    public static int XK_wacute() {
+        return XK_wacute;
     }
+    private static final int XK_Wdiaeresis = (int)16785028L;
     /**
-     * {@snippet :
-     * #define PMinSize 16
+     * {@snippet lang=c :
+     * #define XK_Wdiaeresis 16785028
      * }
      */
-    public static long PMinSize() {
-        return 16L;
+    public static int XK_Wdiaeresis() {
+        return XK_Wdiaeresis;
     }
+    private static final int XK_wdiaeresis = (int)16785029L;
     /**
-     * {@snippet :
-     * #define PMaxSize 32
+     * {@snippet lang=c :
+     * #define XK_wdiaeresis 16785029
      * }
      */
-    public static long PMaxSize() {
-        return 32L;
+    public static int XK_wdiaeresis() {
+        return XK_wdiaeresis;
     }
+    private static final int XK_Ygrave = (int)16785138L;
     /**
-     * {@snippet :
-     * #define PResizeInc 64
+     * {@snippet lang=c :
+     * #define XK_Ygrave 16785138
      * }
      */
-    public static long PResizeInc() {
-        return 64L;
+    public static int XK_Ygrave() {
+        return XK_Ygrave;
     }
+    private static final int XK_ygrave = (int)16785139L;
     /**
-     * {@snippet :
-     * #define PAspect 128
+     * {@snippet lang=c :
+     * #define XK_ygrave 16785139
      * }
      */
-    public static long PAspect() {
-        return 128L;
+    public static int XK_ygrave() {
+        return XK_ygrave;
     }
+    private static final int XK_OE = (int)5052L;
     /**
-     * {@snippet :
-     * #define PBaseSize 256
+     * {@snippet lang=c :
+     * #define XK_OE 5052
      * }
      */
-    public static long PBaseSize() {
-        return 256L;
+    public static int XK_OE() {
+        return XK_OE;
     }
+    private static final int XK_oe = (int)5053L;
     /**
-     * {@snippet :
-     * #define PWinGravity 512
+     * {@snippet lang=c :
+     * #define XK_oe 5053
      * }
      */
-    public static long PWinGravity() {
-        return 512L;
+    public static int XK_oe() {
+        return XK_oe;
     }
+    private static final int XK_Ydiaeresis = (int)5054L;
     /**
-     * {@snippet :
-     * #define PAllHints 252
+     * {@snippet lang=c :
+     * #define XK_Ydiaeresis 5054
      * }
      */
-    public static long PAllHints() {
-        return 252L;
+    public static int XK_Ydiaeresis() {
+        return XK_Ydiaeresis;
     }
+    private static final int XK_overline = (int)1150L;
     /**
-     * {@snippet :
-     * #define InputHint 1
+     * {@snippet lang=c :
+     * #define XK_overline 1150
      * }
      */
-    public static long InputHint() {
-        return 1L;
+    public static int XK_overline() {
+        return XK_overline;
     }
+    private static final int XK_kana_fullstop = (int)1185L;
     /**
-     * {@snippet :
-     * #define StateHint 2
+     * {@snippet lang=c :
+     * #define XK_kana_fullstop 1185
      * }
      */
-    public static long StateHint() {
-        return 2L;
+    public static int XK_kana_fullstop() {
+        return XK_kana_fullstop;
     }
+    private static final int XK_kana_openingbracket = (int)1186L;
     /**
-     * {@snippet :
-     * #define IconPixmapHint 4
+     * {@snippet lang=c :
+     * #define XK_kana_openingbracket 1186
      * }
      */
-    public static long IconPixmapHint() {
-        return 4L;
+    public static int XK_kana_openingbracket() {
+        return XK_kana_openingbracket;
     }
+    private static final int XK_kana_closingbracket = (int)1187L;
     /**
-     * {@snippet :
-     * #define IconWindowHint 8
+     * {@snippet lang=c :
+     * #define XK_kana_closingbracket 1187
      * }
      */
-    public static long IconWindowHint() {
-        return 8L;
+    public static int XK_kana_closingbracket() {
+        return XK_kana_closingbracket;
     }
+    private static final int XK_kana_comma = (int)1188L;
     /**
-     * {@snippet :
-     * #define IconPositionHint 16
+     * {@snippet lang=c :
+     * #define XK_kana_comma 1188
      * }
      */
-    public static long IconPositionHint() {
-        return 16L;
+    public static int XK_kana_comma() {
+        return XK_kana_comma;
     }
+    private static final int XK_kana_conjunctive = (int)1189L;
     /**
-     * {@snippet :
-     * #define IconMaskHint 32
+     * {@snippet lang=c :
+     * #define XK_kana_conjunctive 1189
      * }
      */
-    public static long IconMaskHint() {
-        return 32L;
+    public static int XK_kana_conjunctive() {
+        return XK_kana_conjunctive;
     }
+    private static final int XK_kana_middledot = (int)1189L;
     /**
-     * {@snippet :
-     * #define WindowGroupHint 64
+     * {@snippet lang=c :
+     * #define XK_kana_middledot 1189
      * }
      */
-    public static long WindowGroupHint() {
-        return 64L;
+    public static int XK_kana_middledot() {
+        return XK_kana_middledot;
     }
+    private static final int XK_kana_WO = (int)1190L;
     /**
-     * {@snippet :
-     * #define AllHints 127
+     * {@snippet lang=c :
+     * #define XK_kana_WO 1190
      * }
      */
-    public static long AllHints() {
-        return 127L;
+    public static int XK_kana_WO() {
+        return XK_kana_WO;
     }
+    private static final int XK_kana_a = (int)1191L;
     /**
-     * {@snippet :
-     * #define XUrgencyHint 256
+     * {@snippet lang=c :
+     * #define XK_kana_a 1191
      * }
      */
-    public static long XUrgencyHint() {
-        return 256L;
+    public static int XK_kana_a() {
+        return XK_kana_a;
     }
+    private static final int XK_kana_i = (int)1192L;
     /**
-     * {@snippet :
-     * #define XNoMemory -1
+     * {@snippet lang=c :
+     * #define XK_kana_i 1192
      * }
      */
-    public static int XNoMemory() {
-        return (int)-1L;
+    public static int XK_kana_i() {
+        return XK_kana_i;
     }
+    private static final int XK_kana_u = (int)1193L;
     /**
-     * {@snippet :
-     * #define XLocaleNotSupported -2
+     * {@snippet lang=c :
+     * #define XK_kana_u 1193
      * }
      */
-    public static int XLocaleNotSupported() {
-        return (int)-2L;
+    public static int XK_kana_u() {
+        return XK_kana_u;
     }
+    private static final int XK_kana_e = (int)1194L;
     /**
-     * {@snippet :
-     * #define XConverterNotFound -3
+     * {@snippet lang=c :
+     * #define XK_kana_e 1194
      * }
      */
-    public static int XConverterNotFound() {
-        return (int)-3L;
+    public static int XK_kana_e() {
+        return XK_kana_e;
     }
+    private static final int XK_kana_o = (int)1195L;
     /**
-     * {@snippet :
-     * #define ReleaseByFreeingColormap 1
+     * {@snippet lang=c :
+     * #define XK_kana_o 1195
      * }
      */
-    public static long ReleaseByFreeingColormap() {
-        return 1L;
+    public static int XK_kana_o() {
+        return XK_kana_o;
     }
 }
-
 

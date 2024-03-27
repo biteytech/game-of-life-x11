@@ -2,140 +2,265 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct {
- *     unsigned char* value;
+ *     unsigned char *value;
  *     Atom encoding;
  *     int format;
  *     unsigned long nitems;
- * };
+ * }
  * }
  */
 public class XTextProperty {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$215.const$4;
+    XTextProperty() {
+        // Should not be called directly
     }
-    public static VarHandle value$VH() {
-        return constants$215.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned char* value;
-     * }
-     */
-    public static MemorySegment value$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$215.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned char* value;
-     * }
-     */
-    public static void value$set(MemorySegment seg, MemorySegment x) {
-        constants$215.const$5.set(seg, x);
-    }
-    public static MemorySegment value$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$215.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void value$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$215.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle encoding$VH() {
-        return constants$216.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * Atom encoding;
-     * }
-     */
-    public static long encoding$get(MemorySegment seg) {
-        return (long)constants$216.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * Atom encoding;
-     * }
-     */
-    public static void encoding$set(MemorySegment seg, long x) {
-        constants$216.const$0.set(seg, x);
-    }
-    public static long encoding$get(MemorySegment seg, long index) {
-        return (long)constants$216.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void encoding$set(MemorySegment seg, long index, long x) {
-        constants$216.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle format$VH() {
-        return constants$216.const$1;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int format;
-     * }
-     */
-    public static int format$get(MemorySegment seg) {
-        return (int)constants$216.const$1.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int format;
-     * }
-     */
-    public static void format$set(MemorySegment seg, int x) {
-        constants$216.const$1.set(seg, x);
-    }
-    public static int format$get(MemorySegment seg, long index) {
-        return (int)constants$216.const$1.get(seg.asSlice(index*sizeof()));
-    }
-    public static void format$set(MemorySegment seg, long index, int x) {
-        constants$216.const$1.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle nitems$VH() {
-        return constants$216.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * unsigned long nitems;
-     * }
-     */
-    public static long nitems$get(MemorySegment seg) {
-        return (long)constants$216.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * unsigned long nitems;
-     * }
-     */
-    public static void nitems$set(MemorySegment seg, long x) {
-        constants$216.const$2.set(seg, x);
-    }
-    public static long nitems$get(MemorySegment seg, long index) {
-        return (long)constants$216.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void nitems$set(MemorySegment seg, long index, long x) {
-        constants$216.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_POINTER.withName("value"),
+        Xlib_h.C_LONG.withName("encoding"),
+        Xlib_h.C_INT.withName("format"),
+        MemoryLayout.paddingLayout(4),
+        Xlib_h.C_LONG.withName("nitems")
+    ).withName("$anon$163:9");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final AddressLayout value$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("value"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned char *value
+     * }
+     */
+    public static final AddressLayout value$layout() {
+        return value$LAYOUT;
+    }
+
+    private static final long value$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned char *value
+     * }
+     */
+    public static final long value$offset() {
+        return value$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned char *value
+     * }
+     */
+    public static MemorySegment value(MemorySegment struct) {
+        return struct.get(value$LAYOUT, value$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned char *value
+     * }
+     */
+    public static void value(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(value$LAYOUT, value$OFFSET, fieldValue);
+    }
+
+    private static final OfLong encoding$LAYOUT = (OfLong)$LAYOUT.select(groupElement("encoding"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * Atom encoding
+     * }
+     */
+    public static final OfLong encoding$layout() {
+        return encoding$LAYOUT;
+    }
+
+    private static final long encoding$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * Atom encoding
+     * }
+     */
+    public static final long encoding$offset() {
+        return encoding$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * Atom encoding
+     * }
+     */
+    public static long encoding(MemorySegment struct) {
+        return struct.get(encoding$LAYOUT, encoding$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * Atom encoding
+     * }
+     */
+    public static void encoding(MemorySegment struct, long fieldValue) {
+        struct.set(encoding$LAYOUT, encoding$OFFSET, fieldValue);
+    }
+
+    private static final OfInt format$LAYOUT = (OfInt)$LAYOUT.select(groupElement("format"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int format
+     * }
+     */
+    public static final OfInt format$layout() {
+        return format$LAYOUT;
+    }
+
+    private static final long format$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int format
+     * }
+     */
+    public static final long format$offset() {
+        return format$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int format
+     * }
+     */
+    public static int format(MemorySegment struct) {
+        return struct.get(format$LAYOUT, format$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int format
+     * }
+     */
+    public static void format(MemorySegment struct, int fieldValue) {
+        struct.set(format$LAYOUT, format$OFFSET, fieldValue);
+    }
+
+    private static final OfLong nitems$LAYOUT = (OfLong)$LAYOUT.select(groupElement("nitems"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * unsigned long nitems
+     * }
+     */
+    public static final OfLong nitems$layout() {
+        return nitems$LAYOUT;
+    }
+
+    private static final long nitems$OFFSET = 24;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * unsigned long nitems
+     * }
+     */
+    public static final long nitems$offset() {
+        return nitems$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * unsigned long nitems
+     * }
+     */
+    public static long nitems(MemorySegment struct) {
+        return struct.get(nitems$LAYOUT, nitems$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * unsigned long nitems
+     * }
+     */
+    public static void nitems(MemorySegment struct, long fieldValue) {
+        struct.set(nitems$LAYOUT, nitems$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

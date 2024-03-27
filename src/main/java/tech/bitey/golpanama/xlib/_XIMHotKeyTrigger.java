@@ -2,112 +2,218 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct _XIMHotKeyTrigger {
  *     KeySym keysym;
  *     int modifier;
  *     int modifier_mask;
- * };
+ * }
  * }
  */
 public class _XIMHotKeyTrigger {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$121.const$3;
+    _XIMHotKeyTrigger() {
+        // Should not be called directly
     }
-    public static VarHandle keysym$VH() {
-        return constants$121.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * KeySym keysym;
-     * }
-     */
-    public static long keysym$get(MemorySegment seg) {
-        return (long)constants$121.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * KeySym keysym;
-     * }
-     */
-    public static void keysym$set(MemorySegment seg, long x) {
-        constants$121.const$4.set(seg, x);
-    }
-    public static long keysym$get(MemorySegment seg, long index) {
-        return (long)constants$121.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void keysym$set(MemorySegment seg, long index, long x) {
-        constants$121.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle modifier$VH() {
-        return constants$121.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int modifier;
-     * }
-     */
-    public static int modifier$get(MemorySegment seg) {
-        return (int)constants$121.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int modifier;
-     * }
-     */
-    public static void modifier$set(MemorySegment seg, int x) {
-        constants$121.const$5.set(seg, x);
-    }
-    public static int modifier$get(MemorySegment seg, long index) {
-        return (int)constants$121.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void modifier$set(MemorySegment seg, long index, int x) {
-        constants$121.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle modifier_mask$VH() {
-        return constants$122.const$0;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int modifier_mask;
-     * }
-     */
-    public static int modifier_mask$get(MemorySegment seg) {
-        return (int)constants$122.const$0.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int modifier_mask;
-     * }
-     */
-    public static void modifier_mask$set(MemorySegment seg, int x) {
-        constants$122.const$0.set(seg, x);
-    }
-    public static int modifier_mask$get(MemorySegment seg, long index) {
-        return (int)constants$122.const$0.get(seg.asSlice(index*sizeof()));
-    }
-    public static void modifier_mask$set(MemorySegment seg, long index, int x) {
-        constants$122.const$0.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_LONG.withName("keysym"),
+        Xlib_h.C_INT.withName("modifier"),
+        Xlib_h.C_INT.withName("modifier_mask")
+    ).withName("_XIMHotKeyTrigger");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfLong keysym$LAYOUT = (OfLong)$LAYOUT.select(groupElement("keysym"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * KeySym keysym
+     * }
+     */
+    public static final OfLong keysym$layout() {
+        return keysym$LAYOUT;
+    }
+
+    private static final long keysym$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * KeySym keysym
+     * }
+     */
+    public static final long keysym$offset() {
+        return keysym$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * KeySym keysym
+     * }
+     */
+    public static long keysym(MemorySegment struct) {
+        return struct.get(keysym$LAYOUT, keysym$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * KeySym keysym
+     * }
+     */
+    public static void keysym(MemorySegment struct, long fieldValue) {
+        struct.set(keysym$LAYOUT, keysym$OFFSET, fieldValue);
+    }
+
+    private static final OfInt modifier$LAYOUT = (OfInt)$LAYOUT.select(groupElement("modifier"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int modifier
+     * }
+     */
+    public static final OfInt modifier$layout() {
+        return modifier$LAYOUT;
+    }
+
+    private static final long modifier$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int modifier
+     * }
+     */
+    public static final long modifier$offset() {
+        return modifier$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int modifier
+     * }
+     */
+    public static int modifier(MemorySegment struct) {
+        return struct.get(modifier$LAYOUT, modifier$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int modifier
+     * }
+     */
+    public static void modifier(MemorySegment struct, int fieldValue) {
+        struct.set(modifier$LAYOUT, modifier$OFFSET, fieldValue);
+    }
+
+    private static final OfInt modifier_mask$LAYOUT = (OfInt)$LAYOUT.select(groupElement("modifier_mask"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int modifier_mask
+     * }
+     */
+    public static final OfInt modifier_mask$layout() {
+        return modifier_mask$LAYOUT;
+    }
+
+    private static final long modifier_mask$OFFSET = 12;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int modifier_mask
+     * }
+     */
+    public static final long modifier_mask$offset() {
+        return modifier_mask$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int modifier_mask
+     * }
+     */
+    public static int modifier_mask(MemorySegment struct) {
+        return struct.get(modifier_mask$LAYOUT, modifier_mask$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int modifier_mask
+     * }
+     */
+    public static void modifier_mask(MemorySegment struct, int fieldValue) {
+        struct.set(modifier_mask$LAYOUT, modifier_mask$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 

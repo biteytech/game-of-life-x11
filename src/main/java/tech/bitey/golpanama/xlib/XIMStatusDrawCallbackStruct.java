@@ -2,20 +2,31 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
- * typedef struct _XIMStatusDrawCallbackStruct XIMStatusDrawCallbackStruct;
+ * {@snippet lang=c :
+ * typedef struct _XIMStatusDrawCallbackStruct {
+ *     XIMStatusDataType type;
+ *     union {
+ *         XIMText *text;
+ *         Pixmap bitmap;
+ *     } data;
+ * } XIMStatusDrawCallbackStruct
  * }
  */
-public final class XIMStatusDrawCallbackStruct extends _XIMStatusDrawCallbackStruct {
+public class XIMStatusDrawCallbackStruct extends _XIMStatusDrawCallbackStruct {
 
-    // Suppresses default constructor, ensuring non-instantiability.
-    private XIMStatusDrawCallbackStruct() {}
+    XIMStatusDrawCallbackStruct() {
+        // Should not be called directly
+    }
 }
-
 

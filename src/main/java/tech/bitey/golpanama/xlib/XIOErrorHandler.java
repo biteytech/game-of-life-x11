@@ -2,32 +2,63 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
- * int (*XIOErrorHandler)(struct _XDisplay*);
+ * {@snippet lang=c :
+ * typedef int (*XIOErrorHandler)(Display *)
  * }
  */
-public interface XIOErrorHandler {
+public class XIOErrorHandler {
 
-    int apply(java.lang.foreign.MemorySegment _x0);
-    static MemorySegment allocate(XIOErrorHandler fi, Arena scope) {
-        return RuntimeHelper.upcallStub(constants$144.const$3, fi, constants$11.const$0, scope);
+    /**
+     * The function pointer signature, expressed as a functional interface
+     */
+    public interface Function {
+        int apply(MemorySegment _x0);
     }
-    static XIOErrorHandler ofAddress(MemorySegment addr, Arena arena) {
-        MemorySegment symbol = addr.reinterpret(arena, null);
-        return (java.lang.foreign.MemorySegment __x0) -> {
-            try {
-                return (int)constants$11.const$2.invokeExact(symbol, __x0);
-            } catch (Throwable ex$) {
-                throw new AssertionError("should not reach here", ex$);
-            }
-        };
+
+    private static final FunctionDescriptor $DESC = FunctionDescriptor.of(
+        Xlib_h.C_INT,
+        Xlib_h.C_POINTER
+    );
+
+    /**
+     * The descriptor of this function pointer
+     */
+    public static FunctionDescriptor descriptor() {
+        return $DESC;
+    }
+
+    private static final MethodHandle UP$MH = Xlib_h.upcallHandle(XIOErrorHandler.Function.class, "apply", $DESC);
+
+    /**
+     * Allocates a new upcall stub, whose implementation is defined by {@code fi}.
+     * The lifetime of the returned segment is managed by {@code arena}
+     */
+    public static MemorySegment allocate(XIOErrorHandler.Function fi, Arena arena) {
+        return Linker.nativeLinker().upcallStub(UP$MH.bindTo(fi), $DESC, arena);
+    }
+
+    private static final MethodHandle DOWN$MH = Linker.nativeLinker().downcallHandle($DESC);
+
+    /**
+     * Invoke the upcall stub {@code funcPtr}, with given parameters
+     */
+    public static int invoke(MemorySegment funcPtr,MemorySegment _x0) {
+        try {
+            return (int) DOWN$MH.invokeExact(funcPtr, _x0);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
     }
 }
-
 

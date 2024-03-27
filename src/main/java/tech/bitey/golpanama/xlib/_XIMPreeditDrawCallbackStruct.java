@@ -2,140 +2,265 @@
 
 package tech.bitey.golpanama.xlib;
 
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.VarHandle;
-import java.nio.ByteOrder;
+import java.lang.invoke.*;
 import java.lang.foreign.*;
+import java.nio.ByteOrder;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
 import static java.lang.foreign.ValueLayout.*;
+import static java.lang.foreign.MemoryLayout.PathElement.*;
+
 /**
- * {@snippet :
+ * {@snippet lang=c :
  * struct _XIMPreeditDrawCallbackStruct {
  *     int caret;
  *     int chg_first;
  *     int chg_length;
- *     XIMText* text;
- * };
+ *     XIMText *text;
+ * }
  * }
  */
 public class _XIMPreeditDrawCallbackStruct {
 
-    public static MemoryLayout $LAYOUT() {
-        return constants$119.const$1;
+    _XIMPreeditDrawCallbackStruct() {
+        // Should not be called directly
     }
-    public static VarHandle caret$VH() {
-        return constants$119.const$2;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int caret;
-     * }
-     */
-    public static int caret$get(MemorySegment seg) {
-        return (int)constants$119.const$2.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int caret;
-     * }
-     */
-    public static void caret$set(MemorySegment seg, int x) {
-        constants$119.const$2.set(seg, x);
-    }
-    public static int caret$get(MemorySegment seg, long index) {
-        return (int)constants$119.const$2.get(seg.asSlice(index*sizeof()));
-    }
-    public static void caret$set(MemorySegment seg, long index, int x) {
-        constants$119.const$2.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle chg_first$VH() {
-        return constants$119.const$3;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int chg_first;
-     * }
-     */
-    public static int chg_first$get(MemorySegment seg) {
-        return (int)constants$119.const$3.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int chg_first;
-     * }
-     */
-    public static void chg_first$set(MemorySegment seg, int x) {
-        constants$119.const$3.set(seg, x);
-    }
-    public static int chg_first$get(MemorySegment seg, long index) {
-        return (int)constants$119.const$3.get(seg.asSlice(index*sizeof()));
-    }
-    public static void chg_first$set(MemorySegment seg, long index, int x) {
-        constants$119.const$3.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle chg_length$VH() {
-        return constants$119.const$4;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * int chg_length;
-     * }
-     */
-    public static int chg_length$get(MemorySegment seg) {
-        return (int)constants$119.const$4.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * int chg_length;
-     * }
-     */
-    public static void chg_length$set(MemorySegment seg, int x) {
-        constants$119.const$4.set(seg, x);
-    }
-    public static int chg_length$get(MemorySegment seg, long index) {
-        return (int)constants$119.const$4.get(seg.asSlice(index*sizeof()));
-    }
-    public static void chg_length$set(MemorySegment seg, long index, int x) {
-        constants$119.const$4.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static VarHandle text$VH() {
-        return constants$119.const$5;
-    }
-    /**
-     * Getter for field:
-     * {@snippet :
-     * XIMText* text;
-     * }
-     */
-    public static MemorySegment text$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$119.const$5.get(seg);
-    }
-    /**
-     * Setter for field:
-     * {@snippet :
-     * XIMText* text;
-     * }
-     */
-    public static void text$set(MemorySegment seg, MemorySegment x) {
-        constants$119.const$5.set(seg, x);
-    }
-    public static MemorySegment text$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$119.const$5.get(seg.asSlice(index*sizeof()));
-    }
-    public static void text$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$119.const$5.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static long sizeof() { return $LAYOUT().byteSize(); }
-    public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
-    public static MemorySegment allocateArray(long len, SegmentAllocator allocator) {
-        return allocator.allocate(MemoryLayout.sequenceLayout(len, $LAYOUT()));
-    }
-    public static MemorySegment ofAddress(MemorySegment addr, Arena arena) { return RuntimeHelper.asArray(addr, $LAYOUT(), 1, arena); }
-}
 
+    private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
+        Xlib_h.C_INT.withName("caret"),
+        Xlib_h.C_INT.withName("chg_first"),
+        Xlib_h.C_INT.withName("chg_length"),
+        MemoryLayout.paddingLayout(4),
+        Xlib_h.C_POINTER.withName("text")
+    ).withName("_XIMPreeditDrawCallbackStruct");
+
+    /**
+     * The layout of this struct
+     */
+    public static final GroupLayout layout() {
+        return $LAYOUT;
+    }
+
+    private static final OfInt caret$LAYOUT = (OfInt)$LAYOUT.select(groupElement("caret"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int caret
+     * }
+     */
+    public static final OfInt caret$layout() {
+        return caret$LAYOUT;
+    }
+
+    private static final long caret$OFFSET = 0;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int caret
+     * }
+     */
+    public static final long caret$offset() {
+        return caret$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int caret
+     * }
+     */
+    public static int caret(MemorySegment struct) {
+        return struct.get(caret$LAYOUT, caret$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int caret
+     * }
+     */
+    public static void caret(MemorySegment struct, int fieldValue) {
+        struct.set(caret$LAYOUT, caret$OFFSET, fieldValue);
+    }
+
+    private static final OfInt chg_first$LAYOUT = (OfInt)$LAYOUT.select(groupElement("chg_first"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int chg_first
+     * }
+     */
+    public static final OfInt chg_first$layout() {
+        return chg_first$LAYOUT;
+    }
+
+    private static final long chg_first$OFFSET = 4;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int chg_first
+     * }
+     */
+    public static final long chg_first$offset() {
+        return chg_first$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int chg_first
+     * }
+     */
+    public static int chg_first(MemorySegment struct) {
+        return struct.get(chg_first$LAYOUT, chg_first$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int chg_first
+     * }
+     */
+    public static void chg_first(MemorySegment struct, int fieldValue) {
+        struct.set(chg_first$LAYOUT, chg_first$OFFSET, fieldValue);
+    }
+
+    private static final OfInt chg_length$LAYOUT = (OfInt)$LAYOUT.select(groupElement("chg_length"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * int chg_length
+     * }
+     */
+    public static final OfInt chg_length$layout() {
+        return chg_length$LAYOUT;
+    }
+
+    private static final long chg_length$OFFSET = 8;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * int chg_length
+     * }
+     */
+    public static final long chg_length$offset() {
+        return chg_length$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * int chg_length
+     * }
+     */
+    public static int chg_length(MemorySegment struct) {
+        return struct.get(chg_length$LAYOUT, chg_length$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * int chg_length
+     * }
+     */
+    public static void chg_length(MemorySegment struct, int fieldValue) {
+        struct.set(chg_length$LAYOUT, chg_length$OFFSET, fieldValue);
+    }
+
+    private static final AddressLayout text$LAYOUT = (AddressLayout)$LAYOUT.select(groupElement("text"));
+
+    /**
+     * Layout for field:
+     * {@snippet lang=c :
+     * XIMText *text
+     * }
+     */
+    public static final AddressLayout text$layout() {
+        return text$LAYOUT;
+    }
+
+    private static final long text$OFFSET = 16;
+
+    /**
+     * Offset for field:
+     * {@snippet lang=c :
+     * XIMText *text
+     * }
+     */
+    public static final long text$offset() {
+        return text$OFFSET;
+    }
+
+    /**
+     * Getter for field:
+     * {@snippet lang=c :
+     * XIMText *text
+     * }
+     */
+    public static MemorySegment text(MemorySegment struct) {
+        return struct.get(text$LAYOUT, text$OFFSET);
+    }
+
+    /**
+     * Setter for field:
+     * {@snippet lang=c :
+     * XIMText *text
+     * }
+     */
+    public static void text(MemorySegment struct, MemorySegment fieldValue) {
+        struct.set(text$LAYOUT, text$OFFSET, fieldValue);
+    }
+
+    /**
+     * Obtains a slice of {@code arrayParam} which selects the array element at {@code index}.
+     * The returned segment has address {@code arrayParam.address() + index * layout().byteSize()}
+     */
+    public static MemorySegment asSlice(MemorySegment array, long index) {
+        return array.asSlice(layout().byteSize() * index);
+    }
+
+    /**
+     * The size (in bytes) of this struct
+     */
+    public static long sizeof() { return layout().byteSize(); }
+
+    /**
+     * Allocate a segment of size {@code layout().byteSize()} using {@code allocator}
+     */
+    public static MemorySegment allocate(SegmentAllocator allocator) {
+        return allocator.allocate(layout());
+    }
+
+    /**
+     * Allocate an array of size {@code elementCount} using {@code allocator}.
+     * The returned segment has size {@code elementCount * layout().byteSize()}.
+     */
+    public static MemorySegment allocateArray(long elementCount, SegmentAllocator allocator) {
+        return allocator.allocate(MemoryLayout.sequenceLayout(elementCount, layout()));
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, Arena arena, Consumer<MemorySegment> cleanup) {
+        return reinterpret(addr, 1, arena, cleanup);
+    }
+
+    /**
+     * Reinterprets {@code addr} using target {@code arena} and {@code cleanupAction) (if any).
+     * The returned segment has size {@code elementCount * layout().byteSize()}
+     */
+    public static MemorySegment reinterpret(MemorySegment addr, long elementCount, Arena arena, Consumer<MemorySegment> cleanup) {
+        return addr.reinterpret(layout().byteSize() * elementCount, arena, cleanup);
+    }
+}
 
